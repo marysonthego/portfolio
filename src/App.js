@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useLayoutEffect} from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "components/styles/styles.css";
+import { AnimateListTools } from "components/top/ListTools";
 
-function App() {
+export default function App() {
+  //const [showList, setShowList] = useState(false);
+  console.log(`NODE_ENV`, process.env.NODE_ENV);
+  console.log(`API_URL`, process.env.REACT_APP_API_URL);
+  console.log(`API_KEY`, process.env.REACT_APP_API_KEY);
+
+  // const handleListTools = () => {
+  //   setShowList(true);
+  // };
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Container
+        fluid
+        overflow="hidden"
+        display="grid"
+        grid-template-columns="repeat(auto-fill, minmax(200px, 1fr))"
+        grid-auto-rows="minmax(100px, auto)"
+        gap="20px"
+        justify-content="space-evenly"
+        justify-items="center"
+        align-content="space-evenly"
+        align-items="center"
+      >
+        <Row>
+          <Col md={{ span: 6, offset: 2 }}>
+            <p className="p1">Hi! My name is Mary.</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={{ span: 7, offset: 3 }}>
+            <p className="p1">
+              I love full-stack development!
+            </p>
+          </Col>
+        </Row>
+        <AnimateListTools/>
+      </Container>
   );
 }
-
-export default App;
