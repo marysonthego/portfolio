@@ -35,7 +35,7 @@ export const TodosTable = ({
       text: "Title",
       align: "left",
       headerStyle: () => {
-        return { width: "15%" };
+        return { width: "15%", color: "#e5e5e5" };
       },
     },
     {
@@ -43,7 +43,7 @@ export const TodosTable = ({
       text: "Description",
       align: "left",
       headerStyle: () => {
-        return { width: "50%" };
+        return { width: "50%", color: "#e5e5e5" };
       },
     },
     {
@@ -52,7 +52,7 @@ export const TodosTable = ({
       text: "Category",
       align: "center",
       headerStyle: () => {
-        return { width: "15%" };
+        return { width: "15%", color: "#e5e5e5" };
       },
     },
     {
@@ -61,7 +61,7 @@ export const TodosTable = ({
       text: "Priority",
       align: "center",
       headerStyle: () => {
-        return { width: "10%" };
+        return { width: "10%", color: "#e5e5e5" };
       },
     },
     {
@@ -78,7 +78,7 @@ export const TodosTable = ({
         return dateObj.toLocaleDateString();
       },
       headerStyle: () => {
-        return { width: "15%", align: "right" };
+        return { width: "15%", align: "right", color: "#e5e5e5" };
       },
     },
   ];

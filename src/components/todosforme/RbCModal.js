@@ -122,7 +122,7 @@ export const RbCModal = ({
   return (
     <Container fluid>
       <Modal show={show} >
-        <Modal.Header>add/change event</Modal.Header>
+        <Modal.Header style={{color: "#e5e5e5"}}>add/change event</Modal.Header>
         <Modal.Body>
           <div className="todo-list-wrapper">
             <div className="todo-list-form">

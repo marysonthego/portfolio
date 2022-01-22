@@ -50,7 +50,7 @@
     "react-scripts": "5.0.0"
   },
   "scripts": {
-    "start-node": "node src/server/server.js",
+    "start-node": "node app.js",
     "start-react": "react-scripts start",
     "start": "concurrently \"npm run start-node\" \"npm run start-react\" --kill-others --kill-others-on-fail",
     "build": "react-scripts build",

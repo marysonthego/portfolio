@@ -41,8 +41,8 @@ export const Navigation = () => {
                 <Accordion.Header>Example Projects</Accordion.Header>
                 <Accordion.Body>
                   <Nav className="flex-column">
-                  <Nav.Link href="/nucat" className="rounded-end">
-                      <div className="font-size: 1rem">Nucat Parallax Campers</div>
+                    <Nav.Link href="/nucat" className="rounded-end">
+                      Nucat Parallax Campers
                     </Nav.Link>
                     <Nav.Link href="/weather" className="rounded-end">
                       OpenWeather API

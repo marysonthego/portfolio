@@ -3,7 +3,7 @@ require("dotenv").config();
 //const cors = require('cors');
 const express = require("express");
 const server = express();
-const { pool } = require("./dbConfig.mysql");
+const { pool } = require("./dbConfig.postgres");
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -77,7 +77,7 @@ router.post("/todos/create", async (req, res) => {
       priority,
     } = req.body;
     await pool.query(`INSERT INTO todos (title, description, createdDate, category, priority)
-    VALUES ($1, $2, $3, $4, $5)`, [title, description, createdDate, category, priority],
+    VALUES ($1, $2, $3, $4, $5) RETURNING id, title, description, createdDate, category, priority`, [title, description, createdDate, category, priority],
     (err, result) => {
       if (err) {
         console.error(`\ntodosCreate failed with error: `, err.message);
