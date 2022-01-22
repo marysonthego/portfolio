@@ -38,13 +38,11 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@types/dotenv": "^8.2.0",
     "@types/react-big-calendar": "^0.36.2",
     "@types/styled-components": "^5.1.19",
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.3",
     "react-scripts": "5.0.0"
-  
   },
   "scripts": {
     "start": "react-scripts start",
