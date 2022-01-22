@@ -57,7 +57,7 @@ export const TodoFormModal = ({
 
   return (
     <Modal show={show}>
-      <Modal.Header style={{color: '#e5e5e5', background: '#192048'}}>new todo</Modal.Header>
+      <Modal.Header style={{color: '#e5e5e5', background: '#5d5d5f'}}>new todo</Modal.Header>
       <Modal.Body>
         <div className="todo-list-wrapper">
           <div className="todo-list-form">

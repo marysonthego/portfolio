@@ -85,7 +85,7 @@ export const AboutUs = () => {
             <div className="row row-content">
               <div className="col">
                 <div className="card-deck">
-                  <div className="card bg-dark text-white">
+                  <div className="card bg-light text-white">
                     <img
                       className="card-img-top"
                       src="media/curiouscat.png"
@@ -96,7 +96,7 @@ export const AboutUs = () => {
                       <h5 className="card-title">Learn Stuff</h5>
                     </div>
                   </div>
-                  <div className="card bg-dark text-white">
+                  <div className="card bg-light text-white">
                     <img
                       className="card-img-top"
                       src="media/worriedcat.png"
@@ -107,7 +107,7 @@ export const AboutUs = () => {
                       <h5 className="card-title">Face Challenges</h5>
                     </div>
                   </div>
-                  <div className="card bg-dark text-white">
+                  <div className="card bg-light text-white">
                     <img
                       className="card-img-top"
                       src="media/scairdycat.png"
@@ -124,7 +124,7 @@ export const AboutUs = () => {
             <div className="row row-content">
               <div className="col">
                 <div className="card-deck">
-                  <div className="card bg-dark text-white">
+                  <div className="card bg-light text-white">
                     <img
                       className="card-img-top"
                       src="media/logincat.png"
@@ -135,7 +135,7 @@ export const AboutUs = () => {
                       <h5 className="card-title">Know Thyself</h5>
                     </div>
                   </div>
-                  <div className="card bg-dark text-white">
+                  <div className="card bg-light text-white">
                     <img
                       className="card-img-top"
                       src="media/catonback.png"
