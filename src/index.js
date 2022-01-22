@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "components/top/themes";
 import { GlobalStyles } from "components/top/globalStyles";
 import "./index.css";
-import App from "./App";
+import App from "./reactapp";
 import {Navigation} from "components/top/Navigation";
 import {TodosForMe} from "components/todosforme/TodosForMe";
 import {Nucat} from "components/demos/Nucat";
