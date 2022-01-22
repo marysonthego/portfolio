@@ -237,6 +237,7 @@ img::-moz-selection {
     /* Force Hardware Acceleration in WebKit */
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */

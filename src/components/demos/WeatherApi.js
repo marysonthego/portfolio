@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import moment from "moment";
 import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "components/styles/blog.css";
 import "components/styles/weatherstyles.css";
 //require("dotenv").config();
 
@@ -159,7 +158,7 @@ export const WeatherApi = () => {
                 frequently returns a 400 (bad request) error, so be sure to
                 check for a successful network response in your code before you try to populate the
                 card component with data. Actually, this is good advice any time
-                you are working with an API.
+                you are working with an API!
               </p>
               <p></p>
               <Image

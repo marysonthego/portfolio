@@ -8,9 +8,10 @@ import { lightTheme } from "components/top/themes";
 import { GlobalStyles } from "components/top/globalStyles";
 import "./index.css";
 import App from "./App";
-import { Navigation } from "components/top/Navigation";
-import { TodosForMe } from "components/todosforme/TodosForMe";
-import  {Nucat}  from "components/demos/Nucat";
+import {Navigation} from "components/top/Navigation";
+import {TodosForMe} from "components/todosforme/TodosForMe";
+import {Nucat} from "components/demos/Nucat";
+import {AboutUs} from "components/demos/AboutUs";
 import {WeatherApi} from "components/demos/WeatherApi";
 import {AlertsDashboard} from "components/demos/AlertsDashboard";
 import {AlertsStepper} from "components/demos/AlertsStepper";
@@ -34,6 +35,7 @@ ReactDOM.render(
             <Route path="/dashboard" element={<AlertsDashboard />} />
             <Route path="/stepper" element={<AlertsStepper/>} />
             <Route path="/nucat" element={<Nucat />} />
+            <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/todos" element={<TodosForMe />} />
             <Route path="/weather" element={<WeatherApi />} />
             <Route path="/" element={<App />} />

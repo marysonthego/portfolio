@@ -54,12 +54,18 @@ export const Nucat = () => {
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="/nucat">
+                  <a 
+                  href="/nucat"
+                  role="button"
+                    className="button">
                     Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="aboutus.html">
+                  <a 
+                  href="/aboutus"
+                  role="button"
+                    className="button">
                     About
                   </a>
                 </li>
@@ -69,10 +75,6 @@ export const Nucat = () => {
                     href="#reserveForm"
                     role="button"
                     className="button"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    data-html="true"
-                    title="<hr> Or call us at <br/><strong>1-206-555-1234</strong>"
                   >
                     Reservations
                   </a>

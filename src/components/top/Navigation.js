@@ -25,7 +25,7 @@ export const Navigation = () => {
             <Offcanvas.Title id="offcanvasNavbarLabel color=#434344">
               MarysOnTheGo.tech &nbsp;&nbsp;
               <img
-                src="20210404.png"
+                src="media/20210404.png"
                 title="Mary"
                 className="pic rounded-circle"
                 alt="Mary"
