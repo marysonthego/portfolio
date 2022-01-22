@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import BootstrapTable from "react-bootstrap-table-next";
 import { TodoFormModal } from "./TodoFormModal";
-//import AnalogClock from "analog-clock-react";
 import cellEditFactory from "react-bootstrap-table2-editor";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import Container from "react-bootstrap/Container";
@@ -23,21 +22,6 @@ export const TodosTable = ({
   const [select, setSelect] = useState(false);
   const [show, setShow] = useState(false);
   const [selectedRow, setSelectedRow] = useState({});
-
-  // let options = {
-  //   useCustomTime: false,
-  //   width: "96px",
-  //   border: true,
-  //   borderColor: "#424242",
-  //   baseColor: "#5a5a5e",
-  //   centerColor: "#e5e5e5",
-  //   centerBorderColor: "#424242",
-  //   handColors: {
-  //     second: "#192048",
-  //     minute: "#e5e5e5",
-  //     hour: "#e5e5e5",
-  //   },
-  // };
 
   const columns = [
     {

@@ -17,7 +17,7 @@ export const WeatherCard = ({ weatherData }) => {
             {weatherData.timezone}
             <Button className="button header m-0 p-0" onClick={refresh}>
               <img
-                src="arrow-clockwise.svg"
+                src="media/arrow-clockwise.svg"
                 alt="Refresh"
                 width="32"
                 height="32"

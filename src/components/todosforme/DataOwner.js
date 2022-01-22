@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/formstyles.css";
-require('dotenv').config();
+//require('dotenv').config();
 
 export const DataOwner = () => {
 

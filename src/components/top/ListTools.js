@@ -23,21 +23,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="react.png"
+              src="media/react.png"
               title="React JS"
               className="App-logo rounded-circle"
               alt="React logo"
             />
             <Image
               fluid={true}
-              src="vuejs.png"
+              src="media/vuejs.png"
               title="Vue JS"
               className="App-logo rounded-circle"
               alt="Vue JS logo"
             />
             <Image
               fluid={true}
-              src="reactnative.png"
+              src="media/reactnative.png"
               title="React Native"
               className="App-logo rounded-circle"
               alt="React Native logo"
@@ -46,21 +46,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="AWS.png"
+              src="media/AWS.png"
               title="Amazon Web Services"
               className="App-logo rounded-circle"
               alt="AWS logo"
             />
             <Image
               fluid={true}
-              src="aws-amplify.png"
+              src="media/aws-amplify.png"
               title="AWS Amplify"
               className="App-logo rounded-circle"
               alt="Amplify logo"
             />
             <Image
               fluid={true}
-              src="node.png"
+              src="media/node.png"
               title="Node JS"
               className="App-logo rounded-circle"
               alt="Node JS logo"
@@ -69,21 +69,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="mongodb.png"
+              src="media/mongodb.png"
               title="Mongo DB"
               className="App-logo rounded-circle"
               alt="MongoDB logo"
             />
             <Image
               fluid={true}
-              src="erwin.png"
+              src="media/erwin.png"
               title="Erwin Data Modeler"
               className="App-logo rounded-circle"
               alt="Erwin Data Modeler logo"
             />
             <Image
               fluid={true}
-              src="mssql.png"
+              src="media/mssql.png"
               title="Microsoft SQL Server"
               className="App-logo rounded-circle"
               alt="Microsoft SQL Server logo"
@@ -94,21 +94,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="java.png"
+              src="media/java.png"
               title="Java"
               className="App-logo rounded-circle"
               alt="Java logo"
             />
             <Image
               fluid={true}
-              src="html5cssjs.png"
+              src="media/html5cssjs.png"
               title="HTML5, CSS3, and Javascript"
               className="App-logo rounded-circle"
               alt="HTML5, css, Javascript logos"
             />
             <Image
               fluid={true}
-              src="Redux.png"
+              src="media/Redux.png"
               title="React Redux"
               className="App-logo rounded-circle"
               alt="Redux logo"
@@ -117,21 +117,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="heroku.png"
+              src="media/heroku.png"
               title="Heroku"
               className="App-logo rounded-circle"
               alt="Heroku logo"
             />
             <Image
               fluid={true}
-              src="passport.png"
+              src="media/passport.png"
               title="Passport Authentication"
               className="App-logo rounded-circle"
               alt="Passport logo"
             />
             <Image
               fluid={true}
-              src="jwt.png"
+              src="media/jwt.png"
               title="JWT"
               className="App-logo rounded-circle"
               alt="JWT logo"
@@ -140,21 +140,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="sqlite.png"
+              src="media/sqlite.png"
               title="Sqlite 3"
               className="App-logo rounded-circle"
               alt="Sqlite logo"
             />
             <Image
               fluid={true}
-              src="mysql.png"
+              src="media/mysql.png"
               title="MySql"
               className="App-logo rounded-circle"
               alt="mySql logo"
             />
             <Image
               fluid={true}
-              src="postgresql.png"
+              src="media/postgresql.png"
               title="PostgreSQL"
               className="App-logo rounded-circle"
               alt="PostgreSQL logo"
@@ -165,21 +165,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="rtkquery.png"
+              src="media/rtkquery.png"
               title="Redux Toolkit Query"
               className="App-logo rounded-circle"
               alt="Redux Toolkit Query logo"
             />
             <Image
               fluid={true}
-              src="reactbootstrap.png"
+              src="media/reactbootstrap.png"
               title="React Bootstrap"
               className="App-logo rounded-circle"
               alt="React Bootstrap logo"
             />
             <Image
               fluid={true}
-              src="bootstrap.png"
+              src="media/bootstrap.png"
               title="Bootstrap"
               className="App-logo rounded-circle"
               alt="Bootstrap logo"
@@ -188,21 +188,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="expressjs.png"
+              src="media/expressjs.png"
               title="Express JS"
               className="App-logo rounded-circle"
               alt="Express JS logo"
             />
             <Image
               fluid={true}
-              src="firebase.png"
+              src="media/firebase.png"
               title="Firebase"
               className="App-logo rounded-circle"
               alt="Firebase logo"
             />
             <Image
               fluid={true}
-              src="apache.png"
+              src="media/apache.png"
               title="Apache HTTP Server"
               className="App-logo rounded-circle"
               alt="Apache logo"
@@ -211,21 +211,21 @@ export function AnimateListTools() {
           <Col className="logo-col">
             <Image
               fluid={true}
-              src="materialui.png"
+              src="media/materialui.png"
               title="MaterialUI"
               className="App-logo rounded-circle"
               alt="MaterialUI logo"
             />
             <Image
               fluid={true}
-              src="php.png"
+              src="media/php.png"
               title="Php"
               className="App-logo rounded-circle"
               alt="php logo"
             />
             <Image
               fluid={true}
-              src="python.png"
+              src="media/python.png"
               title="Python"
               className="App-logo rounded-circle"
               alt="Python logo"

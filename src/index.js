@@ -17,7 +17,7 @@ import {AlertsStepper} from "components/demos/AlertsStepper";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
-require("dotenv").config();
+//require("dotenv").config();
 
 // const ThemeToggler = () => {
 //   const [theme, setTheme] = useState("dark");

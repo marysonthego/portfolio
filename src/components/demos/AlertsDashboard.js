@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
-require("dotenv").config();
+//require("dotenv").config();
 
 export const AlertsDashboard = () => {
   return (

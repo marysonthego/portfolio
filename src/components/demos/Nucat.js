@@ -1,8 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import "components/styles/clean-blog.css";
-import "components/styles/nucatstyles.css";
+import "./../styles/nucat.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Nucat = () => {
@@ -29,21 +28,12 @@ export const Nucat = () => {
           rel="stylesheet"
           href="./node_modules/bootstrap-social/bootstrap-social.css"
         />
-        <link href=".src/components/styles/clean-blog.css" rel="stylesheet" />
-        <link href=".src/components/styles/nucatstylescss" rel="stylesheet" />
+        <link href="components/styles/nucat.css" rel="stylesheet" />
 
         <title>NuCat: a feline day camp</title>
       </head>
 
       <body>
-        {/* <div>
-        <iframe
-          src="http://localhost:3000/home.html"
-          width="1024"
-          height="768"
-        ></iframe>
-      </div> */}
-
         <nav className="navbar navbar-expand fixed-top" id="mainNav">
           <div className="container">
             <a className="navbar-brand" href="/">
@@ -93,7 +83,7 @@ export const Nucat = () => {
         </nav>
 
         <header className="masthead hero-image">
-          <div className="overlay"></div>
+        
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-10 mx-auto">

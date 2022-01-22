@@ -6,7 +6,7 @@ import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/blog.css";
 import "components/styles/weatherstyles.css";
-require("dotenv").config();
+//require("dotenv").config();
 
 const refresh = () => {
   window.location.reload();
@@ -72,8 +72,8 @@ export const WeatherApi = () => {
                         onClick={refresh}
                       >
                         <img
-                          src="arrow-clockwise.svg"
-                          alt="Refresh"
+                          src="media/arrow-clockwise.svg"
+                          alt="refresh"
                           width="32"
                           height="32"
                         />
@@ -165,7 +165,7 @@ export const WeatherApi = () => {
               <Image
                 fluid={true}
                 rounded={true}
-                src="weatheruseeffect.png"
+                src="media/weatheruseeffect.png"
                 title="Weather useEffect"
                 alt="Weather useEffect code"
               />
