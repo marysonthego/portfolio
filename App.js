@@ -60,36 +60,28 @@ server.get("/", (req, res) => {
 });
 
 router.get("/todos/all", async (req, res) => {
-  const response = await pool.query(`SELECT * FROM todos`);
-  if (Boolean(response.rows)) {
-    return res.status(200).send(response.rows);
-  }
-  return res.status(404);
+  try {
+    await pool.execute('SELECT * FROM `todos`',
+    function(err, results, fields) {
+      console.log(`results: `, results);
+      console.log(`fields: `, fields);
+      console.log(`err:`, err);
+      return res.status(200).send(results, fields);
+      return res.status(404);
+    })
+  } catch (err) {
+    return err;
+    }
 });
 
 router.post("/todos/create", async (req, res) => {
   try {
-    let {
-      title,
-      description,
-      createdDate,
-      category,
-      priority,
-    } = req.body;
-    await pool.query(`INSERT INTO todos (title, description, createdDate, category, priority)
-    VALUES ($1, $2, $3, $4, $5)`, [title, description, createdDate, category, priority],
-    (err, result) => {
-      if (err) {
-        console.error(`\ntodosCreate failed with error: `, err.message);
-        let msg = err.message;
-        return res.status(500).send(msg);
-      }
-      if (result.rowCount === 0) {
-        let msg = "rowCount returned 0";
-        return res.status(406).send(msg);
-      }
+    await pool.execute('INSERT INTO `todos` (`title`, `description`, `createdDate`, `category`, `priority`',
+     [req.body.title, req.body.description, req.body.createdDate, req.body.category, req.body.priority],
+    function (error, results, fields) {
+      if (error) throw error;
       else {
-        return res.status(200).send(result.rows[0]);
+        return res.status(200).send(results, fields);
       }
     });
     return res.status;
