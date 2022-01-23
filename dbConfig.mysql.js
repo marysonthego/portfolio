@@ -22,6 +22,7 @@ const pool = mysql.createPool({
 connection.connect (function (error) {
   if(error) throw error;
   console.log("Connected");
+  console.log(`pool: `, pool);
 });
 
 module.exports = { pool };
