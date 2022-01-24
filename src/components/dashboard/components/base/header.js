@@ -1,7 +1,7 @@
 /* eslint-disable */
 "use strict";
 
-import { KTUtil } from "app/components/util.js";
+import { KTUtil } from "components/dashboard/components/util.js";
 
 var KTLayoutHeader = function() {
     // Private properties

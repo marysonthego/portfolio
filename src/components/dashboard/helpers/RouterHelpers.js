@@ -1,4 +1,4 @@
-import * as utils from "app/helpers/LocalStorageHelpers";
+import * as utils from "components/dashboard/helpers/LocalStorageHelpers";
 
 const localStorageLastLocationKey = "metronic-lastLocation";
 

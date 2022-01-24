@@ -3,9 +3,9 @@ import React from "react";
 import clsx from "clsx";
 import { Dropdown } from "react-bootstrap";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { toAbsoluteUrl } from "app/helpers/AssetHelpers";
-import { useLang, setLanguage } from "app/helpers/i18n";
-import { DropdownTopbarItemToggler } from "app/components/DropdownTopbarItemToggler";
+import { toAbsoluteUrl } from "components/dashboard/helpers/AssetHelpers";
+import { useLang, setLanguage } from "components/dashboard/helpers/i18n";
+import { DropdownTopbarItemToggler } from "components/dashboard/components/DropdownTopbarItemToggler";
 
 const languages = [
   {

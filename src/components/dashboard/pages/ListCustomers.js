@@ -1,22 +1,17 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useSnackbar } from 'notistack';
 import { 
-  useAddCustomerMutation,
   useListCustomersQuery,
   useUpdateCustomerMutation, 
   useDeleteCustomerMutation,
   apiSlice,
-} from 'app/redux/apiSlice';
+} from 'components/dashboard/redux/apiSlice';
 import { 
   addNewCustomer,
-  editCustomer,  
   removeCustomer, 
-  resetCustomers, 
-  selectCustomers,
-  selectCustomerByCustid
-} from 'app/redux/customersSlice';
+} from 'components/dashboard/redux/customersSlice';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 //import Stack from '@material-ui/Stack'; - not until MUI v5 :(
 import {
@@ -276,7 +271,6 @@ function EnhancedTable(props) {
   const [rowsPerPage, setRowsPerPage] = useState(10);
   
   const [ deleteCustomer ] = useDeleteCustomerMutation();
-  const [ updateCustomer ] = useUpdateCustomerMutation();
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -289,23 +283,22 @@ function EnhancedTable(props) {
     );
   };
 
-  const handleChange = (e, row) => {
-    e.preventDefault();
-    let field = e.target.name;
-    let value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-    //console.log(`row: `, row.id, row);
-    let cust = Object.assign({}, row);
-    cust = {...cust, [field]: value};
+  // const handleChange = (e, row) => {
+  //   e.preventDefault();
+  //   let field = e.target.name;
+  //   let value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+  //   //console.log(`row: `, row.id, row);
+  //   let cust = Object.assign({}, row);
+  //   cust = {...cust, [field]: value};
     
-    try {
-      updateCustomer(cust).unwrap();
-      } catch(error) {
-        console.log(`rejected error: `, error);
-      };
-      dispatch(editCustomer(cust));
-    };
+  //   try {
+  //     updateCustomer(cust).unwrap();
+  //     } catch(error) {
+  //       console.log(`rejected error: `, error);
+  //     };
+  //     dispatch(editCustomer(cust));
+  //   };
     handleCustomersRefetch();
-    //console.log(`HandleChange field: value `, field, value);
   
   function HandleDelete (e) {
     if(selected.length > 0) {
@@ -388,7 +381,6 @@ function EnhancedTable(props) {
     <Box sx={{ width: '100%' }}>
       <h3>Customer List</h3>
       <Paper sx={{ width: '100%', mb: 2 }}>
-        {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
         <TableContainer>
           <Table
             sx={{ minWidth: 300 }}
@@ -404,8 +396,6 @@ function EnhancedTable(props) {
               rowCount={length}
             />
             <TableBody>
-              {/* if you don't need to support IE11, you can replace the `stableSort` call with:
-                  rows.slice().sort(getComparator(order, orderBy)) */}
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {

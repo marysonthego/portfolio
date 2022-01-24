@@ -1,5 +1,5 @@
 //import React, {useState} from 'react';
-import { baseUrl } from 'app/baseUrl';
+import { baseUrl } from 'components/dashboard/baseUrl';
 
 export const LOGIN_URL = `${baseUrl}/api/login`;
 export const ISAUTHENTICATED_URL = `${baseUrl}/api/isAuthenticated`;

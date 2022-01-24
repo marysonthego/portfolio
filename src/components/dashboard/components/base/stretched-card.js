@@ -1,8 +1,8 @@
 /* eslint-disable */
 "use strict";
 
-import { KTUtil } from "app/components/util.js";
-import KTLayoutContent from "app/components/base/content.js";
+import { KTUtil } from "components/dashboard/components/util.js";
+import KTLayoutContent from "components/dashboard/components/base/content.js";
 
 var KTLayoutStretchedCard = function() {
     // Private properties

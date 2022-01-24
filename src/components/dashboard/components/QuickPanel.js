@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import SVG from "react-inlinesvg";
 import {Tab, Nav} from "react-bootstrap";
-import {toAbsoluteUrl} from "app/helpers/AssetHelpers";
+import {toAbsoluteUrl} from "components/dashboard/helpers/AssetHelpers";
 
 export function QuickPanel() {
   const [selectedTab, setSelectedTab] = useState("AuditLogs");

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initUser } from 'app/helpers/Initializers';
+import { initUser } from 'components/dashboard/helpers/Initializers';
 
 const data = {...initUser};
 

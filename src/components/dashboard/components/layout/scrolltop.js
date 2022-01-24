@@ -1,8 +1,8 @@
 /* eslint-disable */
 "use strict";
 
-import KTScrolltop from "app/components/base/scrolltop.js";
-import { KTUtil } from "app/components/util.js";
+import KTScrolltop from "components/dashboard/components/base/scrolltop.js";
+import { KTUtil } from "components/dashboard/components/util.js";
 
 var KTLayoutScrolltop = function() {
     // Private properties

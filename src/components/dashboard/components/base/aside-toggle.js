@@ -1,12 +1,12 @@
 /* eslint-disable */
 "use strict";
 
-import KTToggle from "app/components/toggle.js";
-import KTLayoutStickyCard from "app/components/base/sticky-card.js";
-import KTLayoutHeaderMenu from "app/components/base/header-menu.js";
-import KTLayoutAsideMenu from "app/components/base/aside-menu.js";
-import { KTCookie } from "app/components/cookie.js";
-import { KTUtil } from "app/components/util.js";
+import KTToggle from "components/dashboard/components/toggle.js";
+import KTLayoutStickyCard from "components/dashboard/components/base/sticky-card.js";
+import KTLayoutHeaderMenu from "components/dashboard/components/base/header-menu.js";
+import KTLayoutAsideMenu from "components/dashboard/components/base/aside-menu.js";
+import { KTCookie } from "components/dashboard/components/cookie.js";
+import { KTUtil } from "components/dashboard/components/util.js";
 
 var KTLayoutAsideToggle = function() {
     // Private properties

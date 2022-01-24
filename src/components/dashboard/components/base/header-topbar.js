@@ -1,8 +1,8 @@
 /* eslint-disable */
 "use strict";
 
-import KTToggle from "app/components/toggle.js";
-import { KTUtil } from "app/components/util.js";
+import KTToggle from "components/dashboard/components/toggle.js";
+import { KTUtil } from "components/dashboard/components/util.js";
 
 var KTLayoutHeaderTopbar = function() {
     // Private properties

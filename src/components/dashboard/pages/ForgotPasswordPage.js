@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import * as Yup from 'yup';
-//import { requestPassword } from 'app/components/AuthCrud';
+//import { requestPassword } from 'components/dashboard/components/AuthCrud';
 
 const initialValues = {
   email: '',
@@ -47,7 +47,7 @@ export function ForgotPasswordPage(props) {
 
   return (
     <>
-      {isRequested && <Redirect to="/auth" />}
+      {isRequested && <Navigate to="/auth" />}
       {!isRequested && (
         <div className="login-form login-forgot" style={{ display: 'block' }}>
           <div className="text-center mb-10 mb-lg-20">

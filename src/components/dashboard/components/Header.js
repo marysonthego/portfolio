@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
 import objectPath from "object-path";
-import { useHtmlClassService } from "app/components/layout/MetronicLayout";
-import { HeaderMenuWrapper } from "app/components/layout/HeaderMenuWrapper";
-import AnimateLoading from "app/helpers/AnimateLoading";
+import { useHtmlClassService } from "components/dashboard/components/layout/MetronicLayout";
+import { HeaderMenuWrapper } from "components/dashboard/components/layout/HeaderMenuWrapper";
+import AnimateLoading from "components/dashboard/helpers/AnimateLoading";
 
 export function Header () {
   const uiService = useHtmlClassService();

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import clsx from 'clsx';
 import {
@@ -7,18 +7,18 @@ import {
   TextField,
 } from '@material-ui/core';
 import { useSnackbar } from 'notistack';
-import Snackbar from 'app/helpers/Snackbar';
-import { CellNumberFormat } from 'app/helpers/Formatters';
+import Snackbar from 'components/dashboard/helpers/Snackbar';
+import { CellNumberFormat } from 'components/dashboard/helpers/Formatters';
 import SVG from 'react-inlinesvg';
-import { toAbsoluteUrl } from 'app/helpers/AssetHelpers';
-import { initUserErrors } from 'app/helpers/Initializers';
+import { toAbsoluteUrl } from 'components/dashboard/helpers/AssetHelpers';
+import { initUserErrors } from 'components/dashboard/helpers/Initializers';
 import {
   FormValidation,
   fieldsValidation
-} from 'app/helpers/FormValidation';
+} from 'components/dashboard/helpers/FormValidation';
 import {
   updateErrorState
-} from 'app/redux/errorsSlice';
+} from 'components/dashboard/redux/errorsSlice';
 import {
   useDispatch,
   useSelector
@@ -26,8 +26,8 @@ import {
 import {
   updateUserState,
   selectCurrentUser,
-} from 'app/redux/userSlice';
-import { useUpdateCustomerMutation } from 'app/redux/apiSlice';
+} from 'components/dashboard/redux/userSlice';
+import { useUpdateCustomerMutation } from 'components/dashboard/redux/apiSlice';
 
 
 const useStyles = makeStyles(theme => ({
@@ -42,7 +42,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
   const userState = useSelector(selectCurrentUser);
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const history = useNavigate();
   const [pwds, setPwds] = useState({});
   const classes = useStyles();
 

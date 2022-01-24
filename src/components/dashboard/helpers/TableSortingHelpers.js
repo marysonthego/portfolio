@@ -1,7 +1,7 @@
 /* Pagination Helprs */
 import React from "react";
 import SVG from "react-inlinesvg";
-import { toAbsoluteUrl } from "app/helpers/AssetsHelpers";
+import { toAbsoluteUrl } from "components/dashboard/helpers/AssetsHelpers";
 
 export const sortCaret = (order, column) => {
   if (!order) return (

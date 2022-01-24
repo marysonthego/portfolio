@@ -4,11 +4,11 @@ import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import objectPath from 'object-path';
-import { useHtmlClassService } from 'app/components/layout/MetronicLayout';
-import { DropdownTopbarItemToggler } from 'app/components/DropdownTopbarItemToggler';
+import { useHtmlClassService } from 'components/dashboard/components/layout/MetronicLayout';
+import { DropdownTopbarItemToggler } from 'components/dashboard/components/DropdownTopbarItemToggler';
 import SVG from 'react-inlinesvg';
 import { useSelector } from 'react-redux';
-import { selectCurrentUser } from 'app/redux/userSlice';
+import { selectCurrentUser } from 'components/dashboard/redux/userSlice';
 
 export function UserProfileDropdown () {
   const userState = useSelector(selectCurrentUser);

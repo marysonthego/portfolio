@@ -1,9 +1,9 @@
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid */
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { checkIsActive } from "app/helpers/RouterHelpers";
+import { checkIsActive } from "components/dashboard/helpers/RouterHelpers";
 import { useSelector } from 'react-redux';
-import { selectCurrentUser } from 'app/redux/userSlice';
+import { selectCurrentUser } from 'components/dashboard/redux/userSlice';
 import SVG from "react-inlinesvg";
 
 export function HeaderMenu({ layoutProps }) {

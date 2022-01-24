@@ -1,10 +1,10 @@
 /* eslint-disable */
 "use strict";
 
-import { KTUtil } from "app/components/util.js";
-import KTLayoutHeader from "app/components/base/header.js";
-import KTLayoutSubheader from "app/components/base/subheader.js";
-import KTLayoutFooter from "app/components/base/footer.js";
+import { KTUtil } from "components/dashboard/components/util.js";
+import KTLayoutHeader from "components/dashboard/components/base/header.js";
+import KTLayoutSubheader from "components/dashboard/components/base/subheader.js";
+import KTLayoutFooter from "components/dashboard/components/base/footer.js";
 
 var KTLayoutContent = function() {
     // Private properties

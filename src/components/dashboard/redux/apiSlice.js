@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-//import { baseUrl } from 'app/baseUrl';
+//import { baseUrl } from 'components/dashboard/baseUrl';
 //const Origin = 'http://localhost:3002'; //CORS Origin must be in server's whitelist
 
 export const apiSlice = createApi({

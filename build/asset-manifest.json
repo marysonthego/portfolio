@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.90169964.css",
-    "main.js": "/static/js/main.de04570b.js",
+    "main.css": "/static/css/main.c30a0b32.css",
+    "main.js": "/static/js/main.4d3bb786.js",
     "static/js/787.3627dcc8.chunk.js": "/static/js/787.3627dcc8.chunk.js",
     "static/media/pexels-mitchell-luo-3694708.png": "/static/media/pexels-mitchell-luo-3694708.31f7a2d467c36611e0d9.png",
     "static/media/catonback.png": "/static/media/catonback.2abe8a116f1243690f07.png",
@@ -24,12 +24,12 @@
     "static/media/nunito-vietnamese-800-normal.woff2": "/static/media/nunito-vietnamese-800-normal.21047dbd94b6f506d0af.woff2",
     "static/media/nunito-vietnamese-400-normal.woff2": "/static/media/nunito-vietnamese-400-normal.977238e2d348d4925210.woff2",
     "index.html": "/index.html",
-    "main.90169964.css.map": "/static/css/main.90169964.css.map",
-    "main.de04570b.js.map": "/static/js/main.de04570b.js.map",
+    "main.c30a0b32.css.map": "/static/css/main.c30a0b32.css.map",
+    "main.4d3bb786.js.map": "/static/js/main.4d3bb786.js.map",
     "787.3627dcc8.chunk.js.map": "/static/js/787.3627dcc8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90169964.css",
-    "static/js/main.de04570b.js"
+    "static/css/main.c30a0b32.css",
+    "static/js/main.4d3bb786.js"
   ]
 }

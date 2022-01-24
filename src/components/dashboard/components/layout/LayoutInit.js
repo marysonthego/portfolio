@@ -1,20 +1,18 @@
 import React, {useLayoutEffect} from "react";
-import {KTUtil} from "app/components/util";
-import KTLayoutHeader from "app/components/base/header";
-import KTLayoutHeaderMenu from "app/components/base/header-menu";
-import KTLayoutHeaderTopbar from "app/components/base/header-topbar";
-import KTLayoutBrand from "app/components/base/brand";
-import KTLayoutAside from "app/components/base/aside";
-import KTLayoutAsideToggle from "app/components/base/aside-toggle";
-import KTLayoutAsideMenu from "app/components/base/aside-menu";
-import KTLayoutContent from "app/components/base/content";
-import KTLayoutFooter from "app/components/base/footer";
-import KTLayoutSubheader from "app/components/base/subheader";
-import KTLayoutScrolltop from "app/components/layout/scrolltop";
-import KTLayoutStickyCard from "app/components/base/sticky-card";
-import KTLayoutStretchedCard from "app/components/base/stretched-card";
-import KTLayoutQuickPanel from "app/components/base/quick-panel";
-import KTLayoutQuickUser from "app/components/base/quick-user";
+import {KTUtil} from "components/dashboard/components/util";
+import KTLayoutHeader from "components/dashboard/components/base/header";
+import KTLayoutHeaderMenu from "components/dashboard/components/base/header-menu";
+import KTLayoutBrand from "components/dashboard/components/base/brand";
+import KTLayoutAside from "components/dashboard/components/base/aside";
+import KTLayoutAsideToggle from "components/dashboard/components/base/aside-toggle";
+import KTLayoutAsideMenu from "components/dashboard/components/base/aside-menu";
+import KTLayoutContent from "components/dashboard/components/base/content";
+import KTLayoutFooter from "components/dashboard/components/base/footer";
+import KTLayoutSubheader from "components/dashboard/components/base/subheader";
+import KTLayoutScrolltop from "components/dashboard/components/layout/scrolltop";
+import KTLayoutStickyCard from "components/dashboard/components/base/sticky-card";
+import KTLayoutStretchedCard from "components/dashboard/components/base/stretched-card";
+import KTLayoutQuickUser from "components/dashboard/components/base/quick-user";
 
 export function LayoutInit() {
   useLayoutEffect(() => {

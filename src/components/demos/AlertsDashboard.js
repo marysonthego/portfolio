@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
-//require("dotenv").config();
+import App from 'components/dashboard/App';
 
 export const AlertsDashboard = () => {
   return (
@@ -23,6 +23,9 @@ export const AlertsDashboard = () => {
           height="768px"
         
         />
+      </Row>
+      <Row>
+        <App/>
       </Row>
     </Container>
   );

@@ -1,9 +1,9 @@
 /* eslint-disable */
 "use strict";
 
-import KTOffcanvas from "app/components/offcanvas.js";
-import { KTUtil } from "app/components/util.js";
-import { KTCookie } from "app/components/cookie.js";
+import KTOffcanvas from "components/dashboard/components/offcanvas.js";
+import { KTUtil } from "components/dashboard/components/util.js";
+import { KTCookie } from "components/dashboard/components/cookie.js";
 
 var KTLayoutDemoPanel = function() {
     // Private properties

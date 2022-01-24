@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
-import { apiSlice, useAddFriendMutation, useFindZipMutation } from 'app/redux/apiSlice';
+import { apiSlice, useAddFriendMutation, useFindZipMutation } from 'components/dashboard/redux/apiSlice';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUserCustid } from 'app/redux/userSlice';
-import { CellNumberFormat } from 'app/helpers/Formatters';
-import { initFriend, initFriendErrors } from 'app/helpers/Initializers';
-import { FormValidation, fieldsValidation } from 'app/helpers/FormValidation';
-import { updateBackEnabled, updateNextEnabled } from 'app/redux/stepperSlice';
+import { selectUserCustid } from 'components/dashboard/redux/userSlice';
+import { CellNumberFormat } from 'components/dashboard/helpers/Formatters';
+import { initFriend, initFriendErrors } from 'components/dashboard/helpers/Initializers';
+import { FormValidation, fieldsValidation } from 'components/dashboard/helpers/FormValidation';
+import { updateBackEnabled, updateNextEnabled } from 'components/dashboard/redux/stepperSlice';
 import SVG from 'react-inlinesvg';
 import { useSnackbar } from 'notistack';
 import {
   TextField,
   Button,
   makeStyles,
-  Box,
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({

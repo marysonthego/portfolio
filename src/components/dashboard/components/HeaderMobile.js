@@ -1,7 +1,7 @@
 import React, {useMemo} from "react";
 import {Link} from "react-router-dom";
 import objectPath from "object-path";
-import {useHtmlClassService} from "app/components/layout/MetronicLayout";
+import {useHtmlClassService} from "components/dashboard/components/layout/MetronicLayout";
 
 export function HeaderMobile() {
   const uiService = useHtmlClassService();

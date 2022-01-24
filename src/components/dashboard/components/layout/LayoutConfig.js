@@ -1,4 +1,4 @@
-import { toAbsoluteUrl } from "app/helpers/AssetHelpers";
+import { toAbsoluteUrl } from "components/dashboard/helpers/AssetHelpers";
 export function getInitLayoutConfig() {
   return {
     demo: "demo7",

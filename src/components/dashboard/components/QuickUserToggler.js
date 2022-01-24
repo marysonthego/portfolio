@@ -3,11 +3,11 @@
 import React, { useMemo, useState } from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import objectPath from 'object-path';
-import { useHtmlClassService } from 'app/components/layout/MetronicLayout';
-import { UserProfileDropdown } from 'app/pages/UserProfileDropdown';
+import { useHtmlClassService } from 'components/dashboard/components/layout/MetronicLayout';
+import { UserProfileDropdown } from 'components/dashboard/pages/UserProfileDropdown';
 
-//import { useStickyState } from 'app/components/AuthInit';
-import { initUser } from 'app/helpers/Initializers';
+//import { useStickyState } from 'components/dashboard/components/AuthInit';
+import { initUser } from 'components/dashboard/helpers/Initializers';
 
 export function QuickUserToggler() {
   const [customer] = useState(initUser);

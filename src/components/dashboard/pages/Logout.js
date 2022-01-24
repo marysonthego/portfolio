@@ -1,15 +1,15 @@
 import React from 'react';
 import { 
-  Redirect,
-  Switch,
+  Navigate,
+  Routes,
 } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { resetUserState } from 'app/redux/userSlice';
-import { resetLocations } from 'app/redux/locationsSlice';
-import { resetFriends } from 'app/redux/friendsSlice';
-import { ContentRoute } from 'app/components/layout/ContentRoute';
-import { logout } from 'app/components/AuthCrud';
-import { Login } from 'app/pages/Login';
+import { resetUserState } from 'components/dashboard/redux/userSlice';
+import { resetLocations } from 'components/dashboard/redux/locationsSlice';
+import { resetFriends } from 'components/dashboard/redux/friendsSlice';
+import { ContentRoute } from 'components/dashboard/components/layout/ContentRoute';
+import { logout } from 'components/dashboard/components/AuthCrud';
+import { Login } from 'components/dashboard/pages/Login';
 
 export function Logout() {
   const dispatch = useDispatch();
@@ -25,9 +25,9 @@ export function Logout() {
   doLogout();
 
   return (
-    <Switch>
+    <Routes>
       <ContentRoute exact path="/auth/login" component={Login} />
-      <Redirect to="/auth/login"/>
-    </Switch>
+      <Navigate to="/auth/login"/>
+    </Routes>
   );
 }

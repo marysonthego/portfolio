@@ -16,21 +16,21 @@ import {
   selectNextEnabled,
   updateNextEnabled,
   updateBackEnabled
-} from 'app/redux/stepperSlice';
+} from 'components/dashboard/redux/stepperSlice';
 import {
   updateUserState,
   selectCurrentUser,
-} from 'app/redux/userSlice';
+} from 'components/dashboard/redux/userSlice';
 import {
   updateErrorState,
-} from 'app/redux/errorsSlice';
+} from 'components/dashboard/redux/errorsSlice';
 import {
   useAddCustomerMutation,
   useUpdateCustomerMutation,
-} from 'app/redux/apiSlice.js';
+} from 'components/dashboard/redux/apiSlice.js';
 import clsx from 'clsx';
 import { useSnackbar } from 'notistack';
-import Snackbar from 'app/helpers/Snackbar';
+import Snackbar from 'components/dashboard/helpers/Snackbar';
 import {
   Stepper,
   Step,
@@ -39,15 +39,13 @@ import {
   Typography,
   makeStyles,
   IconButton,
-  Toolbar,
-  AppBar,
 } from '@material-ui/core';
-import { RegisterStep } from 'app/pages/RegisterStep';
-import { LocationsStep } from 'app/pages/LocationsStep';
-import { FriendsStep } from 'app/pages/FriendsStep';
-import { SummaryStep } from 'app/pages/SummaryStep';
-import { DonationStep } from 'app/pages/DonationStep';
-import { Success } from 'app/pages/Success';
+import { RegisterStep } from 'components/dashboard/pages/RegisterStep';
+import { LocationsStep } from 'components/dashboard/pages/LocationsStep';
+import { FriendsStep } from 'components/dashboard/pages/FriendsStep';
+import { SummaryStep } from 'components/dashboard/pages/SummaryStep';
+import { DonationStep } from 'components/dashboard/pages/DonationStep';
+import { Success } from 'components/dashboard/pages/Success';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const useStyles = makeStyles(theme => ({

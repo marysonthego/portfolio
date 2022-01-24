@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from 'app/redux/userSlice';
-import customersReducer from 'app/redux/customersSlice';
-import locationsReducer from 'app/redux/locationsSlice';
-import friendsReducer from 'app/redux/friendsSlice';
-import errorsReducer from 'app/redux/errorsSlice';
-import stepperReducer from 'app/redux/stepperSlice';
-import rssfeedsReducer from 'app/redux/rssSlice';
-import rssitemsReducer from 'app/redux/rssItemsSlice';
-import { apiSlice } from 'app/redux/apiSlice';
+import userReducer from 'components/dashboard/redux/userSlice';
+import customersReducer from 'components/dashboard/redux/customersSlice';
+import locationsReducer from 'components/dashboard/redux/locationsSlice';
+import friendsReducer from 'components/dashboard/redux/friendsSlice';
+import errorsReducer from 'components/dashboard/redux/errorsSlice';
+import stepperReducer from 'components/dashboard/redux/stepperSlice';
+import rssfeedsReducer from 'components/dashboard/redux/rssSlice';
+import rssitemsReducer from 'components/dashboard/redux/rssItemsSlice';
+import { apiSlice } from 'components/dashboard/redux/apiSlice';
 
 export default configureStore({
   reducer: {

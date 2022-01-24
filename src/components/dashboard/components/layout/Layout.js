@@ -1,17 +1,17 @@
 import React, {useMemo} from "react";
 import objectPath from "object-path";
 // LayoutContext
-import {useHtmlClassService} from "app/components/layout/MetronicLayout";
+import {useHtmlClassService} from "components/dashboard/components/layout/MetronicLayout";
 // Import Layout components
-import {Header} from "app/components/Header";
-import {HeaderMobile} from "app/components/HeaderMobile";
-import {Aside} from "app/components/aside/Aside";
-import {Footer} from "app/components/Footer";
-import {LayoutInit} from "app/components/layout/LayoutInit";
-import {SubHeader} from "app/components/SubHeader";
-//import {QuickPanel} from "app/components/QuickPanel";
-import {QuickUser} from "app/components/QuickUser";
-import {ScrollTop} from "app/components/ScrollTop";
+import {Header} from "components/dashboard/components/Header";
+import {HeaderMobile} from "components/dashboard/components/HeaderMobile";
+import {Aside} from "components/dashboard/components/aside/Aside";
+import {Footer} from "components/dashboard/components/Footer";
+import {LayoutInit} from "components/dashboard/components/layout/LayoutInit";
+import {SubHeader} from "components/dashboard/components/SubHeader";
+//import {QuickPanel} from "components/dashboard/components/QuickPanel";
+import {QuickUser} from "components/dashboard/components/QuickUser";
+import {ScrollTop} from "components/dashboard/components/ScrollTop";
 
 export function Layout({ children }) {
     const uiService = useHtmlClassService();

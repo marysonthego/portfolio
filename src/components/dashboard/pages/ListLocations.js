@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUserCustid } from 'app/redux/userSlice';
+import { selectUserCustid } from 'components/dashboard/redux/userSlice';
 import { useSnackbar } from 'notistack';
 import { 
   useGetLocationsByCustidQuery,
   useUpdateLocationMutation,
   useDeleteLocationMutation, 
   apiSlice,
-} from 'app/redux/apiSlice';
+} from 'components/dashboard/redux/apiSlice';
 import { 
   addNewLocation, 
   editLocation, 
   removeLocation,  
-} from 'app/redux/locationsSlice';
+} from 'components/dashboard/redux/locationsSlice';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import {
   Box,

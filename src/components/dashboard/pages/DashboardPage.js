@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from 'app/components/Header';
-import { DashboardProfileWidget } from 'app/pages/DashboardProfileWidget';
+import { Header } from 'components/dashboard/components/Header';
+import { DashboardProfileWidget } from 'components/dashboard/pages/DashboardProfileWidget';
 
 export const DashboardPage = () => {
 

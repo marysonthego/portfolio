@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
-//require("dotenv").config();
+import App from 'components/dashboard/App';
 
 export const AlertsStepper = () => {
   return (
@@ -22,6 +22,9 @@ export const AlertsStepper = () => {
         width="1024px"
         height="768px"
       />
+      </Row>
+      <Row>
+        <App/>
       </Row>
     </Container>
   );

@@ -3,7 +3,7 @@
 
 import PerfectScrollbar from "perfect-scrollbar";
 
-import { KTCookie } from "app/components/cookie.js";
+import { KTCookie } from "components/dashboard/components/cookie.js";
 
 /**
  * @class KTUtil  base utilize class that privides helper functions

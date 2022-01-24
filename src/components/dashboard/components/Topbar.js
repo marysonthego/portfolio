@@ -3,13 +3,13 @@ import objectPath from "object-path";
 import SVG from "react-inlinesvg";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 //import { toAbsoluteUrl } from "_metronic/_helpers";
-import { useHtmlClassService } from "app/components/layout/MetronicLayout";
-import { SearchDropdown } from "app/components/SearchDropdown";
-import { UserNotificationsDropdown } from "app/pages/UserNotificationsDropdown";
-import { QuickActionsDropdown } from "app/components/QuickActionsDropdown";
-import { MyCartDropdown } from "app/components/MyCartDropdown";
-import { LanguageSelectorDropdown } from "app/components/LanguageSelectorDropdown";
-import { QuickUserToggler } from "app/components/QuickUserToggler";
+import { useHtmlClassService } from "components/dashboard/components/layout/MetronicLayout";
+import { SearchDropdown } from "components/dashboard/components/SearchDropdown";
+import { UserNotificationsDropdown } from "components/dashboard/pages/UserNotificationsDropdown";
+import { QuickActionsDropdown } from "components/dashboard/components/QuickActionsDropdown";
+import { MyCartDropdown } from "components/dashboard/components/MyCartDropdown";
+import { LanguageSelectorDropdown } from "components/dashboard/components/LanguageSelectorDropdown";
+import { QuickUserToggler } from "components/dashboard/components/QuickUserToggler";
 
 export function Topbar() {
   const uiService = useHtmlClassService();

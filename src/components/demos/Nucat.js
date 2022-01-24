@@ -24,10 +24,6 @@ export const Nucat = () => {
           rel="stylesheet"
           href="./node_modules/font-awesome/css/font-awesome.min.css"
         />
-        <link
-          rel="stylesheet"
-          href="./node_modules/bootstrap-social/bootstrap-social.css"
-        />
         <link href="components/styles/nucat.css" rel="stylesheet" />
 
         <title>NuCat: a feline day camp</title>

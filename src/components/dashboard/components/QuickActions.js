@@ -4,8 +4,8 @@ import React, {forwardRef} from "react";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 import SVG from "react-inlinesvg";
-import {DropdownMenu1} from "app/components/DropdownMenu1";
-import {toAbsoluteUrl} from "app/helpers/AssetHelpers";
+import {DropdownMenu1} from "components/dashboard/components/DropdownMenu1";
+import {toAbsoluteUrl} from "components/dashboard/helpers/AssetHelpers";
 
 const QuickActionsDropdownToggle = forwardRef((props, ref) => {
   return (

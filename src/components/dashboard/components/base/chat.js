@@ -1,9 +1,9 @@
 /* eslint-disable */
 "use strict";
 
-import { KTUtil } from "app/components/util.js";
-import KTLayoutContent from "app/components/base/content.js";
-import { KTCookie } from "app/components/cookie.js";
+import { KTUtil } from "components/dashboard/components/util.js";
+import KTLayoutContent from "components/dashboard/components/base/content.js";
+import { KTCookie } from "components/dashboard/components/cookie.js";
 
 // Class definition
 var KTLayoutChat = function () {

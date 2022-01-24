@@ -2,12 +2,12 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import SVG from "react-inlinesvg";
-import { useHistory } from "react-router-dom";
-import { initUser } from 'app/helpers/Initializers';
-import { toAbsoluteUrl } from 'app/helpers/AssetHelpers';
+import { useNavigate } from "react-router-dom";
+import { initUser } from 'components/dashboard/helpers/Initializers';
+import { toAbsoluteUrl } from 'components/dashboard/helpers/AssetHelpers';
 export function QuickUser() {
   const [user, ] = useState(initUser);
-  const history = useHistory();
+  const history = useNavigate();
   const logoutClick = () => {
     const toggle = document.getElementById("kt_quick_user_toggle");
     if (toggle) {

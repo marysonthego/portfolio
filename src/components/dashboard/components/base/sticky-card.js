@@ -2,9 +2,9 @@
 "use strict";
 
 import KTLayoutHeader from "./header.js";
-import KTCard from "app/components/card.js";
-import { KTUtil } from "app/components/util.js";
-import KTLayoutSubheader from "app/components/base/subheader.js";
+import KTCard from "components/dashboard/components/card.js";
+import { KTUtil } from "components/dashboard/components/util.js";
+import KTLayoutSubheader from "components/dashboard/components/base/subheader.js";
 
 var KTLayoutStickyCard = function() {
     // Private properties

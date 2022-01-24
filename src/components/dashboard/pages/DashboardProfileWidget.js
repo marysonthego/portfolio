@@ -3,11 +3,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectCurrentUser } from 'app/redux/userSlice';
+import { selectCurrentUser } from 'components/dashboard/redux/userSlice';
 import SVG from 'react-inlinesvg';
 import { Dropdown } from 'react-bootstrap';
-import { DropdownMenu2 } from 'app/components/DropdownMenu2';
-import { UserProfileDropdown } from 'app/pages/UserProfileDropdown';
+import { DropdownMenu2 } from 'components/dashboard/components/DropdownMenu2';
+import { UserProfileDropdown } from 'components/dashboard/pages/UserProfileDropdown';
 
 export function DashboardProfileWidget ({ className }) {
   const user = useSelector(selectCurrentUser);

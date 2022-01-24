@@ -3,10 +3,10 @@ import clsx from "clsx";
 import { Dropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
 import SVG from "react-inlinesvg";
 import objectPath from "object-path";
-import { useHtmlClassService } from "app/components/layout/MetronicLayout";
+import { useHtmlClassService } from "components/dashboard/components/layout/MetronicLayout";
 import { SearchResult } from "./SearchResult";
-import { toAbsoluteUrl } from "app/helpers/AssetHelpers";
-import { DropdownTopbarItemToggler } from "app/components/DropdownTopbarItemToggler";
+import { toAbsoluteUrl } from "components/dashboard/helpers/AssetHelpers";
+import { DropdownTopbarItemToggler } from "components/dashboard/components/DropdownTopbarItemToggler";
 const fakeData = [
   {
     type: 0,

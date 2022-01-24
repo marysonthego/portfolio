@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
-import { initAllErrors } from 'app/helpers/Initializers';
+import { initAllErrors } from 'components/dashboard/helpers/Initializers';
 
 const data = {...initAllErrors};
 

@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 
 import { Dropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import SVG from 'react-inlinesvg';
-import { toAbsoluteUrl } from 'app/helpers/AssetHelpers';
-import { DropdownCustomToggler } from 'app/components/DropdownCustomToggler';
-import { DropdownMenu4 } from 'app/components/DropdownMenu4';
+import { toAbsoluteUrl } from 'components/dashboard/helpers/AssetHelpers';
+import { DropdownCustomToggler } from 'components/dashboard/components/DropdownCustomToggler';
+import { DropdownMenu4 } from 'components/dashboard/components/DropdownMenu4';
 
-import { useSessionStorage } from 'app/helpers/SessionStorageHelpers';
-import { initUser } from 'app/helpers/Initializers';
+import { useSessionStorage } from 'components/dashboard/helpers/SessionStorageHelpers';
+import { initUser } from 'components/dashboard/helpers/Initializers';
 
 export function ProfileCard() {
   const [user, setUser] = useSessionStorage('user', initUser);

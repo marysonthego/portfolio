@@ -1,10 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import { Card } from 'react-bootstrap';
-import { ListLocations } from 'app/pages/ListLocations';
-import { AddLocationForm } from 'app/pages/AddLocationForm';
+import { ListLocations } from 'components/dashboard/pages/ListLocations';
+import { AddLocationForm } from 'components/dashboard/pages/AddLocationForm';
 import { useSelector } from 'react-redux';
-import { selectUserCustid } from 'app/redux/userSlice';
+import { selectUserCustid } from 'components/dashboard/redux/userSlice';
 import {
   Box,
   makeStyles,

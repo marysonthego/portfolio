@@ -1,6 +1,6 @@
 import React from 'react';
-import { ListFriends } from 'app/pages/ListFriends';
-import { AddFriendForm } from 'app/pages/AddFriendForm';
+import { ListFriends } from 'components/dashboard/pages/ListFriends';
+import { AddFriendForm } from 'components/dashboard/pages/AddFriendForm';
 import { Box } from '@material-ui/core';
 
 export const FriendsStep = () => {

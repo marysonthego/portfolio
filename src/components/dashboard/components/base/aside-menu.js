@@ -1,10 +1,10 @@
 /* eslint-disable */
 "use strict";
 
-import { KTUtil } from "app/components/util.js";
-import KTLayoutBrand from "app/components/base/brand.js";
-import KTMenu from "app/components/menu.js";
-import KTLayoutAside from "app/components/base/aside.js";
+import { KTUtil } from "components/dashboard/components/util.js";
+import KTLayoutBrand from "components/dashboard/components/base/brand.js";
+import KTMenu from "components/dashboard/components/menu.js";
+import KTLayoutAside from "components/dashboard/components/base/aside.js";
 
 var KTLayoutAsideMenu = function() {
     // Private properties

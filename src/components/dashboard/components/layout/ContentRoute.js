@@ -1,6 +1,6 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import {Content} from "app/components/layout/Content";
+import {Content} from "components/dashboard/components/layout/Content";
 
 export function ContentRoute({ children, component, render, ...props }) {
   return (

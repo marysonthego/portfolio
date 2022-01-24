@@ -1,5 +1,5 @@
 import React from "react";
-import {toAbsoluteUrl} from "app/helpers/AssetHelpers";
+import {toAbsoluteUrl} from "components/dashboard/helpers/AssetHelpers";
 
 export function ErrorPage() {
   return (

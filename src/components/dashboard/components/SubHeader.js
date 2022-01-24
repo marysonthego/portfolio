@@ -2,11 +2,11 @@
 import React, {useMemo, useLayoutEffect, useEffect} from "react";
 import objectPath from "object-path";
 import {useLocation} from "react-router-dom";
-//import {QuickActions} from "app/components/QuickActions";
-//import {BreadCrumbs} from "app/components/BreadCrumbs";
+//import {QuickActions} from "components/dashboard/components/QuickActions";
+//import {BreadCrumbs} from "components/dashboard/components/BreadCrumbs";
 import { Button } from '@material-ui/core';
-import {getBreadcrumbsAndTitle, useSubheader} from "app/components/layout/MetronicSubheader";
-import {useHtmlClassService} from "app/components/layout/MetronicLayout"
+import {getBreadcrumbsAndTitle, useSubheader} from "components/dashboard/components/layout/MetronicSubheader";
+import {useHtmlClassService} from "components/dashboard/components/layout/MetronicLayout"
 
 export function SubHeader() {
   const uiService = useHtmlClassService();

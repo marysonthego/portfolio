@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { apiSlice, useAddLocationMutation, useFindZipMutation } from 'app/redux/apiSlice';
+import { apiSlice, useAddLocationMutation, useFindZipMutation } from 'components/dashboard/redux/apiSlice';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUserCustid, selectUserCell } from 'app/redux/userSlice';
-import { initLocation, initLocationErrors } from 'app/helpers/Initializers';
-import { FormValidation, fieldsValidation } from 'app/helpers/FormValidation';
-import { updateBackEnabled, updateNextEnabled } from 'app/redux/stepperSlice';
+import { selectUserCustid, selectUserCell } from 'components/dashboard/redux/userSlice';
+import { initLocation, initLocationErrors } from 'components/dashboard/helpers/Initializers';
+import { FormValidation, fieldsValidation } from 'components/dashboard/helpers/FormValidation';
+import { updateBackEnabled, updateNextEnabled } from 'components/dashboard/redux/stepperSlice';
 import SVG from 'react-inlinesvg';
 import { useSnackbar } from 'notistack';
 import {

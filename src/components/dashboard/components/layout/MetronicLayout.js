@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from "react";
-import { getInitLayoutConfig } from "app/components/layout/LayoutConfig";
-import { HtmlClassService } from "app/components/layout/HTMLClassService";
+import { getInitLayoutConfig } from "components/dashboard/components/layout/LayoutConfig";
+import { HtmlClassService } from "components/dashboard/components/layout/HTMLClassService";
 
 const LAYOUT_CONFIG_KEY =
   process.env.REACT_APP_LAYOUT_CONFIG_KEY || "LayoutConfig";

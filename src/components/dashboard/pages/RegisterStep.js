@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProfileForm } from 'app/pages/ProfileForm';
+import { ProfileForm } from 'components/dashboard/pages/ProfileForm';
 
 export const RegisterStep = ({ form, className, handlePassword, handleData }) => {
 

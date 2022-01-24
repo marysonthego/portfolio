@@ -5,9 +5,9 @@ import { Nav, Tab, Dropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import SVG from "react-inlinesvg";
 import objectPath from "object-path";
-import { useHtmlClassService } from "app/components/layout/MetronicLayout";
-import { toAbsoluteUrl } from "app/helpers/AssetHelpers";
-import { DropdownTopbarItemToggler } from "app/components/DropdownTopbarItemToggler";
+import { useHtmlClassService } from "components/dashboard/components/layout/MetronicLayout";
+import { toAbsoluteUrl } from "components/dashboard/helpers/AssetHelpers";
+import { DropdownTopbarItemToggler } from "components/dashboard/components/DropdownTopbarItemToggler";
 
 const perfectScrollbarOptions = {
   wheelSpeed: 2,

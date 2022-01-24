@@ -1,6 +1,6 @@
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid */
 import React from "react";
-import { ProfileForm } from 'app/pages/ProfileForm';
+import { ProfileForm } from 'components/dashboard/pages/ProfileForm';
 
 export const UserProfilePage = ({ className }) => {
 

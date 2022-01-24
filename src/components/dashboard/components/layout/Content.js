@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {useRouteMatch} from "react-router-dom";
-import KTLayoutAside from 'app/components/layout/aside';
+import {useMatch} from "react-router-dom";
+import KTLayoutAside from 'components/dashboard/components/layout/aside';
 
 export function Content({ children }) {
-  const match = useRouteMatch() || {};
+  const match = useMatch() || {};
   const animationEndClass = "grid-animateContent-finished";
   const [cssClassesState, setCssClassesState] = useState([
     "grid-animateContent",

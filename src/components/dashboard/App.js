@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { Route, useHistory, useLocation } from 'react-router-dom';
-import { AuthInit } from 'app/components/AuthInit';
-import { Routes } from 'app/Routes';
-import { I18nProvider } from 'app/helpers/i18n';
-import { MaterialThemeProvider } from 'app/components/layout/MaterialThemeProvider';
+import { Route, useNavigate, useLocation } from 'react-router-dom';
+import { AuthInit } from 'components/dashboard/components/AuthInit';
+import { DashboardRoutes } from 'components/dashboard/DashboardRoutes';
+import { I18nProvider } from 'components/dashboard/helpers/i18n';
+import { MaterialThemeProvider } from 'components/dashboard/components/layout/MaterialThemeProvider';
 import { SnackbarProvider } from 'notistack';
 import { Collapse } from '@material-ui/core';
 
 const DebugRouter = ({ children }) => {
-  let { location } = useHistory();
+  let { location } = useNavigate();
   if (process.env.NODE_ENV === 'development')
   {
     console.log(
@@ -41,7 +41,7 @@ function App ({ basename }) {
               render={ () => {
                 return (
                   <DebugRouter>
-                    <Routes />
+                    <DashboardRoutes />
                   </DebugRouter>
                 );
               } }

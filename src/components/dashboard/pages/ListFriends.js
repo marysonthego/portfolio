@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUserCustid } from 'app/redux/userSlice';
+import { selectUserCustid } from 'components/dashboard/redux/userSlice';
 import { useSnackbar } from 'notistack';
 import { 
   useGetFriendsByCustidQuery,
   useDeleteFriendMutation, 
   apiSlice,
-} from 'app/redux/apiSlice';
+} from 'components/dashboard/redux/apiSlice';
 import { 
   addNewFriend,  
   removeFriend,  
-} from 'app/redux/friendsSlice';
+} from 'components/dashboard/redux/friendsSlice';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 //import Stack from '@material-ui/Stack'; - not until MUI v5 :(
 import {

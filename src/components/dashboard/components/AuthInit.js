@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LayoutSplashScreen } from "app/components/layout/MetronicSplashScreen";
+import { LayoutSplashScreen } from "components/dashboard/components/layout/MetronicSplashScreen";
 
 export function AuthInit(props) {
   const [showSplashScreen, setShowSplashScreen] = useState(true);

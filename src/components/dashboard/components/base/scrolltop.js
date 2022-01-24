@@ -1,7 +1,7 @@
 /* eslint-disable */
 "use strict";
 
-import { KTUtil } from "app/components/util";
+import { KTUtil } from "components/dashboard/components/util";
 
 // Component Definition
 var KTScrolltop = function(elementId, options) {

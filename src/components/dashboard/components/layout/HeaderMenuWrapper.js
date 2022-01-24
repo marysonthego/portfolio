@@ -1,9 +1,8 @@
 import React, {useMemo} from "react";
 import objectPath from "object-path";
-import {Link} from "react-router-dom";
-import {toAbsoluteUrl} from "app/helpers/AssetHelpers";
-import {useHtmlClassService} from "app/components/layout/MetronicLayout";
-import {HeaderMenu} from "app/components/HeaderMenu";
+import {toAbsoluteUrl} from "components/dashboard/helpers/AssetHelpers";
+import {useHtmlClassService} from "components/dashboard/components/layout/MetronicLayout";
+import {HeaderMenu} from "components/dashboard/components/HeaderMenu";
 
 export function HeaderMenuWrapper() {
     const uiService = useHtmlClassService();

@@ -1,9 +1,8 @@
 import React, {useMemo} from "react";
-import {Link} from "react-router-dom";
 import objectPath from "object-path";
-import {Brand} from "app/components/Brand";
-import {AsideMenu} from "app/components/aside/aside-menu/AsideMenu";
-import {useHtmlClassService} from "app/components/layout/MetronicLayout";
+import {Brand} from "components/dashboard/components/Brand";
+import {AsideMenu} from "components/dashboard/components/aside/aside-menu/AsideMenu";
+import {useHtmlClassService} from "components/dashboard/components/layout/MetronicLayout";
 
 export function Aside() {
   const uiService = useHtmlClassService();

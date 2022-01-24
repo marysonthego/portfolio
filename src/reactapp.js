@@ -8,18 +8,13 @@ import "components/styles/styles.css";
 import { AnimateListTools } from "components/top/ListTools";
 
 export default function App() {
-  //const [showList, setShowList] = useState(false);
   console.log(`NODE_ENV`, process.env.NODE_ENV);
   console.log(`API_URL`, process.env.REACT_APP_API_URL);
   console.log(`API_KEY`, process.env.REACT_APP_API_KEY);
 
-  // const handleListTools = () => {
-  //   setShowList(true);
-  // };
-
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
-});
+  });
 
   return (
       <Container

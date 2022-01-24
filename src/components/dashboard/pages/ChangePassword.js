@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { toAbsoluteUrl } from 'app/helpers/AssetHelpers';
+import { useNavigate } from 'react-router-dom';
+import { toAbsoluteUrl } from 'components/dashboard/helpers/AssetHelpers';
 import {Form} from 'react-bootstrap';
 import { 
   makeStyles, 
@@ -8,11 +8,11 @@ import {
   Box 
 } from '@material-ui/core';
 import SVG from 'react-inlinesvg';
-import {FormValidation, fieldsValidation} from 'app/helpers/FormValidation';
+import {FormValidation, fieldsValidation} from 'components/dashboard/helpers/FormValidation';
 import {
   initUserErrors, 
-} from 'app/helpers/Initializers';
-import { changePassword } from 'app/components/AuthCrud';
+} from 'components/dashboard/helpers/Initializers';
+import { changePassword } from 'components/dashboard/components/AuthCrud';
 import { useSnackbar } from 'notistack';
 import { 
   useDispatch, 
@@ -21,10 +21,10 @@ import {
 import { 
   selectCurrentUser, 
   updateIsLoggedInState 
-} from 'app/redux/userSlice';
+} from 'components/dashboard/redux/userSlice';
 import { 
   updateErrorState, 
-} from 'app/redux/errorsSlice';
+} from 'components/dashboard/redux/errorsSlice';
 const useStyles = makeStyles(theme => ({
   input: {
     border: 'none',
@@ -39,7 +39,7 @@ export const ChangePassword = () => {
   const [isValid, setIsValid] = useState(false);
   const [pwds, setPwds] = useState({});
   const [userErrors, setUserErrors] = useState(initUserErrors);
-  const history = useHistory();
+  const history = useNavigate();
   const classes = useStyles();
   const { enqueueSnackbar,  } = useSnackbar();
 

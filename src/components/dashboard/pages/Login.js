@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { FormattedMessage } from 'react-intl';
-import { DoLogin } from 'app/components/AuthCrud';
-import { Logout } from 'app/pages/Logout';
+import { DoLogin } from 'components/dashboard/components/AuthCrud';
+import { Logout } from 'components/dashboard/pages/Logout';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
   updateUserState,
   updateIsLoggedInState,
   selectCurrentUser, 
-} from 'app/redux/userSlice';
+} from 'components/dashboard/redux/userSlice';
 
 const initialValues = {
   email: '',
@@ -21,7 +20,7 @@ const initialValues = {
 export function Login() {
   let currentUser = useSelector(selectCurrentUser);
   const [loading, setLoading] = useState(false);
-  const history = useHistory();
+  const history = useNavigate();
   const { enqueueSnackbar,  } = useSnackbar();
   const dispatch = useDispatch();
 
@@ -252,7 +251,7 @@ export function Login() {
                           to="/auth/forgot-password"
                           className="text-dark-50 text-hover-primary my-3 mr-20"
                           id="kt_login_forgot">
-                          <FormattedMessage id="AUTH.GENERAL.FORGOT_BUTTON" />
+                          Forgot password?
                         </Link>
                         <button
                           id="kt_login_signin_submit"

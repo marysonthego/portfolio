@@ -1,18 +1,17 @@
 import React, { Suspense } from 'react';
-import { Redirect, Switch } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { LayoutSplashScreen } from 'app/components/layout/MetronicSplashScreen';
-import { ContentRoute } from 'app/components/layout/ContentRoute';
-import { DashboardPage } from 'app/pages/DashboardPage';
-import { ChangePassword } from 'app/pages/ChangePassword';
-import { Login } from 'app/pages/Login';
-import { Logout } from 'app/pages/Logout';
-import { UserProfilePage } from 'app/pages/UserProfilePage';
-import { LocationsStep } from 'app/pages/LocationsStep';
-import { FriendsStep } from 'app/pages/FriendsStep';
-import { ListCustomers } from 'app/pages/ListCustomers';
-//import { RssPage } from 'app/pages/RssPage';
-import { selectCurrentUser } from 'app/redux/userSlice';
+import { LayoutSplashScreen } from 'components/dashboard/components/layout/MetronicSplashScreen';
+import { ContentRoute } from 'components/dashboard/components/layout/ContentRoute';
+import { DashboardPage } from 'components/dashboard/pages/DashboardPage';
+import { ChangePassword } from 'components/dashboard/pages/ChangePassword';
+import { Login } from 'components/dashboard/pages/Login';
+import { Logout } from 'components/dashboard/pages/Logout';
+import { UserProfilePage } from 'components/dashboard/pages/UserProfilePage';
+import { LocationsStep } from 'components/dashboard/pages/LocationsStep';
+import { FriendsStep } from 'components/dashboard/pages/FriendsStep';
+import { ListCustomers } from 'components/dashboard/pages/ListCustomers';
+import { selectCurrentUser } from 'components/dashboard/redux/userSlice';
 
 export default function BasePage (props) {
   let currentUser = useSelector(selectCurrentUser);
@@ -21,7 +20,7 @@ export default function BasePage (props) {
   return (
     <Suspense fallback={ <LayoutSplashScreen /> }>
       { currentUser.isLoggedIn ? (
-        <Switch>
+        <Routes>
           <ContentRoute exact path="/dashboard" component={DashboardPage} />
           <ContentRoute exact path="/user-profile" component={UserProfilePage}/>
           <ContentRoute exact path="/logout" component={Logout}/>
@@ -32,17 +31,17 @@ export default function BasePage (props) {
           {currentUser.usertype === 'admin' ? (
             <>
             <ContentRoute exact path="/list-customers" component={ListCustomers}/>
-            {/* <ContentRoute exact path="/rss-page" component={RssPage}/> */}
             </>
-          ) : (<Redirect to="/dashboard"/>)}
-          <Redirect from="/" to="/dashboard" />
-        </Switch>
+          ) : (<Route render={() => <Navigate to="/dashboard" /> } />
+          )}
+          <Route path="/" render={() => <Navigate to="/dashboard" /> } />
+        </Routes>
       ) : (
-        <Switch>
+        <Routes>
           <ContentRoute path="/auth/login" component={ Login } />
-          <Redirect to="/auth/login" />
-          <Redirect to="/error" />
-        </Switch>
+          <Route render={() => <Navigate to="/auth/login" /> } />
+          <Route render={() => <Navigate to="/error" /> } />
+        </Routes>
       )}
     </Suspense>
   );

@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/formstyles.css";
-//require('dotenv').config();
+require('dotenv').config();
 
 export const DataOwner = () => {
 
@@ -415,12 +415,12 @@ export const DataOwner = () => {
 
   useEffect(() => {
     const weatherFetch = async () => { 
-       //navigator.geolocation.getCurrentPosition(function(position) {
-    //   setLat(position.coords.latitude);
-    //   setLong(position.coords.longitude);
-    // });
-    setLat(40.45454);
-    setLong(-105.08668);
+       navigator.geolocation.getCurrentPosition(function(position) {
+      setLat(position.coords.latitude);
+      setLong(position.coords.longitude);
+    });
+    // setLat(40.45454);
+    // setLong(-105.08668);
     console.log(`lat`, lat);
     console.log(`long`, long);
     try {
