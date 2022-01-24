@@ -23,6 +23,9 @@ connection.connect (function (error) {
   if(error) throw error;
   console.log("Connected");
   console.log(`pool: `, pool);
+  console.log(`process.env.MYhost: `, process.env.MYhost);
+  console.log(`process.env.MYuser: `, process.env.MYuser);
+  console.log(`process.env.MYdatabase: `, process.env.MYdatabase);
 });
 
 module.exports = { pool };
