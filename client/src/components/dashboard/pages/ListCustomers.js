@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { useSnackbar } from 'notistack';
 import { 
   useListCustomersQuery,
-  useUpdateCustomerMutation, 
   useDeleteCustomerMutation,
   apiSlice,
 } from 'components/dashboard/redux/apiSlice';

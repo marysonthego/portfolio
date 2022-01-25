@@ -27,7 +27,7 @@ header h2 {
 }
 
 .masthead.hero-image {
-  background-image: url("/public/media/leapingcat.png");
+  background-image: url("media/leapingcat.png");
   background-color: #cccccc;
   height: auto;
   background-position: center;
@@ -90,27 +90,27 @@ header.masthead .overlay {
 }
 
 .pic1 {
-  background: url(/public/media/curiouscat.png) no-repeat center center fixed;
+  background: url(media/curiouscat.png) no-repeat center center fixed;
 }
 
 .pic2 {
-  background: url(/public/media/worriedcat.png) no-repeat center center fixed;
+  background: url(media/worriedcat.png) no-repeat center center fixed;
 }
 
 .pic3 {
-  background: url(/public/media/logincat.png) no-repeat center center fixed;
+  background: url(media/logincat.png) no-repeat center center fixed;
 }
 
 .pic4{
-  background: url(/public/media/peakingcat.png) no-repeat center center fixed;
+  background: url(media/peakingcat.png) no-repeat center center fixed;
 }
 
 .pic5 {
-  background: url(/public/media/registercat.png) no-repeat center center fixed;
+  background: url(media/registercat.png) no-repeat center center fixed;
 }
 
 .pic6 {
-  background: url(/public/media/catonback.png) no-repeat center center fixed;
+  background: url(                      media/catonback.png) no-repeat center center fixed;
 }
 
 
