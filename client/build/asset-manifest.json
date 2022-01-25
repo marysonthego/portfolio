@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2aa191fb.chunk.css",
+    "main.js": "/static/js/main.d56114b6.chunk.js",
+    "main.js.map": "/static/js/main.d56114b6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.37f2aa7a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.37f2aa7a.js.map",
+    "static/css/2.1eb022d0.chunk.css": "/static/css/2.1eb022d0.chunk.css",
+    "static/js/2.75f5eb08.chunk.js": "/static/js/2.75f5eb08.chunk.js",
+    "static/js/2.75f5eb08.chunk.js.map": "/static/js/2.75f5eb08.chunk.js.map",
+    "static/js/3.f0afe316.chunk.js": "/static/js/3.f0afe316.chunk.js",
+    "static/js/3.f0afe316.chunk.js.map": "/static/js/3.f0afe316.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1eb022d0.chunk.css.map": "/static/css/2.1eb022d0.chunk.css.map",
+    "static/css/main.2aa191fb.chunk.css.map": "/static/css/main.2aa191fb.chunk.css.map",
+    "static/js/2.75f5eb08.chunk.js.LICENSE.txt": "/static/js/2.75f5eb08.chunk.js.LICENSE.txt",
+    "static/js/main.d56114b6.chunk.js.LICENSE.txt": "/static/js/main.d56114b6.chunk.js.LICENSE.txt",
+    "static/media/nucat.css": "/static/media/worriedcat.6f1ee97e.png",
+    "static/media/index.css": "/static/media/nunito-vietnamese-400-normal.977238e2.woff2",
+    "static/media/800.css": "/static/media/nunito-vietnamese-800-normal.21047dbd.woff2",
+    "static/media/App.css": "/static/media/pexels-mitchell-luo-3694708.31f7a2d4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37f2aa7a.js",
+    "static/css/2.1eb022d0.chunk.css",
+    "static/js/2.75f5eb08.chunk.js",
+    "static/css/main.2aa191fb.chunk.css",
+    "static/js/main.d56114b6.chunk.js"
+  ]
+}
