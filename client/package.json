@@ -2,6 +2,7 @@
   "name": "marysonthego.tech",
   "version": "0.1.0",
   "description": "Portfolio",
+  "type": "module",
   "homepage": "https://marysonthego.tech/",
   "author": "Mary Clark <marysonthego@gmail.com> (https://marysonthego.tech)",
   "repository": {
