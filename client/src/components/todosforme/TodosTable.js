@@ -154,7 +154,7 @@ export const TodosTable = ({
           rowStyle={{
             fontSize: "12px",
             color: "#e5e5e5",
-            background: "#131836",
+            background: "#bcbdc2",
           }}
           wrapperClasses="table-responsive"
           pagination={paginationFactory()}

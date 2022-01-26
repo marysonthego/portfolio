@@ -73,7 +73,7 @@ export const AboutUs = () => {
                       alt="Worried Cat"
                     />
                     <div className="card-body">
-                      <h5 className="card-title">Face Challenges</h5>
+                      <h5 className="card-title">Face Your Challenges</h5>
                     </div>
                   </div>
                   <div className="card bg-light text-white">
