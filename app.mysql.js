@@ -53,43 +53,34 @@ var router = express.Router({mergeParams: true});
 
 server.use(router);
 
-router.use(express.static(path.join(__dirname, 'build')));
+router.use(express.static(path.join(__dirname, '/client/build')));
 
-server.get("/", (req, res) => {
-  return res.status;
-});
+// server.get("/", (req, res) => {
+//   return res.status;
+// });
 
 router.get("/todos/all", async (req, res) => {
-  const response = await pool.query(`SELECT * FROM todos`);
-  if (Boolean(response.rows)) {
-    return res.status(200).send(response.rows);
-  }
-  return res.status(404);
+  try {
+    await pool.execute('SELECT * FROM `todos`',
+    function(err, results, fields) {
+      console.log(`results: `, results);
+      console.log(`fields: `, fields);
+      console.log(`err:`, err);
+      return res.status(200).send(results, fields);
+    })
+  } catch (err) {
+    return err;
+    }
 });
 
 router.post("/todos/create", async (req, res) => {
   try {
-    let {
-      title,
-      description,
-      createdDate,
-      category,
-      priority,
-    } = req.body;
-    await pool.query(`INSERT INTO todos (title, description, createdDate, category, priority)
-    VALUES ($1, $2, $3, $4, $5)`, [title, description, createdDate, category, priority],
-    (err, result) => {
-      if (err) {
-        console.error(`\ntodosCreate failed with error: `, err.message);
-        let msg = err.message;
-        return res.status(500).send(msg);
-      }
-      if (result.rowCount === 0) {
-        let msg = "rowCount returned 0";
-        return res.status(406).send(msg);
-      }
+    await pool.execute('INSERT INTO `todos` (`title`, `description`, `createdDate`, `category`, `priority`',
+     [req.body.title, req.body.description, req.body.createdDate, req.body.category, req.body.priority],
+    function (error, results, fields) {
+      if (error) throw error;
       else {
-        return res.status(200).send(result.rows[0]);
+        return res.status(200).send(results, fields);
       }
     });
     return res.status;
@@ -100,22 +91,11 @@ router.post("/todos/create", async (req, res) => {
 
 router.post("/todos/update", async (req, res) => {
   try {
-    const {
-      id,
-      title,
-      description,
-      createdDate,
-      category,
-      priority,
-    } = req.body;
-    await pool.query( `UPDATE todos SET title=$2, description=$3, category=$5, priority=$6 WHERE todos.id = $1 RETURNING id, title, description, createdDate, category, priority`, [id, title, description, createdDate, category, priority],
-    (err, results) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(409).send({msg});
-      } else {
-        let msg = results.rowCount;
-        return res.status(200).send({msg});
+    await pool.execute( 'UPDATE `todos` SET title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority WHERE todos.id = req.body.id',
+    function (error, results, fields) {
+      if (error) throw error;
+      else {
+        return res.status(200).send(results, fields);
       }
     });
   } catch (error) {
@@ -125,16 +105,12 @@ router.post("/todos/update", async (req, res) => {
 
 router.post("/todos/delete", async (req, res) => {
   try {
-    let id = req.body.id;
-    await pool.query(`DELETE from todos WHERE todos.id = $1 RETURNING id`, [id],
-    (err, results) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(409).send({msg});
-      } else {
-        let msg = results;
-        return res.status(200).send({msg});
-      } 
+    await pool.execute('DELETE from `todos` WHERE todos.id = req.body.id',
+    function (error, results, fields) {
+      if (error) throw error;
+      else {
+        return res.status(200).send(results, fields);
+      }
     });
   } catch (error) {
     return error;
@@ -144,52 +120,25 @@ router.post("/todos/delete", async (req, res) => {
 
 router.get("/events/all", async (req, res) => {
   try {
-    const response = await pool.query(`SELECT id, start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat FROM events`);
-    if (Boolean(response.rows)) {
-      return res.status(200).send(response.rows);
+    const response = await pool.execute('SELECT * FROM `events`',
+    function(err, results, fields) {
+      console.log(`results: `, results);
+      console.log(`fields: `, fields);
+      console.log(`err:`, err);
+      return res.status(200).send(results, fields);
+    })
+  } catch (err) {
+    return err;
     }
-    return res.status(404);
-  } catch (error) {
-    return error;
-  }
 });
 
 router.post("/events/create", async (req, res) => {
   try {
-    let {
-      start, 
-      end, 
-      until, 
-      occurrenceId, 
-      title, 
-      description, 
-      category, 
-      priority, 
-      allDay, 
-      done, 
-      interval, 
-      every, 
-      Sun, 
-      Mon, 
-      Tue, 
-      Wed, 
-      Thu, 
-      Fri, 
-      Sat
-    } = req.body;
-    await pool.query(`INSERT INTO events (start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING id, start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat`, [start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat],
-    (err, result) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(500).send(msg);
-      }
-      if (result.rowCount === 0) {
-        let msg = "rowCount returned 0";
-        return res.status(406).send(msg);
-      }
+    await pool.execute('INSERT INTO `events` (`start`, `end`, `until`, `occurrenceId`, `title`, `description`, `category`, `priority`, `allDay`, `done`, `interval`, `every`, `Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`', [req.body.start, req.body.end, req.body.until, req.body.occurrenceId, req.body.title, req.body.description, req.body.category, req.body.priority, req.body.allDay, req.body.done, req.body.interval, req.body.every, req.body.Sun, req.body.Mon, req.body.Tue, req.body.Wed, req.body.Thu, req.body.Fri, req.body.Sat],
+    function (error, results, fields) {
+      if (error) throw error;
       else {
-        return res.status(200).send(result.rows[0]);
+        return res.status(200).send(results, fields);
       }
     });
     return res.status;
@@ -200,55 +149,25 @@ router.post("/events/create", async (req, res) => {
 
 router.post("/events/update", async (req, res) => {
   try {
-    const {
-      start, 
-      end, 
-      until, 
-      occurrenceId, 
-      title, 
-      description, 
-      category, 
-      priority, 
-      allDay, 
-      done, 
-      interval, 
-      every, 
-      Sun, 
-      Mon, 
-      Tue, 
-      Wed, 
-      Thu, 
-      Fri, 
-      Sat,
-      id
-    } = req.body;
-    await pool.query( `UPDATE events SET start=$1, end=$2, until=$3, occurrenceId=$4, title=$5, description=$6, category=$7, priority=$8, allDay=$9, done=$10, interval=$11, every=$12, Sun=$13, Mon=$14, Tue=$15, Wed=$16, Thu=$17, Fri=$18, Sat=$19 WHERE events.id = $20 RETURNING id, start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat `, [start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat, id],
-    (err, results) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(409).send({msg});
-      } else {
-        let msg = results.rowCount;
-        return res.status(200).send({msg});
+    await pool.execute( 'UPDATE `events` SET start=req.body.start, end=req.body.end, until=req.body.until, occurrenceId=req.body.occurrenceId, title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority, allDay=req.body.allDay, done=req.body.done, interval=req.body.interval, every=req.body.every, Sun=req.body.Sun, Mon=req.body.Mon, Tue=req.body.Tue, Wed=req.body.Wed, Thu=req.body.Thu, Fri=req.body.Fri, Sat=req.body.Sat WHERE events.id = req.body.id', 
+    function (error, results, fields) {
+      if (error) throw error;
+      else {
+        return res.status(200).send(results, fields);
       }
     });
   } catch (error) {
     return error;
   }
 });
-
 router.post("/events/delete", async (req, res) => {
   try {
-    let id = req.body.id;
-    await pool.query(`DELETE from events WHERE events.id = $1 RETURNING id`, [id],
-    (err, results) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(409).send({msg});
-      } else {
-        let msg = results;
-        return res.status(200).send({msg});
-      } 
+    await pool.execute('DELETE from `events` WHERE events.id = req.body.id',
+    function (error, results, fields) {
+      if (error) throw error;
+      else {
+        return res.status(200).send(results, fields);
+      }
     });
   } catch (error) {
     return error;
@@ -276,19 +195,16 @@ router.post("/events/occurrenceDelete", async (req, res) => {
 router.get("/events/recurring", async (req, res) => {
   try {
     let occurrenceId = req.body.occurrenceId;
-    const response = await pool.query(`SELECT id, start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat FROM events WHERE events.occurrenceId = occurrenceId RETURNING id`, [occurrenceId],
-    (err, results) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(500).send({msg});
-      } else {
-        let msg = results;
-        return res.status(200).send({msg});
-      }
-    });
-  } catch (error) {
-    return error;
-  }
+    const response = await pool.execute('SELECT * FROM `events` WHERE events.occurrenceId = req.body.occurrenceId',
+    function(err, results, fields) {
+      console.log(`results: `, results);
+      console.log(`fields: `, fields);
+      console.log(`err:`, err);
+      return res.status(200).send(results, fields);
+    })
+  } catch (err) {
+    return err;
+    }
 });
 
 server.get("/api", (req, res) => {
@@ -1047,7 +963,7 @@ function checkAuthenticated (req, res, next) {
 
 server.get('/*', (req, res) => {
   //res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 server.listen(PORT, () => {

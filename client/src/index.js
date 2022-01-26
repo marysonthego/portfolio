@@ -35,6 +35,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/dashboard" element={<AlertsDashboard />} />
           <Route path="/stepper" element={<AlertsStepper />} />
+          <Route path="/nucat/#reserveForm" element={<Nucat/>} />
           <Route path="/nucat" element={<Nucat />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/todos" element={<TodosForMe />} />

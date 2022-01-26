@@ -122,7 +122,8 @@ export const Nucat = () => {
                         </div>
 
                         <div className="form-group row">
-                          <div className="col">
+                          <div className="col d-flex align-items-end justify-content-end">
+  
                             <button type="submit" className="btn btn-secondary">
                               Reserve
                             </button>

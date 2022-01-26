@@ -118,29 +118,6 @@ export const AboutUs = () => {
                 </div>
               </div>
             </div>
-
-            <footer className="site-footer">
-              <div className="container">
-                <div className="row">
-                  <div className="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul className="list-unstyled">
-                      <li className="nav-item">
-                        <a className="nav-link" href="/nucat">
-                          {" "}
-                          <i className="fa fa-home fa-md"> </i>Home
-                        </a>
-                      </li>
-                      <li className="nav-item active">
-                        <a className="nav-link" href="aboutus.html">
-                          <i className="fa fa-info fa-md"> </i>About
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </footer>
           </Row>
         </Container>
       </body>

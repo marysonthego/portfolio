@@ -20,23 +20,53 @@ code {
 
 .ScrollToTop {
   position: fixed; 
-  width: 100%;
   bottom: 40px;
   align-items: center;
-  height: 30px;
   justify-content: right;
   z-index: 1000;
   cursor: pointer;
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
-  opacity: 0.5;
+  opacity: 0.7;
+  height: 48px;
+  width: 48px;
+  border-width: 5px;
+  margin: 20px;
 }
 
-.scrollTop:hover{
+.ScrollToTop:hover{
   opacity: 1;
 }
 
-@keyframes fadeIn {
+@media (prefers-reduced-motion: no-preference) {
+  .ScrollToTop {
+    animation-name: ScrollToTop-spin;
+    animation-iteration-count: 1;
+    animation-duration: 2s, 4s;
+    animation-timing-function: ease;
+    transition: transform 1s;
+  }
+}
+
+@keyframes ScrollToTop-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ScrollToTop-slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes ScrollToTop-fadeIn {
   0% {
     opacity: 0;
   }
