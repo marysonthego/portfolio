@@ -14,7 +14,7 @@ export function TodosForMe() {
           <span>
             {" "}
             <h3 className="h3">
-              Todos For Me <img src="media/mtransparent.png" alt="white checkmark"/>
+              Todos For Me <img src="media/mtransparentsmall.png" alt="M"/>
             </h3>
           </span>
         </Col>
@@ -27,7 +27,7 @@ export function TodosForMe() {
         <footer>
           <Col align="right">
             <span>
-              <img src="media/mtransparent.png" alt="white checkmark"/>
+              <img src="media/mtransparentsmall.png" alt="M"/>
             </span>
           </Col>
         </footer>
