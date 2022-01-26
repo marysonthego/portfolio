@@ -27,7 +27,6 @@ export const Navigation = () => {
         <div  id="navbarResponsive" className="navbar-nav flex-row justify-content-center">
             <a className="nav-item me-2" href="/nucat">Home</a>
             <a className="nav-item me-2" href="/aboutus">About</a>
-            <a className="nav-item "  href="/nucat/#reserveForm">Reservations</a>
         </div>
         ) : null }
         
@@ -73,9 +72,6 @@ export const Navigation = () => {
                     <Nav.Link href="/todos" className="rounded-end">
                       Todos For Me
                     </Nav.Link>
-                    <Nav.Link href="/database" className="rounded-end">
-                      Database Shenanegans!
-                    </Nav.Link>
                     <Nav.Link href="/subnet" className="rounded-end">
                       Native Subnet Calculator
                     </Nav.Link>
@@ -87,14 +83,16 @@ export const Navigation = () => {
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="/post01" className="rounded-end">
-                      Run Your React Native App in Windows Subsystem for Android
-                      (WSA)
+                      Run Your React-Native App in WSA (otherwise known as Amazon App Store)
                     </Nav.Link>
                     <Nav.Link href="/post02" className="rounded-end">
                       Use Sqlite 3 for Quick Database Emulation
                     </Nav.Link>
                     <Nav.Link href="/post03" className="rounded-end">
                       Authenticate with Passport
+                    </Nav.Link>
+                    <Nav.Link href="/post08" className="rounded-end">
+                      MySQL vs PostgreSQL
                     </Nav.Link>
                     <Nav.Link href="/post04" className="rounded-end">
                       React forwardRef
@@ -103,7 +101,7 @@ export const Navigation = () => {
                       Deployment Quick References
                     </Nav.Link>
                     <Nav.Link href="/post06" className="rounded-end">
-                      Closures Explained
+                      Never Ending Closures
                     </Nav.Link>
                     <Nav.Link href="/post07" className="rounded-end">
                       Hooks are Lovable!
@@ -116,7 +114,7 @@ export const Navigation = () => {
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="/contact" className="rounded-end">
-                      Contact Me
+                      Contact Me!
                     </Nav.Link>
                     <Nav.Link href="/education" className="rounded-end">
                       Education
