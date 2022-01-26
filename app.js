@@ -61,12 +61,13 @@ router.use(express.static(path.join(__dirname, '/public')));
 
 router.get("/api/todos/all", async (req, res) => {
   try {
-    await pool.execute('SELECT * FROM `todos`',
+    await pool.execute("SELECT * FROM todos",
     function(err, results, fields) {
-      console.log(`results: `, results);
-      console.log(`fields: `, fields);
-      console.log(`err:`, err);
-      return res.status(200).send(results, fields);
+      if (!err) {
+      res.status(200).send(results, fields);
+      } else {
+        res.send(err);
+      }
     })
   } catch (err) {
     return err;
@@ -961,7 +962,7 @@ function checkAuthenticated (req, res, next) {
 };
 
 
-server.get('/*', (req, res) => {
+router.get('/**', (req, res) => {
   //res.sendFile(path.join(__dirname, 'build', 'index.html'));
   res.sendFile(path.join(__dirname, '/public', 'index.html'));
 });
