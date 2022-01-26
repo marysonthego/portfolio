@@ -54,7 +54,7 @@ export const DataOwner = () => {
   const eventsFetchAll = async () => {
     let localList = [];
     await axios
-      .get(`/events/all`)
+      .get(`/api/events/all`)
       .then((res) => {
         let result = res.data.map((obj) => ({
           id: obj.id,
@@ -87,7 +87,7 @@ export const DataOwner = () => {
   const eventCreate = async (evt) => {
     try {
     await axios
-      .post("/events/create", {
+      .post("/api/events/create", {
         start: new Date(evt.start),
         end: new Date(evt.end),
         until: new Date(evt.until),
@@ -122,7 +122,7 @@ export const DataOwner = () => {
   const eventUpdate = async (evt) => {
     try {
     await axios
-      .put("/events/update", {
+      .put("/api/events/update", {
         id: evt.id,
         start: evt.start,
         end: evt.end,
@@ -209,7 +209,7 @@ export const DataOwner = () => {
     for (let i = 0; i < eventOccurrences.length; i++) {
       console.log(`eventOccurrences: `, i, eventOccurrences[i]);
       try {
-      await axios.put("/events/update", {
+      await axios.put("/api/events/update", {
         id: eventOccurrences[i].id,
         start: eventOccurrences[i].start,
         end: eventOccurrences[i].end,
@@ -240,7 +240,7 @@ export const DataOwner = () => {
     let occurrenceId = evt.occurrenceId;
     try {
     await axios
-      .post(`/events/recurring`, {
+      .post(`/api/events/recurring`, {
         occurrenceId,
         occurrenceId,
       })
@@ -305,7 +305,7 @@ export const DataOwner = () => {
 
   const eventDelete = async (id) => {
     await axios
-      .put(`/events/delete`, { id: id })
+      .put(`/api/events/delete`, { id: id })
       .then(() => {})
       .catch((error) =>
         console.error(`eventDelete error id: ${id} error: ${error}`)
@@ -317,7 +317,7 @@ export const DataOwner = () => {
   const eventOccurrencesDelete = async (id) => {
     console.log(`id: `, id);
     await axios
-      .put("/events/occurrencedelete", {
+      .put("/api/events/occurrencedelete", {
         id: id,
       })
       .then(() => {})
@@ -326,7 +326,7 @@ export const DataOwner = () => {
 
   const todoMoveToCalendar = async (row) => {
     await axios
-      .post(`/events/create`, {
+      .post(`/api/events/create`, {
         start: Date(),
         end: Date(),
         until: Date(),
@@ -357,7 +357,7 @@ export const DataOwner = () => {
   const todosFetchAll = async () => {
     setTodos([]);
     await axios
-      .get(`/todos/all`)
+      .get(`/api/todos/all`)
       .then((res) => {
         setTodos((prev) => [...prev, ...res.data]);
       })
@@ -366,7 +366,7 @@ export const DataOwner = () => {
 
   const todoCreate = async (todo) => {
     await axios
-      .post(`/todos/create`, {
+      .post(`/api/todos/create`, {
         title: todo.title,
         description: todo.description,
         createdDate: todo.createdDate,
@@ -383,7 +383,7 @@ export const DataOwner = () => {
 
   const todoUpdate = async ({ rid, col, value }) => {
     await axios
-      .put(`/todos/update`, {
+      .put(`/api/todos/update`, {
         id: rid,
         [col]: value,
       })
@@ -395,7 +395,7 @@ export const DataOwner = () => {
 
   const todoDelete = async (id) => {
     await axios
-      .put(`/todos/delete`, { id: id })
+      .put(`/api/todos/delete`, { id: id })
       .then((res) => {
         todosFetchAll();
       })
