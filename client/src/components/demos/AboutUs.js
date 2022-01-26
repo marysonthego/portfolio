@@ -22,37 +22,6 @@ export const AboutUs = () => {
       </head>
 
       <body>
-        <nav className="navbar navbar-expand fixed-top" id="mainNav">
-          <div className="container">
-            <a className="navbar-brand" href="/">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </a>
-            <button
-              className="navbar-toggler navbar-toggler-right"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              Menu
-              <i className="fas fa-bars"></i>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarResponsive">
-              <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                  <a 
-                  href="/nucat"
-                  role="button"
-                    className="button">
-                    Home
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
         <header
           className="masthead hero-image"
           style={{backgroundImage: `url(media/guitarcat.png)`}}

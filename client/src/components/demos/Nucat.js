@@ -13,7 +13,7 @@ export const Nucat = () => {
 
         <link
           rel="stylesheet"
-          href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+          href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
         />
 
         <link
@@ -22,63 +22,15 @@ export const Nucat = () => {
         />
         <link
           rel="stylesheet"
-          href="./node_modules/font-awesome/css/font-awesome.min.css"
+          href="/font-awesome/css/font-awesome.min.css"
         />
-        <link href="components/styles/nucat.css" rel="stylesheet" />
+        <link href="/client/src/components/styles/nucat.css" rel="stylesheet" />
 
         <title>NuCat: a feline day camp</title>
       </head>
 
       <body>
-        <nav className="navbar navbar-expand fixed-top" id="mainNav">
-          <div className="container">
-            <a className="navbar-brand" href="/">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </a>
-            <button
-              className="navbar-toggler navbar-toggler-right"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              Menu
-              <i className="fas fa-bars"></i>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarResponsive">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a 
-                  href="/nucat"
-                  role="button"
-                    className="button">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a 
-                  href="/aboutus"
-                  role="button"
-                    className="button">
-                    About
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a
-                    href="#reserveForm"
-                    role="button"
-                    className="button"
-                  >
-                    Reservations
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        
 
         <header className="masthead hero-image">
         
@@ -187,29 +139,6 @@ export const Nucat = () => {
                 </div>
               </div>
             </div>
-
-            <footer className="site-footer">
-              <div className="container">
-                <div className="row">
-                  <div className="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul className="list-unstyled">
-                      <li className="nav-item">
-                        <a className="nav-link" href="/nucat">
-                          {" "}
-                          <i className="fa fa-home fa-md"> </i>Home
-                        </a>
-                      </li>
-                      <li className="nav-item active">
-                        <a className="nav-link" href="aboutus.html">
-                          <i className="fa fa-info fa-md"> </i>About
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </footer>
           </Row>
         </Container>
       </body>

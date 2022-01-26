@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { useLocation } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
@@ -10,10 +11,26 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Navigation = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    console.log(`currentPath: `, currentPath);
+  }, [location]);
+
   return (
     <Navbar bg="light" expand={false} sticky="top">
       <Container fluid>
         <Navbar.Brand href="/"> MarysOnTheGo.tech</Navbar.Brand>
+
+        {location.pathname === "/nucat" || location.pathname === "/nucat/" || location.pathname === "/aboutus" ? (
+        <div  id="navbarResponsive" className="navbar-nav flex-row justify-content-center">
+            <a className="nav-item me-2" href="/nucat">Home</a>
+            <a className="nav-item me-2" href="/aboutus">About</a>
+            <a className="nav-item "  href="/nucat/#reserveForm">Reservations</a>
+        </div>
+        ) : null }
+        
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
@@ -50,8 +67,7 @@ export const Navigation = () => {
                     <Nav.Link href="/stepper" className="rounded-end">
                       Sign-up Stepper
                     </Nav.Link>
-                    <Nav.Link href="/dashboard"
-                    className="rounded-end">
+                    <Nav.Link href="/dashboard" className="rounded-end">
                       Admin Dashboard
                     </Nav.Link>
                     <Nav.Link href="/todos" className="rounded-end">
@@ -71,8 +87,8 @@ export const Navigation = () => {
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="/post01" className="rounded-end">
-                      Run Your React Native App in Windows Subsystem for
-                      Android (WSA)
+                      Run Your React Native App in Windows Subsystem for Android
+                      (WSA)
                     </Nav.Link>
                     <Nav.Link href="/post02" className="rounded-end">
                       Use Sqlite 3 for Quick Database Emulation
@@ -135,4 +151,3 @@ export const Navigation = () => {
     </Navbar>
   );
 };
-

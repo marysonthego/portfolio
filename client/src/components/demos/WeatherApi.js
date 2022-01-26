@@ -5,7 +5,6 @@ import moment from "moment";
 import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/weatherstyles.css";
-//require("dotenv").config();
 
 const refresh = () => {
   window.location.reload();

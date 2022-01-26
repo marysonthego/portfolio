@@ -53,11 +53,11 @@ var router = express.Router({mergeParams: true});
 
 server.use(router);
 
-router.use(express.static(path.join(__dirname, 'public')));
+router.use(express.static(path.join(__dirname, '/client/build')));
 
-server.get("/", (req, res) => {
-  return res.status;
-});
+// server.get("/", (req, res) => {
+//   return res.status;
+// });
 
 router.get("/todos/all", async (req, res) => {
   try {
@@ -1039,7 +1039,7 @@ function checkAuthenticated (req, res, next) {
 
 server.get('/*', (req, res) => {
   //res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 server.listen(PORT, () => {

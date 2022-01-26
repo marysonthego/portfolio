@@ -8,13 +8,14 @@ import { lightTheme } from "components/top/themes";
 import { GlobalStyles } from "components/top/globalStyles";
 import "./index.css";
 import App from "./App";
-import {Navigation} from "components/top/Navigation";
-import {TodosForMe} from "components/todosforme/TodosForMe";
-import {Nucat} from "components/demos/Nucat";
-import {AboutUs} from "components/demos/AboutUs";
-import {WeatherApi} from "components/demos/WeatherApi";
-import {AlertsDashboard} from "components/demos/AlertsDashboard";
-import {AlertsStepper} from "components/demos/AlertsStepper";
+import { Navigation } from "components/top/Navigation";
+import { ScrollToTop } from "components/top/ScrollToTop";
+import { TodosForMe } from "components/todosforme/TodosForMe";
+import { Nucat } from "components/demos/Nucat";
+import { AboutUs } from "components/demos/AboutUs";
+import { WeatherApi } from "components/demos/WeatherApi";
+import { AlertsDashboard } from "components/demos/AlertsDashboard";
+import { AlertsStepper } from "components/demos/AlertsStepper";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,24 +25,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //   theme === "light" ? setTheme("dark") : setTheme("light");
 // };
 ReactDOM.render(
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyles />
-      <Container fluid className="background">
+  <ThemeProvider theme={lightTheme}>
+    <GlobalStyles />
+    <Container fluid className="background">
+      <Router>
         <Navigation />
+        <ScrollToTop className="ScrollToTop"/>
         <div className="footer">&copy;2022&nbsp;marysonthego.tech</div>
-        <Router>
-          <Routes>
-            <Route path="/dashboard" element={<AlertsDashboard />} />
-            <Route path="/stepper" element={<AlertsStepper/>} />
-            <Route path="/nucat" element={<Nucat />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/todos" element={<TodosForMe />} />
-            <Route path="/weather" element={<WeatherApi />} />
-            <Route path="/" element={<App />} />
-          </Routes>
-        </Router>
-      </Container>
-    </ThemeProvider>,
+        <Routes>
+          <Route path="/dashboard" element={<AlertsDashboard />} />
+          <Route path="/stepper" element={<AlertsStepper />} />
+          <Route path="/nucat" element={<Nucat />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/todos" element={<TodosForMe />} />
+          <Route path="/weather" element={<WeatherApi />} />
+          <Route path="/" element={<App />} />
+        </Routes>
+      </Router>
+    </Container>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
