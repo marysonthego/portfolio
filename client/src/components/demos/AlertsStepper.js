@@ -16,12 +16,12 @@ export const AlertsStepper = () => {
       <Row justify-content="center">
       <h2 className="top">New User Sign up Stepper</h2>
 
-      <iframe
+      {/* <iframe
         src="https://alerts-dashboard.herokuapp.com/auth/profilestepper"
         title="Sign up Stepper"
         width="1024px"
         height="768px"
-      />
+      /> */}
       </Row>
       <Row>
         <App/>

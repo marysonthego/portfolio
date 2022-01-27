@@ -16,13 +16,13 @@ export const AlertsDashboard = () => {
       <Row justify-content="center">
         <h2 className="top">Admin Dashboard</h2>
 
-        <iframe
+        {/* <iframe
           src="https://alerts-dashboard.herokuapp.com"
           title="Admin Dashboard"
           width="1024px"
           height="768px"
         
-        />
+        /> */}
       </Row>
       <Row>
         <App/>

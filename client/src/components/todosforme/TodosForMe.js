@@ -14,7 +14,7 @@ export function TodosForMe() {
           <span>
             {" "}
             <h3 className="h3">
-              Todos For Me <img src="media/mtransparentsmall.png" alt="M"/>
+              Todos For Me 
             </h3>
           </span>
         </Col>

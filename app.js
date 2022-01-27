@@ -75,52 +75,51 @@ router.get("/api/todos/all", async (req, res) => {
     }
 });
 
-router.post("/api/todos/create", async (req, res) => {
-  try {
-    pool.execute('INSERT INTO `todos` (`title`, `description`, `createdDate`, `category`, `priority`',
-     [req.body.title, req.body.description, req.body.createdDate, req.body.category, req.body.priority],
-    function (err, results, fields) {
-      if (!err) {
-        res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
-      }
-    })
-  } catch (err) {
-    throw err;
-    }
+router.post('/api/todos/create', function(req, res, next) {
+  var title = req.body.title;
+  var description = req.body.description;
+  var category = req.body.category;
+  var priority = req.body.priority;
+ 
+  var sql = `INSERT INTO todos (title, description, createdDate, category, priority) VALUES ("${title}", "${description}", NOW(), "${category}", "${priority}")`;
+
+  pool.execute(sql, function(err, result) {
+    if (err) throw err;
+    console.log(`record inserted result: `, result);
+    res.status(200).send(result);
+  });
 });
 
-router.post("/api/todos/update", async (req, res) => {
-  try {
-    pool.execute( 'UPDATE `todos` SET title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority WHERE todos.id = req.body.id',
-    function (err, results, fields) {
-      if (!err) {
-        res.status(200).send(results);
-        } else {
-          const status = err.status || 500;
-          res.status(status);
-        }
-      })
-    } catch (err) {
-      throw err;
-      }
-  });
 
-router.post("/api/todos/delete", async (req, res) => {
+router.post("/api/todos/update", function(req, res) {
   try {
-    pool.execute('DELETE from `todos` WHERE todos.id = req.body.id',
-    function(err, results, fields) {
-      if (!err) {
-      res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
-      }
+    var id = req.body.id;
+    var title = req.body.title;
+    var description = req.body.description;
+    var category = req.body.category;
+    var priority = req.body.priority;
+
+    var sql = `UPDATE todos SET title="${title}", description="${description}", category="${category}", priority="${priority} WHERE id="${id}"`;
+
+    pool.execute(sql, function (err, result) {
+      if (err) throw err;
+      res.status(200).send(result);
     })
   } catch (err) {
-    throw err;
+      throw err;
+    }
+  });
+
+router.post("/api/todos/delete", function (req, res) {
+  try {
+    var id = req.body.id;
+    var sql= `DELETE from todos WHERE id = "${id}`;
+    pool.execute(sql, function(err, result) {
+      if (err) throw err;
+      res.status(200).send(result);
+    })
+  } catch (err) {
+      throw err;
     }
 });
 
@@ -141,16 +140,33 @@ router.get("/api/events/all", async (req, res) => {
     }
 });
 
-router.post("/api/events/create", async (req, res) => {
+router.post("/api/events/create", function (req, res) {
   try {
-    pool.execute('INSERT INTO `events` (`start`, `end`, `until`, `occurrenceId`, `title`, `description`, `category`, `priority`, `allDay`, `done`, `interval`, `every`, `Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`', [req.body.start, req.body.end, req.body.until, req.body.occurrenceId, req.body.title, req.body.description, req.body.category, req.body.priority, req.body.allDay, req.body.done, req.body.interval, req.body.every, req.body.Sun, req.body.Mon, req.body.Tue, req.body.Wed, req.body.Thu, req.body.Fri, req.body.Sat],
-    function(err, results, fields) {
-      if (!err) {
-      res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
-      }
+    var start = req.body.start;
+    var end = req.body.end;
+    var until = req.body.until;
+    var occurrenceId = req.body.occurrenceId;
+    var title = req.body.title;
+    var description = req.body.description;
+    var category = req.body.category;
+    var priority = req.body.priority;
+    var allDay = req.body.allDay;
+    var done = req.body.done;
+    var interval = req.body.interval;
+    var every = req.body.every;
+    var Sun = req.body.Sun;
+    var Mon = req.body.Mon;
+    var Tue = req.body.Tue;
+    var Wed = req.body.Wed;
+    var Thu = req.body.Thu;
+    var Fri = req.body.Fri;
+    var Sat = req.body.Sat;
+    
+    var sql = `INSERT INTO events (start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat) VALUES ("${start}", "${end}", "${until}", "${occurrenceId}", "${title}", "${description}", "${category}", "${priority}", "${allDay}", "${done}", "${interval}", "${every}", "${Sun}", "${Mon}", "${Tue}", "${Wed}", "${Thu}", "${Fri}", "${Sat}"`;
+
+    pool.execute(sql, function(err, result) {
+      if (err) throw err;
+      res.status(200).send(result);
     })
   } catch (err) {
     throw err;
@@ -159,63 +175,68 @@ router.post("/api/events/create", async (req, res) => {
 
 router.post("/api/events/update", async (req, res) => {
   try {
-    await pool.execute( 'UPDATE `events` SET start=req.body.start, end=req.body.end, until=req.body.until, occurrenceId=req.body.occurrenceId, title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority, allDay=req.body.allDay, done=req.body.done, interval=req.body.interval, every=req.body.every, Sun=req.body.Sun, Mon=req.body.Mon, Tue=req.body.Tue, Wed=req.body.Wed, Thu=req.body.Thu, Fri=req.body.Fri, Sat=req.body.Sat WHERE events.id = req.body.id', 
-    function(err, results, fields) {
-      if (!err) {
-      res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
-      }
+    var id = req.body.id;
+    var start = req.body.start;
+    var end = req.body.end;
+    var until = req.body.until;
+    var occurrenceId = req.body.occurrenceId;
+    var title = req.body.title;
+    var description = req.body.description;
+    var category = req.body.category;
+    var priority = req.body.priority;
+    var allDay = req.body.allDay;
+    var done = req.body.done;
+    var interval = req.body.interval;
+    var every = req.body.every;
+    var Sun = req.body.Sun;
+    var Mon = req.body.Mon;
+    var Tue = req.body.Tue;
+    var Wed = req.body.Wed;
+    var Thu = req.body.Thu;
+    var Fri = req.body.Fri;
+    var Sat = req.body.Sat;
+
+    var sql = `UPDATE events SET start="${start}", end="${end}", until="${until}", occurrenceId="${occurrenceId}", title="${title}", description="${description}", category="${category}", priority="${priority}", allDay="${allDay}", done="${done}", interval="${interval}", every="${every}", Sun="${Sun}", Mon="${Mon}", Tue="${Tue}", Wed="${Wed}", Thu="${Thu}", Fri="${Fri}", Sat="${Sat}" WHERE id="${id}"`;
+
+    pool.execute(sql,function(err, result) {
+      if (err) throw err;
+      res.status(200).send(result);
     })
   } catch (err) {
     throw err;
     }
 });
 
-router.post("/api/events/delete", async (req, res) => {
+router.post("/api/events/delete", function (req, res) {
   try {
-    pool.execute('DELETE from `events` WHERE events.id = req.body.id',
-    function(err, results, fields) {
-      if (!err) {
+    var sql = `DELETE from events WHERE id = "${req.body.id}"`;
+    pool.execute(sql, function(err, result) {
+      if (err) throw err;
       res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
-      }
     })
   } catch (err) {
     throw err;
     }
 });
 
-router.post("/api/events/occurrenceDelete", async (req, res) => {
-  try {
-    let occurrenceId = req.body.id;
-    pool.query(`DELETE from events WHERE events.occurrenceId = $1 RETURNING occurrenceId`, [occurrenceId],
-    function(err, results, fields) {
-      if (!err) {
-      res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
+  router.post("/api/events/occurrenceDelete", function (req, res) {
+    try {
+      var sql = `DELETE from events WHERE occurrenceId = "${req.body.occurrenceId}"`;
+      pool.execute(sql, function(err, result) {
+        if (err) throw err;
+        res.status(200).send(results);
+      })
+    } catch (err) {
+      throw err;
       }
-    })
-  } catch (err) {
-    throw err;
-    }
-});
+  });
 
 router.get("/api/events/recurring", async (req, res) => {
   try {
-    pool.execute('SELECT * FROM `events` WHERE events.occurrenceId = req.body.occurrenceId',
-    function(err, results, fields) {
-      if (!err) {
-      res.status(200).send(results);
-      } else {
-        const status = err.status || 500;
-        res.status(status);
-      }
+    pool.execute(`SELECT * FROM events WHERE occurrenceId = "${req.body.occurrenceId}"`,
+    function(err, result) {
+      if (err) throw err;
+      res.status(200).send(result);
     })
   } catch (err) {
     throw err;

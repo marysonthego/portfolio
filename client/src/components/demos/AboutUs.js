@@ -44,10 +44,10 @@ export const AboutUs = () => {
           <Row xs="100%">
             <div className="row row-content">
               <div className="col-sm-5 offset-sm-1">
-                <h2>Our Mission</h2>
-                <h4>
+                <h2>Our Mission:</h2>
+                <h2>
                   Laserpointers. We are about laserpointers. Isn't everybody?
-                </h4>
+                </h2>
               </div>
             </div>
 
@@ -61,8 +61,8 @@ export const AboutUs = () => {
                       width="100%"
                       alt="Curious Cat"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Learn Stuff</h5>
+                    <div className="card-img-overlay">
+                      <h5 className="card-title text-white">We Learn Stuff</h5>
                     </div>
                   </div>
                   <div className="card bg-light text-white">
@@ -72,8 +72,8 @@ export const AboutUs = () => {
                       width="100%"
                       alt="Worried Cat"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Face Your Challenges</h5>
+                    <div className="card-img-overlay">
+                      <h5 className="card-title">We Face Our Challenges</h5>
                     </div>
                   </div>
                   <div className="card bg-light text-white">
@@ -83,8 +83,8 @@ export const AboutUs = () => {
                       width="100%"
                       alt="Scardy Cat"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Conquer Your Fears</h5>
+                    <div className="card-img-overlay">
+                      <h5 className="card-title text-white">We Conquer Our Fears</h5>
                     </div>
                   </div>
                 </div>
@@ -100,8 +100,8 @@ export const AboutUs = () => {
                       width="100%"
                       alt="Knowledge Cat"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Know Thyself</h5>
+                    <div className="card-img-overlay">
+                      <h5 className="card-title text-white">We Learn to 'Know Thyself'</h5>
                     </div>
                   </div>
                   <div className="card bg-light text-white">
@@ -111,8 +111,8 @@ export const AboutUs = () => {
                       width="100%"
                       alt="Back Cat"
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">Find Your JOY</h5>
+                    <div className="card-img-overlay">
+                      <h5 className="card-title text-white">But Mainly, We Find JOY!</h5>
                     </div>
                   </div>
                 </div>
