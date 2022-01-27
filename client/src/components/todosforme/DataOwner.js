@@ -9,12 +9,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/formstyles.css";
-require('dotenv').config();
 
 export const DataOwner = () => {
-
-  const MYURL = process.env.REACT_APP_MYSQL_URL;
-  console.log(`MYURL`, MYURL);
 
   const [show, setShow] = useState(false);
 
@@ -360,7 +356,7 @@ export const DataOwner = () => {
   const todosFetchAll = async () => {
     setTodos([]);
     await axios
-      .get(`${MYURL}/api/todos/all`)
+      .get(`/api/todos/all`)
       .then((res) => {
         setTodos((prev) => [...prev, ...res.data]);
       })
