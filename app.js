@@ -3,7 +3,7 @@ require("dotenv").config();
 //const cors = require('cors');
 const express = require("express");
 const server = express();
-const { pool } = require("./dbConfig.mysql");
+const pool = require("./dbConfig.mysql");
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -11,7 +11,6 @@ const passport = require("passport");
 const saltRounds = 10;
 
 const PORT = process.env.PORT || 4000;
-const MYURL = process.env.REACT_APP_MYSQL_URL;
 
 server.set("view engine", "ejs");
 
