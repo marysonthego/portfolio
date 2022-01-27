@@ -13,6 +13,9 @@ require('dotenv').config();
 
 export const DataOwner = () => {
 
+  const MYURL = process.env.REACT_APP_MYSQL_URL;
+  console.log(`MYURL`, MYURL);
+
   const [show, setShow] = useState(false);
 
   const [events, setEvents] = useState([{}]);
@@ -357,7 +360,7 @@ export const DataOwner = () => {
   const todosFetchAll = async () => {
     setTodos([]);
     await axios
-      .get(`/api/todos/all`)
+      .get(`${MYURL}/api/todos/all`)
       .then((res) => {
         setTodos((prev) => [...prev, ...res.data]);
       })

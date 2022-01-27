@@ -11,6 +11,7 @@ const passport = require("passport");
 const saltRounds = 10;
 
 const PORT = process.env.PORT || 4000;
+const MYURL = process.env.REACT_APP_MYSQL_URL;
 
 server.set("view engine", "ejs");
 
@@ -61,7 +62,7 @@ router.use(express.static(path.join(__dirname, '/public')));
 
 router.get("/api/todos/all", async (req, res) => {
   try {
-    await pool.execute("SELECT * FROM todos",
+    pool.execute("SELECT * FROM todos",
     function(err, results, fields) {
       if (!err) {
       res.status(200).send(results, fields);

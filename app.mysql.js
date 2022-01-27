@@ -53,7 +53,7 @@ var router = express.Router({mergeParams: true});
 
 server.use(router);
 
-router.use(express.static(path.join(__dirname, '/client/build')));
+router.use(express.static(path.join(__dirname, '/public')));
 
 // server.get("/", (req, res) => {
 //   return res.status;
@@ -963,7 +963,7 @@ function checkAuthenticated (req, res, next) {
 
 server.get('/*', (req, res) => {
   //res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/public', 'index.html'));
 });
 
 server.listen(PORT, () => {
