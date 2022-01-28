@@ -87,12 +87,7 @@ export const AboutUs = () => {
                       <h5 className="card-title text-white">We Conquer Our Fears</h5>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="row row-content">
-              <div className="col">
-                <div className="card-deck">
+            
                   <div className="card bg-light text-white">
                     <img
                       className="card-img-top"
@@ -112,12 +107,12 @@ export const AboutUs = () => {
                       alt="Back Cat"
                     />
                     <div className="card-img-overlay">
-                      <h5 className="card-title text-white">But Mainly, We Find JOY!</h5>
+                      <h5 className="card-title text-white">But MOSTLY, We Find JOY!</h5>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+                </div>
+                </div>
           </Row>
         </Container>
       </body>

@@ -25,9 +25,6 @@ export function Logout() {
   doLogout();
 
   return (
-    <Routes>
-      <ContentRoute exact path="/auth/login" component={Login} />
-      <Navigate to="/auth/login"/>
-    </Routes>
+    <Navigate to="/auth/login"/>
   );
 }

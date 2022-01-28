@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 //import { LayoutSplashScreen } from 'components/dashboard/components/layout/MetronicSplashScreen';
-import { ContentRoute } from 'components/dashboard/components/layout/ContentRoute';
+//import { ContentRoute } from 'components/dashboard/components/layout/ContentRoute';
 import { DashboardPage } from 'components/dashboard/pages/DashboardPage';
 import { ChangePassword } from 'components/dashboard/pages/ChangePassword';
 import { Login } from 'components/dashboard/pages/Login';
@@ -18,33 +18,32 @@ export default function BasePage (props) {
   console.log(`BasePage isLoggedIn: `, currentUser.isLoggedIn);
 
   return (
-    //<Suspense fallback={ <LayoutSplashScreen /> }>
+    
     <>
-      { currentUser.isLoggedIn ? (
+      {/* { currentUser.isLoggedIn ? (
         <Routes>
-          <ContentRoute exact path="/dashboard" component={DashboardPage} />
-          <ContentRoute exact path="/user-profile" component={UserProfilePage}/>
-          <ContentRoute exact path="/logout" component={Logout}/>
-          <ContentRoute exact path="/password" component={ChangePassword}/>
-          <ContentRoute exact path="/locations-list" component={LocationsStep}/>
-          <ContentRoute exact path="/friends-list" component={FriendsStep}/>
-          <ContentRoute exact path="/list-customers" component={ListCustomers}/>
+          <Route  path="/dashboard" element={<DashboardPage/>} />
+          <Route  path="/user-profile" element={<UserProfilePage/>}/>
+          <Route  path="/logout" element={<Logout/>}/>
+          <Route  path="/password" element={<ChangePassword/>}/>
+          <Route  path="/locations-list" element={<LocationsStep/>}/>
+          <Route  path="/friends-list" element={<FriendsStep/>}/>
+          <Route  path="/list-customers" element={<ListCustomers/>}/>
           {currentUser.usertype === 'admin' ? (
             <>
-            <ContentRoute exact path="/list-customers" component={ListCustomers}/>
+            <Route  path="/list-customers" element={<ListCustomers/>}/>
             </>
-          ) : (<Route render={() => <Navigate to="/dashboard" /> } />
+          ) : (<Route render={() => <Navigate to="/dashboard"/> } />
           )}
-          <Route path="/" render={() => <Navigate to="/dashboard" /> } />
+          <Route path="/" render={() => <Navigate to="/dashboard"/> } />
         </Routes>
       ) : (
         <Routes>
-          <ContentRoute path="/auth/login" component={ Login } />
-          <Route render={() => <Navigate to="/auth/login" /> } />
-          <Route render={() => <Navigate to="/error" /> } />
+          <Route path="/auth/login" element={<Login/>} />
+          <Route render={() => <Navigate to="/auth/login"/> } />
+          <Route render={() => <Navigate to="/error"/> } />
         </Routes>
-      )}
-      </>
-    //</Suspense>
+      )} */}
+    </>
   );
 }

@@ -47,7 +47,7 @@ export function ForgotPasswordPage(props) {
 
   return (
     <>
-      {isRequested && <Navigate to="/auth" />}
+      {isRequested && <Navigate to="/auth/login" />}
       {!isRequested && (
         <div className="login-form login-forgot" style={{ display: 'block' }}>
           <div className="text-center mb-10 mb-lg-20">
@@ -89,7 +89,7 @@ export function ForgotPasswordPage(props) {
                 disabled={formik.isSubmitting}>
                 Submit
               </button>
-              <Link to="/auth">
+              <Link to="/auth/login">
                 <button
                   type="button"
                   id="kt_login_forgot_cancel"
