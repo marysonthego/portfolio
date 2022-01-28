@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { LayoutSplashScreen } from 'components/dashboard/components/layout/MetronicSplashScreen';
+//import { LayoutSplashScreen } from 'components/dashboard/components/layout/MetronicSplashScreen';
 import { ContentRoute } from 'components/dashboard/components/layout/ContentRoute';
 import { DashboardPage } from 'components/dashboard/pages/DashboardPage';
 import { ChangePassword } from 'components/dashboard/pages/ChangePassword';
@@ -18,7 +18,8 @@ export default function BasePage (props) {
   console.log(`BasePage isLoggedIn: `, currentUser.isLoggedIn);
 
   return (
-    <Suspense fallback={ <LayoutSplashScreen /> }>
+    //<Suspense fallback={ <LayoutSplashScreen /> }>
+    <>
       { currentUser.isLoggedIn ? (
         <Routes>
           <ContentRoute exact path="/dashboard" component={DashboardPage} />
@@ -43,6 +44,7 @@ export default function BasePage (props) {
           <Route render={() => <Navigate to="/error" /> } />
         </Routes>
       )}
-    </Suspense>
+      </>
+    //</Suspense>
   );
 }

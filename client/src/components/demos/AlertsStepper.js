@@ -2,21 +2,22 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
-import App from 'components/dashboard/App';
+import { DashboardApp } from "components/dashboard/DashboardApp";
 
 export const AlertsStepper = () => {
   return (
-    <Container
-      fluid
-      overflow="hidden"
-      display="grid"
-      justify-content="center"
-      justify-items="center"
-    >
+    // <Container
+    //   fluid
+    //   overflow="hidden"
+    //   display="grid"
+    //   justify-content="center"
+    //   justify-items="center"
+    // >
+    <>
       <Row justify-content="center">
-      <h2 className="top">New User Sign up Stepper</h2>
+        <h2 className="top">New User Sign up Stepper</h2>
 
-      {/* <iframe
+        {/* <iframe
         src="https://alerts-dashboard.herokuapp.com/auth/profilestepper"
         title="Sign up Stepper"
         width="1024px"
@@ -24,8 +25,9 @@ export const AlertsStepper = () => {
       /> */}
       </Row>
       <Row>
-        <App/>
+        <DashboardApp />
       </Row>
-    </Container>
+    </>
+    //</Container>
   );
 };

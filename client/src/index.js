@@ -33,8 +33,8 @@ ReactDOM.render(
         <ScrollToTop className="ScrollToTop"/>
         <div className="footer">&copy;2022&nbsp;marysonthego.tech</div>
         <Routes>
-          <Route path="/dashboard" element={<AlertsDashboard />} />
-          <Route path="/stepper" element={<AlertsStepper />} />
+          <Route path="/dashboard/*" element={<AlertsDashboard />} />
+          <Route path="/stepper/*" element={<AlertsStepper />} />
           <Route path="/nucat" element={<Nucat />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/todos" element={<TodosForMe />} />
