@@ -26,7 +26,6 @@ import { ProfileStepper } from "components/dashboard/pages/ProfileStepper";
 import { LocationsStep } from "components/dashboard/pages/LocationsStep";
 import { FriendsStep } from "components/dashboard/pages/FriendsStep";
 import { ListCustomers } from "components/dashboard/pages/ListCustomers";
-import { selectCurrentUser } from "components/dashboard/redux/userSlice";
 import { UserProfilePage } from "components/dashboard/pages/UserProfilePage";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
@@ -36,8 +35,11 @@ import { MetronicSubheaderProvider } from "components/dashboard/components/layou
 import { CookiesProvider } from "react-cookie";
 import { SnackbarProvider } from "notistack";
 import { Collapse } from "@material-ui/core";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "components/dashboard/css/pages/login/login-1.scss";
+import "./index.scss"; // Standard version
+import "socicon/css/socicon.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 // const ThemeToggler = () => {
 //   const [theme, setTheme] = useState("dark");

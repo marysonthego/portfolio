@@ -111,7 +111,7 @@ export const ChangePassword = () => {
       <div className="d-flex align-items-center bg-light-info rounded p-5 mb-9">
         <span className="svg-icon svg-icon-danger mr-5 svg-icon-lg">
           <SVG
-            src={toAbsoluteUrl('/media/svg/icons/Communication/Thumbtack.svg')}
+            src={toAbsoluteUrl('media/Thumbtack.svg')}
             title="Password Required"></SVG>
         </span>
         <Form>
@@ -134,7 +134,7 @@ export const ChangePassword = () => {
       <div className="d-flex align-items-center bg-light-info rounded p-5 mb-9">
         <span className="svg-icon svg-icon-danger mr-5 svg-icon-lg">
           <SVG
-            src={toAbsoluteUrl('/media/svg/icons/Communication/Thumbtack.svg')}
+            src={toAbsoluteUrl('media/Thumbtack.svg')}
             title="Password Required"></SVG>
         </span>
         <Form>

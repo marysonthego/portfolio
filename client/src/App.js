@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { AnimateListTools } from "components/top/ListTools";
+import  "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "components/styles/styles.css";
-import { AnimateListTools } from "components/top/ListTools";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);

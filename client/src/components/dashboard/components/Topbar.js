@@ -67,7 +67,7 @@ export function Topbar() {
             >
               <span className="svg-icon svg-icon-xl svg-icon-primary">
                 <SVG
-                  src="/media/svg/icons/Layout/Layout-4-blocks.svg"/>
+                  src="media/Layout-4-blocks.svg"/>
               </span>
             </div>
           </div>

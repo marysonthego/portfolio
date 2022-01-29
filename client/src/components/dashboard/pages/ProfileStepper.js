@@ -245,7 +245,7 @@ export const ProfileStepper = () => {
           <img
             alt="Alerts for Good"
             className="max-h-70px"
-            src="/media/a4g/a4g-logo-white.png"
+            src="media/a4g-logo-white.png"
           />
         </Link>
         <div className="bg-white">

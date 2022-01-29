@@ -119,7 +119,7 @@ export function Login() {
             className="login-aside d-flex flex-row-auto bgi-size-cover bgi-no-repeat p-10 p-lg-10"
             style={{
               height: '100vh',
-              backgroundImage: `url('/media/a4g/a4g-splash300-20.png')`,
+              backgroundImage: `url('media/a4g-splash300-20.png')`,
             
             }}>
             {/*begin: Aside Container*/}
@@ -129,7 +129,7 @@ export function Login() {
                 <img
                   alt="Logo"
                   className="max-h-70px"
-                  src="/media/a4g/a4g-logo-white.png"
+                  src="/media/a4g-logo-white.png"
                 />
               </Link>
               {/* end:: Aside header */}

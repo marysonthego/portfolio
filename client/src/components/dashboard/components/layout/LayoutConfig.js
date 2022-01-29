@@ -58,13 +58,13 @@ export function getInitLayoutConfig() {
           gray900: "#212121",
         },
       },
-      fontFamily: "Poppins",
+      fontFamily: "Nunito",
     },
     // == Page Splash Screen loading
     loader: {
       enabled: true,
       type: "", // default|spinner-message|spinner-logo
-      logo: toAbsoluteUrl("/media/a4g/a4g-logo-dark.png"),
+      logo: toAbsoluteUrl("media/a4g-logo-dark.png"),
       message: "Please wait...",
     },
     // page toolbar

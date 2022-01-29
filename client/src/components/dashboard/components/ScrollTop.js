@@ -6,7 +6,7 @@ export function ScrollTop() {
   return (
       <div id="kt_scrolltop" className="scrolltop">
         <span className="svg-icon">
-          <SVG src={toAbsoluteUrl("/media/svg/icons/Navigation/Up-2.svg")}></SVG>
+          <SVG src={toAbsoluteUrl("media/Up-2.svg")}></SVG>
         </span>{" "}
       </div>
   );
