@@ -297,7 +297,7 @@ export const AddLocationForm = () => {
             style={ { background: '#f9aa33' } }
             onClick={ OnSaveLocationClicked }>
             <SVG
-              src="/media/a4g/marker1.svg"
+              src="media/marker1.svg"
               className="max-h-70px svg-icon-lg svg-icon-white"
             />
             &nbsp;&nbsp;Save Location

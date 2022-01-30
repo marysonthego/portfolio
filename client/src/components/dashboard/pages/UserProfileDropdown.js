@@ -40,7 +40,7 @@ export function UserProfileDropdown () {
               <div
                 className="symbol mt-1"
                 style={{ width: '48px', height: '48px' }}>
-                <SVG src="/media/a4g/hotairballoon.svg" />
+                <SVG src="media/hotairballoon.svg" />
               </div>
             </span>
           </span>
@@ -54,7 +54,7 @@ export function UserProfileDropdown () {
               <div className="d-flex align-items-center p-8 rounded-top">
                 <div className="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
                   <img
-                    src='/media/a4g/User.svg'
+                    src='media/User.svg'
                     alt=""
                   />
                 </div>
@@ -75,7 +75,7 @@ export function UserProfileDropdown () {
               <div className="symbol bg-white-o-15 mr-3">
                 <span className="symbol-label text-success font-weight-bold font-size-h4">
                   <img
-                    src='/media/a4g/User.svg'
+                    src='media/User.svg'
                     alt=""
                   />
                 </span>

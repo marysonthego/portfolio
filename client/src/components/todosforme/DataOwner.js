@@ -7,7 +7,8 @@ import { CalcDates } from "components/todosforme/CalcDates";
 import { WeatherCard } from "components/todosforme/WeatherCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
+import "components/styles/scss/bootstrap.scss";
 import "components/styles/formstyles.css";
 
 export const DataOwner = () => {

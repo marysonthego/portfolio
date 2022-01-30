@@ -34,7 +34,7 @@ export function AsideMenuList ({ layoutProps }) {
         >
           <NavLink className="menu-link" to="/latest-alerts">
             <span className="svg-icon menu-icon">
-              <SVG src="/media/a4g/marker1.svg" />
+              <SVG src="media/marker1.svg" />
             </span>
             <span className="menu-text">Latest Alerts</span>
           </NavLink>
@@ -83,7 +83,7 @@ export function AsideMenuList ({ layoutProps }) {
         >
           <NavLink className="menu-link menu-toggle" to="/locations-list">
             <span className="svg-icon menu-icon">
-              <SVG src="/media/a4g/marker1.svg" />
+              <SVG src="media/marker1.svg" />
             </span>
             <span className="menu-text">Alert Locations</span>
             <i className="menu-arrow" />
@@ -132,7 +132,7 @@ export function AsideMenuList ({ layoutProps }) {
             >
               <NavLink className="menu-link menu-toggle" to="/list-customers">
                 <span className="svg-icon menu-icon">
-                  <SVG src="/media/a4g/Clipboard.svg" />
+                  <SVG src="media/Clipboard.svg" />
                 </span>
                 <span className="menu-text">Customers</span>
                 <i className="menu-arrow" />
@@ -147,7 +147,7 @@ export function AsideMenuList ({ layoutProps }) {
             >
               <NavLink className="menu-link menu-toggle" to="/rss-page">
                 <span className="svg-icon menu-icon">
-                  <SVG src="/media/a4g/Clipboard.svg" />
+                  <SVG src="media/Clipboard.svg" />
                 </span>
                 <span className="menu-text">RSS</span>
                 <i className="menu-arrow" />

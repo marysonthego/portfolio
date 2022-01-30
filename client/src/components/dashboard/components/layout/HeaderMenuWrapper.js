@@ -27,7 +27,7 @@ export function HeaderMenuWrapper() {
         if (layoutProps.headerSelfTheme && layoutProps.headerSelfTheme !== "dark") {
             result = "a4gIcon48x48.png";
         }
-        return toAbsoluteUrl(`/media/a4g/${result}`);
+        return toAbsoluteUrl(`media/${result}`);
     };
 
     return <>

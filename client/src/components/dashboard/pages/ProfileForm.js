@@ -223,7 +223,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
       <div className="d-flex align-items-center bg-light-warning rounded p-5 mb-9">
         <span className="svg-icon svg-icon-dark mr-5 svg-icon-lg">
           <SVG
-            src={ toAbsoluteUrl('/media/svg/icons/Text/Font.svg') }
+            src={ toAbsoluteUrl('media/icons/Text/Font.svg') }
             title="Last Name Required"></SVG>
         </span>
         <div className="d-flex flex-column flex-grow-1 mr-2 font-weight-bold text-dark font-size-lg">
@@ -277,7 +277,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
       <div className="d-flex align-items-center bg-light-warning rounded p-5 mb-9">
         <span className="svg-icon svg-icon-dark mr-5 svg-icon-lg">
           <SVG
-            src={ toAbsoluteUrl('/media/svg/icons/Devices/iPhone-X.svg') }
+            src={ toAbsoluteUrl('media/icons/Devices/iPhone-X.svg') }
             title="Cell Phone Required"></SVG>
         </span>
         <div className="d-flex flex-column flex-grow-1 mr-2 font-weight-bold text-dark font-size-lg">
@@ -331,7 +331,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
       <div className="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
         <span className="svg-icon svg-icon-dark mr-5 svg-icon-lg">
           <SVG
-            src={ toAbsoluteUrl('/media/svg/icons/General/Other2.svg') }
+            src={ toAbsoluteUrl('media/icons/General/Other2.svg') }
             title="Address 2"></SVG>
         </span>
         <div className="d-flex flex-column flex-grow-1 mr-2 font-weight-bold text-dark font-size-lg">
@@ -381,7 +381,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
       <div className="d-flex align-items-center bg-light-warning rounded p-5 mb-9">
         <span className="svg-icon svg-icon-dark mr-5 svg-icon-lg">
           <SVG
-            src={ toAbsoluteUrl('/media/a4g/Flag.svg') }
+            src={ toAbsoluteUrl('media/Flag.svg') }
             title="State"></SVG>
         </span>
         <div className="d-flex flex-column flex-grow-1 mr-2 font-weight-bold text-dark font-size-lg mb-1">
@@ -406,7 +406,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
       <div className="d-flex align-items-center bg-light-warning rounded p-5 mb-9">
         <span className="svg-icon svg-icon-dark mr-5 svg-icon-lg">
           <SVG
-            src={ toAbsoluteUrl('/media/svg/icons/Home/Mailbox.svg') }
+            src={ toAbsoluteUrl('media/icons/Home/Mailbox.svg') }
             title="Zip Code"></SVG>
         </span>
         <div className="d-flex flex-column flex-grow-1 mr-2 font-weight-bold text-dark font-size-lg mb-1">
@@ -459,7 +459,7 @@ export const ProfileForm = ({ form, handlePassword, isADuplicate }) => {
           <div className="d-flex align-items-center bg-light-warning rounded p-5 mb-9">
             <span className="svg-icon svg-icon-dark mr-5 svg-icon-lg">
               <SVG
-                src={ toAbsoluteUrl('/media/svg/icons/Communication/Thumbtack.svg') }
+                src={ toAbsoluteUrl('media/Thumbtack.svg') }
                 title="Password Required"></SVG>
             </span>
             <div className="d-flex flex-column flex-grow-1 mr-2 font-weight-bold text-dark font-size-lg mb-1">

@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "./../styles/nucat.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "components/styles/scss/bootstrap.scss";
 
 export const AboutUs = () => {
   return (
@@ -11,10 +12,10 @@ export const AboutUs = () => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link
+        {/* <link
           rel="stylesheet"
           href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-        />
+        /> */}
 
         <link rel="stylesheet" href="components/styles/nucat.css" />
 

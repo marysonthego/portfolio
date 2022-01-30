@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { DashboardApp } from "components/dashboard/DashboardApp";
+import "components/styles/scss/bootstrap.scss";
 
 export const AlertsStepper = () => {
   return (

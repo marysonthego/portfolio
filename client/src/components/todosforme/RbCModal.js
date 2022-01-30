@@ -6,7 +6,8 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
+import "components/styles/scss/bootstrap.scss";
 import "components/styles/formstyles.css";
 import "react-datepicker/dist/react-datepicker.css";
 

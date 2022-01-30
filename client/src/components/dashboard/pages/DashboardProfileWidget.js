@@ -119,7 +119,7 @@ export function DashboardProfileWidget ({ className }) {
                   <span className="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
                     <SVG
                       src={ (
-                        '/media/a4g/Clipboard.svg'
+                        'media/Clipboard.svg'
                       ) }></SVG>
                   </span>
                   Customer List
@@ -134,7 +134,7 @@ export function DashboardProfileWidget ({ className }) {
                   <span className="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
                     <SVG
                       src={ (
-                        '/media/a4g/Clipboard.svg'
+                        'media/Clipboard.svg'
                       ) }></SVG>
                   </span>
                   Set RSS

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import "components/styles/scss/bootstrap.scss";
 import 'components/styles/formstyles.css';
 
 export const TodoFormModal = ({

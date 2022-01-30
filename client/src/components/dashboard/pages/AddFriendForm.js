@@ -278,7 +278,7 @@ export const AddFriendForm = () => {
             style={ { background: '#f9aa33' } }
             onClick={ onSaveFriendClicked }>
             <SVG
-              src="/media/a4g/marker1.svg"
+              src="media/marker1.svg"
               className="max-h-70px svg-icon-lg svg-icon-white"
             />
             &nbsp;&nbsp;Save friend

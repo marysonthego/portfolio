@@ -96,9 +96,9 @@ export class HtmlClassService {
   getLogo() {
     const brandSkin = objectPath.get(this.config, "brand.self.theme");
     if (brandSkin === "light") {
-      return ("/media/a4g/a4gIcon48x48.png");
+      return ("media/a4gIcon48x48.png");
     } else {
-      return ("/media/a4g/a4gIcon48x48.png");
+      return ("media/a4gIcon48x48.png");
     }
   }
 
