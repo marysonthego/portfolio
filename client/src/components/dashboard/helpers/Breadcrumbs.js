@@ -34,9 +34,9 @@ export default Breadcrumbs;
 //   {path: "/locations-list", component: LocationsStep},
 //   {path: "/friends-list", component: FriendsStep},
 //   {path: "/latest-alerts", component: LatestAlerts},
-//   {path: "/auth/login", component: Login},
-//   {path: "/auth/forgot-password", component: ForgotPasswordPage},
-//   {path: "/auth/profilestepper",  component: ProfileStepper}
+//   {path: "/login", component: Login},
+//   {path: "/forgot-password", component: ForgotPasswordPage},
+//   {path: "/profilestepper",  component: ProfileStepper}
 // ];
 
 // {routes.map(({path, Component}, key) => (

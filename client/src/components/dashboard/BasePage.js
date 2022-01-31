@@ -39,8 +39,8 @@ export default function BasePage (props) {
         </Routes>
       ) : (
         <Routes>
-          <Route path="/auth/login" element={<Login/>} />
-          <Route render={() => <Navigate to="/auth/login"/> } />
+          <Route path="/login" element={<Login/>} />
+          <Route render={() => <Navigate to="/login"/> } />
           <Route render={() => <Navigate to="/error"/> } />
         </Routes>
       )} */}

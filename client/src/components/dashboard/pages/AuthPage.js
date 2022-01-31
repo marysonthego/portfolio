@@ -24,9 +24,8 @@ import { selectCurrentUser } from 'components/dashboard/redux/userSlice';
         <Navigate to="/dashboard" />
       ) : (
         <>
-          <Navigate from="/auth/*" to="/auth/login" />
-          <Navigate from="/auth/login" to="/dashboard" />;
-          <Navigate to="/auth/login" />
+          <Navigate from="/login" to="/dashboard" />;
+          <Navigate to="/login" />
         </>
       )}
     </div>

@@ -15,15 +15,15 @@ export function DashboardRoutes() {
   return (
     <>
       {currentUser.isLoggedIn === null || !currentUser.isLoggedIn ? (
-        /*Render auth page when user at `/auth` and not authorized.*/
+        /*Render auth page when user not authorized.*/
         <AuthPage />
       ) : (
           <Navigate to="/dashboard" />
       )}
       
       {currentUser.isLoggedIn === null || !currentUser.isLoggedIn ? (
-        /*Navigate to `/auth` when user is not authorized*/
-        <Navigate to="/auth/login" />
+        /*Navigate to `/login` when user is not authorized*/
+        <Navigate to="/login" />
       ) : (
         <Layout>
           <BasePage />

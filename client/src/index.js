@@ -74,7 +74,7 @@ ReactDOM.render(
                         path="/user-profile"
                         element={<UserProfilePage />}
                       />
-                      <Route path="/auth/login" element={<Login />} />
+                      <Route path="/login" element={<Login />} />
                       <Route path="/logout" element={<Logout />} />
                       <Route path="/password" element={<ChangePassword />} />
                       <Route
@@ -87,12 +87,12 @@ ReactDOM.render(
                         element={<ListCustomers />}
                       />
                       <Route
-                        path="/auth/forgot-password"
+                        path="/forgot-password"
                         element={<ForgotPasswordPage />}
                       />
                       <Route path="/stepper" element={<AlertsStepper />} />
                       <Route
-                        path="/auth/profilestepper"
+                        path="/profilestepper"
                         element={<ProfileStepper />}
                       />
                       <Route path="/nucat" element={<Nucat />} />

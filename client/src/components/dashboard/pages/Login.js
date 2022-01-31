@@ -248,7 +248,7 @@ export function Login() {
                     ) : (
                       <div>
                         <Link
-                          to="/auth/forgot-password"
+                          to="/forgot-password"
                           className="text-dark-50 text-hover-primary my-3 mr-20"
                           id="kt_login_forgot">
                           Forgot password?
@@ -270,7 +270,7 @@ export function Login() {
                             Don't have an account yet?
                           </span>
                           <Link
-                            to="/auth/profilestepper"
+                            to="/profilestepper"
                             className="font-weight-bold ml-2"
                             id="kt_login_signup">
                             Sign Up!

@@ -19,7 +19,7 @@ export const AlertsStepper = () => {
         <h2 className="top">New User Sign up Stepper</h2>
 
         {/* <iframe
-        src="https://alerts-dashboard.herokuapp.com/auth/profilestepper"
+        src="https://alerts-dashboard.herokuapp.com/profilestepper"
         title="Sign up Stepper"
         width="1024px"
         height="768px"

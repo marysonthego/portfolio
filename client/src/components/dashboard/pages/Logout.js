@@ -25,6 +25,6 @@ export function Logout() {
   doLogout();
 
   return (
-    <Navigate to="/auth/login"/>
+    <Navigate to="/login"/>
   );
 }
