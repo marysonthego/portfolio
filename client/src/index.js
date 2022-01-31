@@ -41,7 +41,7 @@ import "socicon/css/socicon.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
 //import "bootstrap/dist/css/bootstrap.css";
-import "components/styles/scss/bootstrap.scss";
+//import "%PUBLIC_URL%/css/bootstrap.min.css";
 
 // const ThemeToggler = () => {
 //   const [theme, setTheme] = useState("dark");

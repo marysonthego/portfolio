@@ -3,9 +3,9 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import moment from "moment";
 import Image from "react-bootstrap/Image";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/weatherstyles.css";
-import "components/styles/scss/bootstrap.scss";
+//import "components/styles/scss/bootstrap.scss";
 
 const refresh = () => {
   window.location.reload();

@@ -1,16 +1,17 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import "./../styles/nucat.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "./../styles/nucat.css";
+import 'components/styles/nucat.css';
+//import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Nucat = () => {
   return (
     <>
-      <head>
+      {/* <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
+        {/*
         <link
           rel="stylesheet"
           href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -25,15 +26,13 @@ export const Nucat = () => {
           href="/font-awesome/css/font-awesome.min.css"
         />
         <link href="/client/src/components/styles/nucat.css" rel="stylesheet" />
+         */}
 
-        <title>NuCat: a feline day camp</title>
-      </head>
+        {/* <title>NuCat: a feline day camp</title>
+      </head> */}
 
-      <body>
-        
-
+      {/* <body> */}
         <header className="masthead hero-image">
-        
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-10 mx-auto">
@@ -123,7 +122,6 @@ export const Nucat = () => {
 
                         <div className="form-group row">
                           <div className="col d-flex align-items-end justify-content-end">
-  
                             <button type="submit" className="btn btn-secondary">
                               Reserve
                             </button>
@@ -142,7 +140,7 @@ export const Nucat = () => {
             </div>
           </Row>
         </Container>
-      </body>
+      {/* </body> */}
     </>
   );
 };

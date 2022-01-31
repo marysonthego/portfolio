@@ -8,8 +8,8 @@ import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import "bootstrap/dist/css/bootstrap.css";
-import "components/styles/scss/bootstrap.scss";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "components/styles/scss/bootstrap.scss";
 
 
 export const Navigation = () => {
@@ -136,14 +136,14 @@ export const Navigation = () => {
             </Accordion>
 
             <hr />
-            <Form className="d-flex">
+            <Form className="d-flex align-items-center">
               <FormControl
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-secondary">Search</Button>
+              <Button variant="outline-secondary" className="ml-3 mb-3">Search</Button>
             </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

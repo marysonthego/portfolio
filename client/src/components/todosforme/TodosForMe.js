@@ -2,7 +2,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 //import "bootstrap/dist/css/bootstrap.min.css";
-import "components/styles/scss/bootstrap.scss";
+//import "components/styles/scss/bootstrap.scss";
 import "components/styles/styles.css";
 import { DataOwner } from "components/todosforme/DataOwner";
 

@@ -4,7 +4,7 @@ import moment from "moment";
 import {EventComponent} from 'components/todosforme/EventComponent';
 import Container from 'react-bootstrap/Container';
 //import "bootstrap/dist/css/bootstrap.min.css";
-import "components/styles/scss/bootstrap.scss";
+//import "components/styles/scss/bootstrap.scss";
 import 'components/styles/react-big-calendar.css';
 import 'components/styles/formstyles.css';
 

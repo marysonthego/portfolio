@@ -1,52 +1,79 @@
-//
-// Offcanvas
-//
-
-// Desktop & Mobile Offcanvases
-.offcanvas,
-.offcanvas-mobile {
-	flex-shrink: 0 !important;
-
-	.offcanvas-header {
-		&.offcanvas-header-navs {
-			position: relative;
-
-			.offcanvas-close {
-				position: absolute;
-				top: 0;
-				right: 0;
-			}
-		}
-	}
-
-	.offcanvas-content {
-		.offcanvas-demo {
-			border: 5px solid $gray-200;
-
-			&.offcanvas-demo-active {
-				border: 5px solid $primary;
-			}
-		}
-	}
-}
-
-// Desktop Offcanvas
 .offcanvas {
-	background-color: get($offcanvas-config, bg-color);
-	box-shadow: get($offcanvas-config, shadow);
+  position: fixed;
+  bottom: 0;
+  z-index: $zindex-offcanvas;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: $offcanvas-color;
+  visibility: hidden;
+  background-color: $offcanvas-bg-color;
+  background-clip: padding-box;
+  outline: 0;
+  @include box-shadow($offcanvas-box-shadow);
+  @include transition(transform $offcanvas-transition-duration ease-in-out);
 }
 
-// Tablet & Mobile Modes
-@include media-breakpoint-down(md) {
-	.offcanvas-mobile {
-		background-color: get($offcanvas-config, bg-color);
-		box-shadow: get($offcanvas-config, shadow);
-		overflow: auto;
-	}
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $offcanvas-padding-y $offcanvas-padding-x;
+
+  .btn-close {
+    padding: ($offcanvas-padding-y * .5) ($offcanvas-padding-x * .5);
+    margin-top: $offcanvas-padding-y * -.5;
+    margin-right: $offcanvas-padding-x * -.5;
+    margin-bottom: $offcanvas-padding-y * -.5;
+  }
 }
 
-// Desktop Offcanvas
-@include offcanvas-build(offcanvas, default, $offcanvas-config);
+.offcanvas-title {
+  margin-bottom: 0;
+  line-height: $offcanvas-title-line-height;
+}
 
-// Mobile Offcanvas
-@include offcanvas-build(offcanvas-mobile, tablet-and-mobile, $offcanvas-config);
+.offcanvas-body {
+  flex-grow: 1;
+  padding: $offcanvas-padding-y $offcanvas-padding-x;
+  overflow-y: auto;
+}
+
+.offcanvas-start {
+  top: 0;
+  left: 0;
+  width: $offcanvas-horizontal-width;
+  border-right: $offcanvas-border-width solid $offcanvas-border-color;
+  transform: translateX(-100%);
+}
+
+.offcanvas-end {
+  top: 0;
+  right: 0;
+  width: $offcanvas-horizontal-width;
+  border-left: $offcanvas-border-width solid $offcanvas-border-color;
+  transform: translateX(100%);
+}
+
+.offcanvas-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $offcanvas-vertical-height;
+  max-height: 100%;
+  border-bottom: $offcanvas-border-width solid $offcanvas-border-color;
+  transform: translateY(-100%);
+}
+
+.offcanvas-bottom {
+  right: 0;
+  left: 0;
+  height: $offcanvas-vertical-height;
+  max-height: 100%;
+  border-top: $offcanvas-border-width solid $offcanvas-border-color;
+  transform: translateY(100%);
+}
+
+.offcanvas.show {
+  transform: none;
+}

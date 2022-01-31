@@ -81,19 +81,7 @@
   }
 }
 
-.accordion-button:not(.collapsed) {
-  color: #2b2c2e;
-  background-color: #e5e5e5;
-  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
-}
 
-.accordion-button:focus {
-  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
-}
-
-.accordion-button::after {
-  color: #2b2c2e;
-}
 
 div.flex-column.navbar-nav {
   width: 50%;
