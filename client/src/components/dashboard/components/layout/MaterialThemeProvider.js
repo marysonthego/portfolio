@@ -8,7 +8,7 @@ const theme = createTheme(
   {
     // direction: "rtl",
     typography: {
-      fontFamily: ["Poppins"].join(",")
+      fontFamily: ["Nunito"].join(",")
     },
 
     palette: {
