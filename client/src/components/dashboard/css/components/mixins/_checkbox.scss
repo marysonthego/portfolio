@@ -53,7 +53,7 @@
         width: $base;
 
 		&:after {
-            width: $tick / 2;
+            width: $tick * 0.5;
             height: $tick;
 		}
 	}
