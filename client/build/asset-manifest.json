@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.03e89e12.chunk.css",
-    "main.js": "/static/js/main.1489e45f.chunk.js",
-    "main.js.map": "/static/js/main.1489e45f.chunk.js.map",
+    "main.js": "/static/js/main.63dfb3e0.chunk.js",
+    "main.js.map": "/static/js/main.63dfb3e0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.aa7278fb.js",
     "runtime-main.js.map": "/static/js/runtime-main.aa7278fb.js.map",
     "static/css/2.78467331.chunk.css": "/static/css/2.78467331.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.78467331.chunk.css.map": "/static/css/2.78467331.chunk.css.map",
     "static/css/main.03e89e12.chunk.css.map": "/static/css/main.03e89e12.chunk.css.map",
     "static/js/2.85e01922.chunk.js.LICENSE.txt": "/static/js/2.85e01922.chunk.js.LICENSE.txt",
-    "static/js/main.1489e45f.chunk.js.LICENSE.txt": "/static/js/main.1489e45f.chunk.js.LICENSE.txt",
+    "static/js/main.63dfb3e0.chunk.js.LICENSE.txt": "/static/js/main.63dfb3e0.chunk.js.LICENSE.txt",
     "static/media/nucat.css": "/static/media/worriedcat.6f1ee97e.png",
     "static/media/all.min.css": "/static/media/fa-solid-900.eeccf4f6.woff",
     "static/media/index.css": "/static/media/nunito-vietnamese-400-normal.977238e2.woff2",
@@ -27,6 +27,6 @@
     "static/css/2.78467331.chunk.css",
     "static/js/2.85e01922.chunk.js",
     "static/css/main.03e89e12.chunk.css",
-    "static/js/main.1489e45f.chunk.js"
+    "static/js/main.63dfb3e0.chunk.js"
   ]
 }
