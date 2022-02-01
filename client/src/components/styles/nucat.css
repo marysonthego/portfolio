@@ -57,7 +57,7 @@ header.masthead .overlay {
 .row-content {
   padding: 50px 0;
   border-bottom: 1px ridge;
-  min-height: 200px;
+  min-height: 500px;
 }
 
 .navbar {
@@ -125,12 +125,12 @@ h6 {
   font-family: 'nunito', sans-serif;
 }
 
-a {
+a.nav-item {
   color: #212529;
   transition: all 0.2s;
 }
 
-a:focus, a:hover {
+a.nav-item:focus, a:hover {
   color: #000000;
   font-weight: 800;
 }

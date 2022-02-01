@@ -114,8 +114,8 @@ input.form-input, select.form-input, select.form-select, select.form-select-sm, 
   outline: 0;
 }
 
-.btn,
-.btn-remove,
+.btn
+.btn-remove
 .btn-reset {
   display: inline;
   border: 0;
@@ -134,8 +134,8 @@ input.form-input, select.form-input, select.form-select, select.form-select-sm, 
   border: 0px;
 }
 
-.btn,
-.btn-add,
+.btn
+.btn-add
 .btn-delete {
   display: inline-flex;
   justify-content: flex-end;

@@ -7,15 +7,15 @@ import { DashboardApp } from "components/dashboard/DashboardApp";
 
 export const AlertsStepper = () => {
   return (
-    // <Container
-    //   fluid
-    //   overflow="hidden"
-    //   display="grid"
-    //   justify-content="center"
-    //   justify-items="center"
-    // >
+    <Container
+      fluid
+      overflow="hidden"
+      display="grid"
+      justify-content="center"
+      justify-items="center"
+    >
     <>
-      <Row justify-content="center">
+      <Row justify-content-center>
         <h2 className="top">New User Sign up Stepper</h2>
 
         {/* <iframe
@@ -29,6 +29,6 @@ export const AlertsStepper = () => {
         <DashboardApp />
       </Row>
     </>
-    //</Container>
+    </Container>
   );
 };

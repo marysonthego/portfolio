@@ -27,8 +27,8 @@ export const Navigation = () => {
 
         {location.pathname === "/nucat" || location.pathname === "/nucat/" || location.pathname === "/aboutus" ? (
         <div  id="navbarResponsive" className="navbar-nav flex-row justify-content-center">
-            <a className="nav-item me-2" href="/nucat">Home</a>
-            <a className="nav-item me-2" href="/aboutus">About</a>
+            <a className="nav-item mr-2" href="/nucat">Home</a>
+            <a className="nav-item " href="/aboutus">About</a>
         </div>
         ) : null }
         

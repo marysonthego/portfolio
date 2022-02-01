@@ -4,11 +4,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { AnimateListTools } from "components/top/ListTools";
-//import  "bootstrap/dist/css/bootstrap.css";
-
 import "./App.css";
 import "components/styles/styles.css";
-//import "components/styles/scss/bootstrap.scss";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);

@@ -12,7 +12,7 @@ export const AlertsDashboard = () => {
       justify-content="center"
       justify-items="center"
     >
-      <Row justify-content="center">
+      <Row justify-content-center>
         <h2 className="top">Admin Dashboard</h2>
 
         {/* <iframe

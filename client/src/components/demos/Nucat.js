@@ -8,11 +8,11 @@ import 'components/styles/nucat.css';
 export const Nucat = () => {
   return (
     <>
-      {/* <head>
+      <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
-        {/*
-        <link
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* <link
           rel="stylesheet"
           href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
         />
@@ -24,14 +24,16 @@ export const Nucat = () => {
         <link
           rel="stylesheet"
           href="/font-awesome/css/font-awesome.min.css"
-        />
+        /> */}
+
+        <link rel="stylesheet" href="/client/src/plugins/bootstrap.bundle.min.js" />
         <link href="/client/src/components/styles/nucat.css" rel="stylesheet" />
-         */}
+        
+        <script src="/client/src/plugins/carousel.js" />
 
-        {/* <title>NuCat: a feline day camp</title>
-      </head> */}
-
-      {/* <body> */}
+        <title>NuCat: a feline day camp</title>
+      </head> 
+      <body>
         <header className="masthead hero-image">
           <div className="container">
             <div className="row">
@@ -140,7 +142,7 @@ export const Nucat = () => {
             </div>
           </Row>
         </Container>
-      {/* </body> */}
+      </body>
     </>
   );
 };

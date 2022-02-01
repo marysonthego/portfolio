@@ -7,9 +7,14 @@
 .btn {
 	outline: none !important;
 	vertical-align: middle;
+  color: #ffffff;
 
 	// Transition
 	@include button-custom-transition($transition-link);
+
+  &:hover {
+    color: #ffffff;
+  }
 
 	&:focus:not(.btn-shadow):not(.btn-shadow-hover) {
 		box-shadow: none !important;
