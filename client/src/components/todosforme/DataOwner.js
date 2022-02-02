@@ -4,11 +4,8 @@ import { TodosTable } from "components/todosforme/TodosTable";
 import { RbC } from "components/todosforme/RbcCalendar";
 import { RbCModal } from "components/todosforme/RbCModal";
 import { CalcDates } from "components/todosforme/CalcDates";
-import { WeatherCard } from "components/todosforme/WeatherCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-//import "bootstrap/dist/css/bootstrap.min.css";
-//import "components/styles/scss/bootstrap.scss";
 import "components/styles/formstyles.css";
 
 export const DataOwner = () => {
@@ -37,7 +34,7 @@ export const DataOwner = () => {
 
   const [long, setLong] = useState([]);
 
-  const [weatherData, setWeatherData] = useState([]);
+  const [, setWeatherData] = useState([]);
 
   const eventCurrentSelect = (evt) => {
     setEventCurrent((prev) => ({
@@ -154,7 +151,7 @@ export const DataOwner = () => {
     } catch(error) {console.error(`eventUpdate error ${error}`)};
 
     if (evt.interval > 0) {
-      let occurrenceId;
+      var occurrenceId;
       if (evt.occurrenceId === 0) {
         occurrenceId = evt.id;
       } else {
@@ -454,11 +451,6 @@ export const DataOwner = () => {
           todoMoveToCalendar={todoMoveToCalendar}
           todoSubmit={todoSubmit}
         />
-        {(typeof weatherData.current !== 'undefined') ? (
-          <WeatherCard weatherData={weatherData}/>
-        ): (
-          <div></div>
-        )}
         
       </Col>
       <Col>

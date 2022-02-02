@@ -29,11 +29,10 @@ import {
   TablePagination,
   TableRow,
   TableSortLabel,
-  CircularProgress,
   Paper,
   Switch,
 } from '@material-ui/core';
-const useStyles = makeStyles({
+makeStyles({
   container: {
     display: 'flex',
     marginBottom: '2em',
@@ -73,27 +72,26 @@ export const ListLocations = () => {
       isError,
       error, 
     } = useGetLocationsByCustidQuery(custid);
-    let success = false;
-    let content;
+    //let success = false;
     let rows = [];
 
     if (isLoading) {
-      content = <CircularProgress />
+      //content = <CircularProgress />
       //console.log(`isLoading`);
       return null;
 
     } else if (isFetching) {
-      content = <CircularProgress />
+      //content = <CircularProgress />
       //console.log(`isFetching`);
       return null;
       
     } else if (isError) {
       console.log(`isError: `, error);
-      success=false;
+      //success=false;
       return null;
 
     } else if(isSuccess) {
-      success=true;
+      //success=true;
       let locs = list.map((loc) => {
         loc = {...loc, st: loc.stateid};
         dispatch(addNewLocation(loc));

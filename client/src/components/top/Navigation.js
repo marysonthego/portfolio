@@ -8,8 +8,6 @@ import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "components/styles/scss/bootstrap.scss";
 
 
 export const Navigation = () => {
@@ -25,12 +23,12 @@ export const Navigation = () => {
       <Container fluid>
         <Navbar.Brand href="/"> MarysOnTheGo.tech</Navbar.Brand>
 
-        {location.pathname === "/nucat" || location.pathname === "/nucat/" || location.pathname === "/aboutus" ? (
+        {/* {location.pathname === "/nucat" || location.pathname === "/nucat/" || location.pathname === "/aboutus" ? (
         <div  id="navbarResponsive" className="navbar-nav flex-row justify-content-center">
             <a className="nav-item mr-2" href="/nucat">Home</a>
             <a className="nav-item " href="/aboutus">About</a>
         </div>
-        ) : null }
+        ) : null } */}
         
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas

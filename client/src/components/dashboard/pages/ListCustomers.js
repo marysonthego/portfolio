@@ -12,7 +12,6 @@ import {
   removeCustomer, 
 } from 'components/dashboard/redux/customersSlice';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-//import Stack from '@material-ui/Stack'; - not until MUI v5 :(
 import {
   Box,
   Button,
@@ -27,12 +26,11 @@ import {
   TablePagination,
   TableRow,
   TableSortLabel,
-  CircularProgress,
   Paper,
   Switch,
 } from '@material-ui/core';
 
-const useStyles = makeStyles({
+makeStyles({
   container: {
     display: 'flex',
     marginBottom: '2em',
@@ -71,27 +69,19 @@ export const ListCustomers = () => {
       isError,
       error, 
     } = useListCustomersQuery();
-    let success = false;
-    let content;
     let rows = [];
 
     if (isLoading) {
-      content = <CircularProgress />
-      console.log(`isLoading`);
       return null;
 
     } else if (isFetching) {
-      content = <CircularProgress />
-      console.log(`isFetching`);
       return null;
       
     } else if (isError) {
       console.log(`isError: `, error);
-      success=false;
       return null;
 
     } else if(isSuccess) {
-      success=true;
       let custs = list.map((cust) => {
         dispatch(addNewCustomer(cust));
         console.log(`isSuccess cust: `, cust);

@@ -34,7 +34,7 @@ export const rssitemsSlice = createSlice({
   
     updateRssfeed: (state, action) => {
       if (state.rssitems) {
-        const {id, rssid, link, title, description} = action.payload;
+        const {id, link, title, description} = action.payload;
         const existingRssitem = state.rssitems.find(rssitem => rssitem.id === id);
         if (existingRssitem) {
           if(link) existingRssitem.link = link;

@@ -3,9 +3,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import moment from "moment";
 import Image from "react-bootstrap/Image";
-//import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/weatherstyles.css";
-//import "components/styles/scss/bootstrap.scss";
 
 const refresh = () => {
   window.location.reload();
@@ -67,7 +65,7 @@ export const WeatherApi = () => {
                     <div className="top header flex">
                       {weatherData.timezone}
                       <Button
-                        className="button header m-0 p-0"
+                        className="button weather m-0 p-0"
                         onClick={refresh}
                       >
                         <img

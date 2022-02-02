@@ -13,9 +13,8 @@ import { Provider } from "react-redux";
 import { Navigation } from "components/top/Navigation";
 import { ScrollToTop } from "components/top/ScrollToTop";
 import { TodosForMe } from "components/todosforme/TodosForMe";
-//import { Nucat } from "components/demos/Nucat";
-//import { AboutUs } from "components/demos/AboutUs";
 import { WeatherApi } from "components/demos/WeatherApi";
+import Nucat from 'nucat';
 import { AlertsDashboard } from "components/demos/AlertsDashboard";
 import { Login } from "components/dashboard/pages/Login";
 import { Logout } from "components/dashboard/pages/Logout";
@@ -40,7 +39,7 @@ import "./index.scss"; // Standard version
 import "socicon/css/socicon.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
-import {Nucat, AboutUs} from 'nucat';
+
 
 // const ThemeToggler = () => {
 //   const [theme, setTheme] = useState("dark");
@@ -95,7 +94,7 @@ ReactDOM.render(
                         element={<ProfileStepper />}
                       />
                       <Route path="/nucat" element={<Nucat />} />
-                      <Route path="/aboutus" element={<AboutUs />} />
+                      
                       <Route path="/todos" element={<TodosForMe />} />
                       <Route path="/weather" element={<WeatherApi />} />
                       <Route path="/" element={<App />} />

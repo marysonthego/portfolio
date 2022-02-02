@@ -10,7 +10,6 @@ import { useSnackbar } from 'notistack';
 import Snackbar from 'components/dashboard/helpers/Snackbar';
 import { CellNumberFormat } from 'components/dashboard/helpers/Formatters';
 import SVG from 'react-inlinesvg';
-import { toAbsoluteUrl } from 'components/dashboard/helpers/AssetHelpers';
 import { initUserErrors } from 'components/dashboard/helpers/Initializers';
 import {
   FormValidation,

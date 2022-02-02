@@ -1,6 +1,5 @@
 import React, {useMemo} from "react";
 import objectPath from "object-path";
-import {toAbsoluteUrl} from "components/dashboard/helpers/AssetHelpers";
 import {useHtmlClassService} from "components/dashboard/components/layout/MetronicLayout";
 import {HeaderMenu} from "components/dashboard/components/HeaderMenu";
 
@@ -22,13 +21,13 @@ export function HeaderMenuWrapper() {
                 objectPath.get(uiService.config, "aside.self.display") === false
         };
     }, [uiService]);
-    const getHeaderLogo = () => {
-        let result = "a4gIcon48x48.png";
-        if (layoutProps.headerSelfTheme && layoutProps.headerSelfTheme !== "dark") {
-            result = "a4gIcon48x48.png";
-        }
-        return toAbsoluteUrl(`media/${result}`);
-    };
+    // const getHeaderLogo = () => {
+    //     let result = "a4gIcon48x48.png";
+    //     if (layoutProps.headerSelfTheme && layoutProps.headerSelfTheme !== "dark") {
+    //         result = "a4gIcon48x48.png";
+    //     }
+    //     return toAbsoluteUrl(`media/${result}`);
+    // };
 
     return <>
         {/*begin::Header Menu Wrapper*/}

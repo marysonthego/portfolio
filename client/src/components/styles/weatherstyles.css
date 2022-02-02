@@ -18,8 +18,8 @@
 }
 
 .header{
-    background-color: #424242;
-    color: whitesmoke;
+    background-color: #e2e2e2;
+    color: #615d5d;
     padding: 10px;
     font-size: 28px;
     border-radius: 15px;
@@ -61,7 +61,9 @@
   font-weight: 400;
 }
 
-.button{
+.button.weather{
   width: 35px;
   height: 35px;
+  background-color: #9e9a9a;
+  border-color:black;
 }
