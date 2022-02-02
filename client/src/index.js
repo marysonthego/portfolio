@@ -40,9 +40,7 @@ import "./index.scss"; // Standard version
 import "socicon/css/socicon.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
-import {Nucat, AboutUs} from 'libnucat';
-//import "bootstrap/dist/css/bootstrap.css";
-//import "%PUBLIC_URL%/css/bootstrap.min.css";
+import {Nucat, AboutUs} from 'nucat';
 
 // const ThemeToggler = () => {
 //   const [theme, setTheme] = useState("dark");
