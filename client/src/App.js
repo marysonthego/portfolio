@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { AnimateListTools } from "components/top/ListTools";
 import "./App.css";
-import "components/styles/styles.css";
+//import "components/styles/styles.css";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
