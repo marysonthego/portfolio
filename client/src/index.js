@@ -14,7 +14,7 @@ import { Navigation } from "components/top/Navigation";
 import { ScrollToTop } from "components/top/ScrollToTop";
 import { TodosForMe } from "components/todosforme/TodosForMe";
 import { WeatherApi } from "components/demos/WeatherApi";
-import Nucat from 'nucat';
+import NucatIframe from "components/demos/NucatIframe";
 import { AlertsDashboard } from "components/demos/AlertsDashboard";
 import { Login } from "components/dashboard/pages/Login";
 import { Logout } from "components/dashboard/pages/Logout";
@@ -40,11 +40,6 @@ import "socicon/css/socicon.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
 
-
-// const ThemeToggler = () => {
-//   const [theme, setTheme] = useState("dark");
-//   theme === "light" ? setTheme("dark") : setTheme("light");
-// };
 ReactDOM.render(
   <ThemeProvider theme={lightTheme}>
     <CookiesProvider>
@@ -93,7 +88,7 @@ ReactDOM.render(
                         path="/profilestepper"
                         element={<ProfileStepper />}
                       />
-                      <Route path="/nucat" element={<Nucat />} />
+                      <Route path="/nucat" element={<NucatIframe/>}/>
                       
                       <Route path="/todos" element={<TodosForMe />} />
                       <Route path="/weather" element={<WeatherApi />} />
