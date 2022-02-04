@@ -32,7 +32,7 @@
 }
 
 .background {
-  background-image: url(./pexels-mitchell-luo-3694708.png);
+  background-color:#e5e5e5;
   background-size: cover;
   background-position: top;
   min-height: 100%;
@@ -41,7 +41,7 @@
 
 .p1, .p1a {
   font-family: "Nunito";
-  color: #e5e5e5;
+  color: #474444;
   font-size: 300%;
 }
 
@@ -52,7 +52,7 @@
 
 .p2, .p2a {
   font-family: "Nunito";
-  color: #efefefbd;
+  color: #474444;
   font-size: 200%;
 }
 

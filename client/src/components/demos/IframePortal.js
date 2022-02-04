@@ -11,7 +11,7 @@ const IframePortal = ({
     contentRef?.contentWindow?.document?.body
 
   return (
-    <iframe {...props} ref={setContentRef}>
+    <iframe {...props} ref={setContentRef} title="iframe">
       {mountNode && createPortal(children, mountNode)}
     </iframe>
   )

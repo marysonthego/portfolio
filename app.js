@@ -55,9 +55,12 @@ server.use(router);
 
 router.use(express.static(path.join(__dirname, '/public')));
 
-// server.get("/", (req, res) => {
-//   return res.status;
-// });
+router.get('/nucat', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/nucat', 'index.html'));
+});
+router.get('/about', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/nucat', 'index.html'));
+});
 
 router.get("/api/todos/all", async (req, res) => {
   try {

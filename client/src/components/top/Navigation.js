@@ -24,12 +24,12 @@ export const Navigation = () => {
       <Container fluid>
         <Navbar.Brand href="/"> MarysOnTheGo.tech</Navbar.Brand>
 
-        {location.pathname === "/nucat" || location.pathname === "/nucat/" || location.pathname === "/aboutus" ? (
+        {/* {location.pathname === "/nucat" || location.pathname === "/nucat/" || location.pathname === "/aboutus" ? (
         <div  id="navbarResponsive" className="navbar-nav flex-row justify-content-center">
-            <a className="nav-item mr-2" href="/nucat">Home</a>
+            <a className="nav-item me-2" href="/nucat">Home</a>
             <a className="nav-item " href="/aboutus">About</a>
         </div>
-        ) : null }
+        ) : null } */}
         
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas

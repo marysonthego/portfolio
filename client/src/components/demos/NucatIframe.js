@@ -1,15 +1,40 @@
+import { useState, useEffect } from 'react';
 import IframePortal from './IframePortal';
 
 export default function NucatIframe() {
-  return (
-    <>
-    {/* <IframePortal title='Nucat!'
-      src="https://marysonthego.tech/nucat">
-    </IframePortal> */}
+  const { height, width } = useWindowDimensions();
 
+  return (
     <IframePortal title='Nucat!'
-      src="components/nucat/index.html">
+      width={width}
+      height={height}
+      object-position= "50% 50%"
+      object-fit="contain"
+      src="nucat/index.html">
     </IframePortal>
-    </>
   );
 };
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+export function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+      console.log(`useEffect handleResize`);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
