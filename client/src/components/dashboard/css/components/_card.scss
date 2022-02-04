@@ -5,12 +5,12 @@
 // Base
 .card.card-custom {
     box-shadow: $card-box-shadow;
-    border: 1;
+    border: 0;
 
     // Header
     > .card-header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: stretch;
         flex-wrap: wrap;
         //height: $card-header-height;
@@ -106,9 +106,7 @@
 
     // Body
     > .card-body {
-      display: flex;
-      justify-content: center;
-      margin: auto;
+         padding: $card-spacer-y $card-spacer-x;
     }
 
     // Footer

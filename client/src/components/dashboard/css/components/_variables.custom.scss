@@ -276,7 +276,7 @@ $navi-config: (
 	link-text-font-size-lg: 1.1rem,
 	link-text-font-size-xl: 1.2rem,
 
-	link-text-color: $dark-75,
+	link-text-color: #495057,
 	link-text-color-hover: $primary,
 	link-text-color-active: $primary,
 
@@ -506,7 +506,7 @@ $datatable-config: (
 	page-bg-hover:              $primary,
 	page-bg-active:             $primary,
 
-	page-color: 				$dark-50,
+	page-color: 				$gray-200,
 	page-color-hover: 			theme-inverse-color('primary'),
 	page-color-active: 			theme-inverse-color('primary'),
 
@@ -516,6 +516,6 @@ $datatable-config: (
 
 	page-info-bg: 				darken($gray-100, 2%),
 	page-info-bg-hover: 		$primary,
-	page-info-color: 			$dark-50,
+	page-info-color: 			$gray-200,
 	page-info-color-hover:	 	theme-inverse-color('primary')
 ) !default;

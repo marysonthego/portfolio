@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-.App-logo, .List-logo {
+.list-logo, .List-logo {
   height: 48px;
   width: 48px;
   border-width: 5px;
@@ -22,8 +22,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation-name: App-logo-slidein, App-logo-spin;
+  .list-logo {
+    animation-name:  list-logo-slidein,  list-logo-spin;
     animation-iteration-count: 1;
     animation-duration: 2s, 4s;
     animation-timing-function: ease;
@@ -62,7 +62,7 @@
 }
 
 @media (min-width: 768px) {
-  .App-logo, .List-logo {
+  .list-logo, .List-logo {
     height: 96px;
     width: 96px;
     border-width: 5px;
@@ -133,7 +133,7 @@ a.nav-link:active, a.nav-link:focus {
   text-align: center;
 }
 
-@keyframes App-logo-spin {
+@keyframes  list-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -142,7 +142,7 @@ a.nav-link:active, a.nav-link:focus {
   }
 }
 
-@keyframes App-logo-slidein {
+@keyframes  list-logo-slidein {
   from {
     margin-left: 100%;
   }

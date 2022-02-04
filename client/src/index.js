@@ -6,7 +6,6 @@ import "@fontsource/nunito/800.css";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "components/top/themes";
 import { GlobalStyles } from "components/top/globalStyles";
-import "./index.css";
 import App from "./App";
 import store from "components/dashboard/redux/store";
 import { Provider } from "react-redux";
@@ -35,10 +34,11 @@ import { CookiesProvider } from "react-cookie";
 import { SnackbarProvider } from "notistack";
 import { Collapse } from "@material-ui/core";
 import "components/dashboard/css/pages/login/login-1.scss";
-import "./index.scss"; // Standard version
 import "socicon/css/socicon.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
+import "./index.css";
+
 
 ReactDOM.render(
   <ThemeProvider theme={lightTheme}>

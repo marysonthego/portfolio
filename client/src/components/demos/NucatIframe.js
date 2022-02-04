@@ -1,10 +1,15 @@
 import IframePortal from './IframePortal';
-import NucatApp from 'nucat';
 
 export default function NucatIframe() {
   return (
-    <IframePortal title='A custom made iframe'>
-      <NucatApp/>
+    <>
+    {/* <IframePortal title='Nucat!'
+      src="https://marysonthego.tech/nucat">
+    </IframePortal> */}
+
+    <IframePortal title='Nucat!'
+      src="components/nucat/index.html">
     </IframePortal>
+    </>
   );
 };
