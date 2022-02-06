@@ -21,8 +21,8 @@ export const WeatherApi = () => {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
       });
-      // setLat(40.45454);
-      // setLong(-105.08668);
+      setLat(40.45454);
+      setLong(-105.08668);
       console.log(`lat`, lat);
       console.log(`long`, long);
       try {

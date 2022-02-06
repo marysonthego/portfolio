@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.139d9fea.chunk.css",
-    "main.js": "./static/js/main.afd89110.chunk.js",
-    "main.js.map": "./static/js/main.afd89110.chunk.js.map",
+    "main.js": "./static/js/main.13784f4e.chunk.js",
+    "main.js.map": "./static/js/main.13784f4e.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d59eca52.js",
     "runtime-main.js.map": "./static/js/runtime-main.d59eca52.js.map",
     "static/css/2.578ec1de.chunk.css": "./static/css/2.578ec1de.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.578ec1de.chunk.css.map": "./static/css/2.578ec1de.chunk.css.map",
     "static/css/main.139d9fea.chunk.css.map": "./static/css/main.139d9fea.chunk.css.map",
     "static/js/2.71ae1471.chunk.js.LICENSE.txt": "./static/js/2.71ae1471.chunk.js.LICENSE.txt",
-    "static/js/main.afd89110.chunk.js.LICENSE.txt": "./static/js/main.afd89110.chunk.js.LICENSE.txt",
+    "static/js/main.13784f4e.chunk.js.LICENSE.txt": "./static/js/main.13784f4e.chunk.js.LICENSE.txt",
     "static/media/all.min.css": "./static/media/fa-solid-900.eeccf4f6.woff",
     "static/media/index.css": "./static/media/nunito-vietnamese-400-normal.977238e2.woff2",
     "static/media/800.css": "./static/media/nunito-vietnamese-800-normal.21047dbd.woff2",
@@ -25,6 +25,6 @@
     "static/css/2.578ec1de.chunk.css",
     "static/js/2.71ae1471.chunk.js",
     "static/css/main.139d9fea.chunk.css",
-    "static/js/main.afd89110.chunk.js"
+    "static/js/main.13784f4e.chunk.js"
   ]
 }
