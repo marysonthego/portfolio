@@ -62,6 +62,10 @@ router.get('/aboutus', function (req, res) {
   res.sendFile(path.join(__dirname, 'public/nucat', 'index.html'));
 });
 
+router.get('/dash', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/dashboard', 'index.html'));
+});
+
 router.get("/api/todos/all", async (req, res) => {
   try {
     pool.execute("SELECT * FROM todos",
