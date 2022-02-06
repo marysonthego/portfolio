@@ -58,7 +58,7 @@ router.use(express.static(path.join(__dirname, '/public')));
 router.get('/nucat', function (req, res) {
   res.sendFile(path.join(__dirname, 'public/nucat', 'index.html'));
 });
-router.get('/about', function (req, res) {
+router.get('/aboutus', function (req, res) {
   res.sendFile(path.join(__dirname, 'public/nucat', 'index.html'));
 });
 

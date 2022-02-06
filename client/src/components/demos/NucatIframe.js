@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
 import IframePortal from './IframePortal';
-import nucat from 'nucatpkg';
+//import NucatApp from 'nucatpkg';
+
 export default function NucatIframe() {
   const { height, width } = useWindowDimensions();
 
   return (
+    <>
     <IframePortal title='Nucat!'
       width={width}
       height={height}
       object-position= "50% 50%"
       object-fit="contain"
-      src="nucat/index.html">
+      src="http://localhost:3000/nucat" >
     </IframePortal>
+    </>
   );
 };
 

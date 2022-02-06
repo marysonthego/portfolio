@@ -41,7 +41,7 @@ export function ScrollToTop() {
     <Row className="justify-content: right">
     <Col md={{ span:1, offset:11 }}>
           {isVisible && (
-            <div onClick={scrollToTop}>
+            <button onClick={scrollToTop}>
               <Image
               fluid={true}
               src="media/top-arrow.png"
@@ -49,7 +49,7 @@ export function ScrollToTop() {
               className="ScrollToTop"
               alt="Go to top"
             />
-            </div>
+            </button>
           )}
       </Col>
   </Row>

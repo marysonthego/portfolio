@@ -22,7 +22,6 @@
   "main": "src/index.js",
   "proxy": "http://localhost:4000",
   "dependencies": {
-    "nucatpkg": "git+ssh://git@github.com:marysonthego/nucatpkg.git",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fontsource/nunito": "^4.5.1",

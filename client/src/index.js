@@ -89,7 +89,7 @@ ReactDOM.render(
                         element={<ProfileStepper />}
                       />
                       <Route path="/nucat" element={<NucatIframe/>}/>
-                      
+                      <Route path="/aboutus" element={<NucatIframe/>}/>
                       <Route path="/todos" element={<TodosForMe />} />
                       <Route path="/weather" element={<WeatherApi />} />
                       <Route path="/" element={<App />} />
