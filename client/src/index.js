@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "@fontsource/nunito";
-import "@fontsource/nunito/800.css";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "components/top/themes";
-import { GlobalStyles } from "components/top/globalStyles";
+import { lightTheme } from "components/styles/themes";
+import { GlobalStyles } from "components/styles/globalStyles";
 import App from "./App";
-import store from "components/dashboard/redux/store";
+import store from "components/redux/store";
 import { Provider } from "react-redux";
 import { Navigation } from "components/top/Navigation";
 import { ScrollToTop } from "components/top/ScrollToTop";
@@ -15,25 +13,25 @@ import { TodosForMe } from "components/todosforme/TodosForMe";
 import { WeatherApi } from "components/demos/WeatherApi";
 import NucatIframe from "components/demos/NucatIframe";
 import { AlertsDashboard } from "components/demos/AlertsDashboard";
-import { Login } from "components/dashboard/pages/Login";
-import { Logout } from "components/dashboard/pages/Logout";
-import { ChangePassword } from "components/dashboard/pages/ChangePassword";
-import { ForgotPasswordPage } from "components/dashboard/pages/ForgotPasswordPage";
+// import { Login } from "components/dashboard/pages/Login";
+// import { Logout } from "components/dashboard/pages/Logout";
+// import { ChangePassword } from "components/dashboard/pages/ChangePassword";
+// import { ForgotPasswordPage } from "components/dashboard/pages/ForgotPasswordPage";
 import { AlertsStepper } from "components/demos/AlertsStepper";
-import { ProfileStepper } from "components/dashboard/pages/ProfileStepper";
-import { LocationsStep } from "components/dashboard/pages/LocationsStep";
-import { FriendsStep } from "components/dashboard/pages/FriendsStep";
-import { ListCustomers } from "components/dashboard/pages/ListCustomers";
-import { UserProfilePage } from "components/dashboard/pages/UserProfilePage";
+// import { ProfileStepper } from "components/dashboard/pages/ProfileStepper";
+// import { LocationsStep } from "components/dashboard/pages/LocationsStep";
+// import { FriendsStep } from "components/dashboard/pages/FriendsStep";
+// import { ListCustomers } from "components/dashboard/pages/ListCustomers";
+// import { UserProfilePage } from "components/dashboard/pages/UserProfilePage";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
-import { MaterialThemeProvider } from "components/dashboard/components/layout/MaterialThemeProvider";
-import { MetronicLayoutProvider } from "components/dashboard/components/layout/MetronicLayout";
-import { MetronicSubheaderProvider } from "components/dashboard/components/layout/MetronicSubheader";
+import { MaterialThemeProvider } from "components/layout/MaterialThemeProvider";
+import { MetronicLayoutProvider } from "components/layout/MetronicLayout";
+import { MetronicSubheaderProvider } from "components/layout/MetronicSubheader";
 import { CookiesProvider } from "react-cookie";
 import { SnackbarProvider } from "notistack";
 import { Collapse } from "@material-ui/core";
-import "components/dashboard/css/pages/login/login-1.scss";
+import "components/css/pages/login/login-1.scss";
 import "socicon/css/socicon.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
@@ -63,31 +61,6 @@ ReactDOM.render(
                     </div>
                     <Routes>
                       <Route path="/dashboard" element={<AlertsDashboard />} />
-                      <Route
-                        path="/user-profile"
-                        element={<UserProfilePage />}
-                      />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/logout" element={<Logout />} />
-                      <Route path="/password" element={<ChangePassword />} />
-                      <Route
-                        path="/locations-list"
-                        element={<LocationsStep />}
-                      />
-                      <Route path="/friends-list" element={<FriendsStep />} />
-                      <Route
-                        path="/list-customers"
-                        element={<ListCustomers />}
-                      />
-                      <Route
-                        path="/forgot-password"
-                        element={<ForgotPasswordPage />}
-                      />
-                      <Route path="/stepper" element={<AlertsStepper />} />
-                      <Route
-                        path="/profilestepper"
-                        element={<ProfileStepper />}
-                      />
                       <Route path="/nucat" element={<NucatIframe/>}/>
                       <Route path="/aboutus" element={<NucatIframe/>}/>
                       <Route path="/todos" element={<TodosForMe />} />

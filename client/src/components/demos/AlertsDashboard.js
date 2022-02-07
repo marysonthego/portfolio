@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import {DashboardApp} from 'components/dashboard/DashboardApp';
 
 export const AlertsDashboard = () => {
   return (
@@ -15,16 +14,12 @@ export const AlertsDashboard = () => {
       <Row justify-content-center>
         <h2 className="top">Admin Dashboard</h2>
 
-        {/* <iframe
+        <iframe
           src="https://alerts-dashboard.herokuapp.com"
           title="Admin Dashboard"
           width="1024px"
           height="768px"
-        
-        /> */}
-      </Row>
-      <Row>
-        <DashboardApp/>
+        />
       </Row>
     </Container>
   );
