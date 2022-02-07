@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "components/styles/themes";
 import { GlobalStyles } from "components/styles/globalStyles";
@@ -12,17 +12,8 @@ import { ScrollToTop } from "components/top/ScrollToTop";
 import { TodosForMe } from "components/todosforme/TodosForMe";
 import { WeatherApi } from "components/demos/WeatherApi";
 import NucatIframe from "components/demos/NucatIframe";
-import { AlertsDashboard } from "components/demos/AlertsDashboard";
-// import { Login } from "components/dashboard/pages/Login";
-// import { Logout } from "components/dashboard/pages/Logout";
-// import { ChangePassword } from "components/dashboard/pages/ChangePassword";
-// import { ForgotPasswordPage } from "components/dashboard/pages/ForgotPasswordPage";
-import { AlertsStepper } from "components/demos/AlertsStepper";
-// import { ProfileStepper } from "components/dashboard/pages/ProfileStepper";
-// import { LocationsStep } from "components/dashboard/pages/LocationsStep";
-// import { FriendsStep } from "components/dashboard/pages/FriendsStep";
-// import { ListCustomers } from "components/dashboard/pages/ListCustomers";
-// import { UserProfilePage } from "components/dashboard/pages/UserProfilePage";
+import DashIframe from "components/demos/DashIframe";
+import StepperIframe from "components/demos/StepperIframe";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import { MaterialThemeProvider } from "components/layout/MaterialThemeProvider";
@@ -60,12 +51,13 @@ ReactDOM.render(
                       &copy;2022&nbsp;marysonthego.tech
                     </div>
                     <Routes>
-                      <Route path="/dashboard" element={<AlertsDashboard />} />
+                      <Route path="/dashboard" element={<DashIframe />}/>
+                      <Route path="/stepper" element={<StepperIframe/>}/>
                       <Route path="/nucat" element={<NucatIframe/>}/>
-                      <Route path="/aboutus" element={<NucatIframe/>}/>
-                      <Route path="/todos" element={<TodosForMe />} />
-                      <Route path="/weather" element={<WeatherApi />} />
-                      <Route path="/" element={<App />} />
+                      <Route path="/todos" element={<TodosForMe />}/>
+                      <Route path="/weather" element={<WeatherApi/>}/>
+                      <Route path="/" element={<App/>}/>
+                      <Route path="*" element={<Navigate replace to="/" />}/>
                     </Routes>
                   </Router>
                 </Container>
