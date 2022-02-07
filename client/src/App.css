@@ -88,8 +88,8 @@ div.flex-column.navbar-nav {
 }
 
 a.nav-link {
-  font-family: "Nunito";
-  color:#2b2c2e;
+  font-family: "Nunito", sans-serif;
+  color:#57585a;
   transition: font-weight 1s;
 }
 

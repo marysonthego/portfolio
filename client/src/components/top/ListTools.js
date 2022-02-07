@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import "components/styles/scss/bootstrap.scss";
+import "components/styles/bootstrap.scss";
 import "../../App.css"
 
 export function AnimateListTools() {

@@ -6,27 +6,27 @@
 
 // Theme colors
 // Override primary color variants
-$primary:       									#3699FF; // Bootstrap variable
-$primary-hover:    									#187DE4; // Custom variable
+$primary:       									#7a7d81; // Bootstrap variable
+$primary-hover:    									#5c5e5f; // Custom variable
 $primary-light:    									#E1F0FF; // Custom variable
 $primary-inverse:  									#FFFFFF; // Custom variable
 
 //mary below added from bootstrap 5.0.2 _variables.scss
 
-$enable-rounded:              true !default;
+$enable-rounded:              true ;
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$white:    #fff ;
+$gray-100: #f8f9fa ;
+$gray-200: #e9ecef ;
+$gray-300: #dee2e6 ;
+$gray-400: #ced4da ;
+$gray-500: #adb5bd ;
+$gray-600: #6c757d ;
+$gray-700: #495057 ;
+$gray-800: #343a40 ;
+$gray-900: #212529 ;
+$black:    #000 ;
 $dark-75:  #495057;
 // scss-docs-end gray-color-variables
 
@@ -37,7 +37,7 @@ $dark-75:  #495057;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
-$spacer: 1rem !default;
+$spacer: 1rem ;
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -45,124 +45,124 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-) !default;
+) ;
 
 // scss-docs-start border-variables
-$border-width:                1px !default;
+$border-width:                1px ;
 $border-widths: (
   1: 1px,
   2: 2px,
   3: 3px,
   4: 4px,
   5: 5px
-) !default;
+) ;
 
-$border-color:                $gray-300 !default;
+$border-color:                $gray-300 ;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .25rem !default;
-$border-radius-sm:            .2rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius:               .25rem ;
+$border-radius-sm:            .2rem ;
+$border-radius-lg:            .3rem ;
+$border-radius-pill:          50rem ;
 // scss-docs-end border-radius-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) ;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) ;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) ;
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) ;
 // scss-docs-end box-shadow-variables
 
-$component-active-color:      $white !default;
-$component-active-bg:         $gray-400 !default;
+$component-active-color:      $white ;
+$component-active-bg:         $gray-400 ;
 
 
-$line-height-base:            1.5 !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$line-height-base:            1.5 ;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) ;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out ;
 
 
 // Supporting modal variables for offcanvas
-$modal-inner-padding:               $spacer !default;
-$modal-content-border-color:        rgba($black, .2) !default;
-$modal-content-border-width:        $border-width !default;
-$modal-title-line-height:           $line-height-base !default;
-$modal-content-bg:                  $white !default;
-$modal-content-color:               null !default;
-$modal-content-box-shadow-xs:       $box-shadow-sm !default;
+$modal-inner-padding:               $spacer ;
+$modal-content-border-color:        rgba($black, .2) ;
+$modal-content-border-width:        $border-width ;
+$modal-title-line-height:           $line-height-base ;
+$modal-content-bg:                  $white ;
+$modal-content-color:               $gray-400 ;
+$modal-content-box-shadow-xs:       $box-shadow-sm ;
 
 // Offcanvas
-$zindex-offcanvas:                  1050 !default;
+$zindex-offcanvas:                  1050 ;
 
 // scss-docs-start offcanvas-variables
-$offcanvas-padding-y:               $modal-inner-padding !default;
-$offcanvas-padding-x:               $modal-inner-padding !default;
-$offcanvas-horizontal-width:        400px !default;
-$offcanvas-vertical-height:         30vh !default;
-$offcanvas-transition-duration:     .3s !default;
-$offcanvas-border-color:            $modal-content-border-color !default;
-$offcanvas-border-width:            $modal-content-border-width !default;
-$offcanvas-title-line-height:       $modal-title-line-height !default;
-$offcanvas-bg-color:                $modal-content-bg !default;
-$offcanvas-color:                   $modal-content-color !default;
-$offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
+$offcanvas-padding-y:               $modal-inner-padding ;
+$offcanvas-padding-x:               $modal-inner-padding ;
+$offcanvas-horizontal-width:        400px ;
+$offcanvas-vertical-height:         30vh ;
+$offcanvas-transition-duration:     .3s ;
+$offcanvas-border-color:            $modal-content-border-color ;
+$offcanvas-border-width:            $modal-content-border-width ;
+$offcanvas-title-line-height:       $modal-title-line-height ;
+$offcanvas-bg-color:                $modal-content-bg ;
+$offcanvas-color:                   $modal-content-color ;
+$offcanvas-box-shadow:              $modal-content-box-shadow-xs ;
 // scss-docs-end offcanvas-variables
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
-$body-text-align:           null !default;
+$body-bg:                   $white ;
+$body-color:                $gray-900 ;
+$body-text-align:           null ;
 
-$input-color:                           $body-color !default;
+$input-color:                           $body-color ;
 
-$input-focus-border-color:              #cecbcb !default;
-$input-focus-color:                     $input-color !default;
-$input-btn-focus-width:         .25rem !default;
-$input-btn-focus-color-opacity: .25 !default;
-$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
-$input-btn-focus-blur:          0 !default;
-$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
-$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
-$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$input-focus-border-color:              #cecbcb ;
+$input-focus-color:                     $input-color ;
+$input-btn-focus-width:         .25rem ;
+$input-btn-focus-color-opacity: .25 ;
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) ;
+$input-btn-focus-blur:          0 ;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color ;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color ;
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow ;
 
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     1rem !default;
-$accordion-padding-x:                     1.25rem !default;
-$accordion-color:                         $body-color !default;
-$accordion-bg:                            $body-bg !default;
-$accordion-border-width:                  $border-width !default;
-$accordion-border-color:                  rgba($black, .125) !default;
-$accordion-border-radius:                 $border-radius !default;
-$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
+$accordion-padding-y:                     1rem ;
+$accordion-padding-x:                     1.25rem ;
+$accordion-color:                         $body-color ;
+$accordion-bg:                            $body-bg ;
+$accordion-border-width:                  $border-width ;
+$accordion-border-color:                  rgba($black, .125) ;
+$accordion-border-radius:                 $border-radius ;
+$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) ;
 
-$accordion-body-padding-y:                $accordion-padding-y !default;
-$accordion-body-padding-x:                $accordion-padding-x !default;
+$accordion-body-padding-y:                $accordion-padding-y ;
+$accordion-body-padding-x:                $accordion-padding-x ;
 
-$accordion-button-padding-y:              $accordion-padding-y !default;
-$accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-color:                  $accordion-color !default;
-$accordion-button-bg:                     $accordion-bg !default;
-$accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-padding-y:              $accordion-padding-y ;
+$accordion-button-padding-x:              $accordion-padding-x ;
+$accordion-button-color:                  $accordion-color ;
+$accordion-button-bg:                     $accordion-bg ;
+$accordion-transition:                    $btn-transition, border-radius .15s ease ;
+$accordion-button-active-bg:              tint-color($component-active-bg, 90%) ;
+$accordion-button-active-color:           shade-color($primary, 10%) ;
 
-$accordion-button-focus-border-color:     $input-focus-border-color !default;
-$accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
+$accordion-button-focus-border-color:     $input-focus-border-color ;
+$accordion-button-focus-box-shadow:       $btn-focus-box-shadow ;
 
-$accordion-icon-width:                    1.25rem !default;
-$accordion-icon-color:                    $accordion-color !default;
-$accordion-icon-active-color:             $accordion-button-active-color !default;
-$accordion-icon-transition:               transform .2s ease-in-out !default;
-$accordion-icon-transform:                rotate(-180deg) !default;
+$accordion-icon-width:                    1.25rem ;
+$accordion-icon-color:                    $accordion-color ;
+$accordion-icon-active-color:             $accordion-button-active-color ;
+$accordion-icon-transition:               transform .2s ease-in-out ;
+$accordion-icon-transform:                rotate(-180deg) ;
 
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") ;
 
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") ;
 // scss-docs-end accordion-variables

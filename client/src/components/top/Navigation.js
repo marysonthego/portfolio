@@ -10,6 +10,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "components/styles/_offcanvas.scss";
+import "components/styles/_accordion.scss";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -55,7 +56,7 @@ export const Navigation = () => {
           <Offcanvas.Body>
             <Accordion flush alwaysOpen defaultActiveKey="0">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>Example Projects</Accordion.Header>
+                <Accordion.Header >Example Projects</Accordion.Header>
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="/nucat" className="rounded-end">
@@ -142,7 +143,7 @@ export const Navigation = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-secondary" className="ml-3 mb-3">Search</Button>
+              <Button variant="outline-secondary" className="ml-3 ">Search</Button>
             </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
