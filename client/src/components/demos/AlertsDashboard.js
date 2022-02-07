@@ -1,26 +1,19 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import { useWindowDimensions } from 'components/demos/UseWindowDimensions';
+import IframePortal from './IframePortal';
 
 export const AlertsDashboard = () => {
-  return (
-    <Container
-      fluid
-      overflow="hidden"
-      display="grid"
-      justify-content="center"
-      justify-items="center"
-    >
-      <Row justify-content-center>
-        <h2 className="top">Admin Dashboard</h2>
+  const { height, width } = useWindowDimensions();
 
-        <iframe
-          src="https://alerts-dashboard.herokuapp.com"
-          title="Admin Dashboard"
-          width="1024px"
-          height="768px"
-        />
-      </Row>
-    </Container>
+  return (
+  <>
+    <IframePortal title='Dashboard'
+      width={width}
+      height={height}
+      object-position= "50% 50%"
+      object-fit="contain"
+      src="http://localhost:4000/dash/login" >
+    </IframePortal>
+    </>
   );
 };
