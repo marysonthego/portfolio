@@ -1011,7 +1011,7 @@ router.get('/**', (req, res) => {
 
 server.listen(PORT, () => {
   //console.error(`CORS enabled Server with whitelist is running on port ${PORT}\n`);
-  console.error(`CORS disabled. Running on port ${PORT}
+  console.error(`CORS disabled. MySQL. Running on port ${PORT}
   \n`);
 });
 
