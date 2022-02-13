@@ -1,4 +1,4 @@
-import { useWindowDimensions } from 'components/demos/UseWindowDimensions';
+import { useWindowDimensions } from 'components/helpers/UseWindowDimensions';
 import IframePortal from './IframePortal';
 
 export default function DashIframe() {

@@ -6,12 +6,10 @@ import paginationFactory from "react-bootstrap-table2-paginator";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-//import "bootstrap/dist/css/bootstrap.min.css";
-//import "components/styles/scss/bootstrap.scss";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
-import "components/styles/tablestyles.css";
-import "components/styles/formstyles.css";
+import "components/css/tablestyles.css";
+import "components/css/formstyles.css";
 
 export const TodosTable = ({
   todos,

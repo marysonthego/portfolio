@@ -6,7 +6,7 @@ import { RbCModal } from "components/todosforme/RbCModal";
 import { CalcDates } from "components/todosforme/CalcDates";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "components/styles/formstyles.css";
+import "components/css/formstyles.css";
 
 export const DataOwner = () => {
 

@@ -8,16 +8,16 @@
 
 // Mixins
 @import "base/mixins";
-@import "components/styles/mixins";
+@import "components/css/mixins";
 @import "vendors/plugins/mixins";
 
 // Bootstrap mixins
 @import "~bootstrap/scss/_mixins.scss";
 
 // Global variables
-@import "components/styles/_variables.demo.scss";
-@import "components/styles/_variables.bootstrap.scss";
-@import "components/styles/_variables.custom.scss";
+@import "components/css/_variables.demo.scss";
+@import "components/css/_variables.bootstrap.scss";
+@import "components/css/_variables.custom.scss";
 
 // 3rd-Party plugins variables
 @import "vendors/plugins/_variables.scss";
