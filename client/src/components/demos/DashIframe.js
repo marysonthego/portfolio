@@ -1,18 +1,12 @@
-import { useWindowDimensions } from 'components/helpers/UseWindowDimensions';
-import IframePortal from './IframePortal';
+import React from 'react';
 
 export default function DashIframe() {
-  const { height, width } = useWindowDimensions();
-
   return (
-  <>
-    <IframePortal title='Dashboard'
-      width={width}
-      height={height}
-      object-position= "50% 50%"
-      object-fit="contain"
-      src="https://dash.marysonthego.tech" >
-    </IframePortal>
-    </>
+    <div className="ratio ratio-4x3">
+    <iframe title='Dash'
+      allowFullScreen
+      src="https://dash.marysonthego.tech/" >
+    </iframe>
+    </div>
   );
 };

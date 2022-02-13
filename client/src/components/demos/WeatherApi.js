@@ -131,30 +131,30 @@ export const WeatherApi = () => {
             <div className="card-body">
               <p className="card-text">
                 This is a responsive ReactJS app. On devices wider than 768
-                pixels a Bootstrap horizontal card component is used to display
-                this page. On smaller devices, the page appears in a vertical
+                pixels a Bootstrap 5 horizontal card displays
+                the weather component. On smaller devices, it appears in a vertical
                 card component.
               </p>
               <p className="card-text">
                 Weather information is obtained by querying the OpenWeather API.
-                The geolocation used for the query is obtained from your
+                The geolocation for the query is obtained from your
                 browser. You might get surprising results depending on where
                 your browser thinks you are! This could happen if location
                 services are turned off on the device, or if you are using a
                 VPN. A nice addition to this app would be to prompt the user for
-                their location, or even allow users to track several locations.
+                their location, or even allow users to track several locations at once.
               </p>
               <p className="card-text">
                 The heavy lifting happens in a useEffect hook that
                 listens for changes to latitude or longitude. When the effect is
-                triggered it calls an asynchronous fetch() to the OpenWeather
-                API and populates the display with the results. A refresh button
-                in the upper-right corner initiates a new fetch() any time.
+                triggered, it calls an asynchronous fetch() to the OpenWeather
+                API and populates the display with the results. You can use the refresh button
+                in the upper-right corner to initiate a new fetch() request any time you want.
               </p>
               <p className="card-text">
                 I've noticed that the first request to the OpenWeather API
                 frequently returns a 400 (bad request) error, so be sure to
-                check for a successful network response in your code before you try to populate the
+                check for a successful network response in your code before you populate the
                 card component with data. Actually, this is good advice any time
                 you are working with an API!
               </p>

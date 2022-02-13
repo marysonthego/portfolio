@@ -1,26 +1,12 @@
-import React, {useState, useCallback} from 'react';
-//import Container from "react-bootstrap/Container";
-import IframePortal from './IframePortal';
-
-
-// function useClientRect() {
-//   const [rect, setRect] = useState(null);
-//   const ref = useCallback(node => {
-//     if (node !== null) {
-//       setRect(node.getBoundingClientRect());
-//     }
-//   }, []);
-//   return [rect, ref];
-// }
+import React from 'react';
 
 export default function NucatIframe() {
-  //const [rect, ref] = useClientRect();
   return (
-    <div className="ratio ratio-1x1">
-    <IframePortal title='Nucat!'
-      allowfullscreen
+    <div className="ratio ratio-4x3">
+    <iframe title='Nucat!'
+      allowFullScreen
       src="https://nucat.marysonthego.tech/" >
-    </IframePortal>
+    </iframe>
     </div>
   );
 };

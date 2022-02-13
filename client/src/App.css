@@ -19,6 +19,7 @@
   width: 48px;
   border-width: 5px;
   margin: 20px;
+  border-color:#000000;
 }
 
 @media (prefers-reduced-motion: no-preference) {
