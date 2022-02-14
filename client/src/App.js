@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect} from "react";
+import React, {useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -11,10 +11,6 @@ export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
   console.log(`API_URL`, process.env.REACT_APP_API_URL);
   console.log(`API_KEY`, process.env.REACT_APP_API_KEY);
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
 
   let location = useLocation();
 

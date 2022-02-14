@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import { useLocation } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -18,6 +18,11 @@ export const Navigation = () => {
   useEffect(() => {
     const currentPath = location.pathname;
     console.log(`currentPath: `, currentPath);
+  }, [location]);
+
+  useLayoutEffect(() => {
+    console.log(`useLayoutEffect window.scrollToTop`);
+    window.scrollTo(0, 0);
   }, [location]);
 
   return (
@@ -77,7 +82,7 @@ export const Navigation = () => {
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="/post01" className="rounded-end">
-                      Run Your React-Native App in WSA (otherwise known as Amazon App Store)
+                      Run Your React-Native App in Amazon WSA
                     </Nav.Link>
                     <Nav.Link href="/post02" className="rounded-end">
                       Use Sqlite 3 for Quick Database Emulation
