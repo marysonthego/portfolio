@@ -50,7 +50,7 @@ router.get("/todos/all", async (req, res) => {
     }
 });
 
-router.post("/api/todos/create", async (req, res) => {
+router.post("/todos/create", async (req, res) => {
   try {
     await pool.execute('INSERT INTO `todos` (`title`, `description`, `createdDate`, `category`, `priority`',
      [req.body.title, req.body.description, req.body.createdDate, req.body.category, req.body.priority],
@@ -66,7 +66,7 @@ router.post("/api/todos/create", async (req, res) => {
   }
 });
 
-router.post("/api/todos/update", async (req, res) => {
+router.post("/todos/update", async (req, res) => {
   try {
     await pool.execute( 'UPDATE `todos` SET title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority WHERE todos.id = req.body.id',
     function (error, results, fields) {
@@ -80,7 +80,7 @@ router.post("/api/todos/update", async (req, res) => {
   }
 });
 
-router.post("/api/todos/delete", async (req, res) => {
+router.post("/todos/delete", async (req, res) => {
   try {
     await pool.execute('DELETE from `todos` WHERE todos.id = req.body.id',
     function (error, results, fields) {
@@ -95,7 +95,7 @@ router.post("/api/todos/delete", async (req, res) => {
 });
 
 
-router.get("/api/events/all", async (req, res) => {
+router.get("/events/all", async (req, res) => {
   try {
     const response = await pool.execute('SELECT * FROM `events`',
     function(err, results, fields) {
@@ -109,7 +109,7 @@ router.get("/api/events/all", async (req, res) => {
     }
 });
 
-router.post("/api/events/create", async (req, res) => {
+router.post("/events/create", async (req, res) => {
   try {
     await pool.execute('INSERT INTO `events` (`start`, `end`, `until`, `occurrenceId`, `title`, `description`, `category`, `priority`, `allDay`, `done`, `interval`, `every`, `Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`', [req.body.start, req.body.end, req.body.until, req.body.occurrenceId, req.body.title, req.body.description, req.body.category, req.body.priority, req.body.allDay, req.body.done, req.body.interval, req.body.every, req.body.Sun, req.body.Mon, req.body.Tue, req.body.Wed, req.body.Thu, req.body.Fri, req.body.Sat],
     function (error, results, fields) {
@@ -124,7 +124,7 @@ router.post("/api/events/create", async (req, res) => {
   }
 });
 
-router.post("/api/events/update", async (req, res) => {
+router.post("/events/update", async (req, res) => {
   try {
     await pool.execute( 'UPDATE `events` SET start=req.body.start, end=req.body.end, until=req.body.until, occurrenceId=req.body.occurrenceId, title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority, allDay=req.body.allDay, done=req.body.done, interval=req.body.interval, every=req.body.every, Sun=req.body.Sun, Mon=req.body.Mon, Tue=req.body.Tue, Wed=req.body.Wed, Thu=req.body.Thu, Fri=req.body.Fri, Sat=req.body.Sat WHERE events.id = req.body.id', 
     function (error, results, fields) {
@@ -137,7 +137,7 @@ router.post("/api/events/update", async (req, res) => {
     return error;
   }
 });
-router.post("/api/events/delete", async (req, res) => {
+router.post("/events/delete", async (req, res) => {
   try {
     await pool.execute('DELETE from `events` WHERE events.id = req.body.id',
     function (error, results, fields) {
@@ -151,7 +151,7 @@ router.post("/api/events/delete", async (req, res) => {
   }
 });
 
-router.post("/api/events/occurrenceDelete", async (req, res) => {
+router.post("/events/occurrenceDelete", async (req, res) => {
   try {
     let occurrenceId = req.body.id;
     await pool.query(`DELETE from events WHERE events.occurrenceId = $1 RETURNING occurrenceId`, [occurrenceId],
@@ -169,7 +169,7 @@ router.post("/api/events/occurrenceDelete", async (req, res) => {
   }
 });
 
-router.get("/api/events/recurring", async (req, res) => {
+router.get("/events/recurring", async (req, res) => {
   try {
     let occurrenceId = req.body.occurrenceId;
     const response = await pool.execute('SELECT * FROM `events` WHERE events.occurrenceId = req.body.occurrenceId',
