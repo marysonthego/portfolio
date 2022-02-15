@@ -38,12 +38,13 @@ router.use(express.static(path.join(__dirname, '/public')));
 
 router.get("/todos/all", async (req, res) => {
   try {
-    await pool.execute('SELECT * FROM `todos`',
-    function(err, results, fields) {
-      console.log(`results: `, results);
-      console.log(`fields: `, fields);
-      console.log(`err:`, err);
-      return res.status(200).send(results, fields);
+    let sql = 'SELECT * FROM todos';
+    
+    await pool.execute(sql, (error, results) => {
+      if(error) {
+        return(error);
+      }
+      return res.status(200).json(results);
     })
   } catch (err) {
     return err;
@@ -52,15 +53,21 @@ router.get("/todos/all", async (req, res) => {
 
 router.post("/todos/create", async (req, res) => {
   try {
-    await pool.execute('INSERT INTO `todos` (`title`, `description`, `createdDate`, `category`, `priority`',
-     [req.body.title, req.body.description, req.body.createdDate, req.body.category, req.body.priority],
-    function (error, results, fields) {
-      if (error) throw error;
-      else {
-        return res.status(200).send(results, fields);
+    const {
+      title,
+      description, 
+      createdDate,
+      category,
+      priority
+    } = req.body;
+    let sql = 'INSERT INTO todos (title, description, createdDate, category, priority) VALUES (?,?,?,?,?)';
+
+    await pool.execute(sql, [title, description, createdDate, category, priority], (error, results) => {
+      if(error) {
+        throw(error);
       }
-    });
-    return res.status;
+      return res.status(200).json(results);
+    })
   } catch (error) {
     return error;
   }
@@ -68,12 +75,17 @@ router.post("/todos/create", async (req, res) => {
 
 router.post("/todos/update", async (req, res) => {
   try {
-    await pool.execute( 'UPDATE `todos` SET title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority WHERE todos.id = req.body.id',
-    function (error, results, fields) {
+    const {
+      title,
+      description,
+      category,
+      priority,
+      id
+    } = req.body;
+    let sql = 'UPDATE todos SET title=?, description=?, category=?, priority=? WHERE id=?';
+    await pool.execute(sql, [title, description, category, priority, id], (error, results) => {
       if (error) throw error;
-      else {
-        return res.status(200).send(results, fields);
-      }
+      return res.status(200).json(results);
     });
   } catch (error) {
     return error;
@@ -82,27 +94,24 @@ router.post("/todos/update", async (req, res) => {
 
 router.post("/todos/delete", async (req, res) => {
   try {
-    await pool.execute('DELETE from `todos` WHERE todos.id = req.body.id',
-    function (error, results, fields) {
+    const {id} = req.body.id;
+    let sql = 'DELETE from todos WHERE id = ?';
+    await pool.execute(sql, [id], (error, results) => {
       if (error) throw error;
-      else {
-        return res.status(200).send(results, fields);
-      }
+      return res.status(200).json(results);
     });
   } catch (error) {
     return error;
   }
 });
 
-
 router.get("/events/all", async (req, res) => {
   try {
-    const response = await pool.execute('SELECT * FROM `events`',
-    function(err, results, fields) {
-      console.log(`results: `, results);
-      console.log(`fields: `, fields);
-      console.log(`err:`, err);
-      return res.status(200).send(results, fields);
+    let sql = 'SELECT * FROM events';
+    
+    await pool.execute(sql, (error, results) => {
+      if(error) throw error;
+      return res.status(200).json(results);
     })
   } catch (err) {
     return err;
@@ -111,14 +120,26 @@ router.get("/events/all", async (req, res) => {
 
 router.post("/events/create", async (req, res) => {
   try {
-    await pool.execute('INSERT INTO `events` (`start`, `end`, `until`, `occurrenceId`, `title`, `description`, `category`, `priority`, `allDay`, `done`, `interval`, `every`, `Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`', [req.body.start, req.body.end, req.body.until, req.body.occurrenceId, req.body.title, req.body.description, req.body.category, req.body.priority, req.body.allDay, req.body.done, req.body.interval, req.body.every, req.body.Sun, req.body.Mon, req.body.Tue, req.body.Wed, req.body.Thu, req.body.Fri, req.body.Sat],
-    function (error, results, fields) {
+    const {
+      start,
+      end,
+      until,
+      occurrenceId,
+      title,
+      description,
+      category,
+      priority,
+      allDay,
+      done,
+      interval,
+      every,
+      Sun, Mon, Tue, Wed, Thu, Fri, Sat
+    } = req.body;
+    let sql = 'INSERT INTO events (start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+    await pool.execute(sql, [start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat], (error, results) => {
       if (error) throw error;
-      else {
-        return res.status(200).send(results, fields);
-      }
+      return res.status(200).json(results);
     });
-    return res.status;
   } catch (error) {
     return error;
   }
@@ -126,25 +147,41 @@ router.post("/events/create", async (req, res) => {
 
 router.post("/events/update", async (req, res) => {
   try {
-    await pool.execute( 'UPDATE `events` SET start=req.body.start, end=req.body.end, until=req.body.until, occurrenceId=req.body.occurrenceId, title=req.body.title, description=req.body.description, category=req.body.category, priority=req.body.priority, allDay=req.body.allDay, done=req.body.done, interval=req.body.interval, every=req.body.every, Sun=req.body.Sun, Mon=req.body.Mon, Tue=req.body.Tue, Wed=req.body.Wed, Thu=req.body.Thu, Fri=req.body.Fri, Sat=req.body.Sat WHERE events.id = req.body.id', 
-    function (error, results, fields) {
+    const {
+      id,
+      start,
+      end,
+      until,
+      occurrenceId,
+      title,
+      description,
+      category,
+      priority,
+      allDay,
+      done,
+      interval,
+      every,
+      Sun, Mon, Tue, Wed, Thu, Fri, Sat
+    } = req.body;
+
+    let sql = 'UPDATE events SET start=?, end=?, until=?, occurrenceId=?, title=?, description=?, category=?, priority=?, allDay=?, done=?, interval=?, every=?, Sun=?, Mon=?, Tue=?, Wed=?, Thu=?, Fri=?, Sat=? WHERE id = ?';
+
+    await pool.execute(sql, [start, end, until, occurrenceId, title, description, category, priority, allDay, done, interval, every, Sun, Mon, Tue, Wed, Thu, Fri, Sat, id], (error, results) => {
       if (error) throw error;
-      else {
-        return res.status(200).send(results, fields);
-      }
+      return res.status(200).json(results);
     });
   } catch (error) {
     return error;
   }
 });
+
 router.post("/events/delete", async (req, res) => {
   try {
-    await pool.execute('DELETE from `events` WHERE events.id = req.body.id',
-    function (error, results, fields) {
+    const {id} = req.body.id;
+    let sql = 'DELETE from events WHERE id = ?';
+    await pool.execute(sql, [id], (error, results) => {
       if (error) throw error;
-      else {
-        return res.status(200).send(results, fields);
-      }
+      return res.status(200).json(results);
     });
   } catch (error) {
     return error;
@@ -154,15 +191,11 @@ router.post("/events/delete", async (req, res) => {
 router.post("/events/occurrenceDelete", async (req, res) => {
   try {
     let occurrenceId = req.body.id;
-    await pool.query(`DELETE from events WHERE events.occurrenceId = $1 RETURNING occurrenceId`, [occurrenceId],
-    (err, results) => {
-      if (err) {
-        let msg = err.message;
-        return res.status(409).send({msg});
-      } else {
-        let msg = results;
-        return res.status(200).send({msg});
-      } 
+    let sql =  'DELETE from events WHERE occurrenceId = ?';
+
+    await pool.query(sql,[occurrenceId], (error, results) => {
+      if (error) throw error;
+      return res.status(200).json(results);
     });
   } catch (error) {
     return error;
@@ -171,13 +204,12 @@ router.post("/events/occurrenceDelete", async (req, res) => {
 
 router.get("/events/recurring", async (req, res) => {
   try {
-    let occurrenceId = req.body.occurrenceId;
-    const response = await pool.execute('SELECT * FROM `events` WHERE events.occurrenceId = req.body.occurrenceId',
-    function(err, results, fields) {
-      console.log(`results: `, results);
-      console.log(`fields: `, fields);
-      console.log(`err:`, err);
-      return res.status(200).send(results, fields);
+    let {occurrenceId} = req.body.occurrenceId;
+    let sql = 'SELECT * FROM events WHERE occurrenceId = ?';
+
+    await pool.execute(sql, [occurrenceId], (error, results) => {
+      if(error) throw error;
+      return res.status(200).json(results);
     })
   } catch (err) {
     return err;
@@ -190,8 +222,6 @@ server.get('/*', (req, res) => {
 });
 
 server.listen(PORT, () => {
-  //console.error(`CORS enabled Server with whitelist is running on port ${PORT}\n`);
-  console.error(`CORS disabled. Running MySQL on port ${PORT}
-  \n`);
+  //console.error(CORS enabled Server with whitelist is running on port ${PORT}\n);
+  console.error(`CORS disabled. Running MySQL on port ${PORT}\n`);
 });
-
