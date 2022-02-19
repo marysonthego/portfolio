@@ -5,9 +5,9 @@ const server = express();
 const { pool } = require("./dbConfig.mysql");
 const session = require("express-session");
 const MemoryStore = require('memorystore')(session);
-const passport = require("passport");
+//const passport = require("passport");
 
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4000;
 
 server.set("view engine", "ejs");
 
@@ -26,13 +26,14 @@ server.use(
   })
 );
 
-server.use(passport.initialize());
-server.use(passport.session());
-require(`./passportConfig`)(passport);
+// server.use(passport.initialize());
+// server.use(passport.session());
+// require(`./passportConfig`)(passport);
 
 var router = express.Router({mergeParams: true});
 
 server.use(router);
+console.log(`process.env.NODE_ENV =`,process.env.NODE_ENV);
 
 if(process.env.NODE_ENV === 'dev') {
   router.use(express.static(path.join(__dirname, '/client/build')));
@@ -40,14 +41,16 @@ if(process.env.NODE_ENV === 'dev') {
   router.use(express.static(path.join(__dirname, '/public')));
 }
 
-router.get("/api/todos/all", async (req, res) => {
+router.get("/todos/all", async (req, res) => {
+  console.log(`in /todos/all `);
   try {
-    let sql = 'SELECT * FROM todos';
+    let sql = 'SELECT id, title, description, createdDate, category, priority FROM todos';
     
-    await pool.execute(sql, (error, results) => {
+    pool.execute(sql, (error, results) => {
       if(error) throw error;
+      console.log(`results: `, results);
       if(results.length > 0){
-        return res.status(200).send(results);
+        return res.status(200).json(results);
       }
       return res.status(404).send('No records found');
     })
@@ -229,6 +232,5 @@ server.get('/*', (req, res) => {
 });
 
 server.listen(PORT, () => {
-  //console.error(CORS enabled Server with whitelist is running on port ${PORT}\n);
-  console.error(`CORS disabled. Running MySQL on port ${PORT}\n`);
+  console.error(`CORS disabled. Running MySQL on port ${PORT} process.env.NODE_ENV = ${process.env.NODE_ENV}\n`);
 });
