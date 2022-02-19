@@ -9,16 +9,6 @@ const mysql = require('mysql2');
 //   database: `${process.env.MYdatabase}`
 // });
 
-const pool = mysql.createPool({
-  host: `${process.env.MYhost}`,
-  user: `${process.env.MYuser}`,
-  password: `${process.env.MYpassword}`,
-  database: `${process.env.MYdatabase}`,
-  waitForConnections: true,
-  connectionLimit: 5,
-  queueLimit: 0
-});
-
 // pool.connect (function (error) {
 //   if(error) throw error;
 //   console.log("CONNECTED");
@@ -28,9 +18,19 @@ const pool = mysql.createPool({
 //   console.log(`process.env.MYdatabase: `, process.env.MYdatabase);
 // });
 
+const pool = mysql.createPool({
+  host: `${process.env.MYhost}`,
+  user: `${process.env.MYuser}`,
+  password: `${process.env.MYpassword}`,
+  database: `${process.env.MYdatabase}`,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+});
+
+
 pool.getConnection(function(err, connection) {
   if(err) throw err;
-  console.log(`POOL CONNECTION: `,connection);
   console.log(`process.env.MYhost: `, process.env.MYhost);
   console.log(`process.env.MYuser: `, process.env.MYuser);
   console.log(`process.env.MYdatabase: `, process.env.MYdatabase);

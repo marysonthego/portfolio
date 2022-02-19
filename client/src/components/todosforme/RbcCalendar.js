@@ -73,13 +73,11 @@ export const RbC = ({
         defaultView="month"
         onSelectSlot={handleSelectSlot}
         onSelectEvent={(e) => handleSelectEvent(e)}
-        style={{height: "90vh"}}
         components = {{
           event: EventComponent
         }}
         eventPropGetter = {
           (event) => {
-            //let backgroundColor = '#' + event.hexColor;
             let backgroundColor;
             if (event.category === "Work") {
                 backgroundColor = '#ff8b00'  

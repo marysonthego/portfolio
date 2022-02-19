@@ -5,8 +5,6 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "components/css/themes";
 import { GlobalStyles } from "components/css/globalStyles";
 import App from "./App";
-import store from "components/redux/store";
-import { Provider } from "react-redux";
 import { Navigation } from "components/top/Navigation";
 import { ScrollToTop } from "components/top/ScrollToTop";
 import { TodosForMe } from "components/todosforme/TodosForMe";
@@ -32,7 +30,6 @@ import "./index.css";
 ReactDOM.render(
   <ThemeProvider theme={lightTheme}>
     <CookiesProvider>
-      <Provider store={store}>
         <MetronicLayoutProvider>
           <MetronicSubheaderProvider>
             <MaterialThemeProvider>
@@ -66,7 +63,6 @@ ReactDOM.render(
             </MaterialThemeProvider>
           </MetronicSubheaderProvider>
         </MetronicLayoutProvider>
-      </Provider>
     </CookiesProvider>
   </ThemeProvider>,
 document.getElementById("root"));

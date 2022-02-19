@@ -6,6 +6,7 @@ node_modules
 .pnp.js
 /package-lock.json
 /client/package-lock.json
+/client/node_modules
 backupzips
 
 

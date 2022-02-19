@@ -34,20 +34,25 @@ var router = express.Router({mergeParams: true});
 
 server.use(router);
 
-router.use(express.static(path.join(__dirname, '/public')));
+if(process.env.NODE_ENV === 'dev') {
+  router.use(express.static(path.join(__dirname, '/client/build')));
+} else {
+  router.use(express.static(path.join(__dirname, '/public')));
+}
 
-router.get("/todos/all", async (req, res) => {
+router.get("/api/todos/all", async (req, res) => {
   try {
     let sql = 'SELECT * FROM todos';
     
     await pool.execute(sql, (error, results) => {
-      if(error) {
-        return(error);
+      if(error) throw error;
+      if(results.length > 0){
+        return res.status(200).send(results);
       }
-      return res.status(200).json(results);
+      return res.status(404).send('No records found');
     })
-  } catch (err) {
-    return err;
+  } catch (error) {
+    return error;
     }
 });
 
@@ -63,9 +68,7 @@ router.post("/todos/create", async (req, res) => {
     let sql = 'INSERT INTO todos (title, description, createdDate, category, priority) VALUES (?,?,?,?,?)';
 
     await pool.execute(sql, [title, description, createdDate, category, priority], (error, results) => {
-      if(error) {
-        throw(error);
-      }
+      if(error) throw(error);
       return res.status(200).json(results);
     })
   } catch (error) {
@@ -217,8 +220,12 @@ router.get("/events/recurring", async (req, res) => {
 });
 
 server.get('/*', (req, res) => {
-  //res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  res.sendFile(path.join(__dirname, '/public', 'index.html'));
+  if(process.env.NODE_ENV === 'dev') {
+    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+  } else {
+    res.sendFile(path.join(__dirname, '/public', 'index.html'));
+  }
+  
 });
 
 server.listen(PORT, () => {
