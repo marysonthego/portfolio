@@ -39,7 +39,7 @@ export default function App() {
         <Row>
           <Col md={{ span: 7, offset: 3 }}>
             <p className="p1">
-              and I love full-stack development!
+              and I do full-stack development
             </p>
           </Col>
         </Row>

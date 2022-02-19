@@ -36,23 +36,60 @@ if(process.env.NODE_ENV === 'dev') {
   router.use(express.static(path.join(__dirname, '/public')));
 }
 
-router.get("/api/todos/all", (req, res) => {
-  console.log(`in /todos/all `);
-  try {
-    let sql = 'SELECT * FROM todos';
+const beforeAfterInjection = function(req, res, next) {
+  res.response = function (obj) {
+      req.res = obj;
+  }
+  next();
+}
+
+const beforeMiddleware = function(req, res, next) {
+console.log('Before middleware triggered');
+next();
+}
+
+const responseHandler = function(req, res, next) {
+  console.log('Response Action implementation triggered with response instead of send');
+  res.status(200).response({"response":"fine"});
+}
+
+const handler = function(req, res, next) {
+  console.log('Response Action implementation is not passed to express. Rather handler is triggered');
+  responseHandler(req, res, next);
+  next();
+};
+
+const afterMiddleware = function(req, res, next) {
+  console.log('After middleware triggered');
+  next();
+}
+
+const finalResponseHandler = function(req, res, next) {
+  console.log('Final immutable response handler triggered');
+  res.send(req.res);
+};
+
+//app.get('/implement', beforeAfterInjection, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
+
+router.get("/api/todos/all", beforeAfterInjection, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
+
+// router.get("/api/todos/all", (req, res) => {
+//   console.log(`in /todos/all `);
+//   try {
+//     let sql = 'SELECT * FROM todos';
     
-    pool.execute(sql, (error, results) => {
-      if(error) throw error;
-      console.log(`results: `, results);
-      if(results.length > 0){
-        res.status(200).send(results);
-      }
-      res.status(404).send('No records found');
-    })
-  } catch (error) {
-    return error;
-    }
-});
+//     pool.execute(sql, (error, results) => {
+//       if(error) throw error;
+//       console.log(`results: `, results);
+//       if(results.length > 0){
+//         res.status(200).send(results);
+//       }
+//       res.status(404).send('No records found');
+//     })
+//   } catch (error) {
+//     return error;
+//     }
+// });
 
 router.post("/api/todos/create", async (req, res) => {
   try {
