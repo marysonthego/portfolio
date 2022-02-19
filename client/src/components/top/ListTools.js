@@ -21,7 +21,7 @@ export function AnimateListTools() {
             <p className="p2a">These are some of my favorite tools</p>
           </Col>
         </Row>
-        <Row className="row-cols-sm-3 row-cols-md-9">
+        <Row className="row-cols-sm-3 row-cols-md-9 logo-row">
           <Col className="logo-col">
             <Image
               fluid={false}
@@ -92,7 +92,7 @@ export function AnimateListTools() {
             />
           </Col>
         </Row>
-        <Row className="row-cols-sm-3 row-cols-md-9">
+        <Row className="row-cols-sm-3 row-cols-md-9 logo-row">
           <Col className="logo-col">
             <Image
               fluid={false}
@@ -163,7 +163,7 @@ export function AnimateListTools() {
             />
           </Col>
         </Row>
-        <Row className="row-cols-sm-3 row-cols-md-9">
+        <Row className="row-cols-sm-3 row-cols-md-9 logo-row">
           <Col className="logo-col">
             <Image
               fluid={false}
