@@ -36,7 +36,8 @@ if(process.env.NODE_ENV === 'dev') {
   router.use(express.static(path.join(__dirname, '/public')));
 }
 
-const beforeAfterInjection = function(req, res, next) {
+const putResponseInRequest = function(req, res, next) {
+  console.log('beforeMiddleware');
   res.response = function (obj) {
       req.res = obj;
   }
@@ -44,34 +45,34 @@ const beforeAfterInjection = function(req, res, next) {
 }
 
 const beforeMiddleware = function(req, res, next) {
-console.log('Before middleware triggered');
+console.log('beforeMiddleware');
 next();
 }
 
 const responseHandler = function(req, res, next) {
-  console.log('Response Action implementation triggered with response instead of send');
+  console.log('responseHandler');
   res.status(200).response({"response":"fine"});
 }
 
 const handler = function(req, res, next) {
-  console.log('Response Action implementation is not passed to express. Rather handler is triggered');
+  console.log('handler');
   responseHandler(req, res, next);
   next();
 };
 
 const afterMiddleware = function(req, res, next) {
-  console.log('After middleware triggered');
+  console.log('afterMiddleware');
   next();
 }
 
 const finalResponseHandler = function(req, res, next) {
-  console.log('Final immutable response handler triggered');
+  console.log('finalResponseHandler');
   res.send(req.res);
 };
 
-//app.get('/implement', beforeAfterInjection, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
+//app.get('/implement', putResponseInRequest, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
 
-router.get("/api/todos/all", beforeAfterInjection, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
+router.get("/api/todos/all", putResponseInRequest, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
 
 // router.get("/api/todos/all", (req, res) => {
 //   console.log(`in /todos/all `);

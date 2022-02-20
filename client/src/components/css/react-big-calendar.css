@@ -20,13 +20,13 @@ button.rbc-input::-moz-focus-inner {
 .rbc-calendar {
   box-sizing: border-box;
   margin-top: 10px;
-  height: 80%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-content: stretch; 
   border:#d3cbcb;
   border-radius: 4px;
-  background: #5a5a5e}
+  background: #0c2c66}
 
 .rbc-calendar *,
 .rbc-calendar *:before,
@@ -267,7 +267,6 @@ button.rbc-input::-moz-focus-inner {
   flex-direction: column;
   flex: 1 0 0;
   flex-basis: 0px;
-  overflow: hidden;
   height: 100%; }
   .rbc-month-row + .rbc-month-row {
     border-top: 0px solid #DDD; }

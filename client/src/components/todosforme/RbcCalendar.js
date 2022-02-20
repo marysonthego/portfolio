@@ -3,8 +3,6 @@ import {Calendar, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import {EventComponent} from 'components/todosforme/EventComponent';
 import Container from 'react-bootstrap/Container';
-import 'components/css/react-big-calendar.css';
-import 'components/css/formstyles.css';
 
 const localizer = momentLocalizer(moment);
 
@@ -59,7 +57,7 @@ export const RbC = ({
   }
   
   return (
-    <Container fluid>
+    <Container fluid className="rbc-calendar">
       <Calendar
         selectable
         selectedEvent={eventCurrent}

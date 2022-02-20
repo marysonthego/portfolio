@@ -1,46 +1,8 @@
-// 3rd-party Plugins
-//@import "~highlight.js/styles/googlecode.css";
 @import "~perfect-scrollbar/css/perfect-scrollbar.css";
-
-// Theme Styles
-@import "./components/css/style.react.scss";
-
-// Default Layout themes
-@import "./components/css/themes/layout/header/base/light.scss";
-@import "./components/css/themes/layout/header/menu/light.scss";
-@import "./components/css/themes/layout/brand/dark.scss";
-@import "./components/css/themes/layout/aside/dark.scss";
-
-// Header themes
-// Light
-//@import "./_metronic/_assets/sass/themes/layout/header/base/light.scss";
-// Dark
-// @import "./_metronic/_assets/sass/themes/layout/header/base/dark.scss";
-  
-// Header Menu themes
-// Light
-//@import "./_metronic/_assets/sass/themes/layout/header/menu/light.scss";
-// Dark
-// @import "./_metronic/_assets/sass/themes/layout/header/menu/dark.scss";
-
-// Brand themes
-.brand-dark {
- @import "./components/css/themes/layout/brand/dark.scss";
-}
-// Light
-.brand-light {
-  @import "./components/css/themes/layout/brand/light.scss";
-}
-
-// Aside themes
-// Dark
-//@import "./_metronic/_assets/sass/themes/layout/aside/dark.scss";
-// Light
-// @import "./_metronic/_assets/sass/themes/layout/aside/light.scss";
-
-// .example-highlight {
-//   padding: 0rem 1.5rem 1.75rem !important;
-// }
+@import 'react-big-calendar/lib/sass/styles';
+@import './components/sass/variables.scss';
+@import './components/css/_variables.demo.scss';
+@import './App.scss';
 
 .example-highlight > pre {
   background: none transparent !important;
@@ -107,4 +69,82 @@
 
 .display-block {
   display: block;
+}
+
+
+* {
+  font-family: "Nunito", sans-serif ;
+  color: #202020;
+  font-weight: 800;
+  }
+
+body {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Nunito", sans-serif ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    monospace;
+}
+
+.ScrollToTop {
+  position: fixed; 
+  bottom: 40px;
+  align-items: center;
+  justify-content: right;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.7;
+  height: 48px;
+  width: 48px;
+  border-width: 5px;
+  margin: 20px;
+}
+
+.ScrollToTop:hover{
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ScrollToTop {
+    animation-name: ScrollToTop-spin;
+    animation-iteration-count: 1;
+    animation-duration: 2s, 4s;
+    animation-timing-function: ease;
+    transition: transform 1s;
+  }
+}
+
+@keyframes ScrollToTop-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ScrollToTop-slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes ScrollToTop-fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }

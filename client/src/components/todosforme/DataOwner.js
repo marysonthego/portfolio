@@ -30,12 +30,6 @@ export const DataOwner = () => {
     },
   ]);
 
-  // const [lat, setLat] = useState([]);
-
-  // const [long, setLong] = useState([]);
-
-  // const [, setWeatherData] = useState([]);
-
   const eventCurrentSelect = (evt) => {
     setEventCurrent((prev) => ({
       ...prev,
@@ -109,7 +103,7 @@ export const DataOwner = () => {
       })
       .then((res) => {
         console.log(`eventCreate res.data: `, res.data);
-        evt.id = res.data[0];
+        evt.id = res.data.insertId;
       })
     } catch(error) { console.error(`eventCreate error ${error}`)};
     if (evt.interval > 0 && evt.occurrenceId === 0) {
@@ -160,44 +154,6 @@ export const DataOwner = () => {
         occurrenceId = evt.occurrenceId;
       }
       eventOccurrencesFetch(evt);
-      //eventOccurrencesUpdate(evt);
-    //   for (let i = 0; i < events.length; i++) {
-    //     if (events[i].occurrenceId === occurrenceId) {
-    //       await axios
-    //         .put("http://localhost:4001/events/update", {
-    //           id: events[i].id,
-    //           start: events[i].start,
-    //           end: events[i].end,
-    //           until: events[i].until,
-    //           occurrenceId: events[i].occurrenceId,
-    //           title: evt.title,
-    //           description: evt.description,
-    //           category: evt.category,
-    //           priority: evt.priority,
-    //           allDay: evt.allDay,
-    //           done: evt.done,
-    //           interval: evt.interval,
-    //           every: evt.every,
-    //           Sun: evt.Sun,
-    //           Mon: evt.Mon,
-    //           Tue: evt.Tue,
-    //           Wed: evt.Wed,
-    //           Thu: evt.Thu,
-    //           Fri: evt.Fri,
-    //           Sat: evt.Sat,
-    //         })
-    //         .then((res) => {
-    //           setEventCurrent((prev) => ({
-    //             ...prev,
-    //             ...res.data.changes,
-    //           }));
-    //           //eventsFetchAll();
-    //         })
-    //         .catch((error) => console.error(`eventUpdate error ${error}`));
-
-    //       //eventOccurrencesUpdate(evt);
-    //     }
-    //   }
     }
     eventsFetchAll();
   };
@@ -354,36 +310,20 @@ export const DataOwner = () => {
   };
 
   const todosFetchAll = async () => {
-    // fetch(`/api/todos/all`, {
-    //   method: "GET",
-    //   headers: {"Content-Type": "application/json",
-    //   Accept: ["application/json", "text/plain", "*/*"]
-    // },
-    // })
-    // .then(async response => {
-    //   const data = await response.json();
-    //   if (!response.ok) {
-    //     const error = (data && data.message) || response.status;
-    //     console.log(response.status, data);
-    //     return Promise.reject(error);
-    //   }
-    //   setTodos(data.rows);
-    // })
-    //   .catch(error => {
-    //     console.log(error.name, error.message);
-    //   })
-    
     setTodos([]);
     await axios
       .get(`/api/todos/all`)
       .then((res) => {
-        console.log(`res.data: `, res.data);
-        console.log(`res.status: `, res.status);
-        console.log(`res.statusText: `, res.statusText);
-        console.log(`res.headers: `, res.headers);
-        console.log(`res.config: `, res.config);
         if(res.length > 0) {
-        setTodos(...res.data);
+          let result = res.data.map((obj) => ({
+            id: obj.id,
+            title: obj.title,
+            description: obj.description,
+            createdDate: obj.createdDate,
+            category: obj.category,
+            priority: obj.priority,
+          }));
+        setTodos(result);
         }
       })
       .catch((error) => console.error(`todosFetchAll error ${error}`));
@@ -394,11 +334,11 @@ export const DataOwner = () => {
       .post(`/api/todos/create`, {
         title: todo.title,
         description: todo.description,
-        createdDate: todo.createdDate,
         category: todo.category,
         priority: todo.priority,
       })
       .then((res) => {
+        todo.id = res.data.insertId;
         todosFetchAll();
       })
       .catch((error) =>
@@ -437,37 +377,6 @@ export const DataOwner = () => {
     todosFetchAll();
     eventsFetchAll();
   }, []);
-
-  // useEffect(() => {
-  //   const weatherFetch = async () => { 
-  //      navigator.geolocation.getCurrentPosition(function(position) {
-  //     setLat(position.coords.latitude);
-  //     setLong(position.coords.longitude);
-  //   });
-  //   // setLat(40.45454);
-  //   // setLong(-105.08668);
-  //   console.log(`lat`, lat);
-  //   console.log(`long`, long);
-  //   try {
-  //     await fetch(`${process.env.REACT_APP_API_URL}/onecall?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
-    
-  //     .then(function(response) { 
-  //       if (!response.ok) {
-  //         throw new Error("status " + response.status);
-  //       }
-  //       return  response.json();
-  //     })
-  //     .then(function (result) {
-  //       setWeatherData(result);
-  //       console.log(result);
-  //       console.log(`inHg =`, result.current.pressure * 0.0295301);
-  //     })
-  //   } catch(Error){
-  //       console.log(Error.name + ' : ' + Error.message);
-  //     }
-  //   };
-  //   weatherFetch();
-  // },[lat,long]);
 
   return (
     <Row>

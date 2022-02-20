@@ -36,7 +36,8 @@ if(process.env.NODE_ENV === 'dev') {
   router.use(express.static(path.join(__dirname, '/public')));
 }
 
-const beforeAfterInjection = function(req, res, next) {
+const putResponseInRequest = function(req, res, next) {
+  console.log('putResponseInRequest');
   res.response = function (obj) {
       req.res = obj;
   }
@@ -44,52 +45,55 @@ const beforeAfterInjection = function(req, res, next) {
 }
 
 const beforeMiddleware = function(req, res, next) {
-console.log('Before middleware triggered');
+console.log('beforeMiddleware');
 next();
 }
 
 const responseHandler = function(req, res, next) {
-  console.log('Response Action implementation triggered with response instead of send');
-  res.status(200).response({"response":"fine"});
+  console.log('responseHandler');
+  console.log(`req.res `,req.res);
 }
 
 const handler = function(req, res, next) {
-  console.log('Response Action implementation is not passed to express. Rather handler is triggered');
-  responseHandler(req, res, next);
-  next();
+  console.log('handler');
+  let sql = 'SELECT * FROM todos';
+  pool.execute(sql, (error, results) => {
+    if(error) throw error;
+    res.response({results});
+    responseHandler(req, res, next);
+    next();
+  });
 };
 
 const afterMiddleware = function(req, res, next) {
-  console.log('After middleware triggered');
+  console.log('afterMiddleware');
   next();
 }
 
 const finalResponseHandler = function(req, res, next) {
-  console.log('Final immutable response handler triggered');
-  res.send(req.res);
+  console.log('finalResponseHandler');
+  console.log(`req.res: `, req.res);
+  res.status(200).send(req.res);
 };
 
-//app.get('/implement', beforeAfterInjection, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
+//router.get("/api/todos/all", putResponseInRequest, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
 
-router.get("/api/todos/all", beforeAfterInjection, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
-
-// router.get("/api/todos/all", (req, res) => {
-//   console.log(`in /todos/all `);
-//   try {
-//     let sql = 'SELECT * FROM todos';
+router.get("/api/todos/all", (req, res) => {
+  try {
+    let sql = 'SELECT * FROM todos';
     
-//     pool.execute(sql, (error, results) => {
-//       if(error) throw error;
-//       console.log(`results: `, results);
-//       if(results.length > 0){
-//         res.status(200).send(results);
-//       }
-//       res.status(404).send('No records found');
-//     })
-//   } catch (error) {
-//     return error;
-//     }
-// });
+    pool.execute(sql, (error, results) => {
+      if(error) throw error;
+      if(results.length > 0){
+        res.status(200).send(results);
+      } else {
+        res.status(404).send('No records found');
+      }
+    })
+  } catch (error) {
+    return error;
+     }
+ });
 
 router.post("/api/todos/create", async (req, res) => {
   try {
@@ -97,13 +101,12 @@ router.post("/api/todos/create", async (req, res) => {
     const {
       title,
       description, 
-      createdDate,
       category,
       priority
     } = req.body;
-    let sql = 'INSERT INTO todos (title, description, createdDate, category, priority) VALUES (?,?,?,?,?)';
+    let sql = 'INSERT INTO todos (title, description, category, priority) VALUES (?,?,?,?)';
 
-    pool.execute(sql, [title, description, createdDate, category, priority], (error, results) => {
+    pool.execute(sql, [title, description, category, priority], (error, results) => {
       if(error) throw(error);
       res.status(200).json(results);
     })
