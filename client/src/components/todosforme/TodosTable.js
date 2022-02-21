@@ -8,8 +8,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
-import "components/css/tablestyles.css";
-import "components/css/formstyles.css";
 
 export const TodosTable = ({
   todos,
@@ -118,15 +116,15 @@ export const TodosTable = ({
   return (
     <Container fluid>
       <div>
-        <Row>
+        <Row className="todos-top-row">
           <Col align="center">
-            <button className="btn btn-add" onClick={toggleModal}>
+            <button className="btn btn-primary" onClick={toggleModal}>
               New Todo
             </button>
           </Col>
           <Col align="center">
             <button
-              className="btn btn-add"
+              className="btn btn-primary"
               onClick={(e) => handleAddToCalendar(selectedRow)}
               disabled={!select}
             >
@@ -135,7 +133,7 @@ export const TodosTable = ({
           </Col>
           <Col align="center">
             <button
-              className="btn btn-delete"
+              className="btn btn-primary"
               onClick={(e) => handleDelete(selectedRow.id)}
               disabled={!select}
             >

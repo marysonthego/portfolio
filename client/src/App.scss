@@ -6,7 +6,6 @@
 .pic {
   height: 96px;
   width: 96px;
-  border-width: 5px;
   margin: 10px;
 }
 
@@ -17,7 +16,6 @@
 .list-logo, .List-logo {
   height: 48px;
   width: 48px;
-  border-width: 5px;
   margin: 20px;
   border-color:#ffffff;
 }
@@ -74,12 +72,8 @@
   .list-logo, .List-logo {
     height: 96px;
     width: 96px;
-    border-width: 5px;
     margin: 10px;
   }
-  /* .background {
-    height: 95%;
-  } */
   .p1a {
     animation-duration: 5s;
     animation-name: slidein;

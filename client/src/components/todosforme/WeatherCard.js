@@ -1,8 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import moment from "moment";
-//import "bootstrap5/dist/css/bootstrap.min.css";
-import "components/styles/weatherstyles.css";
 
 const refresh = () => {
   window.location.reload();

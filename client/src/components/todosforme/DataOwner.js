@@ -4,9 +4,9 @@ import { TodosTable } from "components/todosforme/TodosTable";
 import { RbC } from "components/todosforme/RbcCalendar";
 import { RbCModal } from "components/todosforme/RbCModal";
 import { CalcDates } from "components/todosforme/CalcDates";
+import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "components/css/formstyles.css";
 
 export const DataOwner = () => {
 
@@ -379,17 +379,8 @@ export const DataOwner = () => {
   }, []);
 
   return (
+    <Container>
     <Row>
-      <Col>
-        <TodosTable
-          todos={todos}
-          todoDelete={todoDelete}
-          todoUpdate={todoUpdate}
-          todoMoveToCalendar={todoMoveToCalendar}
-          todoSubmit={todoSubmit}
-        />
-        
-      </Col>
       <Col>
         <RbC
           events={events}
@@ -407,6 +398,18 @@ export const DataOwner = () => {
           eventDelete={eventDelete}
         />
       ) : null}
+      </Row>
+      <Row>
+      <Col>
+        <TodosTable
+          todos={todos}
+          todoDelete={todoDelete}
+          todoUpdate={todoUpdate}
+          todoMoveToCalendar={todoMoveToCalendar}
+          todoSubmit={todoSubmit}
+        />
+      </Col>
     </Row>
+    </Container>
   );
 };

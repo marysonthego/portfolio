@@ -34,3 +34,11 @@
   background: #5a5a5e;
   border-color:#dcffec;
 }
+
+.todosTitle {
+  font-family: "Nunito", sans-serif ;
+  color: #202020;
+  font-weight: 800;
+  text-align: right;
+  margin-top: 5px;
+}

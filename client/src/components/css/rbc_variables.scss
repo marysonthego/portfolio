@@ -30,4 +30,43 @@ $current-time-color: #74ad31 !default;
 
 $rbc-css-prefix: rbc-i !default;
 
-$today-highlight-bg: #eaf6ff !default;
+$today-highlight-bg: cornsilk !default;
+
+.rbc-today {
+  background-color: cornsilk
+}
+
+.rbc-off-range-bg {
+  background: linear-gradient(45deg, gainsboro, transparent)
+}
+
+.rbc-label {
+  color: #000000;
+  font-size: 12px;
+}
+.rbc-calendar {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch; 
+  border:#d3cbcb;
+  border-radius: 4px;
+  background: #ffffff
+}
+
+.rbc-toolbar button {
+  font-size: 12px;
+  color: #000000;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  background: none;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: normal;
+  white-space: nowrap; 
+}

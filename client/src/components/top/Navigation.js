@@ -8,9 +8,6 @@ import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import "bootstrap/dist/css/bootstrap.min.css";
-// import "components/css/_offcanvas.scss";
-// import "components/css/_accordion.scss";
 
 export const Navigation = () => {
   const location = useLocation();

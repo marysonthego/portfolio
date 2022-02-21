@@ -1,7 +1,6 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "components/css/styles.css";
 import { DataOwner } from "components/todosforme/DataOwner";
 
 export function TodosForMe() {
@@ -9,12 +8,9 @@ export function TodosForMe() {
   return (
     <>
       <Row>
-        <Col>
+        <Col className="todosTitle">
           <span>
-            {" "}
-            <h3 className="h3">
               Todos For Me 
-            </h3>
           </span>
         </Col>
         

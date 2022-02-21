@@ -6,8 +6,6 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "components/css/formstyles.css";
-import "react-datepicker/dist/react-datepicker.css";
 
 const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -121,16 +119,16 @@ export const RbCModal = ({
   return (
     <Container fluid>
       <Modal show={show} >
-        <Modal.Header style={{color: "#e5e5e5"}}>add/change event</Modal.Header>
+        <Modal.Header>add/change event</Modal.Header>
         <Modal.Body>
-          <div className="todo-list-wrapper">
-            <div className="todo-list-form">
-              <div className="form-wrapper">
+          <div className="list-wrapper-modal">
+            <div className="list-form-modal">
                 <Form onSubmit={handleSubmit}>
                   <Row>
-                    <label className="form-label">Title</label>
+                    <label className="form-label-modal">Title</label>
                     <input
-                      className="form-input"
+                      className="form-input-modal"
+                      placeholder="event title"
                       type="text"
                       id="title"
                       name="title"
@@ -139,9 +137,9 @@ export const RbCModal = ({
                     />
                   </Row>
                   <Row>
-                    <label className="form-label">Description</label>
+                    <label className="form-label-modal">Description</label>
                     <textarea
-                      className="form-input"
+                      className="form-input-modal"
                       placeholder="Description"
                       id="description"
                       name="description"
@@ -151,32 +149,28 @@ export const RbCModal = ({
                   </Row>
                   <Row>
                     <Col>
-                      <label className="form-label">Category</label>
+                      <label className="form-label-modal">Category</label>
                       <select
-                        className="form-input"
+                        className="form-input-modal"
                         type="text"
                         id="category"
                         name="category"
                         defaultValue={modalEvent.category}
                         onClick={handleFormSelect}
-                        // defaultValue={modalEvent.category || "Home"}
-                        // onChange={handleFormSelect}
                       >
                         <option value="Home">Home</option>
                         <option value="Work"> Work</option>
                       </select>
                     </Col>
                     <Col>
-                      <label className="form-label">Priority</label>
+                      <label className="form-label-modal">Priority</label>
                       <select
-                        className="form-input"
+                        className="form-input-modal"
                         type="text"
                         id="priority"
                         name="priority"
                         defaultValue={modalEvent.priority}
                         onClick={handleFormSelect}
-                        // selected={modalEvent.priority || 1}
-                        // onChange={handleFormSelect}
                       >
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -186,9 +180,9 @@ export const RbCModal = ({
                     </Col>
                     <Col>
                       <fieldset>
-                        <label className="form-label">Repeating</label>
+                        <label className="form-label-modal">Repeating</label>
                         <select
-                          className="form-input"
+                          className="form-input-modal"
                           type="text"
                           id="every"
                           name="every"
@@ -204,9 +198,9 @@ export const RbCModal = ({
                     </Col>
                     <Col>
                       <fieldset>
-                        <label className="form-label">Every</label>
+                        <label className="form-label-modal">Every</label>
                         <select
-                          className="form-input form-select-sm"
+                          className="form-input-modal form-select-sm"
                           type="number"
                           id="interval"
                           disabled={modalEvent.every === "" || modalEvent.every === "none"}
@@ -231,9 +225,9 @@ export const RbCModal = ({
                   <Row>
                     <Col>
                       <fieldset>
-                        <label className="form-label">Start</label>
+                        <label className="form-label-modal">Start</label>
                         <DatePicker
-                          className="form-input"
+                          className="form-input-modal"
                           name='start'
                           id='start'
                           selected={modalEvent.start}
@@ -247,9 +241,9 @@ export const RbCModal = ({
                     </Col>
                     <Col>
                       <fieldset>
-                        <label className="form-label">End</label>
+                        <label className="form-label-modal">End</label>
                         <DatePicker
-                          className="form-input"
+                          className="form-input-modal"
                           name='end'
                           id='end'
                           selected={modalEvent.end}
@@ -263,7 +257,7 @@ export const RbCModal = ({
                     </Col>
 
                     <Col>
-                      <label className="form-label">All Day</label>
+                      <label className="form-label-modal">All Day</label>
                       <input
                         type="checkbox"
                         id="allDay"
@@ -277,7 +271,7 @@ export const RbCModal = ({
                     {daysOfWeek.map((day, i) => (
                       <Col key={`${day}`} className="mt-3">
                         <Form.Check
-                          className="form-label"
+                          className="form-label-modal"
                           type="checkbox"
                           id={`${day}`}
                           disabled={modalEvent.every === "" || modalEvent.every === "none"}
@@ -292,9 +286,9 @@ export const RbCModal = ({
                   <Row>
                   <Col>
                       <fieldset>
-                        <label className="form-label">Until</label>
+                        <label className="form-label-modal">Until</label>
                         <DatePicker
-                          className="form-input"
+                          className="form-input-modal"
                           name='until'
                           id='until'
                           readOnly={modalEvent.every === "" || modalEvent.every === "none"}
@@ -309,15 +303,14 @@ export const RbCModal = ({
                     </Col>
                     <Col>
                     <fieldset>
-                    <label className="form-label">eventId&nbsp;{modalEvent.id}</label>
-                    <label className="form-label">occurrenceId&nbsp;{modalEvent.occurrenceId}</label>  
+                    <label className="form-label-modal">eventId&nbsp;{modalEvent.id}</label>
+                    <label className="form-label-modal">occurrenceId&nbsp;{modalEvent.occurrenceId}</label>  
                     </fieldset>
                     </Col>
                   </Row>
                 </Form>
               </div>
             </div>
-          </div>
         </Modal.Body>
 
         <Modal.Footer>
@@ -327,7 +320,7 @@ export const RbCModal = ({
             </Button>
           </Col>
           <Col>
-            <label className="form-label">Done</label>
+            <label className="form-label-modal">Done</label>
             <input
               type="checkbox"
               id="done"

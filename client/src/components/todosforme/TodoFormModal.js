@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-import 'components/css/formstyles.css';
 
 export const TodoFormModal = ({
   show,
@@ -56,16 +55,15 @@ export const TodoFormModal = ({
 
   return (
     <Modal show={show}>
-      <Modal.Header style={{color: '#e5e5e5', background: '#5d5d5f'}}>new todo</Modal.Header>
+      <Modal.Header className="modal-header">new todo</Modal.Header>
       <Modal.Body>
-        <div className="todo-list-wrapper">
-          <div className="todo-list-form">
-            <div className="form-wrapper" onSubmit={handleSubmit}>
+          <div className="list-form-modal">
+            <div className="list-wrapper-modal" onSubmit={handleSubmit}>
               <div className="form-row">
-                <fieldset>
-                  <label className="form-label" htmlFor="title">Title:</label>
+                <fieldset >
+                  <label className="form-label-modal" htmlFor="title">Title:</label>
                   <input
-                    className="form-input"
+                    className="form-input-modal"
                     type="text"
                     id="title"
                     name="title"
@@ -73,10 +71,10 @@ export const TodoFormModal = ({
                     onChange={(e) => setTitle(e.currentTarget.value)} />
                 </fieldset>
 
-                <fieldset>
-                  <label className="form-label" htmlFor="description">Description:</label>
+                <fieldset className="fieldset-modal">
+                  <label className="form-label-modal" htmlFor="description">Description:</label>
                   <input
-                    className="form-input"
+                    className="form-input-modal"
                     type="text"
                     id="description"
                     name="description"
@@ -87,9 +85,9 @@ export const TodoFormModal = ({
 
               <div className="form-row">
                 <fieldset>
-                  <label className="form-label" htmlFor="category">Category:</label>
+                  <label className="form-label-modal" htmlFor="category">Category:</label>
                   <select
-                    className="form-input"
+                    className="form-input-modal"
                     type="text"
                     id="category"
                     name="category"
@@ -101,9 +99,9 @@ export const TodoFormModal = ({
                 </fieldset>
 
                 <fieldset>
-                  <label className="form-label" htmlFor="priority">Priority:</label>
+                  <label className="form-label-modal" htmlFor="priority">Priority:</label>
                   <select
-                    className="form-input"
+                    className="form-input-modal"
                     type="text"
                     id="priority"
                     name="priority"
@@ -118,16 +116,15 @@ export const TodoFormModal = ({
               </div>
             </div>
           </div>
-        </div>
       </Modal.Body>
 
       <Modal.Footer>
         <button onClick={handleSubmit}
-          className="btn btn-add">
+          className="btn btn-primary">
           Add
         </button>
         <button onClick={toggleModal}
-          className="btn btn-delete">
+          className="btn btn-primary">
           Cancel
         </button>
       </Modal.Footer>
