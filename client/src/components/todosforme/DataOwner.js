@@ -21,7 +21,6 @@ export const DataOwner = () => {
   const [todos, setTodos] = useState([
     {
       id: 0,
-      created_at: "",
       title: "",
       description: "",
       createdDate: "",
@@ -47,7 +46,7 @@ export const DataOwner = () => {
     await axios
       .get(`/api/events/all`)
       .then((res) => {
-        if(res.length > 0) {
+        if(res.data.length > 0) {
         let result = res.data.map((obj) => ({
           id: obj.id,
           start: new Date(obj.start),
@@ -310,11 +309,12 @@ export const DataOwner = () => {
   };
 
   const todosFetchAll = async () => {
-    setTodos([]);
+    let localTodos = [];
     await axios
       .get(`/api/todos/all`)
       .then((res) => {
-        if(res.length > 0) {
+        console.log(`todosFetchAll res.data: `, res.data);
+        if(res.data.length > 0) {
           let result = res.data.map((obj) => ({
             id: obj.id,
             title: obj.title,
@@ -323,10 +323,12 @@ export const DataOwner = () => {
             category: obj.category,
             priority: obj.priority,
           }));
-        setTodos(result);
+          localTodos = [...result];
+          console.log(`result:`, result);
         }
       })
       .catch((error) => console.error(`todosFetchAll error ${error}`));
+    setTodos(localTodos);
   };
 
   const todoCreate = async (todo) => {

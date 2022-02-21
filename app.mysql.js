@@ -80,12 +80,13 @@ const finalResponseHandler = function(req, res, next) {
 
 router.get("/api/todos/all", (req, res) => {
   try {
+    console.log(`in /api/todos/all`);
     let sql = 'SELECT * FROM todos';
     
     pool.execute(sql, (error, results) => {
       if(error) throw error;
       if(results.length > 0){
-        res.status(200).send(results);
+        res.status(200).json(results);
       } else {
         res.status(404).send('No records found');
       }
