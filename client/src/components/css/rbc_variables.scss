@@ -41,7 +41,7 @@ $today-highlight-bg: #c4820e;
 }
 
 .rbc-label {
-  color: #ffffff;
+  color: #003262;
   font-size: 12px;
   font-weight: 600;
 }
@@ -54,7 +54,7 @@ $today-highlight-bg: #c4820e;
   display: flex;
   flex-direction: column;
   align-content: stretch; 
-  color: #ffffff;
+  color: #c4820e;
   border-radius: 4px;
   background: #3b7ea1
 }
@@ -71,56 +71,61 @@ $today-highlight-bg: #c4820e;
   border-left: 0px;
 }
 
-.rbc-header {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
+a .rbc-header, .rbc-header {
+  color: #003262;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: right;
+  border-bottom: 2px;
+}
+
+a .rbc-header + .rbc-header, .rbc-header + .rbc-header {
+  border-left: 0px;
+  border-bottom: 2px;
+  color: #003262;
+  font-size: 24px;
+  font-weight: 600;
   text-align: right;
 }
 
-.rbc-header + .rbc-header {
-  border-left: 0px;
-}
-
-.rbc-toolbar-label {
-  color: #ffffff;
-  font-size: 16x;
+.rbc-header span {
+  color: #003262;
+  font-size: 18px;
   font-weight: 500;
+}
+.rbc-toolbar-label {
+  color: #003262;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .rbc-toolbar button {
   font-size: 12px;
-  font-weight: 600;
-  color: #ffffff;
+  font-weight: 800;
+  color: #003262;
   display: inline-block;
   margin: 0;
   text-align: center;
   vertical-align: middle;
   background: none;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 0px;
   border-radius: 4px;
   line-height: normal;
   white-space: nowrap; 
 }
 
 .rbc-toolbar button.rbc-active, .rbc-toolbar button:active, .rbc-toolbar button.rbc-active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button:active:hover, .rbc-toolbar button:focus, .rbc-toolbar button:hover{
-  font-size: 12px;
-  font-weight: 600;
-  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  color: #c4820e;
   background-color:#003262;
 }
 
-.rbc-header span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
 .rbc-date-cell {
-  font-size: 14px;
-  font-weight: 500;
-  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  color: #003262;
 }
 
 .rbc-off-range {
@@ -130,4 +135,8 @@ $today-highlight-bg: #c4820e;
 .rbc-event {
   font-size: 12px;
   color:#ffffff;
+}
+
+.rbc-time-content {
+  border-top: 0px;
 }
