@@ -12,7 +12,7 @@ export const TodoFormModal = ({
   const [category, setCategory] = useState("Home");
   const [priority, setPriority] = useState(3);
   const [dueDate, setDueDate] = useState('');
-  const [allDay, setAllDay] = useState(false);
+  const [allDay, setAllDay] = useState(0);
 
   let todo = {
     title: title,
@@ -50,7 +50,7 @@ export const TodoFormModal = ({
     setCategory('');
     setPriority(3);
     setDueDate('');
-    setAllDay(false);
+    setAllDay(0);
   }
 
   return (

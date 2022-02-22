@@ -19,7 +19,7 @@ export const RbCModal = ({
 }) => {
 
   const [modalEvent, setModalEvent] = useState(eventCurrent);
-  console.log(`eventCurrent: `, eventCurrent);
+  console.log(`RbCModal eventCurrent: `, eventCurrent);
     const handleStartDate = (date) => {
     let start = new Date(date);
     setModalEvent(prev => ({
@@ -262,7 +262,7 @@ export const RbCModal = ({
                         type="checkbox"
                         id="allDay"
                         name="allDay"
-                        defaultChecked={modalEvent.allDay}
+                        defaultChecked={!!modalEvent.allDay}
                         onChange={handleBlur}
                       ></input>
                     </Col>

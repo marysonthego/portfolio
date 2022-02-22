@@ -1,6 +1,6 @@
 @use "sass:math";
 
-$out-of-range-color: lighten(#333, 40%) !default;
+$out-of-range-color: lighten(#333, 40%);
 $out-of-range-bg-color: lighten(#333, 70%) !default;
 
 $calendar-border: #ddd !default;
@@ -30,35 +30,68 @@ $current-time-color: #74ad31 !default;
 
 $rbc-css-prefix: rbc-i !default;
 
-$today-highlight-bg: cornsilk !default;
+$today-highlight-bg: #c4820e;
 
 .rbc-today {
-  background-color: cornsilk
+  background-color: #c4820e
 }
 
 .rbc-off-range-bg {
-  background: linear-gradient(45deg, gainsboro, transparent)
+  background: linear-gradient(45deg, #003262, transparent)
 }
 
 .rbc-label {
-  color: #000000;
+  color: #ffffff;
   font-size: 12px;
+  font-weight: 600;
 }
+
 .rbc-calendar {
   box-sizing: border-box;
   margin-top: 10px;
+  padding-bottom: 5px;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-content: stretch; 
-  border:#d3cbcb;
+  color: #ffffff;
   border-radius: 4px;
-  background: #ffffff
+  background: #3b7ea1
+}
+
+.rbc-month-view {
+  border: 0px;
+}
+
+.rbc-month-row + .rbc-month-row {
+  border-top: 0px;
+}
+
+.rbc-day-bg + .rbc-day-bg{
+  border-left: 0px;
+}
+
+.rbc-header {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.rbc-header + .rbc-header {
+  border-left: 0px;
+}
+
+.rbc-toolbar-label {
+  color: #ffffff;
+  font-size: 16x;
+  font-weight: 500;
 }
 
 .rbc-toolbar button {
   font-size: 12px;
-  color: #000000;
+  font-weight: 600;
+  color: #ffffff;
   display: inline-block;
   margin: 0;
   text-align: center;
@@ -69,4 +102,32 @@ $today-highlight-bg: cornsilk !default;
   border-radius: 4px;
   line-height: normal;
   white-space: nowrap; 
+}
+
+.rbc-toolbar button.rbc-active, .rbc-toolbar button:active, .rbc-toolbar button.rbc-active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button:active:hover, .rbc-toolbar button:focus, .rbc-toolbar button:hover{
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color:#003262;
+}
+
+.rbc-header span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rbc-date-cell {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.rbc-off-range {
+  color: #999999;
+}
+
+.rbc-event {
+  font-size: 12px;
+  color:#ffffff;
 }

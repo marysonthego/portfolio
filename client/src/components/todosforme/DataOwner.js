@@ -52,23 +52,29 @@ export const DataOwner = () => {
           start: new Date(obj.start),
           end: new Date(obj.end),
           until: new Date(obj.until),
-          occurrenceId: obj.occurrenceId,
+          occurrenceId: obj.occurrenceid,
           title: obj.title,
           description: obj.description,
           category: obj.category,
           priority: obj.priority,
-          allDay: obj.allDay,
+          allDay: obj.allday,
           done: obj.done,
           interval: obj.interval,
           every: obj.every,
-          Sun: obj.Sun,
-          Mon: obj.Mon,
-          Tue: obj.Tue,
-          Wed: obj.Wed,
-          Thu: obj.Thu,
-          Fri: obj.Fri,
-          Sat: obj.Sat,
+          Sun: obj.sun,
+          Mon: obj.mon,
+          Tue: obj.tue,
+          Wed: obj.wed,
+          Thu: obj.thu,
+          Fri: obj.fri,
+          Sat: obj.sat,
         }));
+        console.log(`eventsFetchAll result:`,result);
+        if(result.allDay === 1) {
+          result.start.setHours(0, 0, 0, 0);
+          result.end.setHours(0, 0, 0, 0);
+          result.until.setHours(0, 0, 0, 0);
+        }
         localList = [...result];
       }
       })
@@ -114,7 +120,7 @@ export const DataOwner = () => {
   const eventUpdate = async (evt) => {
     try {
     await axios
-      .put("/api/events/update", {
+      .post("/api/events/update", {
         id: evt.id,
         start: evt.start,
         end: evt.end,
@@ -280,26 +286,26 @@ export const DataOwner = () => {
 
   const todoMoveToCalendar = async (row) => {
     await axios
-      .post(`/api/events/create`, {
-        start: Date(),
-        end: Date(),
-        until: Date(),
-        occurrenceId: 0,
+      .post(`/api/events/createfromtodo`, {
+        start: new Date(),
+        end: new Date(),
+        until: new Date(),
+        occurrenceId: '0',
         title: row.title,
         description: row.description,
         category: row.category,
         priority: row.priority,
-        allDay: 1,
-        done: 0,
-        interval: 0,
+        allDay: '1',
+        done: '0',
+        interval: '0',
         every: "",
-        Sun: 0,
-        Mon: 0,
-        Tue: 0,
-        Wed: 0,
-        Thu: 0,
-        Fri: 0,
-        Sat: 0,
+        Sun: '0',
+        Mon: '0',
+        Tue: '0',
+        Wed: '0',
+        Thu: '0',
+        Fri: '0',
+        Sat: '0',
       })
       .then(() => {
         eventsFetchAll();
@@ -341,6 +347,7 @@ export const DataOwner = () => {
       })
       .then((res) => {
         todo.id = res.data.insertId;
+        console.log(`todo.id: `, todo.id);
         todosFetchAll();
       })
       .catch((error) =>
@@ -361,8 +368,9 @@ export const DataOwner = () => {
   };
 
   const todoDelete = async (id) => {
+    console.log(`todoDelete id:`, id);
     await axios
-      .put(`/api/todos/delete`, { id: id })
+      .post(`/api/todos/delete`, { id: id })
       .then((res) => {
         todosFetchAll();
       })

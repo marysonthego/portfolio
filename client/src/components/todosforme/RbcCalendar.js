@@ -82,10 +82,10 @@ export const RbC = ({
             } else if (event.category === "Home") {
                 backgroundColor = '#089b1bea'
               } else {
-                backgroundColor = '#000000'
+                backgroundColor = '#53a8da'
               }
-            if (event.allDay === 0) {
-              backgroundColor = '#df1357'
+            if (event.allDay === 1) {
+              backgroundColor = '#f1eb8b'
             }
             return {style: {backgroundColor}}
           }}
