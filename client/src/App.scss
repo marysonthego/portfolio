@@ -25,7 +25,7 @@
 } 
 
 .logo-row {
-  background: #111827;
+  background: #003262;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,7 +48,7 @@
 
 .p1, .p1a {
   font-family: "Nunito";
-  color: #474444;
+  color: #003262;
   font-size: 300%;
 }
 
@@ -59,7 +59,7 @@
 
 .p2, .p2a {
   font-family: "Nunito";
-  color: #474444;
+  color: #c4820e;
   font-size: 200%;
 }
 
@@ -90,6 +90,10 @@ div.flex-column.navbar-nav {
   width: 50%;
 }
 
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: #003262;
+}
+
 a.nav-link {
   font-family: "Nunito", sans-serif;
   color:#57585a;
@@ -98,7 +102,7 @@ a.nav-link {
 
 a.nav-link:hover {
   font-weight: 800;
-  color:#000000;
+  color:#003262;
 }
 
 a.nav-link:focus {
@@ -108,7 +112,7 @@ a.nav-link:focus {
 
 a.nav-link:active, a.nav-link:focus {
   font-weight: 800;
-  color:#000000;
+  color:#003262;
 }
 
 .form-control:focus {
@@ -132,7 +136,7 @@ a.nav-link:active, a.nav-link:focus {
   bottom: 0;
   width: 100%;
   background-color:#e5e5e5;
-  color:#000000;
+  color:#003262;
   text-align: center;
 }
 

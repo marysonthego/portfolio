@@ -116,18 +116,16 @@ router.post("/api/todos/create", async (req, res) => {
   }
 });
 
-router.post("/api/todos/update", async (req, res) => {
+router.put("/api/todos/update", async (req, res) => {
   try {
     console.log(`in /api/todos/update`);
     const {
-      title,
-      description,
-      category,
-      priority,
-      id
+      id,
+      column,
+      value
     } = req.body;
-    let sql = 'UPDATE todos SET title=?, description=?, category=?, priority=? WHERE id=?';
-    pool.execute(sql, [title, description, category, priority, id], (error, results) => {
+    let sql = 'UPDATE todos SET ?=?, WHERE id=?';
+    pool.execute(sql, [column, value, id], (error, results) => {
       if (error) throw error;
       res.status(200).json(results);
     });
@@ -255,7 +253,7 @@ router.post("/api/events/update", async (req, res) => {
 
 router.post("/api/events/delete", async (req, res) => {
   try {
-    const {id} = req.body.id;
+    const {id} = req.body;
     let sql = 'DELETE from events WHERE id = ?';
     pool.execute(sql, [id], (error, results) => {
       if (error) throw error;
@@ -266,7 +264,7 @@ router.post("/api/events/delete", async (req, res) => {
   }
 });
 
-router.post("/api/events/occurrenceDelete", async (req, res) => {
+router.post("/api/events/occurrencedelete", async (req, res) => {
   try {
     let occurrenceId = req.body.id;
     let sql =  'DELETE from events WHERE occurrenceid = ?';
@@ -280,7 +278,7 @@ router.post("/api/events/occurrenceDelete", async (req, res) => {
   }
 });
 
-router.get("/api/events/recurring", async (req, res) => {
+router.post("/api/events/recurring", async (req, res) => {
   try {
     let {occurrenceId} = req.body.occurrenceId;
     let sql = 'SELECT * FROM events WHERE occurrenceid = ?';

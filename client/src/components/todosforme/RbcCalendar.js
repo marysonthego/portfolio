@@ -11,6 +11,8 @@ export const RbC = ({
   eventCurrent,
   eventCurrentSelect,
 }) => {
+  console.log(`events:`,events);
+  //moment.tz.setDefault();
   const [, setSelect] = useState(false);
   const [calEvents, setCalEvents] = useState(events);
   let startTime = new Date();
@@ -78,15 +80,12 @@ export const RbC = ({
           (event) => {
             let backgroundColor;
             if (event.category === "Work") {
-                backgroundColor = '#ff8b00'  
+                backgroundColor = '#c4820e'
             } else if (event.category === "Home") {
-                backgroundColor = '#089b1bea'
+                backgroundColor = '#3b7ea1';
               } else {
-                backgroundColor = '#53a8da'
+                backgroundColor = '#003262';
               }
-            if (event.allDay === 1) {
-              backgroundColor = '#f1eb8b'
-            }
             return {style: {backgroundColor}}
           }}
       />

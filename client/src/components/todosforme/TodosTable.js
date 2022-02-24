@@ -150,8 +150,8 @@ export const TodosTable = ({
           headerClasses="custom-header"
           rowStyle={{
             fontSize: "12px",
-            color: "#e5e5e5",
-            background: "#bcbdc2",
+            color: "#003262",
+            background: "#FFEFCE",
           }}
           wrapperClasses="table-responsive"
           pagination={paginationFactory()}

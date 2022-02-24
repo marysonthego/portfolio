@@ -40,6 +40,7 @@
     "formik": "^2.2.9",
     "jquery": "^3.5.1",
     "moment": "2.26.0",
+    "moment-timezone": "^0.5.34",
     "node-sass": "^6.0.1",
     "notistack": "^2.0.3",
     "object-path": "^0.11.8",

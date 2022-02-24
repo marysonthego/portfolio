@@ -2,13 +2,13 @@
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 14px;
-  color: #000000;
+  color: #003262;
   background: #ffffff;
 }
 
 div.modal-content {
-  color: #000000;
-  background: #ffffff;
+  color: #003262;
+  
 
 }
 
@@ -17,6 +17,7 @@ div.modal-content {
   margin: 0px auto 0;
   max-width: 768px;
   border-radius: 4px;
+  background: #FFEFCE;
   box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, .1);
 }
 

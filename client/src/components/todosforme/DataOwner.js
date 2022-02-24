@@ -29,6 +29,8 @@ export const DataOwner = () => {
     },
   ]);
 
+  console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+
   const eventCurrentSelect = (evt) => {
     setEventCurrent((prev) => ({
       ...prev,
@@ -169,7 +171,7 @@ export const DataOwner = () => {
     for (let i = 0; i < eventOccurrences.length; i++) {
       console.log(`eventOccurrences: `, i, eventOccurrences[i]);
       try {
-      await axios.put("/api/events/update", {
+      await axios.post("/api/events/update", {
         id: eventOccurrences[i].id,
         start: eventOccurrences[i].start,
         end: eventOccurrences[i].end,
@@ -201,8 +203,7 @@ export const DataOwner = () => {
     try {
     await axios
       .post(`/api/events/recurring`, {
-        occurrenceId,
-        occurrenceId,
+        occurrenceId: occurrenceId
       })
       .then((res) => {
         let results = res.data.map((obj) => ({
@@ -210,22 +211,22 @@ export const DataOwner = () => {
           start: new Date(obj.start),
           end: new Date(obj.end),
           until: new Date(obj.until),
-          occurrenceId: obj.occurrenceId,
+          occurrenceId: obj.occurrenceid,
           title: obj.title,
           description: obj.description,
           category: obj.category,
           priority: obj.priority,
-          allDay: obj.allDay,
+          allDay: obj.allday,
           done: obj.done,
           interval: obj.interval,
           every: obj.every,
-          Sun: obj.Sun,
-          Mon: obj.Mon,
-          Tue: obj.Tue,
-          Wed: obj.Wed,
-          Thu: obj.Thu,
-          Fri: obj.Fri,
-          Sat: obj.Sat,
+          Sun: obj.sun,
+          Mon: obj.mon,
+          Tue: obj.tue,
+          Wed: obj.wed,
+          Thu: obj.thu,
+          Fri: obj.fri,
+          Sat: obj.sat,
         }));
         eventOccurrences = [...results];
         console.log(`eventOccurrences: `, eventOccurrences);
@@ -265,7 +266,7 @@ export const DataOwner = () => {
 
   const eventDelete = async (id) => {
     await axios
-      .put(`/api/events/delete`, { id: id })
+      .post(`/api/events/delete`, { id: id })
       .then(() => {})
       .catch((error) =>
         console.error(`eventDelete error id: ${id} error: ${error}`)
@@ -277,7 +278,7 @@ export const DataOwner = () => {
   const eventOccurrencesDelete = async (id) => {
     console.log(`id: `, id);
     await axios
-      .put("/api/events/occurrencedelete", {
+      .post("/api/events/occurrencedelete", {
         id: id,
       })
       .then(() => {})
@@ -359,7 +360,8 @@ export const DataOwner = () => {
     await axios
       .put(`/api/todos/update`, {
         id: rid,
-        [col]: value,
+        column: [col],
+        value: value,
       })
       .then((res) => {
         todosFetchAll();

@@ -3,7 +3,7 @@
   padding: 16px;
   margin: 8px auto 0;
   max-width: 768px;
-  background: #424242;
+  background: #FFEFCE;;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
@@ -13,11 +13,11 @@
 }
 
 label.form-label, label.form-check-label {
-  color: #000000;
+  color: #003262;
 }
 
 input.form-input, select.form-input, select.form-select, select.form-select-sm, textarea.form-input {
-  color: #000000;
+  color: #003262;
   background:#ffffff; 
 }
 
@@ -72,19 +72,19 @@ input.form-input, select.form-input, select.form-select, select.form-select-sm, 
 }
 
 .form-input:focus {
-  border-color: #3fdd86;
-  box-shadow: 0 0 2px #a1eec4;
+  border-color: #c4820e;
+  box-shadow: 0 0 2px #003262;
   outline: 0;
 }
 
 .btn-primary {
   color: #ffffff;
-  background-color: black;
+  background-color: #003262;
   border-color: gray;
   font-size: 12px;
 }
 .btn-primary:active, .btn-primary:hover {
-  color: #000000;
+  color: #003262;
   background-color: #ffffff;
   border-color: gray;
 }
@@ -105,4 +105,14 @@ input.form-input, select.form-input, select.form-select, select.form-select-sm, 
 
 .todos-top-row {
   margin-top:2vh;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  box-shadow:rgba(0, 0, 0, .1)
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus, .btn-primary:hover {
+  color:#ffffff;
+  background-color: #003262;
+  border-color:#c4820e;
 }

@@ -2,7 +2,7 @@
   table-layout: auto;
   color: whitesmoke;
   border-collapse:collapse;
-  border:solid black 1px;
+  border:solid #003262 1px;
   border-radius:8px;
   overflow: hidden;
   padding: 12px;
@@ -11,7 +11,7 @@
   line-height: 24px;
   text-align: left;
   text-overflow: ellipsis;
-  background: #d3cbcb;
+  background: #FFE8B1;
 
 }
 
@@ -20,7 +20,7 @@
   color: #e5e5e5;
   font-size: 12px;
   font-weight: 400;
-  background: #424242;
+  background: #003262;
 }
 
 .page-item, .page-link {
@@ -37,7 +37,7 @@
 
 .todosTitle {
   font-family: "Nunito", sans-serif ;
-  color: #202020;
+  color: #003262;
   font-weight: 800;
   text-align: right;
   margin-top: 5px;

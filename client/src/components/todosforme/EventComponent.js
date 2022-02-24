@@ -4,10 +4,10 @@ import Image from 'react-bootstrap/Image';
 export const EventComponent = (event) => { 
   if (event.event.done) {
     return (
-      <span><Image src='media/whitecheck16.png'/>{event.title}</span> 
+      <span color='#ffffff'><Image src='media/whitecheck16.png'/>{event.title}</span> 
     )
   } 
   return ( 
-    <span> {event.title} </span> 
+    <span color='#ffffff'> {event.title} </span> 
   ) 
 };
