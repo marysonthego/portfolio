@@ -5,18 +5,46 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "name": "Launch Firefox",
+      "url": "http://localhost:4000/client/build/index.html",
+      "pathMappings": [
+        {
+          "url": "http://localhost:4000",
+          "path": "${workspaceFolder}/client/src/"
+        },
+        {
+          "url": "http://localhost:4000/todos",
+          "path": "${workspaceFolder}/client/src/components/top/"
+        },
+        {
+          "url": "http://localhost:4000/todos",
+          "path": "${workspaceFolder}/client/src/components/todosforme/"
+        },
+        {
+          "url": "http://localhost:4000/client/src/",
+          "path": "${workspaceFolder}/client/src/"
+        }
+      ]
+    },
+    {
       "name": "Attach to Chrome",
       "port": 9222,
       "request": "attach",
       "type": "pwa-chrome",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}/client/src"
     },
     {
       "name": "Launch Chrome",
       "request": "launch",
       "type": "pwa-chrome",
       "url": "http://localhost:4000",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}/client/src",
+      "sourceMapPathOverrides": {
+        "webpack:///client/src/*": "${webRoot}/*"
+      }
     }
   ]
 }
