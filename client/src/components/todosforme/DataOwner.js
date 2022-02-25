@@ -138,9 +138,9 @@ export const DataOwner = () => {
     await axios
       .post("/api/events/update", {
         id: evt.id,
-        start: evt.start,
-        end: evt.end,
-        until: evt.until,
+        start: new Date(evt.start),
+        end: new Date(evt.end),
+        until: new Date(evt.until),
         occurrenceId: evt.occurrenceId,
         title: evt.title,
         description: evt.description,
@@ -163,96 +163,97 @@ export const DataOwner = () => {
           ...prev,
           ...res.data.changes,
         }));
-        eventsFetchAll();
+        //eventsFetchAll();
       })
     } catch(error) {console.error(`eventUpdate error ${error}`)};
 
-    if (evt.interval > 0) {
-      let occurrenceId = 0;
-      if (evt.occurrenceId === 0) {
-        occurrenceId = evt.id;
-      } else {
-        occurrenceId = evt.occurrenceId;
-      }
-      eventOccurrencesFetch(evt);
-    }
+    // if (evt.interval > 0) {
+    //   let occurrenceId = 0;
+    //   if (evt.occurrenceId === 0) {
+    //     occurrenceId = evt.id;
+    //   } else {
+    //     occurrenceId = evt.occurrenceId;
+    //   }
+    //   eventOccurrencesFetch(evt);
+    // }
     eventsFetchAll();
   };
 
-  const eventOccurrencesUpdate = async (evt) => {
-    //eventOccurrencesFetch({occId: evt.occurrenceId});
-    console.log(`eventOccurrences.length: `, eventOccurrences.length);
-    for (let i = 0; i < eventOccurrences.length; i++) {
-      console.log(`eventOccurrences: `, i, eventOccurrences[i]);
-      try {
-      await axios.post("/api/events/update", {
-        id: eventOccurrences[i].id,
-        start: eventOccurrences[i].start,
-        end: eventOccurrences[i].end,
-        until: eventOccurrences[i].until,
-        occurrenceId: evt.occurrenceId,
-        title: evt.title,
-        description: evt.description,
-        category: evt.category,
-        priority: evt.priority,
-        allDay: evt.allDay,
-        done: eventOccurrences[i].done,
-        interval: evt.interval,
-        every: evt.every,
-        Sun: evt.Sun,
-        Mon: evt.Mon,
-        Tue: evt.Tue,
-        Wed: evt.Wed,
-        Thu: evt.Thu,
-        Fri: evt.Fri,
-        Sat: evt.Sat,
-      });
-    } catch(error) {console.error(`eventOccurrencesUpdate error ${error}`)}
-    }
-    //eventsFetchAll();
-  };
+  // const eventOccurrencesUpdate = async (evt) => {
+  //   //eventOccurrencesFetch({occId: evt.occurrenceId});
+  //   console.log(`eventOccurrences.length: `, eventOccurrences.length);
+  //   for (let i = 0; i < eventOccurrences.length; i++) {
+  //     console.log(`eventOccurrences: `, i, eventOccurrences[i]);
+  //     try {
+  //     await axios.post("/api/events/update", {
+  //       id: eventOccurrences[i].id,
+  //       start: eventOccurrences[i].start,
+  //       end: eventOccurrences[i].end,
+  //       until: eventOccurrences[i].until,
+  //       occurrenceId: evt.occurrenceId,
+  //       title: evt.title,
+  //       description: evt.description,
+  //       category: evt.category,
+  //       priority: evt.priority,
+  //       allDay: evt.allDay,
+  //       done: eventOccurrences[i].done,
+  //       interval: evt.interval,
+  //       every: evt.every,
+  //       Sun: evt.Sun,
+  //       Mon: evt.Mon,
+  //       Tue: evt.Tue,
+  //       Wed: evt.Wed,
+  //       Thu: evt.Thu,
+  //       Fri: evt.Fri,
+  //       Sat: evt.Sat,
+  //     });
+  //   } catch(error) {console.error(`eventOccurrencesUpdate error ${error}`)}
+  //   }
+  //   //eventsFetchAll();
+  // };
 
-  const eventOccurrencesFetch = async (evt) => {
-    let occurrenceId = evt.occurrenceId;
-    try {
-    await axios
-      .post(`/api/events/recurring`, {
-        occurrenceId: occurrenceId
-      })
-      .then((res) => {
-        let results = res.data.map((obj) => ({
-          id: obj.id,
-          start: new Date(obj.start),
-          end: new Date(obj.end),
-          until: new Date(obj.until),
-          occurrenceId: obj.occurrenceid,
-          title: obj.title,
-          description: obj.description,
-          category: obj.category,
-          priority: obj.priority,
-          allDay: obj.allday,
-          done: obj.done,
-          interval: obj.interval,
-          every: obj.every,
-          Sun: obj.sun,
-          Mon: obj.mon,
-          Tue: obj.tue,
-          Wed: obj.wed,
-          Thu: obj.thu,
-          Fri: obj.fri,
-          Sat: obj.sat,
-        }));
-        eventOccurrences = [...results];
-        console.log(`eventOccurrences: `, eventOccurrences);
-        eventOccurrencesUpdate(evt);
-      })
-    } catch(error) { console.error(`eventOccurrencesFetch error ${error}`)};
-  };
+  // const eventOccurrencesFetch = async (evt) => {
+  //   let occurrenceId = evt.occurrenceId;
+  //   try {
+  //   await axios
+  //     .post(`/api/events/recurring`, {
+  //       occurrenceId: occurrenceId
+  //     })
+  //     .then((res) => {
+  //       let results = res.data.map((obj) => ({
+  //         id: obj.id,
+  //         start: new Date(obj.start),
+  //         end: new Date(obj.end),
+  //         until: new Date(obj.until),
+  //         occurrenceId: obj.occurrenceid,
+  //         title: obj.title,
+  //         description: obj.description,
+  //         category: obj.category,
+  //         priority: obj.priority,
+  //         allDay: obj.allday,
+  //         done: obj.done,
+  //         interval: obj.interval,
+  //         every: obj.every,
+  //         Sun: obj.sun,
+  //         Mon: obj.mon,
+  //         Tue: obj.tue,
+  //         Wed: obj.wed,
+  //         Thu: obj.thu,
+  //         Fri: obj.fri,
+  //         Sat: obj.sat,
+  //       }));
+  //       eventOccurrences = [...results];
+  //       console.log(`eventOccurrences: `, eventOccurrences);
+  //       eventOccurrencesUpdate(evt);
+  //     })
+  //   } catch(error) { console.error(`eventOccurrencesFetch error ${error}`)};
+  // };
 
   const eventOccurrencesCreate = (newevt) => {
     let {...evt} = newevt;
-    const dates = CalcDates({
-      start: evt.start,
+
+    const startDates = CalcDates({
+      startOrEnd: evt.start,
       until: evt.until,
       interval: evt.interval,
       every: evt.every,
@@ -266,18 +267,46 @@ export const DataOwner = () => {
         evt.Sat,
       ],
     });
-    console.log(`eventOccurrencesCreate dates:`, dates);
-    if (Array.isArray(dates) && dates.length > 0) {
-      for (let i = 0; i < dates.length; i++) {
-        let date = new Date(dates[i]);
+    console.log(`eventOccurrencesCreate startDates:`, startDates);
+    if (Array.isArray(startDates) && startDates.length > 0) {
+      evt.occurrenceId = evt.id;
+      for (let i = 0; i < startDates.length; i++) {
+        let date = new Date(startDates[i]);
         if (date.getTime() <= evt.until.getTime()) {
-          evt.start = new Date(date);
-          evt.end = new Date(date);
-          evt.occurrenceId = evt.id;
-          eventCreate(evt);
-        }
-      }
-    }
+          startDates[i] = new Date(date);
+        };
+      };
+    };
+    const endDates = CalcDates({
+      startOrEnd: evt.end,
+      until: evt.until,
+      interval: evt.interval,
+      every: evt.every,
+      daysOfWeek: [
+        evt.Sun,
+        evt.Mon,
+        evt.Tue,
+        evt.Wed,
+        evt.Thu,
+        evt.Fri,
+        evt.Sat,
+      ],
+    });
+    console.log(`eventOccurrencesCreate dates:`, endDates);
+    if (Array.isArray(endDates) && endDates.length > 0) {
+      evt.occurrenceId = evt.id;
+      for (let i = 0; i < endDates.length; i++) {
+        let date = new Date(endDates[i]);
+        if (date.getTime() <= evt.until.getTime()) {
+          endDates[i] = new Date(date);
+        };
+      };
+    };
+    for (let i=0; i<startDates.length; i++) {
+      evt.start = startDates[i];
+      evt.end = endDates[i];
+      eventCreate(evt);
+    };
   };
 
   const eventDelete = async (id) => {

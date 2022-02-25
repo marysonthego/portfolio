@@ -2,7 +2,7 @@
 const aDay = 24 * 3600 * 1000;
 
 export const CalcDates = ({
-  start,
+  startOrEnd,
   until,
   interval,
   every,
@@ -32,7 +32,7 @@ export const CalcDates = ({
   };
 
   const calc = (interval) => {
-    let nextDate = new Date(start);
+    let nextDate = new Date(startOrEnd);
     do {
       dates.push(nextDate);
       console.log(`nextDate: `,nextDate);
