@@ -16,7 +16,7 @@ export function AnimateListTools() {
       >
         <Row>
           <Col md={{ span: 7, offset: 1 }}>
-            <p className="p2a">These are some of my favorite tools</p>
+            <p className="p2a">and these are some of my favorite tools...</p>
           </Col>
         </Row>
         <Row className="row-cols-sm-3 row-cols-md-9 logo-row">

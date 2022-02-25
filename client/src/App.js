@@ -31,13 +31,13 @@ export default function App() {
       >
         <Row>
           <Col md={{ span: 6, offset: 2 }}>
-            <p className="p1">Hi! My name is Mary,</p>
+            <p className="p1">Hi! My name is Mary.</p>
           </Col>
         </Row>
         <Row>
           <Col md={{ span: 7, offset: 3 }}>
             <p className="p1">
-              and I do full-stack development
+              I do full-stack development
             </p>
           </Col>
         </Row>
