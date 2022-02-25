@@ -34,11 +34,10 @@ export function ScrollToTop() {
         fluid
         overflow="hidden"
         display="grid"
-        grid-template-columns="repeat(auto-fill, minmax(200px, 1fr))"
-        grid-auto-rows="minmax(100px, auto)"
+        
       >
     <Row className="justify-content: right">
-    <Col md={{ span:1, offset:11 }}>
+    <Col xs={{ span:1, offset:8 }}>
           {isVisible && (
             <button onClick={scrollToTop}>
               <Image

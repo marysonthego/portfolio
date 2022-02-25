@@ -165,11 +165,7 @@ export const TodosTable = ({
           condensed
           selectRow={selectRow}
         />
-        {/* <Row>
-          <Col align="center">
-            <AnalogClock {...options} />
-          </Col>
-        </Row> */}
+
         {show ? (
           <TodoFormModal
             show={show}

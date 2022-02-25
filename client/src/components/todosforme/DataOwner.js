@@ -29,12 +29,11 @@ export const DataOwner = () => {
     },
   ]);
 
-  console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+  //console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
   const eventCurrentSelect = (evt) => {
     setEventCurrent((prev) => ({
-      ...prev,
-      ...evt,
+      ...prev, ...evt
     }));
     toggleModal();
   };
@@ -48,43 +47,58 @@ export const DataOwner = () => {
     await axios
       .get(`/api/events/all`)
       .then((res) => {
+        console.log(`eventsFetchAll res.data:`,res.data);
         if(res.data.length > 0) {
-        let result = res.data.map((obj) => ({
-          id: obj.id,
-          start: new Date(obj.start),
-          end: new Date(obj.end),
-          until: new Date(obj.until),
-          occurrenceId: obj.occurrenceid,
-          title: obj.title,
-          description: obj.description,
-          category: obj.category,
-          priority: obj.priority,
-          allDay: obj.allday,
-          done: obj.done,
-          interval: obj.interval,
-          every: obj.every,
-          Sun: obj.sun,
-          Mon: obj.mon,
-          Tue: obj.tue,
-          Wed: obj.wed,
-          Thu: obj.thu,
-          Fri: obj.fri,
-          Sat: obj.sat,
-        }));
-        console.log(`eventsFetchAll result:`,result);
-        if(result.allDay === 1) {
-          result.start.setHours(0, 0, 0, 0);
-          result.end.setHours(0, 0, 0, 0);
-          result.until.setHours(0, 0, 0, 0);
+          let result = res.data.map((obj) => ({
+            id: obj.id,
+            start: new Date(obj.start),
+            end: new Date(obj.end),
+            until: new Date(obj.until),
+            occurrenceId: obj.occurrenceid,
+            title: obj.title,
+            description: obj.description,
+            category: obj.category,
+            priority: obj.priority,
+            allDay: obj.allday,
+            done: obj.done,
+            interval: obj.interval,
+            every: obj.every,
+            Sun: obj.sun,
+            Mon: obj.mon,
+            Tue: obj.tue,
+            Wed: obj.wed,
+            Thu: obj.thu,
+            Fri: obj.fri,
+            Sat: obj.sat,
+          }));
+          console.log(`eventsFetchAll result:`,result);
+          for(let i=0; i<result.length;i++) {
+            if(result[i].allDay === 1) {
+              result[i].start.setHours(10, 0, 0, 0);
+              result[i].end.setHours(10, 0, 0, 0);
+              result[i].until.setHours(10, 0, 0, 0);
+            } else {
+              let offset = result[i].start.getTimezoneOffset();
+              let start = result[i].start - (offset * 60000);
+              result[i].start = new Date(start);
+              let end = result[i].end - (offset * 60000);
+              result[i].end = new Date(end);
+              let until = result[i].until - (offset * 60000);
+              result[i].until = new Date(until);
+            }
+          }
+          localList = [...result];
         }
-        localList = [...result];
-      }
       })
       .catch((error) => console.error(`eventsFetchAll error ${error}`));
+    console.log(`localList`, localList);
     setEvents(localList);
   };
 
-  const eventCreate = async (evt) => {
+  const eventCreate = async (newevt) => {
+    console.log(`newevt`, newevt);
+    let {...evt} = newevt;
+    console.log(`eventCreate evt:`,evt);
     try {
     await axios
       .post("/api/events/create", {
@@ -154,7 +168,7 @@ export const DataOwner = () => {
     } catch(error) {console.error(`eventUpdate error ${error}`)};
 
     if (evt.interval > 0) {
-      var occurrenceId;
+      let occurrenceId = 0;
       if (evt.occurrenceId === 0) {
         occurrenceId = evt.id;
       } else {
@@ -235,7 +249,8 @@ export const DataOwner = () => {
     } catch(error) { console.error(`eventOccurrencesFetch error ${error}`)};
   };
 
-  const eventOccurrencesCreate = (evt) => {
+  const eventOccurrencesCreate = (newevt) => {
+    let {...evt} = newevt;
     const dates = CalcDates({
       start: evt.start,
       until: evt.until,
@@ -251,6 +266,7 @@ export const DataOwner = () => {
         evt.Sat,
       ],
     });
+    console.log(`eventOccurrencesCreate dates:`, dates);
     if (Array.isArray(dates) && dates.length > 0) {
       for (let i = 0; i < dates.length; i++) {
         let date = new Date(dates[i]);
@@ -386,8 +402,9 @@ export const DataOwner = () => {
   };
 
   useEffect(() => {
-    todosFetchAll();
     eventsFetchAll();
+    todosFetchAll();
+    console.log(`DataOwner useEffect FetchAll`);
   }, []);
 
   return (

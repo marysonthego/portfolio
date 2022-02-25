@@ -37,7 +37,7 @@ $today-highlight-bg: #c4820e;
 }
 
 .rbc-off-range-bg {
-  background: linear-gradient(45deg,#fdb515 50%, #ffff00 0%, transparent 50%);
+  background: linear-gradient(45deg, #003262 50%, #ffff00 0%, #fdb515 50%);
 }
 
 .rbc-label {
@@ -75,23 +75,23 @@ a .rbc-header, .rbc-header {
   font-size: 24px;
   font-weight: 600;
   text-align: right;
-  border-bottom: 2px;
 }
 
 a .rbc-header + .rbc-header, .rbc-header + .rbc-header {
   border-left: 0px;
-  border-bottom: 2px;
   color: #003262;
   font-size: 24px;
   font-weight: 600;
   text-align: right;
 }
 
-.rbc-header span {
+div.rbc-header span {
   color: #003262;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  border-bottom: 1px solid #dddddd;
 }
+
 .rbc-toolbar-label {
   color: #003262;
   font-size: 24px;
@@ -147,4 +147,8 @@ a .rbc-header + .rbc-header, .rbc-header + .rbc-header {
 
 .rbc-row-segment .rbc-event-content .rbc-ellipsis {
   color:#ffffff;
+}
+
+.rbc-event-label {
+  display: none;
 }

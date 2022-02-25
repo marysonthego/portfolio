@@ -11,9 +11,12 @@ export const RbC = ({
   eventCurrent,
   eventCurrentSelect,
 }) => {
-  console.log(`events:`,events);
-  //moment.tz.setDefault();
-  const [, setSelect] = useState(false);
+
+  for(let i=0; i< events.length; i++){
+  console.log(`events: id`,events[i].id,`occurrenceId`, events[i].occurrenceId,`title`, events[i].title,`start`, events[i].start);
+  }
+
+  const [select, setSelect] = useState(false);
   const [calEvents, setCalEvents] = useState(events);
   let startTime = new Date();
   startTime.setHours(9, 0);
@@ -26,6 +29,7 @@ export const RbC = ({
     [events]);
 
   const handleSelectEvent = (ev) => {
+    console.log(`handleSelectEvent ev`, ev);
     setSelect(true);
     eventCurrentSelect(ev);
     setSelect(false);
@@ -82,7 +86,7 @@ export const RbC = ({
             if (event.category === "Work") {
                 backgroundColor = '#c4820e'
             } else if (event.category === "Home") {
-                backgroundColor = '#3b7ea1';
+                backgroundColor = '#003262';
               } else {
                 backgroundColor = '#003262';
               }

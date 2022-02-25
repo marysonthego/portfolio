@@ -124,8 +124,9 @@ router.put("/api/todos/update", async (req, res) => {
       column,
       value
     } = req.body;
-    let sql = 'UPDATE todos SET ?=?, WHERE id=?';
-    pool.execute(sql, [column, value, id], (error, results) => {
+    let sql = 'UPDATE todos SET ' + column + ' =? WHERE id=?';
+    console.log(`sql`, sql);
+    pool.execute(sql, [value, id], (error, results) => {
       if (error) throw error;
       res.status(200).json(results);
     });
@@ -167,6 +168,7 @@ router.get("/api/events/all", async (req, res) => {
 
 router.post("/api/events/create", async (req, res) => {
   try {
+    console.log(`in /api/events/create`);
     const {
       start,
       end,
@@ -195,6 +197,7 @@ router.post("/api/events/create", async (req, res) => {
 
 router.post("/api/events/createfromtodo", async (req, res) => {
   try {
+    console.log(`in /api/events/createfromtodo`);
     const {
       start,
       end,
@@ -223,6 +226,7 @@ router.post("/api/events/createfromtodo", async (req, res) => {
 
 router.post("/api/events/update", async (req, res) => {
   try {
+    console.log(`in /api/events/update`);
     const {
       id,
       start,
@@ -253,6 +257,7 @@ router.post("/api/events/update", async (req, res) => {
 
 router.post("/api/events/delete", async (req, res) => {
   try {
+    console.log(`in /api/events/delete`);
     const {id} = req.body;
     let sql = 'DELETE from events WHERE id = ?';
     pool.execute(sql, [id], (error, results) => {
@@ -266,7 +271,8 @@ router.post("/api/events/delete", async (req, res) => {
 
 router.post("/api/events/occurrencedelete", async (req, res) => {
   try {
-    let occurrenceId = req.body.id;
+    console.log(`in /api/events/occurrencedelete`);
+    let occurrenceId = req.body;
     let sql =  'DELETE from events WHERE occurrenceid = ?';
 
     pool.query(sql,[occurrenceId], (error, results) => {
@@ -280,7 +286,8 @@ router.post("/api/events/occurrencedelete", async (req, res) => {
 
 router.post("/api/events/recurring", async (req, res) => {
   try {
-    let {occurrenceId} = req.body.occurrenceId;
+    console.log(`in /api/events/recurring`);
+    let {occurrenceId} = req.body;
     let sql = 'SELECT * FROM events WHERE occurrenceid = ?';
 
     pool.execute(sql, [occurrenceId], (error, results) => {

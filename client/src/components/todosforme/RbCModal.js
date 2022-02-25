@@ -19,9 +19,15 @@ export const RbCModal = ({
 }) => {
 
   const [modalEvent, setModalEvent] = useState(eventCurrent);
-  console.log(`eventCurrent: `, eventCurrent);
-    const handleStartDate = (date) => {
+
+  //let modalEvent = {...eventCurrent}; 
+
+  console.log(`modalEvent: `, modalEvent);
+
+  const handleStartDate = (date) => {
     let start = new Date(date);
+    // modalEvent.start = start;
+    // modalEvent.end = start;
     setModalEvent(prev => ({
       ...prev, start: start, end: start
     }))
@@ -32,17 +38,21 @@ export const RbCModal = ({
     setModalEvent(prev => ({
       ...prev, end: end
     }))
+    //modalEvent.end = end;
   };
 
   const handleUntilDate = (date) => {
     let until = new Date(date);
+    console.log(`until`, until);
     setModalEvent(prev => ({
       ...prev, until: until
     }))
+    //modalEvent.until = until;
   };
 
   const handleSubmit = () => {
     if (eventCurrent.id === 0) {
+      console.log(`modalEvent`, modalEvent);
       eventCreate(modalEvent);
       toggleModal();
     } else {
@@ -97,6 +107,7 @@ export const RbCModal = ({
       ...prev,
         [nam]: val
     }));
+    //modalEvent[nam] = val;
   };
 
   const handleBlur = (e) => {
@@ -109,6 +120,7 @@ export const RbCModal = ({
       ...prev,
         [nam]: val
     }));
+    modalEvent[nam] = val;
   };
 
   const handleDelete = () => {
@@ -157,8 +169,8 @@ export const RbCModal = ({
                         name="category"
                         defaultValue={modalEvent.category}
                         onClick={handleFormSelect}
-                        // defaultValue={modalEvent.category || "Home"}
-                        // onChange={handleFormSelect}
+                        defaultValue={modalEvent.category || "Home"}
+                        onChange={handleFormSelect}
                       >
                         <option value="Home">Home</option>
                         <option value="Work"> Work</option>
@@ -173,8 +185,8 @@ export const RbCModal = ({
                         name="priority"
                         defaultValue={modalEvent.priority}
                         onClick={handleFormSelect}
-                        // selected={modalEvent.priority || 1}
-                        // onChange={handleFormSelect}
+                        selected={modalEvent.priority || 1}
+                        onChange={handleFormSelect}
                       >
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -184,7 +196,7 @@ export const RbCModal = ({
                     </Col>
                     <Col>
                       <fieldset>
-                        <label className="form-label">Repeating</label>
+                        <label className="form-label">Every</label>
                         <select
                           className="form-input"
                           type="text"
@@ -202,14 +214,14 @@ export const RbCModal = ({
                     </Col>
                     <Col>
                       <fieldset>
-                        <label className="form-label">Every</label>
+                        <label className="form-label">Interval</label>
                         <select
                           className="form-input form-select-sm"
                           type="number"
                           id="interval"
                           disabled={modalEvent.every === "" || modalEvent.every === "none"}
                           name="interval"
-                          defaultValue={modalEvent.interval || 0}
+                          defaultValue={modalEvent.interval || "0"}
                           onChange={handleFormSelect}
                         >
                           <option value="0">0</option>
