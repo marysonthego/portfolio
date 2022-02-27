@@ -310,6 +310,7 @@ export const DataOwner = () => {
   };
 
   const eventDelete = async (id) => {
+    if(id > 0) {
     await axios
       .post(`/api/events/delete`, { id: id })
       .then(() => {})
@@ -319,15 +320,18 @@ export const DataOwner = () => {
     eventOccurrencesDelete(id);
     eventsFetchAll();
   };
+};
 
   const eventOccurrencesDelete = async (id) => {
     console.log(`id: `, id);
+    if(id > 0) {
     await axios
       .post("/api/events/occurrencedelete", {
         id: id,
       })
       .then(() => {})
       .catch((error) => console.error(`eventOccurrencesDelete error ${error}`));
+    };
   };
 
   const todoMoveToCalendar = async (row) => {

@@ -175,3 +175,11 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 .accordion-button:focus {
   border-color:#7a7d81;
 }
+
+.card-img-overlay {
+  
+  max-width:500px;
+  max-height:500px;
+  width: auto;
+  height: auto;
+}
