@@ -15,6 +15,7 @@ import NucatIframe from "components/demos/NucatIframe";
 import DashIframe from "components/demos/DashIframe";
 import StepperIframe from "components/demos/StepperIframe";
 import CspReport from "components/helpers/CspReport";
+import { Cards } from "components/Posts/Cards";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import { CookiesProvider } from "react-cookie";
@@ -45,6 +46,7 @@ ReactDOM.render(
             <Route path="/weather" element={<WeatherApi />} />
             <Route path="/" element={<App />} />
             <Route path="/cspreport" element={<CspReport />} />
+            <Route path="/post01" element={<Cards />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>

@@ -1,6 +1,9 @@
-Card Img .card-img-overlay {
-  display: block;
-  width: auto;
-  height: auto;
-  padding: 0;
+container.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr ;
+  grid-template-rows: 95vh;
+}
+
+h3.card-title {
+  font-weight: 600;
 }

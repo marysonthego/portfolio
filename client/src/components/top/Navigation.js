@@ -79,7 +79,7 @@ export const Navigation = () => {
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="/post01" className="rounded-end">
-                      Run Your React-Native App in Amazon WSA
+                      How to Run Your React Native App in Amazon WSA
                     </Nav.Link>
                     <Nav.Link href="/post02" className="rounded-end">
                       Use Sqlite 3 for Quick Database Emulation

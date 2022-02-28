@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { AnimateListTools } from "components/top/ListTools";
-import { Cards } from "components/top/cards";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
@@ -18,7 +17,6 @@ export default function App() {
   }, [location]);
 
   return (
-    <div>
       <Container
         fluid
         overflow="hidden"
@@ -43,7 +41,5 @@ export default function App() {
         </Row>
         <AnimateListTools />
       </Container>
-    
-    </div>
   );
 }
