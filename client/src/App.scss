@@ -42,7 +42,7 @@
   background-color:#ffffff;
   background-size: cover;
   background-position: top;
-  height: 95vh;
+  min-height:auto;
   position: relative;
 }
 
@@ -130,6 +130,7 @@ a.nav-link:active, a.nav-link:focus {
 
 .footer {
   position: fixed;
+  padding-top: 10px;
   left: 0;
   bottom: 0;
   width: 100%;

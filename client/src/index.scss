@@ -15,7 +15,7 @@
 @import './components/css/tablestyles.css';
 @import './components/css/weatherstyles.css';
 @import './components/css/modal.css';
-@import './components/css/cards.css';
+@import './components/css/cards.scss';
 @import './App.scss';
 
 .example-highlight > pre {
@@ -91,7 +91,8 @@
   }
 
 body {
-  margin: 0;
+  min-height:auto;
+  margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Nunito", sans-serif ;

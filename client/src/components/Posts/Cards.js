@@ -1,7 +1,7 @@
 import react from "React";
-import "components/css/cards.css";
+import "components/css/cards.scss";
 
-export function Cards() {
+export function Cards(TopPic, Title, Section1) {
   return (
     <container class="grid">
       <div></div>
