@@ -10,9 +10,9 @@ export const Post01 = () => {
   let Section1 = (
     <div>
       <p className="card-text">
-        In a previous post, <a href="/post00" className="link-primary">How to Setup a React Native Development Environment in Windows</a>, I walked through the steps to install Android Studio. I skipped over the steps to install and configure Android Virtual Devices (AVDs). Due to their size, adding an AVD can make a first-time Android Studio install take 2 - 4 hours to complete. The good news is, we won't need one!</p>
+        In a previous post, <a href="/post00" className="link-primary">How to Setup a React Native Development Environment in Windows</a>, I walked through the steps to install Android Studio. I intentionally skipped over the steps to install and configure Android Virtual Devices (AVDs). Due to their size, adding an AVD can make a first-time Android Studio install take 2 - 4 hours to complete. The good news is, we won't need one!</p>
         <p className="card-text">
-        Android Studio comes with support for creating AVDs for many different versions of Android, and there may be times when you can't avoid using one or more to test on an older Android version. If that happens, you can create and control AVDs in the AVD Manager in Android Studio. However, there are a few things you need to be aware of before you spend a lot of time trying to do an AVD install.
+        Android Studio comes with support for creating AVDs for many different versions of Android, and there may be times when you can't avoid using one or more to test on an older Android version. If that happens, you can create and control AVDs in the AVD Manager in Android Studio. However, there are a few things you need to be aware of before you spend a lot of time trying to install an AVD.
       </p>
 
       <p className="card-text">
@@ -63,7 +63,7 @@ export const Post01 = () => {
         >
           Windows Store
         </a> by installing the
-        Amazon Appstore Preview. Amazon's Appstore runs in a WSA which gets silently installed in the background. You can read the Microsoft official
+        Amazon Appstore Preview. Amazon's Appstore runs in a WSA which gets silently installed in the background. You can read the official Microsoft
         documentation about the WSA and the Appstore <a
           href="https://docs.microsoft.com/en-us/windows/android/wsa/"
           className="link-primary"
@@ -72,11 +72,11 @@ export const Post01 = () => {
         </a>.
       </p>
       <p className="card-text">
-        Until recently, it was harder to use the WSA for development than necessary since the only official way to install new apps was (and still is) via the Amazon Appstore installer. There are
+        Until recently, it was harder to use the WSA for development than necessary, since the only official way to install new apps was (and still is) via the Amazon Appstore installer. There are
         workarounds - everything from sideloading, installing Google Play manually (it's not included), or installing a 3rd-party launcher - all of which are time-consuming, and have varying degrees of difficulty.</p>
         <p className="card-text emphasized">
         If what you need is a
-        light-weight Android emulator for testing your React-Native apps, WSA Pacman makes loading and debugging easy.
+        light-weight Android emulator for testing your React-Native apps, you'll be happy to hear that WSA Pacman makes loading and debugging easy!
         </p> 
         <p className="card-text">
           WSA Pacman is an Android package manager for Windows with integrated VS Code debugging and a GUI app installer. You can download the executable installer from the latest release link on <a href="https://github.com/alesimula/wsa_pacman" className="link-primary">GitHub</a>. Here's a quick walk-thru to get you up and running.
@@ -150,7 +150,7 @@ export const Post01 = () => {
         If needed, just type 'rr' in the WSA window to reload the app.
       </p>
       <img className="card-img-top" src="media/post0112.png" alt="Card image" />
-
+      <h4 className="subtitle">Woo Hoo! You're up and running React Native on Windows! No muss, no fuss!</h4>
     </div>
   );
   return (

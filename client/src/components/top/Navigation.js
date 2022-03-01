@@ -78,6 +78,9 @@ export const Navigation = () => {
                 <Accordion.Header>Tech Blog Posts</Accordion.Header>
                 <Accordion.Body>
                   <Nav className="flex-column">
+                  <Nav.Link href="/post00" className="rounded-end">
+                    How to Setup a React Native Development Environment in Windows
+                    </Nav.Link>
                     <Nav.Link href="/post01" className="rounded-end">
                     How to use Windows Subsystem for Android to run React Native Apps
                     </Nav.Link>

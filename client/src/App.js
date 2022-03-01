@@ -36,7 +36,7 @@ export default function App() {
         </Row>
         <Row>
           <Col md={{ span: 7, offset: 3 }}>
-            <p className="p1">I do full-stack development</p>
+            <p className="p1">I do full-stack development.</p>
           </Col>
         </Row>
         <AnimateListTools />
