@@ -85,7 +85,7 @@ export const Navigation = () => {
                     How to use Windows Subsystem for Android to run React Native Apps
                     </Nav.Link>
                     <Nav.Link href="/post02" className="rounded-end">
-                      Use Sqlite 3 for Quick Database Emulation
+                    How to use React ForwardRef
                     </Nav.Link>
                     <Nav.Link href="/post03" className="rounded-end">
                       Authenticate with Passport
@@ -94,7 +94,7 @@ export const Navigation = () => {
                       MySQL vs PostgreSQL
                     </Nav.Link>
                     <Nav.Link href="/post04" className="rounded-end">
-                      React forwardRef
+                    Use Sqlite 3 for Quick Database Emulation
                     </Nav.Link>
                     <Nav.Link href="/post05" className="rounded-end">
                       Deployment Quick References
