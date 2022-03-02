@@ -118,13 +118,13 @@ export const TodosTable = ({
       <div>
         <Row className="todos-top-row">
           <Col align="center">
-            <button className="btn btn-primary" onClick={toggleModal}>
+            <button className="btn btn-secondary" onClick={toggleModal}>
               New Todo
             </button>
           </Col>
           <Col align="center">
             <button
-              className="btn btn-primary"
+              className="btn btn-secondary"
               onClick={(e) => handleAddToCalendar(selectedRow)}
               disabled={!select}
             >
@@ -133,7 +133,7 @@ export const TodosTable = ({
           </Col>
           <Col align="center">
             <button
-              className="btn btn-primary"
+              className="btn btn-secondary"
               onClick={(e) => handleDelete(selectedRow.id)}
               disabled={!select}
             >
