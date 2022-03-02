@@ -48,7 +48,7 @@ export const Navigation = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Accordion flush alwaysOpen defaultActiveKey="0">
+            <Accordion flush alwaysOpen defaultActiveKey={["0", "1", "2"]} >
               <Accordion.Item eventKey="0">
                 <Accordion.Header >Example Projects</Accordion.Header>
                 <Accordion.Body>
