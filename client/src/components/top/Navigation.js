@@ -88,7 +88,7 @@ export const Navigation = () => {
                     How to use React ForwardRef
                     </Nav.Link>
                     <Nav.Link href="/post03" className="rounded-end">
-                      Authenticate with Passport
+                      Authenticate with Passport Local
                     </Nav.Link>
                     <Nav.Link href="/post08" className="rounded-end">
                       MySQL vs PostgreSQL
