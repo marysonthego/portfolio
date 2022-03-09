@@ -20,14 +20,10 @@ export const RbCModal = ({
 
   const [modalEvent, setModalEvent] = useState(eventCurrent);
 
-  //let modalEvent = {...eventCurrent}; 
-
   console.log(`modalEvent: `, modalEvent);
 
   const handleStartDate = (date) => {
     let start = new Date(date);
-    // modalEvent.start = start;
-    // modalEvent.end = start;
     setModalEvent(prev => ({
       ...prev, start: start, end: start
     }))
@@ -38,7 +34,6 @@ export const RbCModal = ({
     setModalEvent(prev => ({
       ...prev, end: end
     }))
-    //modalEvent.end = end;
   };
 
   const handleUntilDate = (date) => {
@@ -47,7 +42,6 @@ export const RbCModal = ({
     setModalEvent(prev => ({
       ...prev, until: until
     }))
-    //modalEvent.until = until;
   };
 
   const handleSubmit = () => {
@@ -107,7 +101,6 @@ export const RbCModal = ({
       ...prev,
         [nam]: val
     }));
-    //modalEvent[nam] = val;
   };
 
   const handleBlur = (e) => {
@@ -167,7 +160,6 @@ export const RbCModal = ({
                         type="text"
                         id="category"
                         name="category"
-                        defaultValue={modalEvent.category}
                         onClick={handleFormSelect}
                         defaultValue={modalEvent.category || "Home"}
                         onChange={handleFormSelect}

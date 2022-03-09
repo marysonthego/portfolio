@@ -166,88 +166,8 @@ export const DataOwner = () => {
         //eventsFetchAll();
       })
     } catch(error) {console.error(`eventUpdate error ${error}`)};
-
-    // if (evt.interval > 0) {
-    //   let occurrenceId = 0;
-    //   if (evt.occurrenceId === 0) {
-    //     occurrenceId = evt.id;
-    //   } else {
-    //     occurrenceId = evt.occurrenceId;
-    //   }
-    //   eventOccurrencesFetch(evt);
-    // }
     eventsFetchAll();
   };
-
-  // const eventOccurrencesUpdate = async (evt) => {
-  //   //eventOccurrencesFetch({occId: evt.occurrenceId});
-  //   console.log(`eventOccurrences.length: `, eventOccurrences.length);
-  //   for (let i = 0; i < eventOccurrences.length; i++) {
-  //     console.log(`eventOccurrences: `, i, eventOccurrences[i]);
-  //     try {
-  //     await axios.post("/api/events/update", {
-  //       id: eventOccurrences[i].id,
-  //       start: eventOccurrences[i].start,
-  //       end: eventOccurrences[i].end,
-  //       until: eventOccurrences[i].until,
-  //       occurrenceId: evt.occurrenceId,
-  //       title: evt.title,
-  //       description: evt.description,
-  //       category: evt.category,
-  //       priority: evt.priority,
-  //       allDay: evt.allDay,
-  //       done: eventOccurrences[i].done,
-  //       interval: evt.interval,
-  //       every: evt.every,
-  //       Sun: evt.Sun,
-  //       Mon: evt.Mon,
-  //       Tue: evt.Tue,
-  //       Wed: evt.Wed,
-  //       Thu: evt.Thu,
-  //       Fri: evt.Fri,
-  //       Sat: evt.Sat,
-  //     });
-  //   } catch(error) {console.error(`eventOccurrencesUpdate error ${error}`)}
-  //   }
-  //   //eventsFetchAll();
-  // };
-
-  // const eventOccurrencesFetch = async (evt) => {
-  //   let occurrenceId = evt.occurrenceId;
-  //   try {
-  //   await axios
-  //     .post(`/api/events/recurring`, {
-  //       occurrenceId: occurrenceId
-  //     })
-  //     .then((res) => {
-  //       let results = res.data.map((obj) => ({
-  //         id: obj.id,
-  //         start: new Date(obj.start),
-  //         end: new Date(obj.end),
-  //         until: new Date(obj.until),
-  //         occurrenceId: obj.occurrenceid,
-  //         title: obj.title,
-  //         description: obj.description,
-  //         category: obj.category,
-  //         priority: obj.priority,
-  //         allDay: obj.allday,
-  //         done: obj.done,
-  //         interval: obj.interval,
-  //         every: obj.every,
-  //         Sun: obj.sun,
-  //         Mon: obj.mon,
-  //         Tue: obj.tue,
-  //         Wed: obj.wed,
-  //         Thu: obj.thu,
-  //         Fri: obj.fri,
-  //         Sat: obj.sat,
-  //       }));
-  //       eventOccurrences = [...results];
-  //       console.log(`eventOccurrences: `, eventOccurrences);
-  //       eventOccurrencesUpdate(evt);
-  //     })
-  //   } catch(error) { console.error(`eventOccurrencesFetch error ${error}`)};
-  // };
 
   const eventOccurrencesCreate = (newevt) => {
     let {...evt} = newevt;

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, {useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { AnimateListTools } from "components/top/ListTools";
+import {AnimateListTools} from "components/top/ListTools";
+import {MainPage} from "components/top/MainPage";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
@@ -40,6 +41,7 @@ export default function App() {
           </Col>
         </Row>
         <AnimateListTools />
+        <MainPage />
       </Container>
   );
 }

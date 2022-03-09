@@ -1,0 +1,69 @@
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	background: #003262;
+	padding: 15px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Main CSS */
+
+.container.grid-wrapper {
+	display: grid;
+  overflow: hidden;
+  margin-top: 0px;
+	grid-gap: 5px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  background:lightgray;
+	
+	
+}
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapper > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0px;
+}
+
+.grid-wrapper .wide {
+	grid-column: span 2;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.main-row {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid-wrapper {
+     justify-content: center;
+     align-items: center;
+     padding: 0px;
+   }
+   .container.grid-list {
+     width: 100%;
+   }
+}
