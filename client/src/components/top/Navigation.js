@@ -1,7 +1,6 @@
 import React, {useEffect, useLayoutEffect} from "react";
 import { useLocation } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
@@ -24,7 +23,7 @@ export const Navigation = () => {
 
   return (
     <Navbar bg="light" expand={false} sticky="top">
-      <Container fluid>
+      
         <Navbar.Brand href="/"> MarysOnTheGo.tech</Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -144,7 +143,7 @@ export const Navigation = () => {
             </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
-      </Container>
+    
     </Navbar>
   );
 };

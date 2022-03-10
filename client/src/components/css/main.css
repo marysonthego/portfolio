@@ -10,15 +10,41 @@ body {
 	padding: 15px;
 }
 img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	vertical-align: middle;
 	display: inline-block;
 }
 
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  padding: 10px;
+  margin: auto;
+  
+  width: 100%;
+  background:#f5de94;
+  }
+.grid img {
+  object-fit: fill;
+}
+.grid .wide {
+	grid-column: span 2;
+}
+.grid .tall {
+	grid-row: span 2;
+}
+.grid .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
 /* Main CSS */
 
-.container.grid-wrapper {
+div .container.grid-wrapper {
 	display: grid;
   overflow: hidden;
   margin-top: 0px;
@@ -30,15 +56,11 @@ img {
 	
 	
 }
-.grid-wrapper > div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.grid-wrapper > img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+
+img .grid-wrapper {
+  width: 100%;
+  height: 100%;
+	object-fit: contain;
 	border-radius: 0px;
 }
 
