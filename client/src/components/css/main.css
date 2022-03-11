@@ -1,91 +1,95 @@
-/* Reset CSS */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+.container, div.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background:#ffffff;
 }
-html,
-body {
-	background: #003262;
-	padding: 15px;
-}
-img {
-	width: 100%;
-	height: auto;
-	vertical-align: middle;
-	display: inline-block;
+
+div.row {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  justify-content: left;
+  max-width: 100vw;
+  max-height:fit-content;
 }
 
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  grid-gap: 10px;
-  align-items: start;
+  align-items: center;
   justify-items: center;
-  padding: 10px;
-  margin: auto;
-  
-  width: 100%;
-  background:#f5de94;
-  }
-.grid img {
-  object-fit: fill;
+  row-gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 100%;
+  background:#f3c666;
 }
+
+.grid .even {
+  background:#003262;
+}
+
+  img.grid {
+  object-fit: cover;
+}
+
 .grid .wide {
 	grid-column: span 2;
 }
+
 .grid .tall {
 	grid-row: span 2;
 }
+
 .grid .big {
 	grid-column: span 2;
 	grid-row: span 2;
 }
 
-/* Main CSS */
-
-div .container.grid-wrapper {
-	display: grid;
-  overflow: hidden;
-  margin-top: 0px;
-	grid-gap: 5px;
-  align-items: center;
-  justify-items: center;
-  width: 100%;
-  background:lightgray;
-	
-	
+img {
+	max-width: 100vw;
+	max-height: 100vh;
+	vertical-align: middle;
+	display: inline-block;
 }
 
-img .grid-wrapper {
-  width: 100%;
-  height: 100%;
-	object-fit: contain;
-	border-radius: 0px;
+div.toprow {
+  background-image: url("../../media/leapingcat.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
-.grid-wrapper .wide {
-	grid-column: span 2;
-}
-.grid-wrapper .tall {
-	grid-row: span 2;
-}
-.grid-wrapper .big {
-	grid-column: span 2;
-	grid-row: span 2;
-}
-
-.main-row {
-  width: 100%;
+img.topimage {
+  margin-top: 0%;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  vertical-align: top;
 }
 
 @media (min-width: 768px) {
-  .grid-wrapper {
+  .grid {
+     grid-template-columns: 50% 50%;
      justify-content: center;
      align-items: center;
      padding: 0px;
    }
-   .container.grid-list {
-     width: 100%;
+   div.toprow {
+     width: 100vw;
+     height: 100vh;
    }
 }

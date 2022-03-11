@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, {useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { AnimateListTools } from "components/top/ListTools";
-import { MainPage } from "components/top/MainPage";
+import {AnimateListTools} from "components/top/ListTools";
+import {MainPage} from "components/top/MainPage";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
@@ -18,7 +16,6 @@ export default function App() {
   }, [location]);
 
   return (
-    <>
       <Container
         fluid
         overflow="hidden"
@@ -31,19 +28,7 @@ export default function App() {
         align-content="space-evenly"
         align-items="center"
       >
-        <Row>
-          <Col md={{ span: 6, offset: 1 }}>
-            <p className="p1"><b>Hi!</b> My name is Mary.</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={{ span: 7, offset: 3 }}>
-            <p className="p1">I do full-stack development.</p>
-          </Col>
-        </Row>
-        <AnimateListTools />
+        <MainPage />
       </Container>
-      <MainPage />
-    </>
   );
 }

@@ -12,7 +12,6 @@
   text-align: left;
   text-overflow: ellipsis;
   background: #FFE8B1;
-
 }
 
 .custom-header {
@@ -42,3 +41,37 @@
   text-align: right;
   margin-top: 5px;
 }
+
+.react-bootstrap-table {
+  overflow-x: auto;
+}
+
+.react-bootstrap-table {
+  th {
+    outline: none;
+   
+    &.sortable {  
+      .svg-icon-sort {
+        opacity: 0;
+      }
+  
+      &:hover {
+        cursor: pointer;
+
+        .svg-icon-sort {
+          opacity: 1;
+        }
+      }
+    }    
+  }
+  .table.table-head-custom thead tr {
+    .sortable-active {
+        color: #003262 !important;
+    }
+  }
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+

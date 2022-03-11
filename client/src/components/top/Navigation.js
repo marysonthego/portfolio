@@ -22,9 +22,12 @@ export const Navigation = () => {
   }, [location]);
 
   return (
-    <Navbar bg="light" expand={false} sticky="top">
+    <Navbar expand={false} sticky="top">
       
-        <Navbar.Brand href="/"> MarysOnTheGo.tech</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src="media/mtsy3.png" alt="marysonthego.tech" className="nav"/>
+            marysonthego.tech
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"

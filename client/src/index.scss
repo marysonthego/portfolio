@@ -10,35 +10,58 @@
 
 
 @import './components/css/main.css';
+@import './components/css/listtools.css';
 @import './components/css/formstyles.css';
 @import './components/css/styles.css';
 @import './components/css/tablestyles.css';
 @import './components/css/weatherstyles.css';
 @import './components/css/modal.css';
 @import './components/css/cards.scss';
+@import './components/css/navigation.css';
 @import './App.scss';
 
-.example-highlight > pre {
-  background: none transparent !important;
-  margin: 0 !important;
-  padding-top: 0.5rem; 
-  code { 
-      overflow-y: auto;
-      display: block;
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: "Nunito", sans-serif ;
+}
+html, body {
+	background: #ffffff;
+	padding: 0px;
+}
 
-      span {
-        background: none transparent !important;
-      }
-  }
+body {
+  min-height:auto;
+  margin-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  font-family: "Nunito", sans-serif ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  background-color:#003262;
+  background-size: cover;
+  background-position: top;
+  min-height:auto;
+  position: relative;
 }
 
 .json > pre {
   background: none #fff !important;
-
 }
 
 .example-code > .json {
   background: none #fff !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    monospace;
 }
 
 .symbol.symbol-45 > svg {
@@ -47,62 +70,8 @@
   height: 45px;
 }
 
-.react-bootstrap-table {
-  overflow-x: auto;
-}
-
-.react-bootstrap-table {
-  th {
-    outline: none;
-   
-    &.sortable {  
-      .svg-icon-sort {
-        opacity: 0;
-      }
-  
-      &:hover {
-        cursor: pointer;
-
-        .svg-icon-sort {
-          opacity: 1;
-        }
-      }
-    }    
-  }
-
-  .table.table-head-custom thead tr {
-    .sortable-active {
-        color: $primary !important;
-    }
-  }
-}
-
-.cursor-default {
-  cursor: default !important;
-}
-
 .display-block {
   display: block;
-}
-
-
-* {
-  font-family: "Nunito", sans-serif ;
-  }
-
-body {
-  min-height:auto;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: "Nunito", sans-serif ;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas,
-    monospace;
 }
 
 .ScrollToTop {

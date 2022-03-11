@@ -1,0 +1,76 @@
+div.flex-column.navbar-nav {
+  width: 50%;
+}
+
+.navbar {
+  padding-right: 20px;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  background: #ffffff;
+  background: linear-gradient(180deg,#ffffff 0%, rgba(151,236,203,0.34) 90%);
+background: -webkit-linear-gradient(180deg,#ffffff 0%, rgba(151,236,203,0.34) 90%);
+background: -moz-linear-gradient(180deg,#ffffff 0%, rgba(151,236,203,0.34) 90%);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+  color: #db1326;
+  font-weight: 200;
+  font-size: 18px;
+  background: transparent;
+}
+
+.navbar-light .navbar-toggler {
+  color: #57585a;
+  border-color: #57585a;
+}
+
+.navbar-toggler:hover {
+  color: #57585a box-shadow 0 0 0 0.25rem;
+}
+
+img.nav {
+  width: 24px;
+  height: 36px;
+  margin-left: 40px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+a.nav-link {
+  font-family: "Nunito", sans-serif;
+  color: #57585a;
+  transition: font-weight 1s;
+}
+
+a.nav-link:hover {
+  font-weight: 800;
+  color: #003262;
+}
+
+a.nav-link:focus {
+  background-color: #e5e5e5;
+  box-shadow: 0 0 0 0.15rem #00000026;
+}
+
+a.nav-link:active,
+a.nav-link:focus {
+  font-weight: 800;
+  color: #003262;
+}
+
+.form-control:focus {
+  border-color: #2b2c2e;
+  box-shadow: 0 0 0 0.25rem #00000026;
+}
+
+.navbar-toggler:hover {
+  box-shadow: 0 0 0 0.25rem;
+}
+
+.btn-close:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #00000026;
+  opacity: 1;
+}

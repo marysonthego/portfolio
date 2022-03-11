@@ -12,8 +12,8 @@ export function AnimateListTools() {
           <p className="p2a">these are some of my favorite tools...</p>
         </Col>
       </Row>
-      <Container className="grid-list">
-        <Row className="row-cols-sm-3 row-cols-md-12 logo-row grid-list">
+      <Container fluid className="grid-list">
+        <Row className="row-cols-sm-3 row-cols-md-12 grid-list">
           <Image
             fluid={false}
             src="media/react.png"

@@ -1,0 +1,123 @@
+
+.grid-list.container-fluid {
+  display: grid;
+  width: 100%;
+  background:transparent;
+}
+
+img.list-logo.rounded-circle, img.grid-list{
+  max-width: 100%;
+  padding: 0px;
+  margin: 10px;
+  width: 36px;
+  height: 36px;
+}
+
+.list-logo {
+  height: 48px;
+  width: 48px;
+  background:#fdb515;
+}
+
+.list-logo:hover {
+  transform: scale3d(1.5, 1.5, 0.5);
+  background:#c4820e;
+} 
+
+@media (prefers-reduced-motion: no-preference) {
+  .list-logo {
+    animation-name:  list-logo-slidein,  list-logo-spin;
+    animation-iteration-count: 1;
+    animation-duration: 2s, 4s;
+    animation-timing-function: ease;
+    transition: transform 1s;
+  }
+}
+
+.p1, .p1a {
+  font-family: "Nunito";
+  color: #3a3e41;
+  font-size: 300%;
+  margin-top: 5%;
+}
+
+.p1a {
+  animation-duration: 5s;
+  animation-name: slideinp2;
+}
+
+.p2, .p2a {
+  font-family: "Nunito";
+  color: #c40e0e;
+  font-size: 200%;
+}
+
+.p2a {
+  animation-duration: 4s;
+  animation-name: slideinp2;
+}
+
+@media (min-width: 768px) {
+ img.list-logo.rounded-circle, img.grid-list{
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+    width: 96px;
+    padding: 0px;
+  }
+
+  .p1a {
+    animation-duration: 5s;
+    animation-name: slidein;
+  }
+  .p2a {
+    animation-name: slideinp2;
+    animation-duration: 4s;
+  }
+}
+
+@keyframes  list-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes  list-logo-slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  75% {
+    font-size: 600%;
+    margin-left: 40%;
+    width: 150%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideinp2 {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
