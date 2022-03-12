@@ -1,6 +1,5 @@
 import react from "react";
 import Container from "react-bootstrap/Container";
-import "components/css/cards.scss";
 
 export const Post00 = () => {
   let TopPic = "media/reactnativetop.png";

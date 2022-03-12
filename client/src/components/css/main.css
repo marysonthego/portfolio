@@ -7,7 +7,7 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background:#ffffff;
+  background:#003262;
 }
 
 div.row {
@@ -15,16 +15,16 @@ div.row {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  justify-content: left;
+  justify-content: center;
   max-width: 100vw;
   max-height:fit-content;
 }
 
 .grid { 
   display: grid;
+  width: 100vw;
   align-items: center;
   justify-items: center;
-  row-gap: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -33,16 +33,7 @@ div.row {
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  max-width: 100%;
-  background:#f3c666;
-}
-
-.grid .even {
-  background:#003262;
-}
-
-  img.grid {
-  object-fit: cover;
+  background: #003262;
 }
 
 .grid .wide {
@@ -78,18 +69,92 @@ img.topimage {
   padding-top: 0%;
   padding-left: 0%;
   padding-right: 0%;
-  vertical-align: top;
 }
 
 @media (min-width: 768px) {
   .grid {
      grid-template-columns: 50% 50%;
-     justify-content: center;
-     align-items: center;
-     padding: 0px;
    }
    div.toprow {
      width: 100vw;
      height: 100vh;
    }
 }
+
+.image-container {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom:30px;
+  object-fit: cover;
+  padding: 0px;
+}
+
+.blue {
+  outline: 20px solid  #3b7ea1;
+}
+
+.yellow {
+  outline: 20px solid  #c4820e;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.image-container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.blur {filter: blur(4px);}
+.brightness {filter: brightness(250%);}
+.contrast {filter: contrast(180%);}
+.grayscale {filter: grayscale(100%);}
+.huerotate {filter: hue-rotate(180deg);}
+.invert {filter: invert(100%);}
+.opacity {filter: opacity(50%);}
+.saturate {filter: saturate(2);}
+.sepia {filter: sepia(100%);}
+.shadow {filter: drop-shadow(8px 8px 10px rgb(147, 150, 147));}

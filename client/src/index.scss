@@ -16,7 +16,7 @@
 @import './components/css/tablestyles.css';
 @import './components/css/weatherstyles.css';
 @import './components/css/modal.css';
-@import './components/css/cards.scss';
+@import './components/css/posts.scss';
 @import './components/css/navigation.css';
 @import './App.scss';
 
@@ -62,6 +62,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas,
     monospace;
+  color:cyan
 }
 
 .symbol.symbol-45 > svg {

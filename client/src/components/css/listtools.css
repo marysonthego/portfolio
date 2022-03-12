@@ -28,7 +28,8 @@ img.list-logo.rounded-circle, img.grid-list{
   .list-logo {
     animation-name:  list-logo-slidein,  list-logo-spin;
     animation-iteration-count: 1;
-    animation-duration: 2s, 4s;
+    animation-duration: 5s, 6s;
+    animation-delay: 3s;
     animation-timing-function: ease;
     transition: transform 1s;
   }
@@ -43,17 +44,19 @@ img.list-logo.rounded-circle, img.grid-list{
 
 .p1a {
   animation-duration: 5s;
+  animation-delay: 2s;
   animation-name: slideinp2;
 }
 
 .p2, .p2a {
   font-family: "Nunito";
-  color: #c40e0e;
+  color: #db1326;
   font-size: 200%;
 }
 
 .p2a {
-  animation-duration: 4s;
+  animation-duration: 6s;
+  animation-delay: 5s;
   animation-name: slideinp2;
 }
 
@@ -64,15 +67,6 @@ img.list-logo.rounded-circle, img.grid-list{
     height: 96px;
     width: 96px;
     padding: 0px;
-  }
-
-  .p1a {
-    animation-duration: 5s;
-    animation-name: slidein;
-  }
-  .p2a {
-    animation-name: slideinp2;
-    animation-duration: 4s;
   }
 }
 

@@ -7,9 +7,9 @@ div.flex-column.navbar-nav {
   margin-bottom: 0%;
   padding-bottom: 0%;
   background: #ffffff;
-  background: linear-gradient(180deg,#ffffff 0%, rgba(151,236,203,0.34) 90%);
-background: -webkit-linear-gradient(180deg,#ffffff 0%, rgba(151,236,203,0.34) 90%);
-background: -moz-linear-gradient(180deg,#ffffff 0%, rgba(151,236,203,0.34) 90%);
+  background: linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.5) 90%);
+background: -webkit-linear-gradient(180deg,#ffffff 0%, #78baf3 90%);
+background: -moz-linear-gradient(180deg,#ffffff 0%, #78baf3 90%);
 }
 
 .navbar-light .navbar-brand,
@@ -73,4 +73,9 @@ a.nav-link:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem #00000026;
   opacity: 1;
+}
+
+.accordion-flush .accordion-item .accordion-button:focus {
+  border-color:#2b2c2e;
+  box-shadow: 0 0 0 0.25rem  rgba(23,23,24,0.25);
 }

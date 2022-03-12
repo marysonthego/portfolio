@@ -1,5 +1,5 @@
 import React, {useEffect, useLayoutEffect} from "react";
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import Form from "react-bootstrap/Form";

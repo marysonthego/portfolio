@@ -1,22 +1,21 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-
 div.grid.container {
   display: grid !important;
   grid-template-columns: 1fr;
   grid-template-rows:auto;
   margin-bottom: 20px;
+  color: white;
 }
 
 @media (min-width: 768px) {
   div.grid.container {
     display: grid !important;
+    padding-top: 5%;
     grid-template-columns: 1fr 6fr 1fr ;
     grid-template-rows:auto;
     margin-bottom: 20px;
   }
 }
 img.card-img-top {
-  max-width: 1024px;
   text-align: center;
 
 }
@@ -25,25 +24,32 @@ h3.card-title {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
+  color:#e7e5e5;
 }
 h4.subtitle {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  color:#e7e5e5;
 }
 
 p.card-text {
   margin-bottom: 1rem;
   text-align: justify;
   font-size: 16px;
-  color:#000000;
+  color:#e7e5e5;
 }
 
 p.card-text.emphasized {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 24px;
+  color:#e7e5e5;
+}
+
+.link-primary {
+  color:aqua;
 }
 
 pre {
-  color: #000000;
+  color:aqua;
 }
