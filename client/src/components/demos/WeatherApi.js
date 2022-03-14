@@ -21,10 +21,10 @@ export const WeatherApi = () => {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
       });
-      setLat(40.45454);
-      setLong(-105.08668);
-      console.log(`lat`, lat);
-      console.log(`long`, long);
+      // setLat(40.45454);
+      // setLong(-105.08668);
+      // console.log(`lat`, lat);
+      // console.log(`long`, long);
       try {
         await fetch(
           `${process.env.REACT_APP_API_URL}/onecall?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`
@@ -55,13 +55,47 @@ export const WeatherApi = () => {
       justify-items="center"
     >
       <h2 className="top">OpenWeather API</h2>
-      <div className="card mb-3" style={{ maxWidth: "100%" }}>
+
+      <div className="post-body">
+              <p className="post-text">
+                This is a responsive ReactJS app. On devices wider than 768
+                pixels a Bootstrap 5 horizontal post displays
+                the weather component. On smaller devices, it appears in a vertical
+                post component.
+              </p>
+              <p className="post-text">
+                Weather information is obtained by querying the OpenWeather API.
+                The geolocation for the query is obtained from your
+                browser. You might get surprising results depending on where
+                your browser thinks you are! This could happen if location
+                services are turned off on the device, or if you are using a
+                VPN. A nice addition to this app would be to prompt the user for
+                their location, or even allow users to track several locations at once.
+              </p>
+              <p className="post-text">
+                The heavy lifting happens in a useEffect hook that
+                listens for changes to latitude or longitude. When the effect is
+                triggered, it calls an asynchronous fetch() to the OpenWeather
+                API and populates the display with the results. You can use the refresh button
+                in the upper-right corner to initiate a new fetch() request any time you want.
+              </p>
+              <p className="post-text">
+                I've noticed that the first request to the OpenWeather API
+                frequently returns a 400 (bad request) error, so be sure to
+                check for a successful network response in your code before you populate the
+                post component with data. Actually, this is good advice any time
+                you are working with an API!
+              </p>
+              <p></p>
+              
+            </div>
+
+      <div className="post mb-3" style={{ maxWidth: "100%" }}>
         <div className="row g-0">
           <div className="col-md-4">
             {typeof weatherData.current !== "undefined" ? (
               <>
                 <div className="main">
-                  <div className="card-body">
                     <div className="top header flex">
                       {weatherData.timezone}
                       <Button
@@ -121,55 +155,24 @@ export const WeatherApi = () => {
                       {weatherData.current.weather[0].description}
                     </p>
                   </div>
-                </div>
+              
               </>
             ) : (
               <div></div>
             )}
           </div>
           <div className="col-md-8">
-            <div className="card-body">
-              <p className="card-text">
-                This is a responsive ReactJS app. On devices wider than 768
-                pixels a Bootstrap 5 horizontal card displays
-                the weather component. On smaller devices, it appears in a vertical
-                card component.
-              </p>
-              <p className="card-text">
-                Weather information is obtained by querying the OpenWeather API.
-                The geolocation for the query is obtained from your
-                browser. You might get surprising results depending on where
-                your browser thinks you are! This could happen if location
-                services are turned off on the device, or if you are using a
-                VPN. A nice addition to this app would be to prompt the user for
-                their location, or even allow users to track several locations at once.
-              </p>
-              <p className="card-text">
-                The heavy lifting happens in a useEffect hook that
-                listens for changes to latitude or longitude. When the effect is
-                triggered, it calls an asynchronous fetch() to the OpenWeather
-                API and populates the display with the results. You can use the refresh button
-                in the upper-right corner to initiate a new fetch() request any time you want.
-              </p>
-              <p className="card-text">
-                I've noticed that the first request to the OpenWeather API
-                frequently returns a 400 (bad request) error, so be sure to
-                check for a successful network response in your code before you populate the
-                card component with data. Actually, this is good advice any time
-                you are working with an API!
-              </p>
-              <p></p>
-              <Image
+          <Image
                 fluid={true}
                 rounded={true}
                 src="media/weatheruseeffect.png"
                 title="Weather useEffect"
                 alt="Weather useEffect code"
               />
-            </div>
+              </div>
+            
           </div>
         </div>
-      </div>
     </Container>
   );
 };

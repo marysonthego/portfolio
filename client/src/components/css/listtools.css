@@ -28,10 +28,10 @@ img.list-logo.rounded-circle, img.grid-list{
   .list-logo {
     animation-name:  list-logo-slidein,  list-logo-spin;
     animation-iteration-count: 1;
-    animation-duration: 5s, 6s;
-    animation-delay: 3s;
+    animation-duration: 2s, 5s;
+    animation-delay: 1s;
     animation-timing-function: ease;
-    transition: transform 1s;
+    transition: transform 2s;
   }
 }
 
@@ -44,7 +44,7 @@ img.list-logo.rounded-circle, img.grid-list{
 
 .p1a {
   animation-duration: 5s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-name: slideinp2;
 }
 
@@ -55,8 +55,8 @@ img.list-logo.rounded-circle, img.grid-list{
 }
 
 .p2a {
-  animation-duration: 6s;
-  animation-delay: 5s;
+  animation-duration: 5s;
+  animation-delay: 1s;
   animation-name: slideinp2;
 }
 
@@ -81,10 +81,13 @@ img.list-logo.rounded-circle, img.grid-list{
 
 @keyframes  list-logo-slidein {
   from {
-    margin-left: 100%;
+    margin-bottom: 100%;
+  }
+  30% {
+    margin-bottom: 70%
   }
   to {
-    margin-left: 0%;
+    margin-bottom: 0%;
   }
 }
 
@@ -108,10 +111,12 @@ img.list-logo.rounded-circle, img.grid-list{
   from {
     margin-left: 100%;
     width: 300%;
+    color: transparent;
   }
   to {
     margin-left: 0%;
     width: 100%;
+    color: #db1326;
   }
 }
 

@@ -7,18 +7,23 @@ div.flex-column.navbar-nav {
   margin-bottom: 0%;
   padding-bottom: 0%;
   background: #ffffff;
-  background: linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.5) 90%);
-background: -webkit-linear-gradient(180deg,#ffffff 0%, #78baf3 90%);
-background: -moz-linear-gradient(180deg,#ffffff 0%, #78baf3 90%);
+  background: linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.8) 90%);
+background: -webkit-linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.8) 90%);
+background: -moz-linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.8) 90%);
 }
 
 .navbar-light .navbar-brand,
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover {
+.navbar-light {
   color: #db1326;
   font-weight: 200;
   font-size: 18px;
-  background: transparent;
+  
+}
+
+.navbar-light .navbar-brand:focus, 
+.navbar-light .navbar-brand:hover {
+  color: #db1326;
+  font-weight:500;
 }
 
 .navbar-light .navbar-toggler {
@@ -34,6 +39,7 @@ img.nav {
   width: 24px;
   height: 36px;
   margin-left: 40px;
+  padding-right: 5px;
   vertical-align: middle;
   display: inline-block;
 }

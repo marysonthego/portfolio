@@ -1,5 +1,6 @@
 import react from "react";
-import Container from "react-bootstrap/Container";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {tomorrowNightBlue} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const Post03 = () => {
   let TopPic = "media/post03top.png";
@@ -7,8 +8,8 @@ export const Post03 = () => {
     "Local Authentication with Passport";
 
     
-let codeSection1 = String.raw`
-"dependencies": {
+let codeSection1 = 
+`"dependencies": {
   "bcrypt": "^5.0.1",
   "body-parser": "^1.19.0",
   "compression": "^1.7.4",
@@ -24,8 +25,7 @@ let codeSection1 = String.raw`
 },
 `;
 
-  let codeSection2 = String.raw`
-  const path = require('path'); 
+  let codeSection2 = `const path = require('path'); 
   require("dotenv").config(); 
   const express = require("express"); 
   const server = express(); 
@@ -73,8 +73,9 @@ let codeSection1 = String.raw`
   });
 
   // passport login 
-  app.post("/api/login", passport.authenticate("local"), function (req, res) { 
-    // If this function gets called, authentication was successful. 
+  app.post("/api/login", passport.authenticate("local"), 
+  function (req, res) { 
+  // If this function gets called, authentication was successful. 
     // \`req.user\` contains the authenticated user. 
     let msg = { 
       custid: req.user.custid, 
@@ -89,12 +90,14 @@ let codeSection1 = String.raw`
       zip: req.user.zip, 
       usertype: req.user.usertype 
     }; 
-    console.error(\`\n\nreq.session.passport.user: \`, req.session.passport.user); 
+    console.error(\`\nreq.session.passport.user: \`,
+     req.session.passport.user); 
     return res.status(200).json({ msg }); 
   });
 
   // if authenticated by passport return the customer object 
-  app.get("/api/isAuthenticated", checkAuthenticated, (req, res) => { 
+  app.get("/api/isAuthenticated", 
+  checkAuthenticated, (req, res) => { 
     let msg = { 
       custid: req.user.custid, 
       firstname: req.user.firstname, 
@@ -108,7 +111,8 @@ let codeSection1 = String.raw`
       zip: req.user.zip, 
       usertype: req.user.usertype 
     }; 
-    console.error(\`\n\nisAuthenticated req.session.passport.user: \`, req.session.passport.user); 
+    console.error(\`\nisAuthenticated req.session.passport.user: \`,
+     req.session.passport.user); 
     console.error(\`\n\nisAuthenticated msg: \`, msg); 
     
   return res.status(200).json({ msg });  
@@ -118,11 +122,13 @@ let codeSection1 = String.raw`
   app.get('/api/logout', function (req, res) { 
     console.error(\`\n logout: \`, req); 
     req.logout(); 
-    res.status(200).clearCookie('connect.sid', { path: '/' }).json({ status: "Success" }); 
+    res.status(200).clearCookie('connect.sid', 
+    { path: '/' }).json({ status: "Success" }); 
     req.session.destroy(function (err) { 
       if (!err) 
       { 
-        res.status(200).clearCookie('connect.sid', { path: '/' }).json({ status: "Success" }); 
+        res.status(200).clearCookie('connect.sid', 
+        { path: '/' }).json({ status: "Success" }); 
         res.redirect('/'); 
       } else 
       { 
@@ -151,15 +157,22 @@ let codeSection1 = String.raw`
         usertype, 
       } = req.body; 
 
-  //Request comes in with password entered by the user in clear-text (pwd)
+  //Request comes in with password entered by the user in clear-text 
   //Then hashed by bcript.
   //Save the hashed password in the database
 
       let hashedpwd = await bcrypt.hash(pwd, saltRounds); 
       usertype = "customer";
       //insert new Customer 
-      let sql = 'INSERT INTO customer (firstname, lastname, email, cell, addr1, addr2, city, st, zip, pwd, usertype) VALUES (?,?,?,?,?,?,?,?,?,?,?)'; 
-      pool.execute(sql, [firstname, lastname, email, cell, addr1, addr2, city, st, zip, hashedpwd, usertype], (error, results) => { 
+      let sql = 'INSERT INTO customer 
+      (firstname, lastname, email, cell, 
+        addr1, addr2, city, st, zip, 
+        pwd, usertype) 
+        VALUES (?,?,?,?,?,?,?,?,?,?,?)'; 
+      pool.execute(sql, [firstname, lastname, 
+        email, cell, addr1, addr2, city, 
+        st, zip, hashedpwd, usertype], 
+        (error, results) => { 
         if (error) throw error; 
         res.status(200).json(results); 
       }); 
@@ -208,8 +221,12 @@ let codeSection1 = String.raw`
         const hashedPwd = await bcrypt.hash(pwd, saltRounds);
 
         //update existing Customer with NEW password 
-        console.error(\`\nUpdate with new password. req.body: \`, req.body); 
-        let sql = 'UPDATE customer SET firstname = ?, lastname = ?, email = ?, cell = ?, addr1 = ?, addr2 = ?, city = ?, st = ?, zip = ?, usertype = ?, pwd = ? WHERE custid = ?'; 
+        console.error(\`\nUpdate with new password. 
+        req.body: \`, req.body); 
+        let sql = 'UPDATE customer SET firstname = ?, 
+        lastname = ?, email = ?, cell = ?, 
+        addr1 = ?, addr2 = ?, city = ?, st = ?, 
+        zip = ?, usertype = ?, pwd = ? WHERE custid = ?'; 
         pool.execute(sql, [firstname, 
         lastname, 
         email, 
@@ -227,7 +244,10 @@ let codeSection1 = String.raw`
         }) 
       } else { 
         //update customer with EXISTING password 
-        let sql = 'UPDATE customer SET firstname = ?, lastname = ?, email = ?, cell = ?, addr1 = ?, addr2 = ?, city = ?, st = ?, zip = ?, usertype = ? WHERE custid = ?'; 
+        let sql = 'UPDATE customer SET firstname = ?, 
+        lastname = ?, email = ?, cell = ?, 
+        addr1 = ?, addr2 = ?, city = ?, st = ?, 
+        zip = ?, usertype = ? WHERE custid = ?'; 
         pool.execute(sql, [firstname, 
           lastname, 
           email, 
@@ -250,12 +270,14 @@ let codeSection1 = String.raw`
   //Any other regular database queries you need
 //...
 
-//Add this below all the other queries, near the end of the file
+//Add this below all the other queries, 
+//near the end of the file
 function checkAuthenticated (req, res, next) { 
   if (req.isAuthenticated()) 
   { 
     console.error(\`\ncheckAuthenticated res: \`, res); 
-    console.error(\`\n\nreq.session.passport.user:\`, req.session.passport.user); 
+    console.error(\`\n\nreq.session.passport.user:\`, 
+    req.session.passport.user); 
     return next(); 
   } 
   res.status(401).json("not authenticated"); 
@@ -274,11 +296,14 @@ server.get('/*', (req, res) =&gt; {
 
 //Statement to start your Node server
 server.listen(PORT, () => { 
-  console.error(\`CORS disabled. Running mySQL on port $\{PORT\} NODE_ENV = ${process.env.NODE_ENV}\n\`); 
+  console.error(\`CORS disabled. 
+  Running mySQL on port $\{PORT\} 
+  NODE_ENV = ${process.env.NODE_ENV}\n\`); 
 });  
-  `;
+`;
 
-let codeSection3 = String.raw`const LocalStrategy = require("passport-local").Strategy;
+let codeSection3 =`const LocalStrategy = 
+require("passport-local").Strategy;
 const { pool } = require("./dbConfig.mysql");
 const bcrypt = require("bcrypt");
 
@@ -304,7 +329,8 @@ function initialize(passport) {
               message: "Missing password in database",
             });
           }
-          bcrypt.compare(pwd, email.pwd, function (err, isMatch) {
+          bcrypt.compare(pwd, email.pwd, 
+            function (err, isMatch) {
             if (err) {
               return done(err);
             }
@@ -318,7 +344,8 @@ function initialize(passport) {
             }
           });
         } else {
-          return done(null, false, { message: "Missing email or password" });
+          return done(null, false, 
+            { message: "Missing email or password" });
         }
       }
     );
@@ -340,7 +367,8 @@ function initialize(passport) {
   });
 
   passport.deserializeUser((id, done) => {
-    pool.query(\`SELECT * from customer WHERE custid = $1\`, [id], (err, results) => {
+    pool.query(\`SELECT * from customer WHERE custid = $1\`,
+    [id], (err, results) => {
       if (err) {
         throw err;
       }
@@ -353,90 +381,108 @@ function initialize(passport) {
 module.exports = initialize;
 `;
 
-  let Section1 = (
+  let Text1 = (
     <div>
-      <p className="card-text">
+      <p className="post-text">
       <a href="https://www.passportjs.org/" className="link-primary">Passport</a> is authentication software for Node JS. You implement it as Node JS middleware. Middleware is software running on Node that intercepts browser requests to Node and, in this case, performs authentication. If authentication is successful, it allows the request to pass on to Node proper. Otherwise, it responds to the browser letting it know that authentication failed.
       </p>
-      <p className="card-text">
+      <p className="post-text">
     Passport is very flexible. It supports over 500 different authentication strategies. A  <a href="https://www.passportjs.org/packages/" className="link-primary">strategy</a> is an API that communicates with an authenticator that is remote from the Node server where Passport is running. For example, it supports authenticating remotely via Facebook, Twitter, Google, and many specific internet sites. It also supports a local authentication strategy - which is what I'm going to show you how to set up today.
     </p>
-    <p className="card-text">
+    <p className="post-text">
     The local strategy expects the user names and passwords to be stored locally in your database. The password is encrypted before it is stored, and I'll show you how to do that too.  When authentication is successful, the local strategy creates a session token that is stored as a cookie in the browser. It uniquely identifies the logged-in user, the browser they are using, the server they are connected to, and almost always specifies a maximum time the token is valid. The cookie is encrypted before it is sent to the browser, and stored on the browser that way too. 
     </p>
-    <p className="card-text">
+    <p className="post-text">
     The whole point of authentication strategies is to make it convenient for users to use your website. If you couldn't store a user's authentication status anywhere, the user would have to enter their user name and password every time they made a secured request to the server. How tedious that would be! Passport has a reputation for being complicated, but that's mainly due to the details missing from their official documentation. You can find help for all these things on the internet, but I want to save you the trouble of having to do a bunch of searches yourself - especially since the internet is full of wrong and conflicting information! What I'm going to show you is what I use in my example project Admin Dashboard.
     </p>
-    <p className="card-text">
+    <p className="post-text">
     I'm skipping over the steps for starting from ground-zero. You should already have Node/npm installed, and MySql installed with your schema set up for your application. Since you're interested in authentication, you probably already have a user table where you store usernames and passwords. The only thing you might not already have in your MySql schema is a place to store the user's encrypted password. 
     </p>
-    <p className="card-text">
+    <p className="post-text">
     <b>Never store passwords in clear text in a database!</b> It's unlikely, but if you're already authenticating users by simply validating their password against a clear-text password field, you should delete the users from your database, drop the clear-text password column, and require them to create a new account the next time they log in. 
     </p>
-    <p className="card-text">
+    <p className="post-text">
     What you want is a column in your user table configured as a simple char(200) datatype. There's nothing fancy about creating a column to store an encrypted password.  It's just a very long text field. 200 characters is more than enough. You do not have to tell MySql the column is encrypted - in fact don't. MySql will not be doing any of the encryption. We will use  <a href="https://www.npmjs.com/package/bcrypt" className="link-primary">Bcrypt</a> for that.
     </p>
-    <p className="card-text">
+    <p className="post-text">
     This is the dependency list from my package.json for the Node/Express server. You need to install these packages with npm or yarn.
     </p>
     </div>
   );
 
-  let Section2 = (
+  let Text2 = (
     <div>
-    <p className="card-text">
+    <p className="post-text">
     This is part of my app.js file for Express. I changed the name to app.mysql.js because the application is also implemented in PostgreSQL.  Doing it this way I can quickly swap the application from MySql to PostgreSQL on a restart by using the appropriate start script.   
     </p>
-    <p className="card-text">
+    <p className="post-text">
     The Passport documentation explains the order in which the Passport middleware must be implemented.
 	  In a Connect or Express-based application, passport.initialize() middleware is required first to initialize Passport. 
     </p>
-    <p className="card-text">
+    <p className="post-text">
   	If your application   uses persistent login sessions (ours does), passport.session() middleware must be installed next.
     </p>
-    <p className="card-text">
+    <p className="post-text">
     In a typical web application, the credentials used to authenticate a user will only be transmitted during the login request. If authentication succeeds, a session will be established and maintained via a cookie set in the user's browser.  
     </p>
-    <p className="card-text">
+    <p className="post-text">
     Each subsequent request will not contain credentials, but rather the unique cookie that identifies the session. In order to support login sessions, Passport will serialize and deserialize user instances to and from the session.
     </p>
-    <p className="card-text">
+    <p className="post-text">
     Note that enabling session support is entirely optional, though it is recommended for most applications. If enabled, be sure to use express.session() before passport.session() to ensure that the login session is restored in the correct order.  
     </p>
-    <p className="card-text">
+    <p className="post-text">
     This app.mysql.js file is boiled down to the minimum you need for Passport to work. The order of the statements is important. Express reads app.js from top to bottom.
     </p>
     </div>
   );
 
-  let Section3 = (
+  let Text3 = (
     <div>
-    <p className="card-text">
+    <p className="post-text">
       The last thing we have to do is configure Passport. Create the file passportConfig.js in the same directory as package.json. It initializes Passport to use the local strategy, authenticates users, and serializes and deserializes them to and from the user store. 
     </p>
     </div>
   );
 
   return (
-    <Container className="grid">
-      <div></div>
-      <div>
-        <img className="card-img-top" src={TopPic} alt="Card image" />
-        <h3 className="card-title text-center">{Title}</h3>
-        {Section1}
-        <br/>
-        <h4>package.json</h4>
-        <pre> {codeSection1}</pre>
-        {Section2}
-        <br/>
-        <h4>app.js</h4>
-        <pre> {codeSection2}</pre>
-        {Section3}
-        <br/>
-        <h4>passportConfig.js</h4>
-        <pre> {codeSection3}</pre>
+    <div className="post-wrapper">
+      <div className="post-img-top">
+        <img  src={TopPic} alt="Post" />
       </div>
-      <div></div>
-    </Container>
+        
+        <h3 className="post-title text-center">{Title}</h3>
+        <div className="text1">
+          {Text1} 
+          <br/>
+        </div>
+        <div className="code1">
+          <h4>package.json</h4>
+          <SyntaxHighlighter language="javascript" style={tomorrowNightBlue} showLineNumbers wrapLongLines >
+            {codeSection1}
+          </SyntaxHighlighter>
+          
+        </div>
+        <div className="text2">
+          {Text2}
+          <br/>
+        </div>
+        <div className="code2">
+          <h4>app.js</h4>
+          <SyntaxHighlighter language="javascript" style={tomorrowNightBlue} showLineNumbers wrapLongLines >
+          {codeSection2}
+          </SyntaxHighlighter>
+        </div>
+        <div className="text3">
+          {Text3}
+          <br/>
+        </div>
+        <div className="code3">
+        <h4>passportConfig.js</h4>
+        <SyntaxHighlighter language="javascript" style={tomorrowNightBlue} showLineNumbers wrapLongLines >
+        {codeSection3}
+        </SyntaxHighlighter>
+        </div>
+    </div>
   );
 };

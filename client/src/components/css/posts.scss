@@ -1,45 +1,75 @@
-div.grid.container {
-  display: grid !important;
-  grid-template-columns: 1fr;
-  grid-template-rows:auto;
-  margin-bottom: 20px;
+.post-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   color: white;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    ". top top top top ."
+    ". title title title title ."
+    ". text1 text1 text1 text1 ."
+    ". code1 code1 code1 code1 ."
+    ". text2 text2 text2 text2 ."
+    ". code2 code2 code2 code2 ."
+    ". text3 text3 text3 text3 ."
+    ". code3 code3 code3 code3 ."
+    ". . . . . .";
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    min-width: 576px;
+    max-width: 767px;
+  }
 }
 
 @media (min-width: 768px) {
-  div.grid.container {
-    display: grid !important;
+  .post-wrapper {
     padding-top: 5%;
-    grid-template-columns: 1fr 6fr 1fr ;
-    grid-template-rows:auto;
-    margin-bottom: 20px;
+  }
+  .container, .container-md, .container-sm {
+    min-width: 768px;
+    max-width: 991px;
   }
 }
-img.card-img-top {
-  text-align: center;
 
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm {
+    min-width: 992px;
+    max-width: 100vw;
+  }
 }
 
-h3.card-title {
+.post-img-top {
+  margin:auto;
+  grid-area: top;
+}
+
+h3.post-title {
+  text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
   color:#e7e5e5;
+  grid-area: title;
 }
+
 h4.subtitle {
   margin-top: 2rem;
   margin-bottom: 1rem;
   color:#e7e5e5;
 }
 
-p.card-text {
+p.post-text {
   margin-bottom: 1rem;
   text-align: justify;
-  font-size: 16px;
+  font-size: 18px;
   color:#e7e5e5;
 }
 
-p.card-text.emphasized {
+p.post-text.emphasized {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 24px;
@@ -52,4 +82,23 @@ p.card-text.emphasized {
 
 pre {
   color:aqua;
+}
+
+.text1 {
+  grid-area: text1;
+}
+.text2 {
+  grid-area: text2;
+}
+.text3 {
+  grid-area: text3;
+}
+.code1 {
+  grid-area: code1;
+}
+.code2 {
+  grid-area: code2;
+}
+.code3 {
+  grid-area: code3;
 }

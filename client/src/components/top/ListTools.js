@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -14,20 +15,20 @@ export function AnimateListTools() {
       </Row>
       <Container fluid className="grid-list">
         <Row className="row-cols-sm-3 row-cols-md-12 grid-list">
+            <Image
+              fluid={false}
+              src="media/react.png"
+              title="React JS"
+              className=" list-logo rounded-circle grid-list "
+              alt="React logo"
+            />
           <Image
-            fluid={false}
-            src="media/react.png"
-            title="React JS"
-            className=" list-logo rounded-circle grid-list "
-            alt="React logo"
-          />
-          <Image
-            fluid={false}
-            src="media/vuejs.png"
-            title="Vue JS"
-            className=" list-logo rounded-circle grid-list "
-            alt="Vue JS logo"
-          />
+              fluid={false}
+              src="media/vuejs.png"
+              title="Vue JS"
+              className=" list-logo rounded-circle grid-list "
+              alt="Vue JS logo"
+            />
           <Image
             fluid={false}
             src="media/reactnative.png"
@@ -204,7 +205,6 @@ export function AnimateListTools() {
             alt="Python logo"
           />
         </Row>
-      
       </Container>
     </>
   );
