@@ -95,13 +95,13 @@ export const Navigation = () => {
                     <Nav.Link href="/post08" className="rounded-end">
                       MySQL vs PostgreSQL
                     </Nav.Link>
-                    <Nav.Link href="/post04" className="rounded-end">
+                    <Nav.Link href="/post06" className="rounded-end">
                     Use Sqlite 3 for Quick Database Emulation
                     </Nav.Link>
-                    <Nav.Link href="/post05" className="rounded-end">
-                      Deployment Quick References
+                    <Nav.Link href="/post04" className="rounded-end">
+                      React Bits & Javascript Pieces
                     </Nav.Link>
-                    <Nav.Link href="/post06" className="rounded-end">
+                    <Nav.Link href="/post04" className="rounded-end">
                       Never Ending Closures
                     </Nav.Link>
                     <Nav.Link href="/post07" className="rounded-end">

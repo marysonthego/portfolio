@@ -19,6 +19,7 @@ import {Post00} from "components/posts/Post00";
 import {Post01} from "components/posts/Post01";
 import {Post02} from "components/posts/Post02";
 import {Post03} from "components/posts/Post03";
+import {Post04} from "components/posts/Post04";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import {CookiesProvider} from "react-cookie";
@@ -53,6 +54,7 @@ ReactDOM.render(
             <Route path="/post01" element={<Post01 />} />
             <Route path="/post02" element={<Post02 />} />
             <Route path="/post03" element={<Post03 />} />
+            <Route path="/post04" element={<Post04 />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>

@@ -1,5 +1,4 @@
 import react from "react";
-import Container from "react-bootstrap/Container";
 
 export const Post01 = () => {
   let TopPic = "media/amazon600.png";
@@ -172,7 +171,7 @@ export const Post01 = () => {
         on each item to see and change settings.
       </p>
       <img className="post-img-top" src="media/post0108.png" alt="Post image" />
-      <h4 className="subtitle">Debug a React Native App in WSA</h4>
+      <h4 id="debug" className="subtitle">Debug a React Native App in WSA</h4>
       <p className="post-text">
         If you need a React Native app to test with or you need to setup your
         Windows development environment, see my post{" "}
@@ -211,7 +210,7 @@ export const Post01 = () => {
     </div>
   );
   return (
-    <div className="post-wrapper">
+    <div className="post-wrapper post01">
       <div className="post-img-top">
         <img src={TopPic} alt="Post" />
       </div>

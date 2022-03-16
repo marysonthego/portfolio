@@ -37,13 +37,20 @@ div.row {
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
   grid-template-areas:
-  ". im1 im1 im2 im2 ."
-  ". im3 im3 im4 im4 ."
-  ". im5 im5 im6 im6 ."
-  ". im7 im7 im8 im8 ."
-  ". im9 im9 im10 im10 ."
-  ". im11 im11 im12 im12 ."
-  ". im13 im13 im14 im14 .";
+  ". im1 im1 im1 im1 ."
+  ". im2 im2 im2 im2 ."
+  ". im3 im3 im3 im3 ."
+  ". im4 im4 im4 im4 ."
+  ". im5 im5 im5 im5 ."
+  ". im6 im6 im6 im6 ."
+  ". im7 im7 im7 im7 ."
+  ". im8 im8 im8 im8 ."
+  ". im9 im9 im9 im9 ."
+  ". im10 im10 im10 im10 ."
+  ". im11 im11 im11 im11 ."
+  ". im12 im12 im12 im12 ."
+  ". im13 im13 im13 im13 ."
+  ". im14 im14 im14 im14 ."
 }
 
 .im1 {grid-area: im1;}
@@ -61,17 +68,15 @@ div.row {
 .im13 {grid-area: im13;}
 .im14 {grid-area: im14;}
 
-.grid .wide {
-	grid-column: span 2;
-}
-
-.grid .tall {
-	grid-row: span 2;
-}
-
-.grid .big {
-	grid-column: span 2;
-	grid-row: span 2;
+.image-container .content {
+  font-size: 14px;
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
 }
 
 img {
@@ -96,24 +101,40 @@ img.topimage {
   padding-right: 0%;
 }
 
-@media (min-width: 768px) {
-  
+@media (min-width: 645px) {
+  .image-container .content {
+    font-size: 18px;
+   }
+}
+
+@media (min-width: 1345px) {
+  .grid {
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas:
+  ". im1 im1 im2 im2 ."
+  ". im3 im3 im4 im4 ."
+  ". im5 im5 im6 im6 ."
+  ". im7 im7 im8 im8 ."
+  ". im9 im9 im10 im10 ."
+  ". im11 im11 im12 im12 ."
+  ". im13 im13 im14 im14 .";
+  }
    div.toprow {
      width: 100vw;
      height: 100vh;
    }
-   .container, .container-md, .container-sm {
-    min-width: 768px;
-    max-width: 991px;
+   .container, .container-lg, .container-md, .container-sm {
+    min-width: 1345px;
   }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .container, .container-lg, .container-md, .container-sm {
     min-width: 992px;
     max-width: 100vw;
   }
-}
+} */
 
 .image-container {
   position: relative;
@@ -123,12 +144,18 @@ img.topimage {
   padding: 0px;
 }
 
+.responsive-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
 .blue {
   outline: 20px solid  #3b7ea1;
 }
 
 .yellow {
-  outline: 20px solid  #c4820e;
+  outline: 20px solid  #f5a824;
 }
 
 .bottom-left {
@@ -170,17 +197,6 @@ img.topimage {
   color: white;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.image-container .content {
-  font-size: 18px;
-  position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
 }
 
 .news {

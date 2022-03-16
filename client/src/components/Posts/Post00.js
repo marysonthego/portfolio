@@ -65,7 +65,7 @@ export const Post00 = () => {
     </div>
   );
   return (
-    <div className="post-wrapper">
+    <div className="post-wrapper post00">
       <div className="post-img-top">
         <img src={TopPic} alt="Post" />
       </div>

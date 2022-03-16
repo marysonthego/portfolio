@@ -1,21 +1,45 @@
 .post-wrapper {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  margin:auto;
   width: 100vw;
   color: white;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: minmax(100px, auto);
   grid-template-areas:
-    ". top top top top ."
+    ". top   top   top   top   ."
+    ". title title title title ."
+    ". .     toc   toc   .     ."
+    ". text1 text1 text1 text1 ."
+    ". code1 code1 code1 code1 ."
+    ". sb1   sb1   sb1   sb1   ."
+    ". text2 text2 text2 text2 ."
+    ". code2 code2 code2 code2 ."
+    ". text3 text3 text3 text3 ."
+    ". code3 code3 code3 code3 ."
+    ". . . . . .";
+    
+  .post00, .post01, .post02 {
+    grid-template-areas:
+    ". top   top   top   top   ."
     ". title title title title ."
     ". text1 text1 text1 text1 ."
     ". code1 code1 code1 code1 ."
     ". text2 text2 text2 text2 ."
     ". code2 code2 code2 code2 ."
     ". text3 text3 text3 text3 ."
-    ". code3 code3 code3 code3 ."
     ". . . . . .";
+  }
+  .post03 {
+    grid-template-areas:
+    ". top   top   top   top   ."
+    ". title title title title ."
+    ". text1 text1 text1 text1 ."
+    ". code1 code1 code1 code1 ."
+    ". text2 text2 text2 text2 ."
+    ". code2 code2 code2 code2 ."
+    ". text3 text3 text3 text3 ."
+    ". code3 code3 code3 code3 .";
+  }
 }
 
 @media (min-width: 576px) {
@@ -79,6 +103,14 @@ p.post-text.emphasized {
 .link-primary {
   color:aqua;
 }
+.link-primary:focus, .link-primary:hover {
+  color:#aaffff;
+}
+
+.toc {
+  font-size: 16px;
+  grid-area: toc;
+}
 
 pre {
   color:aqua;
@@ -101,4 +133,7 @@ pre {
 }
 .code3 {
   grid-area: code3;
+}
+.sb1 {
+  grid-area: sb1;
 }

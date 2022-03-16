@@ -32,7 +32,7 @@ export function MainPage() {
             src="media/reactnative400x400.png"
             alt="React native"
             loading="lazy"
-            className="yellow blur"
+            className="yellow responsive-img"
           />
           <div className="content">
             <a href="https://marysonthego.tech/post00" className="link-primary"><h5>How to Setup a React Native Development Environment in Windows</h5> </a>
@@ -47,15 +47,15 @@ export function MainPage() {
             src="media/react400x400.png"
             alt="React JS"
             loading="lazy"
-            className="blue blur"
+            className="blue responsive-img"
           />
           <div className="content">
-          <a href="https://marysonthego.tech/post02" className="link-primary">
-            <h5>React JS</h5>
-            </a>
+          <a href="/post04" className="link-primary">
+            <h5>React Bits</h5>
             <p>
-            some text
+            & Javascript Pieces
             </p>
+          </a>
           </div>
         </div>
 
@@ -64,14 +64,14 @@ export function MainPage() {
             src="media/loginform400x400.png"
             alt="Login Flow"
             loading="lazy"
-            className="blue blur"
+            className="blue responsive-img"
           />
           <div className="content">
           <a href="https://marysonthego.tech/dashboard" className="link-primary">
-            <h5>A hand-crafted login flow you will love</h5>
+            <h5>A hand-crafted login flow you will love!</h5>
           </a>
             <p>
-              A login flow from soup to nuts
+              Soup to nuts
             </p>
           </div>
         </div>
@@ -81,14 +81,14 @@ export function MainPage() {
           src="media/post0204_400x400.png"
           alt="Sign-up stepper"
           loading="lazy"
-          className="yellow blur"
+          className="yellow responsive-img"
           />
           <div className="content">
           <a href="https://marysonthego.tech/stepper" className="link-primary">
             <h5>A sign-up stepper</h5>
           </a>
             <p>
-            Consists of a series of input forms with validation and navigation controls.
+            A series of input forms with validation and navigation controls.
             </p>
           </div>
         </div>
@@ -98,14 +98,14 @@ export function MainPage() {
           src="media/amazon400x400.png"
           alt="Test in Amazon WSA"
           loading="lazy"
-          className="yellow blur"
+          className="yellow responsive-img"
           />
           <div className="content">
           <a href="https://marysonthego.tech/post01" className="link-primary">
             <h5>How to use Windows Subsystem for Android to Run React Native Apps</h5>
           </a>
             <p>
-            If what you need is a light-weight Android emulator for testing your React-Native apps, you'll be happy to hear that WSA Pacman makes loading and debugging easy!
+            If what you need is a light-weight Android emulator for testing your React-Native apps, Amazon and WSA Pacman come to the rescue!
             </p>
           </div>
         </div>
@@ -115,31 +115,31 @@ export function MainPage() {
           src="media/post0208_400x400.png"
           alt="forwardRef Code"
           loading="lazy"
-          className="blue blur"
+          className="blue responsive-img"
           />
           <div className="content">
           <a href="https://marysonthego.tech/post02" className="link-primary">
             <h5>How to use React JS Forward Refs</h5>
             </a>
             <p>
-            One of my example projects is a sign-up stepper. A new user walks through the steps, providing different  information at each one. The parent stepper function has forward and back arrows that are enabled or disabled based on whether the user has filled out required fields on each page (some pages don't have any required fields). The parent stepper must change the arrows from enabled to disabled or vice-versa for every child page. It might be fun to see if we can get this working with forward refs!
+            One of my example projects is a sign-up stepper. The parent stepper must change the arrows from enabled to disabled or vice-versa for every child page. It might be fun to see if we can get this working with forward refs!
             </p>
           </div>
         </div>
 
         <div className="image-container im7">
         <img
-          src="media/openweatherblack400x400.png"
+          src="media/openweatheryellow400x376.png"
           alt="Open Weather API"
           loading="lazy"
-          className="blue blur"
+          className="blue responsive-img"
           />
           <div className="content">
-          <a href="https://marysonthego.tech/post01" className="link-primary">
+          <a href="https://marysonthego.tech/weather" className="link-primary">
             <h5>OpenWeatherAPI</h5>
           </a>
             <p>
-              Look Ma! I can use a 3rd-party API!
+              Look Ma, I can use a 3rd-party API
             </p>
           </div>
         </div>
@@ -149,24 +149,24 @@ export function MainPage() {
           src="media/post0112_400x400.png"
           alt="React Native App"
           loading="lazy"
-          className="yellow blur"
+          className="yellow responsive-img"
           />
           <div className="content">
-          <a href="https://marysonthego.tech/post01" className="link-primary">
-            <h5>title</h5>
+          <a href="https://marysonthego.tech/post01/#debug" className="link-primary">
+            <h5>How to debug a React Native App in WSA</h5>
           </a>
           <p>
-              text
-            </p>
+            It's super easy!    
+          </p>
           </div>
         </div>
 
         <div className="image-container im9">
         <img src="media/avif400x400.png" alt="AVIF logo" loading="lazy" 
-        className="yellow blur"
+        className="yellow responsive-img"
         />
         <div className="content">
-        <a href="https://marysonthego.tech/post01" className="link-primary">
+        <a href="https://marysonthego.tech/post04" className="link-primary">
           <h5>The AVIF format is going to be hot! hot! hot!</h5>
           </a>
           <p>
@@ -180,10 +180,10 @@ export function MainPage() {
           src="media/passport400x400.png"
           alt="Passport Authentication"
           loading="lazy"
-          className="blue blur"
+          className="blue responsive-img"
           />
           <div className="content">
-          <a href="https://marysonthego.tech/post01" className="link-primary">
+          <a href="https://marysonthego.tech/post03" className="link-primary">
             <h5>Passport Authentication for Dummies</h5>
             </a>
             <p>
@@ -194,7 +194,7 @@ export function MainPage() {
 
         <div className="image-container im11">
         <img src="media/calendar400x400.png" alt="Calendar" loading="lazy" 
-        className="blue blur"
+        className="blue responsive-img"
         />
         <div className="content">
         <a href="https://marysonthego.tech/todos" className="link-primary">
@@ -207,10 +207,10 @@ export function MainPage() {
       </div>
 
       <div className="image-container im12">
-        <img src="media/sqlite400x400.png" alt="Sqlite" loading="lazy" className="yellow blur"
+        <img src="media/sqlite400x400.png" alt="Sqlite" loading="lazy" className="yellow responsive-img"
           />
           <div className="content">
-          <a href="https://marysonthego.tech/post01" className="link-primary">
+          <a href="https://marysonthego.tech/post04" className="link-primary">
             <h5>You don't have to have a backend to test your frontend.</h5>
             </a>
             <p>
@@ -224,7 +224,7 @@ export function MainPage() {
           src="media/registercat400x400.png"
           alt="Nucat Parallax Campers"
           loading="lazy"
-          className="yellow blur"
+          className="yellow responsive-img"
           />
           <div className="content">
           <a href="https://marysonthego.tech/nucat" className="link-primary">
@@ -241,10 +241,10 @@ export function MainPage() {
           src="media/contactme400x400.png"
           alt="How to Contact Me"
           loading="lazy"
-          className="blue blur"
+          className="blue responsive-img"
           />
           <div className="content">
-          <a href="https://marysonthego.tech/post01" className="link-primary">
+          <a href="https://marysonthego.tech/contact" className="link-primary">
             <h5>Hey! Do you want to Contact Me?</h5>
             </a>
             <p>

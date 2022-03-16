@@ -1,15 +1,12 @@
 import react from "react";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import {tomorrowNightBlue} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export const Post03 = () => {
   let TopPic = "media/post03top.png";
-  let Title =
-    "Local Authentication with Passport";
+  let Title = "Local Authentication with Passport";
 
-    
-let codeSection1 = 
-`"dependencies": {
+  let codeSection1 = `"dependencies": {
   "bcrypt": "^5.0.1",
   "body-parser": "^1.19.0",
   "compression": "^1.7.4",
@@ -302,7 +299,7 @@ server.listen(PORT, () => {
 });  
 `;
 
-let codeSection3 =`const LocalStrategy = 
+  let codeSection3 = `const LocalStrategy = 
 require("passport-local").Strategy;
 const { pool } = require("./dbConfig.mysql");
 const bcrypt = require("bcrypt");
@@ -384,105 +381,191 @@ module.exports = initialize;
   let Text1 = (
     <div>
       <p className="post-text">
-      <a href="https://www.passportjs.org/" className="link-primary">Passport</a> is authentication software for Node JS. You implement it as Node JS middleware. Middleware is software running on Node that intercepts browser requests to Node and, in this case, performs authentication. If authentication is successful, it allows the request to pass on to Node proper. Otherwise, it responds to the browser letting it know that authentication failed.
+        <a href="https://www.passportjs.org/" className="link-primary">
+          Passport
+        </a>{" "}
+        is authentication software for Node JS. You implement it as Node JS
+        middleware. Middleware is software running on Node that intercepts
+        browser requests to Node and, in this case, performs authentication. If
+        authentication is successful, it allows the request to pass on to Node
+        proper. Otherwise, it responds to the browser letting it know that
+        authentication failed.
       </p>
       <p className="post-text">
-    Passport is very flexible. It supports over 500 different authentication strategies. A  <a href="https://www.passportjs.org/packages/" className="link-primary">strategy</a> is an API that communicates with an authenticator that is remote from the Node server where Passport is running. For example, it supports authenticating remotely via Facebook, Twitter, Google, and many specific internet sites. It also supports a local authentication strategy - which is what I'm going to show you how to set up today.
-    </p>
-    <p className="post-text">
-    The local strategy expects the user names and passwords to be stored locally in your database. The password is encrypted before it is stored, and I'll show you how to do that too.  When authentication is successful, the local strategy creates a session token that is stored as a cookie in the browser. It uniquely identifies the logged-in user, the browser they are using, the server they are connected to, and almost always specifies a maximum time the token is valid. The cookie is encrypted before it is sent to the browser, and stored on the browser that way too. 
-    </p>
-    <p className="post-text">
-    The whole point of authentication strategies is to make it convenient for users to use your website. If you couldn't store a user's authentication status anywhere, the user would have to enter their user name and password every time they made a secured request to the server. How tedious that would be! Passport has a reputation for being complicated, but that's mainly due to the details missing from their official documentation. You can find help for all these things on the internet, but I want to save you the trouble of having to do a bunch of searches yourself - especially since the internet is full of wrong and conflicting information! What I'm going to show you is what I use in my example project Admin Dashboard.
-    </p>
-    <p className="post-text">
-    I'm skipping over the steps for starting from ground-zero. You should already have Node/npm installed, and MySql installed with your schema set up for your application. Since you're interested in authentication, you probably already have a user table where you store usernames and passwords. The only thing you might not already have in your MySql schema is a place to store the user's encrypted password. 
-    </p>
-    <p className="post-text">
-    <b>Never store passwords in clear text in a database!</b> It's unlikely, but if you're already authenticating users by simply validating their password against a clear-text password field, you should delete the users from your database, drop the clear-text password column, and require them to create a new account the next time they log in. 
-    </p>
-    <p className="post-text">
-    What you want is a column in your user table configured as a simple char(200) datatype. There's nothing fancy about creating a column to store an encrypted password.  It's just a very long text field. 200 characters is more than enough. You do not have to tell MySql the column is encrypted - in fact don't. MySql will not be doing any of the encryption. We will use  <a href="https://www.npmjs.com/package/bcrypt" className="link-primary">Bcrypt</a> for that.
-    </p>
-    <p className="post-text">
-    This is the dependency list from my package.json for the Node/Express server. You need to install these packages with npm or yarn.
-    </p>
+        Passport is very flexible. It supports over 500 different authentication
+        strategies. A{" "}
+        <a href="https://www.passportjs.org/packages/" className="link-primary">
+          strategy
+        </a>{" "}
+        is an API that communicates with an authenticator that is remote from
+        the Node server where Passport is running. For example, it supports
+        authenticating remotely via Facebook, Twitter, Google, and many specific
+        internet sites. It also supports a local authentication strategy - which
+        is what I'm going to show you how to set up today.
+      </p>
+      <p className="post-text">
+        The local strategy expects the user names and passwords to be stored
+        locally in your database. The password is encrypted before it is stored,
+        and I'll show you how to do that too. When authentication is successful,
+        the local strategy creates a session token that is stored as a cookie in
+        the browser. It uniquely identifies the logged-in user, the browser they
+        are using, the server they are connected to, and almost always specifies
+        a maximum time the token is valid. The cookie is encrypted before it is
+        sent to the browser, and stored on the browser that way too.
+      </p>
+      <p className="post-text">
+        The whole point of authentication strategies is to make it convenient
+        for users to use your website. If you couldn't store a user's
+        authentication status anywhere, the user would have to enter their user
+        name and password every time they made a secured request to the server.
+        How tedious that would be! Passport has a reputation for being
+        complicated, but that's mainly due to the details missing from their
+        official documentation. You can find help for all these things on the
+        internet, but I want to save you the trouble of having to do a bunch of
+        searches yourself - especially since the internet is full of wrong and
+        conflicting information! What I'm going to show you is what I use in my
+        example project Admin Dashboard.
+      </p>
+      <p className="post-text">
+        I'm skipping over the steps for starting from ground-zero. You should
+        already have Node/npm installed, and MySql installed with your schema
+        set up for your application. Since you're interested in authentication,
+        you probably already have a user table where you store usernames and
+        passwords. The only thing you might not already have in your MySql
+        schema is a place to store the user's encrypted password.
+      </p>
+      <p className="post-text">
+        <b>Never store passwords in clear text in a database!</b> It's unlikely,
+        but if you're already authenticating users by simply validating their
+        password against a clear-text password field, you should delete the
+        users from your database, drop the clear-text password column, and
+        require them to create a new account the next time they log in.
+      </p>
+      <p className="post-text">
+        What you want is a column in your user table configured as a simple
+        char(200) datatype. There's nothing fancy about creating a column to
+        store an encrypted password. It's just a very long text field. 200
+        characters is more than enough. You do not have to tell MySql the column
+        is encrypted - in fact don't. MySql will not be doing any of the
+        encryption. We will use{" "}
+        <a href="https://www.npmjs.com/package/bcrypt" className="link-primary">
+          Bcrypt
+        </a>{" "}
+        for that.
+      </p>
+      <p className="post-text">
+        This is the dependency list from my package.json for the Node/Express
+        server. You need to install these packages with npm or yarn.
+      </p>
     </div>
   );
 
   let Text2 = (
     <div>
-    <p className="post-text">
-    This is part of my app.js file for Express. I changed the name to app.mysql.js because the application is also implemented in PostgreSQL.  Doing it this way I can quickly swap the application from MySql to PostgreSQL on a restart by using the appropriate start script.   
-    </p>
-    <p className="post-text">
-    The Passport documentation explains the order in which the Passport middleware must be implemented.
-	  In a Connect or Express-based application, passport.initialize() middleware is required first to initialize Passport. 
-    </p>
-    <p className="post-text">
-  	If your application   uses persistent login sessions (ours does), passport.session() middleware must be installed next.
-    </p>
-    <p className="post-text">
-    In a typical web application, the credentials used to authenticate a user will only be transmitted during the login request. If authentication succeeds, a session will be established and maintained via a cookie set in the user's browser.  
-    </p>
-    <p className="post-text">
-    Each subsequent request will not contain credentials, but rather the unique cookie that identifies the session. In order to support login sessions, Passport will serialize and deserialize user instances to and from the session.
-    </p>
-    <p className="post-text">
-    Note that enabling session support is entirely optional, though it is recommended for most applications. If enabled, be sure to use express.session() before passport.session() to ensure that the login session is restored in the correct order.  
-    </p>
-    <p className="post-text">
-    This app.mysql.js file is boiled down to the minimum you need for Passport to work. The order of the statements is important. Express reads app.js from top to bottom.
-    </p>
+      <p className="post-text">
+        This is part of my app.js file for Express. I changed the name to
+        app.mysql.js because the application is also implemented in PostgreSQL.
+        Doing it this way I can quickly swap the application from MySql to
+        PostgreSQL on a restart by using the appropriate start script.
+      </p>
+      <p className="post-text">
+        The Passport documentation explains the order in which the Passport
+        middleware must be implemented. In a Connect or Express-based
+        application, passport.initialize() middleware is required first to
+        initialize Passport.
+      </p>
+      <p className="post-text">
+        If your application uses persistent login sessions (ours does),
+        passport.session() middleware must be installed next.
+      </p>
+      <p className="post-text">
+        In a typical web application, the credentials used to authenticate a
+        user will only be transmitted during the login request. If
+        authentication succeeds, a session will be established and maintained
+        via a cookie set in the user's browser.
+      </p>
+      <p className="post-text">
+        Each subsequent request will not contain credentials, but rather the
+        unique cookie that identifies the session. In order to support login
+        sessions, Passport will serialize and deserialize user instances to and
+        from the session.
+      </p>
+      <p className="post-text">
+        Note that enabling session support is entirely optional, though it is
+        recommended for most applications. If enabled, be sure to use
+        express.session() before passport.session() to ensure that the login
+        session is restored in the correct order.
+      </p>
+      <p className="post-text">
+        This app.mysql.js file is boiled down to the minimum you need for
+        Passport to work. The order of the statements is important. Express
+        reads app.js from top to bottom.
+      </p>
     </div>
   );
 
   let Text3 = (
     <div>
-    <p className="post-text">
-      The last thing we have to do is configure Passport. Create the file passportConfig.js in the same directory as package.json. It initializes Passport to use the local strategy, authenticates users, and serializes and deserializes them to and from the user store. 
-    </p>
+      <p className="post-text">
+        The last thing we have to do is configure Passport. Create the file
+        passportConfig.js in the same directory as package.json. It initializes
+        Passport to use the local strategy, authenticates users, and serializes
+        and deserializes them to and from the user store.
+      </p>
     </div>
   );
 
   return (
-    <div className="post-wrapper">
+    <div className="post-wrapper post03">
       <div className="post-img-top">
-        <img  src={TopPic} alt="Post" />
+        <img src={TopPic} alt="Post" />
       </div>
-        
-        <h3 className="post-title text-center">{Title}</h3>
-        <div className="text1">
-          {Text1} 
-          <br/>
-        </div>
-        <div className="code1">
-          <h4>package.json</h4>
-          <SyntaxHighlighter language="javascript" style={tomorrowNightBlue} showLineNumbers wrapLongLines >
-            {codeSection1}
-          </SyntaxHighlighter>
-          
-        </div>
-        <div className="text2">
-          {Text2}
-          <br/>
-        </div>
-        <div className="code2">
-          <h4>app.js</h4>
-          <SyntaxHighlighter language="javascript" style={tomorrowNightBlue} showLineNumbers wrapLongLines >
-          {codeSection2}
-          </SyntaxHighlighter>
-        </div>
-        <div className="text3">
-          {Text3}
-          <br/>
-        </div>
-        <div className="code3">
-        <h4>passportConfig.js</h4>
-        <SyntaxHighlighter language="javascript" style={tomorrowNightBlue} showLineNumbers wrapLongLines >
-        {codeSection3}
+
+      <h3 className="post-title text-center">{Title}</h3>
+      <div className="text1">
+        {Text1}
+        <br />
+      </div>
+      <div className="code1">
+        <h4>package.json</h4>
+        <SyntaxHighlighter
+          language="javascript"
+          style={tomorrowNightBlue}
+          showLineNumbers
+          wrapLongLines
+        >
+          {codeSection1}
         </SyntaxHighlighter>
-        </div>
+      </div>
+      <div className="text2">
+        {Text2}
+        <br />
+      </div>
+      <div className="code2">
+        <h4>app.js</h4>
+        <SyntaxHighlighter
+          language="javascript"
+          style={tomorrowNightBlue}
+          showLineNumbers
+          wrapLongLines
+        >
+          {codeSection2}
+        </SyntaxHighlighter>
+      </div>
+      <div className="text3">
+        {Text3}
+      </div>
+      <div className="code3">
+        <h4>passportConfig.js</h4>
+        <SyntaxHighlighter
+          language="javascript"
+          style={tomorrowNightBlue}
+          showLineNumbers
+          wrapLongLines
+        >
+          {codeSection3}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 };
