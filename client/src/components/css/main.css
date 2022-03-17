@@ -199,10 +199,6 @@ img.topimage {
   padding-right: 20px;
 }
 
-.news {
-  font-size: 18px;
-}
-
 .blur {filter: blur(0px);}
 .brightness {filter: brightness(250%);}
 .contrast {filter: contrast(180%);}

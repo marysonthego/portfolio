@@ -65,8 +65,18 @@ export const Post04 = () => {
         </SyntaxHighlighter>{" "}
         <br />
         <br />
+        Use arrow functions with parentheses around the function
+  body when you are only executing ONE statement.
+  Leave out 'return' because the result of the statement
+  will be automatically returned.
+  <br/>
+  <br/>
+  If you need to do more than one thing inside an arrow
+  function, you must put braces around the function
+  body, and you must use the return statement - otherwise
+  nothing will be returned.
       </p>
-      <p className="post-text"></p>
+      <p className="post-text text-center"><i>Try it out for yourself!</i></p>
     </div>
   );
 
@@ -125,7 +135,7 @@ export const Post04 = () => {
         <br />
         You cannot create a new property in an object just by assigning
         something to it (that's what they mean by "the object is not
-        extensible"), but you <i>can</i> insert a new element by using the Spread
+        extensible"), but you <i>can</i> insert a new property by using the Spread
         operator, like this:
         <br />
         <br />
@@ -175,7 +185,7 @@ export const Post04 = () => {
           </SyntaxHighlighter>
         <br />
         The fix is exactly the same, too. Replace the parentheses surrounding the function with braces and add a return statement.
-        <br />
+        <br /><br />
         <SyntaxHighlighter
           language="javascript"
           style={tomorrowNightBlue}

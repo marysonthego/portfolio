@@ -1,9 +1,6 @@
 import React, {useEffect, useLayoutEffect} from "react";
 import {useLocation} from 'react-router-dom';
-import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -23,9 +20,8 @@ export const Navigation = () => {
 
   return (
     <Navbar expand={false} sticky="top">
-      
         <Navbar.Brand href="/">
-          <img src="media/mtsy3.png" alt="marysonthego.tech" className="nav"/>
+          <img src="media/mtr48x38.png" alt="marysonthego.tech" className="nav"/>
             marysonthego.tech
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
@@ -114,7 +110,7 @@ export const Navigation = () => {
                 <Accordion.Header>About Me</Accordion.Header>
                 <Accordion.Body>
                   <Nav className="flex-column">
-                    <Nav.Link href="/contact" className="rounded-end">
+                    <Nav.Link href="mailto:marysonthego@gmail.com?subject=Contact Me" className="rounded-end">
                       Contact Me!
                     </Nav.Link>
                     <Nav.Link href="/education" className="rounded-end">
@@ -133,20 +129,8 @@ export const Navigation = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            <hr />
-            <Form className="d-flex align-items-center">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-secondary" className="ml-3 ">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
-    
     </Navbar>
   );
 };
