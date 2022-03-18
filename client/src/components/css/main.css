@@ -108,6 +108,13 @@ img.topimage {
 }
 
 @media (min-width: 1345px) {
+  div.toprow {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container, .container-lg, .container-md, .container-sm {
+   min-width: 1345px;
+ }
   .grid {
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
@@ -119,13 +126,6 @@ img.topimage {
   ". im9 im9 im10 im10 ."
   ". im11 im11 im12 im12 ."
   ". im13 im13 im14 im14 .";
-  }
-   div.toprow {
-     width: 100vw;
-     height: 100vh;
-   }
-   .container, .container-lg, .container-md, .container-sm {
-    min-width: 1345px;
   }
 }
 
