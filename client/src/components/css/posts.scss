@@ -66,12 +66,14 @@ h3.post-title {
   font-weight: 700;
   color:#e7e5e5;
   grid-area: title;
+  background-color: rgba(0,0,0,0.5);
 }
 
 h4.subtitle {
   margin-top: 2rem;
   margin-bottom: 1rem;
   color:#e7e5e5;
+  background-color: rgba(0,0,0,0.5);
 }
 
 p.post-text {
@@ -79,6 +81,7 @@ p.post-text {
   text-align: justify;
   font-size: 18px;
   color:#e7e5e5;
+  background-color: rgba(0,0,0,0.5);
 }
 
 p.post-text.emphasized {
@@ -86,10 +89,12 @@ p.post-text.emphasized {
   margin-bottom: 2rem;
   font-size: 24px;
   color:#e7e5e5;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .link-primary {
   color:aqua;
+  
 }
 .link-primary:focus, .link-primary:hover {
   color:#aaffff;
