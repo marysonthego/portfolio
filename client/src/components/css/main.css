@@ -1,4 +1,5 @@
-.container, div.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100vw;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -7,7 +8,11 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background:#003262;
+  background-image: url("../../media/millslakermnp.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
 div.row {
@@ -16,15 +21,14 @@ div.row {
   margin-left: 0px;
   margin-right: 0px;
   justify-content: center;
-  max-width: 100vw;
-  max-height:fit-content;
+  max-width: 100%;
+  max-height:auto;
 }
 
 .grid { 
   display: grid;
-  width: 100vw;
   align-items: center;
-  justify-items: center;
+  justify-items: left;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -33,50 +37,36 @@ div.row {
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background: #003262;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: auto;
-  grid-template-areas:
-  ". im1 im1 im1 im1 ."
-  ". im2 im2 im2 im2 ."
-  ". im3 im3 im3 im3 ."
-  ". im4 im4 im4 im4 ."
-  ". im5 im5 im5 im5 ."
-  ". im6 im6 im6 im6 ."
-  ". im7 im7 im7 im7 ."
-  ". im8 im8 im8 im8 ."
-  ". im9 im9 im9 im9 ."
-  ". im10 im10 im10 im10 ."
-  ". im11 im11 im11 im11 ."
-  ". im12 im12 im12 im12 ."
-  ". im13 im13 im13 im13 ."
-  ". im14 im14 im14 im14 ."
 }
 
-.im1 {grid-area: im1;}
-.im2 {grid-area: im2;}
-.im3 {grid-area: im3;}
-.im4 {grid-area: im4;}
-.im5 {grid-area: im5;}
-.im6 {grid-area: im6;}
-.im7 {grid-area: im7;}
-.im8 {grid-area: im8;}
-.im9 {grid-area: im9;}
+.im01 {grid-area: im01;}
+.im02 {grid-area: im02;}
+.im03 {grid-area: im03;}
+.im04 {grid-area: im04;}
+.im05 {grid-area: im05;}
+.im06 {grid-area: im06;}
+.im07 {grid-area: im07;}
+.im08 {grid-area: im08;}
+.im09 {grid-area: im09;}
 .im10 {grid-area: im10;}
 .im11 {grid-area: im11;}
 .im12 {grid-area: im12;}
 .im13 {grid-area: im13;}
 .im14 {grid-area: im14;}
 
-.image-container .content {
-  font-size: 14px;
-  position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
+.image-container {
+  position: relative;
+  object-fit: cover;
+  padding: 0px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #f1f1f1;
 }
 
 img {
@@ -86,117 +76,30 @@ img {
 	display: inline-block;
 }
 
-div.toprow {
-  background-image: url("../../media/leapingcat.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; 
-}
-
-img.topimage {
-  margin-top: 0%;
-  padding-top: 0%;
-  padding-left: 0%;
-  padding-right: 0%;
-}
-
-@media (min-width: 645px) {
-  .image-container .content {
-    font-size: 18px;
-   }
-}
-
-@media (min-width: 1345px) {
-  div.toprow {
-    width: 100vw;
-    height: 100vh;
-  }
-  .container, .container-lg, .container-md, .container-sm {
-   min-width: 1345px;
- }
-  .grid {
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: auto;
-  grid-template-areas:
-  ". im1 im1 im2 im2 ."
-  ". im3 im3 im4 im4 ."
-  ". im5 im5 im6 im6 ."
-  ". im7 im7 im8 im8 ."
-  ". im9 im9 im10 im10 ."
-  ". im11 im11 im12 im12 ."
-  ". im13 im13 im14 im14 .";
-  }
-}
-
-/* @media (min-width: 992px) {
-  .container, .container-lg, .container-md, .container-sm {
-    min-width: 992px;
-    max-width: 100vw;
-  }
-} */
-
-.image-container {
-  position: relative;
-  margin-top: 40px;
-  margin-bottom:30px;
-  object-fit: cover;
-  padding: 0px;
-}
-
-.responsive-img {
-  width: 100%;
-  max-width: 400px;
+.responsive-img.rounded-circle {
+  width: 36px;
   height: auto;
+  max-width: 100%;
+  padding: 0px;
+  margin: 10px;
 }
 
-.blue {
-  outline: 20px solid  #3b7ea1;
+a.link-primary.overlay {
+  text-decoration:none;
+  color:transparent;
+  font-size: 14px;
 }
 
-.yellow {
-  outline: 20px solid  #f5a824;
-}
-
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+a.link-primary.overlay:hover  {
+  color:aqua;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 14px;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  transform: scale3d(1.1, 1.2, 0.5);
+  animation-timing-function: ease;
+  transition: transform 2s;
 }
 
 .blur {filter: blur(0px);}
@@ -209,3 +112,25 @@ img.topimage {
 .saturate {filter: saturate(2);}
 .sepia {filter: sepia(100%);}
 .shadow {filter: drop-shadow(8px 8px 10px rgb(147, 150, 147));}
+
+@media (min-width: 768px) {
+  .grid.container, div.container-fluid, .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+   min-width: 768px;
+  
+ }
+ .image-container .content {
+  font-size: 14px;
+ }
+  div.grid.image-container.responsive-img {
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: min-content;
+  grid-template-areas:
+  '. im01 im01 im01 im01 im02 im02 im02 im02 im03 im03 im03'
+  '. . im04 im04 im04 . im05 im05 im05 im05 . .'
+  '. . . im06 im06 im06 . im07 im07 im08 im08 .'
+  '. . im09 im09 im09 im10 im10 im10 . im11 im11 .'
+  '. im12 im12 . im13 im13 . im14 im14 . . .'
+  '. . . . . . . . . . . .';
+  }
+} 
+
