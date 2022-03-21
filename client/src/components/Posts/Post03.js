@@ -378,7 +378,62 @@ function initialize(passport) {
 module.exports = initialize;
 `;
 
-  let Text1 = (
+let Text2 = (
+  <div>
+    <p className="post-text">
+      This is part of my app.js file for Express. I changed the name to
+      app.mysql.js because the application is also implemented in PostgreSQL.
+      Doing it this way I can quickly swap the application from MySql to
+      PostgreSQL on a restart by using the appropriate start script.
+    </p>
+    <p className="post-text">
+      The Passport documentation explains the order in which the Passport
+      middleware must be implemented. In a Connect or Express-based
+      application, passport.initialize() middleware is required first to
+      initialize Passport.
+    </p>
+    <p className="post-text">
+      If your application uses persistent login sessions (ours does),
+      passport.session() middleware must be installed next.
+    </p>
+    <p className="post-text">
+      In a typical web application, the credentials used to authenticate a
+      user will only be transmitted during the login request. If
+      authentication succeeds, a session will be established and maintained
+      via a cookie set in the user's browser.
+    </p>
+    <p className="post-text">
+      Each subsequent request will not contain credentials, but rather the
+      unique cookie that identifies the session. In order to support login
+      sessions, Passport will serialize and deserialize user instances to and
+      from the session.
+    </p>
+    <p className="post-text">
+      Note that enabling session support is entirely optional, though it is
+      recommended for most applications. If enabled, be sure to use
+      express.session() before passport.session() to ensure that the login
+      session is restored in the correct order.
+    </p>
+    <p className="post-text">
+      This app.mysql.js file is boiled down to the minimum you need for
+      Passport to work. The order of the statements is important. Express
+      reads app.js from top to bottom.
+    </p>
+  </div>
+);
+
+let Text3 = (
+  <div>
+    <p className="post-text">
+      The last thing we have to do is configure Passport. Create the file
+      passportConfig.js in the same directory as package.json. It initializes
+      Passport to use the local strategy, authenticates users, and serializes
+      and deserializes them to and from the user store.
+    </p>
+  </div>
+);
+
+  let Sec01 = (
     <div>
       <p className="post-text">
         <a href="https://www.passportjs.org/" className="link-primary">
@@ -457,75 +512,6 @@ module.exports = initialize;
         This is the dependency list from my package.json for the Node/Express
         server. You need to install these packages with npm or yarn.
       </p>
-    </div>
-  );
-
-  let Text2 = (
-    <div>
-      <p className="post-text">
-        This is part of my app.js file for Express. I changed the name to
-        app.mysql.js because the application is also implemented in PostgreSQL.
-        Doing it this way I can quickly swap the application from MySql to
-        PostgreSQL on a restart by using the appropriate start script.
-      </p>
-      <p className="post-text">
-        The Passport documentation explains the order in which the Passport
-        middleware must be implemented. In a Connect or Express-based
-        application, passport.initialize() middleware is required first to
-        initialize Passport.
-      </p>
-      <p className="post-text">
-        If your application uses persistent login sessions (ours does),
-        passport.session() middleware must be installed next.
-      </p>
-      <p className="post-text">
-        In a typical web application, the credentials used to authenticate a
-        user will only be transmitted during the login request. If
-        authentication succeeds, a session will be established and maintained
-        via a cookie set in the user's browser.
-      </p>
-      <p className="post-text">
-        Each subsequent request will not contain credentials, but rather the
-        unique cookie that identifies the session. In order to support login
-        sessions, Passport will serialize and deserialize user instances to and
-        from the session.
-      </p>
-      <p className="post-text">
-        Note that enabling session support is entirely optional, though it is
-        recommended for most applications. If enabled, be sure to use
-        express.session() before passport.session() to ensure that the login
-        session is restored in the correct order.
-      </p>
-      <p className="post-text">
-        This app.mysql.js file is boiled down to the minimum you need for
-        Passport to work. The order of the statements is important. Express
-        reads app.js from top to bottom.
-      </p>
-    </div>
-  );
-
-  let Text3 = (
-    <div>
-      <p className="post-text">
-        The last thing we have to do is configure Passport. Create the file
-        passportConfig.js in the same directory as package.json. It initializes
-        Passport to use the local strategy, authenticates users, and serializes
-        and deserializes them to and from the user store.
-      </p>
-    </div>
-  );
-
-  return (
-    <div className="post-wrapper post03">
-      <div className="post-img-top">
-        <img src={TopPic} alt="Post" />
-      </div>
-
-      <h3 className="post-title text-center">{Title}</h3>
-      <div className="text1">
-        {Text1}
-        <br />
-      </div>
       <div className="code1">
         <h4>package.json</h4>
         <SyntaxHighlighter
@@ -537,6 +523,7 @@ module.exports = initialize;
           {codeSection1}
         </SyntaxHighlighter>
       </div>
+      
       <div className="text2">
         {Text2}
         <br />
@@ -565,6 +552,20 @@ module.exports = initialize;
         >
           {codeSection3}
         </SyntaxHighlighter>
+      </div>
+    </div>
+  );
+
+
+  return (
+    <div className="post-wrapper post">
+      <div className="post-img-top">
+        <img src={TopPic} alt="Post" />
+      </div>
+      <h3 className="post-title text-center">{Title}</h3>
+      <div className="sec01">
+        {Sec01}
+        <br />
       </div>
     </div>
   );

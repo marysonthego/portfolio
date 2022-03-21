@@ -210,12 +210,12 @@ export const Post01 = () => {
     </div>
   );
   return (
-    <div className="post-wrapper post01">
+    <div className="post-wrapper post">
       <div className="post-img-top">
         <img src={TopPic} alt="Post" />
       </div>
       <h3 className="post-title text-center">{Title}</h3>
-      <div className="text1">{Section1}</div>
+      <div className="sec01">{Section1}</div>
     </div>
   );
 };

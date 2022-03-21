@@ -12,33 +12,31 @@ export function P04_arrowFunctions() {
   ));`;
 
   let Post = (
-    <div className="posta" id="arrowFunctions">
-      <br />
-      <hr />
+    <div className="sec" id="arrowFunctions">
       <h4 className="subtitle">Arrow Functions with array.map</h4>
+      <hr/>
       <p className="post-text">
         For the longest time the only way I'd ever used the map function was
         with braces {} like this:
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code1}
-        </SyntaxHighlighter>
-        Then I noticed someone using it like this:
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code2}
-        </SyntaxHighlighter>{" "}
-        <br />
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code1}
+      </SyntaxHighlighter>
+      Then I noticed someone using it like this:
+      <br />
+      <br />
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code2}
+      </SyntaxHighlighter>{" "}
+      <p className="post-text">
         <br />
         Use arrow functions with parentheses around the function body when you
         are only executing ONE statement. Leave out 'return' because the result

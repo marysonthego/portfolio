@@ -11,27 +11,32 @@ export const Post04 = () => {
   let Title = "React Bits and Javascript Pieces";
 
   let Toc = (
-    <div>
-      <div>
-        <a className="link-primary toc" href="#arrowFunctions">
+    <div className="toc">
+      Contents
+      <hr/>
+      <ul>
+        <li>
+        <a className="link-primary " href="#arrowFunctions">
           Arrow Functions with array.map
         </a>
-      </div>
-      <div>
-        <a className="link-primary toc" href="#extensible">
+        </li>
+      
+      <li>
+        <a className="link-primary " href="#extensible">
           TypeError: Cannot add property st, object is not extensible
         </a>
-      </div>
-      <div>
-        <a className="link-primary toc" href="#dispatch">
+      </li>
+      <li>
+        <a className="link-primary " href="#dispatch">
           Uncaught TypeError: Object(...)(...) is not a function
         </a>
-      </div>
+      </li>
+      </ul>
     </div>
   );
 
   return (
-    <div className="post-wrapper">
+    <div className="post-wrapper post-bits04">
       <div className="post-img-top">
         <img src={TopPic} alt="Post" />
       </div>
@@ -39,12 +44,15 @@ export const Post04 = () => {
       <h3 className="post-title text-center">{Title}</h3>
 
       <div className="toc">{Toc}</div>
-
-      <P04_arrowFunctions id="arrowFunctions" />
-
-      <P04_extensible id="extensible" />
-
-      <P04_dispatch id="dispatch" />
+      <div className="posta">
+        <P04_arrowFunctions id="arrowFunctions" />
+      </div>
+      <div className="postb">
+        <P04_extensible id="extensible" />
+      </div>
+      <div className="postc">
+        <P04_dispatch id="dispatch" />
+      </div>
     </div>
   );
 };

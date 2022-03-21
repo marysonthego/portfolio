@@ -13,13 +13,11 @@ export const P04_dispatch = () => {
 });`;
 
   let Post = (
-    <div className="postc" id="dispatch">
-      <hr />
+    <div className="sec" id="dispatch">
       <h4 className="subtitle">
-        <br />
         Uncaught TypeError: Object(...)(...) is not a function
       </h4>
-
+      <hr/>
       <p className="post-text">
         Uncaught TypeError: dispatch(...) is not a function
         <br />
@@ -28,33 +26,26 @@ export const P04_dispatch = () => {
           Arrow Functions with array.map
         </a>{" "}
         this problem is.
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code1}
-        </SyntaxHighlighter>
-        <br />
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code1}
+      </SyntaxHighlighter>
+      <p className="post-text">
         The fix is exactly the same, too. Replace the parentheses surrounding
         the function with braces and add a return statement.
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code2}
-        </SyntaxHighlighter>
-        <br />
-        <br />
       </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code2}
+      </SyntaxHighlighter>
     </div>
   );
-  return (
-      <>{Post}</>
-  );
+  return <>{Post}</>;
 };

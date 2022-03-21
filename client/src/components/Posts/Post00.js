@@ -1,7 +1,7 @@
 import react from "react";
 
 export const Post00 = () => {
-  let TopPic = "media/reactnativetop.png";
+  let TopPic = "media/reactnativetopt.png";
   let Title =
     "How to Setup a React Native Development Environment in Windows";
 
@@ -65,12 +65,12 @@ export const Post00 = () => {
     </div>
   );
   return (
-    <div className="post-wrapper post00">
+    <div className="post-wrapper post">
       <div className="post-img-top">
         <img src={TopPic} alt="Post" />
       </div>
       <h3 className="post-title text-center">{Title}</h3>
-      <div className="text1">
+      <div className="sec01">
       {Section1}
       </div>
     </div>

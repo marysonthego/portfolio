@@ -51,12 +51,12 @@ export const Post02 = () => {
     </div>
   );
   return (
-    <div className="post-wrapper post02">
+    <div className="post-wrapper post">
       <div className="post-img-top">
         <img src={TopPic} alt="Post image" />
       </div>
         <h3 className="post-title text-center">{Title}</h3>
-        <div className="text1">
+        <div className="sec01">
         {Section1}
         </div>
       </div>

@@ -1,0 +1,130 @@
+import react from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+export const Post05 = () => {
+  let TopPic = "media/avif400x400.png";
+  let Title =
+    "Save Space with the  AVIF Image Format";
+
+  let code= `<img 
+    src="/images/millslakermnp.avif" 
+    width="360" 
+    height="240" 
+    alt="Mills Lake, RMNP">
+  </img>`;
+
+  let Section1 = (
+    <div>
+      <p className="post-text">
+        People have been putting images in web pages for as long as there has been a web. But the most widely used image file formats - JPEG and PNG - have drawbacks.
+      </p>
+      <h4 className="subtitle">
+        What's Wrong with JPEG and PNG?
+      </h4>
+      
+        JPEG 
+        <ul>
+          <li>No Transparency (think transparent backgrounds)</li>
+          <li>No Animation</li>
+          <li>No Depth Maps</li>
+          <li>No Overlays</li>
+        </ul>
+        <p className="post-text">
+        JPEG is a 'lossy' compression format. That means it loses detail when the image is compressed. Nevertheless, because it compresses images down to a smaller size, it is considered best for web photographs.
+      </p>
+    
+        PNG
+        <ul>
+          <li>Low compression</li>
+          <li>Is best for non-photographic quality images</li>
+        </ul>
+        <p className="post-text">
+        PNG supports transparency, but the amount of compression it achieves is very low, especially for photos. This is because it is a 'lossless' format; meaning, it does not lose detail when an image is compressed.  Unfortunately, this lack of compression makes the file size much larger than for the same image saved as a JPEG.
+      </p>
+      <h4 className="subtitle">
+        Codecs
+      </h4>
+      <p className="post-text">
+        A codec is an algorithm used to encode an image to save it to a file, and decode the saved file to display it on screen. JPEG and PNG are codecs.
+      </p>
+      <p className="post-text">
+        When you are deciding which format (codec) to use for an image, there are many criteria, but the 3 most important ones are usually:
+        </p>
+        <ul>
+          <li>Compression</li>
+          <li>Quality</li>
+          <li>Speed</li>
+        </ul>
+        <p className="post-text">
+        Compression measures how much compression a codec can achieve. The higher the compression, the smaller the file size will be, and therefore, the faster the file will transfer across the network. However, as we know, higher compression means loss of image data. This might be ok if image quality isn't as important as page load speed to you.
+        <br/><br/>
+        High quality images should be lossless, not losing any data during compression. PNG compression is very close to lossless, while lossy JPEG images lose a lot of data during compression and quality suffers.
+        <br/><br/>
+        Speed refers to how fast the compression/decompression algorithm is. A complex codec algorithm can greatly increase the amount of time it takes to decode an image on a browser after it is downloaded. This can have a negative impact on page load time. 
+        <br/><br/>
+        Progressive Decoding allows images to load gradually from as little as 10% of their data, so that the user sees some approximation of the image while it's still in progress. Both JPEG and PNG support various forms of progressive decoding. It can be configured before encoding (saving) the file. You should be aware, however, that for JPEG, the user may get an approximate image earlier, but progressive decoding itself slows down the overall speed of decoding the image. 
+      </p>
+      <h4 className="subtitle">
+        AVIF
+      </h4>
+      <p className="post-text">
+        AVIF stands for <i>Av1 image file format</i>. It was developed in 2019 by the Alliance for Open Media (<a
+          href="https://aomedia.org/"
+          className="link-primary"
+        >AOMedia</a>) as the still image implementation of their popular AV1 video format which is used by several streaming platforms. AVIF is open source software.  It is state-of-the-art and royalty free. Anyone can use it.
+        <br/><br/>
+        AVIF produces high quality results which are better, smaller, and faster than JPEG or PNG. Here, I used <a
+          href="https://squoosh.app"
+          className="link-primary"
+        >
+          Squoosh
+        </a> to convert the site background image from PNG to AVIF:
+      </p>
+      <img className="responsive-img" src="media/aviftopngcomparison.png" width="400px" height="auto" alt="Post" />
+      <p className="post-text">
+        <br/>
+        The AVIF image is 95% smaller than the original PNG. 
+        <br/>
+        For JPEG the average size reduction is usually 10% - 15%. 
+        <br/><br/>
+        AVIF supports several nice features:
+        </p>
+        <ul>
+          <li>Animations and live photos through multilayer images stored in image sequences</li>
+          <li>Better lossless compression than JPEG</li>
+          <li>12-bit color depth allowing high dynamic range (HDR) and wide color gamut (WCG) images</li>
+          <li>Monochrome and multi-channel images</li>
+        </ul>
+      
+      <p className="post-text">
+        You can use an AVIF file just like any other file type. 
+      </p>
+      <SyntaxHighlighter
+          language="javascript"
+          style={tomorrowNightBlue}
+          showLineNumbers
+          wrapLongLines
+        >
+          {code}
+        </SyntaxHighlighter>
+        <p className="post-text">
+        One caveat is that AVIF is not supported by older browsers. To work around this, you can provide a fallback image using the &lt;picture&gt; element. 
+      </p>
+      <p className="post-text">
+        We will all be using AVIF soon.
+      </p>
+    </div>
+  );
+  return (
+    <div className="post-wrapper post">
+      <div className="post-img-top">
+        <img src={TopPic} alt="Post" />
+      </div>
+        <h3 className="post-title text-center">{Title}</h3>
+        <div className="sec01">
+        {Section1}
+        </div>
+      </div>
+  );
+};

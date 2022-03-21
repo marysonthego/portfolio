@@ -1,9 +1,8 @@
 import react from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {tomorrowNightBlue} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export const P04_extensible = () => {
-
   let code1 = `// copy stateId to st 
   const locations = list.map((location, i) => (   <=== TypeError: Cannot add property st, object is not extensible
     location.st=(location.stateId), 
@@ -26,56 +25,47 @@ export const P04_extensible = () => {
   ));`;
 
   let Post = (
-    <div className="postb" id="extensible">
-      <br />
-      <hr />
+    <div className="sec" id="extensible">
       <h4 className="subtitle">
-        <br />
         TypeError: Cannot add property st, object is not extensible
       </h4>
-
+      <hr/>
       <p className="post-text">
         I was trying to copy stateId to st when I received this error:
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code1}
-        </SyntaxHighlighter>
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code1}
+      </SyntaxHighlighter>
+      <p className="post-text">
         After looking to see what was actually in the location object, I
         discovered that 'st' was not defined.
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code2}
-        </SyntaxHighlighter>{" "}
-        <br />
+      </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code2}
+      </SyntaxHighlighter>{" "}
+      <p className="post-text">
         You cannot create a new property in an object just by assigning
         something to it (that's what they mean by "the object is not
-        extensible"), but you <i>can</i> insert a new property by using the Spread
-        operator, like this:
-        <br />
-        <br />
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          wrapLongLines
-        >
-          {code3}
-        </SyntaxHighlighter>{" "}
+        extensible"), but you <i>can</i> insert a new property by using the
+        Spread operator, like this:
       </p>
+      <SyntaxHighlighter
+        language="javascript"
+        style={tomorrowNightBlue}
+        wrapLongLines
+      >
+        {code3}
+      </SyntaxHighlighter>{" "}
     </div>
   );
 
-  
-  return (
-      <>{Post}</>
-  );
+  return <>{Post}</>;
 };

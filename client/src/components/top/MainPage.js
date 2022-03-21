@@ -33,7 +33,7 @@ export function MainPage() {
 
       <div className="grid image-container responsive-img ">
         <a
-          href="https://marysonthego.tech/dashboard"
+          href="/dashboard"
           className="link-primary overlay im03"
         >
           <img
@@ -48,7 +48,7 @@ export function MainPage() {
 
       <div className="grid image-container responsive-img ">
         <a
-          href="https://marysonthego.tech/dashboard"
+          href="/stepper"
           className="link-primary overlay im04"
         >
           <img
@@ -63,7 +63,7 @@ export function MainPage() {
 
       <div className="grid image-container responsive-img ">
         <a
-          href="https://marysonthego.tech/dashboard"
+          href="/post01"
           className="link-primary overlay im05"
         >
           <img
@@ -101,7 +101,7 @@ export function MainPage() {
       </div>
 
       <div className="grid image-container responsive-img ">
-        <a href="/post01/#debug" className="link-primary overlay im08">
+        <a href="/post01#debug" className="link-primary overlay im08">
           <img
             src="media/post0112_400x400.png"
             alt="React JS"
@@ -113,7 +113,7 @@ export function MainPage() {
       </div>
 
       <div className="grid image-container responsive-img ">
-        <a href="/post04" className="link-primary overlay im09">
+        <a href="/post05" className="link-primary overlay im09">
           <img
             src="media/avif400x400.png"
             alt="React JS"
@@ -138,7 +138,7 @@ export function MainPage() {
 
       <div className="grid image-container responsive-img ">
         <a
-          href="https://marysonthego.tech/dashboard"
+          href="/todos"
           className="link-primary overlay im11"
         >
           <img
@@ -152,7 +152,7 @@ export function MainPage() {
       </div>
 
       <div className="grid image-container responsive-img ">
-        <a href="/post04" className="link-primary overlay im12">
+        <a href="/post0" className="link-primary overlay im12">
           <img
             src="media/sqlite400x400.png"
             alt="React JS"
@@ -165,7 +165,7 @@ export function MainPage() {
 
       <div className="grid image-container responsive-img ">
         <a
-          href="https://marysonthego.tech/nucat"
+          href="/nucat"
           className="link-primary overlay im13"
         >
           <img
@@ -180,7 +180,7 @@ export function MainPage() {
 
       <div className="grid image-container responsive-img ">
         <a
-          href="https://marysonthego.tech/contact"
+          href="mailto:marysonthego@gmail.com?subject=Contact Me"
           className="link-primary overlay im14"
         >
           <img

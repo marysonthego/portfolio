@@ -3,20 +3,77 @@
   margin:auto;
   width: 100vw;
   color: white;
+}
+.post-wrapper .post-bits04 {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: minmax(100px, auto);
   grid-template-areas:
-    ". top   top   top   top   ."
-    ". title title title title ."
-    ". .     toc   toc   .     ."
-    ". posta  posta  posta  posta  ."
-    ". postb  postb  postb  postb  ."
-    ". postc  postc  postc  postc  .";
+    "top top top top top top"
+    "title title title title title title"
+    ". toc toc toc toc ."
+    "posta posta  posta  posta  posta  posta"
+    "postb postb  postb  postb  postb  postb"
+    "postc postc  postc  postc  postc  postc";
+}
+
+.post-wrapper .post {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+    "top top top top top top"
+    "title title title title title title"
+    "sec01 sec01  sec01  sec01  sec01  sec01";
+}
+
+.post-img-top {
+  margin-top: 5%;
+  margin-left:auto;
+  margin-right:auto;
+  grid-area: top;
+}
+
+h3.post-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right:5rem;
+  line-height: 1.7;
+  font-weight: 600;
+  color:#d4d1d1;
+  grid-area: title;
+  background-color: #003262;
+}
+
+h4.subtitle {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color:#e7e5e5;
+  background-color: #003262;
+}
+
+.sec {
+  background-color: #003262;
+}
+
+.sec01 {
+  background-color: #003262;
+  grid-area: sec01;
 }
 
 .toc {
+  background-color: #003262;
+  margin-top: 2vh;
+  padding-left: 5rem;
+  padding-right:5rem;
+  margin-bottom: 2vh;
+  line-height: 1.7;
   font-size: 16px;
   grid-area: toc;
+}
+
+ul li {
+  line-height: 2.0;
 }
 
 .posta  {
@@ -38,8 +95,37 @@
 }
 
 @media (min-width: 768px) {
-  .post-wrapper {
-    padding-top: 5%;
+
+  .post-bits04 {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas:
+      '. top top top top .'
+      '. title title title title .'
+      '. toc toc toc toc .'
+      '. posta  posta  posta  posta  .'
+      '. postb  postb  postb  postb  .'
+      '. postc  postc  postc  postc  .';
+  }
+  .post {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas:
+      ". top   top   top   top   ."
+      ". title title title title ."
+      ". sec01  sec01  sec01  sec01  ."
+  }
+  .sec01 {
+    padding-top: 4rem;
+    padding-bottom: 1vh;
+    padding-left: 5rem;
+    padding-right:5rem;
+  }
+  .sec {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 5rem;
+    padding-right:5rem;
   }
   .container, .container-md, .container-sm {
     min-width: 768px;
@@ -54,34 +140,13 @@
   }
 }
 
-.post-img-top {
-  margin:auto;
-  grid-area: top;
-}
-
-h3.post-title {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  color:#e7e5e5;
-  grid-area: title;
-  background-color: rgba(0,0,0,0.5);
-}
-
-h4.subtitle {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color:#e7e5e5;
-  background-color: rgba(0,0,0,0.5);
-}
 
 p.post-text {
   margin-bottom: 1rem;
   text-align: justify;
-  font-size: 18px;
+  font-size: 16px;
   color:#e7e5e5;
-  background-color: rgba(0,0,0,0.5);
+  background-color: #003262;
 }
 
 p.post-text.emphasized {
@@ -89,7 +154,7 @@ p.post-text.emphasized {
   margin-bottom: 2rem;
   font-size: 24px;
   color:#e7e5e5;
-  background-color: rgba(0,0,0,0.5);
+  background-color: #003262;
 }
 
 .link-primary {
@@ -103,4 +168,11 @@ p.post-text.emphasized {
 pre {
   color:aqua;
 }
+
+hr {
+  border: 2px solid aqua;
+
+}
+
+
 
