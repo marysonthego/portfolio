@@ -18,6 +18,7 @@
 @import './components/css/modal.css';
 @import './components/css/posts.scss';
 @import './components/css/navigation.css';
+@import './components/css/prism.css';
 @import './App.scss';
 
 /* Reset CSS */
@@ -49,14 +50,6 @@ body {
   background-position: top;
   min-height:auto;
   position: relative;
-}
-
-.json > pre {
-  background: none #fff !important;
-}
-
-.example-code > .json {
-  background: none #fff !important;
 }
 
 code {

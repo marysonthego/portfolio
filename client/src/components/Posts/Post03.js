@@ -1,6 +1,4 @@
 import react from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export const Post03 = () => {
   let TopPic = "media/post03top.png";
@@ -514,14 +512,7 @@ let Text3 = (
       </p>
       <div className="code1">
         <h4>package.json</h4>
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          showLineNumbers
-          wrapLongLines
-        >
           {codeSection1}
-        </SyntaxHighlighter>
       </div>
       
       <div className="text2">
@@ -530,28 +521,14 @@ let Text3 = (
       </div>
       <div className="code2">
         <h4>app.js</h4>
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          showLineNumbers
-          wrapLongLines
-        >
           {codeSection2}
-        </SyntaxHighlighter>
       </div>
       <div className="text3">
         {Text3}
       </div>
       <div className="code3">
         <h4>passportConfig.js</h4>
-        <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          showLineNumbers
-          wrapLongLines
-        >
           {codeSection3}
-        </SyntaxHighlighter>
       </div>
     </div>
   );

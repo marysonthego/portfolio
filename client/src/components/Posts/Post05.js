@@ -1,6 +1,4 @@
 import react from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export const Post05 = () => {
   let TopPic = "media/avif400x400.png";
@@ -98,14 +96,7 @@ export const Post05 = () => {
       <p className="post-text">
         You can use an AVIF file just like any other image file type. 
       </p>
-      <SyntaxHighlighter
-          language="javascript"
-          style={tomorrowNightBlue}
-          showLineNumbers
-          wrapLongLines
-        >
           {code}
-        </SyntaxHighlighter>
         <p className="post-text">
         One caveat is that AVIF is not supported by older browsers. To work around this, you can provide a fallback image using the &lt;picture&gt; element. 
       </p>

@@ -1,6 +1,4 @@
 import react from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export const P04_dispatch = () => {
   let code1 = `List = locs.map(loc => 
@@ -27,24 +25,12 @@ export const P04_dispatch = () => {
         </a>{" "}
         this problem is.
       </p>
-      <SyntaxHighlighter
-        language="javascript"
-        style={tomorrowNightBlue}
-        wrapLongLines
-      >
         {code1}
-      </SyntaxHighlighter>
       <p className="post-text">
         The fix is exactly the same, too. Replace the parentheses surrounding
         the function with braces and add a return statement.
       </p>
-      <SyntaxHighlighter
-        language="javascript"
-        style={tomorrowNightBlue}
-        wrapLongLines
-      >
         {code2}
-      </SyntaxHighlighter>
     </div>
   );
   return <>{Post}</>;

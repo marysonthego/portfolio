@@ -41,11 +41,9 @@
     "memorystore": "^1.6.7",
     "mysql2": "^2.3.3",
     "passport": "^0.5.2",
-    "passport-local": "^1.0.0",
-    "react-syntax-highlighter": "^15.4.5"
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "babel-plugin-prismjs": "^2.1.0",
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.3"
   }

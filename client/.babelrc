@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    ["prismjs", {
+        "languages": ["jsx", "bash"],
+        "plugins": ["line-numbers", "file-highlight", "line-highlight", "match-braces", "unescaped-markup", "copy-to-clipboard"],
+        "theme": "tomorrow",
+        "css": true
+    }]
+  ]
+}

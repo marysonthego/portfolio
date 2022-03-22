@@ -1,6 +1,4 @@
 import react from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { tomorrowNightBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export function P04_arrowFunctions() {
   let code1 = `const withBraces = aList.map((name) => {
@@ -19,24 +17,12 @@ export function P04_arrowFunctions() {
         For the longest time the only way I'd ever used the map function was
         with braces {} like this:
       </p>
-      <SyntaxHighlighter
-        language="javascript"
-        style={tomorrowNightBlue}
-        wrapLongLines
-      >
         {code1}
-      </SyntaxHighlighter>
     
       <p className="post-text">
       Then I noticed someone using it like this:
       </p>
-      <SyntaxHighlighter
-        language="javascript"
-        style={tomorrowNightBlue}
-        wrapLongLines
-      >
         {code2}
-      </SyntaxHighlighter>{" "}
       <p className="post-text">
         <br />
         Use arrow functions with parentheses around the function body when you
