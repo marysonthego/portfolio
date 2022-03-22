@@ -46,10 +46,15 @@ h3.post-title {
 }
 
 h4.subtitle {
+  font-size: 18px;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color:#e7e5e5;
+  color:aqua;
   background-color: #003262;
+}
+h5.subsub {
+  font-size: 16px;
+  color:darkcyan;
 }
 
 .sec {
@@ -144,7 +149,7 @@ ul li {
 p.post-text {
   margin-bottom: 1rem;
   text-align: justify;
-  font-size: 16px;
+  font-size: 15px;
   color:#e7e5e5;
   background-color: #003262;
 }

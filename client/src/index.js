@@ -6,6 +6,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import Prism from "prismjs";
 import App from "./App";
 import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
@@ -21,6 +22,7 @@ import {Post02} from "components/posts/Post02";
 import {Post03} from "components/posts/Post03";
 import {Post04} from "components/posts/P04/Post04";
 import {Post05} from "components/posts/Post05";
+import {Post06} from "components/posts/Post06";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import {CookiesProvider} from "react-cookie";
@@ -57,6 +59,7 @@ ReactDOM.render(
             <Route path="/post03" element={<Post03 />} />
             <Route path="/post04" element={<Post04 />} />
             <Route path="/post05" element={<Post05 />} />
+            <Route path="/post06" element={<Post06 />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>
@@ -66,5 +69,5 @@ ReactDOM.render(
 
   document.getElementById("root")
 );
-
+setTimeout(() => Prism.highlightAll(), 0);
 reportWebVitals();

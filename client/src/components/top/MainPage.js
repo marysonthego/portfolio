@@ -152,9 +152,9 @@ export function MainPage() {
       </div>
 
       <div className="grid image-container responsive-img ">
-        <a href="/post0" className="link-primary overlay im12">
+        <a href="/post06" className="link-primary overlay im12">
           <img
-            src="media/sqlite400x400.png"
+            src="media/sqlite400b.png"
             alt="React JS"
             loading="lazy"
             className="responsive-img rounded-circle "

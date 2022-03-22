@@ -26,9 +26,10 @@ export function P04_arrowFunctions() {
       >
         {code1}
       </SyntaxHighlighter>
+    
+      <p className="post-text">
       Then I noticed someone using it like this:
-      <br />
-      <br />
+      </p>
       <SyntaxHighlighter
         language="javascript"
         style={tomorrowNightBlue}
