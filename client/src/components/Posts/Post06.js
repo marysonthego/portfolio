@@ -1,7 +1,28 @@
-import react from "react";
-import Code from "components/helpers/Code";
+import React, {useState} from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import dbfile from './examples/db.txt';
+import controllerFile from './examples/controller.txt';
+import routesFile from './examples/routes.txt';
+import serverFile from './examples/server.txt';
 
-export const Post06 = () => {
+function Notes(fileName) {
+  const [text, setText] = useState();
+   fetch(fileName)
+    .then(response => response.text())
+    .then(textContent => {
+      setText(textContent);
+    });
+  return text;
+}
+
+export function Post06() {
+
+  const db = Notes(dbfile);
+  const controller = Notes(controllerFile);
+  const routes = Notes(routesFile);
+  const server = Notes(serverFile);
+
   let TopPic = "media/sqlite400t.png";
   let Title = "Use SQLite3 for light-weight Database Emulation";
 
@@ -90,10 +111,12 @@ export const Post06 = () => {
         Test to be sure node and npm are installed by running node and npm with
         the version flag (-v):
       </p>
-
-      <pre>
-        <code>{code2}</code>
-      </pre>
+      <SyntaxHighlighter
+          language="bash"
+          style={nightOwl}
+        >
+          {code2}
+        </SyntaxHighlighter>
 
       <h5 className="subsub">Install React using create-react-app</h5>
       <p className="post-text">
@@ -101,11 +124,13 @@ export const Post06 = () => {
         command line by running the command
         <br /> <code> npx create-react-app sqlite3app</code> <br />
       </p>
-
-      <pre>
-        <code>{code1}</code>
-      </pre>
-
+      <SyntaxHighlighter
+          language="bash"
+          style={nightOwl}
+        >
+          {code1}
+        </SyntaxHighlighter>
+  
       <p className="post-text">
         As you can see, <code>create-react-app </code> created a new
         subdirectory named <code>sqlite3app</code> and installed a basic React
@@ -118,20 +143,25 @@ export const Post06 = () => {
         <code>sqlite3app</code> directory created by{" "}
         <code>create-react-app</code>, then execute the following commands:
       </p>
-
-      <pre>
-        <code>{code3}</code>
-      </pre>
-
+      <SyntaxHighlighter
+          language="bash"
+          style={nightOwl}
+        >
+          {code3}
+        </SyntaxHighlighter >
+  
       <p className="post-text">
         Continue by installing <code>path</code>, <code>body-parser</code>, and{" "}
         <code>compression</code>. The dependency list in{" "}
         <code>package.json</code> should now contain these items at a minimum,
         though the versions may be different:
       </p>
-      <pre>
-        <code>{code4}</code>
-      </pre>
+      <SyntaxHighlighter id="step2"
+          language="bash"
+          style={nightOwl}
+        >
+        {code4}
+        </SyntaxHighlighter >
 
       <h4 className="subtitle">Step 2: Configure the Sqlite3 database</h4>
 
@@ -153,10 +183,12 @@ export const Post06 = () => {
         In the project root, create a <code>server</code> directory and{" "}
         <code>cd</code> into it.
       </p>
-
-      <pre>
-        <code>{code5}</code>
-      </pre>
+      <SyntaxHighlighter
+          language="bash"
+          style={nightOwl}
+        >
+          {code5}
+        </SyntaxHighlighter >
 
       <p className="post-text">
         The <code>server</code> directory will contain all the files used by
@@ -169,39 +201,43 @@ export const Post06 = () => {
         the code:
       </p>
       <h5 className="subsub">db.js</h5>
-      <pre
-        className="line-numbers"
-        data-src="examples/db.js"
-        language="jsx"
-      ></pre>
-
+      <SyntaxHighlighter
+          language="jsx"
+          style={nightOwl}
+        >
+          {db}
+      </SyntaxHighlighter>
       
       <p className="post-text">Create a new file named <code>controller.js</code>. The controller defines all the queries to the database.</p>
       <h5 className="subsub">controller.js</h5>
-      <pre
-        className="line-numbers"
-        data-src="examples/controller.js"
-        language="jsx"
-      ></pre>
+      <SyntaxHighlighter
+          language="javascript"
+          style={nightOwl}
+          showLineNumbers
+        >
+        {controller}
+      </SyntaxHighlighter>
 
       <p className="post-text">Next, create the file <code>server.js</code>. This file configures Express to handle communication and implement middleware.</p>
       <h5 className="subsub">server.js</h5>
-      <pre
-        className="line-numbers"
-        data-src="examples/server.js"
-        language="jsx"
-      ></pre>
+      <SyntaxHighlighter
+          language="javascript"
+          style={nightOwl}
+          showLineNumbers
+        >
+        {server}
+      </SyntaxHighlighter>
     
       <p className="post-text">The last file we need is <code>routes.js</code>. This file defines the routing between the server and the database. It routes to the queries defined in <code>controller.js</code>. It is common to see <code>server.js</code> and <code>routes.js</code> combined in one file, but if you have a lot of queries, dividing things up this way makes it easier to read.</p>
       <h5 className="subsub">routes.js</h5>
-      <pre
-        className="line-numbers"
-        data-src="examples/routes.js"
-        language="jsx"
-      ></pre>
+      <SyntaxHighlighter
+          language="javascript"
+          style={nightOwl}
+          showLineNumbers
+        >
+        {routes}
+      </SyntaxHighlighter>
 
-      <h4 className="subtitle"></h4>
-      <p className="post-text"></p>
     </div>
   );
   return (

@@ -1,4 +1,3 @@
-import react from "react";
 import { P04_arrowFunctions } from "./P04_arrowFunctions";
 import { P04_extensible } from "./P04_extensible";
 import { P04_dispatch } from "./P04_dispatch";

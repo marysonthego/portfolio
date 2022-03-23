@@ -1,4 +1,5 @@
-import react from "react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {duotoneSpace, atomDark, materialDark, nightOwl, duotoneDark, a11yDark, coldarkCold, coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const Post03 = () => {
   let TopPic = "media/post03top.png";
@@ -512,7 +513,13 @@ let Text3 = (
       </p>
       <div className="code1">
         <h4>package.json</h4>
+        <SyntaxHighlighter
+          language="javascript"
+          style={coldarkDark}
+        >
           {codeSection1}
+      </SyntaxHighlighter>
+          
       </div>
       
       <div className="text2">
@@ -521,14 +528,25 @@ let Text3 = (
       </div>
       <div className="code2">
         <h4>app.js</h4>
+        <SyntaxHighlighter
+          language="javascript"
+          style={coldarkDark}
+        >
           {codeSection2}
+          </SyntaxHighlighter>
+        
       </div>
       <div className="text3">
         {Text3}
       </div>
       <div className="code3">
         <h4>passportConfig.js</h4>
+        <SyntaxHighlighter
+          language="javascript"
+          style={coldarkDark}
+        >
           {codeSection3}
+      </SyntaxHighlighter>
       </div>
     </div>
   );

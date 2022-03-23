@@ -15,7 +15,7 @@ export function MainPage() {
             loading="lazy"
             className=" responsive-img rounded-circle "
           />
-          Setup Windows React Native Development
+          Setup Windows React Native Development &nbsp;
         </a>
       </div>
 
@@ -27,7 +27,7 @@ export function MainPage() {
             loading="lazy"
             className=" responsive-img rounded-circle "
           />
-          React Bits & Javascript Pieces
+          React Bits & Javascript Pieces &nbsp;
         </a>
       </div>
 
@@ -42,7 +42,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Custom Login
+          Custom Login &nbsp;
         </a>
       </div>
 
@@ -57,7 +57,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Sign-up Stepper
+          Sign-up Stepper &nbsp;
         </a>
       </div>
 
@@ -72,7 +72,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Amazon light-weight emulator for Windows
+          Amazon light-weight emulator for Windows &nbsp;
         </a>
       </div>
 
@@ -84,7 +84,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Use React Forward Refs
+          Use React Forward Refs &nbsp;
         </a>
       </div>
 
@@ -96,7 +96,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          OpenWeather API
+          OpenWeather API &nbsp;
         </a>
       </div>
 
@@ -108,7 +108,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Debug React Native in WSA
+          Debug React Native in WSA &nbsp;
         </a>
       </div>
 
@@ -120,7 +120,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          AVIF Images
+          AVIF Images &nbsp;
         </a>
       </div>
 
@@ -132,7 +132,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Authentication with Passport
+          Authentication with Passport &nbsp;
         </a>
       </div>
 
@@ -147,7 +147,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          myCalendar
+          myCalendar &nbsp;
         </a>
       </div>
 
@@ -159,7 +159,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Use SqLite3
+          Use SqLite3 &nbsp;
         </a>
       </div>
 
@@ -174,7 +174,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Nucat Parallax Campers
+          Nucat Parallax Campers &nbsp;
         </a>
       </div>
 
@@ -189,7 +189,7 @@ export function MainPage() {
             loading="lazy"
             className="responsive-img rounded-circle "
           />
-          Contact Me
+          Contact Me &nbsp;
         </a>
       </div>
     </Container>

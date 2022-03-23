@@ -1,4 +1,3 @@
-import react from "react";
 
 export const Post00 = () => {
   let TopPic = "media/reactnativetopt.png";

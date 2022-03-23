@@ -1,4 +1,5 @@
-import react from "react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const P04_dispatch = () => {
   let code1 = `List = locs.map(loc => 
@@ -25,12 +26,24 @@ export const P04_dispatch = () => {
         </a>{" "}
         this problem is.
       </p>
-        {code1}
+      <SyntaxHighlighter
+          language="javascript"
+          style={coldarkDark}
+        >
+          {code1}
+      </SyntaxHighlighter>
+        
       <p className="post-text">
         The fix is exactly the same, too. Replace the parentheses surrounding
         the function with braces and add a return statement.
       </p>
-        {code2}
+      <SyntaxHighlighter
+          language="javascript"
+          style={coldarkDark}
+        >
+          {code2}
+      </SyntaxHighlighter>
+        
     </div>
   );
   return <>{Post}</>;

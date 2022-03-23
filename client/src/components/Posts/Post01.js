@@ -125,12 +125,12 @@ export const Post01 = () => {
         </a>{" "}
         . It will appear in the Windows App list.
       </p>
-      <img className="post-img-top" src="media/post0101.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0101.png" alt="Post " />
       <p className="post-text"><br/>
         Scroll down and you will see that the Windows Subsystem for Android
         Settings app was also installed.
       </p>
-      <img className="post-img-top" src="media/post0102.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0102.png" alt="Post " />
       <p className="post-text"><br/>
         Install the WSA Pacman executable installer you downloaded from{" "}
         <a
@@ -141,36 +141,36 @@ export const Post01 = () => {
         </a>
         . It will also appear in the Windows App list.
       </p>
-      <img className="post-img-top" src="media/post0103.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0103.png" alt="Post " />
       <p className="post-text"><br/>
         Open Windows Subsystem for Android Settings and turn on Developer mode.
         You can see the IP address it is using. It listens on port 58526 (the
         default for debugging WSA). I'll show you where you can change that in a
         moment.
       </p>
-      <img className="post-img-top" src="media/post0104.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0104.png" alt="Post " />
       <p className="post-text"><br/>
         WSA should be running in Developer mode now, so go ahead and start WSA
         Pacman. Click the settings gear in the upper right corner.
       </p>
-      <img className="post-img-top" src="media/post0105.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0105.png" alt="Post " />
       <p className="post-text"><br/>
         The port used by WSA can be changed in the WSA settings. Don't forget to
         click restart if you do need to change it.
       </p>
-      <img className="post-img-top" src="media/post0106.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0106.png" alt="Post " />
       <p className="post-text"><br/>
         Click WSA to go back, then click Manage Applications. When you click the
         three vertical dots in the upper right corner, App info will show you
         some details about each running process and add the system processes as
         well.
       </p>
-      <img className="post-img-top" src="media/post0107.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0107.png" alt="Post " />
       <p className="post-text"><br/>
         Go back to the main page again and click Manage Settings. You can click
         on each item to see and change settings.
       </p>
-      <img className="post-img-top" src="media/post0108.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0108.png" alt="Post " />
       <h4 id="debug" className="subtitle">Debug a React Native App in WSA</h4>
       <p className="post-text">
         If you need a React Native app to test with or you need to setup your
@@ -186,7 +186,7 @@ export const Post01 = () => {
         <code>npx react-native start</code>
       </p>
       <div className="post-img-top">
-      <img  src="media/post0109.png" alt="Post image" />
+      <img  src="media/post0109.png" alt="Post " />
       </div>
       <p className="post-text"><br/>
         Leave Metro running <br />
@@ -194,7 +194,7 @@ export const Post01 = () => {
         <br /><br/>
         <code>npx react-native run-android</code>
       </p>
-      <img className="post-img-top" src="media/post0110.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0110.png" alt="Post " />
       <p className="post-text"><br/>
         After a moment WSA should open with the running app
       </p>
@@ -203,7 +203,7 @@ export const Post01 = () => {
         automatically. <br /><br/>
         If needed, just type 'rr' in the WSA window to reload the app.
       </p>
-      <img className="post-img-top" src="media/post0112.png" alt="Post image" />
+      <img className="post-img-top" src="media/post0112.png" alt="Post " />
       <h4 className="subtitle">
         Woo Hoo! You're up and running React Native on Windows!
       </h4>

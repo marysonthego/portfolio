@@ -6,7 +6,6 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-//import Prism from "prismjs";
 import App from "./App";
 import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
@@ -70,5 +69,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-//setTimeout(() => Prism.highlightAll(), 0);
 reportWebVitals();

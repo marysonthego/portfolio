@@ -1,5 +1,5 @@
-import react from "react";
-
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {coldarkCold, coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 export const Post05 = () => {
   let TopPic = "media/avif400x400.png";
   let Title =
@@ -96,7 +96,13 @@ export const Post05 = () => {
       <p className="post-text">
         You can use an AVIF file just like any other image file type. 
       </p>
+      <SyntaxHighlighter
+          language="jsx"
+          style={coldarkDark}
+        >
           {code}
+      </SyntaxHighlighter>
+        
         <p className="post-text">
         One caveat is that AVIF is not supported by older browsers. To work around this, you can provide a fallback image using the &lt;picture&gt; element. 
       </p>

@@ -1,4 +1,5 @@
-import react from "react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export function P04_arrowFunctions() {
   let code1 = `const withBraces = aList.map((name) => {
@@ -17,12 +18,23 @@ export function P04_arrowFunctions() {
         For the longest time the only way I'd ever used the map function was
         with braces {} like this:
       </p>
-        {code1}
-    
+      <SyntaxHighlighter
+          language="jsx"
+          style={coldarkDark}
+        >
+          {code1}
+      </SyntaxHighlighter>
+            
       <p className="post-text">
       Then I noticed someone using it like this:
       </p>
-        {code2}
+      <SyntaxHighlighter
+          language="javascript"
+          style={coldarkDark}
+        >
+          {code2}
+      </SyntaxHighlighter>
+        
       <p className="post-text">
         <br />
         Use arrow functions with parentheses around the function body when you

@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import {AnimateListTools} from "components/top/ListTools";
 import {MainPage} from "components/top/MainPage";
 
 export default function App() {
