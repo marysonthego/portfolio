@@ -97,11 +97,11 @@ export const Navigation = () => {
                     <Nav.Link href="/post04" className="rounded-end">
                       React Bits & Javascript Pieces
                     </Nav.Link>
-                    <Nav.Link href="/post08" className="rounded-end">
-                      Never Ending Closures
-                    </Nav.Link>
                     <Nav.Link href="/post07" className="rounded-end">
-                      Hooks are Lovable!
+                      Node JS
+                    </Nav.Link>
+                    <Nav.Link href="/post08" className="rounded-end">
+                      Express
                     </Nav.Link>
                   </Nav>
                 </Accordion.Body>
