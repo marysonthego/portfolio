@@ -1,7 +1,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-export const P04_extensible = () => {
+export const P04Extensible = () => {
   let code1 = `// copy stateId to st 
   const locations = list.map((location, i) => (   <=== TypeError: Cannot add property st, object is not extensible
     location.st=(location.stateId), 
@@ -34,7 +34,7 @@ export const P04_extensible = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code1}
       </SyntaxHighlighter>
@@ -45,7 +45,7 @@ export const P04_extensible = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code2}
       </SyntaxHighlighter>
@@ -58,7 +58,7 @@ export const P04_extensible = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code3}
       </SyntaxHighlighter>

@@ -1,7 +1,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-export const P04_dispatch = () => {
+export const P04Dispatch = () => {
   let code1 = `List = locs.map(loc => 
     dispatch(addLocation({loc})) 
     (<LocationsRow key={loc.id} dataLoc = {loc}/>));`;
@@ -28,7 +28,7 @@ export const P04_dispatch = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code1}
       </SyntaxHighlighter>
@@ -39,7 +39,7 @@ export const P04_dispatch = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code2}
       </SyntaxHighlighter>

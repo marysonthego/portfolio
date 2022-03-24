@@ -1,7 +1,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-export function P04_arrowFunctions() {
+export function P04ArrowFunctions() {
   let code1 = `const withBraces = aList.map((name) => {
     return name;
   });`;
@@ -20,7 +20,7 @@ export function P04_arrowFunctions() {
       </p>
       <SyntaxHighlighter
           language="jsx"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code1}
       </SyntaxHighlighter>
@@ -30,7 +30,7 @@ export function P04_arrowFunctions() {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code2}
       </SyntaxHighlighter>

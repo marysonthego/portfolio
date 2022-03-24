@@ -1,6 +1,8 @@
-import { P04_arrowFunctions } from "./P04_arrowFunctions";
-import { P04_extensible } from "./P04_extensible";
-import { P04_dispatch } from "./P04_dispatch";
+import { P04ArrowFunctions } from "./P04_arrowFunctions";
+import { P04Extensible } from "./P04_extensible";
+import { P04Dispatch } from "./P04_dispatch";
+import {P04DarkStyles} from './P04_DarkStyles';
+import {P04Conflicted} from './P04_conflicted';
 
 export const Post04 = () => {
   let TopPic = "media/react400x400.png";
@@ -17,7 +19,7 @@ export const Post04 = () => {
           Arrow Functions with array.map
         </a>
         </li>
-      
+
       <li>
         <a className="link-primary " href="#extensible">
           TypeError: Cannot add property st, object is not extensible
@@ -26,6 +28,16 @@ export const Post04 = () => {
       <li>
         <a className="link-primary " href="#dispatch">
           Uncaught TypeError: Object(...)(...) is not a function
+        </a>
+      </li>
+      <li>
+        <a className="link-primary " href="#darkstyles">
+          Dark Styles
+        </a>
+      </li>
+      <li>
+        <a className="link-primary " href="#conflicted">
+          Error in plugin react was conflicted
         </a>
       </li>
       </ul>
@@ -42,13 +54,19 @@ export const Post04 = () => {
 
       <div className="toc">{Toc}</div>
       <div className="posta">
-        <P04_arrowFunctions id="arrowFunctions" />
+        <P04ArrowFunctions id="arrowFunctions" />
       </div>
       <div className="postb">
-        <P04_extensible id="extensible" />
+        <P04Extensible id="extensible" />
       </div>
       <div className="postc">
-        <P04_dispatch id="dispatch" />
+        <P04Dispatch id="dispatch" />
+      </div>
+      <div className="postd">
+        <P04DarkStyles id="darkstyles" />
+      </div>
+      <div className="poste">
+        <P04Conflicted id="conflicted" />
       </div>
     </div>
   );

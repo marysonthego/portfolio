@@ -22,6 +22,7 @@ import {Post03} from "components/posts/Post03";
 import {Post04} from "components/posts/P04/Post04";
 import {Post05} from "components/posts/Post05";
 import {Post06} from "components/posts/Post06";
+//import {Post07} from "components/posts/Post07";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import {CookiesProvider} from "react-cookie";

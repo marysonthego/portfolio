@@ -23,8 +23,6 @@ export const WeatherApi = () => {
       });
       // setLat(40.45454);
       // setLong(-105.08668);
-      // console.log(`lat`, lat);
-      // console.log(`long`, long);
       try {
         await fetch(
           `${process.env.REACT_APP_API_URL}/onecall?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`
@@ -87,7 +85,7 @@ export const WeatherApi = () => {
                 you are working with an API!
               </p>
               <p></p>
-              
+
             </div>
 
       <div className="post mb-3" style={{ maxWidth: "100%" }}>
@@ -155,7 +153,7 @@ export const WeatherApi = () => {
                       {weatherData.current.weather[0].description}
                     </p>
                   </div>
-              
+
               </>
             ) : (
               <div></div>
@@ -170,7 +168,7 @@ export const WeatherApi = () => {
                 alt="Weather useEffect code"
               />
               </div>
-            
+
           </div>
         </div>
     </Container>

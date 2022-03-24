@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {coldarkCold, coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 export const Post05 = () => {
   let TopPic = "media/avif400x400.png";
   let Title =
@@ -98,7 +98,7 @@ export const Post05 = () => {
       </p>
       <SyntaxHighlighter
           language="jsx"
-          style={coldarkDark}
+          style={nightOwl}
         >
           {code}
       </SyntaxHighlighter>

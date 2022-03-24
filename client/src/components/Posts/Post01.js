@@ -1,4 +1,3 @@
-import react from "react";
 
 export const Post01 = () => {
   let TopPic = "media/amazon600.png";

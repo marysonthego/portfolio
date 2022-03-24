@@ -13,13 +13,17 @@
     ". toc toc toc toc ."
     "posta posta  posta  posta  posta  posta"
     "postb postb  postb  postb  postb  postb"
-    "postc postc  postc  postc  postc  postc";
+    "postc postc  postc  postc  postc  postc"
+    "postd postd  postd  postd  postd  postd"
+    "poste poste  poste  poste  poste  poste";
 }
+
 
 .post-wrapper .post {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: minmax(100px, auto);
   grid-template-areas:
+
     "top top top top top top"
     "title title title title title title"
     "sec01 sec01  sec01  sec01  sec01  sec01";
@@ -49,7 +53,7 @@ h4.subtitle {
   font-size: 18px;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color:aqua;
+  color:#00ffff;
   background-color: #003262;
 }
 h5.subsub {
@@ -92,6 +96,14 @@ ul li {
   grid-area: postc;
 }
 
+.postd {
+  grid-area: postd;
+}
+
+.poste {
+  grid-area: poste;
+}
+
 @media (min-width: 576px) {
   .container, .container-sm {
     min-width: 576px;
@@ -110,7 +122,9 @@ ul li {
       '. toc toc toc toc .'
       '. posta  posta  posta  posta  .'
       '. postb  postb  postb  postb  .'
-      '. postc  postc  postc  postc  .';
+      '. postc  postc  postc  postc  .'
+      '. postd  postd  postd  postd  .'
+      '. poste  poste  poste  poste  .';
   }
   .post {
     grid-template-columns: repeat(6, 1fr);
@@ -164,7 +178,7 @@ p.post-text.emphasized {
 
 .link-primary {
   color:aqua;
-  
+
 }
 .link-primary:focus, .link-primary:hover {
   color:#aaffff;
