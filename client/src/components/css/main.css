@@ -1,5 +1,6 @@
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   width: 100vw;
+  height:auto;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -8,11 +9,7 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background-image: url("../../media/millslakermnp.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; 
+  
 }
 
 div.row {
@@ -25,7 +22,7 @@ div.row {
   max-height:auto;
 }
 
-.grid { 
+.grid {
   display: grid;
   align-items: center;
   justify-items: left;
@@ -116,7 +113,7 @@ a.link-primary.overlay:hover  {
 @media (min-width: 768px) {
   .grid.container, div.container-fluid, .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
    min-width: 768px;
-  
+
  }
  .image-container .content {
   font-size: 14px;
@@ -132,5 +129,5 @@ a.link-primary.overlay:hover  {
   '. im12 im12 . im13 im13 . im14 im14 . . .'
   '. . . . . . . . . . . .';
   }
-} 
+}
 

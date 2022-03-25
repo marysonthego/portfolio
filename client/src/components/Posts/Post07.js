@@ -32,36 +32,35 @@ export function Post07() {
   let TopPic = "media/node.png";
   let Title = "Node JS Guide";
 
-  let code1 = `/d/Repo$ npx create-react-app sqlite3app
+  let code1 = `/d/Repo$ npx create-react-app app
 
-  Creating a new React app in D:\\Repo\\sqlite3app.
+  Creating a new React app in D:\\Repo\\app.
 
   Installing packages. This might take a couple of minutes.
   Installing react, react-dom, and react-scripts with cra-template...
 
     ...
 
-  Success! Created sqlite3app at D:\\Repo\\sqlite3app
+  Success! Created app at D:\\Repo\\app
 
   We suggest that you begin by typing:
 
-    cd sqlite3app
+    cd app
     npm start
 
   Happy hacking!
 
 /d/Repo$`;
 
-  let code2 = `/d/Repo/sqlite3app$ npm -v
+  let code2 = `/d/Repo/app$ npm -v
 8.1.2
 
-/d/Repo/sqlite3app$ node -v
+/d/Repo/app$ node -v
 v16.13.1
   `;
 
-  let code3 = `/d/Repo/sqlite3app$ npm i express
+  let code3 = `/d/Repo/app$ npm i express
 
-/d/Repo/sqlite3app$ npm i sqlite3
   `;
 
   let code4 = `  "dependencies": {
@@ -72,7 +71,6 @@ v16.13.1
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "sqlite3": "^5.0.2"
   }, `;
 
   let Toc = (
@@ -131,14 +129,14 @@ v16.13.1
       <div className="toc">{Toc}</div>
       <p className="post-text">
         This article covers Node JS. If you
-        already know how to install node and set up a React environment{" "}
+        already know how to install node and set up a React environment you can{" "}
         <a href="#part2" className="link-primary">
           skip to Part 2: Node Basics
         </a>
         .
       </p>
       <h4 className="subtitle">
-        Step 1: Install Node, React, Express, and Sqlite3
+        Step 1: Install Node, React and Express
       </h4>
       <h5 className="subsub">
         Install node and npm package manager for Windows
@@ -169,9 +167,9 @@ v16.13.1
 
       <h5 className="subsub">Install React using create-react-app</h5>
       <p className="post-text">
-        Let's create a fresh React app named <code> sqlite3app</code> on the
+        Let's create a fresh React app named <code>app</code> on the
         command line by running the command
-        <br /> <code> npx create-react-app sqlite3app</code> <br />
+        <br /> <code> npx create-react-app app</code> <br />
       </p>
       <SyntaxHighlighter
           language="bash"
@@ -182,14 +180,14 @@ v16.13.1
 
       <p className="post-text">
         As you can see, <code>create-react-app </code> created a new
-        subdirectory named <code>sqlite3app</code> and installed a basic React
+        subdirectory named <code>app</code> and installed a basic React
         application in it.
       </p>
-      <h5 className="subsub">Install Express and Sqlite3 with npm</h5>
+      <h5 className="subsub">Install Express with npm</h5>
       <p className="post-text">
         Now we'll use <code>npm</code> to install the rest of the dependencies
         we need. In the command prompt, be sure you are in the{" "}
-        <code>sqlite3app</code> directory created by{" "}
+        <code>app</code> directory created by{" "}
         <code>create-react-app</code>, then execute the following commands:
       </p>
       <SyntaxHighlighter
@@ -214,7 +212,7 @@ v16.13.1
 
       <h4 className="subtitle">Part 2: Node Basics</h4>
       <SyntaxHighlighter
-          language="unrealscript"
+          language="css"
           style={nightOwl}
           wrapLongLines
         >

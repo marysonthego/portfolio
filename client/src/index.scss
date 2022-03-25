@@ -29,7 +29,11 @@
   font-family: "Nunito", sans-serif ;
 }
 html, body {
-	background: #ffffff;
+  background-image: url("./media/millslakermnp.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 	padding: 0px;
 }
 
@@ -42,14 +46,6 @@ body {
   font-family: "Nunito", sans-serif ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.background {
-  background-color:#003262;
-  background-size: cover;
-  background-position: top;
-  min-height:auto;
-  position: relative;
 }
 
 code {
@@ -70,7 +66,7 @@ code {
 }
 
 .ScrollToTop {
-  position: fixed; 
+  position: fixed;
   bottom: 40px;
   align-items: center;
   justify-content: right;

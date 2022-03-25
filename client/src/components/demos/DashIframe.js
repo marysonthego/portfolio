@@ -16,8 +16,8 @@ export default function DashIframe() {
     } else {
       return (
         <iframe title='Dashboard'
-        width={iwidth+30}
-        height={iheight}
+        width={width}
+        height={height}
         src="https://dash.marysonthego.tech/" >
       </iframe>
       )

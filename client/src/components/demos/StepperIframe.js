@@ -16,8 +16,8 @@ export default function StepperIframe() {
     } else {
       return (
         <iframe title='Stepper'
-        width={iwidth+30}
-        height={iheight}
+        width={width}
+        height={height}
         src="https://dash.marysonthego.tech/" >
       </iframe>
       )

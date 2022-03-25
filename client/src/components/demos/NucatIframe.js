@@ -16,8 +16,8 @@ export default function NucatIframe() {
     } else {
       return (
         <iframe title='Nucat'
-        width={iwidth+30}
-        height={iheight}
+        width={width}
+        height={height}
         src="https://nucat.marysonthego.tech/" >
       </iframe>
       )

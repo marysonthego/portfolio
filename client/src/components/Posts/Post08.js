@@ -17,14 +17,14 @@ export function Post08() {
 
   const express = Notes(expressFile);
 
-  let TopPic = "media/express2.png";
+  let TopPic = "media/expressjs2.png";
   let Title = "Express Guide";
 
-  let examples = <div><h1 id="express-examples">Express examples</h1>
+  let examples = <div><h2 id="express-examples">Express Examples</h2>
 
   <p>Express <a className="link-primary" href="https://expressjs.com/en/4x/api.html">API</a>
   </p>
-  <p>Examples using Express.</p>
+
   <ul>
   <li><a  className="link-primary" href="https://github.com/expressjs/express/tree/master/examples/auth">auth</a> - Authentication with login and password</li>
   <li><a  className="link-primary" href="https://github.com/expressjs/express/tree/master/examples/content-negotiation">content-negotiation</a> - HTTP content negotiation</li>
@@ -57,9 +57,7 @@ export function Post08() {
 
   let Section1 = (
     <div>
-      <h4 className="subtitle">
-        Express Examples
-      </h4>
+
         {examples}
           <SyntaxHighlighter
           language="bash"
