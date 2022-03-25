@@ -1,10 +1,17 @@
-Basic routing
+= Basic routing
+:source-highlighter: highlightjs
+:source-language: jsx
+
 Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
+
 
 Each route can have one or more handler functions, which are executed when the route is matched.
 
+
 Route definition takes the following structure:
-        app.METHOD(PATH, HANDLER)
+----
+app.METHOD(PATH, HANDLER)
+----
 Where:
 
 app is an instance of express.
@@ -17,20 +24,38 @@ This tutorial assumes that an instance of express named app is created and the s
 The following examples illustrate defining simple routes.
 
 Respond with Hello World! on the homepage:
+----
+  app.get(/, (req, res) => {
+    res.send("Hello World!")});
+----
 
 Respond to POST request on the root route (/), the application’s home page:
-
+----
+  app.post('/', (req, res) => {
+    res.send('Got a POST request')
+    });
+----
 Respond to a PUT request to the /user route:
+----
+  app.put('/user', (req, res) => {
+    res.send('Got a PUT request at /user')
+  });
+----
 
 Respond to a DELETE request to the /user route:
+----
+app.delete('/user', (req, res) => {
+    res.send('Got a DELETE request at /user')
+  });
+----
 
-----------
-Serving static files in Express
+== Serving static files in Express
 To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
 
 The function signature is:
-
+----
 express.static(root, [options])
+----
 The root argument specifies the root directory from which to serve static assets. For more information on the options argument, see express.static.
 
 For example, use the following code to serve images, CSS files, and JavaScript files in a directory named public:

@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+//import {devibeans} from 'highlight.js/styles/devibeans.css';
 import expressFile from './examples/express.txt';
+import Asciidoctor from 'asciidoctor';
 
 function Notes(fileName) {
   const [text, setText] = useState();
@@ -14,7 +16,7 @@ function Notes(fileName) {
 }
 
 export function Post08() {
-
+  const asciidoctor = Asciidoctor();
   const express = Notes(expressFile);
 
   let TopPic = "media/expressjs2.png";
@@ -57,15 +59,7 @@ export function Post08() {
 
   let Section1 = (
     <div>
-
         {examples}
-          <SyntaxHighlighter
-          language="bash"
-          style={nightOwl}
-        >
-          {express}
-        </SyntaxHighlighter>
-
     </div>
   );
   return (
@@ -74,7 +68,17 @@ export function Post08() {
         <img src={TopPic} alt="Post" />
       </div>
       <h3 className="post-title text-center">{Title}</h3>
-      <div className="sec01">{Section1}</div>
+      <div className="sec01">
+          {Section1}
+        <SyntaxHighlighter
+          wrapLongLines
+          language="asciidoc"
+          style={nightOwl}
+        >
+          {express}
+        </SyntaxHighlighter>
+
+      </div>
     </div>
   );
 };
