@@ -24,6 +24,11 @@ import {Post05} from "components/posts/Post05";
 import {Post06} from "components/posts/Post06";
 import {Post07} from "components/posts/Post07";
 import {Post08} from "components/posts/Post08";
+import ExpressExamples from "components/posts/content/expressExamples.js";
+import ExpressFileRouting from "components/posts/content/expressFileRouting.js";
+import ExpressMysql from "components/posts/content/expressMysql.js";
+import ExpressPostgres from "components/posts/content/expressPostgres.js";
+import ExpressSqlite from "components/posts/content/expressSqlite.js";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import {CookiesProvider} from "react-cookie";
@@ -63,6 +68,11 @@ ReactDOM.render(
             <Route path="/post06" element={<Post06 />} />
             <Route path="/post07" element={<Post07 />} />
             <Route path="/post08" element={<Post08 />} />
+            <Route path="/examples" element={<ExpressExamples />} />
+            <Route path="/routing" element={<ExpressFileRouting />} />
+            <Route path="expressmysql" element={<ExpressMysql />} />
+            <Route path="expresspostgres" element={<ExpressPostgres />} />
+            <Route path="expresssqlite" element={<ExpressSqlite />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>

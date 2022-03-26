@@ -1,45 +1,45 @@
 import { P04ArrowFunctions } from "./P04_arrowFunctions";
 import { P04Extensible } from "./P04_extensible";
 import { P04Dispatch } from "./P04_dispatch";
-import {P04DarkStyles} from './P04_DarkStyles';
-import {P04Conflicted} from './P04_conflicted';
+import { P04DarkStyles } from "./P04_DarkStyles";
+import { P04Conflicted } from "./P04_conflicted";
 
 export const Post04 = () => {
-  let TopPic = "media/react400x400.png";
+  let TopPic = "media/reactjs.png";
 
   let Title = "React Bits and Javascript Pieces";
 
   let Toc = (
     <div className="toc">
       Contents
-      <hr/>
+      <hr />
       <ul>
         <li>
-        <a className="link-primary " href="#arrowFunctions">
-          Arrow Functions with array.map
-        </a>
+          <a className="link-primary " href="#arrowFunctions">
+            Arrow Functions with array.map
+          </a>
         </li>
 
-      <li>
-        <a className="link-primary " href="#extensible">
-          TypeError: Cannot add property st, object is not extensible
-        </a>
-      </li>
-      <li>
-        <a className="link-primary " href="#dispatch">
-          Uncaught TypeError: Object(...)(...) is not a function
-        </a>
-      </li>
-      <li>
-        <a className="link-primary " href="#darkstyles">
-          Dark Styles
-        </a>
-      </li>
-      <li>
-        <a className="link-primary " href="#conflicted">
-          Error in plugin react was conflicted
-        </a>
-      </li>
+        <li>
+          <a className="link-primary " href="#extensible">
+            TypeError: Cannot add property st, object is not extensible
+          </a>
+        </li>
+        <li>
+          <a className="link-primary " href="#dispatch">
+            Uncaught TypeError: Object(...)(...) is not a function
+          </a>
+        </li>
+        <li>
+          <a className="link-primary " href="#conflicted">
+            Error in plugin react was conflicted
+          </a>
+        </li>
+        <li>
+          <a className="link-primary " href="#darkstyles">
+            React Syntax Highlighter
+          </a>
+        </li>
       </ul>
     </div>
   );
@@ -63,10 +63,10 @@ export const Post04 = () => {
         <P04Dispatch id="dispatch" />
       </div>
       <div className="postd">
-        <P04DarkStyles id="darkstyles" />
+        <P04Conflicted id="conflicted" />
       </div>
       <div className="poste">
-        <P04Conflicted id="conflicted" />
+        <P04DarkStyles id="darkstyles" />
       </div>
     </div>
   );

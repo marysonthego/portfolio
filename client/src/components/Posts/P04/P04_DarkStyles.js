@@ -2,11 +2,15 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {a11yDark, atomDark, cb, darcula, coldarkDark, dark, dracula, duotoneDark, duotoneEarth, duotoneForest, duotoneSea, duotoneSpace, gruvboxDark, hopscotch, lucario, materialDark,nightOwl, nord, oneDark, pojoaque, solarizedDarkAtom, synthwave84, tomorrow, twilight, vscDarkPlus, xonokai, zTouch} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const P04DarkStyles = () => {
-  let TopPic = "media/syntax400.png";
   let Title =
-    "Dark Styles - React Syntax Highlighter";
+    "React Syntax Highlighter";
 
   let Post = (
+    <div className="sec" id="darkstyles">
+      <h4 className="subtitle">
+        {Title}
+      </h4>
+      <hr/>
     <div>
       <p className="ptext">
         A syntax highlighter lets you embed formatted code in a web page. I recently started using one because screen shots were just too inflexible. With a syntax highlighter you can copy and paste, add line numbers, pick a pre-built style, or create your own. Some don't just display code, but let you edit it too. I may evolve into a web page editor, but for now I just want a way to display presentable code on the page.
@@ -14,9 +18,9 @@ export const P04DarkStyles = () => {
       <p className="ptext">
         My primary requirement is that any syntax highlighter must work well with React. That alone quickly diminishes the field of possibilities. After trying several packages that claimed to support React JSX, I settled on <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter" className="link-primary">React Syntax Highlighter</a>.
       </p>
-      <h4 className="subtitle">
+      <h5 className="subsub">
       Dark Styles
-      </h4>
+      </h5>
       <SyntaxHighlighter
           language="javascript"
           style={a11yDark}
@@ -181,6 +185,7 @@ export const P04DarkStyles = () => {
         >
           zTouch
       </SyntaxHighlighter>
+    </div>
     </div>
   );
   return (

@@ -22,7 +22,7 @@ export function MainPage() {
       <div className="grid image-container responsive-img ">
         <a href="/post04" className="link-primary overlay im02">
           <img
-            src="media/react400x400.png"
+            src="media/reactjs.png"
             alt="React JS"
             loading="lazy"
             className=" responsive-img rounded-circle "
