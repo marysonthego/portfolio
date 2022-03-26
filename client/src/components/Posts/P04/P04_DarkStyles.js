@@ -8,11 +8,11 @@ export const P04DarkStyles = () => {
 
   let Post = (
     <div>
-      <p className="post-text">
+      <p className="ptext">
         A syntax highlighter lets you embed formatted code in a web page. I recently started using one because screen shots were just too inflexible. With a syntax highlighter you can copy and paste, add line numbers, pick a pre-built style, or create your own. Some don't just display code, but let you edit it too. I may evolve into a web page editor, but for now I just want a way to display presentable code on the page.
       </p>
-      <p className="post-text">
-        My primary requirement is that any syntax highlighter must work well with React. That alone quickly diminishes the field of possibilities. After trying several packages that claimed to support React JSX, I settled on <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter" className="link-primary">React Syntax Highlighter</a>. 
+      <p className="ptext">
+        My primary requirement is that any syntax highlighter must work well with React. That alone quickly diminishes the field of possibilities. After trying several packages that claimed to support React JSX, I settled on <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter" className="link-primary">React Syntax Highlighter</a>.
       </p>
       <h4 className="subtitle">
       Dark Styles
@@ -41,7 +41,7 @@ export const P04DarkStyles = () => {
         >
           coldarkDark
       </SyntaxHighlighter>
-  
+
       <SyntaxHighlighter
           language="javascript"
           style={darcula}

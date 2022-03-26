@@ -6,18 +6,18 @@ export const Post00 = () => {
 
   let Section1 = (
     <div>
-      <p className="post-text">
-        There's no mystery to setting up a development environment in Windows 11 to create your awesome React Native app. We'll be done before you know it!  
+      <p className="ptext">
+        There's no mystery to setting up a development environment in Windows 11 to create your awesome React Native app. We'll be done before you know it!
       </p>
       <h4 className="subtitle">Install Android Studio</h4>
-      <p className="post-text">
+      <p className="ptext">
         To make the future easy, let's start by installing the <a href="https://chocolatey.org/" className="link-primary">Chocolatey Package Manager for Windows</a>. <br/>Open an Administrator Command Prompt and execute this command: <br/><br/>
-        <code>choco install -y nodejs.install openjdk8</code> 
+        <code>choco install -y nodejs.install openjdk8</code>
         </p>
-        <p className="post-text">
+        <p className="ptext">
         Next, download and install <a href="https://developer.android.com/studio" className="link-primary">Android Studio</a>
       </p>
-        <p className="post-text">
+        <p className="ptext">
         Open Android Studio<br/>
         Go to Appearance and Behavior &gt; System Settings &gt; Android SDK<br/>
         Make note of the location of the SDK. For example,<br/>
@@ -29,7 +29,7 @@ export const Post00 = () => {
         Within Android 10 (Q), select Android SDK Platform 29<br/>
         Next, select either Intel x86 Atom_64 System Image or Google APIs Intel x86 Atom System Image (either is ok for Intel processors) or select an AMD version
         </p>
-        <p className="post-text">
+        <p className="ptext">
         Move over to the SDK Tools tab in the SDK Manager<br/>
         Check Show Package Details in the lower right again<br/>
         Expand the SDK Build Tools item<br/>
@@ -37,7 +37,7 @@ export const Post00 = () => {
         Click Apply to download and install the Android SDK and Build Tools
       </p>
       <h4 className="subtitle">Add Windows Environment Variables</h4>
-      <p className="post-text">
+      <p className="ptext">
         Open Windows Settings &gt; System<br/>
         Expand Device Specifications<br/>
         Click Advanced System Settings to open the System Properties dialog<br/><br/>
@@ -52,7 +52,7 @@ export const Post00 = () => {
         Otherwise, close the command prompt and open a new Administrator command prompt
       </p>
       <h4 className="subtitle">Create a new React Native Project</h4>
-      <p className="post-text">
+      <p className="ptext">
         Instead of installing the React Native CLI, we can always be sure we're using the latest version by running it with npx.<br/>
         Go to the parent directory where you would like the new project to be created and run the react-native command from there. For example:<br/><br/>
         <code>cd d:\repo</code><br/>

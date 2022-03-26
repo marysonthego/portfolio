@@ -127,7 +127,7 @@ v16.13.1
   let Section1 = (
     <div>
       <div className="toc">{Toc}</div>
-      <p className="post-text">
+      <p className="ptext">
         This article covers Node JS. If you
         already know how to install node and set up a React environment you can{" "}
         <a href="#part2" className="link-primary">
@@ -141,7 +141,7 @@ v16.13.1
       <h5 className="subsub">
         Install node and npm package manager for Windows
       </h5>
-      <p className="post-text">
+      <p className="ptext">
         On Windows, node and npm get installed together from an executable
         installer.
         <br />
@@ -166,7 +166,7 @@ v16.13.1
         </SyntaxHighlighter>
 
       <h5 className="subsub">Install React using create-react-app</h5>
-      <p className="post-text">
+      <p className="ptext">
         Let's create a fresh React app named <code>app</code> on the
         command line by running the command
         <br /> <code> npx create-react-app app</code> <br />
@@ -178,13 +178,13 @@ v16.13.1
           {code1}
         </SyntaxHighlighter>
 
-      <p className="post-text">
+      <p className="ptext">
         As you can see, <code>create-react-app </code> created a new
         subdirectory named <code>app</code> and installed a basic React
         application in it.
       </p>
       <h5 className="subsub">Install Express with npm</h5>
-      <p className="post-text">
+      <p className="ptext">
         Now we'll use <code>npm</code> to install the rest of the dependencies
         we need. In the command prompt, be sure you are in the{" "}
         <code>app</code> directory created by{" "}
@@ -197,7 +197,7 @@ v16.13.1
           {code3}
         </SyntaxHighlighter >
 
-      <p className="post-text">
+      <p className="ptext">
         Continue by installing <code>path</code>, <code>body-parser</code>, and{" "}
         <code>compression</code>. The dependency list in{" "}
         <code>package.json</code> should now contain these items at a minimum,

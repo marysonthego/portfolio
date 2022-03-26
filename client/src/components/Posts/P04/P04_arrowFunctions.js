@@ -14,7 +14,7 @@ export function P04ArrowFunctions() {
     <div className="sec" id="arrowFunctions">
       <h4 className="subtitle">Arrow Functions with array.map</h4>
       <hr/>
-      <p className="post-text">
+      <p className="ptext">
         For the longest time the only way I'd ever used the map function was
         with braces {} like this:
       </p>
@@ -24,8 +24,8 @@ export function P04ArrowFunctions() {
         >
           {code1}
       </SyntaxHighlighter>
-            
-      <p className="post-text">
+
+      <p className="ptext">
       Then I noticed someone using it like this:
       </p>
       <SyntaxHighlighter
@@ -34,8 +34,8 @@ export function P04ArrowFunctions() {
         >
           {code2}
       </SyntaxHighlighter>
-        
-      <p className="post-text">
+
+      <p className="ptext">
         <br />
         Use arrow functions with parentheses around the function body when you
         are only executing ONE statement. Leave out 'return' because the result
@@ -46,7 +46,7 @@ export function P04ArrowFunctions() {
         braces around the function body, and use the return statement -
         otherwise nothing will be rendered.
       </p>
-      <p className="post-text text-center">
+      <p className="ptext text-center">
         <i>Try it out for yourself!</i>
       </p>
       <iframe

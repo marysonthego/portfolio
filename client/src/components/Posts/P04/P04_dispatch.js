@@ -2,13 +2,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const P04Dispatch = () => {
-  let code1 = `List = locs.map(loc => 
-    dispatch(addLocation({loc})) 
+  let code1 = `List = locs.map(loc =>
+    dispatch(addLocation({loc}))
     (<LocationsRow key={loc.id} dataLoc = {loc}/>));`;
 
-  let code2 = `List = locs.map(loc => { 
-    dispatch(addLocation({loc})) 
-    return (<LocationsRow key={loc.id} dataLoc = {loc}/>) 
+  let code2 = `List = locs.map(loc => {
+    dispatch(addLocation({loc}))
+    return (<LocationsRow key={loc.id} dataLoc = {loc}/>)
 });`;
 
   let Post = (
@@ -17,7 +17,7 @@ export const P04Dispatch = () => {
         Uncaught TypeError: Object(...)(...) is not a function
       </h4>
       <hr/>
-      <p className="post-text">
+      <p className="ptext">
         Uncaught TypeError: dispatch(...) is not a function
         <br />
         If you look closely, you might notice how similar to{" "}
@@ -32,8 +32,8 @@ export const P04Dispatch = () => {
         >
           {code1}
       </SyntaxHighlighter>
-        
-      <p className="post-text">
+
+      <p className="ptext">
         The fix is exactly the same, too. Replace the parentheses surrounding
         the function with braces and add a return statement.
       </p>
@@ -43,7 +43,7 @@ export const P04Dispatch = () => {
         >
           {code2}
       </SyntaxHighlighter>
-        
+
     </div>
   );
   return <>{Post}</>;

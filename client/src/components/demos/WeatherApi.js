@@ -55,13 +55,13 @@ export const WeatherApi = () => {
       <h2 className="top">OpenWeather API</h2>
 
       <div className="post-body">
-              <p className="post-text">
+              <p className="ptext">
                 This is a responsive ReactJS app. On devices wider than 768
                 pixels a Bootstrap 5 horizontal post displays
                 the weather component. On smaller devices, it appears in a vertical
                 post component.
               </p>
-              <p className="post-text">
+              <p className="ptext">
                 Weather information is obtained by querying the OpenWeather API.
                 The geolocation for the query is obtained from your
                 browser. You might get surprising results depending on where
@@ -70,14 +70,14 @@ export const WeatherApi = () => {
                 VPN. A nice addition to this app would be to prompt the user for
                 their location, or even allow users to track several locations at once.
               </p>
-              <p className="post-text">
+              <p className="ptext">
                 The heavy lifting happens in a useEffect hook that
                 listens for changes to latitude or longitude. When the effect is
                 triggered, it calls an asynchronous fetch() to the OpenWeather
                 API and populates the display with the results. You can use the refresh button
                 in the upper-right corner to initiate a new fetch() request any time you want.
               </p>
-              <p className="post-text">
+              <p className="ptext">
                 I've noticed that the first request to the OpenWeather API
                 frequently returns a 400 (bad request) error, so be sure to
                 check for a successful network response in your code before you populate the

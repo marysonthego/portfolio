@@ -23,13 +23,13 @@ export const P04Conflicted = () => {
         >
           {code1}
       </SyntaxHighlighter>
-      <p className="post-text">
+      <p className="ptext">
         Running <code>npm start</code> on a create-react-app application failed to compile. If you look closely you can see that eslint-config-react-app is looking for "D:\repo" while BaseConfig is looking for "D:\Repo".
       </p>
-      <p className="post-text">
+      <p className="ptext">
         This is a Windows problem. Windows is case-insensitive but Webpack is case-sensitive.
       </p>
-      <p className="post-text">
+      <p className="ptext">
         To fix, simply open the folder "D:\Repo" in VS Code.
       </p>
     </div>

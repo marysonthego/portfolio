@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 //import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 //import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
-// import hljs from 'highlight.js';
-// import 'highlight.js/styles/devibeans.css';
-import expressFile from './content/express.adoc';
-import Asciidoctor from 'asciidoctor';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/devibeans.css';
+import expressFile from './content/express.js';
 
 function Notes(fileName) {
+  hljs.highlightAll();
+
   const [text, setText] = useState();
    fetch(fileName)
     .then(response => response.text())
@@ -17,8 +18,6 @@ function Notes(fileName) {
 }
 
 export function Post08() {
-  const asciidoctor = Asciidoctor();
-
   const express = Notes(expressFile);
 
   let TopPic = "media/expressjs2.png";
@@ -72,8 +71,6 @@ export function Post08() {
       <h3 className="post-title text-center">{Title}</h3>
       <div className="sec01">
           {Section1}
-          :source-highlighter: pygments
-          :pygments-style: vim
           {express}
       </div>
     </div>

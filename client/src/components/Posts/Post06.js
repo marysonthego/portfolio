@@ -78,7 +78,7 @@ export function Post06() {
 
   let Section1 = (
     <div>
-      <p className="post-text">
+      <p className="ptext">
         In this article I'll show you how to quickly spin-up a database on your
         local Windows machine for testing a React app. We will use React with
         Node and Express, and create a Sqlite3 database for testing. If you
@@ -94,7 +94,7 @@ export function Post06() {
       <h5 className="subsub">
         Install node and npm package manager for Windows
       </h5>
-      <p className="post-text">
+      <p className="ptext">
         On Windows, node and npm get installed together from an executable
         installer.
         <br />
@@ -119,7 +119,7 @@ export function Post06() {
         </SyntaxHighlighter>
 
       <h5 className="subsub">Install React using create-react-app</h5>
-      <p className="post-text">
+      <p className="ptext">
         Let's create a fresh React app named <code> sqlite3app</code> on the
         command line by running the command
         <br /> <code> npx create-react-app sqlite3app</code> <br />
@@ -131,13 +131,13 @@ export function Post06() {
           {code1}
         </SyntaxHighlighter>
 
-      <p className="post-text">
+      <p className="ptext">
         As you can see, <code>create-react-app </code> created a new
         subdirectory named <code>sqlite3app</code> and installed a basic React
         application in it.
       </p>
       <h5 className="subsub">Install Express and Sqlite3 with npm</h5>
-      <p className="post-text">
+      <p className="ptext">
         Now we'll use <code>npm</code> to install the rest of the dependencies
         we need. In the command prompt, be sure you are in the{" "}
         <code>sqlite3app</code> directory created by{" "}
@@ -150,7 +150,7 @@ export function Post06() {
           {code3}
         </SyntaxHighlighter >
 
-      <p className="post-text">
+      <p className="ptext">
         Continue by installing <code>path</code>, <code>body-parser</code>, and{" "}
         <code>compression</code>. The dependency list in{" "}
         <code>package.json</code> should now contain these items at a minimum,
@@ -165,21 +165,21 @@ export function Post06() {
 
       <h4 className="subtitle">Step 2: Configure the Sqlite3 database</h4>
 
-      <p className="post-text">
+      <p className="ptext">
         Sqlite3 uses SQL commands just like any regular relational database.
         That's why it's so good for quick testing when you do not have access to
         the actual database your application will use. With only a few
         exceptions, you can use the same queries in Sqlite3 you would use in any
         full-fledged database.
       </p>
-      <p className="post-text">
+      <p className="ptext">
         The main difference between Sqlite3 and other databases is that it can
         store data in memory which is not preserved between sessions, or in a
         disk file that Sqlite3 creates for you from the schema you provide. Data
         in a file persists until you delete the file. We'll learn how to create
         a database stored in a file.
       </p>
-      <p className="post-text">
+      <p className="ptext">
         In the project root, create a <code>server</code> directory and{" "}
         <code>cd</code> into it.
       </p>
@@ -190,11 +190,11 @@ export function Post06() {
           {code5}
         </SyntaxHighlighter >
 
-      <p className="post-text">
+      <p className="ptext">
         The <code>server</code> directory will contain all the files used by
         node, express, and sqlite3.
       </p>
-      <p className="post-text">
+      <p className="ptext">
         In the <code>server</code> directory, create a new file named{" "}
         <code>db.js</code>. This file opens the connection to the database and
         runs a test query, or creates a new database if it doesn't exist. Here's
@@ -208,7 +208,7 @@ export function Post06() {
           {db}
       </SyntaxHighlighter>
 
-      <p className="post-text">Create a new file named <code>controller.js</code>. The controller defines all the queries to the database.</p>
+      <p className="ptext">Create a new file named <code>controller.js</code>. The controller defines all the queries to the database.</p>
       <h5 className="subsub">controller.js</h5>
       <SyntaxHighlighter
           language="javascript"
@@ -218,7 +218,7 @@ export function Post06() {
         {controller}
       </SyntaxHighlighter>
 
-      <p className="post-text">Next, create the file <code>server.js</code>. This file configures Express to handle communication and implement middleware.</p>
+      <p className="ptext">Next, create the file <code>server.js</code>. This file configures Express to handle communication and implement middleware.</p>
       <h5 className="subsub">server.js</h5>
       <SyntaxHighlighter
           language="javascript"
@@ -228,7 +228,7 @@ export function Post06() {
         {server}
       </SyntaxHighlighter>
 
-      <p className="post-text">The last file we need is <code>routes.js</code>. This file defines the routing between the server and the database. It routes to the queries defined in <code>controller.js</code>. It is common to see <code>server.js</code> and <code>routes.js</code> combined in one file, but if you have a lot of queries, dividing things up this way makes it easier to read.</p>
+      <p className="ptext">The last file we need is <code>routes.js</code>. This file defines the routing between the server and the database. It routes to the queries defined in <code>controller.js</code>. It is common to see <code>server.js</code> and <code>routes.js</code> combined in one file, but if you have a lot of queries, dividing things up this way makes it easier to read.</p>
       <h5 className="subsub">routes.js</h5>
       <SyntaxHighlighter
           language="javascript"
