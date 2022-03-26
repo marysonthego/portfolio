@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
-//import {devibeans} from 'highlight.js/styles/devibeans.css';
-import expressFile from './examples/express.txt';
+//import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+//import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+// import hljs from 'highlight.js';
+// import 'highlight.js/styles/devibeans.css';
+import expressFile from './examples/express.adoc';
 import Asciidoctor from 'asciidoctor';
 
 function Notes(fileName) {
@@ -17,6 +18,7 @@ function Notes(fileName) {
 
 export function Post08() {
   const asciidoctor = Asciidoctor();
+
   const express = Notes(expressFile);
 
   let TopPic = "media/expressjs2.png";
@@ -70,14 +72,9 @@ export function Post08() {
       <h3 className="post-title text-center">{Title}</h3>
       <div className="sec01">
           {Section1}
-        <SyntaxHighlighter
-          wrapLongLines
-          language="asciidoc"
-          style={nightOwl}
-        >
+          :source-highlighter: pygments
+          :pygments-style: vim
           {express}
-        </SyntaxHighlighter>
-
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<title>Untitled</title>
+<title>Basic routing</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -435,182 +435,247 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<style>
+pre.pygments .hll { background-color: #222222 }
+pre.pygments { background: #000000; color: #cccccc }
+pre.pygments .tok-c { color: #000080 } /* Comment */
+pre.pygments .tok-err { color: #cccccc; border: 1px solid #FF0000 } /* Error */
+pre.pygments .tok-esc { color: #cccccc } /* Escape */
+pre.pygments .tok-g { color: #cccccc } /* Generic */
+pre.pygments .tok-k { color: #cdcd00 } /* Keyword */
+pre.pygments .tok-l { color: #cccccc } /* Literal */
+pre.pygments .tok-n { color: #cccccc } /* Name */
+pre.pygments .tok-o { color: #3399cc } /* Operator */
+pre.pygments .tok-x { color: #cccccc } /* Other */
+pre.pygments .tok-p { color: #cccccc } /* Punctuation */
+pre.pygments .tok-ch { color: #000080 } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #000080 } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #000080 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #000080 } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #000080 } /* Comment.Single */
+pre.pygments .tok-cs { color: #cd0000; font-weight: bold } /* Comment.Special */
+pre.pygments .tok-gd { color: #cd0000 } /* Generic.Deleted */
+pre.pygments .tok-ge { color: #cccccc; font-style: italic } /* Generic.Emph */
+pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { color: #00cd00 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #888888 } /* Generic.Output */
+pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { color: #cccccc; font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #cdcd00 } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #00cd00 } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #cd00cd } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #cdcd00 } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #cdcd00 } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #00cd00 } /* Keyword.Type */
+pre.pygments .tok-ld { color: #cccccc } /* Literal.Date */
+pre.pygments .tok-m { color: #cd00cd } /* Literal.Number */
+pre.pygments .tok-s { color: #cd0000 } /* Literal.String */
+pre.pygments .tok-na { color: #cccccc } /* Name.Attribute */
+pre.pygments .tok-nb { color: #cd00cd } /* Name.Builtin */
+pre.pygments .tok-nc { color: #00cdcd } /* Name.Class */
+pre.pygments .tok-no { color: #cccccc } /* Name.Constant */
+pre.pygments .tok-nd { color: #cccccc } /* Name.Decorator */
+pre.pygments .tok-ni { color: #cccccc } /* Name.Entity */
+pre.pygments .tok-ne { color: #666699; font-weight: bold } /* Name.Exception */
+pre.pygments .tok-nf { color: #cccccc } /* Name.Function */
+pre.pygments .tok-nl { color: #cccccc } /* Name.Label */
+pre.pygments .tok-nn { color: #cccccc } /* Name.Namespace */
+pre.pygments .tok-nx { color: #cccccc } /* Name.Other */
+pre.pygments .tok-py { color: #cccccc } /* Name.Property */
+pre.pygments .tok-nt { color: #cccccc } /* Name.Tag */
+pre.pygments .tok-nv { color: #00cdcd } /* Name.Variable */
+pre.pygments .tok-ow { color: #cdcd00 } /* Operator.Word */
+pre.pygments .tok-w { color: #cccccc } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #cd00cd } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #cd00cd } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #cd00cd } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #cd00cd } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #cd00cd } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #cd0000 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #cd0000 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #cd0000 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #cd0000 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #cd0000 } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #cd0000 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #cd0000 } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #cd0000 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #cd0000 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #cd0000 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #cd0000 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #cd0000 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #cd0000 } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #cd00cd } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #cccccc } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #00cdcd } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #00cdcd } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #00cdcd } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #00cdcd } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #cd00cd } /* Literal.Number.Integer.Long */
+</style>
 </head>
-<body class="article data-line-1">
+<body class="article">
 <div id="header">
+<h1>Basic routing</h1>
 </div>
 <div id="content">
-<div class="paragraph data-line-1">
-<p>import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism'</p>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).</p>
 </div>
-<div class="paragraph data-line-4">
-<p>const express = () &#8658; {</p>
+<div class="paragraph">
+<p>Each route can have one or more handler functions, which are executed when the route is matched.</p>
 </div>
-<div class="literalblock data-line-6">
+<div class="paragraph">
+<p>Route definition takes the following structure:</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>let c01 = `app.get(/, (req, res) =&gt; {
-  res.send("Hello World!")});`;</pre>
+<pre class="pygments highlight"><code data-lang="javascript"><span></span><span class="tok-nx">app</span><span class="tok-p">.</span><span class="tok-nx">METHOD</span><span class="tok-p">(</span><span class="tok-nx">PATH</span><span class="tok-p">,</span> <span class="tok-nx">HANDLER</span><span class="tok-p">)</span></code></pre>
 </div>
 </div>
-<div class="literalblock data-line-9">
-<div class="content">
-<pre>let c02 = `app.post('/', (req, res) =&gt; {
-  res.send('Got a POST request')
-  })`;</pre>
+<div class="paragraph">
+<p>Where:</p>
 </div>
-</div>
-<div class="literalblock data-line-13">
-<div class="content">
-<pre>let c03 = `app.put('/user', (req, res) =&gt; {
-  res.send('Got a PUT request at /user')
-})`;</pre>
-</div>
-</div>
-<div class="literalblock data-line-17">
-<div class="content">
-<pre>let c04 = `app.delete('/user', (req, res) =&gt; {
-  res.send('Got a DELETE request at /user')
-});`;</pre>
-</div>
-</div>
-<div class="literalblock data-line-21">
-<div class="content">
-<pre>  return (
-&lt;div&gt;
-&lt;h4 classname="subtitle"&gt;Basic routing&lt;/h4&gt;
-&lt;p className="post-text"&gt;
-Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
-&lt;/p&gt;
-&lt;p className="post-text"&gt;
-Each route can have one or more handler functions, which are executed when the route is matched.
-&lt;/p&gt;
-&lt;p className="post-text"&gt;
-Route definition takes the following structure:
-&lt;/p&gt;
-&lt;SyntaxHighlighter
-          language="bash"
-          style={nightOwl}
-        &gt;
-        app.METHOD(PATH, HANDLER)
-        &lt;/SyntaxHighlighter&gt;</pre>
-</div>
-</div>
-<div class="literalblock data-line-40">
-<div class="content">
-<pre>        &lt;p className="post-text"&gt;
-Where:</pre>
-</div>
-</div>
-<div class="paragraph data-line-43">
+<div class="paragraph">
 <p>app is an instance of express.
 METHOD is an HTTP request method, in lowercase.
 PATH is a path on the server.
 HANDLER is the function executed when the route is matched.</p>
 </div>
-<div class="paragraph data-line-48">
+<div class="paragraph">
 <p>This tutorial assumes that an instance of express named app is created and the server is running. If you are not familiar with creating an app and starting it, see the Hello world example.</p>
 </div>
-<div class="paragraph data-line-50">
+<div class="paragraph">
 <p>The following examples illustrate defining simple routes.</p>
 </div>
-<div class="paragraph data-line-52">
-<p>Respond with Hello World! on the homepage:
-&lt;/p&gt;
-        &lt;SyntaxHighlighter
-          language="javascript"
-          style={nightOwl}
-        &gt;
-          {c01}
-        &lt;/SyntaxHighlighter&gt;</p>
+<div class="paragraph">
+<p>Respond with Hello World! on the homepage:</p>
 </div>
-<div class="paragraph data-line-63">
+<div class="listingblock">
+<div class="content">
+<pre>  app.get(/, (req, res) =&gt; {
+    res.send("Hello World!")});</pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Respond to POST request on the root route (/), the application’s home page:</p>
 </div>
-<div class="paragraph data-line-65">
-<p>&lt;SyntaxHighlighter
-          language="http"
-          style={nightOwl}
-        &gt;
-          {c02}
-        &lt;/SyntaxHighlighter&gt;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="jsx"><span></span>  app.post(&#39;/&#39;, (req, res) =&gt; {
+    res.send(&#39;Got a POST request&#39;)
+    });</code></pre>
 </div>
-<div class="paragraph data-line-73">
+</div>
+<div class="paragraph">
 <p>Respond to a PUT request to the /user route:</p>
 </div>
-<div class="paragraph data-line-75">
-<p>&lt;SyntaxHighlighter
-          language="http"
-          style={nightOwl}
-        &gt;
-          {c03}
-        &lt;/SyntaxHighlighter&gt;</p>
+<div class="listingblock">
+<div class="content">
+<pre>  app.put('/user', (req, res) =&gt; {
+    res.send('Got a PUT request at /user')
+  });</pre>
 </div>
-<div class="paragraph data-line-85">
+</div>
+<div class="paragraph">
 <p>Respond to a DELETE request to the /user route:</p>
 </div>
-<div class="paragraph data-line-87">
-<p>&lt;SyntaxHighlighter
-          language="http"
-          style={nightOwl}
-        &gt;
-          {c04}
-        &lt;/SyntaxHighlighter&gt;</p>
+<div class="paragraph">
+<p>app.delete('/user', (req, res) &#8658; {
+    res.send('Got a DELETE request at /user')
+  });</p>
 </div>
-<div class="listingblock data-line-94">
+</div>
+</div>
+<div class="sect1">
+<h2 id="_serving_static_files_in_express">Serving static files in Express</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.</p>
+</div>
+<div class="paragraph">
+<p>The function signature is:</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>Serving static files in Express
-To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
-
-The function signature is:
-
-express.static(root, [options])
-The root argument specifies the root directory from which to serve static assets. For more information on the options argument, see express.static.
-
-For example, use the following code to serve images, CSS files, and JavaScript files in a directory named public:
-
-app.use(express.static('public'))
-Now, you can load the files that are in the public directory:
-
-http://localhost:3000/images/kitten.jpg
-http://localhost:3000/css/style.css
-http://localhost:3000/js/app.js
-http://localhost:3000/images/bg.png
-http://localhost:3000/hello.html
-Express looks up the files relative to the static directory, so the name of the static directory is not part of the URL.
-To use multiple static assets directories, call the express.static middleware function multiple times:
-
-app.use(express.static('public'))
+<pre>express.static(root, [options])</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The root argument specifies the root directory from which to serve static assets. For more information on the options argument, see express.static.</p>
+</div>
+<div class="paragraph">
+<p>For example, use the following code to serve images, CSS files, and JavaScript files in a directory named public:</p>
+</div>
+<div class="paragraph">
+<p>app.use(express.static('public'))
+Now, you can load the files that are in the public directory:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://localhost:3000/images/kitten.jpg" class="bare">http://localhost:3000/images/kitten.jpg</a>
+<a href="http://localhost:3000/css/style.css" class="bare">http://localhost:3000/css/style.css</a>
+<a href="http://localhost:3000/js/app.js" class="bare">http://localhost:3000/js/app.js</a>
+<a href="http://localhost:3000/images/bg.png" class="bare">http://localhost:3000/images/bg.png</a>
+<a href="http://localhost:3000/hello.html" class="bare">http://localhost:3000/hello.html</a></p>
+</div>
+<div class="paragraph">
+<p>Express looks up the files relative to the static directory, so the name of the static directory is not part of the URL.
+To use multiple static assets directories, call the express.static middleware function multiple times:</p>
+</div>
+<div class="paragraph">
+<p>app.use(express.static('public'))
 app.use(express.static('files'))
-Express looks up the files in the order in which you set the static directories with the express.static middleware function.
-
-NOTE: For best results, use a reverse proxy cache to improve performance of serving static assets.
-
-To create a virtual path prefix (where the path does not actually exist in the file system) for files that are served by the express.static function, specify a mount path for the static directory, as shown below:
-
-app.use('/static', express.static('public'))
-Now, you can load the files that are in the public directory from the /static path prefix.
-
-http://localhost:3000/static/images/kitten.jpg
-http://localhost:3000/static/css/style.css
-http://localhost:3000/static/js/app.js
-http://localhost:3000/static/images/bg.png
-http://localhost:3000/static/hello.html
-However, the path that you provide to the express.static function is relative to the directory from where you launch your node process. If you run the express app from another directory, it’s safer to use the absolute path of the directory that you want to serve:
-
-const path = require('path')
+Express looks up the files in the order in which you set the static directories with the express.static middleware function.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+For best results, use a reverse proxy cache to improve performance of serving static assets.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To create a virtual path prefix (where the path does not actually exist in the file system) for files that are served by the express.static function, specify a mount path for the static directory, as shown below:</p>
+</div>
+<div class="paragraph">
+<p>app.use('/static', express.static('public'))
+Now, you can load the files that are in the public directory from the /static path prefix.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://localhost:3000/static/images/kitten.jpg" class="bare">http://localhost:3000/static/images/kitten.jpg</a>
+<a href="http://localhost:3000/static/css/style.css" class="bare">http://localhost:3000/static/css/style.css</a>
+<a href="http://localhost:3000/static/js/app.js" class="bare">http://localhost:3000/static/js/app.js</a>
+<a href="http://localhost:3000/static/images/bg.png" class="bare">http://localhost:3000/static/images/bg.png</a>
+<a href="http://localhost:3000/static/hello.html" class="bare">http://localhost:3000/static/hello.html</a></p>
+</div>
+<div class="paragraph">
+<p>However, the path that you provide to the express.static function is relative to the directory from where you launch your node process. If you run the express app from another directory, it’s safer to use the absolute path of the directory that you want to serve:</p>
+</div>
+<div class="paragraph">
+<p>const path = require('path')
 app.use('/static', express.static(path.join(__dirname, 'public')))
 &lt;/div&gt;
 );
-};
-
-export default express;</pre>
+};</p>
+</div>
+<div class="paragraph">
+<p>export default express;</p>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-03-25 13:37:57 -0600
+Last updated 2022-03-25 17:28:28 -0600
 </div>
 </div>
 </body>

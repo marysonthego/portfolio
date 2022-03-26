@@ -1,6 +1,8 @@
+:source-highlighter: pygments
+:pygments-style: vim
+:pygments-css: class
+
 = Basic routing
-:source-highlighter: highlightjs
-:source-language: jsx
 
 Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
 
@@ -9,6 +11,7 @@ Each route can have one or more handler functions, which are executed when the r
 
 
 Route definition takes the following structure:
+[source, javascript]
 ----
 app.METHOD(PATH, HANDLER)
 ----
@@ -30,6 +33,7 @@ Respond with Hello World! on the homepage:
 ----
 
 Respond to POST request on the root route (/), the application’s home page:
+[source, jsx]
 ----
   app.post('/', (req, res) => {
     res.send('Got a POST request')
@@ -43,11 +47,11 @@ Respond to a PUT request to the /user route:
 ----
 
 Respond to a DELETE request to the /user route:
-----
+
 app.delete('/user', (req, res) => {
     res.send('Got a DELETE request at /user')
   });
-----
+
 
 == Serving static files in Express
 To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
@@ -68,6 +72,7 @@ http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/images/bg.png
 http://localhost:3000/hello.html
+
 Express looks up the files relative to the static directory, so the name of the static directory is not part of the URL.
 To use multiple static assets directories, call the express.static middleware function multiple times:
 
@@ -87,6 +92,7 @@ http://localhost:3000/static/css/style.css
 http://localhost:3000/static/js/app.js
 http://localhost:3000/static/images/bg.png
 http://localhost:3000/static/hello.html
+
 However, the path that you provide to the express.static function is relative to the directory from where you launch your node process. If you run the express app from another directory, it’s safer to use the absolute path of the directory that you want to serve:
 
 const path = require('path')
