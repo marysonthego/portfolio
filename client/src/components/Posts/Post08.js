@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 //import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 // import hljs from 'highlight.js';
 // import 'highlight.js/styles/devibeans.css';
-import expressFile from './examples/express.adoc';
+import expressFile from './content/express.adoc';
 import Asciidoctor from 'asciidoctor';
 
 function Notes(fileName) {

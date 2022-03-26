@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import dbfile from './examples/db.txt';
-import controllerFile from './examples/controller.txt';
-import routesFile from './examples/routes.txt';
-import serverFile from './examples/server.txt';
+import dbfile from './content/db.txt';
+import controllerFile from './content/controller.txt';
+import routesFile from './content/routes.txt';
+import serverFile from './content/server.txt';
 
 function Notes(fileName) {
   const [text, setText] = useState();
@@ -27,35 +27,35 @@ export function Post06() {
   let Title = "Use SQLite3 for light-weight Database Emulation";
 
   let code1 = `/d/Repo$ npx create-react-app sqlite3app
-  
+
   Creating a new React app in D:\\Repo\\sqlite3app.
-  
+
   Installing packages. This might take a couple of minutes.
   Installing react, react-dom, and react-scripts with cra-template...
-  
+
     ...
 
   Success! Created sqlite3app at D:\\Repo\\sqlite3app
-  
+
   We suggest that you begin by typing:
-  
+
     cd sqlite3app
     npm start
-  
+
   Happy hacking!
-  
+
 /d/Repo$`;
 
   let code2 = `/d/Repo/sqlite3app$ npm -v
   8.1.2
-  
+
 /d/Repo/sqlite3app$ node -v
   v16.13.1
   `;
 
-  let code3 = `/d/Repo/sqlite3app$ npm i express 
+  let code3 = `/d/Repo/sqlite3app$ npm i express
 
-/d/Repo/sqlite3app$ npm i sqlite3 
+/d/Repo/sqlite3app$ npm i sqlite3
   `;
 
   let code4 = `  "dependencies": {
@@ -70,10 +70,10 @@ export function Post06() {
   }, `;
 
   let code5 = `/d/Repo/sqlite3app$ mkdir server
-  
+
 /d/Repo/sqlite3app$ cd server
-  
-/d/Repo/sqlite3app/server$ 
+
+/d/Repo/sqlite3app/server$
   `;
 
   let Section1 = (
@@ -130,7 +130,7 @@ export function Post06() {
         >
           {code1}
         </SyntaxHighlighter>
-  
+
       <p className="post-text">
         As you can see, <code>create-react-app </code> created a new
         subdirectory named <code>sqlite3app</code> and installed a basic React
@@ -149,7 +149,7 @@ export function Post06() {
         >
           {code3}
         </SyntaxHighlighter >
-  
+
       <p className="post-text">
         Continue by installing <code>path</code>, <code>body-parser</code>, and{" "}
         <code>compression</code>. The dependency list in{" "}
@@ -207,7 +207,7 @@ export function Post06() {
         >
           {db}
       </SyntaxHighlighter>
-      
+
       <p className="post-text">Create a new file named <code>controller.js</code>. The controller defines all the queries to the database.</p>
       <h5 className="subsub">controller.js</h5>
       <SyntaxHighlighter
@@ -227,7 +227,7 @@ export function Post06() {
         >
         {server}
       </SyntaxHighlighter>
-    
+
       <p className="post-text">The last file we need is <code>routes.js</code>. This file defines the routing between the server and the database. It routes to the queries defined in <code>controller.js</code>. It is common to see <code>server.js</code> and <code>routes.js</code> combined in one file, but if you have a lot of queries, dividing things up this way makes it easier to read.</p>
       <h5 className="subsub">routes.js</h5>
       <SyntaxHighlighter

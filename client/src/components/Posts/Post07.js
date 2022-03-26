@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import nodejsFile from './examples/nodejs.txt';
-import httpFile from './examples/http.txt';
-import flamegraphFile from './examples/flamegraphs.txt';
-import backpressureFile from './examples/backpressure.txt';
-import profilingFile from './examples/profiling.txt';
-import dependenciesFile from './examples/dependencies.txt';
-import debuggingFile from './examples/debugging.txt';
+import nodejsFile from './content/nodejs.txt';
+import httpFile from './content/http.txt';
+import flamegraphFile from './content/flamegraphs.txt';
+import backpressureFile from './content/backpressure.txt';
+import profilingFile from './content/profiling.txt';
+import dependenciesFile from './content/dependencies.txt';
+import debuggingFile from './content/debugging.txt';
 
 function Notes(fileName) {
   const [text, setText] = useState();
