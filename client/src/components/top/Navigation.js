@@ -21,7 +21,7 @@ export const Navigation = () => {
   return (
     <Navbar expand={false} sticky="top">
         <Navbar.Brand href="/">
-          <img src="media/mtr48x38.png" alt="marysonthego.tech" className="nav"/>
+          <img src="media/mredt.ico" alt="marysonthego.tech" className="nav"/>
             marysonthego.tech
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
@@ -73,7 +73,7 @@ export const Navigation = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
-                <Accordion.Header>Tech Blog Posts</Accordion.Header>
+                <Accordion.Header>Tech Posts</Accordion.Header>
                 <Accordion.Body>
                   <Nav className="flex-column">
                   <Nav.Link href="/post00" className="rounded-end">
@@ -107,23 +107,11 @@ export const Navigation = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>About Me</Accordion.Header>
+                
                 <Accordion.Body>
                   <Nav className="flex-column">
                     <Nav.Link href="mailto:marysonthego@gmail.com?subject=Contact Me" className="rounded-end">
                       Contact Me!
-                    </Nav.Link>
-                    <Nav.Link href="/education" className="rounded-end">
-                      Education
-                    </Nav.Link>
-                    <Nav.Link href="/career" className="rounded-end">
-                      Career
-                    </Nav.Link>
-                    <Nav.Link href="/goals" className="rounded-end">
-                      Goals
-                    </Nav.Link>
-                    <Nav.Link href="/resume" className="rounded-end">
-                      Resume/CV
                     </Nav.Link>
                   </Nav>
                 </Accordion.Body>
