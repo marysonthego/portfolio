@@ -11,8 +11,11 @@
 
 div.post-body {
   background: #003262;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
   max-width: 90%;
 }
 
@@ -22,7 +25,6 @@ div.post-body {
   background-color: #003262;
   color: whitesmoke;
   padding: 10px;
-  border-radius: 20px 20px 0 0;
   font-family: 'Nunito', sans-serif;
   display: flex;
   justify-content: space-between;
@@ -75,6 +77,6 @@ div.post-body {
 .button.weather{
   width: 35px;
   height: 35px;
-  background-color: #9e9a9a;
+  background-color: #003262;
   border-color:black;
 }

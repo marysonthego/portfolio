@@ -5,6 +5,34 @@
   "version": "0.2.0",
   "configurations": [
     {
+              "name": "Launch",
+              "type": "node",
+              "request": "launch",
+              "program": "${file}",
+              "stopOnEntry": true,
+              "args": [],
+              "cwd": "${fileDirname}",
+              "runtimeExecutable": null,
+              "runtimeArgs": [
+                  "--nolazy"
+              ],
+              "env": {
+                  "NODE_ENV": "development"
+              },
+              "externalConsole": false,
+              "sourceMaps": false,
+              "outDir": null
+          },
+  {
+    "name": "Launch Program",
+    "program": "${workspaceFolder}/app.js",
+    "request": "launch",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "pwa-node"
+  },
+    {
       "type": "firefox",
       "request": "launch",
       "reAttach": true,

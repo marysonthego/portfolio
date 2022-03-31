@@ -116,7 +116,7 @@ export const TodosTable = ({
   return (
     <Container fluid>
       <div>
-        <Row className="todos-top-row">
+        <Row className="todos-top-row mt-5">
           <Col align="center">
             <button className="btn btn-secondary" onClick={toggleModal}>
               New Todo
@@ -140,7 +140,6 @@ export const TodosTable = ({
               Delete
             </button>
           </Col>
-          <hr />
         </Row>
         <BootstrapTable
           className="react-bootstrap-table"

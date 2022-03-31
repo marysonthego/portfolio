@@ -76,7 +76,7 @@ function ExpressFileRouting() {
           route paths.{" "}
           <a
             href="https://forbeslindesay.github.io/express-route-tester/"
-            target="_blank"
+            target="_blank" rel="noreferrer"
             className="link-primary"
           >
             Express Route Tester
@@ -364,7 +364,7 @@ const birds = require('./birds')
 
 app.use('/birds', birds)]`}
         </SyntaxHighlighter>
-        
+
         <p className="ptext">
           The app will now be able to handle requests to /birds and
           /birds/about, as well as call the timeLog middleware function that is

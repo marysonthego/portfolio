@@ -1,5 +1,9 @@
 .react-bootstrap-table table {
   table-layout: auto;
+  width: auto;
+  max-width: 90vw;
+  margin-left: 3%;
+  margin-right: 3%;
   color: whitesmoke;
   border-collapse:collapse;
   border:solid #003262 1px;
@@ -49,12 +53,12 @@
 .react-bootstrap-table {
   th {
     outline: none;
-   
-    &.sortable {  
+
+    &.sortable {
       .svg-icon-sort {
         opacity: 0;
       }
-  
+
       &:hover {
         cursor: pointer;
 
@@ -62,7 +66,7 @@
           opacity: 1;
         }
       }
-    }    
+    }
   }
   .table.table-head-custom thead tr {
     .sortable-active {

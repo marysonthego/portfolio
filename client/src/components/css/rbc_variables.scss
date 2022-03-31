@@ -37,7 +37,7 @@ $today-highlight-bg: #c4820e;
 }
 
 .rbc-off-range-bg {
-  background: linear-gradient(45deg, #003262 50%, #ffff00 0%, #fdb515 50%);
+  background: linear-gradient(45deg, #85bff5b0 50%, #ffff00 0%, #fad88fa9 50%);
 }
 
 .rbc-label {
@@ -48,11 +48,15 @@ $today-highlight-bg: #c4820e;
 .rbc-calendar {
   box-sizing: border-box;
   margin-top: 10px;
+  margin-left: 3%;
+  margin-right: 3%;
   padding-bottom: 5px;
+  width: auto;
   height: 80vh;
   display: flex;
   flex-direction: column;
-  align-content: stretch; 
+  align-content: stretch;
+  justify-content: center;
   color: #ffffff;
   border-radius: 4px;
   background: #ffffff;
@@ -111,7 +115,7 @@ div.rbc-header span {
   border: 0px;
   border-radius: 4px;
   line-height: normal;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .rbc-toolbar button.rbc-active, .rbc-toolbar button:active, .rbc-toolbar button.rbc-active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button:active:hover, .rbc-toolbar button:focus, .rbc-toolbar button:hover{

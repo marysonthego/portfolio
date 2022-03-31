@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import moment from "moment";
 import Image from "react-bootstrap/Image";
 import "components/css/weatherstyles.css";
@@ -10,10 +13,13 @@ const refresh = () => {
 };
 export const WeatherApi = () => {
   const [lat, setLat] = useState([]);
-
   const [long, setLong] = useState([]);
-
   const [weatherData, setWeatherData] = useState([]);
+  const [show, setShow] = useState(true);
+  // const toggleModal = () => {
+  //   setShow(!show);
+  // }
+  const handleClose = () => setShow(false);
 
   useEffect(() => {
     const weatherFetch = async () => {
@@ -44,6 +50,78 @@ export const WeatherApi = () => {
     weatherFetch();
   }, [lat, long]);
 
+  const WeatherModal = (show) => {
+    return (
+      <Container>
+      <Modal centered show={show} onHide={handleClose} backdrop="static" >
+        <Modal.Header closeButton className="iframe">Implementation of the remote OpenWeather API</Modal.Header>
+          <Row>
+          </Row>
+          <Modal.Body>
+          <Row>
+            <Col sm={2}>
+            <label>What's This?</label>
+            </Col>
+            <Col sm={10}>
+            <div>
+              <p >
+                A responsive ReactJS app.
+                Weather information is obtained by querying the OpenWeather API.
+                The geolocation for the query is obtained from your
+                browser. You might get surprising results depending on where
+                your browser thinks you are! This could happen if location
+                services are turned off on the device, or if you are using a
+                VPN.
+              </p>
+              <p>
+                A useEffect hook
+                listens for changes to latitude or longitude. When the effect is
+                triggered, it calls an asynchronous fetch() to the OpenWeather
+                API and populates the display with the results. You can use the refresh button
+                in the upper-right corner to initiate a new fetch() request any time you want.
+              </p>
+
+            </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={2}>
+              Uses:
+            </Col>
+            <Col sm={10}>
+            <ul >
+              <li >React JS</li>
+              <li>React-Router v6</li>
+              <li>React Hooks</li>
+              <li>Asynchronous fetch()</li>
+              <li>Browser geolocation</li>
+              <li>Date and moment()</li>
+              <li><a href="https://openweathermap.org/api" >openweathermap.org/api</a></li>
+            </ul>
+            </Col>
+            <Row>
+              <Col sm={2}>
+                Display:
+              </Col>
+              <Col sm={10}>
+              responsive
+              </Col>
+            </Row>
+            <Row>
+              <Col sm={2}>
+                URL:
+              </Col>
+              <Col sm={10}>
+                <a href="https://marysonthego.tech/weather" >marysonthego.tech/weather</a>
+              </Col>
+            </Row>
+          </Row>
+          </Modal.Body>
+        </Modal>
+        </Container>
+    );
+  };
+
   return (
     <Container
       fluid
@@ -52,48 +130,15 @@ export const WeatherApi = () => {
       justify-content="center"
       justify-items="center"
     >
+        { show ? <WeatherModal/> : null}
       <h2 className="top">OpenWeather API</h2>
-
-      <div className="post-body">
-              <p className="ptext">
-                This is a responsive ReactJS app. On devices wider than 768
-                pixels a Bootstrap 5 horizontal post displays
-                the weather component. On smaller devices, it appears in a vertical
-                post component.
-              </p>
-              <p className="ptext">
-                Weather information is obtained by querying the OpenWeather API.
-                The geolocation for the query is obtained from your
-                browser. You might get surprising results depending on where
-                your browser thinks you are! This could happen if location
-                services are turned off on the device, or if you are using a
-                VPN. A nice addition to this app would be to prompt the user for
-                their location, or even allow users to track several locations at once.
-              </p>
-              <p className="ptext">
-                The heavy lifting happens in a useEffect hook that
-                listens for changes to latitude or longitude. When the effect is
-                triggered, it calls an asynchronous fetch() to the OpenWeather
-                API and populates the display with the results. You can use the refresh button
-                in the upper-right corner to initiate a new fetch() request any time you want.
-              </p>
-              <p className="ptext">
-                I've noticed that the first request to the OpenWeather API
-                frequently returns a 400 (bad request) error, so be sure to
-                check for a successful network response in your code before you populate the
-                post component with data. Actually, this is good advice any time
-                you are working with an API!
-              </p>
-              <p></p>
-
-            </div>
 
       <div className="post mb-3" style={{ maxWidth: "100%" }}>
         <div className="row g-0">
           <div className="col-md-4">
             {typeof weatherData.current !== "undefined" ? (
               <>
-                <div className="main">
+                <div className="main mt-5">
                     <div className="top header flex">
                       {weatherData.timezone}
                       <Button
@@ -159,7 +204,7 @@ export const WeatherApi = () => {
               <div></div>
             )}
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 mt-5">
           <Image
                 fluid={true}
                 rounded={true}

@@ -6,10 +6,11 @@
   background: #ffffff;
 }
 
-div.modal-content {
-  color: #003262;
-  
-
+div.modal-content, .iframe{
+  background:rgba(211, 211, 211, 0.80);
+  color:#000000;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .list-wrapper-modal {
@@ -49,4 +50,13 @@ div.modal-content {
 
 .fieldset-modal {
   margin-top: 10px;
+}
+
+.NucatModal {
+  position: absolute;
+  background:rgba(211, 211, 211, 0.39)
+}
+
+.ModalHeader, .ModalBody {
+  background:rgba(211, 211, 211, 0.39)
 }

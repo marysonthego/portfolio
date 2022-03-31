@@ -57,6 +57,9 @@ export const Navigation = () => {
                     <Nav.Link href="/weather" className="rounded-end">
                       OpenWeather API
                     </Nav.Link>
+                    <Nav.Link href="/codechallenges" className="rounded-end">
+                      Code Challenges
+                    </Nav.Link>
                     <Nav.Link href="/stepper" className="rounded-end">
                       Sign-up Stepper
                     </Nav.Link>
@@ -107,9 +110,12 @@ export const Navigation = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                
+
                 <Accordion.Body>
                   <Nav className="flex-column">
+                    <Nav.Link href="/listtools" className="Rounded-end">
+                      Tools
+                    </Nav.Link>
                     <Nav.Link href="mailto:marysonthego@gmail.com?subject=Contact Me" className="rounded-end">
                       Contact Me!
                     </Nav.Link>

@@ -192,6 +192,20 @@ export function MainPage() {
           Contact Me &nbsp;
         </a>
       </div>
+      <div className="grid image-container responsive-img ">
+        <a
+          href="/listtools"
+          className="link-primary overlay im15"
+        >
+          <img
+            src="media/bluebird.png"
+            alt="React JS"
+            loading="lazy"
+            className="responsive-img rounded-circle "
+          />
+          Tools &nbsp;
+        </a>
+      </div>
     </Container>
   );
 }

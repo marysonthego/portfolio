@@ -1,15 +1,15 @@
 import React from "react";
 import ExpressFileServer from "./content/expressFileServer.js";
 
-function Notes(fileName) {
-  let element;
-  fetch(fileName)
-    .then((response) => response.text())
-    .then((textContent) => {
-      element = textContent;
-    });
-  return element;
-}
+// function Notes(fileName) {
+//   let element;
+//   fetch(fileName)
+//     .then((response) => response.text())
+//     .then((textContent) => {
+//       element = textContent;
+//     });
+//   return element;
+// }
 
 export function Post08() {
   let TopPic = "media/expressjs2.png";

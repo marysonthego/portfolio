@@ -9,7 +9,7 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  
+
 }
 
 div.row {
@@ -50,6 +50,7 @@ div.row {
 .im12 {grid-area: im12;}
 .im13 {grid-area: im13;}
 .im14 {grid-area: im14;}
+.im15 {grid-area: im15;}
 
 .image-container {
   position: relative;
@@ -126,7 +127,7 @@ a.link-primary.overlay:hover  {
   '. . im04 im04 im04 . im05 im05 im05 im05 . .'
   '. . . im06 im06 im06 . im07 im07 im08 im08 .'
   '. . im09 im09 im09 im10 im10 im10 . im11 im11 .'
-  '. im12 im12 . im13 im13 . im14 im14 . . .'
+  '. im12 im12 . im13 im13 . im14 im14 . im15 im15'
   '. . . . . . . . . . . .';
   }
 }

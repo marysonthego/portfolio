@@ -16,7 +16,7 @@ export const DataOwner = () => {
 
   const [eventCurrent, setEventCurrent] = useState({});
 
-  var eventOccurrences = [{}];
+  //var eventOccurrences = [{}];
 
   const [todos, setTodos] = useState([
     {

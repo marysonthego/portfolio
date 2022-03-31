@@ -11,9 +11,10 @@ import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
 import {TodosForMe} from "components/todosforme/TodosForMe";
 import {WeatherApi} from "components/demos/WeatherApi";
-import NucatIframe from "components/demos/NucatIframe";
+import {NucatIframe} from "components/demos/NucatIframe";
 import DashIframe from "components/demos/DashIframe";
 import StepperIframe from "components/demos/StepperIframe";
+import CodeChallenges from "components/codechallenges/CodeChallenges";
 import CspReport from "components/helpers/CspReport";
 import {Post00} from "components/posts/Post00";
 import {Post01} from "components/posts/Post01";
@@ -27,8 +28,9 @@ import {Post08} from "components/posts/Post08";
 import ExpressExamples from "components/posts/content/expressExamples.js";
 import ExpressFileRouting from "components/posts/content/expressFileRouting.js";
 import ExpressMysql from "components/posts/content/expressMysql.js";
-import ExpressPostgres from "components/posts/content/expressPostgres.js";
+//import ExpressPostgres from "components/posts/content/expressPostgres.js";
 import ExpressSqlite from "components/posts/content/expressSqlite.js";
+import {AnimateListTools} from "components/top/ListTools";
 import reportWebVitals from "./reportWebVitals";
 import Container from "react-bootstrap/Container";
 import {CookiesProvider} from "react-cookie";
@@ -57,6 +59,7 @@ ReactDOM.render(
             <Route path="/nucat" element={<NucatIframe />} />
             <Route path="/todos" element={<TodosForMe />} />
             <Route path="/weather" element={<WeatherApi />} />
+            <Route path="/codechallenges" element={<CodeChallenges/>} />
             <Route path="/" element={<App />} />
             <Route path="/cspreport" element={<CspReport />} />
             <Route path="/post00" element={<Post00 />} />
@@ -71,7 +74,7 @@ ReactDOM.render(
             <Route path="/examples" element={<ExpressExamples />} />
             <Route path="/routing" element={<ExpressFileRouting />} />
             <Route path="expressmysql" element={<ExpressMysql />} />
-            <Route path="expresspostgres" element={<ExpressPostgres />} />
+            <Route path="listtools" element={<AnimateListTools />} />
             <Route path="expresssqlite" element={<ExpressSqlite />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
