@@ -16,9 +16,9 @@ export const WeatherApi = () => {
   const [long, setLong] = useState([]);
   const [weatherData, setWeatherData] = useState([]);
   const [show, setShow] = useState(true);
-  // const toggleModal = () => {
-  //   setShow(!show);
-  // }
+  const toggleModal = () => {
+    setShow(!show);
+  };
   const handleClose = () => setShow(false);
 
   useEffect(() => {
@@ -53,72 +53,78 @@ export const WeatherApi = () => {
   const WeatherModal = (show) => {
     return (
       <Container>
-      <Modal centered show={show} onHide={handleClose} backdrop="static" >
-        <Modal.Header closeButton className="iframe">Implementation of the remote OpenWeather API</Modal.Header>
-          <Row>
-          </Row>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton className="iframe">
+            Implementation of the remote OpenWeather API
+          </Modal.Header>
+          <Row></Row>
           <Modal.Body>
-          <Row>
-            <Col sm={2}>
-            <label>What's This?</label>
-            </Col>
-            <Col sm={10}>
-            <div>
-              <p >
-                A responsive ReactJS app.
-                Weather information is obtained by querying the OpenWeather API.
-                The geolocation for the query is obtained from your
-                browser. You might get surprising results depending on where
-                your browser thinks you are! This could happen if location
-                services are turned off on the device, or if you are using a
-                VPN.
-              </p>
-              <p>
-                A useEffect hook
-                listens for changes to latitude or longitude. When the effect is
-                triggered, it calls an asynchronous fetch() to the OpenWeather
-                API and populates the display with the results. You can use the refresh button
-                in the upper-right corner to initiate a new fetch() request any time you want.
-              </p>
-
-            </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={2}>
-              Uses:
-            </Col>
-            <Col sm={10}>
-            <ul >
-              <li >React JS</li>
-              <li>React-Router v6</li>
-              <li>React Hooks</li>
-              <li>Asynchronous fetch()</li>
-              <li>Browser geolocation</li>
-              <li>Date and moment()</li>
-              <li><a href="https://openweathermap.org/api" >openweathermap.org/api</a></li>
-            </ul>
-            </Col>
             <Row>
               <Col sm={2}>
-                Display:
+                <label>What's This?</label>
               </Col>
               <Col sm={10}>
-              responsive
+                <div>
+                  <p>
+                    A responsive ReactJS app. Weather information is obtained by
+                    querying the OpenWeather API. The geolocation for the query
+                    is obtained from your browser. You might get surprising
+                    results depending on where your browser thinks you are! This
+                    could happen if location services are turned off on the
+                    device, or if you are using a VPN.
+                  </p>
+                  <p>
+                    A useEffect hook listens for changes to latitude or
+                    longitude. When the effect is triggered, it calls an
+                    asynchronous fetch() to the OpenWeather API and populates
+                    the display with the results. You can use the refresh button
+                    in the upper-right corner to initiate a new fetch() request
+                    any time you want.
+                  </p>
+                </div>
               </Col>
             </Row>
             <Row>
-              <Col sm={2}>
-                URL:
-              </Col>
+              <Col sm={2}>Uses:</Col>
               <Col sm={10}>
-                <a href="https://marysonthego.tech/weather" >marysonthego.tech/weather</a>
+                <ul>
+                  <li>React JS</li>
+                  <li>React-Router v6</li>
+                  <li>React Hooks</li>
+                  <li>Asynchronous fetch()</li>
+                  <li>Browser geolocation</li>
+                  <li>Date and moment()</li>
+                  <li>
+                    <a href="https://openweathermap.org/api">
+                      openweathermap.org/api
+                    </a>
+                  </li>
+                </ul>
               </Col>
+              <Row>
+                <Col sm={2}>Display:</Col>
+                <Col sm={10}>responsive</Col>
+              </Row>
+              <Row>
+                <Col sm={2}>URL:</Col>
+                <Col sm={10}>
+                  <a href="https://marysonthego.tech/weather">
+                    marysonthego.tech/weather
+                  </a>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={2}>Code:</Col>
+                <Col sm={10}>
+                  <a href="https://github.com/marysonthego/portfolio/tree/main/client/src/components/demos">
+                    github
+                  </a>
+                </Col>
+              </Row>
             </Row>
-          </Row>
           </Modal.Body>
         </Modal>
-        </Container>
+      </Container>
     );
   };
 
@@ -130,7 +136,8 @@ export const WeatherApi = () => {
       justify-content="center"
       justify-items="center"
     >
-        { show ? <WeatherModal/> : null}
+      {show ? <WeatherModal /> : null}
+
       <h2 className="top">OpenWeather API</h2>
 
       <div className="post mb-3" style={{ maxWidth: "100%" }}>
@@ -139,83 +146,88 @@ export const WeatherApi = () => {
             {typeof weatherData.current !== "undefined" ? (
               <>
                 <div className="main mt-5">
-                    <div className="top header flex">
-                      {weatherData.timezone}
-                      <Button
-                        className="button weather m-0 p-0"
-                        onClick={refresh}
-                      >
-                        <img
-                          src="media/arrow-clockwise.svg"
-                          alt="refresh"
-                          width="32"
-                          height="32"
-                        />
-                      </Button>
-                    </div>
-                    <div className="flex">
-                      <p className="day">
-                        {moment().format("dddd")}, {moment().format("LL")}
-                      </p>
-                    </div>
-                    <div className="flex">
-                      <p className="day">
-                        Temp: {weatherData.current.temp} &deg;F
-                      </p>
-                      <p className="temp">
-                        Pressure:{" "}
-                        {(weatherData.current.pressure * 0.0295301).toFixed(2)}
-                        &nbsp;inHg
-                      </p>
-                      <p className="temp">
-                        Humidity: {weatherData.current.humidity}%
-                      </p>
-                    </div>
-                    <div className="flex">
-                      <p className="temp">
-                        Wind: {weatherData.current.wind_speed}&nbsp;mph
-                      </p>
-                      <p className="temp">
-                        Gusts: {weatherData.current.wind_gust}&nbsp;mph
-                      </p>
-                    </div>
-                    <div className="flex">
-                      <p className="sunrise-sunset">
-                        Sunrise:{" "}
-                        {new Date(
-                          weatherData.current.sunrise * 1000
-                        ).toLocaleTimeString("en-US")}
-                      </p>
-                      <p className="sunrise-sunset">
-                        Sunset:{" "}
-                        {new Date(
-                          weatherData.current.sunset * 1000
-                        ).toLocaleTimeString("en-US")}
-                      </p>
-                    </div>
-                    <p className="description">
-                      Current Conditions:{" "}
-                      {weatherData.current.weather[0].description}
+                  <div className="top header flex">
+                    {weatherData.timezone}
+                    <Button
+                      className="button weather m-0 p-0"
+                      onClick={refresh}
+                    >
+                      <img
+                        src="media/arrow-clockwise.svg"
+                        alt="refresh"
+                        width="32"
+                        height="32"
+                      />
+                    </Button>
+                  </div>
+                  <div className="flex">
+                    <p className="day">
+                      {moment().format("dddd")}, {moment().format("LL")}
                     </p>
                   </div>
-
+                  <div className="flex">
+                    <p className="day">
+                      Temp: {weatherData.current.temp} &deg;F
+                    </p>
+                    <p className="temp">
+                      Pressure:{" "}
+                      {(weatherData.current.pressure * 0.0295301).toFixed(2)}
+                      &nbsp;inHg
+                    </p>
+                    <p className="temp">
+                      Humidity: {weatherData.current.humidity}%
+                    </p>
+                  </div>
+                  <div className="flex">
+                    <p className="temp">
+                      Wind: {weatherData.current.wind_speed}&nbsp;mph
+                    </p>
+                    <p className="temp">
+                      Gusts: {weatherData.current.wind_gust}&nbsp;mph
+                    </p>
+                  </div>
+                  <div className="flex">
+                    <p className="sunrise-sunset">
+                      Sunrise:{" "}
+                      {new Date(
+                        weatherData.current.sunrise * 1000
+                      ).toLocaleTimeString("en-US")}
+                    </p>
+                    <p className="sunrise-sunset">
+                      Sunset:{" "}
+                      {new Date(
+                        weatherData.current.sunset * 1000
+                      ).toLocaleTimeString("en-US")}
+                    </p>
+                  </div>
+                  <p className="description">
+                    Current Conditions:{" "}
+                    {weatherData.current.weather[0].description}
+                  </p>
+                </div>
               </>
             ) : (
               <div></div>
             )}
           </div>
           <div className="col-md-8 mt-5">
-          <Image
-                fluid={true}
-                rounded={true}
-                src="media/weatheruseeffect.png"
-                title="Weather useEffect"
-                alt="Weather useEffect code"
-              />
-              </div>
-
+            <Image
+              fluid={true}
+              rounded={true}
+              src="media/weatheruseeffect.png"
+              title="Weather useEffect"
+              alt="Weather useEffect code"
+            />
           </div>
         </div>
+        {show ? null : (
+          <div>
+            <Button className="button toggle p-0" onClick={toggleModal}>
+              Details
+            </Button>
+          </div>
+        )}
+      </div>
     </Container>
   );
 };

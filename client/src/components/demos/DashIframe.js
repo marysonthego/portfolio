@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import useWindowDimensions from 'components/helpers/UseWindowDimensions';
 
 export default function DashIframe() {
@@ -12,15 +13,26 @@ export default function DashIframe() {
 
   const [show, setShow] = useState(true);
 
-  // const toggleModal = () => {
-  //   setShow(!show);
-  // }
+  const toggleModal = () => {
+    setShow(!show);
+  }
+
   const handleClose = () => setShow(false);
+
+  const ToggleButton = () => {
+    return (
+      <div>
+        <Button className="button toggle p-0" onClick={toggleModal}>
+          Details
+        </Button>
+      </div>
+    )
+  }
 
   const DashModal = (show) => {
     return (
       <Container>
-      <Modal centered show={show} onHide={handleClose} backdrop="static" >
+      <Modal centered show={show} onHide={handleClose} >
         <Modal.Header closeButton className="iframe">Customer and Administrator Dashboard</Modal.Header>
           <Row>
 
@@ -71,6 +83,14 @@ export default function DashIframe() {
                 <a href="https://dash.marysonthego.tech" className="link-primary">dash.marysonthego.tech</a>
               </Col>
             </Row>
+            <Row>
+              <Col sm={2}>
+                Code:
+              </Col>
+              <Col sm={10}>
+                <a href="https://github.com/marysonthego/alerts-dashboard" className="link-primary">github</a>
+              </Col>
+            </Row>
           </Row>
           </Modal.Body>
         </Modal>
@@ -81,7 +101,7 @@ export default function DashIframe() {
   if(width < 410) {
     return (
       <div>
-          { show ? <DashModal/> : null}
+          { show ? <DashModal/> : <ToggleButton/>}
       <iframe title='Dashboard'
         width={iwidth+50}
         height={iheight}
@@ -92,7 +112,7 @@ export default function DashIframe() {
     } else {
       return (
         <div>
-          { show ? <DashModal/> : null}
+          { show ? <DashModal/> : <ToggleButton/>}
         <iframe title='Dashboard'
         width={width}
         height={height}

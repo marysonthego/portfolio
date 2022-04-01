@@ -1,5 +1,5 @@
 # On command line: python3 script.py
-print("This line will be printed.")
+print("This prints a line.")
 x = 1
 if x == 1:
     # indented four spaces
@@ -369,10 +369,8 @@ numbers = [
 for number in numbers:
     if number == 237:
         break
-
     if number % 2 == 1:
         continue
-
     print(number)
 
 # Functions in python are defined using the block keyword "def", followed with the function's name as the block's name.

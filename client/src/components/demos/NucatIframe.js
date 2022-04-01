@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import useWindowDimensions from "components/helpers/UseWindowDimensions";
 
 export function NucatIframe() {
@@ -12,15 +13,26 @@ export function NucatIframe() {
   const toggleModal = () => {
     setShow(!show);
   }
+
   const handleClose = () => setShow(false);
 
   let iwidth = width - 50;
   let iheight = height - 100;
 
+  const ToggleButton = () => {
+    return (
+      <div>
+        <Button className="button toggle p-0" onClick={toggleModal}>
+          Details
+        </Button>
+      </div>
+    )
+  }
+
   const NucatModal = (show) => {
     return (
       <Container>
-      <Modal centered show={show} onHide={handleClose} backdrop="static" >
+      <Modal centered show={show} onHide={handleClose}>
         <Modal.Header closeButton className="iframe">Parallax Scroll implemented in CSS</Modal.Header>
           <Row>
 
@@ -64,6 +76,14 @@ export function NucatIframe() {
                 <a href="https://nucat.marysonthego.tech" className="link-primary">nucat.marysonthego.tech</a>
               </Col>
             </Row>
+            <Row>
+              <Col sm={2}>
+                Code:
+              </Col>
+              <Col sm={10}>
+                <a href="https://github.com/marysonthego/nucatpkg" className="link-primary">github</a>
+              </Col>
+            </Row>
           </Row>
           </Modal.Body>
         </Modal>
@@ -73,20 +93,19 @@ export function NucatIframe() {
   if (width < 410) {
     return (
       <div>
-        { show ? <NucatModal/> : null}
+          { show ? <NucatModal/> : <ToggleButton/>}
       <iframe
         title="Nucat"
         width={iwidth + 50}
         height={iheight}
         src="https://nucat.marysonthego.tech/"
-        onClick={toggleModal}
       ></iframe>
       </div>
     );
   } else {
     return (
       <div>
-        { show ? <NucatModal/> : null }
+        { show ? <NucatModal/> : <ToggleButton/>}
       <iframe
         title="Nucat"
         width={width}
