@@ -2,7 +2,7 @@
 export const Post01 = () => {
   let TopPic = "media/amazon600.png";
   let Title =
-    "How to use Windows Subsystem for Android to run React Native Apps";
+    "How to use Amazon App Store to run React Native Apps";
 
   let Section1 = (
     <div>

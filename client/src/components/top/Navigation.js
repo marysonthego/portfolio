@@ -83,7 +83,7 @@ export const Navigation = () => {
                     How to Setup a React Native Development Environment in Windows
                     </Nav.Link>
                     <Nav.Link href="/post01" className="rounded-end">
-                    How to use Windows Subsystem for Android to run React Native Apps
+                    How to use Amazon App Store to run React Native Apps
                     </Nav.Link>
                     <Nav.Link href="/post02" className="rounded-end">
                     How to use React ForwardRef
@@ -101,10 +101,10 @@ export const Navigation = () => {
                       React Bits & Javascript Pieces
                     </Nav.Link>
                     <Nav.Link href="/post07" className="rounded-end">
-                      Node JS
+                      Node JS Reference
                     </Nav.Link>
                     <Nav.Link href="/post08" className="rounded-end">
-                      Express
+                      Express Reference
                     </Nav.Link>
                   </Nav>
                 </Accordion.Body>
