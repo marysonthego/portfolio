@@ -37,8 +37,8 @@ export function MainPage() {
           className="link-primary overlay im03"
         >
           <img
-            src="media/loginform400x400.png"
-            alt="React JS"
+            src="media/a4gIcon48x48.png"
+            alt="Login"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -52,7 +52,7 @@ export function MainPage() {
           className="link-primary overlay im04"
         >
           <img
-            src="media/post0204_400x400.png"
+            src="media/stepper.png"
             alt="React JS"
             loading="lazy"
             className="responsive-img rounded-circle "
@@ -67,8 +67,8 @@ export function MainPage() {
           className="link-primary overlay im05"
         >
           <img
-            src="media/amazon400x400.png"
-            alt="React JS"
+            src="media/amazon200.png"
+            alt="Amazon"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -79,7 +79,7 @@ export function MainPage() {
       <div className="grid image-container responsive-img ">
         <a href="/post02" className="link-primary overlay im06">
           <img
-            src="media/post0208_400x400.png"
+            src="media/react400t.png"
             alt="React JS"
             loading="lazy"
             className="responsive-img rounded-circle "
@@ -91,8 +91,8 @@ export function MainPage() {
       <div className="grid image-container responsive-img ">
         <a href="/weather" className="link-primary overlay im07">
           <img
-            src="media/openweatheryellow400x376.png"
-            alt="React JS"
+            src="media/kyiv200.png"
+            alt="Weather"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -103,8 +103,8 @@ export function MainPage() {
       <div className="grid image-container responsive-img ">
         <a href="/post01#debug" className="link-primary overlay im08">
           <img
-            src="media/post0112_400x400.png"
-            alt="React JS"
+            src="media/windows.png"
+            alt="Windows"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -116,7 +116,7 @@ export function MainPage() {
         <a href="/post05" className="link-primary overlay im09">
           <img
             src="media/avif400x400.png"
-            alt="React JS"
+            alt="AVIF"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -128,7 +128,7 @@ export function MainPage() {
         <a href="/post03" className="link-primary overlay im10">
           <img
             src="media/passport400x400.png"
-            alt="React JS"
+            alt="Passport"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -142,8 +142,8 @@ export function MainPage() {
           className="link-primary overlay im11"
         >
           <img
-            src="media/calendar400x400.png"
-            alt="React JS"
+            src="media/calendar.png"
+            alt="Calendar"
             loading="lazy"
             className="responsive-img rounded-circle "
           />
@@ -198,7 +198,7 @@ export function MainPage() {
           className="link-primary overlay im15"
         >
           <img
-            src="media/bluebird.png"
+            src="media/devops.png"
             alt="React JS"
             loading="lazy"
             className="responsive-img rounded-circle "

@@ -5,6 +5,16 @@
   background:transparent;
 }
 
+.list-phases {
+  max-width: 200px;
+  margin: 10px;
+}
+
+.list-agile {
+  max-width: 300px !important;
+  margin: 10px;
+}
+
 img.list-logo.rounded-circle, img.grid-list{
   max-width: 100%;
   padding: 0px;
@@ -19,7 +29,7 @@ img.list-logo.rounded-circle, img.grid-list{
   background:#fdb515;
 }
 
-.list-logo:hover {
+.list-logo:hover, .list-phases:hover {
   transform: scale3d(1.5, 1.5, 0.5);
   background:#c4820e;
 }
@@ -27,6 +37,14 @@ img.list-logo.rounded-circle, img.grid-list{
 @media (prefers-reduced-motion: no-preference) {
   .list-logo {
     animation-name:  list-logo-slidein,  list-logo-spin;
+    animation-iteration-count: 1;
+    animation-duration: 2s, 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    transition: transform 2s;
+  }
+  .list-phases {
+    animation-name: list-logo-slidein;
     animation-iteration-count: 1;
     animation-duration: 2s, 5s;
     animation-delay: 1s;

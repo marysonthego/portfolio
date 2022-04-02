@@ -57,9 +57,6 @@ export const Navigation = () => {
                     <Nav.Link href="/weather" className="rounded-end">
                       OpenWeather API
                     </Nav.Link>
-                    <Nav.Link href="/codechallenges" className="rounded-end">
-                      Code Challenges
-                    </Nav.Link>
                     <Nav.Link href="/stepper" className="rounded-end">
                       Sign-up Stepper
                     </Nav.Link>
@@ -102,6 +99,9 @@ export const Navigation = () => {
                     </Nav.Link>
                     <Nav.Link href="/post07" className="rounded-end">
                       Node JS Reference
+                    </Nav.Link>
+                    <Nav.Link href="/post09" className="rounded-end">
+                      Python3 Reference
                     </Nav.Link>
                     <Nav.Link href="/post08" className="rounded-end">
                       Express Reference

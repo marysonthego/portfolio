@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import dbfile from './content/db.txt';
-import controllerFile from './content/controller.txt';
-import routesFile from './content/routes.txt';
-import serverFile from './content/server.txt';
 
 function Notes(fileName) {
   const [text, setText] = useState();
@@ -17,11 +13,6 @@ function Notes(fileName) {
 }
 
 export function Post09() {
-
-  const db = Notes(dbfile);
-  const controller = Notes(controllerFile);
-  const routes = Notes(routesFile);
-  const server = Notes(serverFile);
 
   let TopPic = "media/python.png";
   let Title = "90% of Python3";
@@ -432,7 +423,8 @@ Your name is either John or Rick.
 ...     pass
 ...
 >>>
->>> # Unlike the double equals operator "==", the "is" operator does not match the values of the variables, but the instances themselves.
+>>> # Unlike the double equals operator "==", the "is" operator
+>>> does not match the values of the variables, but the instances themselves.
 >>> x = [1,2,3]
 >>> y = [1,2,3]
 >>> print(x == y) # Prints out True

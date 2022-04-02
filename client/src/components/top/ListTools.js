@@ -205,6 +205,29 @@ export function AnimateListTools() {
             alt="Python logo"
           />
         </Row>
+        <Row className="row-cols-sm-3 row-cols-md-12 grid-list">
+          
+            <Image
+              src="media/sdlc.png"
+              title="SDLC"
+              className=" list-phases  "
+              alt="SDLC"
+            />
+            <Image
+              src="media/devops.png"
+              title="Devops"
+              className=" list-phases  "
+              alt="Devops"
+            />
+        </Row>
+        <Row className="row-cols-sm-3 row-cols-md-12 grid-list">
+            <Image
+              src="media/agile.png"
+              title="Agile"
+              className=" list-phases list-agile"
+              alt="Agile"
+            />
+        </Row>
       </Container>
     </>
   );
