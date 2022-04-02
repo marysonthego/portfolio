@@ -165,17 +165,21 @@ export const WeatherApi = () => {
                       {moment().format("dddd")}, {moment().format("LL")}
                     </p>
                   </div>
+                  <div >
+                    <p className="dayTemp text-center">
+                      {weatherData.current.temp} &deg;F
+                    </p>
+
+
+                  </div>
                   <div className="flex">
-                    <p className="day">
-                      Temp: {weatherData.current.temp} &deg;F
+                  <p className="temp">
+                      Humidity: {weatherData.current.humidity}%
                     </p>
                     <p className="temp">
                       Pressure:{" "}
                       {(weatherData.current.pressure * 0.0295301).toFixed(2)}
                       &nbsp;inHg
-                    </p>
-                    <p className="temp">
-                      Humidity: {weatherData.current.humidity}%
                     </p>
                   </div>
                   <div className="flex">

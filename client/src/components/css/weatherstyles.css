@@ -47,6 +47,13 @@ div.post-body {
     font-weight: 600;
 }
 
+.dayTemp {
+  color: whitesmoke;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+}
+
 .temp{
     padding: 15px;
     color: whitesmoke;
