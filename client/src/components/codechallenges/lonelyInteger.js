@@ -8,11 +8,16 @@
  */
 
   function lonelyinteger(arr) {
-    let dups = arr.filter((e, i, a) => a.indexOf(e) !== i)
+    console.log(`arr:`, arr);
+
+    let dups = arr.filter((element, index, arr) => arr.indexOf(element) !== index)
       console.log(`dups=`, dups);
+
       let unique = arr.filter((e, i, a) => a.indexOf(e) === i)
       console.log(`unique=`, unique);
+
       let initialValue = 0;
+
       const sumUnique = unique.reduce(
         (previousValue, currentValue) => previousValue + currentValue, initialValue);
 
