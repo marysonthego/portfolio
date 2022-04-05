@@ -57,8 +57,8 @@ export  const ArrayPlay = () => {
   console.log(arStrs.includes('d'));
 
   console.log(`\nindexOf`);
-  console.log(`\nsee findIndex`);
-  console.log(`let found = array.indexOf(element, startIndex) returns index of first matching element starting from startIndex or -1`);
+  console.log(`see findIndex`);
+  console.log(`let found = array.indexOf(element, startIndex) returns index of first matching element starting from startIndex or -1 if not found`);
 
   console.log(`\nisArray`);
   console.log(`Array.isArray(valueToCheck) returns true/false`);
