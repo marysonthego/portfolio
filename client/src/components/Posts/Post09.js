@@ -687,7 +687,22 @@ let code13 = `line 423 in script.py`;
     <div>
       <h5 className="subsub">
         Run Python3 from the command line, get help, and quit:
-        </h5>
+      </h5>
+      <p className="p-text">
+        Enter <code>python3</code> at a command prompt
+      </p>
+      <p className="p-text">
+        The pyton prompt looks like this: <code>&gt;&gt;&gt;</code>
+      </p>
+      <p className="p-text">
+        Type <code>help()</code> to get module or keyword help
+      </p>
+      <p className="p-text">
+        Leave the help subsystem by typing <code>quit</code> at the <code>help&gt;</code> prompt
+      </p>
+      <p className="p-text">
+        Leave the python3 interpreter by typing <code>quit()</code> or <code>ctrl-Z enter</code>
+      </p>
       <SyntaxHighlighter
           language="javascript"
           style={nightOwl}
