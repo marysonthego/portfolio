@@ -27,6 +27,7 @@ import {Post07} from "components/posts/Post07";
 import {Post08} from "components/posts/Post08";
 import {Post09} from "components/posts/Post09";
 import {Post10} from "components/posts/Post10";
+import {Post11} from "components/posts/Post11";
 import {Post10_01} from "components/posts/P10/Post10_01";
 import {Post10_02} from "components/posts/P10/Post10_02";
 import {Post10_03} from "components/posts/P10/Post10_03";
@@ -83,6 +84,7 @@ ReactDOM.render(
             <Route path="/post08" element={<Post08 />} />
             <Route path="/post09" element={<Post09 />} />
             <Route path="/post10" element={<Post10 />} />
+            <Route path="/post11" element={<Post11 />} />
             <Route path="/post10_01" element={<Post10_01 />} />
             <Route path="/post10_02" element={<Post10_02 />} />
             <Route path="/post10_03" element={<Post10_03 />} />

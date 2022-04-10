@@ -90,65 +90,13 @@
     let precision = 11;
     sNum = parseFloat(sNum).toFixed(precision);
     tNum = parseFloat(tNum).toFixed(precision);
-  //pad to same length
-  // console.log(`sNum=`,sNum, `tNum=`, tNum);
-  // //s is longer
-  // if(sNum.length > tNum.length) {
-  //   tNum = tNum.padEnd(sNum.length, tRepeating);
-  //   console.log(`tNum=`,tNum);
-  // //t is longer
-  // } else if(tNum.length > sNum.length) {
-  //   sNum = sNum.padEnd (tNum.length, sRepeating);
-  //   console.log(`sNum=`,sNum);
-  // }
-  //result
+  
   console.log(`parseFloat sNum=`, parseFloat(sNum),` tNum=`, parseFloat(tNum));
 
   if(parseFloat(sNum) === parseFloat(tNum)) {
     console.log(`equal?`,true);
     return true;
-
   } else {
-    //   let diff = parseFloat(sNum) - parseFloat(tNum);
-    // if(Math.abs(diff) !== 0) {
-    //   console.log(`diff=`,Math.abs(diff));
-    // let precision = 0;
-    //   //if t is repeating
-    //   if(tRepeating.length > 0) {
-    //     if(sNum.indexOf('.') === -1) {
-    //       precision = 0;
-    //     } else {
-    //     precision = (sNum.slice(sNum.indexOf('.'+1)).length);
-    //     }
-    //     if (tRepeating[0] < 5 && precision === 0) {
-    //       precision = (tNum.slice(tNum.indexOf('.'+1)).length);
-    //     }
-    //     tNum = parseFloat(tNum).toFixed(precision);
-    //     console.log(`tNum=`, tNum, `precision=`,precision);
-
-    //   //if s is repeating
-    //   } else if (sRepeating.length > 0) {
-    //     if(tNum.indexOf('.') === -1) {
-    //       precision = 0;
-    //     } else {
-    //     precision = (tNum.slice(tNum.indexOf('.')+1).length);
-    //     }
-    //     if (sRepeating[0] < 5 && precision === 0) {
-    //       precision = (sNum.slice(sNum.indexOf('.'+1)).length);
-    //     }
-    //     sNum = parseFloat(sNum).toFixed(precision);
-    //     console.log(`sNum=`, sNum, `precision=`, precision);
-    //   }
-
-    //   if(parseFloat(sNum) === parseFloat(tNum)) {
-    //     console.log(`pqual?`,true);
-    //     return true;
-    //   } else {
-    //     console.log(`pqual?`, false);
-    //     return false;
-    //   }
-
-    //}
     console.log(`equal?`, false);
     return false;
   }

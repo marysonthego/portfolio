@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 /*
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
@@ -25,26 +25,25 @@ function readLine() {
  *
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
-/*
+
 function miniMaxSum(arr) {
-    // Write your code here
-    let sorted = arr.sort();
-    let small = BigInt(0);
+    let sorted = arr.sort((a, b) => {return a - b});
+    let small = 0;
     for (let i=0; i<sorted.length-1; i++) {
-        small += BigInt(sorted[i]);
+        small += sorted[i];
     }
-    let large = BigInt(0);
+    let large = 0;
     for (let i=1; i< sorted.length; i++) {
-        large += BigInt(sorted[i]);
+        large += sorted[i];
     }
 
     console.log(small + ' ' + large);
 }
 
-function main() {
+//function main() {
 
-    const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
+  //  const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
+let arr = [1,2,3,4,5];
+miniMaxSum(arr);
+    //}
 
-    miniMaxSum(arr);
-}
-*/
