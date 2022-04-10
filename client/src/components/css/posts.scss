@@ -26,7 +26,8 @@
 
     "top top top top top top"
     "title title title title title title"
-    "sec01 sec01  sec01  sec01  sec01  sec01";
+    "sec01 sec01  sec01  sec01  sec01  sec01"
+    ". . . . . .";
 }
 
 .post-img-top {
@@ -34,6 +35,20 @@
   margin-left:auto;
   margin-right:auto;
   grid-area: top;
+}
+
+.post-img-walk1 {
+  margin-bottom: 5%;
+  margin-left:auto;
+  margin-right:auto;
+  grid-area: walk1;
+}
+
+.post-img-walk2 {
+  margin-bottom: 5%;
+  margin-left:auto;
+  margin-right:auto;
+  grid-area: walk2;
 }
 
 h3.post-title {
@@ -132,13 +147,30 @@ ul li {
     grid-template-areas:
       ". top   top   top   top   ."
       ". title title title title ."
+      ". walk1 walk1 walk1 walk1 . "
       ". sec01  sec01  sec01  sec01  ."
+      ". walk2 walk2 walk2 walk2 ."
+      ". . . . . .";
+  }
+
+  .post-walk {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas:
+      ". top top top top top top ."
+      ". title title title title title title ."
+      ". walk1 walk1 walk1 walk1 sec01 sec01 ."
+      ". . . . . . . .";
   }
   .sec01 {
     padding-top: 4rem;
     padding-bottom: 1vh;
     padding-left: 5rem;
     padding-right:5rem;
+  }
+
+  h3 .sec01 {
+    color:#aaffff;
   }
   .sec {
     padding-top: 1vh;
@@ -176,11 +208,14 @@ p.ptext.emphasized {
   background-color: #003262;
 }
 
-.link-primary {
-  color:aqua;
-
+.link-primary-walk {
+  margin: 10px;
 }
-.link-primary:focus, .link-primary:hover {
+
+.link-primary .link-primary-walk {
+  color:aqua;
+}
+.link-primary:focus, .link-primary:hover, .link-primary-walk:hover, .link-primary-walk:focus {
   color:#aaffff;
 }
 

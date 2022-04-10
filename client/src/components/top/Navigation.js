@@ -63,6 +63,9 @@ export const Navigation = () => {
                     <Nav.Link href="/dashboard" className="rounded-end">
                       Admin Dashboard
                     </Nav.Link>
+                    <Nav.Link href="/post10" className="rounded-end">
+                      Dashboard Code Walk
+                    </Nav.Link>
                     <Nav.Link href="/todos" className="rounded-end">
                       Todos For Me
                     </Nav.Link>
