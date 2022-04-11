@@ -82,6 +82,9 @@ export const Navigation = () => {
                 <Accordion.Header>Tech Posts</Accordion.Header>
                 <Accordion.Body>
                   <Nav className="flex-column">
+                  <Nav.Link href="/post12" className="rounded-end">
+                    Using React-Toolkit Query
+                    </Nav.Link>
                   <Nav.Link href="/post00" className="rounded-end">
                     How to Setup a React Native Development Environment in Windows
                     </Nav.Link>
