@@ -1,21 +1,9 @@
-import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
-import steppermd from "./ProfileStepper.md";
+import React from "react";
 
 export function Post11() {
-  const [notes, setNotes] = useState({});
-
-  function Notes(fileName) {
-    fetch(fileName)
-      .then((response) => response.text())
-      .then((textContent) => {
-        setNotes(textContent);
-      });
-  }
 
   let TopPic = "media/stepper.png";
   let Title = "Sign-Up Stepper Code Walk";
-  Notes(steppermd);
 
   let Section1 = (
     <div>

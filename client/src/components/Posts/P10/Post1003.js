@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 
-export function Post10_03() {
+export function Post1003() {
   let TopPic = "media/dashbasepage.png";
   let Title = "BasePage.js";
   let mark = `
@@ -19,10 +17,10 @@ export function Post10_03() {
       <ReactMarkdown children={mark}></ReactMarkdown>
 
       <div>
-      <a className="link-primary-walk" href="/post10_02">
+      <a className="link-primary-walk" href="/post1002">
         Back
       </a>
-      <a className="link-primary " margin="10px" href="/post10_04">
+      <a className="link-primary " margin="10px" href="/post1004">
         Next
       </a>
       </div>
@@ -32,7 +30,7 @@ export function Post10_03() {
     <div className="post-wrapper post-walk">
       <h3 className="post-title text-center">{Title}</h3>
       <div className="post-img-walk1">
-        <img src={TopPic} alt="Post" />
+        <img src={TopPic} alt="Post" className="sec01img" />
       </div>
 
       <div className="sec01">{Section1}</div>

@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
+import React from "react";
 
 export function Post12() {
-  const [notes, setNotes] = useState({});
 
   let TopPic = "media/rtkquery.png";
   let Title = "RTK Query Code Walk";

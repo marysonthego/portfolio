@@ -29,14 +29,14 @@ import {Post09} from "components/posts/Post09";
 import {Post10} from "components/posts/Post10";
 import {Post11} from "components/posts/Post11";
 import {Post12} from "components/posts/Post12";
-import {Post10_01} from "components/posts/P10/Post10_01";
-import {Post10_02} from "components/posts/P10/Post10_02";
-import {Post10_03} from "components/posts/P10/Post10_03";
-import {Post10_04} from "components/posts/P10/Post10_04";
-import {Post10_05} from "components/posts/P10/Post10_05";
-import {Post10_06} from "components/posts/P10/Post10_06";
-import {Post10_07} from "components/posts/P10/Post10_07";
-import {Post10_08} from "components/posts/P10/Post10_08";
+import {Post1001} from "components/posts/P10/Post1001";
+import {Post1002} from "components/posts/P10/Post1002";
+import {Post1003} from "components/posts/P10/Post1003";
+import {Post1004} from "components/posts/P10/Post1004";
+import {Post1005} from "components/posts/P10/Post1005";
+import {Post1006} from "components/posts/P10/Post1006";
+import {Post1007} from "components/posts/P10/Post1007";
+import {Post1008} from "components/posts/P10/Post1008";
 import ExpressExamples from "components/posts/content/expressExamples.js";
 import ExpressFileRouting from "components/posts/content/expressFileRouting.js";
 import ExpressMysql from "components/posts/content/expressMysql.js";
@@ -87,14 +87,14 @@ ReactDOM.render(
             <Route path="/post10" element={<Post10 />} />
             <Route path="/post11" element={<Post11 />} />
             <Route path="/post12" element={<Post12 />} />
-            <Route path="/post10_01" element={<Post10_01 />} />
-            <Route path="/post10_02" element={<Post10_02 />} />
-            <Route path="/post10_03" element={<Post10_03 />} />
-            <Route path="/post10_04" element={<Post10_04 />} />
-            <Route path="/post10_05" element={<Post10_05 />} />
-            <Route path="/post10_06" element={<Post10_06 />} />
-            <Route path="/post10_07" element={<Post10_07 />} />
-            <Route path="/post10_08" element={<Post10_08 />} />
+            <Route path="/post1001" element={<Post1001 />} />
+            <Route path="/post1002" element={<Post1002 />} />
+            <Route path="/post1003" element={<Post1003 />} />
+            <Route path="/post1004" element={<Post1004 />} />
+            <Route path="/post1005" element={<Post1005 />} />
+            <Route path="/post1006" element={<Post1006 />} />
+            <Route path="/post1007" element={<Post1007 />} />
+            <Route path="/post1008" element={<Post1008 />} />
             <Route path="/examples" element={<ExpressExamples />} />
             <Route path="/routing" element={<ExpressFileRouting />} />
             <Route path="expressmysql" element={<ExpressMysql />} />

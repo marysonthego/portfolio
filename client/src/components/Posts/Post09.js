@@ -1,16 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
-
-function Notes(fileName) {
-  const [text, setText] = useState();
-   fetch(fileName)
-    .then(response => response.text())
-    .then(textContent => {
-      setText(textContent);
-    });
-  return text;
-}
 
 export function Post09() {
 
