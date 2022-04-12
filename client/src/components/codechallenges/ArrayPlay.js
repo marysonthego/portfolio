@@ -9,6 +9,20 @@ export  const ArrayPlay = () => {
   console.log(`arNums = [1,2,3,4,5,6,7,8,9]`);
   console.log(`arStrs = ['a', 'b', 'c', 'd', 'e']`);
 
+  console.log(`\ninitialize a zero-filled 2d array`);
+  const colMatrix = Array.from({length: 5}, () =>
+  Array.from({length: 5}, () => 0));
+  for(let i=0; i< colMatrix.length; i++) {
+    console.log(colMatrix[i]);
+  }
+
+  // const sumsArr = Array.from({length: 5}, () =>
+  //   Array.from({length: 5}, () =>
+  //     Array.from({length: 5}, () => 0)));
+  //     for(let i=0; i< sumsArr.length; i++) {
+  //       console.log(sumsArr[i]);
+  //     }
+
   console.log(`\nconcat`);
   console.log(`array3 = array1.concat(array2) returns a new array`);
   const arConcat = arNums.concat(arStrs);
