@@ -40,12 +40,81 @@ Too chaotic
 */
 
 function minimumBribes(q) {
-console.log(`q=`,q);
+  console.log(`q=`, q);
 
-return 'answer';
+  let bribes = 0;
+  let i = 0;
+  for (let p = 1; p < q.length+1; p++) {
+    i = p-1;
+    if(q[i] - p > 2) {
+      console.log('Too chaotic');
+    }
+    if((q[i] - p) > 0) {
+      bribes += (q[i] - p);
+      console.log(`q[i] - p = bribes`, q[i], `-`, p,`=`,q[i]-p);
+    } else if (q[i] > q[p]) {
+      bribes++;
+      console.log(`q[i] > q[p]`, q[i], `>`, q[p],`bribes = `,bribes);
+    }
+  }
+  console.log(`bribes=`, bribes);
+
+    let p1=1,p2=2,p3=3;
+        bribes = 0;
+        for(let i=0;i<q.length;i++){
+            if(q[i] == p1) {
+                p1 = p2;
+                p2 = p3;
+                p3++;
+            } else if(q[i] == p2) {
+                bribes++;
+                p2= p3;
+                p3++;
+            }  else if (q[i] == p3) {
+                bribes+=2;
+                p3++;
+            }  else {
+                console.log("bribes 2 Too chaotic");
+                return;
+            }
+        }
+        console.log(`bribes 2 = `,bribes);
 }
 
-//let q = [2, 1, 5, 3, 4];
-let q = [2, 5, 1, 3, 4];
 
-console.log(`minimumBribes=`,minimumBribes(q));
+//let q = [1, 2, 5, 3, 7, 8, 6, 4];
+//let q = [5, 1, 2, 3, 7, 8, 6, 4]; //tc
+//let q = [1, 2, 5, 3, 7, 8, 6, 4]; // 7
+//let q = [1, 2, 5, 3, 4, 7, 8, 6];  // 4
+//let q = [2, 1, 5, 3, 4];  // 3
+//let q = [2, 5, 1, 3, 4];  // tc
+let q = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+//let q = [2, 1, 5, 4, 3, 6, 9, 10, 7, 8];
+//let q = [1, 2, 3, 4, 9, 5, 6, 7, 8]
+console.log(`minimumBribes=`, minimumBribes(q));
+
+
+    // console.log(`top i=`, i);
+    // for (let j = i+1; j < q.length; j++) {
+    //   console.log(`i=`, i,`qi=`, q[i],`j=`,j, `qj=`, q[j]);
+    //   // if(q[i] === 1){
+    //   //   i++;
+    //   //   console.log(`i=`, i);
+    //   //   continue;
+    //   // }
+    //   if (q[i] > q[j]) {
+    //     if(q[i] - j > 2) {
+    //       return 'Too chaotic';
+    //     } else if(q[i] - j === 1 || q[i] === j){
+    //         bribes++;
+    //         //i++;
+    //         console.log(`i=`, i, `bribes=`, bribes);
+    //         break;
+    //       }
+    //     bribes+= Math.abs(q[i] - j);
+    //     i++;
+    //     console.log(`xxx i=`, i, `bribes=`, bribes);
+    //     continue;
+    //   }
+    // }
+
