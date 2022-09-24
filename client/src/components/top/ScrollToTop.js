@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,27 +27,18 @@ export function ScrollToTop() {
   }, []);
 
   return (
-    <Container
-        fluid
-        overflow="hidden"
-        display="grid"
-        
-      >
-    <Row className="justify-content: right">
-    <Col xs={{ span:1, offset:8 }}>
-          {isVisible && (
-            <button onClick={scrollToTop}>
-              <Image
-              fluid={true}
-              src="media/top-arrow.png"
-              title="Go to top"
-              className="ScrollToTop"
-              alt="Go to top"
-            />
-            </button>
-          )}
-      </Col>
-  </Row>
-  </Container>
+    <div>
+      {isVisible && (
+        <button onClick={scrollToTop}>
+          <Image
+          fluid={true}
+          src="media/top-arrow.png"
+          title="Go to top"
+          className="ScrollToTop"
+          alt="Go to top"
+        />
+        </button>
+      )}
+  </div>
   );
 }

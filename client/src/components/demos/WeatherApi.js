@@ -27,8 +27,8 @@ export const WeatherApi = () => {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
       });
-      // setLat(40.45454);
-      // setLong(-105.08668);
+       setLat(40.45454);
+       setLong(-105.08668);
       try {
         await fetch(
           `${process.env.REACT_APP_API_URL}/onecall?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`

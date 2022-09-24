@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import {useLocation} from "react-router-dom";
-import Container from "react-bootstrap/Container";
 import {MainPage} from "components/top/MainPage";
 
 export default function App() {
@@ -15,19 +14,8 @@ export default function App() {
   }, [location]);
 
   return (
-      <Container
-        fluid
-        overflow="hidden"
-        display="grid"
-        grid-template-columns="repeat(auto-fill, minmax(200px, 1fr))"
-        grid-auto-rows="minmax(100px, auto)"
-        gap="20px"
-        justify-content="space-evenly"
-        justify-items="center"
-        align-content="space-evenly"
-        align-items="center"
-      >
-        <MainPage />
-      </Container>
+    <div className="App">
+      <MainPage />
+    </div>
   );
 }

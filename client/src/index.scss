@@ -68,8 +68,7 @@ code {
 .ScrollToTop {
   position: fixed;
   bottom: 40px;
-  align-items: center;
-  justify-content: right;
+  right: 40px;
   z-index: 1000;
   cursor: pointer;
   animation: fadeIn 0.3s;
