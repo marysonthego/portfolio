@@ -45,7 +45,7 @@
     "jquery": "^3.5.1",
     "moment": "2.29.2",
     "moment-timezone": "^0.5.34",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.3",
     "notistack": "^2.0.3",
     "object-path": "^0.11.8",
     "perfect-scrollbar": "^1.5.5",
