@@ -8,7 +8,7 @@
 
 @import "react-datepicker/dist/react-datepicker.css";
 
-
+@import './components/css/blog.css';
 @import './components/css/main.css';
 @import './components/css/listtools.css';
 @import './components/css/formstyles.css';
@@ -26,7 +26,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  font-family: "Nunito", sans-serif ;
+  font-family: Georgia, serif ;
 }
 html, body {
   background-image: url("./media/millslakermnp.png");
@@ -43,7 +43,7 @@ body {
   padding-top: 0px;
   padding-bottom: 10px;
   background-color: #ffffff;
-  font-family: "Nunito", sans-serif ;
+  font-family: Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

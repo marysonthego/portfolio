@@ -7,6 +7,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import App from "./App";
+import {Blog} from "components/blog/Blog";
+import {I092522} from "components/blog/items/I092522";
 import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
 import {TodosForMe} from "components/todosforme/TodosForMe";
@@ -53,6 +55,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./index.scss";
 
 ReactDOM.render(
+
   <CookiesProvider>
     <SnackbarProvider
       dense
@@ -66,6 +69,8 @@ ReactDOM.render(
           <ScrollToTop className="ScrollToTop" />
           <div className="footer">&copy;2022&nbsp;marysonthego.tech&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/marysonthego/portfolio">This Site on Github</a></div>
           <Routes>
+            <Route path="/Blog" element={<Blog />} />
+            <Route path="/I092522" element={<I092522 />} />
             <Route path="/dashboard" element={<DashIframe />} />
             <Route path="/stepper" element={<StepperIframe />} />
             <Route path="/nucat" element={<NucatIframe />} />

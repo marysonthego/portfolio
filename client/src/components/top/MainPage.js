@@ -1,13 +1,27 @@
 import React, {useEffect} from "react";
-//import Container from "react-bootstrap/Container";
 export function MainPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
   return (
       <div className='items'>
+
+        <div className='item'></div>
         <div className='item'>
+          <a href="/Blog" className="link-primary overlay im01">
+            <img
+              src="media/mredt.ico" alt="marysonthego.tech"
+              alt="Blog"
+              loading="lazy"
+              className=" responsive-img rounded-circle "
+            />
+            Blog &nbsp;
+         </a>
         </div>
+        <div className='item'></div>
+        <div className='item'></div>
+
+        <div className='item'></div>
         <div className='item'>
           <a href="/post00" className="link-primary overlay im01">
             <img
@@ -30,11 +44,9 @@ export function MainPage() {
             React Bits & Javascript Pieces &nbsp;
           </a>
         </div>
-        <div className='item'>
-        </div>
+        <div className='item'></div>
 
-        <div className='item'>
-        </div>
+        <div className='item'></div>
         <div className='item'>
         <a
            href="/dashboard"
@@ -63,11 +75,9 @@ export function MainPage() {
            Sign-up Stepper &nbsp;
          </a>
        </div>
-       <div className='item'>
-        </div>
+       <div className='item'></div>
 
-        <div className='item'>
-        </div>
+      <div className='item'></div>
        <div className='item'>
          <a
            href="/post01"
@@ -93,11 +103,9 @@ export function MainPage() {
            Use React Forward Refs &nbsp;
          </a>
        </div>
-       <div className='item'>
-        </div>
+       <div className='item'></div>
 
-        <div className='item'>
-        </div>
+      <div className='item'></div>
        <div className='item'>
          <a href="/weather" className="link-primary overlay im07">
            <img
@@ -120,11 +128,9 @@ export function MainPage() {
            Debug React Native in WSA &nbsp;
          </a>
        </div>
-       <div className='item'>
-        </div>
+       <div className='item'></div>
 
-        <div className='item'>
-        </div>
+        <div className='item'></div>
        <div className='item'>
          <a href="/post05" className="link-primary overlay im09">
            <img
@@ -147,11 +153,9 @@ export function MainPage() {
            Authentication with Passport &nbsp;
          </a>
        </div>
-       <div className='item'>
-        </div>
+       <div className='item'></div>
 
-        <div className='item'>
-        </div>
+        <div className='item'></div>
        <div className='item'>
          <a
            href="/todos"
@@ -177,11 +181,9 @@ export function MainPage() {
            Use SqLite3 &nbsp;
          </a>
        </div>
-       <div className='item'>
-        </div>
+       <div className='item'></div>
 
-        <div className='item'>
-        </div>
+        <div className='item'></div>
        <div className='item'>
          <a
            href="/nucat"
@@ -210,11 +212,9 @@ export function MainPage() {
            Contact Me &nbsp;
          </a>
        </div>
-       <div className='item'>
-        </div>
+       <div className='item'></div>
 
-        <div className='item'>
-        </div>
+        <div className='item'></div>
        <div className='item'>
          <a
            href="/listtools"
