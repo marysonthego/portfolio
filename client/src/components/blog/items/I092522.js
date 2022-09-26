@@ -25,7 +25,7 @@ export const I092522 = () => {
     )
   }
 
-  const text1 = 'This is a test of text1. It is a paragraph of text. It has several sentences.';
+  const text1 = 'This is a test of text1. It is a paragraph of text. It has some sentences. Below is a test of a code block.';
 
   const Sect1 = text1;
 
