@@ -5,13 +5,17 @@
   justify-content: center;
 }
 .blogList {
-  background-color: rgba(240, 248, 255, 0.507);
+  background-color: rgba(244, 248, 252, 0.822);
   font-size: 14px;
   color: rgb(148, 148, 148);
 }
-.listItem {
+li.listItem {
   margin: 10px;
-  padding: 10px;
+  line-height: 80%;
+}
+.listDate {
+  font-size: 10px;
+  color: rgb(116, 113, 113);
 }
 h1.blog {
   font-size: 20px;
@@ -29,36 +33,36 @@ a.item:hover {
   color: #000;
 }
 
-.barticle {
+.itemArticle {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 75%;
+  width: 70%;
   background-color: rgb(255, 255, 255);
   font-size: 16px;
   color: rgb(65, 65, 65);
 }
 
-h1.btitle {
-  font-size: 20px;
+h1.itemTitle {
+  font-size: 24px;
   font-weight: 600;
   color: rgb(54, 54, 54);
   padding: 10px;
 }
 
-.bsection {
-  width: 75%;
-
+.itemSection {
+  width: 70%;
 }
 
-.btext {
+.itemText {
+  font-size: 18px;
   padding: 10px;
   text-align: justify;
 }
 
-.bdate {
+.itemDate {
   font-size: 12px;
   font-weight: 400;
   color: rgb(148, 148, 148);

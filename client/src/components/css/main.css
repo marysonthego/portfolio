@@ -1,7 +1,7 @@
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   /*display: flex; */
-  width: 99vw;
-  height: 99vh;
+  width: 100vw;
+  height: 100vh;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;

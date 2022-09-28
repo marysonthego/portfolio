@@ -8,7 +8,9 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import {Blog} from "components/blog/Blog";
+import {I092722} from "components/blog/items/I092722";
 import {I092522} from "components/blog/items/I092522";
+import {Template} from "components/blog/items/template";
 import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
 import {TodosForMe} from "components/todosforme/TodosForMe";
@@ -63,14 +65,16 @@ ReactDOM.render(
       TransitionComponent={Collapse}
       preventDuplicate
     >
-      <Container fluid className="background">
+      <Container fluid >
         <Router>
           <Navigation />
           <ScrollToTop className="ScrollToTop" />
           <div className="footer">&copy;2022&nbsp;marysonthego.tech&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/marysonthego/portfolio">This Site on Github</a></div>
           <Routes>
             <Route path="/Blog" element={<Blog />} />
+            <Route path="/I092722" element={<I092722 />} />
             <Route path="/I092522" element={<I092522 />} />
+            <Route path="/Template" element={<Template />} />
             <Route path="/dashboard" element={<DashIframe />} />
             <Route path="/stepper" element={<StepperIframe />} />
             <Route path="/nucat" element={<NucatIframe />} />

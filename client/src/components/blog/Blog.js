@@ -1,21 +1,23 @@
 import {I092522} from './items/I092522';
+import {I092722} from './items/I092722';
+import {Template} from './items/template';
 
 export const Blog = () => {
-  let PageTitle = "Blog";
+  let PageTitle = "Mary's Blog";
 
   return (
     <main className = 'container'>
-      <h1 className = 'blog'>{PageTitle}</h1>
+      <h1 className = "blog">{PageTitle}</h1>
       <section className = 'blogList'>
-        <ul className = 'listItem'>
-          <li>
+        <ul>
+          <li className = 'listItem'>
+            <a className = 'item' href="/I092722">{I092722()}</a>
+          </li>
+          <li className = 'listItem'>
             <a className = 'item' href="/I092522">{I092522()}</a>
           </li>
-          <li>
-            <a className = 'item' href="/post01">React Bits & Javascript Pieces</a>
-          </li>
-          <li>
-            <a className = 'item' href="/post02">React Hooks</a>
+          <li className = 'listItem'>
+            <a className = 'item' href="/template">{Template()}</a>
           </li>
         </ul>
       </section>
