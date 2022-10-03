@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import {Blog} from "components/blog/Blog";
+import {I100322} from "components/blog/items/I100322";
 import {I092722} from "components/blog/items/I092722";
 import {I092522} from "components/blog/items/I092522";
 import {Template} from "components/blog/items/template";
@@ -72,6 +73,7 @@ ReactDOM.render(
           <div className="footer">&copy;2022&nbsp;marysonthego.tech&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/marysonthego/portfolio">This Site on Github</a></div>
           <Routes>
             <Route path="/blog" element={<Blog />} />
+            <Route path="/i100322" element={<I100322 />} />
             <Route path="/i092722" element={<I092722 />} />
             <Route path="/i092522" element={<I092522 />} />
             <Route path="/template" element={<Template />} />
