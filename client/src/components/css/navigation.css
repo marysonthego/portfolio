@@ -1,57 +1,45 @@
 div.flex-column.navbar-nav {
-  width: 50%;
+  width: 100%;
 }
 
 .navbar {
-  padding-right: 20px;
-  margin-bottom: 0%;
-  padding-bottom: 0%;
-  background: #ffffff;
-  background: linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.8) 90%);
-background: -webkit-linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.8) 90%);
-background: -moz-linear-gradient(180deg,#ffffff 0%, rgba(120,186,243,0.8) 90%);
-}
-
-.navbar-light .navbar-brand,
-.navbar-light {
-  color: #003262;
   font-weight: 200;
-  font-size: 18px;
-  
-}
-
-.navbar-light .navbar-brand:focus, 
-.navbar-light .navbar-brand:hover {
-  color: #db1326;
-  font-weight:500;
-}
-
-.navbar-light .navbar-toggler {
-  color: #57585a;
-  border-color: #57585a;
-}
-
-.navbar-toggler:hover {
-  color: #57585a box-shadow 0 0 0 0.25rem;
+  font-size: 26px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  background-color: transparent;
 }
 
 img.nav {
-  width: 36px;
-  height: 36px;
+  width: 100%;
+  height: 30px;
+  margin-top: 3px;
   margin-left: 40px;
-  padding-right: 5px;
-  vertical-align: middle;
+  padding-right: 55px;
+  vertical-align: text-top;
   display: inline-block;
 }
 
+a.navbar-brand {
+  font-weight: 200;
+  font-size: 26px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  padding: 0;
+  margin-bottom: 0px;
+  background-color: transparent;
+}
+
 a.nav-link {
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  padding: 0;
   color: #57585a;
   transition: font-weight 1s;
 }
 
 a.nav-link:hover {
-  font-weight: 800;
+  font-weight: 300;
   color: #003262;
 }
 
@@ -62,7 +50,7 @@ a.nav-link:focus {
 
 a.nav-link:active,
 a.nav-link:focus {
-  font-weight: 800;
+  font-weight: 400;
   color: #003262;
 }
 

@@ -65,16 +65,16 @@ ReactDOM.render(
       TransitionComponent={Collapse}
       preventDuplicate
     >
-      <Container fluid >
+      <div>
         <Router>
           <Navigation />
           <ScrollToTop className="ScrollToTop" />
           <div className="footer">&copy;2022&nbsp;marysonthego.tech&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/marysonthego/portfolio">This Site on Github</a></div>
           <Routes>
-            <Route path="/Blog" element={<Blog />} />
-            <Route path="/I092722" element={<I092722 />} />
-            <Route path="/I092522" element={<I092522 />} />
-            <Route path="/Template" element={<Template />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/i092722" element={<I092722 />} />
+            <Route path="/i092522" element={<I092522 />} />
+            <Route path="/template" element={<Template />} />
             <Route path="/dashboard" element={<DashIframe />} />
             <Route path="/stepper" element={<StepperIframe />} />
             <Route path="/nucat" element={<NucatIframe />} />
@@ -112,10 +112,9 @@ ReactDOM.render(
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>
-      </Container>
+      </div>
     </SnackbarProvider>
   </CookiesProvider>,
-
   document.getElementById("root")
 );
 

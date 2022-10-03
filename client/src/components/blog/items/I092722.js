@@ -9,7 +9,7 @@ export const I092722 = () => {
   const Title = "Conditional Routing with React Router v6";
   const Created = "Sept 27, 2022";
 
-  if(location.pathname.toString() === "/Blog") {
+  if(location.pathname.toString() === "/blog") {
     return (
       <>
         <div>{Title}</div>
@@ -53,7 +53,7 @@ export const I092722 = () => {
   `;
 
   return (
-    <main className = 'container'>
+    <main>
       <article className = 'itemArticle'>
         <h1 className = 'itemTitle'>{Title}</h1>
         <h6 className = 'itemDate'>{Created}</h6>

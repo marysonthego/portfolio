@@ -9,7 +9,7 @@ export const Template = () => {
   const Title = "Template Title";
   const Created = "Month 01, 2022";
 
-  if(location.pathname.toString() === "/Blog") {
+  if(location.pathname.toString() === "/blog") {
     return (
       <>
         <div>{Title}</div>
@@ -38,7 +38,7 @@ export const Template = () => {
 and here...`;
 
   return (
-    <main className = 'container'>
+    <main >
       <article className = 'itemArticle'>
         <h1 className = 'itemTitle'>{Title}</h1>
         <h6 className = 'itemDate'>{Created}</h6>

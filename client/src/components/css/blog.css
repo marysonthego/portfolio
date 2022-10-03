@@ -3,34 +3,42 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100vh;
 }
 .blogList {
-  background-color: rgba(244, 248, 252, 0.822);
-  font-size: 14px;
-  color: rgb(148, 148, 148);
+  font-size: 22px;
+  color: rgb(0, 0, 0);
 }
 li.listItem {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
   margin: 10px;
-  line-height: 80%;
+  line-height: 100%;
 }
 .listDate {
-  font-size: 10px;
-  color: rgb(116, 113, 113);
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+}
+.listDate:hover {
+  text-decoration:none;
 }
 h1.blog {
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(87, 86, 86);
+  font-size: 24px;
+  font-weight: 200;
+  color: rgb(0, 0, 0);
   padding: 10px;
 }
 a.item {
   text-decoration:none;
-  font-weight: 400;
-  color: #000;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
 }
 a.item:hover {
   text-decoration:underline;
-  color: #000;
+  color: rgb(0, 0, 0);
 }
 
 .itemArticle {
@@ -39,7 +47,7 @@ a.item:hover {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 70%;
+  width: 100%;
   background-color: rgb(255, 255, 255);
   font-size: 16px;
   color: rgb(65, 65, 65);
@@ -47,8 +55,8 @@ a.item:hover {
 
 h1.itemTitle {
   font-size: 24px;
-  font-weight: 600;
-  color: rgb(54, 54, 54);
+  font-weight: 200;
+  color: rgb(0, 0, 0);
   padding: 10px;
 }
 
@@ -60,11 +68,13 @@ h1.itemTitle {
   font-size: 18px;
   padding: 10px;
   text-align: justify;
+  font-weight: 300;
 }
 
 .itemDate {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 300;
   color: rgb(148, 148, 148);
   padding: 10px;
+  text-decoration:none;
 }

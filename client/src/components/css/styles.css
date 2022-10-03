@@ -9,7 +9,7 @@ html,
 html,
 body,
 #root {
-  min-height: 95vh;
+  min-height: 100vh;
 }
 
 html {
