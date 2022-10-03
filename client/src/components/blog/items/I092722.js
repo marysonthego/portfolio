@@ -62,6 +62,7 @@ export const I092722 = () => {
           <>{text2}</>
           <>{text3}</>
           <Code1 />
+          <br/><br/>
         </section>
       </article>
     </main>

@@ -20,7 +20,7 @@ export const Navigation = () => {
   return (
     <Navbar expand='lg' sticky='top' >
       <Navbar.Brand href="/">
-        <img src="media/m2.png" alt="marysonthego.tech" className="nav"/>
+        <img src="media/m4.png" alt="marysonthego.tech" className="nav"/>
       </Navbar.Brand>
       <Nav className="justify-content-center">
       <NavDropdown title="Projects" id="basic-nav-dropdown">

@@ -45,6 +45,7 @@ and here...`;
         <section className = 'itemSection'>
           <p className = 'itemText'>{Sect1}</p>
           <Code1 className = "itemCode" />
+          <br/><br/>
         </section>
       </article>
     </main>
