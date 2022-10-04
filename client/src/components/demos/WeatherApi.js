@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {useLocation} from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
@@ -12,10 +13,12 @@ const refresh = () => {
   window.location.reload();
 };
 export const WeatherApi = () => {
+  const location = useLocation();
+
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [weatherData, setWeatherData] = useState([]);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const toggleModal = () => {
     setShow(!show);
   };
@@ -128,6 +131,18 @@ export const WeatherApi = () => {
     );
   };
 
+  const Title = "OpenWeather API";
+  const Created = "Month 01, 2022";
+
+  if(location.pathname.toString() === "/projects") {
+    return (
+      <>
+        <div>{Title}</div>
+        <div className = 'listDate'>{Created}</div>
+      </>
+    );
+  };
+
   return (
     <Container
       fluid
@@ -136,9 +151,17 @@ export const WeatherApi = () => {
       justify-content="center"
       justify-items="center"
     >
-      {show ? <WeatherModal /> : null}
+      {show ? <WeatherModal /> : (
+          <div>
+            <h2 className="top">OpenWeather API
+            <Button className="button toggle p-0" onClick={toggleModal}>
+              Details
+            </Button>
+            </h2>
+          </div>
+        )}
 
-      <h2 className="top">OpenWeather API</h2>
+
 
       <div className="post mb-3" style={{ maxWidth: "100%" }}>
         <div className="row g-0">
@@ -224,13 +247,6 @@ export const WeatherApi = () => {
             />
           </div>
         </div>
-        {show ? null : (
-          <div>
-            <Button className="button toggle p-0" onClick={toggleModal}>
-              Details
-            </Button>
-          </div>
-        )}
       </div>
     </Container>
   );

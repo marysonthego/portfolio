@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useLocation} from 'react-router-dom';
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,8 +8,20 @@ import Button from "react-bootstrap/Button";
 import { DataOwner } from "components/todosforme/DataOwner";
 
 export function TodosForMe() {
+  const location = useLocation();
+  const Title = "Calendar with Todos";
+  const Created = "Month 01, 2022";
+
   const [show, setShow] = useState(true);
 
+  if(location.pathname.toString() === "/projects") {
+    return (
+      <>
+        <div>{Title}</div>
+        <div className = 'listDate'>{Created}</div>
+      </>
+    );
+  };
   const toggleModal = () => {
     setShow(!show);
   };

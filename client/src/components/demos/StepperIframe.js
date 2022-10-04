@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useLocation} from 'react-router-dom';
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,12 +8,25 @@ import Button from "react-bootstrap/Button";
 import useWindowDimensions from 'components/helpers/UseWindowDimensions';
 
 export default function StepperIframe() {
+  const location = useLocation();
   const {width, height} = useWindowDimensions();
   const [show, setShow] = useState(true);
+
+  const Title = "Stepper";
+  const Created = "Month 01, 2022";
 
   const toggleModal = () => {
     setShow(!show);
   }
+
+  if(location.pathname.toString() === "/projects") {
+    return (
+      <>
+        <div>{Title}</div>
+        <div className = 'listDate'>{Created}</div>
+      </>
+    );
+  };
 
   const handleClose = () => setShow(false);
 

@@ -19,28 +19,11 @@ export const Navigation = () => {
 
   return (
     <Navbar expand='lg' sticky='top' >
-
       <Nav>
       <Navbar.Brand href="/">
         <img src="media/mmm.png" alt="marysonthego.tech" className="nav"/>
       </Navbar.Brand>
-      <NavDropdown title="Projects" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/weather">OpenWeather API</NavDropdown.Item>
-        <NavDropdown.Item href="/nucat">
-        Nucat Parallax Campers
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/stepper">Sign-up Stepper</NavDropdown.Item>
-        <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
-        <NavDropdown.Item href="/todo">Todo List</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="/post11">
-          Sign-up Stepper Code Walk
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/post10">
-          Dashboard Code Walk
-        </NavDropdown.Item>
-      </NavDropdown>
-
+        <Nav.Link href="/projects">Projects</Nav.Link>
         <Nav.Link href="/blog">Blog</Nav.Link>
         <Nav.Link href="/about">About</Nav.Link>
       </Nav>

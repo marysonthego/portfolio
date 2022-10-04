@@ -1,9 +1,22 @@
 import React from "react";
+import {useLocation} from 'react-router-dom';
 
 export function Post11() {
+  const location = useLocation();
+
+  let Title = "Sign-Up Stepper Code Walk";
+  const Created = "Month 01, 2022";
+
+  if(location.pathname.toString() === "/projects") {
+    return (
+      <>
+        <div>{Title}</div>
+        <div className = 'listDate'>{Created}</div>
+      </>
+    );
+  };
 
   let TopPic = "media/stepper.png";
-  let Title = "Sign-Up Stepper Code Walk";
 
   let Section1 = (
     <div>

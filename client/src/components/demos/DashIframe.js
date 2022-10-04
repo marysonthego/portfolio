@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {useLocation} from 'react-router-dom';
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,11 +8,24 @@ import Button from "react-bootstrap/Button";
 import useWindowDimensions from 'components/helpers/UseWindowDimensions';
 
 export default function DashIframe() {
+  const location = useLocation();
+  const Title = "Dashboard";
+  const Created = "Month 01, 2022";
+
   const {width, height} = useWindowDimensions();
   let iwidth = width-50;
   let iheight = height-100;
 
   const [show, setShow] = useState(true);
+
+  if(location.pathname.toString() === "/projects") {
+    return (
+      <>
+        <div>{Title}</div>
+        <div className = 'listDate'>{Created}</div>
+      </>
+    );
+  };
 
   const toggleModal = () => {
     setShow(!show);

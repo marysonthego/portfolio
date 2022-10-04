@@ -14,6 +14,7 @@ import {I092522} from "components/blog/items/I092522";
 import {Template} from "components/blog/items/template";
 import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
+import {Projects} from "components/demos/Projects";
 import {TodosForMe} from "components/todosforme/TodosForMe";
 import {WeatherApi} from "components/demos/WeatherApi";
 import {NucatIframe} from "components/demos/NucatIframe";
@@ -77,6 +78,7 @@ ReactDOM.render(
             <Route path="/i092722" element={<I092722 />} />
             <Route path="/i092522" element={<I092522 />} />
             <Route path="/template" element={<Template />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/dashboard" element={<DashIframe />} />
             <Route path="/stepper" element={<StepperIframe />} />
             <Route path="/nucat" element={<NucatIframe />} />

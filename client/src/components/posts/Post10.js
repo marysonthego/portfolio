@@ -1,9 +1,23 @@
 import React from "react";
+import {useLocation} from 'react-router-dom';
 import ReactMarkdown from "react-markdown";
 
 export function Post10() {
+  const location = useLocation();
+  const Title = "Dashboard Code Walk";
+  const Created = "January 01, 2022";
+
+  if(location.pathname.toString() === "/projects") {
+    return (
+      <>
+        <div>{Title}</div>
+        <div className = 'listDate'>{Created}</div>
+      </>
+    );
+  };
+
   let TopPic = "media/dashdashboard.png";
-  let Title = "Dashboard Overview";
+
   let mark = `The Alerts for Good service sends text messages to users when weather, corona virus, or air quality alerts are issued for the selected zip codes.
 
 
