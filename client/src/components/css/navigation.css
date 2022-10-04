@@ -18,13 +18,25 @@ div.navbar-nav {
 
 img.nav {
   width: 55px;
-  height: 48px;
+  height: 50px;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
   padding-right: 0px;
   vertical-align: middle;
   display: inline-block;
+}
+
+a {
+  color: #57585a;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 22px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 a.navbar-brand {
@@ -37,33 +49,32 @@ a.navbar-brand {
   background-color: transparent;
 }
 
-a.nav-link, .dropdown {
+a, a.nav-link, .dropdown {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   padding: 0;
-
   color: #57585a;
   transition: font-weight 1s;
 }
 
-a.nav-link:hover {
+a, a.nav-link:hover {
   font-weight: 300;
-  color: #003262;
+  color: #252627;
 }
 
-a.nav-link:focus {
+a:hover {
+  font-weight: 300;
+  color: #252627;
+}
+
+a, a.nav-link:focus {
   background-color: #ffffff;
-  box-shadow: 0 0 0 0.15rem #00000026;
+
 }
 
-a.nav-link:active,
+a, a.nav-link:active,
 a.nav-link:focus {
   font-weight: 400;
-  color: #003262;
-}
-
-.form-control:focus {
-  border-color: #2b2c2e;
-  box-shadow: 0 0 0 0.25rem #00000026;
+  color: #252627;
 }
 
 .navbar-toggler:hover {
@@ -74,9 +85,4 @@ a.nav-link:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem #00000026;
   opacity: 1;
-}
-
-.accordion-flush .accordion-item .accordion-button:focus {
-  border-color:#2b2c2e;
-  box-shadow: 0 0 0 0.25rem  rgba(23,23,24,0.25);
 }

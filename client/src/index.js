@@ -6,6 +6,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import {About} from "components/about/About";
 import App from "./App";
 import {Blog} from "components/blog/Blog";
 import {I100322} from "components/blog/items/I100322";
@@ -73,6 +74,7 @@ ReactDOM.render(
           <ScrollToTop className="ScrollToTop" />
           <div className="footer">&copy;2022&nbsp;marysonthego.tech&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/marysonthego/portfolio">This Site on Github</a></div>
           <Routes>
+            <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/i100322" element={<I100322 />} />
             <Route path="/i092722" element={<I092722 />} />
