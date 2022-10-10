@@ -23,8 +23,8 @@ export const Navigation = () => {
       <Navbar.Brand href="/">
         <img src="media/mmm.png" alt="marysonthego.tech" className="nav"/>
       </Navbar.Brand>
-        <a href="https://github.com/marysonthego" target="_blank">GitHub</a>
-        <a href="https://twitter.com/marysonthego" target="_blank">Twitter</a>
+        <a href="https://github.com/marysonthego" target="_blank" className="nav-link">GitHub</a>
+        <a href="https://twitter.com/marysonthego" target="_blank" className="nav-link">Twitter</a>
         <Nav.Link href="/projects">Projects</Nav.Link>
         <Nav.Link href="/blog">Blog</Nav.Link>
         <Nav.Link href="/about">About</Nav.Link>

@@ -22,7 +22,7 @@ li.listItem {
   color: rgb(0, 0, 0);
 }
 .listDate:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 h1.blog {
   font-size: 24px;

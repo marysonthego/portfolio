@@ -2,6 +2,16 @@ div.flex-column.navbar-nav {
   width: 100%;
 }
 
+.navbar {
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 div.navbar-nav {
   display: flex;
   font-weight: 200;
@@ -31,7 +41,6 @@ a {
   color: #57585a;
   text-decoration: none;
   font-weight: 200;
-  font-size: 22px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   padding: 0;
   margin: 0;
@@ -49,32 +58,17 @@ a.navbar-brand {
   background-color: transparent;
 }
 
-a, a.nav-link, .dropdown {
+a.nav-link {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   padding: 0;
   color: #57585a;
-  transition: font-weight 1s;
+  transition: font-weight 0.5s;
 }
 
-a, a.nav-link:hover {
-  font-weight: 300;
-  color: #252627;
-}
-
-a:hover {
-  font-weight: 300;
-  color: #252627;
-}
-
-a, a.nav-link:focus {
-  background-color: #ffffff;
-
-}
-
-a, a.nav-link:active,
-a.nav-link:focus {
-  font-weight: 400;
-  color: #252627;
+a.nav-link:hover,
+a.nav-link:focus{
+  font-weight: 350;
+  color: #000000 !important;
 }
 
 .navbar-toggler:hover {

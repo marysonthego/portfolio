@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px;
+
   color: rgb(0, 0, 0);
 }
 
@@ -19,6 +20,7 @@ h1.mainTitle {
   font-weight: 300;
   color: rgb(2, 2, 2);
   padding: 10px;
+  margin-top: 50px;
 }
 
 h2.mainSubtitle {
