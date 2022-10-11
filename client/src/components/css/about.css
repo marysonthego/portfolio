@@ -26,7 +26,8 @@
 }
 
 .aboutSection {
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 200;
   color: rgb(0, 0, 0);
   width: 70%;
 }
@@ -34,53 +35,55 @@
 ul.ulTopCircle {
   list-style-type: circle;
   padding: 0;
-  margin: 0 5%;
+  margin: 0 2%;
 }
 
 ul.ulReact {
   list-style-type: circle;
   list-style-image: url('http://localhost:3000/media/react20.png');
   padding: 0;
-  margin: 0 0 3% 5%;
+  margin: 0 0 2% 2%;
 }
 
 ul.ulCA {
   list-style-type: circle;
   list-style-image: url('http://localhost:3000/media/ca.png');
   padding: 0;
-  margin: 0 0 3% 5%;
+  margin: 0 0 2% 2%;
 }
 
 ul.ulNortel {
   list-style-type: circle;
   list-style-image: url('http://localhost:3000/media/nortel.png');
   padding: 0;
-  margin: 0 0 3% 5%;
+  margin: 0 0 2% 2%;
 }
 
 ul.ulTI {
   list-style-type: circle;
   list-style-image: url('http://localhost:3000/media/ti.png');
   padding: 0;
-  margin: 0 0 3% 5%;
+  margin: 0 0 2% 2%;
 }
 
 ul.ulSubCircle {
   list-style-type: circle;
   padding: 0;
-  margin: 0 0 3% 3%;
+  margin: 0 0 2% 2%;
 }
 
 li.aboutText {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 200;
   color: rgb(0, 0, 0);
-  margin: 0 5%;
-  line-height: 100%;
+  margin: 0 2%;
+  line-height: 105%;
 }
 
 li.aboutSubText {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 200;
   color: rgb(0, 0, 0);
-  margin: 0 10%;
-  line-height: 100%;
+  margin: 0 5%;
+  line-height: 105%;
 }
