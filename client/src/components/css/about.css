@@ -1,11 +1,11 @@
 .aboutContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  background-color: rgb(255, 255, 255);
   width: 100%;
-  background-color: #ffffff;
+  height: 100%;
 }
 
 .aboutTitle {
@@ -13,22 +13,74 @@
   font-weight: 400;
   color: rgb(0, 0, 0);
   padding-top: 10px;
+  justify-content: center;
+  width: 70%;
 }
 
 .aboutSubtitle {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 200;
   color: rgb(0, 0, 0);
+  justify-content: center;
+  width: 70%;
+}
 
+.aboutSection {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  width: 70%;
+}
+
+ul.ulTopCircle {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0 5%;
+}
+
+ul.ulReact {
+  list-style-type: circle;
+  list-style-image: url('http://localhost:3000/media/react20.png');
+  padding: 0;
+  margin: 0 0 3% 5%;
+}
+
+ul.ulCA {
+  list-style-type: circle;
+  list-style-image: url('http://localhost:3000/media/ca.png');
+  padding: 0;
+  margin: 0 0 3% 5%;
+}
+
+ul.ulNortel {
+  list-style-type: circle;
+  list-style-image: url('http://localhost:3000/media/nortel.png');
+  padding: 0;
+  margin: 0 0 3% 5%;
+}
+
+ul.ulTI {
+  list-style-type: circle;
+  list-style-image: url('http://localhost:3000/media/ti.png');
+  padding: 0;
+  margin: 0 0 3% 5%;
+}
+
+ul.ulSubCircle {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0 0 3% 3%;
 }
 
 li.aboutText {
   font-size: 20px;
-  font-weight: 200;
   color: rgb(0, 0, 0);
-  padding: 0px;
-  margin-bottom: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 0 5%;
+  line-height: 100%;
+}
+
+li.aboutSubText {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  margin: 0 10%;
   line-height: 100%;
 }

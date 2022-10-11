@@ -1,34 +1,39 @@
 export const About = () => {
-  let PageTitle = "Who is Mary?";
-  let PageSubtitle = "a React full-stack developer looking for a job";
 
   return (
+    <>
     <main className = 'aboutContainer'>
-      <h1 className = "aboutTitle">{PageTitle}</h1>
-      <h2 className = "aboutSubtitle">{PageSubtitle}</h2>
-      <ul >
-        <li className = "aboutText">Mary is a full-stack developer specializing in React, NodeJS, & Express</li>
-        <li className = "aboutText">she is a life-long learner who enjoys new technologies</li>
-        <li className = "aboutText">2019, Master of Computer Information Systems, Colorado State University</li>
-      </ul>
-      <h1 className = "aboutTitle">There's Something about Mary</h1>
-      <h2 className = "aboutSubtitle">Hint: (She's been in the business for 30 years)</h2>
-      <ul >
+    <section className = 'aboutSection'>
+      <h1 className = "aboutTitle">Who is Mary?</h1>
+      <h2 className = "aboutSubtitle">A React full-stack developer looking for a job!</h2>
 
-        <li className = "aboutText">she's been learning full-stack development for over 2 years now, but before that...</li>
+        <ul className = "ulTopCircle">
+          <li className = "aboutText">Specializing in React, NodeJS, & Express</li>
+          <li className = "aboutText">A life-long learner</li>
+          <li className = "aboutText">Master of Computer Information Systems, 2019, Colorado State University</li>
+        </ul>
 
-        <li className = "aboutText">
-        <img
-          src="media/ca.png"
-          title="CA Technologies"
-          className="pic rounded-circle"
-          alt="CA Technologies"
-          onContextMenu={(e) => {
-            e.preventDefault();
-          }}
-        />she did Java programming, high-stakes tech support for Fortune 100 companies, and turned disorganized, incomplete documentation into clear, useful information.</li>
-        <li className = "aboutText">2019, Master of Computer Information Systems, Colorado State University</li>
+      <h1 className = "aboutTitle">There's Something about Mary...</h1>
+      <h2 className = "aboutSubtitle">Hint: (In the business for 30 years)</h2>
+      <ul className = "ulReact">
+        <li className = "aboutText">Learning full-stack development <i>by doing</i> for more than 2 years. Has anyone ever learned <i>too much</i> about React?</li>
       </ul>
-    </main>
+      <ul className = "ulCA">
+        <li className = "aboutText">CA Technologies</li>
+      </ul>
+      <ul className = "ulSubCircle">
+        <li className = "aboutSubText">Java programming</li>
+        <li className = "aboutSubText">high-stakes tech support for Fortune 100 companies</li>
+        <li className = "aboutSubText">turned disorganized, incomplete documentation into clear, useful information.</li>
+      </ul>
+      <ul className = "ulNortel">
+        <li className = "aboutText">Nortel Networks</li>
+      </ul>
+      <ul className = "ulTI">
+        <li className = "aboutText">Texas Instruments</li>
+      </ul>
+    </section>
+</main>
+</>
   )
 }

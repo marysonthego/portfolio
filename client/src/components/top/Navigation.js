@@ -2,7 +2,6 @@ import React, {useEffect, useLayoutEffect} from "react";
 import {useLocation} from 'react-router-dom';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export const Navigation = () => {
   const location = useLocation();
