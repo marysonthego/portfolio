@@ -16,33 +16,41 @@
 }
 
 .aboutSection1 {
-  background: linear-gradient(rgba(247, 249, 250, 0.7), 50%, rgba(255, 217, 0, 0.904));
-  border-radius: 10% 10% 10% 10% / 10% 50% 10% 50% ;
-  width: 60%;
+  /* background: linear-gradient(rgba(255, 255, 255, 0.7), 99%, rgba(255, 217, 0, 0.904));
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 217, 0, 0.904);
+  border-radius: 100px / 120px; */
+  width: 70%;
+  height: 100%;
   padding: 2% 5% 1% ;
   margin: 1%;
 }
 
+.box {
+  width: 100%;
+  height: 60px;
+  --mask:
+    radial-gradient(31.87px at 50% calc(100% + 26.40px),#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 32px) calc(50% - 9px + .5px)/64px 18px ,
+    radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 2px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  background: linear-gradient(135deg, #ff8903,#ff8903, #0331ff, #0331ff) fixed;
+}
+
 .aboutSection2 {
-  background: linear-gradient( rgba(232, 239, 247, 0.904), 50%, rgba(2, 255, 2, 0.7));
-  border-radius: 100px / 120px;
-  width: 50%;
+  width: 70%;
   padding: 2% 5% 1% ;
   margin: 1%;
 }
 
 .aboutSection3 {
-  background: linear-gradient(rgba(245, 245, 245, 0.7), 50%, rgba(255, 77, 77, 0.904));
-  border-radius: 10% 10% 10% 10% / 10% 50% 10% 50% ;
   width: 40%;
   padding: 2% 5% 1% ;
   margin: 1%;
 }
 
 .aboutSection4 {
-  background: linear-gradient(rgba(2, 217, 255, 0.7), 50%, rgba(230, 238, 245, 0.904));
-  border-radius: 10% 10% 10% 10% / 10% 50% 10% 50% ;
-  width: 30%;
+  width: 40%;
   padding: 2% 5% 1% ;
   margin: 1%;
 }

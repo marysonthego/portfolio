@@ -21,6 +21,7 @@ export function MainPage() {
         </h1>
         <h2 className="mainSubtitle">specializing in React, NodeJS, & Express.</h2>
       </div>
+      <div className = "mainBox"></div>
     </div>
 
   );

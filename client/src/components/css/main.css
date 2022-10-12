@@ -10,7 +10,7 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px;
+  padding: 100px 100px 0px 100px;
 
   color: rgb(0, 0, 0);
 }
@@ -28,3 +28,14 @@ h2.mainSubtitle {
   font-weight: 300;
   color: rgb(0, 0, 0);
 }
+
+.mainBox {
+    width: 60%;
+    height: 60px;
+    --mask:
+      radial-gradient(31.87px at 50% calc(100% + 26.40px),#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 32px) calc(50% - 9px + .5px)/64px 18px ,
+      radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    background: linear-gradient(135deg, #ff8903,#ff8903, #0331ff, #0331ff) fixed;
+  }

@@ -90,6 +90,11 @@ ReactDOM.render(
               target="_blank">
               <img src="media/github.png" alt="Github"/>
             </a>
+            <a
+              href="https://my.indeed.com/p/maryc-6wv0hp8"
+              target="_blank">
+              <img src="media/indeed.png" alt="Indeed"/>
+            </a>
             <a href="https://github.com/marysonthego/portfolio"
             target="_blank">This Site on Github</a>
           </div>
