@@ -5,6 +5,7 @@ export function MainPage() {
   });
   return (
     <div className='mainContainer'>
+
       <div className='mainImage'>
         <img
           src="media/mary.png"

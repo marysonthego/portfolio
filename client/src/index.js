@@ -71,7 +71,28 @@ ReactDOM.render(
         <Router>
           <Navigation />
           <ScrollToTop className="ScrollToTop" />
-          <div className="footer">&copy;2022&nbsp;marysonthego.tech&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/marysonthego/portfolio">This Site on Github</a></div>
+          <div className="footer">&copy;2022&nbsp;marysonthego.tech
+          <a
+              href="https://twitter.com/marysonthego?ref_src=twsrc%5Etfw"
+              class="twitter-follow-button"
+              data-show-count="false"
+              target="_blank"
+            >
+              Follow @marysonthego
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mary-clark-33511214"
+              target="_blank">
+              <img src="media/linkedin2.png" alt="LinkedIn"/>
+            </a>
+            <a
+              href="https://github.com/marysonthego"
+              target="_blank">
+              <img src="media/github.png" alt="Github"/>
+            </a>
+            <a href="https://github.com/marysonthego/portfolio"
+            target="_blank">This Site on Github</a>
+          </div>
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />

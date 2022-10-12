@@ -1,41 +1,72 @@
 .aboutContainer {
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  /* background-image: url("http://localhost:3000/media/millslakermnp.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
   width: 100%;
-  height: 100%;
+  padding-bottom: 50px;
+
+}
+
+.aboutSection1 {
+  background: linear-gradient(rgba(247, 249, 250, 0.7), 50%, rgba(255, 217, 0, 0.904));
+  border-radius: 10% 10% 10% 10% / 10% 50% 10% 50% ;
+  width: 60%;
+  padding: 2% 5% 1% ;
+  margin: 1%;
+}
+
+.aboutSection2 {
+  background: linear-gradient( rgba(232, 239, 247, 0.904), 50%, rgba(2, 255, 2, 0.7));
+  border-radius: 100px / 120px;
+  width: 50%;
+  padding: 2% 5% 1% ;
+  margin: 1%;
+}
+
+.aboutSection3 {
+  background: linear-gradient(rgba(245, 245, 245, 0.7), 50%, rgba(255, 77, 77, 0.904));
+  border-radius: 10% 10% 10% 10% / 10% 50% 10% 50% ;
+  width: 40%;
+  padding: 2% 5% 1% ;
+  margin: 1%;
+}
+
+.aboutSection4 {
+  background: linear-gradient(rgba(2, 217, 255, 0.7), 50%, rgba(230, 238, 245, 0.904));
+  border-radius: 10% 10% 10% 10% / 10% 50% 10% 50% ;
+  width: 30%;
+  padding: 2% 5% 1% ;
+  margin: 1%;
 }
 
 .aboutTitle {
   font-size: 24px;
   font-weight: 400;
   color: rgb(0, 0, 0);
-  padding-top: 10px;
+  padding-top: 5px;
   justify-content: center;
-  width: 70%;
+
 }
 
 .aboutSubtitle {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 400;
   color: rgb(0, 0, 0);
   justify-content: center;
-  width: 70%;
-}
-
-.aboutSection {
-  font-size: 18px;
-  font-weight: 200;
-  color: rgb(0, 0, 0);
-  width: 70%;
 }
 
 ul.ulTopCircle {
   list-style-type: circle;
   padding: 0;
-  margin: 0 2%;
+  margin: 0 4%;
 }
 
 ul.ulReact {
@@ -69,21 +100,21 @@ ul.ulTI {
 ul.ulSubCircle {
   list-style-type: circle;
   padding: 0;
-  margin: 0 0 2% 2%;
+  margin: 0 2% 2% 5%;
 }
 
 li.aboutText {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 400;
   color: rgb(0, 0, 0);
-  margin: 0 2%;
-  line-height: 105%;
+  margin: 0 2% 2% 2%;
+  line-height: 110%;
 }
 
 li.aboutSubText {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 400;
   color: rgb(0, 0, 0);
-  margin: 0 5%;
-  line-height: 105%;
+  margin: 0 2% 2% 5%;
+  line-height: 110%;
 }
