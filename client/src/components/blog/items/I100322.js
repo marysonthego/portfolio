@@ -32,16 +32,12 @@ export const I100322 = () => {
           <h6 className="itemDate">{Created}</h6>
           <section className="itemSection">
             <p className="itemText">{Sect1}</p>
-            <code
-              data-gist-id="1f70adb74856db5a2a39946e51820adf"
-              data-gist-caption="reduce.js"
-            ></code>
             <div>
               <iframe
                 title="StackBlitz"
                 width={iwidth + 50}
                 height={iheight}
-                src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=index.js&hideExplorer=1&hideNavigation=1&view=editor"
+                src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&theme=light&view=editor"
               ></iframe>
             </div>
           </section>
@@ -56,16 +52,12 @@ export const I100322 = () => {
           <h6 className="itemDate">{Created}</h6>
           <section className="itemSection">
             <p className="itemText">{Sect1}</p>
-            <code
-              data-gist-id="1f70adb74856db5a2a39946e51820adf"
-              data-gist-caption="reduce.js"
-            ></code>
             <div>
               <iframe
                 title="StackBlitz"
                 width={iwidth}
                 height={iheight}
-                src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=index.js&hideExplorer=1&hideNavigation=1&view=editor"
+                src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&theme=light&view=editor"
               ></iframe>
             </div>
           </section>
