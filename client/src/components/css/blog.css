@@ -3,8 +3,8 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
-  width: 100%;
+  background-color: #eeeeee;
+  width: 80%;
   height: 100%;
 }
 .blogList {
@@ -47,7 +47,7 @@ a.item:hover {
   justify-content: center;
   padding: 10px;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+
   font-size: 16px;
   color: rgb(65, 65, 65);
 }
@@ -60,7 +60,9 @@ h1.itemTitle {
 }
 
 .itemSection {
-  width: 70%;
+  width: 80%;
+  padding-bottom: 5%;
+
 }
 
 .itemText {
@@ -68,6 +70,7 @@ h1.itemTitle {
   padding: 10px;
   text-align: justify;
   font-weight: 300;
+  width: 100%;
 }
 
 .itemDate {
@@ -76,4 +79,9 @@ h1.itemTitle {
   color: rgb(148, 148, 148);
   padding: 10px;
   text-decoration:none;
+}
+
+.stackBlitz {
+  width: 90%;
+  height: 100%;
 }

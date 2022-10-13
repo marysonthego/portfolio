@@ -80,7 +80,7 @@ export const About = () => {
         <section className="aboutSection3">
           <h1 className="aboutTitle">Why should I be on your project?</h1>
           <h2 className="aboutSubtitle">
-            Because I'm confident I can figure out a solution to any programming problem.
+            Because I'm confident I can come up with a solution for any programming problem.
           </h2>
           <div className = "box"></div>
         </section>
