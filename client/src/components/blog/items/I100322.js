@@ -62,8 +62,13 @@ export const I100322 = () => {
         <article className="blog">
           <h1 className="blog">{Title}</h1>
           <h2 className="itemDate">{Created}</h2>
-          <h2 className="blog">Array.reduce(callbackFn, <i>optional initialValue</i>)</h2>
-          <h2 className="blog">callbackFn(previousValue, currentValue, <i>optional currentIndex</i>)</h2>
+          <h2 className="blog">
+            Array.reduce(callbackFn, <i>optional initialValue</i>)
+          </h2>
+          <h2 className="blog">
+            callbackFn(previousValue, currentValue, <i>optional currentIndex</i>
+            )
+          </h2>
           <Sect1 />
           <div>
             <iframe
@@ -96,11 +101,20 @@ export const I100322 = () => {
     return (
       <main className="container">
         <article className="blog">
-        <h1 className="blog">{Title}</h1>
+          <h1 className="blog">{Title}</h1>
           <div className="itemDate">{Created}</div>
-          <div className='h2Box'>
-          <h2 className="blog"><span>Array.reduce(callbackFn, <em>optional initialValue</em>)</span></h2>
-          <h2 className="blog"><span>callbackFn(previousValue, currentValue, <em>optional currentIndex</em>)</span></h2>
+          <div className="h2Box">
+            <h2 className="blog">
+              <span>
+                Array.reduce(callbackFn, <em>optional initialValue</em>)
+              </span>
+            </h2>
+            <h2 className="blog">
+              <span>
+                callbackFn(previousValue, currentValue,{" "}
+                <em>optional currentIndex</em>)
+              </span>
+            </h2>
           </div>
           <Sect1 />
           <div>
