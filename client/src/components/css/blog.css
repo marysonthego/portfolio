@@ -3,7 +3,7 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background-color: #eeeeee;
+  background-color: #f5f3f3;
   width: 80%;
   height: 100%;
 }
@@ -24,12 +24,40 @@ li.listItem {
 .listDate:hover {
   text-decoration: none;
 }
+
+.blog {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  width: 80%;
+  padding-bottom: 5%;
+}
+
 h1.blog {
-  font-size: 24px;
-  font-weight: 200;
+  font-size: 28px;
+  font-weight: 300;
   color: rgb(0, 0, 0);
   padding: 10px;
 }
+
+div.h2Box {
+  width: 100%;
+  border: medium solid rgb(0, 0, 0);
+
+}
+
+h2.blog {
+  align-items: normal;
+  font-size: 22px;
+  font-weight: 300;
+  color:rgb(0, 0, 0);
+  padding: 10px;
+}
+
 a.item {
   text-decoration:none;
   font-weight: 300;
@@ -40,37 +68,13 @@ a.item:hover {
   color: rgb(0, 0, 0);
 }
 
-.itemArticle {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  width: 100%;
-
-  font-size: 16px;
-  color: rgb(65, 65, 65);
-}
-
-h1.itemTitle {
-  font-size: 24px;
-  font-weight: 200;
-  color: rgb(0, 0, 0);
-  padding: 10px;
-}
-
-.itemSection {
-  width: 80%;
-  padding-bottom: 5%;
-
-}
-
-.itemText {
-  font-size: 18px;
+.blogText {
+  font-size: 20px;
   padding: 10px;
   text-align: justify;
-  font-weight: 300;
+  font-weight: 400;
   width: 100%;
+  line-height: 110%;
 }
 
 .itemDate {
