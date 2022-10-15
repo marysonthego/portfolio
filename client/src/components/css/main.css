@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: #eeeeee;
+  padding-bottom: 1%;
 }
 
 .mainImage {
@@ -11,26 +12,25 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 100px 0px 100px;
-
+  padding: 50px 100px 0px 100px;
   color: rgb(0, 0, 0);
 }
 
 h1.mainTitle {
   font-size: 26px;
-  font-weight: 300;
-  color: rgb(2, 2, 2);
+  font-weight: 400;
+  color: rgb(0, 0, 0);
   padding: 10px;
   margin-top: 50px;
 }
 
 h2.mainSubtitle {
   font-size: 26px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgb(0, 0, 0);
 }
 
-.mainBox {
+.mainSquiggle {
     width: 60%;
     height: 60px;
     --mask:

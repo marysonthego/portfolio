@@ -23,19 +23,20 @@ export const I100322 = () => {
   const Sect1 = () => {
     return (
       <>
+      <h2 className="blog">The rules:</h2>
         <ul>
           <li className="blogText">
             reduce() executes your callbackFn for each element of an array, one
             at a time, in order.
           </li>
           <li className="blogText">
-            reduce() is a <b>recursive function</b>. It passes the result of the
-            callbackFn as the previousValue to the next call to the callbackFn,
-            and it keeps doing this until the array is exhausted.
+            reduce() is a <em>recursive function</em>. That means it passes the result of the
+            callbackFn as the new previousValue to the next call to the callbackFn -
+            and it keeps doing it over and over until it hits the end of the array.
           </li>
           <li className="blogText">
             {" "}
-            The final result will be a single value.
+            The final result is a single value - that is, it's the result of the final callbackFn.
           </li>
           <li className="blogText">
             If you don't specify an initial value, the element at array[0] is
@@ -46,11 +47,21 @@ export const I100322 = () => {
             and the current value starts with array[0].
           </li>
         </ul>
-        <h3 className="blogText">What does all this mean?</h3>
+      </>
+    );
+  };
+
+  const Sect2 = () => {
+    return (
+      <>
+        <h2 className="blog">What do the rules imply?</h2>
         <p className="blogText">
           Have you noticed that Reduce was misnamed? It should have been called
           'Accumulate' since every recursion passes the result of the previous
           callbackFn as the previousValue of the next callbackFn. Like this:
+        </p>
+        <p >
+          <b>Note:</b> The code below is interactive. You can change anything you want and run it by typing 'node reduce-sum-no-initial-value' in the terminal prompt! This works for all the code snippets in my blog. Just type 'node filename' in the terminal and hit enter to run it. Unfortunately, your changes can't be saved. If you refresh the page or leave it and come back your changes will be lost. Sad! But you can use Notepad++, VS Code, or any other text editor to save your changes for posterity.
         </p>
       </>
     );
@@ -70,6 +81,7 @@ export const I100322 = () => {
             )
           </h2>
           <Sect1 />
+          <Sect2 />
           <div>
             <iframe
               title="StackBlitz"
@@ -117,6 +129,7 @@ export const I100322 = () => {
             </h2>
           </div>
           <Sect1 />
+          <Sect2 />
           <div>
             <iframe
               title="StackBlitz"
