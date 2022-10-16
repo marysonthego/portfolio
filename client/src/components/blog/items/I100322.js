@@ -15,8 +15,8 @@ export const I100322 = () => {
   if (location.pathname.toString() === "/blog") {
     return (
       <span>
-        {Title}
-        {Created}
+        <span className="blog">{Title}</span>
+        <h2 className="itemDate">{Created}</h2>
       </span>
     );
   }
@@ -24,20 +24,22 @@ export const I100322 = () => {
   const Sect1 = () => {
     return (
       <>
-      <h2 className="blog">The rules:</h2>
+        <h2 className="blog">The rules:</h2>
         <ul>
           <li className="blogText">
             reduce() executes your callbackFn for each element of an array, one
             at a time, in order.
           </li>
           <li className="blogText">
-            reduce() is a <em>recursive function</em>. That means it passes the result of the
-            callbackFn as the new previousValue to the next call to the callbackFn -
-            and it keeps doing it over and over until it hits the end of the array.
+            reduce() is a <em>recursive function</em>. That means it passes the
+            result of the callbackFn as the new previousValue to the next call
+            to the callbackFn - and it keeps doing it over and over until it
+            hits the end of the array.
           </li>
           <li className="blogText">
             {" "}
-            The final result is a single value - that is, it's the result of the final callbackFn.
+            The final result is a single value - that is, it's the result of the
+            final callbackFn.
           </li>
           <li className="blogText">
             If you don't specify an initial value, the element at array[0] is
@@ -61,8 +63,14 @@ export const I100322 = () => {
           'Accumulate' since every recursion passes the result of the previous
           callbackFn as the previousValue of the next callbackFn. Like this:
         </p>
-        <p >
-          <b>Note:</b> The code below is interactive. You can change anything you want and run it by typing 'node filename' in the terminal prompt! This works for all the code snippets in my blog. Just type 'node filename' in the terminal and hit enter to run it. Unfortunately, your changes can't be saved. If you refresh the page or leave it and come back your changes will be lost. Sad! But you can use Notepad++, VS Code, or any other text editor to save your changes for posterity.
+        <p>
+          <b>Note:</b> The code below is interactive. You can change anything
+          you want and run it by typing 'node filename' in the terminal prompt!
+          This works for all the code snippets in my blog. Just type 'node
+          filename' in the terminal and hit enter to run it. Unfortunately, your
+          changes can't be saved. If you refresh the page or leave it and come
+          back your changes will be lost. Sad! But you can use Notepad++, VS
+          Code, or any other text editor to save your changes for posterity.
         </p>
       </>
     );
@@ -115,7 +123,12 @@ export const I100322 = () => {
     return (
       <main className="container">
         <article className="blog">
-        <img src={TopImage} title="Secrets" className="blogImg" alt="Secrets" />
+          <img
+            src={TopImage}
+            title="Secrets"
+            className="blogImg"
+            alt="Secrets"
+          />
           <h1 className="blog">{Title}</h1>
           <div className="itemDate">{Created}</div>
           <div className="h2Box">

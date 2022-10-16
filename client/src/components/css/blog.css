@@ -43,7 +43,7 @@ a.listItem:hover {
 }
 
 .blog {
-  display: flex;
+  /* display: flex; */
   flex-flow: column wrap;
   /* align-items: center; */
   justify-content: center;
@@ -63,7 +63,7 @@ a.listItem:hover {
   height: 100%;
 }
 
-h1.blog {
+span.blog, h1.blog {
   font-size: 30px;
   font-weight: 500;
   color: rgb(0, 0, 0);

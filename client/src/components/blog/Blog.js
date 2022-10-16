@@ -11,12 +11,12 @@ export const Blog = () => {
       <h1 className="blog">{PageTitle}</h1>
       <section className="blogList">
         <a className="listItem" href="/I100322">
-        <img
+          <img
             className="blogListImg"
             src="media/alexandru-zdrobau-4bmtMXGuVqo-unsplash-200w.jpg"
-          /> {" "}
+          />{" "}
+          {I100322()}
         </a>
-        {I100322()}
       </section>
     </main>
   );
