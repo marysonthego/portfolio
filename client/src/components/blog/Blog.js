@@ -18,6 +18,15 @@ export const Blog = () => {
           {I100322()}
         </a>
       </section>
+      <section className="blogList">
+        <a className="listItem" href="/template">
+          <img
+            className="blogListImg"
+            src="media/alexandru-zdrobau-4bmtMXGuVqo-unsplash-200w.jpg"
+          />{" "}
+          {Template()}
+        </a>
+      </section>
     </main>
   );
 };
