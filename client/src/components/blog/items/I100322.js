@@ -10,10 +10,12 @@ export const I100322 = () => {
 
   const Title = "Secrets of Array.reduce";
   const Created = "October 03, 2022";
+  const TopImage = "media/alexandru-zdrobau-4bmtMXGuVqo-unsplash.jpg";
 
   if (location.pathname.toString() === "/blog") {
     return (
       <>
+        <img src={TopImage} title="Secrets of Array.reduce" alt="Secrets of Array.reduce" />
         <div>{Title}</div>
         <div className="listDate">{Created}</div>
       </>
@@ -61,7 +63,7 @@ export const I100322 = () => {
           callbackFn as the previousValue of the next callbackFn. Like this:
         </p>
         <p >
-          <b>Note:</b> The code below is interactive. You can change anything you want and run it by typing 'node reduce-sum-no-initial-value' in the terminal prompt! This works for all the code snippets in my blog. Just type 'node filename' in the terminal and hit enter to run it. Unfortunately, your changes can't be saved. If you refresh the page or leave it and come back your changes will be lost. Sad! But you can use Notepad++, VS Code, or any other text editor to save your changes for posterity.
+          <b>Note:</b> The code below is interactive. You can change anything you want and run it by typing 'node filename' in the terminal prompt! This works for all the code snippets in my blog. Just type 'node filename' in the terminal and hit enter to run it. Unfortunately, your changes can't be saved. If you refresh the page or leave it and come back your changes will be lost. Sad! But you can use Notepad++, VS Code, or any other text editor to save your changes for posterity.
         </p>
       </>
     );
@@ -71,6 +73,7 @@ export const I100322 = () => {
     return (
       <main className="container">
         <article className="blog">
+          <img src={TopImage} title="Secrets" className="pic" alt="Secrets" />
           <h1 className="blog">{Title}</h1>
           <h2 className="itemDate">{Created}</h2>
           <h2 className="blog">
@@ -113,15 +116,16 @@ export const I100322 = () => {
     return (
       <main className="container">
         <article className="blog">
+        <img src={TopImage} title="Secrets" className="blogImg" alt="Secrets" />
           <h1 className="blog">{Title}</h1>
           <div className="itemDate">{Created}</div>
           <div className="h2Box">
-            <h2 className="blog">
+            <h2 className="blogBox">
               <span>
                 Array.reduce(callbackFn, <em>optional initialValue</em>)
               </span>
             </h2>
-            <h2 className="blog">
+            <h2 className="blogBox">
               <span>
                 callbackFn(previousValue, currentValue,{" "}
                 <em>optional currentIndex</em>)
