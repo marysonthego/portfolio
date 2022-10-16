@@ -90,6 +90,7 @@ export const About = () => {
             Shoot me an{" "}
             <a href="mailto:mary@marysonthego.tech?subject=Contact">email</a>!
           </h2>
+          <h2 className="aboutSubtitle">{" "}</h2>
           <div className = "box"></div>
         </section>
       </main>

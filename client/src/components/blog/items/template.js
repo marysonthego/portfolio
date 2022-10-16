@@ -13,7 +13,7 @@ export const Template = () => {
 
   const Title = "Template Title";
   const Created = "Some-month 01, 2022";
-  const TopImage = "media/alexandru-zdrobau-4bmtMXGuVqo-unsplash.jpg";
+  const TopImage = "media/template640.jpg";
 
   if (location.pathname.toString() === "/blog") {
     return (

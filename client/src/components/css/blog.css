@@ -14,8 +14,8 @@ section.blogList {
 }
 
 img.blogListImg {
-  width: 40%;
-  height: 40%;
+  width: 250;
+  height: 200;
   margin-right: 2%;
   object-fit: cover;
 
@@ -43,13 +43,8 @@ a.listItem:hover {
 }
 
 .blog {
-  /* display: flex; */
   flex-flow: column wrap;
-  /* align-items: center; */
   justify-content: center;
-  /* padding: 10px;
-  font-size: 16px;
-  color: rgb(0, 0, 0); */
   width: 80%;
   padding-bottom: 5%;
 }
@@ -94,7 +89,7 @@ h2.blogBox {
 
 a.item {
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
   color: rgb(0, 0, 0);
 }
 a.item:hover {

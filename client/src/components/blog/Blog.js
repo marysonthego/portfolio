@@ -22,7 +22,7 @@ export const Blog = () => {
         <a className="listItem" href="/template">
           <img
             className="blogListImg"
-            src="media/alexandru-zdrobau-4bmtMXGuVqo-unsplash-200w.jpg"
+            src="media/template200.jpg"
           />{" "}
           {Template()}
         </a>
