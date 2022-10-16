@@ -30,8 +30,8 @@ export function MainPage() {
           title="animated eyes"></iframe>
         </span>!
         </h2>
+        </div>
         <div className="mainSquiggle"></div>
-      </div>
     </div>
   );
 }

@@ -1,21 +1,38 @@
-.container {
+main.container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   background-color: #f5f3f3;
   height: 100%;
 }
-.blogList {
+section.blogList {
+  display: inline;
   font-size: 22px;
   color: rgb(0, 0, 0);
+  width: 80%;
 }
-li.listItem {
-  font-size: 20px;
+
+img.blogListImg {
+  width: 40%;
+  height: 40%;
+  margin-right: 2%;
+  object-fit: cover;
+
+}
+
+a.listItem {
+  width: 45%;
+  display: inline;
+  text-decoration: none;
+  font-weight: 400;
   color: rgb(0, 0, 0);
-  margin: 10px;
-  line-height: 100%;
 }
+a.listItem:hover {
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
+
 .listDate {
   font-size: 11px;
   color: rgb(0, 0, 0);
@@ -23,18 +40,6 @@ li.listItem {
 
 .listDate:hover {
   text-decoration: none;
-}
-
-.blogCard {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.cardImageTop {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .blog {
@@ -54,6 +59,8 @@ li.listItem {
   flex-flow: column wrap;
   align-items: normal;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 h1.blog {

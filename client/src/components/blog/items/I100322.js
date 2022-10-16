@@ -14,11 +14,10 @@ export const I100322 = () => {
 
   if (location.pathname.toString() === "/blog") {
     return (
-      <>
-        <img src={TopImage} title="Secrets of Array.reduce" alt="Secrets of Array.reduce" />
-        <div>{Title}</div>
-        <div className="listDate">{Created}</div>
-      </>
+      <span>
+        {Title}
+        {Created}
+      </span>
     );
   }
 
