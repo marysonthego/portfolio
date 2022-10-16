@@ -8,7 +8,7 @@ import {Post10} from "components/posts/Post10";
 import {Post11} from "components/posts/Post11";
 
 export const Projects = () => {
-  let PageTitle = "Mary's Projects";
+  let PageTitle = "Projects";
 
   return (
     <main className = 'container'>
