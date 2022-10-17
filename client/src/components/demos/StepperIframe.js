@@ -13,7 +13,7 @@ export default function StepperIframe() {
   const [show, setShow] = useState(true);
 
   const Title = "Stepper";
-  const Created = "Month 01, 2022";
+  const Created = "2021";
 
   const toggleModal = () => {
     setShow(!show);

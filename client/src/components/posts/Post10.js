@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 export function Post10() {
   const location = useLocation();
   const Title = "Dashboard Code Walk";
-  const Created = "January 01, 2022";
+  const Created = "2021";
 
   if(location.pathname.toString() === "/projects") {
     return (

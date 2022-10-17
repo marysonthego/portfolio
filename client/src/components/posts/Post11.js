@@ -5,7 +5,7 @@ export function Post11() {
   const location = useLocation();
 
   let Title = "Sign-Up Stepper Code Walk";
-  const Created = "Month 01, 2022";
+  const Created = "2021";
 
   if(location.pathname.toString() === "/projects") {
     return (
