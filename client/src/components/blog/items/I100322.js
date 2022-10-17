@@ -8,9 +8,9 @@ export const I100322 = () => {
   let iwidth = width * 0.8 * 0.8;
   let iheight = height;
 
-  const Title = "Secrets of Array.reduce";
+  const Title = "Secrets of Array.reduce Part 1";
   const Created = "October 03, 2022";
-  const TopImage = "media/alexandru-zdrobau-4bmtMXGuVqo-unsplash.jpg";
+  const TopImage = "media/secretsw640.jpg";
 
   if (location.pathname.toString() === "/blog") {
     return (
@@ -26,26 +26,26 @@ export const I100322 = () => {
       <>
         <h2 className="blog">The rules:</h2>
         <ul>
-          <li className="blogText">
+          <li className="blogLi">
             reduce() executes your callbackFn for each element of an array, one
             at a time, in order.
           </li>
-          <li className="blogText">
+          <li className="blogLi">
             reduce() is a <em>recursive function</em>. That means it passes the
             result of the callbackFn as the new previousValue to the next call
             to the callbackFn - and it keeps doing it over and over until it
             hits the end of the array.
           </li>
-          <li className="blogText">
+          <li className="blogLi">
             {" "}
             The final result is a single value - that is, it's the result of the
             final callbackFn.
           </li>
-          <li className="blogText">
+          <li className="blogLi">
             If you don't specify an initial value, the element at array[0] is
             used as the initial value and the current value starts at array[1].
           </li>
-          <li className="blogText">
+          <li className="blogLi">
             If you do specify an initial value, it is used as the previous value
             and the current value starts with array[0].
           </li>
@@ -63,7 +63,7 @@ export const I100322 = () => {
           'Accumulate' since every recursion passes the result of the previous
           callbackFn as the previousValue of the next callbackFn. Like this:
         </p>
-        <p>
+        <p className="blogNote">
           <b>Note:</b> The code below is interactive. You can change anything
           you want and run it by typing 'node filename' in the terminal prompt!
           This works for all the code snippets in my blog. Just type 'node
@@ -80,7 +80,12 @@ export const I100322 = () => {
     return (
       <main className="container">
         <article className="blog">
-          <img src={TopImage} title="Secrets" className="pic" alt="Secrets" />
+          <img
+            src={TopImage}
+            title="Secrets"
+            className="blogImg"
+            alt="Secrets of a woman"
+          />
           <h1 className="blog">{Title}</h1>
           <h2 className="itemDate">{Created}</h2>
           <h2 className="blog">
@@ -105,7 +110,7 @@ export const I100322 = () => {
             more iteration onto the start of the queue. Otherwise, the initial
             value will simply be array[0].{" "}
           </p>
-          <p>
+          <p className="blogNote">
             Here's an example showing reduce with an initial value and without:
           </p>
           <div>
@@ -114,6 +119,14 @@ export const I100322 = () => {
               width={iwidth + 50}
               height={iheight}
               src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&hideNavigation=1&view=editor"
+            ></iframe>
+          </div>
+          <div>
+            <iframe
+              title="StackBlitz"
+              width={iwidth + 50}
+              height={iheight}
+              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-return-an-object.js&hideExplorer=1&hideNavigation=1&view=editor"
             ></iframe>
           </div>
         </article>
@@ -127,7 +140,7 @@ export const I100322 = () => {
             src={TopImage}
             title="Secrets"
             className="blogImg"
-            alt="Secrets"
+            alt="Secrets of a woman"
           />
           <h1 className="blog">{Title}</h1>
           <div className="itemDate">{Created}</div>
@@ -146,11 +159,11 @@ export const I100322 = () => {
           </div>
           <Sect1 />
           <Sect2 />
-          <div>
+          <div className="blogCode">
             <iframe
               title="StackBlitz"
-              width="800px"
-              height="600px"
+              width={iwidth * 0.8}
+              height={iheight * 0.8}
               src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-sum-no-initial-value.js&hideExplorer=1&hideNavigation=1&view=editor"
             ></iframe>
           </div>
@@ -159,15 +172,45 @@ export const I100322 = () => {
             more iteration onto the start of the queue. Otherwise, the initial
             value will simply be array[0].
           </p>
-          <p>
+          <p className="blogNote">
             Here's an example showing reduce with an initial value and without:
           </p>
-          <div>
+          <div className="blogCode">
             <iframe
               title="StackBlitz"
-              width="800px"
-              height="600px"
+              width={iwidth * 0.8}
+              height={iheight * 0.8}
               src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&hideNavigation=1&view=editor"
+            ></iframe>
+          </div>
+
+          <p className="blogText">
+            Did you know you can even return an object from a reduce callbackFn?
+          </p>
+          <p className="blogNote">
+            Here's an example showing how to use reduce with an array of objects. The first example demonstrates returning an object from reduce without an initial value. The second example demonstrates returning an object from reduce with an initial value.
+          </p>
+          <div className="blogCode">
+            <iframe
+              title="StackBlitz"
+              width={iwidth * 0.8}
+              height={iheight * 0.8}
+              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-return-an-object.js&hideExplorer=1&hideNavigation=1&view=editor"
+            ></iframe>
+          </div>
+
+          <p className="blogText">
+            You can use reduce to flatten an array of arrays.
+          </p>
+          <p className="blogNote">
+            Here's an example:
+          </p>
+          <div className="blogCode">
+            <iframe
+              title="StackBlitz"
+              width={iwidth * 0.8}
+              height={iheight * 0.8}
+              src="https://stackblitz.com/edit/node-c8afpt?embed=1&file=reduce-flatten-array.js&hideExplorer=1&hideNavigation=1&view=editor"
             ></iframe>
           </div>
         </article>

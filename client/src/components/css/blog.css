@@ -4,6 +4,7 @@ main.container {
   align-items: center;
   justify-content: center;
   background-color: #f5f3f3;
+  width: 80%;
   height: 100%;
 }
 section.blogList {
@@ -97,12 +98,32 @@ a.item:hover {
   color: rgb(0, 0, 0);
 }
 
+li.blogLi {
+  display: list-item;
+  list-style: circle;
+  font-size: 20px;
+  padding: 10px 0px;
+  text-align: justify;
+  font-weight: 400;
+  width: 80%;
+  line-height: 110%;
+}
+
 .blogText {
   font-size: 20px;
   padding: 10px 0px;
   text-align: justify;
   font-weight: 400;
-  width: 100%;
+  width: 80%;
+  line-height: 110%;
+}
+
+.blogNote {
+  font-size: 16px;
+  padding: 10px 0px;
+  text-align: justify;
+  font-weight: 400;
+  width: 80%;
   line-height: 110%;
 }
 
@@ -114,7 +135,14 @@ a.item:hover {
   text-decoration: none;
 }
 
+div.blogCode {
+  display: flex;
+  align-items: normal;
+  width: 100%;
+  height: 100%;
+}
+
 .stackBlitz {
-  width: 90%;
+  width: 100%;
   height: 100%;
 }

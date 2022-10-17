@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>npm</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4ff90478-45b6-4541-b1ad-4dfc4d5700c6" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📁</span></div><h1 class="page-title">npm</h1></header><div class="page-body"><figure id="8cc19507-b6e8-4ba3-a6e4-7f951685f088"><a href="https://docs.npmjs.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">npm Docs</div><div class="bookmark-description">Documentation for the npm registry, website, and command-line interface</div></div><div class="bookmark-href"><img src="https://docs.npmjs.com/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065" class="icon bookmark-icon"/>https://docs.npmjs.com/</div></div><img src="https://user-images.githubusercontent.com/29712634/81721690-e2fb5d80-9445-11ea-8602-4b2294c964f3.png" class="bookmark-image"/></a></figure><figure id="a0a53d78-a320-4494-a512-18d52cf3db6d"><a href="https://docs.npmjs.com/cli/v8/configuring-npm/package-json" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">package.json | npm Docs</div><div class="bookmark-description">This document is all you need to know about what&#x27;s required in your package.json file. It must be actual JSON, not just a JavaScript object literal. A lot of the behavior described in this document is affected by the config settings described in .</div></div><div class="bookmark-href"><img src="https://docs.npmjs.com/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065" class="icon bookmark-icon"/>https://docs.npmjs.com/cli/v8/configuring-npm/package-json</div></div><img src="https://user-images.githubusercontent.com/29712634/81721690-e2fb5d80-9445-11ea-8602-4b2294c964f3.png" class="bookmark-image"/></a></figure><ul id="9b316bfa-8ca9-44bc-b173-ec23a6f83646" class="bulleted-list"><li style="list-style-type:disc">S is the same as --save</li></ul><ul id="2ca3ce3c-3d5b-4f74-8114-1cb4f4d56c38" class="bulleted-list"><li style="list-style-type:disc">D is the same as --save-dev</li></ul><ul id="dc0977b5-50cb-4cca-a88f-4534b654ebd0" class="bulleted-list"><li style="list-style-type:disc">G is the same as --global</li></ul><table id="f647cdff-9c16-4930-954e-1782930b9209" class="simple-table"><thead class="simple-table-header"><tr id="9e52547e-c16b-4d04-a8fb-85569ec5942d"><th id="ewgz" class="simple-table-header-color simple-table-header" style="width:349px">npm how to</th><th id="SlUP" class="simple-table-header-color simple-table-header" style="width:320px"></th><th id="dG&gt;u" class="simple-table-header-color simple-table-header" style="width:327px"></th></tr></thead><tbody><tr id="894d2a08-a0bb-4dda-95e2-65c2e3d2d5e5"><td id="ewgz" class="block-color-teal_background" style="width:349px">get the version of an installed package</td><td id="SlUP" class="block-color-teal_background" style="width:320px">npm list &lt;package-name&gt;</td><td id="dG&gt;u" class="block-color-teal_background" style="width:327px"></td></tr><tr id="0ec315bb-c7a1-424d-a4a8-55e05e384a2c"><td id="ewgz" class="block-color-pink_background" style="width:349px">list globally installed packages</td><td id="SlUP" class="block-color-pink_background" style="width:320px">npm list -g
+npm ls --depth=0 -g</td><td id="dG&gt;u" class="block-color-pink_background" style="width:327px"></td></tr><tr id="521d22b1-47e0-4bfd-82f9-feaa5d058b89"><td id="ewgz" class="block-color-pink_background" style="width:349px">list local installed packages</td><td id="SlUP" class="block-color-pink_background" style="width:320px">npm list
+npm ls --depth=0</td><td id="dG&gt;u" class="block-color-pink_background" style="width:327px"></td></tr><tr id="29d11c2e-0766-4322-b09b-d9925078d6e5"><td id="ewgz" class="block-color-brown_background" style="width:349px">create a package.json file</td><td id="SlUP" class="block-color-brown_background" style="width:320px">npm init</td><td id="dG&gt;u" class="block-color-brown_background" style="width:327px"></td></tr><tr id="1b2d2e73-1629-40ad-8ce2-8f98c614c413"><td id="ewgz" class="block-color-brown_background" style="width:349px">generate a package-lock file</td><td id="SlUP" class="block-color-brown_background" style="width:320px">npm install --package-lock-only</td><td id="dG&gt;u" class="block-color-brown_background" style="width:327px"></td></tr><tr id="2779aeed-7f14-4d0b-bf2c-81739583d679"><td id="ewgz" class="block-color-yellow_background" style="width:349px">install a package</td><td id="SlUP" class="block-color-yellow_background" style="width:320px">npm i &lt;package-name&gt;</td><td id="dG&gt;u" class="block-color-yellow_background" style="width:327px"></td></tr><tr id="57697e73-43ce-4600-9bed-5f3634320dd5"><td id="ewgz" class="block-color-yellow_background" style="width:349px">install version greater than or equal to</td><td id="SlUP" class="block-color-yellow_background" style="width:320px">npm i @material-ui/pickers@&quot;&gt;=4.0.0-alpha.8&quot;</td><td id="dG&gt;u" class="block-color-yellow_background" style="width:327px"></td></tr><tr id="74880d70-01f8-4060-9797-7089a43e3cf2"><td id="ewgz" class="block-color-yellow_background" style="width:349px">install a specific version</td><td id="SlUP" class="block-color-yellow_background" style="width:320px">npm install --save react@16.0.0</td><td id="dG&gt;u" class="block-color-yellow_background" style="width:327px"></td></tr><tr id="dcfae802-3e13-49f3-8f20-cb1fb1203ce2"><td id="ewgz" class="block-color-yellow_background" style="width:349px">install in version range</td><td id="SlUP" class="block-color-yellow_background" style="width:320px">npm install sax@&quot;&gt;=0.1.0 &lt;0.2.0&quot;
+npm install @myorg/privatepackage@&quot;16 - 17&quot;</td><td id="dG&gt;u" class="block-color-yellow_background" style="width:327px"></td></tr><tr id="3e0e045f-27b1-4f9a-8f1b-ef2f5f7f7e39"><td id="ewgz" class="block-color-yellow_background" style="width:349px">install latest version regardless of your semver</td><td id="SlUP" class="block-color-yellow_background" style="width:320px"> npm install --save react@latest</td><td id="dG&gt;u" class="block-color-yellow_background" style="width:327px"></td></tr><tr id="18f23bd6-ed41-4734-ac1e-04753b233970"><td id="ewgz" class="block-color-orange_background" style="width:349px">update an installed package to the latest version allowed by the semver in your package.json</td><td id="SlUP" class="block-color-orange_background" style="width:320px">npm up &lt;package&gt;
+npm up -g &lt;package&gt; &lt;package&gt; &lt;package&gt;</td><td id="dG&gt;u" class="block-color-orange_background" style="width:327px">So, if your package.json says &quot;react&quot;: &quot;^15.0.0&quot; and you run <em>npm up react</em> your package.json will now say &quot;react&quot;: &quot;^15.6.2&quot; (the latest current version of react 15)</td></tr><tr id="2673d59b-a1fe-48b2-b106-963b9ba4a1ed"><td id="ewgz" class="block-color-orange_background" style="width:349px">update to the latest version, ignoring the semver in package.json</td><td id="SlUP" class="block-color-orange_background" style="width:320px">npm install --save react@latest</td><td id="dG&gt;u" class="block-color-orange_background" style="width:327px"></td></tr><tr id="2c637757-8fab-4b43-8601-b3a99cdf02c2"><td id="ewgz" class="block-color-orange_background" style="width:349px">update to a specific version, ignoring the semver in package.json</td><td id="SlUP" class="block-color-orange_background" style="width:320px">npm install --save react@16.0.0</td><td id="dG&gt;u" class="block-color-orange_background" style="width:327px"></td></tr><tr id="a9be9da8-bdad-4249-9b89-cf612c8db6de"><td id="ewgz" class="block-color-teal_background" style="width:349px">list all outdated local packages</td><td id="SlUP" class="block-color-teal_background" style="width:320px">npm outdated</td><td id="dG&gt;u" class="block-color-teal_background" style="width:327px"></td></tr><tr id="0042a242-8bcc-43ff-9f81-ed43770eb4ae"><td id="ewgz" class="block-color-teal_background" style="width:349px">list all outdated global packages</td><td id="SlUP" class="block-color-teal_background" style="width:320px">npm outdated -g --depth=0</td><td id="dG&gt;u" class="block-color-teal_background" style="width:327px"></td></tr><tr id="855cf1a9-1507-4f69-9a20-b54b08c22787"><td id="ewgz" class="block-color-blue_background" style="width:349px">list all package versions available for download</td><td id="SlUP" class="block-color-blue_background" style="width:320px">npm show &lt;package&gt; versions</td><td id="dG&gt;u" class="block-color-blue_background" style="width:327px"></td></tr><tr id="270512a0-1c64-4cb8-91b0-9dc51499bdc8"><td id="ewgz" class="block-color-blue_background" style="width:349px">list all the dependencies for a package version</td><td id="SlUP" class="block-color-blue_background" style="width:320px">npm view react@17.0.0 dependencies</td><td id="dG&gt;u" class="block-color-blue_background" style="width:327px"><a href="https://docs.npmjs.com/cli/v8/commands/npm-view">https://docs.npmjs.com/cli/v8/commands/npm-view</a></td></tr><tr id="861d3a55-a365-4c16-9e78-efc8812f410b"><td id="ewgz" class="block-color-purple_background" style="width:349px">list all packages where name, desc, author, date, latest version, or keywords include your search term </td><td id="SlUP" class="block-color-purple_background" style="width:320px">npm search react</td><td id="dG&gt;u" class="block-color-purple_background" style="width:327px"></td></tr><tr id="97494fa6-1068-4937-a493-ba09418ca753"><td id="ewgz" class="block-color-gray_background" style="width:349px">run test scripts from a menu</td><td id="SlUP" class="block-color-gray_background" style="width:320px">npm t</td><td id="dG&gt;u" class="block-color-gray_background" style="width:327px"></td></tr><tr id="a135dae2-1450-4333-bb07-eead9632a13d"><td id="ewgz" class="block-color-pink_background" style="width:349px">upgrade npm on windows</td><td id="SlUP" class="block-color-pink_background" style="width:320px">npm i -g npm@latest</td><td id="dG&gt;u" class="block-color-pink_background" style="width:327px"></td></tr><tr id="9f37e57f-efdf-4ded-8d3c-92b7a1a85e83"><td id="ewgz" class="block-color-pink_background" style="width:349px">upgrade npm on linux</td><td id="SlUP" class="block-color-pink_background" style="width:320px">nvm install-latest-npm</td><td id="dG&gt;u" class="block-color-pink_background" style="width:327px"></td></tr><tr id="d29504e6-c69b-4a4d-878b-6a0f687349e4"><td id="ewgz" class="block-color-red_background" style="width:349px">verify npm settings (can take a long time)</td><td id="SlUP" class="block-color-red_background" style="width:320px">npm doctor</td><td id="dG&gt;u" class="block-color-red_background" style="width:327px"></td></tr><tr id="75b45d49-3a80-444f-992f-6e9ef05bf18f"><td id="ewgz" class="block-color-red_background" style="width:349px">view or change npm registry settings</td><td id="SlUP" class="block-color-red_background" style="width:320px">npm profile get [&lt;key&gt;]
+npm profile set &lt;key&gt; &lt;value&gt;
+Run &quot;npm help profile&quot; for more info</td><td id="dG&gt;u" class="block-color-red_background" style="width:327px"></td></tr></tbody></table><figure id="f9b373ba-f412-4f36-bca6-eebc54e7d6d4" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/npx%20f9b373baf4124f36bca6eebc54e7d6d4.html"><span class="icon">🗻</span>npx</a></figure><figure id="28b50198-09bb-41c0-9844-1807dd600808" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/javascript%20-%20Where%20does%20npm%20install%20packages%20-%20Sta%2028b5019809bb41c098441807dd600808.html">javascript - Where does npm install packages? - Stack Overflow</a></figure><figure id="62f12eae-48e2-4914-a77e-c02574a26ba2" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/Create%20an%20NPM%20package%20on%20GitHub%2062f12eae48e24914a77ec02574a26ba2.html">Create an NPM package on GitHub</a></figure><figure id="d4c3a627-316d-49f4-88d9-4be36a7a9c02" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/Creating%20a%20React%20Component%20Library%20by%20Abstracting%20%20d4c3a627316d49f488d94be36a7a9c02.html">Creating a React Component Library by Abstracting a React Component Library</a></figure><figure id="1fdf5e12-6f9c-480f-9d1f-18c352f77caf" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/Why%20isn&#x27;t%20the%20npm%20link%20command%20working%201fdf5e126f9c480f9d1f18c352f77caf.html">Why isn&#x27;t the npm link command working?</a></figure><figure id="31ad4a5f-8338-454c-9d2d-f3296345f039" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/These%20NPM%20tricks%20will%20make%20you%20a%20pro%2031ad4a5f8338454c9d2df3296345f039.html">These NPM tricks will make you a pro</a></figure><figure id="2558d2b5-ee1f-4634-8811-2ba55936b111" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/javascript%20-%20Use%20of%20@%20symbol%20in%20Node%20module%20names%20%202558d2b5ee1f463488112ba55936b111.html">javascript - Use of @ symbol in Node module names - Stack Overflow</a></figure><figure id="ae829c90-6aeb-4e40-a912-5b40315f6ae3" class="link-to-page"><a href="npm%204ff9047845b64541b1ad4dfc4d5700c6/npm%20misc%20ae829c906aeb4e40a9125b40315f6ae3.html">npm misc</a></figure><p id="720b7d27-bba4-4138-be49-e8788ffb3930" class="">
+</p></div></article></body></html>
