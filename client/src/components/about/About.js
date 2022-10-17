@@ -78,7 +78,7 @@ export const About = () => {
           <div className = "box"></div>
         </section>
         <section className="aboutSection3">
-          <h1 className="aboutTitle">Why should I be on your project?</h1>
+          <h1 className="aboutTitle">Why I should be on your project?</h1>
           <h2 className="aboutSubtitle">
             Because I'm confident I can come up with a solution for any programming problem.
           </h2>
