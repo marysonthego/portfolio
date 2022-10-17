@@ -1,10 +1,10 @@
 {
   "name": "marysonthego.tech",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Portfolio",
   "type": "module",
   "homepage": "https://marysonthego.tech/",
-  "author": "Mary Clark <marysonthego@gmail.com> (https://marysonthego.tech)",
+  "author": "Mary Clark <mary@marysonthego.tech> (https://marysonthego.tech)",
   "repository": {
     "type": "git",
     "url": "https://github.com/marysonthego/portfolio.git"
