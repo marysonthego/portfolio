@@ -1,11 +1,23 @@
 import React from 'react';
+import { useLocation } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export function Post09() {
+  const location = useLocation();
 
+  const Created = "March 10, 2022";
   let TopPic = "media/python.png";
   let Title = "90% of Python3";
+
+  if (location.pathname.toString() === "/blog") {
+    return (
+      <span>
+        <span className="blog">{Title}</span>
+        <h2 className="itemDate">{Created}</h2>
+      </span>
+    );
+  }
 
   let code1 = `marys@G7-7790 MINGW64 /c/users/marys/desktop/python
 $ python3
@@ -682,7 +694,7 @@ let code13 = `line 423 in script.py`;
         Enter <code>python3</code> at a command prompt
       </p>
       <p className="p-text">
-        The pyton prompt looks like this: <code>&gt;&gt;&gt;</code>
+        The python prompt looks like this: <code>&gt;&gt;&gt;</code>
       </p>
       <p className="p-text">
         Type <code>help()</code> to get module or keyword help
@@ -708,7 +720,7 @@ let code13 = `line 423 in script.py`;
         >
           {code2}
         </SyntaxHighlighter>
-      <h5 className="subsub">Indent code blocks with <code>tab</code> or 4 spaces</h5>
+      <h5 className="subsub">Indent code blocks with <code>tab</code> or <code>4 spaces</code> not 2 spaces!</h5>
       <SyntaxHighlighter
           language="python"
           style={nightOwl}

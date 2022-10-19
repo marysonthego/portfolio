@@ -6,6 +6,7 @@ main.container {
   background-color: #f5f3f3;
   width: 80%;
   height: 100%;
+  padding-bottom: 5%;
 }
 section.blogList {
   display: inline;
@@ -59,8 +60,8 @@ a.listItem:hover {
   height: 100%;
 }
 
-span.blog, h1.blog {
-  font-size: 30px;
+span.blog {
+  font-size: 22px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   padding: 10px 0px;

@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { useLocation } from "react-router-dom";
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import nodejsFile from './content/nodejs.txt';
@@ -20,6 +22,19 @@ function Notes(fileName) {
 }
 
 export function Post07() {
+  const location = useLocation();
+  const Created = "May 10, 2022";
+  let TopPic = "media/node.png";
+  let Title = "Node JS Guide";
+
+  if (location.pathname.toString() === "/blog") {
+    return (
+      <span>
+        <span className="blog">{Title}</span>
+        <h2 className="itemDate">{Created}</h2>
+      </span>
+    );
+  }
 
   const nodejs = Notes(nodejsFile);
   const http = Notes(httpFile);
@@ -29,8 +44,7 @@ export function Post07() {
   const dependencies = Notes(dependenciesFile);
   const debugging = Notes(debuggingFile);
 
-  let TopPic = "media/node.png";
-  let Title = "Node JS Guide";
+
 
   let code1 = `/d/Repo$ npx create-react-app app
 

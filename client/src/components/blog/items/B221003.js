@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import useWindowDimensions from "components/helpers/UseWindowDimensions";
 
-export const I100322 = () => {
+export const B221003 = () => {
   const location = useLocation();
   const { width, height } = useWindowDimensions();
   let iwidth = width * 0.8 * 0.8;

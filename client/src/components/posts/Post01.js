@@ -1,8 +1,20 @@
+import { useLocation } from "react-router-dom";
 
 export const Post01 = () => {
+  const location = useLocation();
   let TopPic = "media/amazon600.png";
   let Title =
-    "How to use Amazon App Store to run React Native Apps";
+    "Use Amazon App Store to run React Native Apps";
+  const Created = "February 28, 2022";
+
+  if (location.pathname.toString() === "/blog") {
+    return (
+      <span>
+        <span className="blog">{Title}</span>
+        <h2 className="itemDate">{Created}</h2>
+      </span>
+    );
+  }
 
   let Section1 = (
     <div>

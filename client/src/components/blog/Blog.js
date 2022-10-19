@@ -1,8 +1,14 @@
-import { Inpm } from "./items/Inpm";
-import { I100322 } from "./items/I100322";
-import { I092522 } from "./items/I092522";
-import { I092722 } from "./items/I092722";
-import { Template } from "./items/template";
+import { Bnpm } from "./items/Bnpm";
+import { B221003 } from "./items/B221003";
+import { B220927 } from "./items/B220927";
+import {Post00} from "components/posts/Post00";
+import {Post01} from "components/posts/Post01";
+import {Post02} from "components/posts/Post02";
+import {Post05} from "components/posts/Post05";
+import {Post07} from "components/posts/Post07";
+import {Post09} from "components/posts/Post09";
+import {ArrowFunctions} from "components/posts/ArrowFunctions";
+import { Btemplate } from "./items/Btemplate";
 
 export const Blog = () => {
   let PageTitle = "The Blog";
@@ -11,30 +17,93 @@ export const Blog = () => {
     <main className="container">
       <h1 className="blog">{PageTitle}</h1>
       <section className="blogList">
-        <a className="listItem" href="/Inpm">
+        <a className="listItem" href="/Bnpm">
           <img
             className="blogListImg"
             src="media/npmpackagesw200.jpg"
           />{" "}
-          {Inpm()}
+          {Bnpm()}
         </a>
       </section>
       <section className="blogList">
-        <a className="listItem" href="/I100322">
+        <a className="listItem" href="/B221003">
           <img
             className="blogListImg"
             src="media/secretsw200.jpg"
           />{" "}
-          {I100322()}
+          {B221003()}
         </a>
       </section>
       <section className="blogList">
-        <a className="listItem" href="/template">
+        <a className="listItem" href="/post07">
+          <img
+            className="blogListImg"
+            src="media/nodew200.png"
+          />{" "}
+          {Post07()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/arrowfunctions">
+          <img
+            className="blogListImg"
+            src="media/arrow200.png"
+          />{" "}
+          {ArrowFunctions()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/post09">
+          <img
+            className="blogListImg"
+            src="media/pythonw200.png"
+          />{" "}
+          {Post09()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/post01">
+          <img
+            className="blogListImg"
+            src="media/amazonw200.png"
+          />{" "}
+          {Post01()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/post00">
+          <img
+            className="blogListImg"
+            src="media/reactnativeoptw200.png"
+          />{" "}
+          {Post00()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/post02">
+          <img
+            className="blogListImg"
+            src="media/post02top03w200.png"
+          />{" "}
+          {Post02()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/post05">
+          <img
+            className="blogListImg"
+            src="media/avifw200.png"
+          />{" "}
+          {Post05()}
+        </a>
+      </section>
+      <section className="blogList">
+        <a className="listItem" href="/Btemplate">
           <img
             className="blogListImg"
             src="media/template1w200.jpg"
           />{" "}
-          {Template()}
+          {Btemplate()}
         </a>
       </section>
     </main>

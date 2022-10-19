@@ -6,7 +6,7 @@ const Title = "npm quick reference";
 const Created = "October 17, 2022";
 const TopImage = "media/npmpackagesw640.jpg";
 
-export const Inpm = () => {
+export const Bnpm = () => {
   const location = useLocation();
   if (location.pathname.toString() === "/blog") {
     return (

@@ -1,9 +1,23 @@
+import { useLocation } from "react-router-dom";
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 export const Post05 = () => {
+  const location = useLocation();
+  const Created = "October 10, 2021";
   let TopPic = "media/avif400x400.png";
   let Title =
-    "Save Space with the  AVIF Image Format";
+    "Save Space with the AVIF Image Format";
+
+  if (location.pathname.toString() === "/blog") {
+    return (
+      <span>
+        <span className="blog">{Title}</span>
+        <h2 className="itemDate">{Created}</h2>
+      </span>
+    );
+  }
 
   let code= `<img
     src="/images/millslakermnp.avif"

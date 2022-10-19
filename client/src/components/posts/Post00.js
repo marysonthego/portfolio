@@ -1,8 +1,20 @@
+import { useLocation } from "react-router-dom";
 
 export const Post00 = () => {
+  const location = useLocation();
   let TopPic = "media/reactnativetopt.png";
   let Title =
-    "How to Setup a React Native Development Environment in Windows";
+    "Setup React Native Development in Windows";
+  const Created = "February 28, 2022";
+
+    if (location.pathname.toString() === "/blog") {
+      return (
+        <span>
+          <span className="blog">{Title}</span>
+          <h2 className="itemDate">{Created}</h2>
+        </span>
+      );
+    }
 
   let Section1 = (
     <div>

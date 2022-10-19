@@ -9,11 +9,11 @@ import {
 import {About} from "components/about/About";
 import App from "./App";
 import {Blog} from "components/blog/Blog";
-import {Inpm} from "components/blog/items/Inpm";
-import {I100322} from "components/blog/items/I100322";
-import {I092722} from "components/blog/items/I092722";
-import {I092522} from "components/blog/items/I092522";
-import {Template} from "components/blog/items/template";
+import {ArrowFunctions} from "components/posts/ArrowFunctions";
+import {Bnpm} from "components/blog/items/Bnpm";
+import {B221003} from "components/blog/items/B221003";
+import {B220927} from "components/blog/items/B220927";
+import {Btemplate} from "components/blog/items/Btemplate";
 import {Navigation} from "components/top/Navigation";
 import {ScrollToTop} from "components/top/ScrollToTop";
 import {Projects} from "components/demos/Projects";
@@ -102,11 +102,11 @@ ReactDOM.render(
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/inpm" element={<Inpm />} />
-            <Route path="/i100322" element={<I100322 />} />
-            <Route path="/i092722" element={<I092722 />} />
-            <Route path="/i092522" element={<I092522 />} />
-            <Route path="/template" element={<Template />} />
+            <Route path="/arrowfunctions" element={<ArrowFunctions />} />
+            <Route path="/Bnpm" element={<Bnpm />} />
+            <Route path="/B221003" element={<B221003 />} />
+            <Route path="/B220927" element={<B220927 />} />
+            <Route path="/Btemplate" element={<Btemplate />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/dashboard" element={<DashIframe />} />
             <Route path="/stepper" element={<StepperIframe />} />

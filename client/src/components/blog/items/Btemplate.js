@@ -4,13 +4,13 @@ import useWindowDimensions from "components/helpers/UseWindowDimensions";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export const Template = () => {
+export const Btemplate = () => {
   const location = useLocation();
   const { width, height } = useWindowDimensions();
   let iwidth = width * 0.8 * 0.8;
   let iheight = height;
 
-  const Title = "Template Title";
+  const Title = "Blog Template";
   const Created = "Some-month 01, 2022";
   const TopImage = "media/template1.jpg";
 
