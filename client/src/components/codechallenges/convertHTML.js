@@ -14,7 +14,36 @@ convertHTML("abc") should return the string abc.
 */
 
 function convertHTML(str) {
+  const resultArr = [];
+  let myArr = str.split('');
+  for(let i=0; i<myArr.length; i++) {
+    switch (myArr[i]) {
+      case '"':
+        if(i===0) break;
+        if(i===myArr.length) break;
+        resultArr.push('&quot;');
+        break;
+      case "&":
+        resultArr.push("&amp;");
+        break;
+      case "<":
+        resultArr.push('&lt;');
+        break;
+      case ">":
+        resultArr.push('&gt;');
+        break;
+      case "'":
+        resultArr.push('&apos;');
+        break;
+      default:
+        resultArr.push(myArr[i]);
+        break;
+    }
+  }
+  str = resultArr.join("");
   return str;
 }
 
-console.log(convertHTML("Dolce & Gabbana"));
+console.log(convertHTML('Stuff in "quotation marks"'));
+console.log(convertHTML("Schindler's List"));
+
