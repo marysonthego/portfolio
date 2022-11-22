@@ -8,7 +8,7 @@ export const B221003 = () => {
   let iwidth = width * 0.8 * 0.8;
   let iheight = height;
 
-  const Title = "Secrets of Array.reduce Part 1";
+  const Title = "Secrets of Array.reduce";
   const Created = "October 03, 2022";
   const TopImage = "media/secretsw640.jpg";
 

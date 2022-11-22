@@ -67,18 +67,42 @@ span.blog {
   padding: 10px 0px;
 }
 
+h1.blog {
+  width: 100%;
+}
+
 h2.blog {
   align-items: normal;
   font-size: 24px;
   font-weight: 500;
   color: rgb(0, 0, 0);
-  padding: 10px 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+h3.blog {
+  align-items: normal;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+  padding-bottom: 0px;
 }
 
 div.h2Box {
-  border-color: rgb(148, 148, 148);
+  border-color: rgb(196, 196, 196);
   border-style: solid;
   border-width: 2px;
+  padding: 10px 10px;
+}
+
+div.h3Box {
+  background-color: #ebe7e7;
+  border-color: rgb(214, 212, 212);
+  border-style: solid;
+  border-width: 2px;
+  padding: 10px 10px;
 }
 
 h2.blogBox {
@@ -112,7 +136,7 @@ li.blogLi {
 
 .blogText {
   font-size: 20px;
-  padding: 10px 0px;
+  padding-top: 10px;
   text-align: justify;
   font-weight: 400;
   width: 80%;
@@ -121,11 +145,11 @@ li.blogLi {
 
 .blogNote {
   font-size: 16px;
-  padding: 10px 0px;
+  padding-top: 10px;
   text-align: justify;
   font-weight: 400;
   width: 80%;
-  line-height: 110%;
+  line-height: 100%;
 }
 
 .itemDate {
