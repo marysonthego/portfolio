@@ -4,5 +4,20 @@
     "": true,
     "**/node_modules": false
   },
-  "search.useGlobalIgnoreFiles": true
+  "search.useGlobalIgnoreFiles": true,
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "localMySQL80",
+      "username": "root",
+      "password": "mysqlroot",
+      "database": "modern_database_management_13e"
+    }
+  ]
 }

@@ -11,6 +11,7 @@ import App from "./App";
 import {Blog} from "components/blog/Blog";
 import {ArrowFunctions} from "components/posts/ArrowFunctions";
 import {Bnpm} from "components/blog/items/Bnpm";
+import {B221121} from "components/blog/items/B221121";
 import {B221003} from "components/blog/items/B221003";
 import {B220927} from "components/blog/items/B220927";
 import {Btemplate} from "components/blog/items/Btemplate";
@@ -104,6 +105,7 @@ ReactDOM.render(
             <Route path="/blog" element={<Blog />} />
             <Route path="/arrowfunctions" element={<ArrowFunctions />} />
             <Route path="/Bnpm" element={<Bnpm />} />
+            <Route path="/B221121" element={<B221121 />} />
             <Route path="/B221003" element={<B221003 />} />
             <Route path="/B220927" element={<B220927 />} />
             <Route path="/Btemplate" element={<Btemplate />} />

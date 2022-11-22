@@ -13,7 +13,6 @@ dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;}) should return [3, 9, 
 */
 
 function dropElements(arr, func) {
-  //let myArr = [];
   for(let i=0; i< arr.length; i++) {
     if(func(arr[i])) {
       arr.splice(0,i);
