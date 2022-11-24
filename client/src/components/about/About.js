@@ -30,7 +30,7 @@ export const About = () => {
             )
           </h2>
           <ul className="ulReact">
-            <li className="aboutText">React/NodeJS/Express 2020-Now</li>
+            <li className="aboutText"><a href='https://reactjs.org/'  target="_blank"><img src='https://marysonthego.tech/media/react20.png'/></a>{" "}React/NodeJS/Express 2020-Now</li>
           </ul>
           <ul className="ulSubCircle">
             <li className="aboutSubText">
@@ -39,7 +39,7 @@ export const About = () => {
             </li>
           </ul>
           <ul className="ulCA">
-            <li className="aboutText">CA Technologies 2007-2018</li>
+            <li className="aboutText"><a href='https://www.broadcom.com/'  target="_blank"><img src='https://marysonthego.tech/media/ca.png'/></a>{" "}CA Technologies 2007-2018</li>
           </ul>
           <ul className="ulSubCircle">
             <li className="aboutSubText">
@@ -54,7 +54,7 @@ export const About = () => {
             </li>
           </ul>
           <ul className="ulNortel">
-            <li className="aboutText">Nortel Networks 1998-2001</li>
+            <li className="aboutText"><a href='https://www.nortel-us.com/' target="_blank"><img src='https://marysonthego.tech/media/nortel.png'/></a>{" "}Nortel Networks 1998-2001</li>
           </ul>
           <ul className="ulSubCircle">
             <li className="aboutSubText">Java programming</li>
@@ -64,7 +64,7 @@ export const About = () => {
             </li>
           </ul>
           <ul className="ulTI">
-            <li className="aboutText">Texas Instruments 1990-1998</li>
+            <li className="aboutText"><a href='https://www.ti.com/about-ti/company/overview.html' target="blank"><img src='https://marysonthego.tech/media/ti.png'/></a>{" "}Texas Instruments 1990-1998</li>
           </ul>
           <ul className="ulSubCircle">
             <li className="aboutSubText">

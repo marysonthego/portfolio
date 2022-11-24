@@ -1,4 +1,5 @@
 import { Bnpm } from "./items/Bnpm";
+import {B221123} from "./items/B221123";
 import {B221121} from "./items/B221121";
 import { B221003 } from "./items/B221003";
 import { B220927 } from "./items/B220927";
@@ -17,6 +18,15 @@ export const Blog = () => {
   return (
     <main className="container">
       <h1 className="blog">{PageTitle}</h1>
+      <section className="blogList">
+        <a className="listItem" href="/B221123">
+          <img
+            className="blogListImg"
+            src="media/mysql-buttonx200blue.jpg"
+          />{" "}
+          {B221123()}
+        </a>
+      </section>
       <section className="blogList">
         <a className="listItem" href="/B221121">
           <img

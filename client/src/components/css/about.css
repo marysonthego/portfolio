@@ -79,29 +79,29 @@ ul.ulTopCircle {
 }
 
 ul.ulReact {
-  list-style-type: circle;
-  list-style-image: url('http://localhost:3000/media/react20.png');
+  /* list-style-type: circle; */
+  list-style-image: url('https: //marysonthego.tech/media/react20.png');
   padding: 0;
   margin: 0 0 2% 2%;
 }
 
 ul.ulCA {
-  list-style-type: circle;
-  list-style-image: url('http://localhost:3000/media/ca.png');
+  /* list-style-type: circle; */
+  list-style-image: url('https://marysonthego.tech/media/ca.png');
   padding: 0;
   margin: 0 0 2% 2%;
 }
 
 ul.ulNortel {
-  list-style-type: circle;
-  list-style-image: url('http://localhost:3000/media/nortel.png');
+  /* list-style-type: circle; */
+  list-style-image: url('https://marysonthego.tech/media/nortel.png');
   padding: 0;
   margin: 0 0 2% 2%;
 }
 
 ul.ulTI {
-  list-style-type: circle;
-  list-style-image: url('http://localhost:3000/media/ti.png');
+  /* list-style-type: circle; */
+  list-style-image: url('https://marysonthego.tech/media/ti.png');
   padding: 0;
   margin: 0 0 2% 2%;
 }
