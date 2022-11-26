@@ -3,7 +3,6 @@ import {WeatherApi} from "components/demos/WeatherApi";
 import {NucatIframe} from "components/demos/NucatIframe";
 import DashIframe from "components/demos/DashIframe";
 import StepperIframe from "components/demos/StepperIframe";
-import CodeChallenges from "components/codechallenges/CodeChallenges";
 import {Post10} from "components/posts/Post10";
 import {Post11} from "components/posts/Post11";
 

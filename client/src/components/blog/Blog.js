@@ -23,6 +23,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/mysql-buttonx200blue.jpg"
+            alt=""
           />{" "}
           {B221123()}
         </a>
@@ -32,6 +33,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/mysql-buttonx200blue.jpg"
+            alt=""
           />{" "}
           {B221121()}
         </a>
@@ -41,6 +43,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/npmpackagesw200.jpg"
+            alt=""
           />{" "}
           {Bnpm()}
         </a>
@@ -50,15 +53,29 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/secretsw200.jpg"
+            alt=""
           />{" "}
           {B221003()}
         </a>
       </section>
+
+      <section className="blogList">
+        <a className="listItem" href="/B220927">
+          <img
+            className="blogListImg"
+            src="media/routew200.png"
+            alt=""
+          />{" "}
+          {B220927()}
+        </a>
+      </section>
+
       <section className="blogList">
         <a className="listItem" href="/post07">
           <img
             className="blogListImg"
             src="media/nodew200.png"
+            alt=""
           />{" "}
           {Post07()}
         </a>
@@ -68,6 +85,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/arrow200.png"
+            alt=""
           />{" "}
           {ArrowFunctions()}
         </a>
@@ -77,6 +95,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/pythonw200.png"
+            alt=""
           />{" "}
           {Post09()}
         </a>
@@ -86,6 +105,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/amazonw200.png"
+            alt=""
           />{" "}
           {Post01()}
         </a>
@@ -95,6 +115,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/reactnativeoptw200.png"
+            alt=""
           />{" "}
           {Post00()}
         </a>
@@ -104,6 +125,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/post02top03w200.png"
+            alt=""
           />{" "}
           {Post02()}
         </a>
@@ -113,6 +135,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/avifw200.png"
+            alt=""
           />{" "}
           {Post05()}
         </a>
@@ -122,6 +145,7 @@ export const Blog = () => {
           <img
             className="blogListImg"
             src="media/template1w200.jpg"
+            alt=""
           />{" "}
           {Btemplate()}
         </a>

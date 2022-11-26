@@ -8,15 +8,16 @@ export const B220927 = () => {
 
   const Title = "Conditional Routing with React Router v6";
   const Created = "Sept 27, 2022";
+  const TopImage = "media/route.png";
 
-  if(location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/blog") {
     return (
-      <>
-        <div>{Title}</div>
-        <div className = 'listDate'>{Created}</div>
-      </>
+      <span>
+        <span className="blog">{Title}</span>
+        <h2 className="itemDate">{Created}</h2>
+      </span>
     );
-  };
+  }
 
   const Code1 = () => {
     return (
@@ -30,42 +31,55 @@ export const B220927 = () => {
     )
   }
 
-  const text1 = <p className = 'itemText'>As you upgrade to React Router v6, you may find that your conditional routing is not working as expected. This is because the new version of React Router uses a new method of routing. The new method is called <code>Routes</code>. The Routes method uses a Routes component to wrap the routes. The Routes component is a child of the <code>BrowserRouter</code> component.</p>;
+  const Code2 = () => {
+    return (
+      <SyntaxHighlighter
+      language="jsx"
+      style={nightOwl}
+      wrapLongLines
+      >
+        {Syntax2}
+    </SyntaxHighlighter>
+    )
+  }
 
-  const text2 = <p className = 'itemText'>Let's see how it works!</p>;
+  const text1 = <p className = "itemText">If you upgrade to React Router v6, you may find that your conditional routing is not working as expected. This is because React Router v6 uses a new method of routing called <code>Routes</code>. The Routes method uses a Routes component to wrap the list of individual routes. The Routes component is a child of the <code>BrowserRouter</code> component.</p>;
 
-  const text3 = <p className = 'itemText'>If you have <code>React-Router</code> installed, go ahead and uninstall it. You'll need <code>React-Router-Dom</code> instead.</p>;
+  const text2 = <p className = "itemText">Let\'s see how it works!</p>;
 
-  const Syntax1 = `"dependencies": {
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "memorystore": "^1.6.7",
-    "mysql2": "^2.3.3",
-    "passport": "^0.5.2",
-    "passport-local": "^1.0.0"
-  },
+  const text3 = <p className = "itemText">If you have <code>react-router</code> installed, go ahead and uninstall it. You'll need <code>react-router-dom</code> instead.</p>;
+
+  const text4 = <p className = "itemText">In our example, all the routing will be defined in <code>index.js</code>, so add this at the top of <code>index.js</code>: </p>
+
+  let Syntax1 = `npm un react-router
+    ...
+npm i react-router-dom
   `;
 
+  const Syntax2 = `import React from "react";
+  import ReactDOM from "react-dom";
+  import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+  } from "react-router-dom";`
+
   return (
-    <main>
-      <article className = 'itemArticle'>
-        <h1 className = 'itemTitle'>{Title}</h1>
-        <h6 className = 'itemDate'>{Created}</h6>
-        <section className = 'itemSection'>
-          <>{text1}</>
+    <main className="container">
+      <article className="blog">
+        <img src={TopImage} title="mountain path" className="blogImg" alt="mountain path" />
+        <h1 className="blog">{Title}</h1>
+        <h2 className="itemDate">{Created}</h2>
+        <>{text1}</>
           <>{text2}</>
           <>{text3}</>
           <Code1 />
-          <br/><br/>
-        </section>
+          <>{text4}</>
+          <Code2 />
       </article>
     </main>
+
     );
 
 }

@@ -36,53 +36,112 @@ if(process.env.NODE_ENV === 'dev') {
   router.use(express.static(path.join(__dirname, '/public')));
 }
 
-const putResponseInRequest = function(req, res, next) {
-  console.log('putResponseInRequest');
-  res.response = function (obj) {
-      req.res = obj;
-  }
-  next();
-}
+// const putResponseInRequest = function(req, res, next) {
+//   console.log('putResponseInRequest');
+//   res.response = function (obj) {
+//       req.res = obj;
+//   }
+//   next();
+// }
 
-const beforeMiddleware = function(req, res, next) {
-console.log('beforeMiddleware');
-next();
-}
+// const beforeMiddleware = function(req, res, next) {
+// console.log('beforeMiddleware');
+// next();
+// }
 
-const responseHandler = function(req, res, next) {
-  console.log('responseHandler');
-  console.log(`req.res `,req.res);
-}
+// const responseHandler = function(req, res, next) {
+//   console.log('responseHandler');
+//   console.log(`req.res `,req.res);
+// }
 
-const handler = function(req, res, next) {
-  console.log('handler');
-  let sql = 'SELECT * FROM todos';
-  pool.execute(sql, (error, results) => {
-    if(error) throw error;
-    res.response({results});
-    responseHandler(req, res, next);
-    next();
-  });
-};
+// const handler = function(req, res, next) {
+//   console.log('handler');
+//   let sql = 'SELECT * FROM todos';
+//   pool.execute(sql, (error, results) => {
+//     if(error) throw error;
+//     res.response({results});
+//     responseHandler(req, res, next);
+//     next();
+//   });
+// };
 
-const afterMiddleware = function(req, res, next) {
-  console.log('afterMiddleware');
-  next();
-}
+// const afterMiddleware = function(req, res, next) {
+//   console.log('afterMiddleware');
+//   next();
+// }
 
-const finalResponseHandler = function(req, res, next) {
-  console.log('finalResponseHandler');
-  console.log(`req.res: `, req.res);
-  res.status(200).send(req.res);
-};
+// const finalResponseHandler = function(req, res, next) {
+//   console.log('finalResponseHandler');
+//   console.log(`req.res: `, req.res);
+//   res.status(200).send(req.res);
+// };
 
 //router.get("/api/todos/all", putResponseInRequest, beforeMiddleware, handler, afterMiddleware, finalResponseHandler);
+
+// get entry by entryName
+router.get("/api/blog/entry/:entryname", async (req, res, next) => {
+  let entryname = req.params.entryname;
+  try
+  {
+    let sql = 'SELECT entryId, entryName, entryTitle, pubDate, updateDate, category FROM entry WHERE entryName = ?';
+
+    pool.execute(sql, [entryname], (error, results) => {
+      if(error) throw error;
+      if(results.length > 0) {
+        req.session.id = results[0].entryId;
+        next();
+        //return res.status(200).json(results);
+      }
+      return res.status(404).json(error);
+    })
+  } catch (err) {
+    return res.status(500).json(err.message);
+  }
+});
+
+// get all sections for entryId
+router.get("/api/blog/entry", (req, res) => {
+  try {
+    console.log(`in /api/blog/entry next`);
+    let sql = 'SELECT * FROM section WHERE entryId = ?';
+
+    pool.execute(sql, [req.session.id], (error, results) => {
+      if(error) throw error;
+      if(results.length > 0){
+        res.status(200).json(results);
+      } else {
+        res.status(404).send('No records found');
+      }
+    })
+  } catch (error) {
+    return res.status(500).json(error.message);
+     }
+ });
+
+// get customer by custid
+router.get("/api/getcustomerbycustid/:custid", async (req, res) => {
+  let custid = req.params.custid;
+  try
+  {
+    let sql = 'SELECT custid, firstname, lastname, email, cell, addr1, addr2, city, st, zip, usertype, username, createdate FROM customer WHERE custid = ?';
+
+    pool.execute(sql, [custid], (error, results) => {
+      if(error) throw error;
+      if(results.length > 0) {
+        return res.status(200).json(results);
+      }
+      return res.status(404).json(error);
+    })
+  } catch (err) {
+    return res.status(500).json(err.message);
+  }
+});
 
 router.get("/api/todos/all", (req, res) => {
   try {
     console.log(`in /api/todos/all`);
     let sql = 'SELECT * FROM todos';
-    
+
     pool.execute(sql, (error, results) => {
       if(error) throw error;
       if(results.length > 0){
@@ -101,7 +160,7 @@ router.post("/api/todos/create", async (req, res) => {
     console.log(`in /api/todos/create`);
     const {
       title,
-      description, 
+      description,
       category,
       priority
     } = req.body;
@@ -153,7 +212,7 @@ router.get("/api/events/all", async (req, res) => {
   try {
     console.log(`in /api/events/all`);
     let sql = 'SELECT * FROM events';
-    
+
     pool.execute(sql, (error, results) => {
       if(error) throw error;
       if(results.length > 0) {
@@ -305,7 +364,7 @@ server.get('/*', (req, res) => {
   } else {
     res.sendFile(path.join(__dirname, '/public', 'index.html'));
   }
-  
+
 });
 
 server.listen(PORT, () => {

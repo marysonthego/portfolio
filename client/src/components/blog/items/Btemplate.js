@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import useWindowDimensions from "components/helpers/UseWindowDimensions";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+//import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+//import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const Btemplate = () => {
   const location = useLocation();
@@ -58,7 +58,7 @@ export const Btemplate = () => {
             src={TopImage}
             title="640x340 is ok"
             className="blogImg"
-            alt="Top Image Alt"
+            alt="Top Pic Alt"
           />
           <h1 className="blog">{Title}</h1>
           <h2 className="itemDate">{Created}</h2>
@@ -99,7 +99,7 @@ export const Btemplate = () => {
             src={TopImage}
             title="640x340 is ok"
             className="blogImg"
-            alt="Top Image Alt"
+            alt="Top Alt"
           />
           <h1 className="blog">{Title}</h1>
           <h2 className="itemDate">{Created}</h2>

@@ -1,14 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useWindowDimensions from "components/helpers/UseWindowDimensions";
-// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-// import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const B221121 = () => {
   const location = useLocation();
-  const { width, height } = useWindowDimensions();
-  let iwidth = width * 0.8 * 0.8;
-  let iheight = height;
 
   const Title = "MySQL Joins Part 1 - WHERE, ON, USING";
   const Created = "November 21, 2022";

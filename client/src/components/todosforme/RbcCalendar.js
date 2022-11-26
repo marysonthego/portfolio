@@ -16,7 +16,7 @@ export const RbC = ({
   console.log(`events: id`,events[i].id,`occurrenceId`, events[i].occurrenceId,`title`, events[i].title,`start`, events[i].start);
   }
 
-  const [select, setSelect] = useState(false);
+  const [, setSelect] = useState(false);
   const [calEvents, setCalEvents] = useState(events);
   let startTime = new Date();
   startTime.setHours(9, 0);
@@ -61,7 +61,7 @@ export const RbC = ({
     }
     eventCurrentSelect(newEvent);
   }
-  
+
   return (
     <Container fluid className="rbc-calendar">
       <Calendar

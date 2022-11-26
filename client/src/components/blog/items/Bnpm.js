@@ -1,10 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useWindowDimensions from "components/helpers/UseWindowDimensions";
+//import useWindowDimensions from "components/helpers/UseWindowDimensions";
 
 const Title = "npm quick reference";
 const Created = "October 17, 2022";
-const TopImage = "media/npmpackagesw640.jpg";
 
 export const Bnpm = () => {
   const location = useLocation();
@@ -33,6 +32,7 @@ export const Bnpm = () => {
             <img
               className="page-cover-image" src=
               "media/npmpackagesw640.jpg"
+              alt=""
               style={{ objectPosition: "center 50%" }}
             />
             <h1 className="page-title">npm</h1>
@@ -51,6 +51,7 @@ export const Bnpm = () => {
                   <div className="bookmark-href">
                     <img
                       src="https://docs.npmjs.com/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065"
+                      alt=""
                       className="icon bookmark-icon"
                     />
                     https://docs.npmjs.com/
@@ -58,6 +59,7 @@ export const Bnpm = () => {
                 </div>
                 <img
                   src="https://user-images.githubusercontent.com/29712634/81721690-e2fb5d80-9445-11ea-8602-4b2294c964f3.png"
+                  alt=""
                   className="bookmark-image"
                 />
               </a>
@@ -83,6 +85,7 @@ export const Bnpm = () => {
                   <div className="bookmark-href">
                     <img
                       src="https://docs.npmjs.com/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065"
+                      alt=""
                       className="icon bookmark-icon"
                     />
                     https://docs.npmjs.com/cli/v8/configuring-npm/package-json
@@ -90,6 +93,7 @@ export const Bnpm = () => {
                 </div>
                 <img
                   src="https://user-images.githubusercontent.com/29712634/81721690-e2fb5d80-9445-11ea-8602-4b2294c964f3.png"
+                  alt=""
                   className="bookmark-image"
                 />
               </a>

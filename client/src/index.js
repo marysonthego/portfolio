@@ -79,27 +79,27 @@ ReactDOM.render(
               href="https://twitter.com/marysonthego?ref_src=twsrc%5Etfw"
               className="twitter-follow-button"
               data-show-count="false"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               Follow @marysonthego
             </a>
             <a
               href="https://www.linkedin.com/in/mary-clark-33511214"
-              target="_blank">
+              target="_blank" rel="noreferrer">
               <img src="media/linkedin2.png" alt="LinkedIn"/>
             </a>
             <a
               href="https://github.com/marysonthego"
-              target="_blank">
+              target="_blank" rel="noreferrer">
               <img src="media/github.png" alt="Github"/>
             </a>
             <a
               href="https://my.indeed.com/p/maryc-6wv0hp8"
-              target="_blank">
+              target="_blank" rel="noreferrer">
               <img src="media/indeed.png" alt="Indeed"/>
             </a>
             <a href="https://github.com/marysonthego/portfolio"
-            target="_blank">This Site on Github</a>
+            target="_blank" rel="noreferrer">This Site on Github</a>
           </div>
           <Routes>
             <Route path="/about" element={<About />} />
