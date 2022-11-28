@@ -70,7 +70,7 @@ export const B221123 = () => {
                   <ul>
                     <li className="blogLi">
                       returns every row in the first table plus every row
-                      in the second table even when there are no matches. If there are no matches in the second table, null values are in the columns with no matches.
+                      in the second table even when there are no matches. If there are no matches in the second table, null values are shown in the columns with no matches.
                     </li>
                   </ul>
                 </li>
@@ -79,9 +79,8 @@ export const B221123 = () => {
                   <b>RIGHT OUTER JOIN</b>.
                   <ul>
                     <li className="blogLi">
-                      returns every row in the second table plus any matching
-                      rows in the first table. If there are no matches in the
-                      first table, no records from the first table are returned.
+                      returns every row in the second table plus every row in the first table even when there are no matches.
+                      If there are no matches in the first table, null values are shown in the columns with no matches.
                     </li>
                   </ul>
                 </li>
