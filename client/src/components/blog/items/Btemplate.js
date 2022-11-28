@@ -93,14 +93,15 @@ export const Btemplate = () => {
     return (
       <main className="container">
         <article className="blog">
+        <div className="blogImg">
           <img
             src={TopImage}
             title="640x340 is ok"
-            className="blogImg"
             alt="Top Alt"
           />
           <h1 className="blog">{Title}</h1>
           <h2 className="itemDate">{Created}</h2>
+          </div>
           <div className="h2Box">
             <h2 className="blogBox">
               <span>
@@ -115,21 +116,21 @@ export const Btemplate = () => {
           </div>
           <Sect1 />
           <Sect2 />
-          <div className="blogCode">
+          <div className="stackBlitz">
             <iframe
               title="StackBlitz"
-              width={iwidth * 0.8}
-              height={iheight * 0.8}
+              width={iwidth}
+              height={iheight}
               src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-sum-no-initial-value.js&hideExplorer=1&hideNavigation=1&view=editor"
             ></iframe>
           </div>
           <p className="blogText">Another thing.</p>
           <p className="blogNote">Here's an example:</p>
-          <div className="blogCode">
+          <div className="stackBlitz">
             <iframe
               title="StackBlitz"
-              width={iwidth * 0.8}
-              height={iheight * 0.8}
+              width={iwidth}
+              height={iheight}
               src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&hideNavigation=1&view=editor"
             ></iframe>
           </div>

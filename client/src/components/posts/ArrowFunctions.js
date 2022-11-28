@@ -7,7 +7,7 @@ export function ArrowFunctions() {
   const Created = "April 10, 2022";
   let TopPic = "media/arrow.jpg";
   let Title =
-    "Arrow Functions with Array.map()";
+    "Arrow Functions with Array.map";
 
   if (location.pathname.toString() === "/bloglist") {
     return (

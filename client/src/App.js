@@ -4,8 +4,8 @@ import {MainPage} from "components/top/MainPage";
 
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
-  console.log(`API_URL`, process.env.REACT_APP_API_URL);
-  console.log(`API_KEY`, process.env.REACT_APP_API_KEY);
+  //console.log(`API_URL`, process.env.REACT_APP_API_URL);
+  //console.log(`API_KEY`, process.env.REACT_APP_API_KEY);
 
   let location = useLocation();
 

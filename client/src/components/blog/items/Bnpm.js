@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 //import useWindowDimensions from "components/helpers/UseWindowDimensions";
 
 const Title = "npm quick reference";
-const Created = "October 17, 2022";
+const Created = "August 17, 2021";
 
 export const Bnpm = () => {
   const location = useLocation();

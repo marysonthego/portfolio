@@ -95,7 +95,9 @@ export const B221123 = () => {
   return (
     <main className="container">
       <article className="blog">
-        <img src={TopImage} title="Model" className="blogImg" alt="Model" />
+        <div className="blogImg" >
+          <img src={TopImage} title="Model" alt="Model" />
+        </div>
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
         <Sect1 />

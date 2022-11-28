@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes, Route, Navigate } from "react-router-dom";
 import {About} from "components/about/About";
 import App from "./App";
@@ -45,7 +45,7 @@ ReactDOM.render(
       TransitionComponent={Collapse}
       preventDuplicate
     >
-        <Router>
+        <BrowserRouter>
           <top.Navigation />
           <top.ScrollToTop className="ScrollToTop" />
           <div className="footer">&copy;2022&nbsp;marysonthego.tech
@@ -117,12 +117,12 @@ ReactDOM.render(
             <Route path="/post1008" element={<p10.Post1008 />} />
             <Route path="/examples" element={<ExpressExamples />} />
             <Route path="/routing" element={<ExpressFileRouting />} />
-            <Route path="expressmysql" element={<ExpressMysql />} />
-            <Route path="listtools" element={<AnimateListTools />} />
-            <Route path="expresssqlite" element={<ExpressSqlite />} />
+            <Route path="/expressmysql" element={<ExpressMysql />} />
+            <Route path="/listtools" element={<AnimateListTools />} />
+            <Route path="/expresssqlite" element={<ExpressSqlite />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
-        </Router>
+        </BrowserRouter>
     </SnackbarProvider>
   </CookiesProvider>,
   document.getElementById("root")

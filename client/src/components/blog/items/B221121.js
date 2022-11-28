@@ -78,29 +78,33 @@ export const B221121 = () => {
       <>
         <h2 className="blog">Some example joins</h2>
         <p className="blogText">
-          Let's look at some joins between the customer_t table and the order_t
+          Let's look at some examples using the customer_t table and the order_t
           table. The tables look like this:
         </p>
         <div>
           <h3 className="blog">customer_t table</h3>
           <p className="blogNote">15 rows returned</p>
-          <img
-            src="media/customer_t-list.png"
-            title="customer_t table"
-            className="blogImg"
-            alt="customer_t table"
-          />
+
+            <img
+              src="media/customer_t-list.png"
+              className="blogImg"
+              title="customer_t table"
+              alt="customer_t table"
+            />
+
           <br />
           <div>
             <h3 className="blog">order_t table</h3>
             <p className="blogNote">10 rows returned</p>
           </div>
+
           <img
             src="media/order_t-list.png"
-            title="order_t table"
             className="blogImg"
+            title="order_t table"
             alt="order_t table"
           />
+        
         </div>
         <br />
         <h3 className="blog">WHERE, ON, USING</h3>
@@ -249,7 +253,9 @@ export const B221121 = () => {
   return (
     <main className="container">
       <article className="blog">
-        <img src={TopImage} title="Model" className="blogImg" alt="Model" />
+        <div className="blogImg" >
+          <img src={TopImage} title="Model" alt="Model" />
+        </div>
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
         <Sect1 />

@@ -6,7 +6,7 @@ import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
 export function Post09() {
   const location = useLocation();
 
-  const Created = "March 10, 2022";
+  const Created = "September 09, 2021";
   let TopPic = "media/python.png";
   let Title = "90% of Python3";
 
