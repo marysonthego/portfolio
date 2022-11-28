@@ -9,7 +9,7 @@ export function ArrowFunctions() {
   let Title =
     "Arrow Functions with Array.map()";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

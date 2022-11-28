@@ -1,41 +1,30 @@
-import { Bnpm } from "./items/Bnpm";
-import {B221123} from "./items/B221123";
-import {B221121} from "./items/B221121";
-import { B221003 } from "./items/B221003";
-import { B220927 } from "./items/B220927";
-import {Post00} from "components/posts/Post00";
-import {Post01} from "components/posts/Post01";
-import {Post02} from "components/posts/Post02";
-import {Post05} from "components/posts/Post05";
-import {Post07} from "components/posts/Post07";
-import {Post09} from "components/posts/Post09";
-import {ArrowFunctions} from "components/posts/ArrowFunctions";
-import { Btemplate } from "./items/Btemplate";
+import * as items from "./items";
+import * as posts from '../posts';
 
-export const Blog = () => {
-  let PageTitle = "The Blog";
+export const BlogList = () => {
+  let PageTitle = "My BlogList";
 
   return (
     <main className="container">
       <h1 className="blog">{PageTitle}</h1>
       <section className="blogList">
-        <a className="listItem" href="/B221123">
+        <a className="listItem" href="/b221123">
           <img
             className="blogListImg"
             src="media/mysql-buttonx200blue.jpg"
             alt=""
           />{" "}
-          {B221123()}
+            {items.B221123()}
         </a>
       </section>
-      <section className="blogList">
+       <section className="blogList">
         <a className="listItem" href="/B221121">
           <img
             className="blogListImg"
             src="media/mysql-buttonx200blue.jpg"
             alt=""
           />{" "}
-          {B221121()}
+          {items.B221121()}
         </a>
       </section>
       <section className="blogList">
@@ -45,7 +34,7 @@ export const Blog = () => {
             src="media/npmpackagesw200.jpg"
             alt=""
           />{" "}
-          {Bnpm()}
+          {items.Bnpm()}
         </a>
       </section>
       <section className="blogList">
@@ -55,7 +44,7 @@ export const Blog = () => {
             src="media/secretsw200.jpg"
             alt=""
           />{" "}
-          {B221003()}
+          {items.B221003()}
         </a>
       </section>
 
@@ -66,7 +55,7 @@ export const Blog = () => {
             src="media/routew200.png"
             alt=""
           />{" "}
-          {B220927()}
+          {items.B220927()}
         </a>
       </section>
 
@@ -77,7 +66,7 @@ export const Blog = () => {
             src="media/nodew200.png"
             alt=""
           />{" "}
-          {Post07()}
+          {posts.Post07()}
         </a>
       </section>
       <section className="blogList">
@@ -87,7 +76,7 @@ export const Blog = () => {
             src="media/arrow200.png"
             alt=""
           />{" "}
-          {ArrowFunctions()}
+          {posts.ArrowFunctions()}
         </a>
       </section>
       <section className="blogList">
@@ -97,7 +86,7 @@ export const Blog = () => {
             src="media/pythonw200.png"
             alt=""
           />{" "}
-          {Post09()}
+          {posts.Post09()}
         </a>
       </section>
       <section className="blogList">
@@ -107,7 +96,7 @@ export const Blog = () => {
             src="media/amazonw200.png"
             alt=""
           />{" "}
-          {Post01()}
+          {posts.Post01()}
         </a>
       </section>
       <section className="blogList">
@@ -117,7 +106,7 @@ export const Blog = () => {
             src="media/reactnativeoptw200.png"
             alt=""
           />{" "}
-          {Post00()}
+          {posts.Post00()}
         </a>
       </section>
       <section className="blogList">
@@ -127,7 +116,7 @@ export const Blog = () => {
             src="media/post02top03w200.png"
             alt=""
           />{" "}
-          {Post02()}
+          {posts.Post02()}
         </a>
       </section>
       <section className="blogList">
@@ -137,17 +126,17 @@ export const Blog = () => {
             src="media/avifw200.png"
             alt=""
           />{" "}
-          {Post05()}
+          {posts.Post05()}
         </a>
       </section>
-      <section className="blogList">
+      <section className="BlogList">
         <a className="listItem" href="/Btemplate">
           <img
             className="blogListImg"
             src="media/template1w200.jpg"
             alt=""
           />{" "}
-          {Btemplate()}
+          {items.Btemplate()}
         </a>
       </section>
     </main>

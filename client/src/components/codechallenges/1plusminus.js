@@ -26,7 +26,7 @@
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-function plusMinus(arr) {
+export function plusMinus(arr) {
     let pos = 0;
     let neg = 0;
     let zero = 0;

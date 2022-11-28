@@ -7,7 +7,7 @@ export const Post01 = () => {
     "Use Amazon App Store to run React Native Apps";
   const Created = "February 28, 2022";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

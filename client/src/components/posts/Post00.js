@@ -7,7 +7,7 @@ export const Post00 = () => {
     "Setup React Native Development in Windows";
   const Created = "February 28, 2022";
 
-    if (location.pathname.toString() === "/blog") {
+    if (location.pathname.toString() === "/bloglist") {
       return (
         <span>
           <span className="blog">{Title}</span>

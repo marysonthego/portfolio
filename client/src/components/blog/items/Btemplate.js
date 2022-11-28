@@ -1,8 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import useWindowDimensions from "components/helpers/UseWindowDimensions";
-//import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-//import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const Btemplate = () => {
   const location = useLocation();
@@ -14,7 +12,7 @@ export const Btemplate = () => {
   const Created = "Some-month 01, 2022";
   const TopImage = "media/template1.jpg";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

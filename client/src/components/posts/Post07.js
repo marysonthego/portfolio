@@ -27,7 +27,7 @@ export function Post07() {
   let TopPic = "media/node.png";
   let Title = "Node JS Guide";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

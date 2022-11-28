@@ -2,22 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+  Routes, Route, Navigate } from "react-router-dom";
 import {About} from "components/about/About";
 import App from "./App";
-import {Blog} from "components/blog/Blog";
-import {ArrowFunctions} from "components/posts/ArrowFunctions";
-import {Bnpm} from "components/blog/items/Bnpm";
-import {B221123} from "components/blog/items/B221123";
-import {B221121} from "components/blog/items/B221121";
-import {B221003} from "components/blog/items/B221003";
-import {B220927} from "components/blog/items/B220927";
-import {Btemplate} from "components/blog/items/Btemplate";
-import {Navigation} from "components/top/Navigation";
-import {ScrollToTop} from "components/top/ScrollToTop";
+import {BlogList} from "components/blog/BlogList";
+
+import * as posts from "components/posts";
+
+import * as items from "components/blog/items";
+
+import * as p10 from "components/posts/P10";
+
+import * as top from "components/top";
 import {Projects} from "components/demos/Projects";
 import {TodosForMe} from "components/todosforme/TodosForMe";
 import {WeatherApi} from "components/demos/WeatherApi";
@@ -26,33 +22,12 @@ import DashIframe from "components/demos/DashIframe";
 import StepperIframe from "components/demos/StepperIframe";
 import CodeChallenges from "components/codechallenges/CodeChallenges";
 import CspReport from "components/helpers/CspReport";
-import {Post00} from "components/posts/Post00";
-import {Post01} from "components/posts/Post01";
-import {Post02} from "components/posts/Post02";
-import {Post03} from "components/posts/Post03";
-import {Post04} from "components/posts/P04/Post04";
-import {Post05} from "components/posts/Post05";
-import {Post06} from "components/posts/Post06";
-import {Post07} from "components/posts/Post07";
-import {Post08} from "components/posts/Post08";
-import {Post09} from "components/posts/Post09";
-import {Post10} from "components/posts/Post10";
-import {Post11} from "components/posts/Post11";
-import {Post12} from "components/posts/Post12";
-import {Post1001} from "components/posts/P10/Post1001";
-import {Post1002} from "components/posts/P10/Post1002";
-import {Post1003} from "components/posts/P10/Post1003";
-import {Post1004} from "components/posts/P10/Post1004";
-import {Post1005} from "components/posts/P10/Post1005";
-import {Post1006} from "components/posts/P10/Post1006";
-import {Post1007} from "components/posts/P10/Post1007";
-import {Post1008} from "components/posts/P10/Post1008";
 import ExpressExamples from "components/posts/content/expressExamples.js";
 import ExpressFileRouting from "components/posts/content/expressFileRouting.js";
 import ExpressMysql from "components/posts/content/expressMysql.js";
 //import ExpressPostgres from "components/posts/content/expressPostgres.js";
 import ExpressSqlite from "components/posts/content/expressSqlite.js";
-import {AnimateListTools} from "components/top/ListTools";
+import {AnimateListTools} from "components/top";
 import reportWebVitals from "./reportWebVitals";
 import {CookiesProvider} from "react-cookie";
 import {SnackbarProvider} from "notistack";
@@ -70,10 +45,9 @@ ReactDOM.render(
       TransitionComponent={Collapse}
       preventDuplicate
     >
-      <div>
         <Router>
-          <Navigation />
-          <ScrollToTop className="ScrollToTop" />
+          <top.Navigation />
+          <top.ScrollToTop className="ScrollToTop" />
           <div className="footer">&copy;2022&nbsp;marysonthego.tech
           <a
               href="https://twitter.com/marysonthego?ref_src=twsrc%5Etfw"
@@ -103,14 +77,14 @@ ReactDOM.render(
           </div>
           <Routes>
             <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/arrowfunctions" element={<ArrowFunctions />} />
-            <Route path="/Bnpm" element={<Bnpm />} />
-            <Route path="/B221123" element={<B221123 />} />
-            <Route path="/B221121" element={<B221121 />} />
-            <Route path="/B221003" element={<B221003 />} />
-            <Route path="/B220927" element={<B220927 />} />
-            <Route path="/Btemplate" element={<Btemplate />} />
+            <Route path="/bloglist" element={<BlogList />} />
+            <Route path="/arrowfunctions" element={<posts.ArrowFunctions />} />
+            <Route path="/bnpm" element={<items.Bnpm />} />
+            <Route path="/b221123" element={<items.B221123 />} />
+            <Route path="/b221121" element={<items.B221121 />} />
+            <Route path="/b221003" element={<items.B221003 />} />
+            <Route path="/b220927" element={<items.B220927 />} />
+            <Route path="/btemplate" element={<items.Btemplate />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/dashboard" element={<DashIframe />} />
             <Route path="/stepper" element={<StepperIframe />} />
@@ -120,27 +94,27 @@ ReactDOM.render(
             <Route path="/codechallenges" element={<CodeChallenges/>} />
             <Route path="/" element={<App />} />
             <Route path="/cspreport" element={<CspReport />} />
-            <Route path="/post00" element={<Post00 />} />
-            <Route path="/post01" element={<Post01 />} />
-            <Route path="/post02" element={<Post02 />} />
-            <Route path="/post03" element={<Post03 />} />
-            <Route path="/post04" element={<Post04 />} />
-            <Route path="/post05" element={<Post05 />} />
-            <Route path="/post06" element={<Post06 />} />
-            <Route path="/post07" element={<Post07 />} />
-            <Route path="/post08" element={<Post08 />} />
-            <Route path="/post09" element={<Post09 />} />
-            <Route path="/post10" element={<Post10 />} />
-            <Route path="/post11" element={<Post11 />} />
-            <Route path="/post12" element={<Post12 />} />
-            <Route path="/post1001" element={<Post1001 />} />
-            <Route path="/post1002" element={<Post1002 />} />
-            <Route path="/post1003" element={<Post1003 />} />
-            <Route path="/post1004" element={<Post1004 />} />
-            <Route path="/post1005" element={<Post1005 />} />
-            <Route path="/post1006" element={<Post1006 />} />
-            <Route path="/post1007" element={<Post1007 />} />
-            <Route path="/post1008" element={<Post1008 />} />
+            <Route path="/post00" element={<posts.Post00 />} />
+            <Route path="/post01" element={<posts.Post01 />} />
+            <Route path="/post02" element={<posts.Post02 />} />
+            <Route path="/post03" element={<posts.Post03 />} />
+            <Route path="/post04" element={<posts.Post04 />} />
+            <Route path="/post05" element={<posts.Post05 />} />
+            <Route path="/post06" element={<posts.Post06 />} />
+            <Route path="/post07" element={<posts.Post07 />} />
+            <Route path="/post08" element={<posts.Post08 />} />
+            <Route path="/post09" element={<posts.Post09 />} />
+            <Route path="/post10" element={<posts.Post10 />} />
+            <Route path="/post11" element={<posts.Post11 />} />
+            <Route path="/post12" element={<posts.Post12 />} />
+            <Route path="/post1001" element={<p10.Post1001 />} />
+            <Route path="/post1002" element={<p10.Post1002 />} />
+            <Route path="/post1003" element={<p10.Post1003 />} />
+            <Route path="/post1004" element={<p10.Post1004 />} />
+            <Route path="/post1005" element={<p10.Post1005 />} />
+            <Route path="/post1006" element={<p10.Post1006 />} />
+            <Route path="/post1007" element={<p10.Post1007 />} />
+            <Route path="/post1008" element={<p10.Post1008 />} />
             <Route path="/examples" element={<ExpressExamples />} />
             <Route path="/routing" element={<ExpressFileRouting />} />
             <Route path="expressmysql" element={<ExpressMysql />} />
@@ -149,7 +123,6 @@ ReactDOM.render(
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>
-      </div>
     </SnackbarProvider>
   </CookiesProvider>,
   document.getElementById("root")

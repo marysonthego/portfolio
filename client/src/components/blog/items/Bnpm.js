@@ -7,7 +7,7 @@ const Created = "October 17, 2022";
 
 export const Bnpm = () => {
   const location = useLocation();
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

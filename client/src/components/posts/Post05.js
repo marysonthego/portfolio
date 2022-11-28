@@ -10,7 +10,7 @@ export const Post05 = () => {
   let Title =
     "Save Space with the AVIF Image Format";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

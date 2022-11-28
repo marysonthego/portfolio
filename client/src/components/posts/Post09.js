@@ -10,7 +10,7 @@ export function Post09() {
   let TopPic = "media/python.png";
   let Title = "90% of Python3";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>

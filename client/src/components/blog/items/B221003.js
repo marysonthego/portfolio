@@ -12,14 +12,48 @@ export const B221003 = () => {
   const Created = "October 03, 2022";
   const TopImage = "media/secretsw640.jpg";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>
         <h2 className="itemDate">{Created}</h2>
       </span>
+
     );
   }
+
+  const TopSect = () => {
+    return (
+      <>
+        <img
+          src={TopImage}
+          title="Secrets"
+          className="blogImg"
+          alt="Secrets of a woman"
+        />
+        <h1 className="blog">{Title}</h1>
+        <div className="itemDate">{Created}</div>
+      </>
+    );
+  };
+
+  const TopBox = () => {
+    return (
+      <div className="h2Box">
+          <h2 className="blogBox">
+            <span>
+              Array.reduce(callbackFn, <em>optional initialValue</em>)
+            </span>
+          </h2>
+          <h2 className="blogBox">
+            <span>
+              callbackFn(previousValue, currentValue,{" "}
+              <em>optional currentIndex</em>)
+            </span>
+          </h2>
+        </div>
+    );
+  };
 
   const Sect1 = () => {
     return (
@@ -72,149 +106,120 @@ export const B221003 = () => {
           back your changes will be lost. Sad! But you can use Notepad++, VS
           Code, or any other text editor to save your changes for posterity.
         </p>
+        <div className="blogCode">
+          <iframe
+            title="StackBlitz"
+            width={iwidth * 0.8}
+            height={iheight * 0.8}
+            src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-sum-no-initial-value.js&hideExplorer=1&hideNavigation=1&view=editor"
+          ></iframe>
+        </div>
       </>
     );
   };
 
-  if (width < 410) {
+  const Sect3 = () => {
     return (
-      <main className="container">
-        <article className="blog">
-          <img
-            src={TopImage}
-            title="Secrets"
-            className="blogImg"
-            alt="Secrets of a woman"
-          />
-          <h1 className="blog">{Title}</h1>
-          <h2 className="itemDate">{Created}</h2>
-          <h2 className="blog">
-            Array.reduce(callbackFn, <i>optional initialValue</i>)
-          </h2>
-          <h2 className="blog">
-            callbackFn(previousValue, currentValue, <i>optional currentIndex</i>
-            )
-          </h2>
-          <Sect1 />
-          <Sect2 />
-          <div>
-            <iframe
-              title="StackBlitz"
-              width={iwidth + 50}
-              height={iheight}
-              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-sum-no-initial-value.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-          <p className="blogText">
-            Another thing. If you specify an initial value it simply tacks one
-            more iteration onto the start of the queue. Otherwise, the initial
-            value will simply be array[0].{" "}
-          </p>
-          <p className="blogNote">
-            Here's an example showing reduce with an initial value and without:
-          </p>
-          <div>
-            <iframe
-              title="StackBlitz"
-              width={iwidth + 50}
-              height={iheight}
-              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-          <div>
-            <iframe
-              title="StackBlitz"
-              width={iwidth + 50}
-              height={iheight}
-              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-return-an-object.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-        </article>
-      </main>
-    );
-  } else {
-    return (
-      <main className="container">
-        <article className="blog">
-          <img
-            src={TopImage}
-            title="Secrets"
-            className="blogImg"
-            alt="Secrets of a woman"
-          />
-          <h1 className="blog">{Title}</h1>
-          <div className="itemDate">{Created}</div>
-          <div className="h2Box">
-            <h2 className="blogBox">
-              <span>
-                Array.reduce(callbackFn, <em>optional initialValue</em>)
-              </span>
-            </h2>
-            <h2 className="blogBox">
-              <span>
-                callbackFn(previousValue, currentValue,{" "}
-                <em>optional currentIndex</em>)
-              </span>
-            </h2>
-          </div>
-          <Sect1 />
-          <Sect2 />
-          <div className="blogCode">
-            <iframe
-              title="StackBlitz"
-              width={iwidth * 0.8}
-              height={iheight * 0.8}
-              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-sum-no-initial-value.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-          <p className="blogText">
-            Another thing. If you specify an initial value it simply tacks one
-            more iteration onto the start of the queue. Otherwise, the initial
-            value will simply be array[0].
-          </p>
-          <p className="blogNote">
-            Here's an example showing reduce with an initial value and without:
-          </p>
-          <div className="blogCode">
-            <iframe
-              title="StackBlitz"
-              width={iwidth * 0.8}
-              height={iheight * 0.8}
-              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-
-          <p className="blogText">
-            Did you know you can even return an object from a reduce callbackFn?
-          </p>
-          <p className="blogNote">
-            Here's an example showing how to use reduce with an array of objects. The first example demonstrates returning an object from reduce without an initial value. The second example demonstrates returning an object from reduce with an initial value.
-          </p>
-          <div className="blogCode">
-            <iframe
-              title="StackBlitz"
-              width={iwidth * 0.8}
-              height={iheight * 0.8}
-              src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-return-an-object.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-
-          <p className="blogText">
-            You can use reduce to flatten an array of arrays.
-          </p>
-          <p className="blogNote">
-            Here's an example:
-          </p>
-          <div className="blogCode">
-            <iframe
-              title="StackBlitz"
-              width={iwidth * 0.8}
-              height={iheight * 0.8}
-              src="https://stackblitz.com/edit/node-c8afpt?embed=1&file=reduce-flatten-array.js&hideExplorer=1&hideNavigation=1&view=editor"
-            ></iframe>
-          </div>
-        </article>
-      </main>
-    );
+      <>
+      <p className="blogText">
+          Another thing. If you specify an initial value it simply tacks one
+          more iteration onto the start of the queue. Otherwise, the initial
+          value will simply be array[0].
+        </p>
+        <p className="blogNote">
+          Here's an example showing reduce with an initial value and without:
+        </p>
+        <div className="blogCode">
+          <iframe
+            title="StackBlitz"
+            width={iwidth * 0.8}
+            height={iheight * 0.8}
+            src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce.js&hideExplorer=1&hideNavigation=1&view=editor"
+          ></iframe>
+        </div>
+      </>
+    )
   }
+
+const Sect4 = () => {
+  return (
+    <>
+<p className="blogText">
+          Did you know you can even return an object from a reduce callbackFn?
+        </p>
+        <p className="blogNote">
+          Here's an example showing how to use reduce with an array of objects.
+          The first example demonstrates returning an object from reduce without
+          an initial value. The second example demonstrates returning an object
+          from reduce with an initial value.
+        </p>
+        <div className="blogCode">
+          <iframe
+            title="StackBlitz"
+            width={iwidth * 0.8}
+            height={iheight * 0.8}
+            src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-return-an-object.js&hideExplorer=1&hideNavigation=1&view=editor"
+          ></iframe>
+        </div>
+    </>
+  )
+}
+
+const Sect5 = () => {
+  return (
+    <>
+    <p className="blogText">
+          Did you know you can even return an object from a reduce callbackFn?
+        </p>
+        <p className="blogNote">
+          Here's an example showing how to use reduce with an array of objects.
+          The first example demonstrates returning an object from reduce without
+          an initial value. The second example demonstrates returning an object
+          from reduce with an initial value.
+        </p>
+        <div className="blogCode">
+          <iframe
+            title="StackBlitz"
+            width={iwidth * 0.8}
+            height={iheight * 0.8}
+            src="https://stackblitz.com/edit/node-pxt8mk?embed=1&file=reduce-return-an-object.js&hideExplorer=1&hideNavigation=1&view=editor"
+          ></iframe>
+        </div>
+      </>
+  )
+};
+
+const Sect6 = () => {
+  return (
+    <>
+     <p className="blogText">
+          You can use reduce to flatten an array of arrays.
+        </p>
+        <p className="blogNote">Here's an example:</p>
+        <div className="blogCode">
+          <iframe
+            title="StackBlitz"
+            width={iwidth * 0.8}
+            height={iheight * 0.8}
+            src="https://stackblitz.com/edit/node-c8afpt?embed=1&file=reduce-flatten-array.js&hideExplorer=1&hideNavigation=1&view=editor"
+          ></iframe>
+        </div>
+    </>
+  )
+}
+
+  return (
+    <main className="container">
+      <article className="blog">
+        <TopSect/>
+        <TopBox />
+        <Sect1 />
+        <Sect2 />
+        <Sect3 />
+        <Sect4 />
+        <Sect5 />
+        <Sect6 />
+      </article>
+    </main>
+  );
 };

@@ -1,8 +1,4 @@
-import { P04ArrowFunctions } from "./P04_arrowFunctions";
-import { P04Extensible } from "./P04_extensible";
-import { P04Dispatch } from "./P04_dispatch";
-import { P04DarkStyles } from "./P04_DarkStyles";
-import { P04Conflicted } from "./P04_conflicted";
+import { P04ArrowFunctions, P04Extensible, P04Dispatch, P04DarkStyles, P04Conflicted } from "./P04";
 
 export const Post04 = () => {
   let TopPic = "media/reactjs.png";

@@ -8,7 +8,7 @@ export const Post02 = () => {
     "How to use React ForwardRef";
     const Created = "November 15, 2021";
 
-  if (location.pathname.toString() === "/blog") {
+  if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
         <span className="blog">{Title}</span>
@@ -58,7 +58,7 @@ export const Post02 = () => {
         The Back and Next local states start out initialized to enabledBack/enabledNext, and change via regular setState calls throughout the stepper as child pages issue callbacks with their status.
         <br/><br/> This means that when the arrows are evaluated in the stepper return, all their props are already correctly set. What triggers a forwardRef is a change to the ref passed to the local state.
         </p>
-  
+
     </div>
   );
   return (
