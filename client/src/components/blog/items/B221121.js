@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 export const B221121 = () => {
   const location = useLocation();
 
-  const Title = "MySQL Joins Part 1 - WHERE, ON, USING";
+  const Title = "Join Conditions Part 1 - WHERE, ON, USING";
   const Created = "November 21, 2022";
   const TopImage = "media/model01.png";
 
@@ -30,7 +30,8 @@ export const B221121 = () => {
             </li>
 
             <li className="blogLi">
-              <b>Join Condition </b>WHERE, ON, and USING clauses are called Join Conditions. They limit the results returned from a Join.
+              <b>Join Condition </b>WHERE, ON, and USING clauses are called Join
+              Conditions. They limit the results returned from a Join.
             </li>
 
             <li className="blogLi">
@@ -49,11 +50,14 @@ export const B221121 = () => {
                 </li>
 
                 <li className="blogLi">
-                  Even though it is in a <i>child</i> table, <i>the foreign key is
-                  what defines the relationship between two
-                  tables</i>. Every table can (and usually does) have a
-                  primary key, but without a foreign key in another table, you
-                  do not have a relationship between two tables!{" "}
+                  Even though it is in a <i>child</i> table,{" "}
+                  <i>
+                    the foreign key is what defines the relationship between two
+                    tables
+                  </i>
+                  . Every table can (and usually does) have a primary key, but
+                  without a foreign key in another table, you do not have a
+                  relationship between the two tables!{" "}
                 </li>
 
                 <li className="blogLi">
@@ -76,25 +80,25 @@ export const B221121 = () => {
   const Sect2 = () => {
     return (
       <>
-        <h2 className="blog">Some example joins</h2>
+        <h2 className="blog">Some example join conditions</h2>
         <p className="blogText">
-          Let's look at some examples using the customer_t table and the order_t
+          Let's look at some examples using the customer table and the orderc
           table. The tables look like this:
         </p>
         <div>
-          <h3 className="blog">customer_t table</h3>
+          <h3 className="blog">customer table</h3>
           <p className="blogNote">15 rows returned</p>
 
-            <img
-              src="media/customer_t-list.png"
-              className="blogImg"
-              title="customer_t table"
-              alt="customer_t table"
-            />
+          <img
+            src="media/customer_t-list.png"
+            className="blogImg"
+            title="customer_t table"
+            alt="customer_t table"
+          />
 
           <br />
           <div>
-            <h3 className="blog">order_t table</h3>
+            <h3 className="blog">orderc table</h3>
             <p className="blogNote">10 rows returned</p>
           </div>
 
@@ -104,7 +108,6 @@ export const B221121 = () => {
             title="order_t table"
             alt="order_t table"
           />
-        
         </div>
         <br />
         <h3 className="blog">WHERE, ON, USING</h3>
@@ -115,10 +118,10 @@ export const B221121 = () => {
   const Sect3 = () => {
     return (
       <>
-        <div className="h3Box">
+
           <h3 className="blog">WHERE</h3>
           <p className="blogText">
-            We can join the customer_t and order_t tables with a simple WHERE
+            We can join the customer and orderc tables with a simple WHERE
             clause. When you use a WHERE clause on multiple tables, you are
             doing a join without specifying a join clause.
           </p>
@@ -129,8 +132,9 @@ export const B221121 = () => {
           </p>
           <p className="blogText">
             <code>
-              SELECT c.customerId, customerName, orderId<br />
-              FROM customer_t c, order_t o <br />
+              SELECT c.customerId, customerName, orderId
+              <br />
+              FROM customer c, orderc o <br />
               &nbsp;&nbsp;WHERE o.customerId = c.customerid <br />
               ORDER BY customerId;
             </code>
@@ -144,22 +148,26 @@ export const B221121 = () => {
           />
           <br />
           <p className="blogText">
-            What happens if we leave out the WHERE clause? let's do the same query without the WHERE clause.
+            What happens if we leave out the WHERE clause?
           </p>
           <p className="blogText">
             <code>
-            SELECT c.customerId, customerName, orderId, o.customerId as order_customerId<br/>
-            FROM customer_t c, order_t as o<br/>
-            order by c.customerId, o.customerId;
+              SELECT c.customerId, customerName, orderId, o.customerId as
+              order_customerId
+              <br />
+              FROM customer c, orderc as o<br />
+              order by c.customerId, o.customerId;
             </code>
           </p>
           <p className="blogText">
             Notice that this time we get 150 rows back! We are getting every
-            combination of rows between the two tables even when the rows do not have any
-            relationship between them. That is, each customerId in the customer_t table is matched with every row in the order_t table - even when the customer did not place the order.
+            combination of rows between the two tables even when the rows do not
+            have any relationship between them. That is, each customerId in the
+            customer table is matched with every row in the orderc table -
+            even when the customer did not place the order!
           </p>
           <p className="blogNote">
-            (15 rows in order_t * 10 rows in customer_t = 150 rows total). Below are the first 30 rows.
+            (15 rows in orderc * 10 rows in customer = 150 rows total).
           </p>
           <img
             src="media/q02-no-WHERE.png"
@@ -167,7 +175,7 @@ export const B221121 = () => {
             className="blogImg"
             alt="customer_t table"
           />
-        </div>
+
         <br />
       </>
     );
@@ -176,12 +184,13 @@ export const B221121 = () => {
   const Sect4 = () => {
     return (
       <>
-        <div className="h3Box">
           <h3 className="blog">ON</h3>
           <p className="blogText">
             Joins increase the flexibility of simple FROM - WHERE statements.
-            You will see many types of joins. For now, just notice the ON clause.
-            In Part 2 I'll explain the major types of joins. For now, just remember that to use a join all you have to do is add the JOIN and replace WHERE with ON.{" "}
+            You will see many types of joins in part 2. For now, just notice the ON
+            clause. In Part 2 I'll explain the major types of joins. For now,
+            just remember that to use a join all you have to do is add the JOIN clause
+            and replace WHERE with ON.{" "}
           </p>
           <p className="blogText">
             <b>Question: </b>
@@ -192,7 +201,7 @@ export const B221121 = () => {
             <code>
               SELECT c.customerId, customerName, orderId
               <br />
-              FROM customer_t c INNER JOIN order_t o <br />
+              FROM customer c INNER JOIN orderc o <br />
               &nbsp;&nbsp;ON o.customerId = c.customerId <br />
               ORDER BY customerId;
             </code>
@@ -204,7 +213,6 @@ export const B221121 = () => {
             className="blogImg"
             alt="query 3 ON"
           />
-        </div>
         <br />
       </>
     );
@@ -213,12 +221,12 @@ export const B221121 = () => {
   const Sect5 = () => {
     return (
       <>
-        <div className="h3Box">
           <h3 className="blog">USING</h3>
           <p className="blogText">
-            USING is a variation of the ON clause. You provide a comma separated list of
-            columns you want to compare between two tables. The column names and
-            domain must be the same, and of course, the columns must exist in each table.
+            USING is a variation of the ON clause. You provide a comma separated
+            list of columns to compare between two tables. The column
+            names and domain must be the same, and of course, the columns must
+            exist in each table.
           </p>
           <p className="blogText">
             <b>Question: </b>
@@ -229,23 +237,20 @@ export const B221121 = () => {
             <code>
               SELECT c.customerId, customerName, orderId
               <br />
-              FROM customer_t c INNER JOIN order_t o <br />
+              FROM customer c INNER JOIN orderc o <br />
               &nbsp;&nbsp;USING (customerId) <br />
               ORDER BY customerId;
             </code>
           </p>
           <p className="blogNote">10 rows returned</p>
           <img
-            src="media/q03-ON.png"
+            src="media/q04-using.png"
             title="USING example"
             className="blogImg"
             alt="query 4 USING"
           />
-        </div>
         <br />
-        <p className="blogText">
-          In part 2 we will look at types of joins.
-        </p>
+        <p className="blogText">In part 2 we will look at some common joins.</p>
       </>
     );
   };
@@ -253,7 +258,7 @@ export const B221121 = () => {
   return (
     <main className="container">
       <article className="blog">
-        <div className="blogImg" >
+        <div className="blogImg">
           <img src={TopImage} title="Model" alt="Model" />
         </div>
         <h1 className="blog">{Title}</h1>

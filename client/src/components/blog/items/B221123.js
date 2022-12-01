@@ -101,6 +101,9 @@ export const B221123 = () => {
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
         <Sect1 />
+        <div className="xterminal">
+          <div id="terminal"></div>
+        </div>
       </article>
     </main>
   );
