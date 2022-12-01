@@ -3,14 +3,14 @@ main.container {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  background-color: #f5f3f3;
+  background-color: #fdfafa;
   width: 80%;
   height: 100%;
   padding-bottom: 5%;
 }
 section.blogList {
   display: inline;
-  font-size: 22px;
+  font-size: 20px;
   color: rgb(0, 0, 0);
   width: 80%;
 }
@@ -56,11 +56,12 @@ a.listItem:hover {
   flex-flow: column wrap;
   align-items: normal;
   justify-content: center;
-  height: 100%;
+
+  width:100%;
 }
 
 span.blog {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   padding: 10px 0px;
@@ -72,7 +73,7 @@ h1.blog {
 
 h2.blog {
   align-items: normal;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   padding-top: 10px;
@@ -82,7 +83,7 @@ h2.blog {
 h3.blog {
   align-items: normal;
   text-align: justify;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   padding-top: 10px;
@@ -125,7 +126,7 @@ a.item:hover {
 li.blogLi {
   display: list-item;
   list-style: circle;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 0px;
   text-align: justify;
   font-weight: 400;
@@ -134,7 +135,7 @@ li.blogLi {
 }
 
 .blogText {
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 10px;
   text-align: justify;
   font-weight: 400;

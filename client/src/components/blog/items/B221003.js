@@ -179,7 +179,7 @@ export const B221003 = () => {
             title="StackBlitz"
             width={iwidth}
             height={iheight}
-            src="https://stackblitz.com/edit/node-c8afpt?embed=1&file=reduce-flatten-array.js&hideExplorer=1&hideNavigation=1&view=editor"
+            src="https://stackblitz.com/edit/node-sslzcl?embed=1&file=reduce-flatten-array.js&view=editor"
           ></iframe>
         </div>
       </>

@@ -80,37 +80,34 @@ export const B221121 = () => {
   const Sect2 = () => {
     return (
       <>
-        <h2 className="blog">Some example join conditions</h2>
+        <h2 className="blog">Example join conditions</h2>
         <p className="blogText">
           Let's look at some examples using the customer table and the orderc
           table. The tables look like this:
         </p>
         <div>
           <h3 className="blog">customer table</h3>
-          <p className="blogNote">15 rows returned</p>
-
           <img
             src="media/customer_t-list.png"
             className="blogImg"
-            title="customer_t table"
-            alt="customer_t table"
+            title="customer table"
+            alt="customer table"
           />
 
           <br />
           <div>
             <h3 className="blog">orderc table</h3>
-            <p className="blogNote">10 rows returned</p>
           </div>
 
           <img
             src="media/order_t-list.png"
             className="blogImg"
-            title="order_t table"
-            alt="order_t table"
+            title="orderc table"
+            alt="orderc table"
           />
         </div>
         <br />
-        <h3 className="blog">WHERE, ON, USING</h3>
+        <h2 className="blog">WHERE, ON, USING</h2>
       </>
     );
   };
@@ -126,7 +123,7 @@ export const B221121 = () => {
             doing a join without specifying a join clause.
           </p>
           <p className="blogText">
-            <b>Question: </b>
+            <em>Question: </em>
             What are the customer IDs and names of all the customers, along with
             the order IDs for all the orders they have placed?
           </p>
@@ -193,7 +190,7 @@ export const B221121 = () => {
             and replace WHERE with ON.{" "}
           </p>
           <p className="blogText">
-            <b>Question: </b>
+            <em>Question: </em>
             What are the customer IDs and names of all the customers, along with
             the order IDs for all the orders they have placed?
           </p>
@@ -229,7 +226,7 @@ export const B221121 = () => {
             exist in each table.
           </p>
           <p className="blogText">
-            <b>Question: </b>
+            <em>Question: </em>
             What are the customer IDs and names of all the customers, along with
             the order IDs for all the orders they have placed?
           </p>
@@ -268,6 +265,11 @@ export const B221121 = () => {
         <Sect3 />
         <Sect4 />
         <Sect5 />
+        <div className="xcontainer">
+        <div className="xterminal">
+          <div id="terminal"></div>
+        </div>
+        </div>
       </article>
     </main>
   );
