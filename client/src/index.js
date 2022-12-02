@@ -80,6 +80,7 @@ ReactDOM.render(
             <Route path="/bloglist" element={<BlogList />} />
             <Route path="/arrowfunctions" element={<posts.ArrowFunctions />} />
             <Route path="/bnpm" element={<items.Bnpm />} />
+            <Route path="/b221201" element={<items.B221201 />} />
             <Route path="/b221123" element={<items.B221123 />} />
             <Route path="/b221121" element={<items.B221121 />} />
             <Route path="/b221003" element={<items.B221003 />} />

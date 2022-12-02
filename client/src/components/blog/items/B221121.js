@@ -6,7 +6,7 @@ export const B221121 = () => {
 
   const Title = "Join Conditions Part 1 - WHERE, ON, USING";
   const Created = "November 21, 2022";
-  const TopImage = "media/model01.png";
+  const TopImage = "media/joinhands.png";
 
   if (location.pathname.toString() === "/bloglist") {
     return (
@@ -265,11 +265,6 @@ export const B221121 = () => {
         <Sect3 />
         <Sect4 />
         <Sect5 />
-        <div className="xcontainer">
-        <div className="xterminal">
-          <div id="terminal"></div>
-        </div>
-        </div>
       </article>
     </main>
   );

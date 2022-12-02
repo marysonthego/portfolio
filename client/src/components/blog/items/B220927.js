@@ -94,15 +94,17 @@ return (
 
   const BlogTop = () => {
     return (
+      <>
       <div className="blogImg">
         <img
           src={TopImage}
           title="mountain path"
           alt="mountain path"
         />
+         </div>
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
-      </div>
+      </>
     );
   };
 
@@ -114,14 +116,19 @@ return (
     );
   };
 
-  const text1 = (
-    <p className="blogText">
+  const Sect1 = () => {
+    return (
+      <>
+      <div className="blog"> </div>
+    <div className="blogText">
       When you start working with React Router v6, you may find that your
       conditional routing is not working as you expect. v6 uses a new component
       called <code>Routes</code> which replaces the old <code>Switch</code>{" "}
       component.
-    </p>
-  );
+    </div>
+    </>
+    );
+    };
 
   const text2 = <p className="blogText">Let's see how it works!</p>;
 
@@ -296,7 +303,7 @@ return (
     <main className="container">
       <article className="blog">
         <BlogTop />
-        {text1}
+        <Sect1/>
         {text2}
         {text3}
         {text4}

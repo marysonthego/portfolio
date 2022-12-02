@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-export const B221123 = () => {
+export const B221201 = () => {
   const location = useLocation();
 
   const Title = "Joins Part 2 - INNER, OUTER, UNION";

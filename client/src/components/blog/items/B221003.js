@@ -29,12 +29,11 @@ export const B221003 = () => {
             src={TopImage}
             title="Secrets"
             alt="Secrets of a woman"
-            width="640px"
           />
-
+          </div>
           <h1 className="blog">{Title}</h1>
-          <div className="itemDate">{Created}</div>
-        </div>
+          <h2 className="itemDate">{Created}</h2>
+
       </>
     );
   };

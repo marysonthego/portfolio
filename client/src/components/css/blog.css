@@ -3,7 +3,7 @@ main.container {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  background-color: #fdfafa;
+  /* background-color: #fdfafa; */
   width: 80%;
   height: 100%;
   padding-bottom: 5%;
@@ -53,11 +53,11 @@ a.listItem:hover {
 
 .blogImg {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: normal;
   justify-content: center;
-
-  width:100%;
+  width: 800px;
+  height: 600px;
 }
 
 span.blog {

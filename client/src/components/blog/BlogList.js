@@ -7,21 +7,31 @@ export const BlogList = () => {
   return (
     <main className="container">
       <h1 className="blog">{PageTitle}</h1>
-      {/* <section className="blogList">
+      <section className="blogList">
+        <a className="listItem" href="/b221201">
+          <img
+            className="blogListImg"
+            src="media/psqlw200.png"
+            alt=""
+          />{" "}
+            {items.B221201()}
+        </a>
+      </section>
+        <section className="blogList">
         <a className="listItem" href="/b221123">
           <img
             className="blogListImg"
-            src="media/mysql-buttonx200blue.jpg"
+            src="media/joinpeoplew200.png"
             alt=""
           />{" "}
             {items.B221123()}
         </a>
-      </section> */}
+      </section>
        <section className="blogList">
         <a className="listItem" href="/b221121">
           <img
             className="blogListImg"
-            src="media/mysql-buttonx200blue.jpg"
+            src="media/joinhandsw200.png"
             alt=""
           />{" "}
           {items.B221121()}
