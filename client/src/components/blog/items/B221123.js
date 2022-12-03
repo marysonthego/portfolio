@@ -167,7 +167,9 @@ export const B221123 = () => {
         <Sect1 />
         <Sect2 />
         <Sect3 />
-
+        <div className="blog">
+          <h2 className="blog">Part 3 covers Outer Joins</h2>
+    </div>
       </article>
     </main>
   );
