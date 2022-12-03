@@ -11,7 +11,7 @@ export const BlogList = () => {
         <a className="listItem" href="/b221201">
           <img
             className="blogListImg"
-            src="media/psqlw200.png"
+            src="media/rowinwavesw200.png"
             alt=""
           />{" "}
             {items.B221201()}
