@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom";
 export const B221201 = () => {
   const location = useLocation();
 
-  const Title = "Joins Part 2 - INNER, OUTER, UNION";
-  const Created = "November 23, 2022";
+  const Title = "Interactive Postgres Online";
+  const Created = "December 2, 2022";
   const TopImage = "media/model01.png";
 
   if (location.pathname.toString() === "/bloglist") {
@@ -100,7 +100,6 @@ export const B221201 = () => {
         </div>
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
-        <Sect1 />
           <div className="xcontainer">
             <div className="xterminal">
               <div id="terminal"></div>

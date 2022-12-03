@@ -87,24 +87,25 @@ export const B221121 = () => {
         </p>
         <div>
           <h3 className="blog">customer table</h3>
+          <div className="blogImg">
           <img
             src="media/customer_t-list.png"
-            className="blogImg"
+
             title="customer table"
             alt="customer table"
           />
-
+        </div>
           <br />
           <div>
             <h3 className="blog">orderc table</h3>
           </div>
-
+          <div className="blogImg">
           <img
             src="media/order_t-list.png"
-            className="blogImg"
             title="orderc table"
             alt="orderc table"
           />
+        </div>
         </div>
         <br />
         <h2 className="blog">WHERE, ON, USING</h2>
@@ -136,13 +137,17 @@ export const B221121 = () => {
               ORDER BY customerId;
             </code>
           </p>
+          <p className="blogText">
+            The WHERE says that for every order, return the orderId and the customer who placed it.
+          </p>
           <p className="blogNote">10 rows returned</p>
+          <div className="blogImg">
           <img
             src="media/q01-where.png"
             title="customer_t table"
-            className="blogImg"
             alt="customer_t table"
           />
+          </div>
           <br />
           <p className="blogText">
             What happens if we leave out the WHERE clause?
@@ -166,13 +171,13 @@ export const B221121 = () => {
           <p className="blogNote">
             (15 rows in orderc * 10 rows in customer = 150 rows total).
           </p>
+          <div className="blogImg">
           <img
             src="media/q02-no-WHERE.png"
             title="customer_t table"
-            className="blogImg"
             alt="customer_t table"
           />
-
+          </div>
         <br />
       </>
     );
@@ -203,13 +208,17 @@ export const B221121 = () => {
               ORDER BY customerId;
             </code>
           </p>
+          <p className="blogText">
+            INNER JOIN ... ON returns the same results as the WHERE clause before.
+          </p>
           <p className="blogNote">10 rows returned</p>
+          <div className="blogImg">
           <img
             src="media/q03-ON.png"
             title="From where to ON"
-            className="blogImg"
             alt="query 3 ON"
           />
+          </div>
         <br />
       </>
     );
@@ -239,13 +248,17 @@ export const B221121 = () => {
               ORDER BY customerId;
             </code>
           </p>
+          <p className="blogText">
+            INNER JOIN ... USING (<i>column list</i>) returns the same results as the ON clause with an INNER JOIN and the WHERE clause with no JOIN clause.
+          </p>
           <p className="blogNote">10 rows returned</p>
+          <div className="blogImg">
           <img
             src="media/q04-using.png"
             title="USING example"
-            className="blogImg"
             alt="query 4 USING"
           />
+          </div>
         <br />
         <p className="blogText">In part 2 we will look at some common joins.</p>
       </>

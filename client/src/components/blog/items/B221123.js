@@ -4,9 +4,10 @@ import { useLocation } from "react-router-dom";
 export const B221123 = () => {
   const location = useLocation();
 
-  const Title = "Joins Part 2 - INNER, OUTER, UNION";
+  const Title = "Joins Part 2 - INNER";
   const Created = "November 23, 2022";
-  const TopImage = "media/model01.png";
+  const TopImage = "media/joinpeople.png";
+  const ModelImage = "media/model01.png"
 
   if (location.pathname.toString() === "/bloglist") {
     return (
@@ -34,36 +35,37 @@ export const B221123 = () => {
                 <i>WHERE table1.columnA = table2.columnB</i>
               </li>
               <li className="blogLi">
-                The ON clause specifies how to join tables while the WHERE
-                clause restricts which rows to include in the results.
-              </li>
-              <li className="blogLi">
                 USING specifies a list of columns to join from the columns in
-                two tables. The columns must have the same name in each table.
-                like <i>USING (columnA) </i> means each table must have a{" "}
+                two or more tables. The columns must have the same name in each table.
+                like <i>USING (columnA) </i> which means each table must have a{" "}
                 <i>columnA</i> and each columnA must be the same data type.
               </li>
             </ul>
             <li className="blogLi">
-              <b>INNER JOIN </b>In MySQL, interchangeable with <b>JOIN</b> and{" "}
-              <b>CROSS JOIN</b>.
+              <b>INNER JOIN </b>is interchangeable with <b>JOIN</b>.
               <ul>
                 <li className="blogLi">
-                  returns every row in the first table plus every row in the
-                  second table that matches the WHERE, ON, or USING clause.
+                  returns only rows that match the WHERE, ON, or USING clause in both tables.
                 </li>
                 <li className="blogLi">
-                  If you omit a WHERE, ON, or USING clause, all rows from both tables
-                  are returned - even rows that don't have any relationship between them.
-                  The Join Condition enforces referential integrity
+                  In Postgres, if you omit the Join Condition you will get a syntax error. A Join Condition is required and enforces referential integrity.
+                </li>
+                 <li className="blogLi">
+                  INNER JOINs are much more common than OUTER JOINs because outer joins are necessary only when you need to see data from all rows, even those that have no matching row in another table.
+                </li>
+                <li className="blogLi">
+                  You can use an INNER JOIN to join more than two tables by chaining them together.
                 </li>
               </ul>
             </li>
 
             <li className="blogLi">
               <b>OUTER JOIN </b>There is <i>no such thing</i> as an OUTER JOIN
-              that isn't qualified with LEFT or RIGHT.
+              that isn't qualified with LEFT or RIGHT or FULL.
               <ul>
+              <li className="blogLi">
+                OUTER JOINs are usually applied to only two tables. It is hard to write an outer join on more than two tables.
+              </li>
                 <li className="blogLi">
                   <b>LEFT JOIN </b>is interchangeable with{" "}
                   <b>LEFT OUTER JOIN</b>.
@@ -84,28 +86,125 @@ export const B221123 = () => {
                     </li>
                   </ul>
                 </li>
+                <li className="blogLi">
+                  <b>FULL JOIN </b>is interchangeable with{" "}
+                  <b>FULL OUTER JOIN</b>.
+                  <ul>
+                    <li className="blogLi">
+                    return the matching rows from both tables, and also the rows from both tables that do not match.
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
+        </div>
+        <br/>
+      </>
+    );
+  };
+
+  const Sect2 = () => {
+    return (
+      <>
+        <div className="h2Box">
+          <h2 className="blog">Schema</h2>
+          <div className="blogImg" >
+            <img src={ModelImage} title="Model" alt="Model" />
+          </div>
         </div>
       </>
     );
   };
 
+  const Sect3 = () => {
+    return (
+    <>
+    <div className="blog">
+    <h2 className="blog">Try some queries</h2>
+      <span className="blogText">
+        <br/>
+        <code>SELECT * from customer;</code><br/>
+          <span className="blogNote">
+            You should get 15 rows back.<br/><br/>
+          </span>
+        <span className="blogText">
+          <code>SELECT * from orderc;</code><br/>
+            <span className="blogNote">
+              You should get 10 rows back.<br/><br/>
+            </span>
+        </span>
+
+        <span className="blogNote">
+          <b>Example INNER JOIN</b><br/>
+        </span>
+        <code>SELECT cu.customerId, <br/>
+        o.customerId as orderc_customerId,
+        o.orderId <br/>
+        FROM customer cu <br/>
+        INNER JOIN orderc o <br/>
+        ON cu.customerId = o.customerId <br/>
+        ORDER BY cu.customerId;</code><br/>
+        <span className="blogNote">
+          You should get 10 rows back - every row in the customer table and the orderc table that have matching customerIds.<br/><br/>
+        </span>
+
+        <span className="blogNote">
+          <b>Example INNER JOIN with no Join Condition</b><br/>
+        </span>
+        <code>SELECT cu.customerId, <br/>
+        o.customerId as orderc_customerId,
+        o.orderId <br/>
+        FROM customer cu <br/>
+        INNER JOIN orderc o <br/>
+        ORDER BY cu.customerId;</code><br/>
+        <span className="blogNote">
+          You should get a syntax error. INNER JOINs require a Join Condition.<br/><br/>
+        </span>
+
+        <span className="blogNote">
+          <b>Example INNER JOIN on three tables</b><br/>
+        </span>
+        <code>SELECT cu.customerId, <br/>
+        o.orderId, <br/>
+        ol.productId, <br/>
+        ol.orderedQuantity <br/>
+        FROM customer cu <br/>
+        INNER JOIN orderc o <br/>
+        ON cu.customerId = o.customerId <br/>
+        INNER JOIN orderLine ol <br/>
+        ON ol.orderId = o.orderId <br/>
+        ORDER BY cu.customerId;</code><br/>
+        <span className="blogNote">
+          You should get 18 rows back. First, we get all rows where the customerId in the customer table matches the customerId in the orderc table. Given that list, we next match the orderId in the orderc table with the orderId in the orderLine table.<br/><br/>
+        </span>
+      </span>
+      </div>
+      <div className="blogNote">
+          <h2 className="blog">Postgres interactive playground</h2> uses the Postgres PSQL command-line interface. You can enter queries against the tables shown in the schema. Note that if you leave or refresh this page, your queries will disappear - though the tables and data will still be loaded. <br/><br/> You can enter statements on multiple lines, but be sure to end with a semi-colon!
+        </div>
+      <div className="xcontainer">
+        <div className="xterminal">
+          <div id="terminal"></div>
+        </div>
+      </div>
+
+    </>
+    );
+  }
+
   return (
     <main className="container">
       <article className="blog">
         <div className="blogImg" >
-          <img src={TopImage} title="Model" alt="Model" />
+          <img src={TopImage} title="Table Joins" alt="Table Joins" />
         </div>
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
         <Sect1 />
-          <div className="xcontainer">
-            <div className="xterminal">
-              <div id="terminal"></div>
-            </div>
-          </div>
+        <Sect2 />
+        <Sect3 />
+
       </article>
     </main>
   );

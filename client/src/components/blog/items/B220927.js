@@ -101,7 +101,7 @@ return (
           title="mountain path"
           alt="mountain path"
         />
-         </div>
+      </div>
         <h1 className="blog">{Title}</h1>
         <h2 className="itemDate">{Created}</h2>
       </>
