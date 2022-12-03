@@ -28,12 +28,15 @@ export const B221123 = () => {
               <b>INNER JOIN </b>is interchangeable with <b>JOIN</b>.
               <ul>
                 <li className="blogLi">
+                    never qualified with LEFT or RIGHT or FULL.
+                </li>
+                <li className="blogLi">
                   returns only rows that match the WHERE, ON, or USING clause in
                   both tables.
                 </li>
                 <li className="blogLi">
                   In Postgres, if you omit the Join Condition you will get a
-                  syntax error. A Join Condition is required and enforces
+                  syntax error. A Join Condition is required and usually enforces
                   referential integrity.
                 </li>
                 <li className="blogLi">
@@ -121,7 +124,7 @@ export const B221123 = () => {
               o.customerId as orderc_customerId, o.orderId <br />
               FROM customer cu <br />
               INNER JOIN orderc o <br />
-              ON cu.customerId = o.customerId <br />
+              &nbsp;&nbsp;ON cu.customerId = o.customerId <br />
               ORDER BY cu.customerId;
             </code>
             <br />
@@ -162,9 +165,9 @@ export const B221123 = () => {
               ol.orderedQuantity <br />
               FROM customer cu <br />
               INNER JOIN orderc o <br />
-              ON cu.customerId = o.customerId <br />
+              &nbsp;&nbsp;ON cu.customerId = o.customerId <br />
               INNER JOIN orderLine ol <br />
-              ON ol.orderId = o.orderId <br />
+              &nbsp;&nbsp;ON ol.orderId = o.orderId <br />
               ORDER BY cu.customerId;
             </code>
             <br />
@@ -208,7 +211,7 @@ export const B221123 = () => {
         <Sect2 />
         <Sect3 />
         <div className="blog">
-          <h2 className="blog">Part 3 will talk about Outer Joins</h2>
+          <h2 className="blog">Part 3 is about Outer Joins</h2>
         </div>
       </article>
     </main>

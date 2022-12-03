@@ -32,9 +32,12 @@ export const B221201 = () => {
               <li className="blogLi">
                 OUTER JOINs are usually applied to only two tables. It is hard to write an outer join on more than two tables.
               </li>
+              <li className="blogLi">
+                OUTER JOINs are handy for finding rows that are missing.
+              </li>
                 <li className="blogLi">
-                  <b>LEFT JOIN </b>is interchangeable with{" "}
-                  <b>LEFT OUTER JOIN</b>.
+                  <b>LEFT OUTER JOIN </b>is interchangeable with{" "}
+                  <b>LEFT JOIN</b>.
                   <ul>
                     <li className="blogLi">
                       returns every row in the first table plus every row
@@ -43,8 +46,8 @@ export const B221201 = () => {
                   </ul>
                 </li>
                 <li className="blogLi">
-                  <b>RIGHT JOIN </b>is interchangeable with{" "}
-                  <b>RIGHT OUTER JOIN</b>.
+                  <b>RIGHT OUTER JOIN </b>is interchangeable with{" "}
+                  <b>RIGHT JOIN</b>.
                   <ul>
                     <li className="blogLi">
                       returns every row in the second table plus every row in the first table even when there are no matches.
@@ -53,8 +56,8 @@ export const B221201 = () => {
                   </ul>
                 </li>
                 <li className="blogLi">
-                  <b>FULL JOIN </b>is interchangeable with{" "}
-                  <b>FULL OUTER JOIN</b>.
+                  <b>FULL OUTER JOIN </b>is interchangeable with{" "}
+                  <b>FULL JOIN</b>.
                   <ul>
                     <li className="blogLi">
                     return the matching rows from both tables, and also the rows from both tables that do not match.
@@ -68,10 +71,13 @@ export const B221201 = () => {
               <b>INNER JOIN </b>is interchangeable with <b>JOIN</b>.
               <ul>
                 <li className="blogLi">
+                    never qualified with LEFT or RIGHT or FULL.
+                </li>
+                <li className="blogLi">
                   returns only rows that match the WHERE, ON, or USING clause in both tables.
                 </li>
                 <li className="blogLi">
-                  In Postgres, if you omit the Join Condition you will get a syntax error. A Join Condition is required and enforces referential integrity.
+                  In Postgres, if you omit the Join Condition you will get a syntax error. A Join Condition is required and usually enforces referential integrity.
                 </li>
                  <li className="blogLi">
                   INNER JOINs are much more common than OUTER JOINs because outer joins are necessary only when you need to see data from all rows, even those that have no matching row in another table.
