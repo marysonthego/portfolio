@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 export const B221123 = () => {
   const location = useLocation();
 
-  const Title = "Joins Part 2 - INNER";
+  const Title = "Joins Part 2 - INNER JOIN";
   const Created = "November 23, 2022";
   const TopImage = "media/joinpeople.png";
   const ModelImage = "media/model01.png"
@@ -59,44 +59,7 @@ export const B221123 = () => {
               </ul>
             </li>
 
-            <li className="blogLi">
-              <b>OUTER JOIN </b>There is <i>no such thing</i> as an OUTER JOIN
-              that isn't qualified with LEFT or RIGHT or FULL.
-              <ul>
-              <li className="blogLi">
-                OUTER JOINs are usually applied to only two tables. It is hard to write an outer join on more than two tables.
-              </li>
-                <li className="blogLi">
-                  <b>LEFT JOIN </b>is interchangeable with{" "}
-                  <b>LEFT OUTER JOIN</b>.
-                  <ul>
-                    <li className="blogLi">
-                      returns every row in the first table plus every row
-                      in the second table even when there are no matches. If there are no matches in the second table, null values are shown in the columns with no matches.
-                    </li>
-                  </ul>
-                </li>
-                <li className="blogLi">
-                  <b>RIGHT JOIN </b>is interchangeable with{" "}
-                  <b>RIGHT OUTER JOIN</b>.
-                  <ul>
-                    <li className="blogLi">
-                      returns every row in the second table plus every row in the first table even when there are no matches.
-                      If there are no matches in the first table, null values are shown in the columns with no matches.
-                    </li>
-                  </ul>
-                </li>
-                <li className="blogLi">
-                  <b>FULL JOIN </b>is interchangeable with{" "}
-                  <b>FULL OUTER JOIN</b>.
-                  <ul>
-                    <li className="blogLi">
-                    return the matching rows from both tables, and also the rows from both tables that do not match.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+
           </ul>
         </div>
         <br/>
