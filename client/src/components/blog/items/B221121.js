@@ -21,7 +21,7 @@ export const B221121 = () => {
     return (
       <>
         <div className="h2Box">
-          <h2 className="blog">A few definitions</h2>
+          <h2 className="blog">&nbsp;A few definitions</h2>
           <ul>
             <li className="blogLi">
               <b>Join </b>the act of combining two (or more) tables that have
@@ -254,13 +254,13 @@ export const B221121 = () => {
           <p className="blogNote">10 rows returned</p>
           <div className="blogImg">
           <img
-            src="media/q04-using.png"
+            src="media/q04-USING.png"
             title="USING example"
             alt="query 4 USING"
           />
           </div>
         <br />
-        <p className="blogText">In part 2 we will look at some common joins.</p>
+        <p className="blogText">In part 2 we will look at inner joins.</p>
       </>
     );
   };

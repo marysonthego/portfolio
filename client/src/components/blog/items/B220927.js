@@ -62,14 +62,27 @@ import { useLocation } from "react-router-dom";
 . . .
 const location = useLocation();
 . . .
-if (location.pathname.toString() === "/bloglist") {
+if (location.pathname.toString() === '/bloglist') {
   return (
     <span>
-      <span className="blog">{Title}</span>
-      <h2 className="itemDate">{Created}</h2>
+      <span className="itemText">{Title} </span>
+      <span className="itemDate">{Created}</span>
     </span>
   );
-};
+}
+return (
+  <main className="container">
+    <article className="blog">
+      <h1>Welcome to BlogPost1!</h1>
+    </article>
+    <section className="blogList">
+      <a className="itemDate" href="/bloglist">
+        <i>Return to the blog list!</i>
+      </a>
+      <div>The current location is {location.pathname.toString()}</div>
+    </section>
+  </main>
+);
 . . .`;
 
   const Syntax5 = `// BlogList.js
@@ -136,7 +149,7 @@ return (
     <>
       <p className="blogText">
         If you have <code>react-router</code> installed, go ahead and uninstall
-        it. v6 doesn't use it, and in fact, you may confuse things by keeping
+        it. v6 doesn't use it, and in fact, you may confuse things (possibly yourself) by keeping
         the old <code>react-router</code> around. v6 uses{" "}
         <code>react-router-dom</code> instead.
       </p>
@@ -154,14 +167,15 @@ return (
         In this example, all the routing is defined in <code>index.js</code>, so
         add these imports at the top of <code>index.js</code>:{" "}
       </p>
+      <Code Syntax={Syntax2} />
       <p className="blogText">
         <code>BrowserRouter</code> is an implementation of the low-level{" "}
-        <code>Router</code> interface that is shared by all router types
-        including BrowserRouter and HashRouter. The <code>BrowserRouter </code>{" "}
+        <code>Router</code> interface that is shared by all v6 router types
+        including BrowserRouter, MemoryRouter, NativeRouter, StaticRouter, and HashRouter. The <code>BrowserRouter </code>{" "}
         implementation stores the current location in the browser's address bar
-        and navigates using the browser's built-in history stack.
+        and navigates using the browser's built-in html5 history stack.
       </p>
-      <Code Syntax={Syntax2} />
+
     </>
   );
 
@@ -173,7 +187,7 @@ return (
       </p>
       <p className="blogText">
         The <code>Routes</code> component wraps the list of individual routes.
-        It is a child of the <code>react-router-dom BrowserRouter</code> component.
+        It is a child of the <code>react-router-dom BrowserRouter</code> component. A bonus with v6 is that you can now list your routes in any order!
       </p>
       <Code Syntax={Syntax3} />
     </>
@@ -183,12 +197,12 @@ return (
     <>
       <p className="blogText">
         <code>react-router-dom</code> includes a <code>useLocation</code> hook
-        which you can use to find the current location in the <code>BrowserRouter</code> among other
+        which you can use to find the current <code>location</code> in the <code>BrowserRouter</code> among other
         things.
       </p>
       <Code Syntax={Syntax6} />
       <p className="blogText">
-        The <code>/bloglist</code> route displays a list of blog posts. Clicking
+        The <code>/bloglist</code> route displays a page containing a list of blog posts. Clicking
         on a post in the list changes the current location to the corresponding
         blogpost route (/blogpost1 or /blogpost2).{" "}
       </p>
@@ -201,12 +215,12 @@ return (
         each BlogPost. Where does this come from?
       </p>
       <p className="blogText">
-        The title and date are properties in each individual BlogPost component.
-        There is no list of BlogPost metadata up in BlogList State, and I have not created a shared Context object either.
+        The title and date are properties of each individual BlogPost component.
+        There is no list of BlogPost metadata up in BlogList State, and I have not created a shared Context object either. I really want to keep everything about a BlogPost all together in one place.
       </p>
       <p className="blogText">
         To get a BlogPost's title and date, BlogList must go to the BlogPost
-        component. It may not be obvious, but we can make{" "}
+        component. It may not be obvious, but in this situation we can make{" "}
         <code>useLocation</code> work for us.
       </p>
       <p className="blogText">
@@ -218,7 +232,7 @@ return (
         statement - And what is a return statement? Nothing more than a <code>Render</code>.
       </p>
       <p className="blogText">
-        So, in the context of rendering BlogList, the location does not change.
+        So, while we're rendering BlogList, the location does not change.
         It is <code>/bloglist</code> and, in fact, <i>cannot</i> change until
         the render is completed.
       </p>
@@ -226,19 +240,21 @@ return (
         The call to <code>&lt;BlogPost1 /&gt;</code> is just like adding any
         other component to a page. When you add a component to a page, it
         doesn't change the current location. You are still on the original page
-        with the new component added to it.
+        and the new component is simply added to it.
       </p>
       <p className="blogText">
         Ok, so in the BlogList render we call /BlogPost1 - and when we get there
-        the location is still /bloglist - not /blogpost1! If we check the
-        location in the blogpost, we can return just the title and date if the
+        the location is still /bloglist - not /blogpost1!
+      </p>
+      <p className="blogText">
+        If we check the
+        location in BlogPost, we can return just the title and date if the
         location is /bloglist, or return the whole blogpost if the location is
         /blogpost1.
       </p>
       <p className="blogText">
-        Each BlogPost contains code which checks to see if the current location
-        is /bloglist. If it is, BlogPost only returns the post title and date
-        created. Otherwise, it returns the actual body of the post. Here's part of the BlogPost code:
+        And that's exactly what happens. Each BlogPost contains an <code>if</code> statement which checks to see if the current location
+        is /bloglist. If it is, BlogPost only returns the post title and date. Otherwise, it returns the full body of the post. Here's the BlogPost code for that:
       </p>
       <Code Syntax={Syntax4} />
 
@@ -248,7 +264,10 @@ return (
         value of the current location - which is always available in
         <code> location.pathname.toString()</code>.
       </p>
-      <p className="blogText">Check out the v6 playground below. Try commenting out the if statement in a BlogPost and see what happens!</p>
+      <p className="blogText">
+        Routing can sometimes seem like it's not working right. If that happens, think about what is rendering at that moment, and if you need to, use <code>location.pathname.toString()</code> to verify where the browser is.
+      </p>
+      <p className="blogText">Check out this v6 playground. Try commenting out the if statement in a BlogPost and see what happens!</p>
     </>
   );
 
@@ -291,7 +310,7 @@ return (
             title="React Router v6 Playground"
             width={iwidth}
             height={iheight}
-            src="https://stackblitz.com/edit/react-tqwgrp?embed=1&file=src/index.js"
+            src="https://stackblitz.com/edit/react-tqwgrp?embed=1&file=src/BlogPost1.js"
           ></iframe>
         </div>
       </>

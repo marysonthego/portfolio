@@ -22,8 +22,9 @@ export const B221123 = () => {
     return (
       <>
         <div className="h2Box">
-          <h2 className="blog">Definitions</h2>
+          <h2 className="blog">&nbsp;Definitions</h2>
           <ul>
+
             <li className="blogLi">
               <b>INNER JOIN </b>is interchangeable with <b>JOIN</b>.
               <ul>
@@ -35,18 +36,13 @@ export const B221123 = () => {
                   both tables.
                 </li>
                 <li className="blogLi">
-                  In Postgres, if you omit the Join Condition you will get a
-                  syntax error. A Join Condition is required and usually enforces
-                  referential integrity.
+                  requires a join condition. In Postgres, if you omit the join condition you will get a syntax error.
                 </li>
                 <li className="blogLi">
-                  INNER JOINs are much more common than OUTER JOINs because
-                  outer joins are necessary only when you need to see data from
-                  all rows, even those that have no matching row in another
-                  table.
+                  INNER JOINs are much more common than OUTER JOINs. It's common to use outer joins when you need to see missing data or all data.
                 </li>
                 <li className="blogLi">
-                  You can use an INNER JOIN to join more than two tables by
+                  You can easily use INNER JOINs to join more than two tables by
                   chaining them together.
                 </li>
               </ul>
@@ -70,7 +66,9 @@ export const B221123 = () => {
                 type.
               </li>
             </ul>
-
+            <li className="blogLi">
+            <b>Basic Join Condition</b> a simple <code>ON t1.colA = t2.colB</code> type match. Later, we'll look at more complex join conditions and how they affect the results. For now, all the join conditions will be as basic as possible so that we can focus on how each type of JOIN works.
+          </li>
           </ul>
         </div>
         <br />
@@ -82,11 +80,15 @@ export const B221123 = () => {
     return (
       <>
         <div className="h2Box">
-          <h2 className="blog">Schema</h2>
+          <h2 className="blog">&nbsp;Schema</h2>
           <div className="blogImg">
             <img src={ModelImage} title="Model" alt="Model" />
           </div>
         </div>
+        <h2 className="blog">&nbsp; </h2>
+          <div className="blogImg">
+            <img src={"media/inner-join-2.png"} title="Model" alt="Model" />
+          </div>
       </>
     );
   };
@@ -129,14 +131,39 @@ export const B221123 = () => {
             </code>
             <br />
             <span className="blogNote">
-              You should get 10 rows back - every row in the customer table and
-              the orderc table that have matching customerIds.
+              You should get 10 rows back - only the rows where the customerIds are a match.
               <br />
               <br />
             </span>
 
             <span className="blogNote">
-              <b>Example INNER JOIN with no Join Condition</b>
+              <b>Example INNER JOIN on three tables</b>
+              <br />
+            </span>
+            <code>
+              SELECT cu.customerId, <br />
+              o.customerId as orderCustomerId, <br/>
+              o.orderId, <br />
+              ol.productId as orderLineProductId <br />
+              FROM customer cu <br />
+              INNER JOIN orderc o <br />
+              &nbsp;&nbsp;ON cu.customerId = o.customerId <br />
+              INNER JOIN orderLine ol <br />
+              &nbsp;&nbsp;ON ol.orderId = o.orderId <br />
+              ORDER BY cu.customerId, o.orderId;
+            </code>
+            <br />
+            <span className="blogNote">
+              You should get 18 rows back. First, we get all rows where the
+              customerId in the customer table matches the customerId in the
+              orderc table. Next, take the results of the first match and match again with the orderId in the orderLine table.
+              <br />
+              <br />
+            </span>
+          </span>
+
+          <span className="blogNote">
+              <b>Example INNER JOIN with no join condition</b>
               <br />
             </span>
             <code>
@@ -154,40 +181,14 @@ export const B221123 = () => {
               <br />
             </span>
 
-            <span className="blogNote">
-              <b>Example INNER JOIN on three tables</b>
-              <br />
-            </span>
-            <code>
-              SELECT cu.customerId, <br />
-              o.orderId, <br />
-              ol.productId, <br />
-              ol.orderedQuantity <br />
-              FROM customer cu <br />
-              INNER JOIN orderc o <br />
-              &nbsp;&nbsp;ON cu.customerId = o.customerId <br />
-              INNER JOIN orderLine ol <br />
-              &nbsp;&nbsp;ON ol.orderId = o.orderId <br />
-              ORDER BY cu.customerId;
-            </code>
-            <br />
-            <span className="blogNote">
-              You should get 18 rows back. First, we get all rows where the
-              customerId in the customer table matches the customerId in the
-              orderc table. Given that list, we next match the orderId in the
-              orderc table with the orderId in the orderLine table.
-              <br />
-              <br />
-            </span>
-          </span>
         </div>
         <div className="blogNote">
           <h2 className="blog">Postgres interactive playground</h2> uses the
-          Postgres PSQL command-line interface. You can enter queries against
-          the tables shown in the schema. Note that if you leave or refresh this
+          Postgres PSQL command-line interface (quick tutorial is <a href="https://tomcam.github.io/postgres/#reference" target="_blank" rel="noreferrer">here </a>). You can enter queries against
+          the tables shown in the schema. If you leave or refresh this
           page, your queries will disappear - though the tables and data will
           still be loaded. <br />
-          <br /> You can enter statements on multiple lines, but be sure to end
+          <br /> You can enter statements on multiple lines, just be sure to end
           with a semi-colon!
         </div>
         <div className="xcontainer">
