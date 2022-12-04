@@ -19,7 +19,7 @@
 }
 
 .custom-header {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Finlandica', sans-serif;
   color: #e5e5e5;
   font-size: 12px;
   font-weight: 400;
@@ -39,7 +39,7 @@
 }
 
 .todosTitle {
-  font-family: "Nunito", sans-serif ;
+  font-family: 'Finlandica', sans-serif;
   color: #003262;
   font-weight: 800;
   text-align: right;
@@ -50,30 +50,6 @@
   overflow-x: auto;
 }
 
-.react-bootstrap-table {
-  th {
-    outline: none;
-
-    &.sortable {
-      .svg-icon-sort {
-        opacity: 0;
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        .svg-icon-sort {
-          opacity: 1;
-        }
-      }
-    }
-  }
-  .table.table-head-custom thead tr {
-    .sortable-active {
-        color: #003262 !important;
-    }
-  }
-}
 
 .cursor-default {
   cursor: default !important;
