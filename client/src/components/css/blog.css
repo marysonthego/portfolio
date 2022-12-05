@@ -11,7 +11,7 @@ main.container {
 section.blogList {
   display: inline;
   font-size: 20px;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
   width: 80%;
 }
 
@@ -28,16 +28,16 @@ a.listItem {
   display: inline;
   text-decoration: none;
   font-weight: 400;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
 }
 a.listItem:hover {
   text-decoration: underline;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
 }
 
 .listDate {
   font-size: 11px;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
 }
 
 .listDate:hover {
@@ -71,7 +71,7 @@ a.listItem:hover {
 span.blog {
   font-size: 20px;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
   padding: 10px 0px;
 }
 
@@ -83,7 +83,7 @@ h2.blog {
   align-items: normal;
   font-size: 20px;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
   padding-top: 10px;
   padding-bottom: 0px;
 }
@@ -93,21 +93,21 @@ h3.blog {
   text-align: justify;
   font-size: 18px;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
   padding-top: 10px;
   padding-bottom: 0px;
 }
 
 div.h2Box {
-  border-color: rgb(196, 196, 196);
+  /* border-color: rgb(196, 196, 196); */
   border-style: solid;
   border-width: 2px;
   margin: 10px 10px 0 0;
 }
 
 div.h3Box {
-  background-color: #ebe7e7;
-  border-color: rgb(214, 212, 212);
+  /* background-color: #ebe7e7; */
+  /* border-color: rgb(214, 212, 212); */
   border-style: solid;
   border-width: 2px;
   padding: 10px 10px;
@@ -117,18 +117,18 @@ h2.blogBox {
   align-items: normal;
   font-size: 24px;
   font-weight: 400;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
   padding: 10px 0px 10px 10px;
 }
 
 a.item {
   text-decoration: none;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
 }
 a.item:hover {
   text-decoration: underline;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
 }
 
 .blogLi {
@@ -163,7 +163,7 @@ a.item:hover {
 .itemDate {
   font-size: 14px;
   font-weight: 300;
-  color: rgb(148, 148, 148);
+  /* color: rgb(148, 148, 148); */
   padding: 10px 0px;
   text-decoration: none;
 }

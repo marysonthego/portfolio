@@ -1,10 +1,14 @@
-import React, {useEffect, useLayoutEffect} from "react";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 import {useLocation} from 'react-router-dom';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import {ThemeSelector} from '../../ThemeSelector';
+import { useTheme } from "../../theme/useTheme";
 
 export const Navigation = () => {
-  const location = useLocation();
+ const location = useLocation();
+ const { theme, themeLoaded, getFonts } = useTheme();
+ const [selectedTheme, setSelectedTheme] = useState(theme);
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -22,11 +26,10 @@ export const Navigation = () => {
       <Navbar.Brand href="/">
         <img src="media/mmm.png" alt="marysonthego.tech" className="nav"/>
       </Navbar.Brand>
-        <a href="https://github.com/marysonthego" target="_blank" rel="noreferrer" className="nav-link">GitHub</a>
-        <a href="https://twitter.com/marysonthego" target="_blank" rel="noreferrer" className="nav-link">Twitter</a>
-        <Nav.Link href="/projects">Projects</Nav.Link>
-        <Nav.Link href="/bloglist">BlogList</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
+      {/* <ThemeSelector setter={ setSelectedTheme } /> */}
+      <Nav.Link href="/bloglist">Blog</Nav.Link>
+      <Nav.Link href="/projects">Projects</Nav.Link>
+      <Nav.Link href="/about">About</Nav.Link>
       </Nav>
     </Navbar>
   )

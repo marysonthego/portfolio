@@ -6,7 +6,8 @@ export const P04Conflicted = () => {
 
   ERROR
 
-  Plugin "react" was conflicted between "package.json » eslint-config-react-app » D:\repo\sqlite3app\node_modules\eslint-config-react-app\base.js" and "BaseConfig » D:\Repo\sqlite3app\node_modules\eslint-config-react-app\base.js".
+  Plugin "react" was conflicted between "package.json » eslint-config-react-app »
+  "D:\\repo\\sqlite3app\\node_modules\\eslint-config-react-app\\base.js" and "BaseConfig » "D:\\Repo\\sqlite3app\\node_modules\\eslint-config-react-app\\base.js".
 
   webpack 5.70.0 compiled with 1 error in 12270 ms
   `;

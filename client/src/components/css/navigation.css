@@ -3,8 +3,8 @@ div.flex-column.navbar-nav {
 }
 
 .navbar {
-  background-color: #ffffff;
-  color: #ffffff;
+  /* background-color: #ffffff;
+  color: #ffffff; */
   padding: 0;
   margin: 0;
   width: 100%;
@@ -22,7 +22,7 @@ div.navbar-nav {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   justify-content: space-between !important;
 }
 
@@ -38,7 +38,7 @@ img.nav {
 }
 
 a {
-  color: #000000;
+  /* color: #000000; */
   text-decoration: underline;
   font-weight: 500;
   font-family: 'Finlandica', sans-serif;
@@ -56,14 +56,14 @@ a.navbar-brand {
 a.nav-link {
   font-family: 'Finlandica', sans-serif;
   padding: 0;
-  color: #000000;
+  /* color: #000000; */
   transition: font-weight 0.5s;
 }
 
 a.nav-link:hover,
 a.nav-link:focus{
   font-weight: 500;
-  color: #000000 !important;
+  /* color: #000000 !important; */
 }
 
 .navbar-toggler:hover {

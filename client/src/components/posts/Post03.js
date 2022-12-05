@@ -293,7 +293,7 @@ server.get('/*', (req, res) =&gt; {
 //Statement to start your Node server
 server.listen(PORT, () => {
   console.error(\`CORS disabled.
-  Running mySQL on port $\{PORT\}
+  Running mySQL on port $\{PORT}
   NODE_ENV = ${process.env.NODE_ENV}\n\`);
 });
 `;

@@ -3,8 +3,10 @@ import ReactDOM from "react-dom";
 import {
   BrowserRouter,
   Routes, Route, Navigate } from "react-router-dom";
+import * as top from "components/top";
 import {About} from "components/about/About";
 import App from "./App";
+
 import {BlogList} from "components/blog/BlogList";
 
 import * as posts from "components/posts";
@@ -13,7 +15,6 @@ import * as items from "components/blog/items";
 
 import * as p10 from "components/posts/P10";
 
-import * as top from "components/top";
 import {Projects} from "components/demos/Projects";
 import {TodosForMe} from "components/todosforme/TodosForMe";
 import {WeatherApi} from "components/demos/WeatherApi";
@@ -35,10 +36,14 @@ import {Collapse} from "@material-ui/core";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
 import "./index.scss";
+// import { useTheme } from "./theme/useTheme";
+// import styled, { ThemeProvider } from "styled-components";
+// import * as themes from './theme/schema.json';
+// import { setStorage } from './components/helpers/LocalStorageHelpers';
+// import WebFont from "webfontloader";
 
 ReactDOM.render(
-
-  <CookiesProvider>
+    <CookiesProvider>
     <SnackbarProvider
       dense
       maxSnack={3}
@@ -46,35 +51,37 @@ ReactDOM.render(
       preventDuplicate
     >
         <BrowserRouter>
-          <top.Navigation />
-          <top.ScrollToTop className="ScrollToTop" />
-          <div className="footer">&copy;2022&nbsp;marysonthego.tech
-          <a
-              href="https://twitter.com/marysonthego?ref_src=twsrc%5Etfw"
-              className="twitter-follow-button"
-              data-show-count="false"
-              target="_blank" rel="noreferrer"
-            >
-              Follow @marysonthego
-            </a>
+
+        <top.Navigation />
+            <top.ScrollToTop className="ScrollToTop" />
+            <div className="footer">&copy;2022&nbsp;marysonthego.tech
             <a
-              href="https://www.linkedin.com/in/mary-clark-33511214"
-              target="_blank" rel="noreferrer">
-              <img src="media/linkedin2.png" alt="LinkedIn"/>
-            </a>
-            <a
-              href="https://github.com/marysonthego"
-              target="_blank" rel="noreferrer">
-              <img src="media/github.png" alt="Github"/>
-            </a>
-            <a
-              href="https://my.indeed.com/p/maryc-6wv0hp8"
-              target="_blank" rel="noreferrer">
-              <img src="media/indeed.png" alt="Indeed"/>
-            </a>
-            <a href="https://github.com/marysonthego/portfolio"
-            target="_blank" rel="noreferrer">This Site on Github</a>
-          </div>
+                href="https://twitter.com/marysonthego?ref_src=twsrc%5Etfw"
+                className="twitter-follow-button"
+                data-show-count="false"
+                target="_blank" rel="noreferrer"
+              >
+                Follow @marysonthego
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mary-clark-33511214"
+                target="_blank" rel="noreferrer">
+                <img src="media/linkedin2.png" alt="LinkedIn"/>
+              </a>
+              <a
+                href="https://github.com/marysonthego"
+                target="_blank" rel="noreferrer">
+                <img src="media/github.png" alt="Github"/>
+              </a>
+              <a
+                href="https://my.indeed.com/p/maryc-6wv0hp8"
+                target="_blank" rel="noreferrer">
+                <img src="media/indeed.png" alt="Indeed"/>
+              </a>
+              <a href="https://github.com/marysonthego/portfolio"
+              target="_blank" rel="noreferrer">This Site on Github</a>
+            </div>
+
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/bloglist" element={<BlogList />} />
@@ -127,7 +134,7 @@ ReactDOM.render(
         </BrowserRouter>
     </SnackbarProvider>
   </CookiesProvider>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
 
 reportWebVitals();

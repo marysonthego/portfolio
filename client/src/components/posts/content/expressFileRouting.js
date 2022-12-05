@@ -186,7 +186,7 @@ req.params: { "genus": "Prunus", "species": "persica" }`}
           (()):
         </p>
         <SyntaxHighlighter language="javascript" style={nightOwl}>
-          {`Route path: /user/:userId(\d+)
+          {`Route path: /user/:userId(d+)
 Request URL: http://localhost:3000/user/42
 req.params: {"userId": "42"}`}
         </SyntaxHighlighter>
