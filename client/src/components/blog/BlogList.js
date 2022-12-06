@@ -2,7 +2,7 @@ import * as items from "./items";
 import * as posts from '../posts';
 
 export const BlogList = () => {
-  let PageTitle = "My BlogList";
+  let PageTitle = "BlogList";
 
   return (
     <main className="container">

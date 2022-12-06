@@ -28,19 +28,20 @@ a.listItem {
   display: inline;
   text-decoration: none;
   font-weight: 400;
-  /* color: rgb(0, 0, 0); */
+  color: "teal";
 }
 a.listItem:hover {
   text-decoration: underline;
-  /* color: rgb(0, 0, 0); */
+  color: "teal";
 }
 
 .listDate {
   font-size: 11px;
-  /* color: rgb(0, 0, 0); */
+  color: "teal";
 }
 
 .listDate:hover {
+  color: "teal";
   text-decoration: none;
 }
 
@@ -71,7 +72,7 @@ a.listItem:hover {
 span.blog {
   font-size: 20px;
   font-weight: 500;
-  /* color: rgb(0, 0, 0); */
+  color: "teal";
   padding: 10px 0px;
 }
 
@@ -128,7 +129,7 @@ a.item {
 }
 a.item:hover {
   text-decoration: underline;
-  /* color: rgb(0, 0, 0); */
+  color: "teal";
 }
 
 .blogLi {

@@ -14,14 +14,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    border: 0;
     display: inline-block;
-    padding: 12px 24px;
     font-size: 14px;
     border-radius: 4px;
-    margin-top: 5px;
     cursor: pointer;
-    background-color: #6e7065;
+    background-color: #252735ff;
     color: #6e7065;
     font-family: ${({ theme }) => theme.font};
   }
