@@ -8,6 +8,16 @@ export const BlogList = () => {
     <main className="container">
       <h1 className="blog">{PageTitle}</h1>
       <section className="blogList">
+        <a className="listItem" href="/b221205">
+          <img
+            className="blogListImg"
+            src="media/ideasw200.png"
+            alt="Ideas Series"
+          />{" "}
+            {items.B221205()}
+        </a>
+      </section>
+      <section className="blogList">
         <a className="listItem" href="/b221201">
           <img
             className="blogListImg"

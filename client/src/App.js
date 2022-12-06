@@ -129,6 +129,7 @@ export default function App() {
                       element={<posts.ArrowFunctions />}
                     />
                     <Route path="/bnpm" element={<items.Bnpm />} />
+                    <Route path="/b221205" element={<items.B221205 />} />
                     <Route path="/b221203" element={<items.B221203 />} />
                     <Route path="/b221201" element={<items.B221201 />} />
                     <Route path="/b221123" element={<items.B221123 />} />

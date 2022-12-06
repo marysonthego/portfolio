@@ -19,7 +19,7 @@ export function MainPage() {
         <h2 className="mainSubtitle">
           I do full-stack React, NodeJS, & Express{" "}
         </h2>
-        <h2 className="mainSubtitle">with SQL & NoSQL.</h2>
+        <h2 className="mainSubtitle">SQL & NoSQL</h2>
 
         <h2 className="mainSubtitle">Feel free to &nbsp;
         <span className="gif-embed">

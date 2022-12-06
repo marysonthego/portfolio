@@ -21,9 +21,9 @@ export const About = () => {
           <div className = "box"></div>
         </section>
         <section className="aboutSection2">
-          <h1 className="aboutTitle">"There's Something about Mary"</h1>
+          <h1 className="aboutTitle">"There's Something about Mary!"</h1>
           <h2 className="aboutSubtitle">
-            Hint: (In the business for 30 years - also an old{" "}
+            Hint: (Long time developer - also an old{" "}
             <a href="https://www.imdb.com/title/tt0129387/" target="_blank" rel="noreferrer">
               movie
             </a>
@@ -82,7 +82,7 @@ export const About = () => {
           <h2 className="aboutSubtitle">
             Because I'm confident I can come up with a solution for any programming problem.
           </h2>
-          <div className = "box"></div>
+
         </section>
         <section className="aboutSection4">
           <h1 className="aboutTitle">Ready for details? </h1>
@@ -91,7 +91,7 @@ export const About = () => {
             <a href="mailto:mary@marysonthego.tech?subject=Contact">email</a>!
           </h2>
           <h2 className="aboutSubtitle">{" "}</h2>
-          <div className = "box"></div>
+         
         </section>
       </main>
     </>

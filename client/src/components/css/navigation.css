@@ -39,7 +39,7 @@ img.nav {
 }
 
 a {
-  text: "teal";
+  color: "teal";
   text-decoration: underline;
   font-weight: 500;
   font-family: 'Finlandica', sans-serif;
