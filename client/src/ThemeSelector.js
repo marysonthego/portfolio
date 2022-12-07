@@ -68,7 +68,7 @@ export const ThemeSelector = (props) => {
           backgroundColor: `${
             data[_.camelCase(props.theme.name)].colors.button.background
           }`,
-          color: `${data[_.camelCase(props.theme.name)].colors.button.text}`,
+          color: `#ffffff`,
           fontFamily: `${data[_.camelCase(props.theme.name)].font}`,
         }}
       >

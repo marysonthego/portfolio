@@ -24,7 +24,7 @@ div .navbar-nav {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  justify-content: space-between !important;
+  justify-content: space-around !important;
 }
 
 img.nav {
@@ -39,7 +39,7 @@ img.nav {
 }
 
 a {
-  color: "teal";
+  color: teal;
   text-decoration: underline;
   font-weight: 500;
   font-family: 'Finlandica', sans-serif;
@@ -64,7 +64,7 @@ a.nav-link {
 a.nav-link:hover,
 a.nav-link:focus{
   font-weight: 500;
-  /* color: #000000 !important; */
+  color: teal !important;
 }
 
 .navbar-toggler:hover {

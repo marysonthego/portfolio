@@ -22,7 +22,7 @@
       "name": "Dark",
       "colors": {
         "body": "#252735ff",
-        "text": "#6E7065",
+        "text": "#BBBBBB",
         "button": {
           "text": "#6E7065",
           "background": "#252735ff"

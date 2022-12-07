@@ -26,16 +26,16 @@ a.listItem {
   display: inline;
   text-decoration: none;
   font-weight: 400;
-  color: "teal";
+  color: teal;
 }
 a.listItem:hover {
   text-decoration: underline;
-  color: "teal";
+  color: teal;
 }
 
 .listDate {
   font-size: 11px;
-  color: "teal";
+  color: teal;
 }
 
 .listDate:hover {
@@ -67,7 +67,7 @@ a.listItem:hover {
 span.blog {
   font-size: 20px;
   font-weight: 500;
-  color: "teal";
+  color: teal;
   padding: 10px 0px;
 }
 
@@ -118,7 +118,7 @@ a.item {
 }
 a.item:hover {
   text-decoration: underline;
-  color: "teal";
+  color: teal;
 }
 
 .blogLi {
