@@ -176,8 +176,6 @@ export default function App() {
                     <Route path="/expresssqlite" element={<ExpressSqlite />} />
                     <Route path="/*" element={<Navigate replace to="/" />} />
                   </Routes>
-                {/* <MainPage /> */}
-
               </Container>
             </SnackbarProvider>
           </CookiesProvider>

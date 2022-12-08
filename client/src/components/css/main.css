@@ -40,5 +40,5 @@ h2.mainSubtitle {
       radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
     -webkit-mask: var(--mask);
             mask: var(--mask);
-    background: linear-gradient(135deg, #ff8903,#ff8903, #0331ff, #0331ff) fixed;
+    background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
   }

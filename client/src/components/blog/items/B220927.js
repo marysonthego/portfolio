@@ -310,8 +310,8 @@ return (
             title="React Router v6 Playground"
             width={iwidth}
             height={iheight}
-            src="https://stackblitz.com/edit/react-tqwgrp?embed=1&file=src/BlogPost1.js"
-          ></iframe>
+            src="https://codesandbox.io/embed/v6routertests-rzq9me?autoresize=1&fontsize=14&hidenavigation=1&initialpath=%2F&module=%2Fsrc%2FList.js&theme=dark">
+          </iframe>
         </div>
       </>
     );

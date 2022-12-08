@@ -125,14 +125,14 @@ const Code = ({ Syntax }) => {
       <>
         <div className="h2Box">
         <p className="blogText"> <br/>
-          <b>This is the first </b>in a series of occasional posts about ideas I've had. Since most of my ideas tend to involve doing things I don't know how to do, maybe it will benefit someone else to hear about the research I did (and why), the things I learned, dead-ends I went down, and, ultimately, how I came up with a solution. Based on the premise that we learn more from our mistakes than anything else, I hope people that come here will find something useful.
+          <b>This is the first </b>in a series of occasional posts about ideas I've had. Since most of my ideas tend to involve doing things I don't know how to do, I hope it will benefit someone else to hear about the research I did (and why), the things I learned, dead-ends I went down, and, ultimately, how I came up with a solution. Since we learn more from our mistakes, I hope people here will find something useful!
         </p>
           <p className="blogText">
             When I started working on the series about <a href="/b221121" >SQL Joins</a>, it quickly became clear to me that I needed an interactive connection to a database <b><i>right on the page</i></b>. I wanted a place where people could enter queries and get live results. Screen-shots just wouldn't cut it. They didn't let people experiment, make mistakes, experiment again, and again...
           </p>
           <h2 className="blog">Research - What is the current state of the art?</h2>
           <p className="blogText">
-            I looked around to find out what the current state of the art is at tutorial sites, online classes, and blogs where people go to learn SQL. There seems to be a pattern to it. Some big sites with pay-walled courses have what I'm looking for - they let you practice right alongside their course materials - but not always. Other, smaller, sites either teach SQL through YouTube or use screen-shots to show you the results you should get. In either case, you're on your own to find a way to practice - and in my opinion, practice is <i>everything</i>.
+            I looked around to see what the current state of the art is at tutorial sites, online classes, and blogs where people go to learn SQL. There seems to be a pattern to it. Some big sites with pay-walled courses have what I'm looking for - they let you practice right alongside their course materials - but not always. Other, smaller, sites either teach SQL through YouTube or use screen-shots to show you the results you should get. In either case, you're on your own to find a way to practice - and in my opinion, practice is <i>everything</i>.
           </p>
           <p className="blogText">
             One place that is both free <i>and</i> interactive is <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc" target="_blank" rel="noreferrer">w3schools</a>.  <i>How do they do it?</i> At the bottom of the page is a tiny link about their <i>Try-SQL Editor</i>. Click on it and you learn:</p>
@@ -162,7 +162,7 @@ const Code = ({ Syntax }) => {
             I'd estimate that reading, research, and Googling took about half the day. The rest of the time was spent on implementation. As you might expect, there are already competitors for Postgres Wasm, and I spent some time playing with each one. Most of them have a PSQL interpreter embedded in a bunch of stuff I don't want or need. My goal was to find one where it looked straight-forward to tease out the xTerm running PSQL from everything else.
             </p>
             <p className="blogText">
-            My interface isn't beautiful (it's just a black and white xTerm running PSQL), but it's reliable, and reloads my training database every time you refresh the browser. It's pre-compiled and super fast to start-up. When you load a page, there's no waiting for the database instance to initialize. You can type sql queries into it, get the results, even delete tables if you want to, but as soon as you refresh the browser tab everything is restored to normal. Very quickly. It's a great learning tool, and I can add colors and whatnot to make it even more user friendly in the future.
+            My interface isn't beautiful (it's just a black and white xTerm running PSQL), but it's reliable, and reloads my training database every time you refresh the browser. It's pre-compiled and super fast to start-up. When you load a page, there's no waiting for the database instance to initialize. You can type sql queries into it, get the results, even delete tables if you want to, but as soon as you refresh the browser tab everything is restored to normal. Very quickly. It's a great learning tool, and I can add colors and whatnot to make it more user friendly in the future.
           </p>
           <h2 className="blog">A Quick and Dirty Implementation</h2>
           <p className="blogText">

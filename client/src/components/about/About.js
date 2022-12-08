@@ -5,7 +5,7 @@ export const About = () => {
         <section className="aboutSection1">
           <h1 className="aboutTitle">Who's Mary?</h1>
           <h2 className="aboutSubtitle">
-            I'm a React full-stack developer looking for a new project!
+            I'm a React full-stack developer on the lookout for a new project!
           </h2>
 
           <ul className="ulTopCircle">
@@ -78,9 +78,9 @@ export const About = () => {
           <div className = "box"></div>
         </section>
         <section className="aboutSection3">
-          <h1 className="aboutTitle">Why I should be on your project?</h1>
+          <h1 className="aboutTitle">Why should I be on your project?</h1>
           <h2 className="aboutSubtitle">
-            Because I'm confident I can come up with a solution for any programming problem.
+            Because I'm confident I can come up with a delightful solution!
           </h2>
 
         </section>
@@ -88,10 +88,10 @@ export const About = () => {
           <h1 className="aboutTitle">Ready for details? </h1>
           <h2 className="aboutSubtitle">
             Shoot me an{" "}
-            <a href="mailto:mary@marysonthego.tech?subject=Contact">email</a>!
+            <a href="mailto:mary@marysonthego.tech?subject=Contact">email!</a>
           </h2>
           <h2 className="aboutSubtitle">{" "}</h2>
-         
+
         </section>
       </main>
     </>
