@@ -87,7 +87,7 @@ export const B221123 = () => {
         </div>
         <h2 className="blog">&nbsp; </h2>
           <div className="blogImg">
-            <img src={"media/inner-join-2.png"} title="Model" alt="Model" />
+            <img src={"media/inner-join-2.png"} title="Inner Join" alt="Inner Join" />
           </div>
       </>
     );
@@ -184,7 +184,7 @@ export const B221123 = () => {
         </div>
         <div className="blogNote">
           <h2 className="blog">Postgres interactive playground</h2> uses the
-          Postgres PSQL command-line interface (quick tutorial is <a href="https://tomcam.github.io/postgres/#reference" target="_blank" rel="noreferrer">here </a>). You can enter queries against
+          Postgres PSQL command-line interface (<a href="https://tomcam.github.io/postgres/#reference" target="_blank" rel="noreferrer">quick tutorial</a>). You can enter queries against
           the tables shown in the schema. If you leave or refresh this
           page, your queries will disappear - though the tables and data will
           still be loaded. <br />
