@@ -51,6 +51,14 @@ code {
   font-size: 18px;
 }
 
+a {
+  color: teal;
+}
+a:hover {
+  text-decoration: underline;
+  color: teal;
+}
+
 .symbol.symbol-45 > svg {
   width: 100%;
   max-width: 45px;

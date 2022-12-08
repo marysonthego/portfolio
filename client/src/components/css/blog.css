@@ -28,7 +28,7 @@ a.listItem {
   font-weight: 400;
   color: teal;
 }
-a.listItem:hover {
+a:hover {
   text-decoration: underline;
   color: teal;
 }
