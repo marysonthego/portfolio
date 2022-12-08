@@ -25,8 +25,8 @@ a.listItem {
   width: 45%;
   display: inline;
   text-decoration: none;
-  font-weight: 400;
-  color: teal;
+  font-weight: 500;
+  color: #009c9c;
 }
 a:hover {
   text-decoration: underline;
@@ -95,6 +95,7 @@ h3.blog {
 
 div.h2Box {
   border-style: solid;
+  border-radius: 7px;
   border-width: 2px;
   margin: 10px 10px 0 0;
 }
@@ -133,12 +134,11 @@ a.item:hover {
 }
 
 .blogText {
-  font-size: 18px;
+  font-size: 16px;
   padding: 0px 10px;
   text-align: justify;
-  font-weight: 400;
+  font-weight: 300;
   width: 100%;
-  line-height: 110%;
 }
 
 .blogQuote {

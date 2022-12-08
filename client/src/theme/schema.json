@@ -21,14 +21,14 @@
       "id": "T_007",
       "name": "Dark",
       "colors": {
-        "body": "#252735ff",
-        "text": "#BBBBBB",
+        "body": "#252735",
+        "text": "#ededed",
         "button": {
           "text": "#6E7065",
           "background": "#008080"
         },
         "link": {
-          "text": "teal",
+          "text": "#00c0c0",
           "opacity": 1
         }
       },

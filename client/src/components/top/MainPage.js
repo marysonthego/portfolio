@@ -15,11 +15,11 @@ export function MainPage() {
             e.preventDefault();
           }}
         />
-        <h1 className="mainTitle">Hi! Mary Clark here.</h1>
+        <h1 className="mainTitle">Hi! I'm Mary Clark</h1>
         <h2 className="mainSubtitle">
-          I do full-stack React, NodeJS, & Express{" "}
+          I do full-stack React, NodeJS, Express{" "}
         </h2>
-        <h2 className="mainSubtitle">SQL & NoSQL</h2>
+        <h2 className="mainSubtitle">SQL, NoSQL</h2>
 
         <h2 className="mainSubtitle">Feel free to &nbsp;
         <span className="gif-embed">
@@ -28,7 +28,7 @@ export function MainPage() {
           height="40"
           name="eyes"
           title="animated eyes"></iframe>
-        </span>!
+        </span>
         </h2>
         </div>
         <div className="mainSquiggle"></div>
