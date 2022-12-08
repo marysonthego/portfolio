@@ -81,15 +81,7 @@ export default function App() {
                   <top.ScrollToTop className="ScrollToTop" />
                   <div className="footer">
                     &copy;2022&nbsp;marysonthego.tech
-                    <a
-                      href="https://twitter.com/marysonthego?ref_src=twsrc%5Etfw"
-                      className="twitter-follow-button"
-                      data-show-count="false"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Follow @marysonthego
-                    </a>
+                   
                     <a
                       href="https://www.linkedin.com/in/mary-clark-33511214"
                       target="_blank"

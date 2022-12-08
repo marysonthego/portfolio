@@ -20,7 +20,7 @@ export const Navigation = () => {
     <Navbar expand='lg' sticky='top' >
       <Nav>
       <Navbar.Brand href="/">
-        <img src="media/mmm.png" alt="marysonthego.tech" className="nav"/>
+        <img src="media/mteal.png" alt="marysonthego.tech" className="nav"/>
       </Navbar.Brand>
       <Nav.Link href="/bloglist">Blog</Nav.Link>
       <Nav.Link href="/projects">Projects</Nav.Link>

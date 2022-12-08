@@ -18,14 +18,9 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #252735ff;
+    background-color: #008080;
     color: #6e7065;
     font-family: ${({ theme }) => theme.font};
-  }
-
-  button.btn {
-    background-color: ${({ theme }) => theme.colors.button.background};
-    color: ${({ theme }) => theme.colors.button.text};
   }
 `;
 
