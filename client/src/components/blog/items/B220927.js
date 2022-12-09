@@ -108,7 +108,7 @@ return (
   const BlogTop = () => {
     return (
       <>
-      <div className="blogImg">
+      <div className="blogTopImg">
         <img
           src={TopImage}
           title="mountain path"

@@ -24,94 +24,7 @@ export const B221203 = () => {
         <div className="h2Box">
           <h2 className="blog">Definitions</h2>
           <ul>
-          <li className="blogLi">
-            <b>Basic Join Condition</b> a simple <code>ON t1.colA = t2.colB</code> type match. Later, we'll look at more complex join conditions and how they affect the results.
-          </li>
 
-          <li className="blogLi">
-              <b>OUTER JOIN </b>There is <i>no such thing</i> as an OUTER JOIN
-              that isn't qualified with <b>LEFT</b> or <b>RIGHT</b> or <b>FULL</b>.
-              <ul>
-              <li className="blogLi">
-                OUTER JOINs are usually applied to only two tables. It is hard to write an outer join on more than two tables.
-              </li>
-              <li className="blogLi">
-                OUTER JOINs are handy for finding rows that are missing.
-              </li>
-                <li className="blogLi">
-                  <b>LEFT OUTER JOIN </b>is interchangeable with{" "}
-                  <b>LEFT JOIN</b>.
-                  <ul>
-                    <li className="blogLi">
-                      returns every row in the first table plus every row
-                      in the second table even when there are no matches. If there are no matches in the second table, null values are shown in the columns with no matches.
-                    </li>
-                  </ul>
-                </li>
-                <li className="blogLi">
-                  <b>RIGHT OUTER JOIN </b>is interchangeable with{" "}
-                  <b>RIGHT JOIN</b>.
-                  <ul>
-                    <li className="blogLi">
-                      returns every row in the second table plus every row in the first table even when there are no matches.
-                      If there are no matches in the first table, null values are shown in the columns with no matches.
-                    </li>
-                  </ul>
-                </li>
-                <li className="blogLi">
-                  <b>FULL OUTER JOIN </b>is interchangeable with{" "}
-                  <b>FULL JOIN</b>.
-                  <ul>
-                    <li className="blogLi">
-                    return the matching rows from both tables, and also the rows from both tables that do not match.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li className="blogLi">
-              <b>INNER JOIN </b>is interchangeable with <b>JOIN</b>.
-              <ul>
-                <li className="blogLi">
-                    never qualified with LEFT or RIGHT or FULL.
-                </li>
-                <li className="blogLi">
-                  returns only rows that match the WHERE, ON, or USING clause in both tables.
-                </li>
-                <li className="blogLi">
-                  In Postgres, if you omit the Join Condition you will get a syntax error. A Join Condition is required and usually enforces referential integrity.
-                </li>
-                 <li className="blogLi">
-                  INNER JOINs are much more common than OUTER JOINs because outer joins are necessary only when you need to see data from all rows, even those that have no matching row in another table.
-                </li>
-                <li className="blogLi">
-                  You can use an INNER JOIN to join more than two tables by chaining them together.
-                </li>
-              </ul>
-            </li>
-
-            <li className="blogLi">
-              <b>Join Condition </b>a WHERE, ON, or USING clause that limits the
-              rows returned to those that match the condition.
-            </li>
-            <ul>
-              <li className="blogLi">
-                WHERE and ON use a search condition like{" "}
-                <i>ON table1.columnA = table2.columnB</i> or{" "}
-                <i>WHERE table1.columnA = table2.columnB</i>
-              </li>
-              <li className="blogLi">
-                The ON clause specifies how to join tables while the WHERE
-                clause restricts which rows to include in the results.
-              </li>
-              <li className="blogLi">
-                USING specifies a list of columns to join from the columns in
-                two tables. The columns must have the same name in each table.
-                like <i>USING (columnA) </i> means each table must have a{" "}
-                <i>columnA</i> and each columnA must be the same data type.
-              </li>
-            </ul>
 
           </ul>
         </div>
@@ -124,7 +37,7 @@ export const B221203 = () => {
       <>
         <div className="h2Box">
           <h2 className="blog">Schema</h2>
-          <div className="blogImg">
+          <div className="blogTopImg">
             <img src={ModelImage} title="Model" alt="Model" />
           </div>
         </div>
@@ -221,7 +134,7 @@ export const B221203 = () => {
   return (
     <main className="container">
       <article className="blog">
-        <div className="blogImg" >
+        <div className="blogTopImg" >
           <img src={TopImage} title="Model" alt="Model" />
         </div>
         <h1 className="blog">{Title}</h1>

@@ -1,10 +1,11 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import {DefsB221121, DefsB221123, DefsB221201} from "./JoinDefinitions";
 
 export const B221123 = () => {
   const location = useLocation();
 
-  const Title = "Joins Part 2 - INNER JOIN";
+  const Title = "Joins Part 2 - Basic Inner Joins";
   const Created = "November 23, 2022";
   const TopImage = "media/joinpeople.png";
   const ModelImage = "media/model01.png";
@@ -24,51 +25,9 @@ export const B221123 = () => {
         <div className="h2Box">
           <h2 className="blog">&nbsp;Definitions</h2>
           <ul>
+          <DefsB221123/>
+          <DefsB221121/>
 
-            <li className="blogLi">
-              <b>INNER JOIN </b>is interchangeable with <b>JOIN</b>.
-              <ul>
-                <li className="blogLi">
-                    never qualified with LEFT or RIGHT or FULL.
-                </li>
-                <li className="blogLi">
-                  returns only rows that match the WHERE, ON, or USING clause in
-                  both tables.
-                </li>
-                <li className="blogLi">
-                  requires a join condition. In Postgres, if you omit the join condition you will get a syntax error.
-                </li>
-                <li className="blogLi">
-                  INNER JOINs are much more common than OUTER JOINs. It's common to use outer joins when you need to see missing data or all data.
-                </li>
-                <li className="blogLi">
-                  You can easily use INNER JOINs to join more than two tables by
-                  chaining them together.
-                </li>
-              </ul>
-            </li>
-
-            <li className="blogLi">
-              <b>Join Condition </b>a WHERE, ON, or USING clause that limits the
-              rows returned to those that match the condition.
-            </li>
-            <ul>
-              <li className="blogLi">
-                WHERE and ON use a search condition like{" "}
-                <i>ON table1.columnA = table2.columnB</i> or{" "}
-                <i>WHERE table1.columnA = table2.columnB</i>
-              </li>
-              <li className="blogLi">
-                USING specifies a list of columns to join from the columns in
-                two or more tables. The columns must have the same name in each
-                table. like <i>USING (columnA) </i> which means each table must
-                have a <i>columnA</i> and each columnA must be the same data
-                type.
-              </li>
-            </ul>
-            <li className="blogLi">
-            <b>Basic Join Condition</b> a simple <code>ON t1.colA = t2.colB</code> type match. Later, we'll look at more complex join conditions and how they affect the results. For now, all the join conditions will be as basic as possible so that we can focus on how each type of JOIN works.
-          </li>
           </ul>
         </div>
         <br />
@@ -81,14 +40,11 @@ export const B221123 = () => {
       <>
         <div className="h2Box">
           <h2 className="blog">&nbsp;Schema</h2>
-          <div className="blogImg">
+          <div className="blogTopImg">
             <img src={ModelImage} title="Model" alt="Model" />
           </div>
+
         </div>
-        <h2 className="blog">&nbsp; </h2>
-          <div className="blogImg">
-            <img src={"media/inner-join-2.png"} title="Inner Join" alt="Inner Join" />
-          </div>
       </>
     );
   };
@@ -203,7 +159,7 @@ export const B221123 = () => {
   return (
     <main className="container">
       <article className="blog">
-        <div className="blogImg">
+        <div className="blogTopImg">
           <img src={TopImage} title="Table Joins" alt="Table Joins" />
         </div>
         <h1 className="blog">{Title}</h1>
@@ -212,7 +168,7 @@ export const B221123 = () => {
         <Sect2 />
         <Sect3 />
         <div className="blog">
-          <h2 className="blog">Part 3 is about Outer Joins</h2>
+          <h2 className="blog">We'll look at basic Outer Joins next.</h2>
         </div>
       </article>
     </main>

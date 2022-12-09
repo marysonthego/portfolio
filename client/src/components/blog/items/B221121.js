@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import {DefsB221121, DefsB221123, DefsB221201} from "./JoinDefinitions";
 
 export const B221121 = () => {
   const location = useLocation();
@@ -22,56 +23,7 @@ export const B221121 = () => {
       <>
         <div className="h2Box">
           <h2 className="blog">&nbsp;A few definitions</h2>
-          <ul>
-            <li className="blogLi">
-              <b>Join </b>the act of combining two (or more) tables that have
-              one (or more) common domains into a single table or view of
-              results.
-            </li>
-
-            <li className="blogLi">
-              <b>Join Condition </b>WHERE, ON, and USING clauses are called Join
-              Conditions. They limit the results returned from a Join.
-            </li>
-
-            <li className="blogLi">
-              <b>Domain </b>the data type of a column - like string, integer, or
-              date.
-            </li>
-
-            <li className="blogLi">
-              <b>Foreign Key </b> the corresponding column (or set of columns)
-              that refers to a primary key in another table.
-              <ul>
-                <li className="blogLi">
-                  A foreign key in one table (usually called the <i>child</i>{" "}
-                  table) references a primary key in another table (usually
-                  called the <i>parent </i>table).
-                </li>
-
-                <li className="blogLi">
-                  Even though it is in a <i>child</i> table,{" "}
-                  <i>
-                    the foreign key is what defines the relationship between two
-                    tables
-                  </i>
-                  . Every table can (and usually does) have a primary key, but
-                  without a foreign key in another table, you do not have a
-                  relationship between the two tables!{" "}
-                </li>
-
-                <li className="blogLi">
-                  Both the primary key and foreign key must be of the same
-                  domain (which is a fancy way of saying they must have the same
-                  data type).
-                </li>
-              </ul>
-            </li>
-            <li className="blogLi">
-              <b>Primary Key </b>the column (or set of columns) that uniquely
-              identifies each row in a table.
-            </li>
-          </ul>
+        <DefsB221121/>
         </div>
       </>
     );
@@ -268,7 +220,7 @@ export const B221121 = () => {
   return (
     <main className="container">
       <article className="blog">
-        <div className="blogImg">
+        <div className="blogTopImg">
           <img src={TopImage} title="Model" alt="Model" />
         </div>
         <h1 className="blog">{Title}</h1>

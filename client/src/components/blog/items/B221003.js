@@ -24,7 +24,7 @@ export const B221003 = () => {
   const TopSect = () => {
     return (
       <>
-        <div className="blogImg">
+        <div className="blogTopImg">
           <img
             src={TopImage}
             title="Secrets"
