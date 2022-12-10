@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const Post05 = () => {
   const location = useLocation();
@@ -112,7 +112,7 @@ export const Post05 = () => {
       </p>
       <SyntaxHighlighter
           language="jsx"
-          style={nightOwl}
+          style={xonokai}
         >
           {code}
       </SyntaxHighlighter>

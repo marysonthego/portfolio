@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "components/css/posts.scss";
 
 function ExpressMysql() {
@@ -9,7 +9,7 @@ function ExpressMysql() {
       <h3 className="post-title text-center">{Title}</h3>
       <div className="sec01">
       <h5 className="subsub">dbconfig.mysql.js</h5>
-      <SyntaxHighlighter language="javascript" style={nightOwl}>
+      <SyntaxHighlighter language="javascript" style={xonokai}>
         {`require("dotenv").config();
 
 const mysql = require('mysql2');
@@ -51,7 +51,7 @@ module.exports = pool;
       <h5 className="subsub">app.js</h5>
       <SyntaxHighlighter
         language="javascript"
-        style={nightOwl}
+        style={xonokai}
       >
 
       {`const path = require('path');

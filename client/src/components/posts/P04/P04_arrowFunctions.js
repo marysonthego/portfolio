@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export function P04ArrowFunctions() {
   let code1 = `const withBraces = aList.map((name) => {
@@ -20,7 +20,7 @@ export function P04ArrowFunctions() {
       </p>
       <SyntaxHighlighter
           language="jsx"
-          style={nightOwl}
+          style={xonokai}
         >
           {code1}
       </SyntaxHighlighter>
@@ -30,7 +30,7 @@ export function P04ArrowFunctions() {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {code2}
       </SyntaxHighlighter>

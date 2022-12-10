@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "components/css/posts.scss";
 
 function ExpressFileBasicRouting() {
@@ -19,7 +19,7 @@ function ExpressFileBasicRouting() {
         are executed when the route is matched.
       </p>
       <p className="ptext">Route definitions have the following structure:</p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.METHOD(PATH, HANDLER)`}
       </SyntaxHighlighter>
       <ul>
@@ -43,7 +43,7 @@ function ExpressFileBasicRouting() {
         following examples illustrate defining simple routes.
       </p>
       <p className="ptext">Respond with Hello World! on the homepage:</p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.get(/, (req, res) => {
     res.send("Hello World!")});`}
       </SyntaxHighlighter>
@@ -51,19 +51,19 @@ function ExpressFileBasicRouting() {
         Respond to a POST request on the root route (/), the application’s home
         page:
       </p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.post('/', (req, res) => {
     res.send('Got a POST request')
     });`}
       </SyntaxHighlighter>
       <p className="ptext">Respond to a PUT request to the /user route:</p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.put('/user', (req, res) => {
     res.send('Got a PUT request at /user')
   });`}
       </SyntaxHighlighter>
       <p className="ptext">Respond to a DELETE request to the /user route:</p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.put('/user', (req, res) => {
     res.send('Got a PUT request at /user')
   });`}
@@ -74,7 +74,7 @@ function ExpressFileBasicRouting() {
         use the <code>express.static</code> built-in middleware function in
         Express.
       </p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`express.static(root, [options])`}
       </SyntaxHighlighter>
       <p className="ptext">
@@ -82,7 +82,7 @@ function ExpressFileBasicRouting() {
         static assets. For example, use the following code to serve images, CSS
         files, and JavaScript files in a directory named public:{" "}
       </p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.use(express.static('public'))`}
       </SyntaxHighlighter>
       <p className="ptext">
@@ -99,14 +99,14 @@ function ExpressFileBasicRouting() {
         <br /> To use multiple static assets directories, call the
         express.static middleware function multiple times:
       </p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.use(express.static('public')) app.use(express.static('files'))`}
       </SyntaxHighlighter>
       <p className="ptext">
         Express looks up the files in the order in which you set the static
         directories with the express.static middleware function.
         </p>
-        <SyntaxHighlighter language="asciidoc" style={nightOwl} wrapLongLines >
+        <SyntaxHighlighter language="asciidoc" style={xonokai} wrapLongLines >
         NOTE: For best results, use a reverse proxy cache to improve
         performance of serving static assets.
         A forward proxy is a web proxy that the client puts forward between itself and the target server. The reverse proxy is at the other end, between the server and the client. In other words, a forward proxy is used by a client, whereas a reverse proxy is used by an internet server.
@@ -117,7 +117,7 @@ function ExpressFileBasicRouting() {
         express.static function, specify a mount path for the static directory,
         as shown below:
       </p>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`app.use('/static', express.static('public'))`}
       </SyntaxHighlighter>
       <p className="ptext">
@@ -134,13 +134,13 @@ function ExpressFileBasicRouting() {
       <br />
       http://localhost:3000/static/hello.html
       <br /><br />
-      <SyntaxHighlighter language="asciidoc" style={nightOwl} wrapLongLines >
+      <SyntaxHighlighter language="asciidoc" style={xonokai} wrapLongLines >
         NOTE: The path that you provide to the express.static function is
         relative to the directory from where you launch your node process. If
         you run the express app from another directory, it’s safer to use the
         absolute path of the directory that you want to serve:
         </SyntaxHighlighter>
-      <SyntaxHighlighter language="bash" style={nightOwl}>
+      <SyntaxHighlighter language="bash" style={xonokai}>
         {`const path = require('path') app.use('/static',
           express.static(path.join(__dirname, 'public')))`}
       </SyntaxHighlighter>

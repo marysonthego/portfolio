@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const P04Conflicted = () => {
   let code1 = `Compiled with problems:
@@ -20,7 +20,7 @@ export const P04Conflicted = () => {
       <hr/>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {code1}
       </SyntaxHighlighter>

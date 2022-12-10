@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 
 export const B221205 = () => {
@@ -114,7 +114,7 @@ export const B221205 = () => {
 
 const Code = ({ Syntax }) => {
   return (
-    <SyntaxHighlighter language="jsx" style={nightOwl} wrapLongLines>
+    <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
       {Syntax}
     </SyntaxHighlighter>
   );
@@ -191,31 +191,40 @@ const Code = ({ Syntax }) => {
           <br/>
           <p className="blogText">
           <code>Step 4 - Create tables and data in Postgres (optional)</code> <br/>
-          You can save initial state so that your tables and data load at startup and reload whenever the browser  is refreshed. If you choose not to pre-configure the database with your own initial state, you will startup with an empty default database named "Postgres".
+          You can save initial state so that your tables and data load at startup and reload whenever the browser  is refreshed. If you choose not to pre-configure the database with your own initial state, you will startup with an empty default database named "postgres".
           </p>
           <p className="blogText">
-            The easiest way to save state is to go to the Postgres Wasm <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">example</a> where you can create tables, relationships, load data - basically do anything you want to configure a starting database. I suggest creating your schema in the default postgres database. That way, users will always start out in the right place.
+            The easiest way to save state is to go to the Postgres Wasm <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">example</a> where you can create tables, relationships, load data, etc. to configure a starting database. I suggest creating your schema in the default postgres database. That way, users will always start out in the right place.
           </p>
           <p className="blogText">
             When you are happy with the database, select <code>Save state to file</code> to save a <code>v86state.bin</code> file in your downloads directory.
           </p>
           <p className="blogText">
-            Before you can use it you must compress the v86state.bin file using <a href="https://github.com/facebook/zstd/releases/latest" target="_blank" rel="noreferrer">zstd</a> from Facebook. Download the appropriate zstd asset for your OS, extract the files, and follow the README to create a compressed <code>v86state.bin.zst</code> file.
+            Next, compress the v86state.bin file using <a href="https://github.com/facebook/zstd/releases/latest" target="_blank" rel="noreferrer">zstd</a> from Facebook. Download the appropriate zstd asset for your OS and extract the files.
           </p>
           <p className="blogText">
-            Make a backup of the original <code>v86state.bin.zst</code> file in your <code>/public/packages/runtime/state</code> directory, then paste in your new file. If all is well, the next time you restart your site, it will use the Postgres configuration you created! If something is wrong, restore the original .zst file and restart the browser.
+            In Windows, copy the v86state.bin file to the directory where you extracted zstd, and run the following command to create a state.zst file: <code> ./zstd v86state.bin state</code>
           </p>
           <p className="blogText">
-          If you're unfamiliar with using the Postgres PSQL command-line, here's a <a href="https://tomcam.github.io/postgres/#reference" target="_blank" rel="noreferrer">quick tutorial</a>.
-          <br/><br/>The active database is shown in the prompt. <code>postgres=#</code> means the active database is named <code>postgres</code>.
-          <br/><br/>PSQL commands begin with <code>\</code>
-          <br/>&nbsp;&nbsp;List all databases: <code>\l</code>
-          <br/>&nbsp;&nbsp;Connect to "databasename": <code>\c databasename</code>
-
-          <br/>&nbsp;&nbsp;List all tables in the active database: <code>\dt</code>
-          <br/>&nbsp;&nbsp;Get help: <code>\h</code>, Get help on "show" command: <code>\h show</code>
-          <br/><br/>SQL queries are different from commands. Be sure to end queries with a semi-colon. If you hit enter instead, PSQL thinks you are entering another line of the query. It doesn't recognize the end of a query until you enter a semi-colon.
+            Copy <code>state.zst</code> to your <code>/public/packages/runtime/state</code> directory. Refresh the browser to load the new state.
           </p>
+          <h2 className="blog">PSQL</h2>
+          <p className="blogText">
+            The name of the active database is in the prompt. <code>postgres=#</code> means the active database is  <code>postgres</code>.
+          <ul>
+            <li className="blogLi">PSQL commands begin with a slash (<code>\</code>)
+              <ul>
+                <li className="blogLi">List all databases: <code>\l</code></li>
+                <li className="blogLi">Change the active database: <code>\c databasename</code></li>
+                <li className="blogLi">List all tables in the active database: <code>\dt</code></li>
+                <li className="blogLi">Get help with slash commands: <code>\?</code></li>
+                <li className="blogLi">List SQL commands: <code>\h</code></li>
+                <li className="blogLi">Get help on the "show" command: <code>\h show</code></li>
+              </ul>
+            </li>
+          </ul>
+          SQL queries are different from slash commands. Be sure to end queries with a semi-colon.
+        </p>
       </>
     );
   };
@@ -227,44 +236,49 @@ const Code = ({ Syntax }) => {
             <h2 className="blog">Learn More</h2>
             <ul>
               <li className="blogLi">
-              <a className="listItem" href="https://developer.chrome.com/blog/deprecating-web-sql/">
+              <a className="listItem" href="https://developer.chrome.com/blog/deprecating-web-sql/" target="_blank" rel="noreferrer">
               Chrome Developers - Deprecating WebSql
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://developer.mozilla.org/en-US/docs/WebAssembly">
+              <a className="listItem" href="https://developer.mozilla.org/en-US/docs/WebAssembly" target="_blank" rel="noreferrer">
               MDN - What is WebAssembly?
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://webassembly.org/">
+              <a className="listItem" href="https://webassembly.org/" target="_blank" rel="noreferrer">
               WebAssembly.org
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://supabase.com/blog/postgres-wasm">
+              <a className="listItem" href="https://supabase.com/blog/postgres-wasm" target="_blank" rel="noreferrer">
               Supabase-Snaplet - Technical Deep Dive
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://supabase.com/docs/guides/with-react">
+              <a className="listItem" href="https://supabase.com/docs/guides/with-react" target="_blank" rel="noreferrer">
               Supabase React QuickStart (includes Postgres, Auth, Storage, Row-Level Security)
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://github.com/mbasso/awesome-wasm">
+              <a className="listItem" href="https://github.com/mbasso/awesome-wasm" target="_blank" rel="noreferrer">
               Awesome-Wasm - A Curated List of Awesome WebAssembly Things
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://sqliteonline.com/">
+              <a className="listItem" href="https://sqliteonline.com/" target="_blank" rel="noreferrer">
               SQLite3 Online
               </a>
               </li>
               <li className="blogLi">
-              <a className="listItem" href="https://news.ycombinator.com/item?id=33067962">
+              <a className="listItem" href="https://news.ycombinator.com/item?id=33067962" target="_blank" rel="noreferrer">
               Hacker News - Snaplet technical thread
               </a>
+              </li>
+              <li className="blogLi">
+                <a className="listItem" href="https://www.postgresql.org/docs/current/app-psql.html" target="_blank" rel="noreferrer">
+                  PSQL Documentation
+                </a>
               </li>
             </ul>
         </>

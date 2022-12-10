@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export function Post09() {
   const location = useLocation();
@@ -707,7 +707,7 @@ let code13 = `line 423 in script.py`;
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {code1}
         </SyntaxHighlighter>
@@ -716,14 +716,14 @@ let code13 = `line 423 in script.py`;
         </h5>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {code2}
         </SyntaxHighlighter>
       <h5 className="subsub">Indent code blocks with <code>tab</code> or <code>4 spaces</code> not 2 spaces!</h5>
       <SyntaxHighlighter
           language="python"
-          style={nightOwl}
+          style={xonokai}
         >
           {code3}
         </SyntaxHighlighter>
@@ -732,7 +732,7 @@ let code13 = `line 423 in script.py`;
 
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code4}
         </SyntaxHighlighter >
@@ -740,63 +740,63 @@ let code13 = `line 423 in script.py`;
 
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code5}
         </SyntaxHighlighter >
         <h5 className="subsub">Lists and print multiples</h5>
         <SyntaxHighlighter id="step2"
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code6}
         </SyntaxHighlighter >
         <h5 className="subsub">Objects</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code7}
         </SyntaxHighlighter >
         <h5 className="subsub">Print formats</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code8}
         </SyntaxHighlighter >
         <h5 className="subsub">Conditionals</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code9}
         </SyntaxHighlighter >
         <h5 className="subsub">For Loops</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code10}
         </SyntaxHighlighter >
         <h5 className="subsub">While Loops, Break, and Continue</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code11}
         </SyntaxHighlighter >
         <h5 className="subsub">Functions</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code12}
         </SyntaxHighlighter >
         <h5 className="subsub">Classes</h5>
         <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code13}
         </SyntaxHighlighter >

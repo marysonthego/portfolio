@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const P04Dispatch = () => {
   let code1 = `List = locs.map(loc =>
@@ -28,7 +28,7 @@ export const P04Dispatch = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {code1}
       </SyntaxHighlighter>
@@ -39,7 +39,7 @@ export const P04Dispatch = () => {
       </p>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {code2}
       </SyntaxHighlighter>

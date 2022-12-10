@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const Post03 = () => {
   let TopPic = "media/post03top.png";
@@ -515,7 +515,7 @@ let Text3 = (
         <h4>package.json</h4>
         <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {codeSection1}
       </SyntaxHighlighter>
@@ -530,7 +530,7 @@ let Text3 = (
         <h4>app.js</h4>
         <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {codeSection2}
           </SyntaxHighlighter>
@@ -543,7 +543,7 @@ let Text3 = (
         <h4>passportConfig.js</h4>
         <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
           {codeSection3}
       </SyntaxHighlighter>

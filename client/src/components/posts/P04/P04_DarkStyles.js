@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {a11yDark, atomDark, cb, darcula, coldarkDark, dark, dracula, duotoneDark, duotoneEarth, duotoneForest, duotoneSea, duotoneSpace, gruvboxDark, hopscotch, lucario, materialDark,nightOwl, nord, oneDark, pojoaque, solarizedDarkAtom, synthwave84, tomorrow, twilight, vscDarkPlus, xonokai, zTouch} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {a11yDark, atomDark, cb, darcula, coldarkDark, dark, dracula, duotoneDark, duotoneEarth, duotoneForest, duotoneSea, duotoneSpace, gruvboxDark, hopscotch, lucario, materialDark, nord, oneDark, pojoaque, solarizedDarkAtom, synthwave84, tomorrow, twilight, vscDarkPlus, xonokai, zTouch} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const P04DarkStyles = () => {
   let Title =
@@ -121,9 +121,9 @@ export const P04DarkStyles = () => {
       </SyntaxHighlighter>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
         >
-          nightOwl
+          xonokai
       </SyntaxHighlighter>
       <SyntaxHighlighter
           language="javascript"

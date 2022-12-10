@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import dbfile from './content/db.txt';
 import controllerFile from './content/controller.txt';
 import routesFile from './content/routes.txt';
@@ -113,7 +113,7 @@ export function Post06() {
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code2}
         </SyntaxHighlighter>
@@ -126,7 +126,7 @@ export function Post06() {
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code1}
         </SyntaxHighlighter>
@@ -145,7 +145,7 @@ export function Post06() {
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code3}
         </SyntaxHighlighter >
@@ -158,7 +158,7 @@ export function Post06() {
       </p>
       <SyntaxHighlighter id="step2"
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code4}
         </SyntaxHighlighter >
@@ -185,7 +185,7 @@ export function Post06() {
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code5}
         </SyntaxHighlighter >
@@ -203,7 +203,7 @@ export function Post06() {
       <h5 className="subsub">db.js</h5>
       <SyntaxHighlighter
           language="jsx"
-          style={nightOwl}
+          style={xonokai}
         >
           {db}
       </SyntaxHighlighter>
@@ -212,7 +212,7 @@ export function Post06() {
       <h5 className="subsub">controller.js</h5>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
           showLineNumbers
         >
         {controller}
@@ -222,7 +222,7 @@ export function Post06() {
       <h5 className="subsub">server.js</h5>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
           showLineNumbers
         >
         {server}
@@ -232,7 +232,7 @@ export function Post06() {
       <h5 className="subsub">routes.js</h5>
       <SyntaxHighlighter
           language="javascript"
-          style={nightOwl}
+          style={xonokai}
           showLineNumbers
         >
         {routes}

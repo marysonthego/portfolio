@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import useWindowDimensions from "components/helpers/UseWindowDimensions";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const B220927 = () => {
   const location = useLocation();
@@ -123,7 +123,7 @@ return (
 
   const Code = ({ Syntax }) => {
     return (
-      <SyntaxHighlighter language="jsx" style={nightOwl} wrapLongLines>
+      <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
         {Syntax}
       </SyntaxHighlighter>
     );

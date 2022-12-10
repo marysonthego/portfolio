@@ -1,6 +1,6 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "components/css/posts.scss";
 import ExpressFileBasicRouting from "./expressFileBasicRouting";
 
@@ -47,7 +47,7 @@ function ExpressFileRouting() {
           PUT, DELETE, or any other HTTP request method supported in the http
           module.
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`app.all('/secret', (req, res, next) => {
   console.log('Accessing the secret section ...')
   next() // pass control to the next handler
@@ -88,7 +88,7 @@ function ExpressFileRouting() {
           Query strings are not part of the route path.
         </p>
         <p className="ptext">Route paths based on strings:</p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`
 This route path will match requests to the root route, /.
 
@@ -107,7 +107,7 @@ app.get('/random.text', (req, res) => {
 })`}
         </SyntaxHighlighter>
         <p className="ptext">Route paths based on string patterns:</p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`
 This route path will match acd and abcd.
 
@@ -131,7 +131,7 @@ app.get('/ab(cd)?e', (req, res) => {
 })`}
         </SyntaxHighlighter>
         <p className="ptext">Route paths based on regular expressions:</p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`
 This route path will match anything with an “a” in it.
 
@@ -152,7 +152,7 @@ app.get(/.*fly$/, (req, res) => {
           populated in the <code>req.params</code> object, with the name of the
           route parameter specified in the path as their respective keys.
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`Route path: /users/:userId/books/:bookId
 Request URL: http://localhost:3000/users/34/books/8989
 req.params: { "userId": "34", "bookId": "8989" }`}
@@ -161,7 +161,7 @@ req.params: { "userId": "34", "bookId": "8989" }`}
           To define routes with route parameters, simply specify the route
           parameters in the path of the route as shown below
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`}app.get('/users/:userId/books/:bookId', (req, res) => {
   res.send(req.params)
 })`}
@@ -172,7 +172,7 @@ req.params: { "userId": "34", "bookId": "8989" }`}
           literally, they can be used along with route parameters for useful
           purposes.
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`Route path: /flights/:from-:to
 Request URL: http://localhost:3000/flights/LAX-SFO
 req.params: { "from": "LAX", "to": "SFO" }
@@ -185,7 +185,7 @@ req.params: { "genus": "Prunus", "species": "persica" }`}
           route parameter, you can append a regular expression in parentheses
           (()):
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`Route path: /user/:userId(d+)
 Request URL: http://localhost:3000/user/42
 req.params: {"userId": "42"}`}
@@ -209,7 +209,7 @@ req.params: {"userId": "42"}`}
           the following examples. A single callback function can handle a route.
           For example:
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`app.get('/example/a', (req, res) => {
   res.send('Hello from A!')
 })`}
@@ -218,7 +218,7 @@ req.params: {"userId": "42"}`}
           More than one callback function can handle a route (make sure you
           specify the next object). For example:
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`app.get('/example/b', (req, res, next) => {
   console.log('the response will be sent by the next function ...')
   next()
@@ -229,7 +229,7 @@ req.params: {"userId": "42"}`}
         <p className="ptext">
           An array of callback functions can handle a route. For example:
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`const cb0 = function (req, res, next) {
   console.log('CB0')
   next()
@@ -312,7 +312,7 @@ app.get('/example/d', [cb0, cb1], (req, res, next) => {
           chained route handlers that are defined by using
           <code> app.route()</code>.
         </p>
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`app.route('/book')
   .get((req, res) => {
     res.send('Get a random book')
@@ -337,7 +337,7 @@ app.get('/example/d', [cb0, cb1], (req, res, next) => {
         </p>
         Create a router file named birds.js in the app directory, with the
         following content:
-        <SyntaxHighlighter language="javascript" style={nightOwl}>
+        <SyntaxHighlighter language="javascript" style={xonokai}>
           {`const express = require('express')
 const router = express.Router()
 

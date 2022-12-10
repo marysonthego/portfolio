@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useLocation } from "react-router-dom";
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {nightOwl} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import nodejsFile from './content/nodejs.txt';
 import httpFile from './content/http.txt';
 import flamegraphFile from './content/flamegraphs.txt';
@@ -174,7 +174,7 @@ v16.13.1
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code2}
         </SyntaxHighlighter>
@@ -187,7 +187,7 @@ v16.13.1
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code1}
         </SyntaxHighlighter>
@@ -206,7 +206,7 @@ v16.13.1
       </p>
       <SyntaxHighlighter
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
           {code3}
         </SyntaxHighlighter >
@@ -219,7 +219,7 @@ v16.13.1
       </p>
       <SyntaxHighlighter id="part2"
           language="bash"
-          style={nightOwl}
+          style={xonokai}
         >
         {code4}
         </SyntaxHighlighter >
@@ -227,7 +227,7 @@ v16.13.1
       <h4 className="subtitle">Part 2: Node Basics</h4>
       <SyntaxHighlighter
           language="css"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {nodejs}
@@ -236,7 +236,7 @@ v16.13.1
         <h4 className="subtitle" id="part3">Part 3: Anatomy of an HTTP Transaction</h4>
         <SyntaxHighlighter
           language="unrealscript"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {http}
@@ -245,7 +245,7 @@ v16.13.1
         <h4 className="subtitle" id="part4">Part 4: Flame Graphs</h4>
         <SyntaxHighlighter
           language="unrealscript"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {flamegraph}
@@ -254,7 +254,7 @@ v16.13.1
         <h4 className="subtitle" id="part5">Part 5: Backpressure in Streams</h4>
         <SyntaxHighlighter
           language="unrealscript"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {backpressure}
@@ -263,7 +263,7 @@ v16.13.1
         <h4 className="subtitle" id="part6">Part 6: Performance Profiling</h4>
         <SyntaxHighlighter
           language="unrealscript"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {profiling}
@@ -272,7 +272,7 @@ v16.13.1
         <h4 className="subtitle" id="part7">Part 7: Node Dependencies</h4>
         <SyntaxHighlighter
           language="unrealscript"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {dependencies}
@@ -281,7 +281,7 @@ v16.13.1
         <h4 className="subtitle" id="part8">Part 8: Debugging Node Applications</h4>
         <SyntaxHighlighter
           language="unrealscript"
-          style={nightOwl}
+          style={xonokai}
           wrapLongLines
         >
           {debugging}
