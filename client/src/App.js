@@ -81,7 +81,7 @@ export default function App() {
                   <top.ScrollToTop className="ScrollToTop" />
                   <div className="footer">
                     &copy;2022&nbsp;marysonthego.tech
-                   
+
                     <a
                       href="https://www.linkedin.com/in/mary-clark-33511214"
                       target="_blank"
@@ -104,6 +104,7 @@ export default function App() {
                       <img src="media/indeed.png" alt="Indeed" />
                     </a>
                     <a
+                      className="footer"
                       href="https://github.com/marysonthego/portfolio"
                       target="_blank"
                       rel="noreferrer"
@@ -122,7 +123,6 @@ export default function App() {
                     />
                     <Route path="/bnpm" element={<items.Bnpm />} />
                     <Route path="/b221205" element={<items.B221205 />} />
-                    <Route path="/b221203" element={<items.B221203 />} />
                     <Route path="/b221201" element={<items.B221201 />} />
                     <Route path="/b221123" element={<items.B221123 />} />
                     <Route path="/b221121" element={<items.B221121 />} />

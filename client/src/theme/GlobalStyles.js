@@ -13,6 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
+  h2.blog {
+    color: ${({ theme }) => theme.colors.text};
+  }
+
   button {
     display: inline-block;
     font-size: 14px;

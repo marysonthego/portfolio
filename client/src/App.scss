@@ -7,7 +7,7 @@
  width: 100%;
 }
 
-.footer {
+div.footer {
   display: flex;
   font-size: small;
   color: teal;
@@ -21,4 +21,8 @@
   padding: 20px;
   z-index: 1020;
   background-color: #e5e5e5;
+}
+
+a.footer {
+  color: teal;
 }

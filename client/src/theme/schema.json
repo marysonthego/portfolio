@@ -11,7 +11,7 @@
           "background": "#008080"
         },
         "link": {
-          "text": "teal",
+          "text": "#00c0c0",
           "opacity": 1
         }
       },
@@ -28,7 +28,7 @@
           "background": "#008080"
         },
         "link": {
-          "text": "#00c0c0",
+          "text": "#FFCC66",
           "opacity": 1
         }
       },

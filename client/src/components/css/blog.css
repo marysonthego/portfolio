@@ -75,12 +75,13 @@ a:hover {
 span.blog {
   font-size: 20px;
   font-weight: 500;
-  color: teal;
+  color: #02ffff;
   padding: 10px 0px;
 }
 
 h1.blog {
   width: 100%;
+  color: #00c0c0;
 }
 
 h2.blog {
@@ -90,7 +91,7 @@ h2.blog {
   margin-left: 0px;
   padding-top: 10px;
   padding-bottom: 0px;
-  color: #00c0c0;
+  color: #FFCC66;
 }
 
 h3.blog {
@@ -98,10 +99,23 @@ h3.blog {
   text-align: justify;
   font-size: 18px;
   font-weight: 500;
-  color: #00c0c0;
+  color: #FFCC66;
   margin-left: 10px;
   padding-top: 10px;
   padding-bottom: 0px;
+}
+
+intro {
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+quote {
+  font-size: 30px;
+  font-weight: 400;
+  max-width: 50%;
+  text-align: center;
 }
 
 div.h2Box {
@@ -141,8 +155,6 @@ a.item:hover {
   text-align: justify;
   font-weight: 400;
   width: 90%;
-
-
 }
 
 .blogText {
@@ -161,9 +173,11 @@ a.item:hover {
 .blogNote {
   font-size: 16px;
   padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20x;
   text-align: justify;
   font-weight: 400;
-  width: 100%;
+  width: 90%;
   line-height: 100%;
 }
 

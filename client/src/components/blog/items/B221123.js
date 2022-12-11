@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import {DefsB221121, DefsB221123, DefsB221201} from "./JoinDefinitions";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const B221123 = () => {
   const location = useLocation();
@@ -18,6 +20,41 @@ export const B221123 = () => {
       </span>
     );
   }
+
+  const Syntax1 = `SELECT * from customer;  -- Should return 15 rows.
+  SELECT * from orderc;  -- Should return 10 rows.`;
+
+  const Syntax2 = `SELECT cu.customerId,
+  o.customerId as orderc_customerId, o.orderId
+  FROM customer cu
+  INNER JOIN orderc o
+    ON cu.customerId = o.customerId
+  ORDER BY cu.customerId;`;
+
+  const Syntax3 = `SELECT cu.customerId,
+  o.customerId as orderCustomerId,
+  o.orderId,
+  ol.productId as orderLineProductId
+  FROM customer cu
+  INNER JOIN orderc o
+    ON cu.customerId = o.customerId
+  INNER JOIN orderLine ol
+    ON ol.orderId = o.orderId
+  ORDER BY cu.customerId, o.orderId;`;
+
+  const Syntax4 = `SELECT cu.customerId,
+o.customerId as orderc_customerId, o.orderId
+FROM customer cu
+INNER JOIN orderc o
+ORDER BY cu.customerId;`;
+
+const Code = ({ Syntax }) => {
+  return (
+    <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
+      {Syntax}
+    </SyntaxHighlighter>
+  );
+};
 
   const Sect1 = () => {
     return (
@@ -54,89 +91,27 @@ export const B221123 = () => {
       <>
         <div className="blog">
           <h2 className="blog">Try some queries!</h2>
-          <span className="blogText">
+          <Code Syntax={Syntax1} />
+          <h2 className="blog">INNER JOIN</h2>
+          <Code Syntax={Syntax2} />
+          <p className="blogNote">
+            You should get 10 rows back - only the rows where the customerIds are a match.
+          </p>
+          <h2 className="blog">INNER JOIN on three tables</h2>
+          <Code Syntax={Syntax3} />
+          <p className="blogNote">
+            You should get 18 rows back. First, we get all rows where the
+            customerId in the customer table matches the customerId in the
+            orderc table. Next, take the results of the first match and match again with the orderId in the orderLine table.
             <br />
-            <code>SELECT * from customer;</code>
             <br />
-            <span className="blogNote">
-              You should get 15 rows back.
-              <br />
-              <br />
-            </span>
-            <span className="blogText">
-              <code>SELECT * from orderc;</code>
-              <br />
-              <span className="blogNote">
-                You should get 10 rows back.
-                <br />
-                <br />
-              </span>
-            </span>
-
-            <span className="blogNote">
-              <b>Example INNER JOIN</b>
-              <br />
-            </span>
-            <code>
-              SELECT cu.customerId, <br />
-              o.customerId as orderc_customerId, o.orderId <br />
-              FROM customer cu <br />
-              INNER JOIN orderc o <br />
-              &nbsp;&nbsp;ON cu.customerId = o.customerId <br />
-              ORDER BY cu.customerId;
-            </code>
-            <br />
-            <span className="blogNote">
-              You should get 10 rows back - only the rows where the customerIds are a match.
-              <br />
-              <br />
-            </span>
-
-            <span className="blogNote">
-              <b>Example INNER JOIN on three tables</b>
-              <br />
-            </span>
-            <code>
-              SELECT cu.customerId, <br />
-              o.customerId as orderCustomerId, <br/>
-              o.orderId, <br />
-              ol.productId as orderLineProductId <br />
-              FROM customer cu <br />
-              INNER JOIN orderc o <br />
-              &nbsp;&nbsp;ON cu.customerId = o.customerId <br />
-              INNER JOIN orderLine ol <br />
-              &nbsp;&nbsp;ON ol.orderId = o.orderId <br />
-              ORDER BY cu.customerId, o.orderId;
-            </code>
-            <br />
-            <span className="blogNote">
-              You should get 18 rows back. First, we get all rows where the
-              customerId in the customer table matches the customerId in the
-              orderc table. Next, take the results of the first match and match again with the orderId in the orderLine table.
-              <br />
-              <br />
-            </span>
-          </span>
-
-          <span className="blogNote">
-              <b>Example INNER JOIN with no join condition</b>
-              <br />
-            </span>
-            <code>
-              SELECT cu.customerId, <br />
-              o.customerId as orderc_customerId, o.orderId <br />
-              FROM customer cu <br />
-              INNER JOIN orderc o <br />
-              ORDER BY cu.customerId;
-            </code>
-            <br />
-            <span className="blogNote">
+          </p>
+          <h2 className="blog">INNER JOIN with no join condition</h2>
+          <Code Syntax={Syntax4} />
+            <p className="blogNote">
               You should get a syntax error. INNER JOINs require a Join
               Condition.
-              <br />
-              <br />
-            </span>
-
+            </p>
         </div>
         <div className="blogNote">
           <h2 className="blog">Postgres interactive playground</h2> uses the

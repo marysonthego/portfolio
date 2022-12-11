@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import {DefsB221121, DefsB221123, DefsB221201} from "./JoinDefinitions";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const B221201 = () => {
   const location = useLocation();
@@ -18,6 +20,32 @@ export const B221201 = () => {
       </span>
     );
   }
+
+  const Syntax1 = `SELECT * from customer;  -- Should return 15 rows.
+SELECT * from orderc;  -- Should return 10 rows.`;
+
+const Syntax2 = `SELECT cu.customerId, o.customerId as orderc_customerId, o.orderId
+FROM customer cu LEFT OUTER JOIN orderc o
+ON cu.customerId = o.customerId
+ORDER BY cu.customerId;`;
+
+const Syntax3 = ` SELECT cu.customerId, o.customerId as orderc_customerId, o.orderId
+FROM customer cu RIGHT OUTER JOIN orderc o
+ON cu.customerId = o.customerId
+ORDER BY cu.customerId;`;
+
+const Syntax4 = `SELECT cu.customerId, o.customerId as orderc_customerId, o.orderId
+FROM customer cu FULL OUTER JOIN orderc o
+ON cu.customerId = o.customerId
+ORDER BY cu.customerId;`;
+
+  const Code = ({ Syntax }) => {
+    return (
+      <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
+        {Syntax}
+      </SyntaxHighlighter>
+    );
+  };
 
   const Sect1 = () => {
     return (
@@ -52,83 +80,26 @@ export const B221201 = () => {
       <>
         <div className="blog">
           <h2 className="blog">Try some queries!</h2>
-          <span className="blogText">
-            <br />
-            <code>SELECT * from customer;</code>
-            <br />
-            <span className="blogNote">
-              You should get 15 rows back.
-              <br />
-              <br />
-            </span>
-            <span className="blogText">
-              <code>SELECT * from orderc;</code>
-              <br />
-              <span className="blogNote">
-                You should get 10 rows back.
-                <br />
-                <br />
-              </span>
-            </span>
-
-            <span className="blogNote">
-              <b>Example LEFT OUTER JOIN</b>
-              <br />
-            </span>
-            <code>
-            SELECT cu.customerId,<br/>
-            o.customerId as orderc_customerId,<br/>
-            o.orderId <br/>
-            FROM customer cu <br/>
-            LEFT OUTER JOIN orderc o <br/>
-            &nbsp;&nbsp;ON cu.customerId = o.customerId<br/>
-            ORDER BY cu.customerId;<br/>
-            </code>
-            <span className="blogNote">
-              You should get 16 rows back - every row in the customer table merged with
-              every matching row in the orderc table. If there's no match for the customerId in the orderc table, you'll still get a row for that customerId, but columns from the right table will be empty. In a left outer join, nothing is ever added to the results from the right table that doesn't match something that's already in the left table.
-              <br />
-              <br />
-            </span>
-
-            <span className="blogNote">
-              <b>Example RIGHT OUTER JOIN </b>
-              <br />
-            </span>
-            <code>
-              SELECT cu.customerId, <br />
-              o.customerId as orderc_customerId, o.orderId <br />
-              FROM customer cu <br />
-              RIGHT OUTER JOIN orderc o <br />
-              &nbsp;&nbsp;ON cu.customerId = o.customerId<br/>
-              ORDER BY cu.customerId;<br/>
-            </code>
-            <span className="blogNote">
+          <Code Syntax={Syntax1} />
+          <h2 className="blog">LEFT OUTER JOIN</h2>
+          <Code Syntax={Syntax2} />
+          <p className="blogNote">
+            You should get 16 rows back - every row in the customer table merged with
+            every matching row in the orderc table. When there's no match for the customerId in the orderc table, you'll still get a row for that customerId, but columns from the right table will be empty. In a left outer join, nothing is ever added to the results from the right table that doesn't match something that's already in the left table.
+          </p>
+          <h2 className="blog">RIGHT OUTER JOIN</h2>
+          <Code Syntax={Syntax3} />
+          <p className="blogNote">
               You should get 10 rows back. In a right outer join, the right table controls the results. orderc is the right table. This means you will get every row in the orderc table merged with every matching row in the customer table. If there's no match in the customer table, you'll still get the customerId row in the orderc table merged with null columns from the customer table.<br/><br/> You might expect to get 16 rows again, but since there are only 10 customerIds in the orderc table, no rows are added for the extra customerIds in the customer table. The extra ids are ignored. However, any customerIds in the orderc table that are missing from the customer table will be added with blank columns representing the columns from the customer table.
-              <br />
-              <br />
-            </span>
+          </p>
 
-            <span className="blogNote">
-              <b>Example FULL OUTER JOIN </b>
-              <br />
-            </span>
-            <code>
-            SELECT cu.customerId, <br />
-              o.customerId as orderc_customerId, o.orderId <br />
-              FROM customer cu <br />
-              FULL OUTER JOIN orderc o <br />
-              &nbsp;&nbsp;ON cu.customerId = o.customerId<br/>
-              ORDER BY cu.customerId;<br/>
-            </code>
-            <br />
-            <span className="blogNote">
-              You should get 16 rows back - all rows in the customer table plus all rows in the orderc table - even if the customerIds in the two tables do not match.
-              <br/><br/>Did you notice that the full outer join returned the same results as the left outer join? With basic join conditions, if the controlling table has the most rows it will be equivalent to a full outer join. This means a left outer join on the larger customer table is equivalent to a full outer join. However, a right outer join on the smaller orderc table will not be equivalent to a full outer join on both tables.
-              <br />
-              <br />
-            </span>
-          </span>
+          <h2 className="blog">FULL OUTER JOIN</h2>
+          <Code Syntax={Syntax4} />
+          <p className="blogNote">
+            You should get 16 rows back - all rows in the customer table plus all rows in the orderc table - even if the customerIds in the two tables do not match.
+            <br/><br/>Did you notice that the full outer join returned the same results as the left outer join? With basic join conditions, if the controlling table has the largest number of rows, it will be equivalent to a full outer join.
+          </p>
+
         </div>
         </>
       );
