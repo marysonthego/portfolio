@@ -14,8 +14,8 @@ export const B221205 = () => {
   if (location.pathname.toString() === "/bloglist") {
     return (
       <span>
-        <span className="blog">{Title}</span>
-        <h2 className="itemDate">{Created}</h2>
+        <span className="blogListItem">{Title}</span>
+        <div className="blogListIemDate">{Created}</div>
       </span>
     );
   }
@@ -122,97 +122,97 @@ const Code = ({ Syntax }) => {
   const Sect1 = () => {
     return (
       <>
-        <p className="blogText"> <br/>
-          <intro><em>This is the first </em></intro>in a series of posts I plan to do occasionally about ideas I want to pursue. It's only fair to warn you at the start, though, that most of my ideas tend to involve things I don't know how to do! So, <i>"ideas"</i> posts will usually begin with an <i>"odessey of discovery"</i>, and I can't guarantee they'll always end well! But this one does, so I hope you enjoy the trip!
+        <p className="blogPostText"> <br/>
+          <span className="intro"><em>This is the first </em></span>in a series of posts I'll do occasionally about ideas I want to pursue. It's only fair to warn you at the start, though, that most of my ideas tend to involve things I don't know how to do! So, of necessity, <i>ideas</i> posts will usually begin with an <i>odessey</i>; and I can't guarantee it will always end well! The good news is, this one does...
         </p>
-        <p className="blogText">
-          In this post, I'll explain how I did research, what I learned, the dead-ends I went down, and how I ultimately was able to get a live database running in a browser. Best of all, I'll share it with you! It turns out to be easy. Really.
+        <p className="blogPostText">
+          In this post, I'll explain how I did research, what I learned, the dead-ends I went down, and how I was ultimately able to get a live database running in a browser. Best of all, it turns out to be easy! Really.
         </p>
-        <p className="blogText">
-            Your first question might be, <i>why do you want to embed a live database in a web page in the first place?</i> Well, when I started working on the <a href="/b221121" >SQL Joins</a> series, it quickly became clear to me that I needed an interactive database connection<i> right on the page</i>. I wanted a place where users could try out queries and get live results. Screen-shots weren't gonna cut it! I wanted a place where people could experiment, experiment again, repeat.
+        <p className="blogPostText">
+            Your first question might be, <i>why do you want to embed a live database in a web page in the first place?</i> Well, when I started working on the <a href="/b221121" >SQL Joins</a> series, it quickly became clear to me that I needed an interactive database connection<i> right on the page</i>. I wanted a place where users could try out queries and get live results. Screen-shots weren't gonna cut it! I wanted a place where people could experiment, experiment again, and repeat.
           </p>
-          <h2 className="blog">What is the current state of the art?</h2>
-          <p className="blogText">
+          <h2 className="blogPost">What is the current state of the art?</h2>
+          <p className="blogPostText">
             This subject felt like a black hole. I needed to do some research. So I looked around to see what the current state of the art is at tutorial sites, online classes, and blogs where people go to learn SQL. A few big, pay-walled sites have what I'm looking for - you can practice right alongside the course materials; but most sites either teach SQL through YouTube or use screen-shots to show the results you should get. In either case, you're on your own to find a way to practice - and in my opinion, <i>practice is everything</i>.
           </p>
-          <p className="blogText">
-            One place that is both free <i>and</i> interactive is <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc" target="_blank" rel="noreferrer">w3schools</a>.  <i>How do they do it?</i> At the bottom of the page is a tiny link about their <i>Try-SQL Editor</i>. I clicked. Maybe this is the answer I was looking for?
+          <p className="blogPostText">
+            One place that is both free <i>and</i> interactive is <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc" target="_blank" rel="noreferrer">w3schools</a>.  <i>How do they do it?</i> At the bottom of the page is a tiny link about their <i>Try-SQL Editor</i>. I clicked. Maybe this is the answer I'm looking for?
             </p>
-            <p className="blogQuote">
+            <p className="blogPostQuote">
             <i>"Our Try-SQL Editor uses WebSQL to demonstrate SQL. A Database-object is created in your browser, for testing purposes. You can try any SQL statement, and play with the Database as much as you like. The Database can be restored at any time, simply by clicking the "Restore Database" button. WebSQL stores a Database locally, on the user's computer. Each user gets their own Database object. WebSQL is supported in Chrome, Safari, Opera, and Edge(79). If you use another browser you will still be able to use our Try SQL Editor, but a different version, using a server-based ASP application, with a read-only Access Database, where users are not allowed to make any changes to the data."</i>
           </p>
 
-          <h2 className="blog">Clues!</h2>
-          <p className="blogText">
-            My new questions: What is <i>WebSQL</i>, and how do you <i>create a database in the user's browser</i>? Time for more research.
+          <h2 className="blogPost">Clues!</h2>
+          <p className="blogPostText">
+            Now my questions are, "What is <i>WebSQL</i>, and how do you <i>create a database in the user's browser</i>"? Time for more research.
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             The bad news. It didn't take long to find out that WebSQL is <a href="https://developer.chrome.com/blog/deprecating-web-sql/" target="_blank" rel="noreferrer">deprecated</a>. Worse, the alternative Chrome suggests (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noreferrer">Web Storage API</a>) uses local/session storage, or indexedDB to persist data in the browser. Sort of like cookies. That's fine for some things, but no substitute for running live queries in a database!
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             Chrome Developers know this though, and say, <i>"[we're] working with the SQLite community on a replacement for Web SQL based on SQLite implemented in WebAssembly (Wasm)."</i> More research reveals that SQLite3 in Wasm is <a href="https://sqlite.org/wasm/doc/trunk/demo-123.md" target="_blank" rel="noreferrer">available now</a>. The problem is, I don't want to use it. I'll explain why in a minute, but first...
           </p>
-          <h2 className="blog">Detour into Wasm</h2>
-          <p className="blogText">
+          <h2 className="blogPost">Detour into Wasm</h2>
+          <p className="blogPostText">
             Wasm is short for <a href="https://developer.mozilla.org/en-US/docs/WebAssembly" target="_blank" rel="noreferrer">WebAssembly</a> - a low-level binary instruction set. You can write in human-readable languages such as C, C++, Rust, .NET, or AssemblyScript and compile to binary. The original goal was to encapsulate a very fast executable <a href="https://andreabergia.com/blog/2015/03/stack-based-virtual-machines-1/" target="_blank" rel="noreferrer">virtual stack machine</a> in Javascript so it could run in the browser. (Nowdays, it can run stand-alone too.) Wasm is exciting precisely because it can embed big applications, unimaginable before, running at near-native speed right in the browser! All you need is a fairly <a href="https://webassembly.org/" target="_blank" rel="noreferrer">modern one</a> .
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             I said I'd explain why I don't like SQLite for learning. In my opinion, it drifts uncomfortably far from the standard SQL syntax used by most databases you're likely to use for full-stack development. When you invest time in learning something, what you learn should be as widely applicable as possible. I think MySQL, MSSql, MariaDB, or Postgres are better, more mainstream choices. They do have their quirks, but these are mostly differences in database administration - not SQL query language. Given that, you can imagine my excitement when a recent <a href="https://news.ycombinator.com/item?id=32498435" target="_blank" rel="noreferrer">Hacker News thread</a> pointed to a Postgres implementation in Wasm! </p>
 
-          <h2 className="blog">Implementation Decisions</h2>
-          <p className="blogText">
+          <h2 className="blogPost">Implementation Decisions</h2>
+          <p className="blogPostText">
             I'd estimate the reading, research, and Googling took about half the day. The rest was spent  doing an implementation. As you might expect, there are already competitors for Postgres Wasm, and I spent some time playing with each one. Most of them have a PSQL interpreter embedded in a bunch of stuff I don't need or want. My goal was to find one where it looked straight-forward to tease out the xTerm running PSQL from all the bells and whistles.
             </p>
-            <p className="blogText">
+            <p className="blogPostText">
               <br/>
-            <intro><em>I really like </em></intro>the open-source <i>collabenation</i>  (<i>collaborative implementation</i>, get it?) between <a href="https://supabase.com/blog/postgres-wasm" target="_blank" rel="noreferrer">Supabase and Snaplet</a>. The way they've done it, Wasm embeds a stripped-down Linux OS running a Postgres server at near-native speed. Here's what a demo of their no-frills interface <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">looks like</a>.
+              <span className="intro"><em>I really like </em></span>the open-source <i>collabenation</i>  (<i>collaborative implementation</i>, get it?) between <a href="https://supabase.com/blog/postgres-wasm" target="_blank" rel="noreferrer">Supabase and Snaplet</a>. The way they've done it, Wasm embeds a stripped-down Linux OS running a Postgres server at near-native speed. Here's what a demo of their no-frills interface <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">looks like</a>.
           </p>  <br/>
-          <h2 className="blog">A Quick and Dirty Implementation</h2>
-            <p className="blogText">
+          <h2 className="blogPost">A Quick and Dirty Implementation</h2>
+            <p className="blogPostText">
             So, here we go! The rest of this post explains how <i>YOU TOO</i> can spin up Postgres running in your browser in an hour or less!
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             My interface isn't beautiful (it's just a black and white xTerm running PSQL in a web page); but thanks to <a href="https://supabase.com/blog/postgres-wasm" target="_blank" rel="noreferrer">Supabase and Snaplet</a>, it's reliable and instant-on. Since it's pre-compiled, there's no waiting for initialization at runtime, and no special build step. Just drop in the runtime directory, update index.html to include it, and go. You can type in SQL queries, see the results, even delete tables if you want to; but as soon as you refresh the browser, everything is instantly restored to its initial state. It's a great simple-to-implement learning tool or even (wait for it) a <i>collabenation</i> tool!
           </p>
 
-          <p className="blogText">
-            Step 1 - clone the repo <br/>
-            While you're <a href="https://github.com/snaplet/postgres-wasm" target="_blank" rel="noreferrer">there</a>, give them a &#x1F31F;. They have created an awesome implementation, and even an innovation that supports networking and allows you to transfer files to and from the Wasm instance and your local machine!
+          <h3 className="blogPost">Step 1 - clone the repo</h3>
+          <p className="blogPostText">
+            While you're <a href="https://github.com/snaplet/postgres-wasm" target="_blank" rel="noreferrer">there</a>, give them a &#x1F31F;. They have an awesome implementation, and an innovation that allows you to transfer files to and from the Wasm instance and your local machine!
           </p>
-          <p className="blogText">
-          Step 2 - grab the runtime <br/>
+          <h3 className="blogPost">Step 2 - grab the runtime </h3>
+          <p className="blogPostText">
             The cloned repo contains a /packages directory with buildroot, runtime, and websockproxy directories inside. You can use <code>buildroot </code> to generate a new runtime. <code>websockproxy</code> contains their innovations supporting file sharing and networking. You'll only need this if you want to implement your own web socket proxy server in a Docker container. For this project, all we need is the pre-built Wasm runtime directory. So, simply copy the <code>/packages/runtime</code> directory into your own repo so that it ends up at <code>/public/packages/runtime</code>.
           </p>
-          <p className="blogText">
-          Step 3 - grab the scripts<br/>
+          <h3 className="blogPost">Step 3 - grab the scripts</h3>
+          <p className="blogPostText">
             Next, copy the important bits from their <code>/public/packages/index.html</code> into your <code>/public/index.html</code>. This loads the important stuff from packages/runtime into your app.
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             To do this, add the entries below into the <code>head</code> section of your <code>/public/index.html</code>. It's nowhere near as complicated as it looks, but you will need to make changes to use the path <code>%PUBLIC_URL%</code> as shown. You can just copy the code below right into the head section of your own /public/index.html if you put the runtime directory in /public/packages/runtime.
           </p>
 
           <Code Syntax={Syntax1} />
           <br/>
-          <p className="blogText">
-          Step 4 - Create tables and data in Postgres (optional) <br/>
+          <h3 className="blogPost">Step 4 - Create tables and data in Postgres (optional) </h3>
+          <p className="blogPostText">
           You can save an initial state so that your tables and data load at startup and reload whenever the browser is refreshed. If you choose not to pre-configure the database with your own tables and data, it will startup with an empty default database named "postgres".
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             The easiest way to save state is to go to the Postgres Wasm <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">demo</a>. There you can create tables, relationships, load data, etc. I'd suggest creating your schema in the default postgres database. That way, users will always start out in the right place.
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             When you are happy with the database, click the <code>Save state to file</code> button, which saves a <code>v86state.bin</code> file to your downloads directory.
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             Next, compress the v86state.bin file using <a href="https://github.com/facebook/zstd/releases/latest" target="_blank" rel="noreferrer">zstd</a> from Facebook. Zstd is required. It's not the same as a .zip, and it's the only compression algorithm supported by the Wasm Postgres package.Download the appropriate zstd asset for your OS and extract the files.
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             If you're in Windows, you can copy the v86state.bin file to the directory where you extracted zstd, then run the following command to create a v86state.bin.zst file: <code> ./zstd v86state.bin</code>. For other platforms, check the zstd README. The instructions might be slightly different.
           </p>
-          <p className="blogText">
+          <p className="blogPostText">
             Copy <code>v86state.bin.zst</code> to your <code>/public/packages/runtime/state</code> directory. When you refresh the browser, the customized state should load.
           </p>
-          <intro><em>That's it! You're done!</em></intro>
+          <span className="intro"><em>That's it! We're done!</em></span>
       </>
     );
   };
@@ -221,8 +221,8 @@ const Code = ({ Syntax }) => {
     return (
         <>
           <br/>
-          <h2 className="blog">Some PSQL Help</h2>
-          <p className="blogText">
+          <h2 className="blogPost">Some PSQL Help</h2>
+          <p className="blogPostText">
             The name of the active database is in the prompt. <code>postgres=#</code> means the active database is  <code>postgres</code>.
           <ul>
             <li className="blogLi">PSQL commands begin with a slash (<code>\</code>)
@@ -239,7 +239,7 @@ const Code = ({ Syntax }) => {
           SQL queries are different from slash commands. Be sure to end queries with a semi-colon.
         </p>
 
-            <h2 className="blog">Learn More</h2>
+            <h2 className="blogPost">Learn More</h2>
             <ul>
               <li className="blogLi">
               <a className="listItem" href="https://developer.chrome.com/blog/deprecating-web-sql/" target="_blank" rel="noreferrer">
@@ -292,13 +292,13 @@ const Code = ({ Syntax }) => {
     };
 
   return (
-    <main className="container">
-      <article className="blog">
-        <div className="blogTopImg" >
+    <div className="blogPostContainer">
+      <article className="blogPostPage">
+        <div className="blogPostTopImg" >
           <img src={TopImage} title="Ideas" alt="Ideas" />
         </div>
-        <h1 className="blog">{Title}</h1>
-        <h2 className="itemDate">{Created}</h2>
+        <h1 className="blogPostTitle">{Title}</h1>
+        <h2 className="blogPostDate">{Created}</h2>
         <Sect1 />
 
         <div className="xcontainer">
@@ -308,6 +308,6 @@ const Code = ({ Syntax }) => {
         </div>
         <Sect3 />
       </article>
-    </main>
+    </div>
   );
 };

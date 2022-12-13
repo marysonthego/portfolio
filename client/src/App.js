@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import {Routes, Route, Navigate, useLocation} from "react-router-dom";
 import {setStorage} from "./components/helpers/LocalStorageHelpers";
 import styled, {ThemeProvider} from "styled-components";
-import WebFont from "webfontloader";
 import {GlobalStyles} from "./theme/GlobalStyles";
 import * as themes from "./theme/schema.json";
 import {useTheme} from "./theme/useTheme";
 import {ThemeSelector} from "./ThemeSelector";
-import "./App.scss";
 
 import {CookiesProvider} from "react-cookie";
 import {SnackbarProvider} from "notistack";
@@ -38,7 +36,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Container = styled.div`
-  margin: 5px auto 5px auto;
+  margin: auto;
 `;
 
 export default function App() {
@@ -56,13 +54,6 @@ export default function App() {
     setSelectedTheme(theme);
   }, [theme]);
 
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: getFonts(),
-      },
-    });
-  });
 
   return (
     <>

@@ -1,0 +1,339 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('./Mona-Sans.woff2') format('woff2 supports variations'),
+    url('./Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+/* Reset CSS */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, #root {
+  font-family: 'Mona Sans';
+	padding: 0px;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* MainPage */
+
+main.mainContainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+div.mainImgDiv {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10vh 0 5vh 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainImage {
+  border-radius: 50%;
+}
+
+h1.mainTitle {
+  font-weight: 200;
+  font-stretch: 110%;
+  margin-bottom: 2vh;
+}
+
+h2.mainSubtitle {
+  font-weight: 200;
+  font-stretch: 90%;
+  margin-bottom: 1vh;
+}
+
+.mainSquiggle {
+  width: 50%;
+  height: 60px;
+  margin-top: 50px;
+  padding-top: 10px;
+  --mask:
+    radial-gradient(31.87px at 50% calc(100% + 26.40px),#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 32px) calc(50% - 9px + .5px)/64px 18px ,
+    radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
+}
+
+/* BlogList Page */
+
+.blogListContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+  margin: 0 10%;
+  height: 100%;
+  padding-bottom: 5%;
+}
+
+h1.blogList {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 28px;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  width: 100%;
+  text-decoration: none;
+}
+
+.blogListUl {
+  list-style: none;
+  width: 80%;
+}
+
+img.blogListImg {
+  width: 250;
+  height: 200;
+  margin-right: 2%;
+  object-fit: cover;
+}
+
+a.blogListItem {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 20px;
+  display: inline;
+  text-decoration: none;
+
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.blogListIemDate {
+  font-size: 12px;
+  margin-bottom: 2%;
+}
+
+.listDate:hover {
+  text-decoration: none;
+}
+
+/* BlogPost */
+
+.blogPostContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  align-items: center;
+  justify-content: left;
+  margin: 0 10%;
+  height: 100%;
+  padding-bottom: 5%;
+}
+
+.blogPostPage {
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1%;
+}
+
+.blogPostTopImg {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: normal;
+  object-fit: scale-down;
+  margin-bottom: 2vh;
+}
+
+h1.blogPostTitle {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 28px;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  width: 100%;
+  text-decoration: none;
+}
+
+.blogPostDate {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 12px;
+}
+
+h2.blogPost {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+h3.blogPost {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.intro {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.blogPostText {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: 100%;
+  margin-bottom: 2vh;
+  text-align: justify;
+  line-height: 175%;
+  width: 100%;
+}
+
+.blogPostQuote {
+  margin: 2vh;
+  padding: 0 20%;
+  line-height: 175%;
+  text-align: justify;
+}
+
+.blogLi {
+  display: list-item;
+  list-style: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  text-align: justify;
+  font-weight: 400;
+  width: 90%;
+}
+
+/* navbar */
+
+div.navbar {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  justify-content: space-around !important;
+}
+
+a.navIcon {
+  margin-top: 10px;
+}
+
+a.navLink {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.navLink:hover,
+a.navLink:focus{
+  font-stretch: 120%;
+  text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+  margin-top: 5px;
+}
+
+div.footer {
+  display: flex;
+  font-size: small;
+  color: #252735;
+  position: fixed;
+  padding-top: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between !important;
+  height: 50px;
+  padding: 20px;
+  z-index: 1020;
+  background-color: #ebebeb;
+}
+
+a.footer {
+  color: #252735;
+}
+
+/* ScrollToTop */
+
+.ScrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.7;
+  height: 48px;
+  width: 48px;
+  margin: 20px;
+}
+
+.ScrollToTop:hover{
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  div.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ScrollToTop {
+    animation-name: ScrollToTop-spin;
+    animation-iteration-count: 1;
+    animation-duration: 2s, 4s;
+    animation-timing-function: ease;
+    transition: transform 1s;
+  }
+}
+
+@keyframes ScrollToTop-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ScrollToTop-slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes ScrollToTop-fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+

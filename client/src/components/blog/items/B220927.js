@@ -18,7 +18,7 @@ export const B220927 = () => {
     return (
       <span>
         <span className="blog">{Title}</span>
-        <h2 className="itemDate">{Created}</h2>
+        <div className="blogListIemDate">{Created}</div>
       </span>
     );
   }
@@ -66,7 +66,7 @@ if (location.pathname.toString() === '/bloglist') {
   return (
     <span>
       <span className="itemText">{Title} </span>
-      <span className="itemDate">{Created}</span>
+      <span className="blogListIemDate">{Created}</span>
     </span>
   );
 }
@@ -76,7 +76,7 @@ return (
       <h1>Welcome to BlogPost1!</h1>
     </article>
     <section className="blogList">
-      <a className="itemDate" href="/bloglist">
+      <a className="blogListIemDate" href="/bloglist">
         <i>Return to the blog list!</i>
       </a>
       <div>The current location is {location.pathname.toString()}</div>
@@ -116,7 +116,7 @@ return (
         />
       </div>
         <h1 className="blog">{Title}</h1>
-        <h2 className="itemDate">{Created}</h2>
+        <div className="blogListIemDate">{Created}</div>
       </>
     );
   };
@@ -274,8 +274,8 @@ return (
   const text7 = (
     <>
       <br/>
-      <div className="h2Box">
-        <h2 className="blog">Further Reading</h2>
+      <div className="divBox">
+        <div className="blog">Further Reading</div>
         <ul>
           <li className="blogLi">
           <a className="listItem" href="https://beta.reactjs.org/learn/render-and-commit">

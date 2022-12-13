@@ -7,15 +7,19 @@
         "body": "#FFFFFF",
         "text": "#000000",
         "button": {
-          "text": "#FFFFFF",
-          "background": "#008080"
+          "text": "#000000",
+          "background": "#00cccc"
         },
         "link": {
-          "text": "#00c0c0",
+          "text": "#252735",
           "opacity": 1
+        },
+        "navbar": {
+          "text":"#252735",
+          "background": "#ffffff"
         }
       },
-      "font": "Finlandica"
+      "font": "Mona Sans"
     },
     "dark" : {
       "id": "T_007",
@@ -24,15 +28,20 @@
         "body": "#252735",
         "text": "#ededed",
         "button": {
-          "text": "#6E7065",
-          "background": "#008080"
+          "text": "#000000",
+          "background": "#00cccc"
         },
         "link": {
           "text": "#FFCC66",
+          "background": "#008080",
           "opacity": 1
+        },
+        "navbar": {
+          "text":"#FFCC66",
+          "background": "#252735"
         }
       },
-      "font": "Finlandica"
+      "font": "Mona Sans"
     }
   }
 }

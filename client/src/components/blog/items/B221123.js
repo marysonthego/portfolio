@@ -16,7 +16,7 @@ export const B221123 = () => {
     return (
       <span>
         <span className="blog">{Title}</span>
-        <h2 className="itemDate">{Created}</h2>
+        <div className="blogListIemDate">{Created}</div>
       </span>
     );
   }
@@ -138,7 +138,7 @@ const Code = ({ Syntax }) => {
           <img src={TopImage} title="Table Joins" alt="Table Joins" />
         </div>
         <h1 className="blog">{Title}</h1>
-        <h2 className="itemDate">{Created}</h2>
+        <h2 className="blogListIemDate">{Created}</h2>
         <Sect1 />
         <Sect2 />
         <Sect3 />

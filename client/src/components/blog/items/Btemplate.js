@@ -16,7 +16,7 @@ export const Btemplate = () => {
     return (
       <span>
         <span className="blog">{Title}</span>
-        <h2 className="itemDate">{Created}</h2>
+        <div className="blogListIemDate">{Created}</div>
       </span>
     );
   }
@@ -59,7 +59,7 @@ export const Btemplate = () => {
             alt="Top Pic Alt"
           />
           <h1 className="blog">{Title}</h1>
-          <h2 className="itemDate">{Created}</h2>
+          <div className="blogListIemDate">{Created}</div>
           <h2 className="blog">
             First item in a box <em>Optional something</em>
           </h2>
@@ -100,7 +100,7 @@ export const Btemplate = () => {
             alt="Top Alt"
           />
           <h1 className="blog">{Title}</h1>
-          <h2 className="itemDate">{Created}</h2>
+          <div className="blogListIemDate">{Created}</div>
           </div>
           <div className="h2Box">
             <h2 className="blogBox">

@@ -16,7 +16,7 @@ export const B221003 = () => {
     return (
       <span>
         <span className="blog">{Title}</span>
-        <h2 className="itemDate">{Created}</h2>
+        <div className="blogListIemDate">{Created}</div>
       </span>
     );
   }
@@ -32,7 +32,7 @@ export const B221003 = () => {
           />
           </div>
           <h1 className="blog">{Title}</h1>
-          <h2 className="itemDate">{Created}</h2>
+          <div className="blogListIemDate">{Created}</div>
 
       </>
     );
@@ -40,18 +40,18 @@ export const B221003 = () => {
 
   const TopBox = () => {
     return (
-      <div className="h2Box">
-        <h2 className="blogBox">
+      <div className="divBox">
+        <div className="blogBox">
           <span>
             Array.reduce(callbackFn, <em>optional initialValue</em>)
           </span>
-        </h2>
-        <h2 className="blogBox">
+        </div>
+        <div className="blogBox">
           <span>
             callbackFn(previousValue, currentValue,{" "}
             <em>optional currentIndex</em>)
           </span>
-        </h2>
+        </div>
       </div>
     );
   };

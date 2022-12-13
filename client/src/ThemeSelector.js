@@ -46,7 +46,7 @@ export const ThemeSelector = (props) => {
     props.setter(selectedTheme);
   };
 
-  const updateThemeCard = (theme) => {
+  const updateThemeButton = (theme) => {
     const key = _.keys(theme)[0];
     const updated = { ...data, [key]: theme[key] };
     setData(updated);
@@ -57,10 +57,10 @@ export const ThemeSelector = (props) => {
   }, [data]);
 
   useEffect(() => {
-    props.newTheme && updateThemeCard(props.newTheme);
+    props.newTheme && updateThemeButton(props.newTheme);
   }, [props.newTheme]);
 
-  const ThemeCard = (props) => {
+  const ThemeButton = (props) => {
     return (
       <ThemedButton
         onClick={(selectedTheme) => ThemeSwitcher(props.theme, selectedTheme)}
@@ -68,8 +68,11 @@ export const ThemeSelector = (props) => {
           backgroundColor: `${
             data[_.camelCase(props.theme.name)].colors.button.background
           }`,
-          color: `#ffffff`,
+          color: `${data[_.camelCase(props.theme.name)].colors.button.text}`,
           fontFamily: `${data[_.camelCase(props.theme.name)].font}`,
+          display: `inline-block`,
+          padding: `4px`,
+          cursor: `pointer`
         }}
       >
         {props.theme.name}
@@ -82,7 +85,7 @@ export const ThemeSelector = (props) => {
       <Container>
         {themes.length > 0 &&
           themes.map((theme) => (
-            <ThemeCard theme={data[theme]} key={data[theme].id} />
+            <ThemeButton theme={data[theme]} key={data[theme].id} />
           ))}
       </Container>
     </div>

@@ -13,7 +13,7 @@ export const B221121 = () => {
     return (
       <span>
         <span className="blog">{Title}</span>
-        <h2 className="itemDate">{Created}</h2>
+        <div className="blogListIemDate">{Created}</div>
       </span>
     );
   }
@@ -224,7 +224,7 @@ export const B221121 = () => {
           <img src={TopImage} title="Model" alt="Model" />
         </div>
         <h1 className="blog">{Title}</h1>
-        <h2 className="itemDate">{Created}</h2>
+        <h2 className="blogListIemDate">{Created}</h2>
         <Sect1 />
         <Sect2 />
         <Sect3 />

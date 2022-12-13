@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  body {
+  body, .navbar{
     background: ${({ theme }) => theme.colors.body};
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.font};
@@ -13,18 +13,8 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
-  h2.blog {
-    color: ${({ theme }) => theme.colors.text};
+  h1, h2, h3, .intro {
+    color: ${({ theme }) => theme.colors.navbar.text};
   }
 
-  button {
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #008080;
-    color: #6e7065;
-    font-family: ${({ theme }) => theme.font};
-  }
 `;
-

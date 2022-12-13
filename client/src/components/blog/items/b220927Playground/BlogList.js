@@ -29,7 +29,7 @@ export const BlogList = () => {
       </section>
 
       <section className="blogList">
-        <a className="itemDate" href="/">
+        <a className="blogListIemDate" href="/">
           <i>Return to the home page!</i>
         </a>
         <div>The current location is {location.pathname.toString()}</div>
