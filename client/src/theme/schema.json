@@ -42,7 +42,7 @@
           "opacity": 1
         },
         "codeLocal": {
-          "background": "#4c4d56"
+          "background": "#000000"
         },
         "navbar": {
           "text":"#FFCC66",
