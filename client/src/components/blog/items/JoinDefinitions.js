@@ -2,29 +2,29 @@ export const DefsB221121 = () => {
   return (
   <>
     <li className="blogLi">
-      <code>Join </code>the act of combining two (or more) tables that have one
+      <code className="codeLocal">Join </code>the act of combining two (or more) tables that have one
       (or more) common domains into a single table or view of results.
     </li>
 
     <li className="blogLi">
-      <code>Join Condition </code>WHERE, ON, and USING clauses are called Join
+      <code className="codeLocal">Join Condition </code>WHERE, ON, and USING clauses are called Join
       Conditions. They limit the results returned from a Join.
     </li>
 
     <li className="blogLi">
-      <code>Basic Join Condition</code> a simple <code>ON t1.colA = t2.colB</code>{" "}
+      <code className="codeLocal">Basic Join Condition</code> a simple <code className="codeLocal">ON t1.colA = t2.colB</code>{" "}
       type match. Later, we'll look at more complex join conditions and how they
       affect the results. For now, all the join conditions will be as basic as
       possible so that we can focus on how each type of JOIN works.
     </li>
 
     <li className="blogLi">
-      <code>Domain </code>the data type of a column - like string, integer, or
+      <code className="codeLocal">Domain </code>the data type of a column - like string, integer, or
       date.
     </li>
 
     <li className="blogLi">
-      <code>Foreign Key </code> the corresponding column (or set of columns)
+      <code className="codeLocal">Foreign Key </code> the corresponding column (or set of columns)
       that refers to a primary key in another table.
       <ul>
         <li className="blogLi">
@@ -50,7 +50,7 @@ export const DefsB221121 = () => {
       </ul>
     </li>
     <li className="blogLi">
-      <code>Primary Key </code>the column (or set of columns) that uniquely
+      <code className="codeLocal">Primary Key </code>the column (or set of columns) that uniquely
       identifies each row in a table.
     </li>
   </>
@@ -61,7 +61,7 @@ export const DefsB221123 = () => {
   return (
   <>
     <li className="blogLi">
-      <code>INNER JOIN </code>is interchangeable with <code>JOIN</code>.
+      <code className="codeLocal">INNER JOIN </code>is interchangeable with <code className="codeLocal">JOIN</code>.
       <ul>
         <li className="blogLi">never qualified with LEFT or RIGHT or FULL.</li>
         <li className="blogLi">
@@ -97,8 +97,8 @@ export const DefsB221201 = () => {
   return (
   <>
     <li className="blogLi">
-      <code>OUTER JOIN </code>There is <i>no such thing</i> as an OUTER JOIN that
-      isn't qualified with <code>LEFT</code> or <code>RIGHT</code> or <code>FULL</code>.
+      <code className="codeLocal">OUTER JOIN </code>There is <i>no such thing</i> as an OUTER JOIN that
+      isn't qualified with <code className="codeLocal">LEFT</code> or <code className="codeLocal">RIGHT</code> or <code className="codeLocal">FULL</code>.
       <ul>
         <li className="blogLi">
           OUTER JOINs are usually applied to only two tables. When there are
@@ -114,7 +114,7 @@ export const DefsB221201 = () => {
           matches in the second table.
         </li>
         <li className="blogLi">
-          <code>LEFT OUTER JOIN </code>is interchangeable with <code>LEFT JOIN</code>.
+          <code className="codeLocal">LEFT OUTER JOIN </code>is interchangeable with <code className="codeLocal">LEFT JOIN</code>.
           <ul>
             <li className="blogLi">
               The first (leftmost) table in the FROM clause is the controlling
@@ -132,7 +132,7 @@ export const DefsB221201 = () => {
           </ul>
         </li>
         <li className="blogLi">
-          <code>RIGHT OUTER JOIN </code>is interchangeable with <code>RIGHT JOIN</code>.
+          <code className="codeLocal">RIGHT OUTER JOIN </code>is interchangeable with <code className="codeLocal">RIGHT JOIN</code>.
           <ul>
             <li className="blogLi">
               opposite of a LEFT OUTER JOIN. The second (rightmost) table in the
@@ -150,7 +150,7 @@ export const DefsB221201 = () => {
           </ul>
         </li>
         <li className="blogLi">
-          <code>FULL OUTER JOIN </code>is interchangeable with <code>FULL JOIN</code>.
+          <code className="codeLocal">FULL OUTER JOIN </code>is interchangeable with <code className="codeLocal">FULL JOIN</code>.
           <ul>
             <li className="blogLi">
               Merges the matching rows from both tables plus the rows from both

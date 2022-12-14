@@ -51,12 +51,14 @@ ORDER BY cu.customerId;`;
     return (
       <>
         <div className="h2Box">
-          <h2 className="blog">&nbsp;Definitions</h2>
+          <h2 className="blogPost">&nbsp;Definitions</h2>
+          <div className="blogPostText">
           <ul>
             <DefsB221201/>
             <DefsB221123/>
             <DefsB221121/>
           </ul>
+          </div>
         </div>
       </>
     );
@@ -106,13 +108,13 @@ ORDER BY cu.customerId;`;
     };
 
   return (
-    <main className="container">
-      <article className="blog">
-        <div className="blogTopImg" >
-          <img src={TopImage} title="Model" alt="Model" />
+    <main className="blogListContainer">
+      <article className="blogPostPage">
+        <div className="blogPostTopImg" >
+          <img src={TopImage} title="rowing together" alt="rowing together" />
         </div>
-        <h1 className="blog">{Title}</h1>
-        <h2 className="blogListIemDate">{Created}</h2>
+        <h1 className="blogPostTitle">{Title}</h1>
+        <h2 className="blogPostDate">{Created}</h2>
         <Sect1 />
         <Sect2 />
         <Sect3 />

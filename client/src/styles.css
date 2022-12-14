@@ -170,6 +170,13 @@ h1.blogPostTitle {
   font-size: 12px;
 }
 
+div.h2Box {
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 2px;
+  margin: 10px ;
+}
+
 h2.blogPost {
   font-size: 20px;
   font-weight: 300;
