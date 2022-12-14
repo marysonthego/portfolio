@@ -17,4 +17,14 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.navbar.text};
   }
 
+  code {
+    color: ${({ theme }) => theme.colors.code};
+  }
+
+  .codeLocal {
+    background: ${({ theme }) => theme.colors.codeLocal.background};
+  }
+
+
+
 `;

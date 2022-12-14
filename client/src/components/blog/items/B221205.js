@@ -123,7 +123,7 @@ const Code = ({ Syntax }) => {
     return (
       <>
         <p className="blogPostText"> <br/>
-          <span className="intro"><em>This is the first </em></span>in a series of posts I'll do occasionally about ideas I want to pursue. It's only fair to warn you at the start, though, that most of my ideas tend to involve things I don't know how to do! So, of necessity, <i>ideas</i> posts will usually begin with an <i>odessey</i>; and I can't guarantee it will always end well! The good news is, this one does...
+          <span className="intro"><em>This is the first </em></span>in a series of posts I plan to do once in a while about ideas I want to pursue. It's only fair to warn you at the start, though, that most of my ideas tend to involve things I don't know how to do! So, of necessity, <i>ideas</i> posts will usually begin with an <i>odessey</i>; and I can't guarantee it will always end well! The good news is, this one does...
         </p>
         <p className="blogPostText">
           In this post, I'll explain how I did research, what I learned, the dead-ends I went down, and how I was ultimately able to get a live database running in a browser. Best of all, it turns out to be easy! Really.
@@ -147,7 +147,7 @@ const Code = ({ Syntax }) => {
             Now my questions are, "What is <i>WebSQL</i>, and how do you <i>create a database in the user's browser</i>"? Time for more research.
           </p>
           <p className="blogPostText">
-            The bad news. It didn't take long to find out that WebSQL is <a href="https://developer.chrome.com/blog/deprecating-web-sql/" target="_blank" rel="noreferrer">deprecated</a>. Worse, the alternative Chrome suggests (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noreferrer">Web Storage API</a>) uses local/session storage, or indexedDB to persist data in the browser. Sort of like cookies. That's fine for some things, but no substitute for running live queries in a database!
+            The bad news. It didn't take long to find out that WebSQL is <a href="https://developer.chrome.com/blog/deprecating-web-sql/" target="_blank" rel="noreferrer">deprecated</a>. Worse, the alternative Chrome suggests (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noreferrer">Web Storage API</a>) uses codeLocal/session storage, or indexedDB to persist data in the browser. Sort of like cookies. That's fine for some things, but no substitute for running live queries in a database!
           </p>
           <p className="blogPostText">
             Chrome Developers know this though, and say, <i>"[we're] working with the SQLite community on a replacement for Web SQL based on SQLite implemented in WebAssembly (Wasm)."</i> More research reveals that SQLite3 in Wasm is <a href="https://sqlite.org/wasm/doc/trunk/demo-123.md" target="_blank" rel="noreferrer">available now</a>. The problem is, I don't want to use it. I'll explain why in a minute, but first...
@@ -177,22 +177,26 @@ const Code = ({ Syntax }) => {
 
           <h3 className="blogPost">Step 1 - clone the repo</h3>
           <p className="blogPostText">
-            While you're <a href="https://github.com/snaplet/postgres-wasm" target="_blank" rel="noreferrer">there</a>, give them a &#x1F31F;. They have an awesome implementation, and an innovation that allows you to transfer files to and from the Wasm instance and your local machine!
+            While you're <a href="https://github.com/snaplet/postgres-wasm" target="_blank" rel="noreferrer">there</a>, give them a <code className="codeLocal">&#x1F31F;</code>. They have an awesome implementation, and an innovation that allows you to transfer files to and from the Wasm instance and your codeLocal machine!
           </p>
           <h3 className="blogPost">Step 2 - grab the runtime </h3>
           <p className="blogPostText">
-            The cloned repo contains a /packages directory with buildroot, runtime, and websockproxy directories inside. You can use <code>buildroot </code> to generate a new runtime. <code>websockproxy</code> contains their innovations supporting file sharing and networking. You'll only need this if you want to implement your own web socket proxy server in a Docker container. For this project, all we need is the pre-built Wasm runtime directory. So, simply copy the <code>/packages/runtime</code> directory into your own repo so that it ends up at <code>/public/packages/runtime</code>.
+            The cloned repo contains a /packages directory with buildroot, runtime, and websockproxy directories inside. You can use <code className="codeLocal">buildroot </code> to generate a new runtime. <code className="codeLocal">websockproxy</code> contains their innovations supporting file sharing and networking. You'll only need this if you want to implement your own web socket proxy server in a Docker container. For this project, all we need is the pre-built Wasm runtime directory. So, simply copy the <code className="codeLocal">/packages/runtime</code> directory into your own repo so that it ends up at <code className="codeLocal">/public/packages/runtime</code>.
           </p>
           <h3 className="blogPost">Step 3 - grab the scripts</h3>
           <p className="blogPostText">
-            Next, copy the important bits from their <code>/public/packages/index.html</code> into your <code>/public/index.html</code>. This loads the important stuff from packages/runtime into your app.
+            Next, copy the important bits from their <code className="codeLocal">/public/packages/index.html</code> into your <code className="codeLocal">/public/index.html</code>. This loads the important stuff from packages/runtime into your app.
           </p>
           <p className="blogPostText">
-            To do this, add the entries below into the <code>head</code> section of your <code>/public/index.html</code>. It's nowhere near as complicated as it looks, but you will need to make changes to use the path <code>%PUBLIC_URL%</code> as shown. You can just copy the code below right into the head section of your own /public/index.html if you put the runtime directory in /public/packages/runtime.
+            To do this, add the entries below into the <code className="codeLocal">head</code> section of your <code className="codeLocal">/public/index.html</code>. It's nowhere near as complicated as it looks, but you will need to make changes to use the path <code className="codeLocal">%PUBLIC_URL%</code> as shown.
+            </p>
+            <p className="blogPostText">
+            If you put the runtime directory in <code className="codeLocal">/public/packages/runtime</code>, you can simply copy the code below right into the <code className="codeLocal">head</code> section of your own <code className="codeLocal">/public/index.html</code>.
           </p>
 
           <Code Syntax={Syntax1} />
-          <br/>
+          <br/><br/>
+
           <h3 className="blogPost">Step 4 - Create tables and data in Postgres (optional) </h3>
           <p className="blogPostText">
           You can save an initial state so that your tables and data load at startup and reload whenever the browser is refreshed. If you choose not to pre-configure the database with your own tables and data, it will startup with an empty default database named "postgres".
@@ -201,16 +205,19 @@ const Code = ({ Syntax }) => {
             The easiest way to save state is to go to the Postgres Wasm <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">demo</a>. There you can create tables, relationships, load data, etc. I'd suggest creating your schema in the default postgres database. That way, users will always start out in the right place.
           </p>
           <p className="blogPostText">
-            When you are happy with the database, click the <code>Save state to file</code> button, which saves a <code>v86state.bin</code> file to your downloads directory.
+            When you are happy with the database, click the <i>Save state to file</i> button, which saves a <code className="codeLocal">v86state.bin</code> file to your downloads directory.
           </p>
           <p className="blogPostText">
-            Next, compress the v86state.bin file using <a href="https://github.com/facebook/zstd/releases/latest" target="_blank" rel="noreferrer">zstd</a> from Facebook. Zstd is required. It's not the same as a .zip, and it's the only compression algorithm supported by the Wasm Postgres package.Download the appropriate zstd asset for your OS and extract the files.
+            Next, compress the v86state.bin file using <a href="https://github.com/facebook/zstd/releases/latest" target="_blank" rel="noreferrer">zstd</a> from Facebook. Zstd is required. It's not the same as a .zip, and it's the only compression algorithm supported by the Wasm Postgres package. Download the appropriate zstd asset for your OS and extract the files.
           </p>
           <p className="blogPostText">
-            If you're in Windows, you can copy the v86state.bin file to the directory where you extracted zstd, then run the following command to create a v86state.bin.zst file: <code> ./zstd v86state.bin</code>. For other platforms, check the zstd README. The instructions might be slightly different.
+            If you're in Windows, you can copy the v86state.bin file to the directory where you extracted zstd, then run the following command to create a v86state.bin.zst file: <code className="codeLocal"> ./zstd v86state.bin</code>. For other platforms, check the zstd README. The instructions might be slightly different.
           </p>
           <p className="blogPostText">
-            Copy <code>v86state.bin.zst</code> to your <code>/public/packages/runtime/state</code> directory. When you refresh the browser, the customized state should load.
+            Copy <code className="codeLocal">v86state.bin.zst</code> to your <code className="codeLocal">/public/packages/runtime/state</code> directory. When you refresh the browser, the customized state should load.
+          </p>
+          <p className="blogPostText">
+            One quirky thing: If your tables and data don't load, try copying <code className="codeLocal">v86state.bin.zst</code> to <code className="codeLocal">state.zst</code> (in the state directory) and try again.
           </p>
           <span className="intro"><em>That's it! We're done!</em></span>
       </>
@@ -223,21 +230,21 @@ const Code = ({ Syntax }) => {
           <br/>
           <h2 className="blogPost">Some PSQL Help</h2>
           <p className="blogPostText">
-            The name of the active database is in the prompt. <code>postgres=#</code> means the active database is  <code>postgres</code>.
+            The name of the active database is in the prompt. <code className="codeLocal">postgres=#</code> means the active database is  <code className="codeLocal">postgres</code>.
+          </p>
           <ul>
-            <li className="blogLi">PSQL commands begin with a slash (<code>\</code>)
+            <li className="blogLi">PSQL commands begin with a slash (<code className="codeLocal">\</code>)
               <ul>
-                <li className="blogLi">List all databases: <code>\l</code></li>
-                <li className="blogLi">Change the active database: <code>\c databasename</code></li>
-                <li className="blogLi">List all tables in the active database: <code>\dt</code></li>
-                <li className="blogLi">Get help with slash commands: <code>\?</code></li>
-                <li className="blogLi">List SQL commands: <code>\h</code></li>
-                <li className="blogLi">Get help on the "show" command: <code>\h show</code></li>
+              <li className="blogLi">SQL queries are different from slash commands. Be sure to end queries with a semi-colon.</li>
+                <li className="blogLi">List all databases: <code className="codeLocal">\l</code></li>
+                <li className="blogLi">Change the active database: <code className="codeLocal">\c databasename</code></li>
+                <li className="blogLi">List all tables in the active database: <code className="codeLocal">\dt</code></li>
+                <li className="blogLi">Get help with slash commands: <code className="codeLocal">\?</code></li>
+                <li className="blogLi">List SQL commands: <code className="codeLocal">\h</code></li>
+                <li className="blogLi">Get help on the "show" command: <code className="codeLocal">\h show</code></li>
               </ul>
             </li>
           </ul>
-          SQL queries are different from slash commands. Be sure to end queries with a semi-colon.
-        </p>
 
             <h2 className="blogPost">Learn More</h2>
             <ul>

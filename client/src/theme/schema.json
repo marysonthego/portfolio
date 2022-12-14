@@ -6,6 +6,7 @@
       "colors": {
         "body": "#FFFFFF",
         "text": "#000000",
+        "code": "#4b4b4c",
         "button": {
           "text": "#000000",
           "background": "#00cccc"
@@ -13,6 +14,9 @@
         "link": {
           "text": "#252735",
           "opacity": 1
+        },
+        "codeLocal": {
+          "background": "#d8d8d8"
         },
         "navbar": {
           "text":"#252735",
@@ -27,6 +31,7 @@
       "colors": {
         "body": "#252735",
         "text": "#ededed",
+        "code": "#06d5f6",
         "button": {
           "text": "#000000",
           "background": "#00cccc"
@@ -35,6 +40,9 @@
           "text": "#FFCC66",
           "background": "#008080",
           "opacity": 1
+        },
+        "codeLocal": {
+          "background": "#4c4d56"
         },
         "navbar": {
           "text":"#FFCC66",
