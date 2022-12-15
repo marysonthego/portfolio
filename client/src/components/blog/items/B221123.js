@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import {DefsB221121, DefsB221123, DefsB221201} from "./JoinDefinitions";
+import { DefsB221121, DefsB221123 } from "./JoinDefinitions";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -48,23 +48,22 @@ FROM customer cu
 INNER JOIN orderc o
 ORDER BY cu.customerId;`;
 
-const Code = ({ Syntax }) => {
-  return (
-    <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
-      {Syntax}
-    </SyntaxHighlighter>
-  );
-};
+  const Code = ({ Syntax }) => {
+    return (
+      <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
+        {Syntax}
+      </SyntaxHighlighter>
+    );
+  };
 
-  const Sect1 = () => {
+  const Definitions = () => {
     return (
       <>
         <div className="h2Box">
           <h2 className="blog">&nbsp;Definitions</h2>
           <ul>
-          <DefsB221123/>
-          <DefsB221121/>
-
+            <DefsB221123 />
+            <DefsB221121 />
           </ul>
         </div>
         <br />
@@ -72,55 +71,63 @@ const Code = ({ Syntax }) => {
     );
   };
 
-  const Sect2 = () => {
+  const Schema = () => {
     return (
       <>
         <div className="h2Box">
-          <h2 className="blog">&nbsp;Schema</h2>
-          <div className="blogTopImg">
-            <img src={ModelImage} title="Model" alt="Model" />
+          <h2 className="blogPost">&nbsp;Schema</h2>
+          <div className="blogPostTopImg">
+            <img src={ModelImage} title="Schema" alt="Schema" />
           </div>
-
         </div>
       </>
     );
   };
 
-  const Sect3 = () => {
+  const Queries = () => {
     return (
       <>
-        <div className="blog">
-          <h2 className="blog">Try some queries!</h2>
+        <div className="blogPostPage">
+          <h2 className="blogPostQuery">Try some queries!</h2>
           <Code Syntax={Syntax1} />
-          <h2 className="blog">INNER JOIN</h2>
+          <p className="blogPostText">Initial data</p>
+          <h2 className="blogPostQuery">INNER JOIN</h2>
           <Code Syntax={Syntax2} />
-          <p className="blogNote">
-            You should get 10 rows back - only the rows where the customerIds are a match.
+          <p className="blogPostText">
+            You should get 10 rows back - only the rows where the customerIds
+            are a match.
           </p>
-          <h2 className="blog">INNER JOIN on three tables</h2>
+          <h2 className="blogPostQuery">INNER JOIN on three tables</h2>
           <Code Syntax={Syntax3} />
-          <p className="blogNote">
+          <p className="blogPostText">
             You should get 18 rows back. First, we get all rows where the
             customerId in the customer table matches the customerId in the
-            orderc table. Next, take the results of the first match and match again with the orderId in the orderLine table.
-            <br />
-            <br />
+            orderc table. Next, take the results of the first match and match
+            again with the orderId in the orderLine table.
           </p>
-          <h2 className="blog">INNER JOIN with no join condition</h2>
+          <h2 className="blogPostQuery">INNER JOIN with no join condition</h2>
           <Code Syntax={Syntax4} />
-            <p className="blogNote">
-              You should get a syntax error. INNER JOINs require a Join
-              Condition.
-            </p>
+          <p className="blogPostText">
+            You should get a syntax error. INNER JOINs require a Join Condition.
+          </p>
         </div>
         <div className="blogNote">
-          <h2 className="blog">Postgres interactive playground</h2> uses the
-          Postgres PSQL command-line interface (<a href="https://tomcam.github.io/postgres/#reference" target="_blank" rel="noreferrer">quick tutorial</a>). You can enter queries against
-          the tables shown in the schema. If you leave or refresh this
-          page, your queries will disappear - though the tables and data will
-          still be loaded. <br />
-          <br /> You can enter statements on multiple lines, just be sure to end
-          with a semi-colon!
+          <h2 className="blogPostQuery">The Postgres interactive playground</h2>
+          <p className="blogPostText">
+            uses the Postgres PSQL command-line interface (
+            <a
+              href="https://tomcam.github.io/postgres/#reference"
+              target="_blank"
+              rel="noreferrer"
+            >
+              quick tutorial
+            </a>
+            ). You can enter queries against the tables shown in the schema. If
+            you leave or refresh this page, your queries will disappear - though
+            the tables and data will still be loaded. <br />
+            <br /> You can enter statements on multiple lines, just be sure to
+            end with a semi-colon!
+          </p>
         </div>
         <div className="xcontainer">
           <div className="xterminal">
@@ -132,18 +139,20 @@ const Code = ({ Syntax }) => {
   };
 
   return (
-    <main className="container">
-      <article className="blog">
-        <div className="blogTopImg">
+    <main className="blogPostContainer">
+      <article className="blogPostPage">
+        <div className="blogPostTopImg">
           <img src={TopImage} title="Table Joins" alt="Table Joins" />
         </div>
-        <h1 className="blog">{Title}</h1>
-        <h2 className="blogListIemDate">{Created}</h2>
-        <Sect1 />
-        <Sect2 />
-        <Sect3 />
-        <div className="blog">
-          <h2 className="blog">We'll look at basic Outer Joins next.</h2>
+        <h1 className="blogPostTitle">{Title}</h1>
+        <h2 className="blogPostDate">{Created}</h2>
+        <Definitions />
+        <Schema />
+        <Queries />
+        <div className="blogPostPage">
+          <h2 className="blogPostText">
+            We'll look at basic Outer Joins next.
+          </h2>
         </div>
       </article>
     </main>

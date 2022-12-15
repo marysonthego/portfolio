@@ -125,7 +125,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* BlogPost */
+/* BlogPost Pages*/
 
 .blogPostContainer {
   display: flex;
@@ -139,10 +139,9 @@ a:hover {
 }
 
 .blogPostPage {
+  display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 100%;
-  padding-bottom: 1%;
 }
 
 .blogPostTopImg {
@@ -156,7 +155,7 @@ a:hover {
 
 h1.blogPostTitle {
   font-weight: 300;
-  font-stretch: 100%;
+  font-stretch: 120%;
   font-size: 28px;
   margin-top: 5vh;
   margin-bottom: 3vh;
@@ -173,15 +172,22 @@ h1.blogPostTitle {
 div.h2Box {
   border-style: solid;
   border-radius: 7px;
-  border-width: 2px;
-  margin: 10px ;
+  border-width: 1px;
+  padding: 10px ;
+  margin-top: 2vh;
 }
 
 h2.blogPost {
   font-size: 20px;
   font-weight: 300;
-  margin-top: 3vh;
-  margin-bottom: 2vh;
+  margin: 2vh;
+  width: 100%;
+}
+
+h2.blogPostQuery {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 2vh 0;
 }
 
 h3.blogPost {
@@ -198,6 +204,7 @@ h3.blogPost {
   font-size: 16px;
   font-weight: 300;
   font-stretch: 100%;
+  margin-left: 2vh;
   margin-bottom: 2vh;
   text-align: justify;
   line-height: 175%;
@@ -213,13 +220,18 @@ h3.blogPost {
 
 .blogLi {
   display: list-item;
+  margin: 2vh;
   list-style: none;
   font-size: 16px;
-  padding: 5px 10px;
   text-align: justify;
   font-weight: 300;
   line-height: 175%;
   width: 90%;
+}
+
+.blogSubLi {
+  list-style: circle;
+  margin: 4vh;
 }
 
 /* navbar */

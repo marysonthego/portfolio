@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import {DefsB221121, DefsB221123, DefsB221201} from "./JoinDefinitions";
+import {DefsB221121} from "./JoinDefinitions";
 
 export const B221121 = () => {
   const location = useLocation();
@@ -18,7 +18,7 @@ export const B221121 = () => {
     );
   }
 
-  const Sect1 = () => {
+  const Definitions = () => {
     return (
       <>
         <div className="h2Box">
@@ -218,14 +218,14 @@ export const B221121 = () => {
   };
 
   return (
-    <main className="container">
-      <article className="blog">
-        <div className="blogTopImg">
-          <img src={TopImage} title="Model" alt="Model" />
+    <main className="blogPostContainer">
+      <article className="blogPostPage">
+        <div className="blogPostTopImg">
+          <img src={TopImage} title="Schema" alt="Schema" />
         </div>
-        <h1 className="blog">{Title}</h1>
-        <h2 className="blogListIemDate">{Created}</h2>
-        <Sect1 />
+        <h1 className="blogPostTitle">{Title}</h1>
+        <h2 className="blogPostDate">{Created}</h2>
+        <Definitions />
         <Sect2 />
         <Sect3 />
         <Sect4 />
