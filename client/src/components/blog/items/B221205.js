@@ -123,13 +123,13 @@ const Code = ({ Syntax }) => {
     return (
       <>
         <p className="blogPostText"> <br/>
-          <span className="intro"><em>This is the first </em></span>in a series of posts I plan to do once in a while about ideas I want to pursue. It's only fair to warn you at the start, though, that most of my ideas tend to involve things I don't know how to do! So, of necessity, <i>ideas</i> posts will usually begin with an <i>odessey</i>; and I can't guarantee it will always end well! The good news is, this one does...
+          <span className="intro"><em>This is the first </em></span>in a series of posts I plan to do once in a while about ideas I want to pursue. It's only fair to warn you at the start, though, that most of my ideas tend to involve things I don't know how to do! So, of necessity, <i>ideas</i> posts will usually begin with an <i>odessey</i>; and I can't guarantee they will always end well! The good news is, this one does...
         </p>
         <p className="blogPostText">
-          In this post, I'll explain how I did research, what I learned, the dead-ends I went down, and how I was ultimately able to get a live database running in a browser. Best of all, it turns out to be easy! Really.
+          In this post, I'll explain how I did research, what I learned, the dead-ends I went down, and how I was ultimately able to get a live database running in a browser. Best of all, it turns out to be pretty easy! Really.
         </p>
         <p className="blogPostText">
-            Your first question might be, <i>why do you want to embed a live database in a web page in the first place?</i> Well, when I started working on the <a href="/b221121" >SQL Joins</a> series, it quickly became clear to me that I needed an interactive database connection<i> right on the page</i>. I wanted a place where users could try out queries and get live results. Screen-shots weren't gonna cut it! I wanted a place where people could experiment, experiment again, and repeat.
+            Your first question might be, <i>"why do you want to embed a live database in a web page in the first place"?</i> Well, when I started working on the <a href="/b221121" >SQL Joins</a> series, it quickly became clear to me that I needed an interactive database connection<i> right on the page</i>. I wanted a place where users could try out queries and get live results. Screen-shots weren't gonna cut it! I wanted a place where people could experiment, experiment again, and then repeat.
           </p>
           <h2 className="blogPost">What is the current state of the art?</h2>
           <p className="blogPostText">
@@ -230,7 +230,7 @@ const Code = ({ Syntax }) => {
           <br/>
           <h2 className="blogPost">Some PSQL Help</h2>
           <p className="blogPostText">
-            The name of the active database is in the prompt. <code className="codeLocal">postgres=#</code> means the active database is  <code className="codeLocal">postgres</code>.
+            The name of the active database is in the prompt. <code className="codeLocal">postgres=#</code> means the active database name is  <code className="codeLocal">postgres</code>.
           </p>
           <ul>
             <li className="blogLi">PSQL commands begin with a slash (<code className="codeLocal">\</code>)
