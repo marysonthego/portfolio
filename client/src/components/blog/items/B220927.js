@@ -108,15 +108,15 @@ return (
   const BlogTop = () => {
     return (
       <>
-      <div className="blogTopImg">
+      <div className="blogPostTopImg">
         <img
           src={TopImage}
           title="mountain path"
           alt="mountain path"
         />
       </div>
-        <h1 className="blog">{Title}</h1>
-        <div className="blogListIemDate">{Created}</div>
+        <h1 className="blogPostTitle">{Title}</h1>
+        <div className="blogPostDate">{Created}</div>
       </>
     );
   };
@@ -132,28 +132,28 @@ return (
   const Sect1 = () => {
     return (
       <>
-      <div className="blog"> </div>
-    <div className="blogText">
+      <div className="blogPostText"> </div>
+    <p className="blogPostText">
       When you start working with React Router v6, you may find that your
       conditional routing is not working as you expect. v6 uses a new component
       called <code>Routes</code> which replaces the old <code>Switch</code>{" "}
       component.
-    </div>
+    </p>
     </>
     );
     };
 
-  const text2 = <p className="blogText">Let's see how it works!</p>;
+  const text2 = <p className="blogPostText">Let's see how it works!</p>;
 
   const text3 = (
     <>
-      <p className="blogText">
+      <p className="blogPostText">
         If you have <code>react-router</code> installed, go ahead and uninstall
         it. v6 doesn't use it, and in fact, you may confuse things (possibly yourself) by keeping
         the old <code>react-router</code> around. v6 uses{" "}
         <code>react-router-dom</code> instead.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         Uninstall <code>react-router</code> and install{" "}
         <code>react-router-dom</code>.
       </p>
@@ -163,12 +163,12 @@ return (
 
   const text4 = (
     <>
-      <p className="blogText">
+      <p className="blogPostText"><br/>
         In this example, all the routing is defined in <code>index.js</code>, so
         add these imports at the top of <code>index.js</code>:{" "}
       </p>
       <Code Syntax={Syntax2} />
-      <p className="blogText">
+      <p className="blogPostText"><br/>
         <code>BrowserRouter</code> is an implementation of the low-level{" "}
         <code>Router</code> interface that is shared by all v6 router types
         including BrowserRouter, MemoryRouter, NativeRouter, StaticRouter, and HashRouter. The <code>BrowserRouter </code>{" "}
@@ -181,11 +181,11 @@ return (
 
   const text5 = (
     <>
-      <p className="blogText">
+      <p className="blogPostText">
         <code>BrowserRouter</code> maintains the routing context for the app.
         You should only have one BrowserRouter per app.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         The <code>Routes</code> component wraps the list of individual routes.
         It is a child of the <code>react-router-dom BrowserRouter</code> component. A bonus with v6 is that you can now list your routes in any order!
       </p>
@@ -195,79 +195,79 @@ return (
 
   const text6 = (
     <>
-      <p className="blogText">
+      <p className="blogPostText"><br/>
         <code>react-router-dom</code> includes a <code>useLocation</code> hook
         which you can use to find the current <code>location</code> in the <code>BrowserRouter</code> among other
         things.
       </p>
       <Code Syntax={Syntax6} />
-      <p className="blogText">
+      <p className="blogPostText"><br/>
         The <code>/bloglist</code> route displays a page containing a list of blog posts. Clicking
         on a post in the list changes the current location to the corresponding
         blogpost route (/blogpost1 or /blogpost2).{" "}
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         Below is the code BlogList uses to display a link to a BlogPost.
       </p>
       <Code Syntax={Syntax5} />
-      <p className="blogText">
+      <p className="blogPostText"><br/>
         Notice that the BlogList page displays the title and date created of
         each BlogPost. Where does this come from?
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         The title and date are properties of each individual BlogPost component.
         There is no list of BlogPost metadata up in BlogList State, and I have not created a shared Context object either. I really want to keep everything about a BlogPost all together in one place.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         To get a BlogPost's title and date, BlogList must go to the BlogPost
         component. It may not be obvious, but in this situation we can make{" "}
         <code>useLocation</code> work for us.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         When the BlogList page is created, part of its return statement says to
         display <code>&lt;BlogPost1 /&gt;</code>.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         The important thing to realize is that we are in the BlogList return
         statement - And what is a return statement? Nothing more than a <code>Render</code>.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         So, while we're rendering BlogList, the location does not change.
         It is <code>/bloglist</code> and, in fact, <i>cannot</i> change until
         the render is completed.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         The call to <code>&lt;BlogPost1 /&gt;</code> is just like adding any
         other component to a page. When you add a component to a page, it
         doesn't change the current location. You are still on the original page
         and the new component is simply added to it.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         Ok, so in the BlogList render we call /BlogPost1 - and when we get there
         the location is still /bloglist - not /blogpost1!
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         If we check the
         location in BlogPost, we can return just the title and date if the
         location is /bloglist, or return the whole blogpost if the location is
         /blogpost1.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         And that's exactly what happens. Each BlogPost contains an <code>if</code> statement which checks to see if the current location
         is /bloglist. If it is, BlogPost only returns the post title and date. Otherwise, it returns the full body of the post. Here's the BlogPost code for that:
       </p>
       <Code Syntax={Syntax4} />
 
-      <p className="blogText">
+      <p className="blogPostText"><br/>
         This is how we can make the BlogPost return either the entire BlogPost
         page, or just the title and date created. All we have to do is check the
         value of the current location - which is always available in
         <code> location.pathname.toString()</code>.
       </p>
-      <p className="blogText">
+      <p className="blogPostText">
         Routing can sometimes seem like it's not working right. If that happens, think about what is rendering at that moment, and if you need to, use <code>location.pathname.toString()</code> to verify where the browser is.
       </p>
-      <p className="blogText">Check out this v6 playground. Try commenting out the if statement in a BlogPost and see what happens!</p>
+      <p className="blogPostText">Check out this v6 playground. Try commenting out the if statement in a BlogPost and see what happens!</p>
     </>
   );
 
@@ -275,7 +275,7 @@ return (
     <>
       <br/>
       <div className="divBox">
-        <div className="blog">Further Reading</div>
+      <h2 className="blogPost">Further Reading</h2>
         <ul>
           <li className="blogLi">
           <a className="listItem" href="https://beta.reactjs.org/learn/render-and-commit">
@@ -319,8 +319,8 @@ return (
 
   console.log("location= ", location);
   return (
-    <main className="container">
-      <article className="blog">
+    <main className="blogPostContainer">
+      <article className="blogPostPage">
         <BlogTop />
         <Sect1/>
         {text2}
