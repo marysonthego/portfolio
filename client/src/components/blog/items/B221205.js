@@ -113,9 +113,11 @@ export const B221205 = () => {
 
 const Code = ({ Syntax }) => {
   return (
+    <div className="blogPostSyntax">
     <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
       {Syntax}
     </SyntaxHighlighter>
+    </div>
   );
 };
 

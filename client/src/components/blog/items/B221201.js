@@ -41,9 +41,11 @@ ORDER BY cu.customerId;`;
 
   const Code = ({ Syntax }) => {
     return (
+      <div className="blogPostSyntax">
       <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
         {Syntax}
       </SyntaxHighlighter>
+      </div>
     );
   };
 

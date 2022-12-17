@@ -50,9 +50,11 @@ ORDER BY cu.customerId;`;
 
   const Code = ({ Syntax }) => {
     return (
+      <div className="blogPostSyntax">
       <SyntaxHighlighter language="jsx" style={xonokai} wrapLongLines>
         {Syntax}
       </SyntaxHighlighter>
+      </div>
     );
   };
 
@@ -150,7 +152,7 @@ ORDER BY cu.customerId;`;
         <Schema />
         <Queries />
         <div className="blogPostPage">
-          <h2 className="blogPostText">
+          <h2 className="blogPost">
             We'll look at basic Outer Joins next.
           </h2>
         </div>

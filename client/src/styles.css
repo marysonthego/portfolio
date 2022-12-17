@@ -167,6 +167,7 @@ h1.blogPostTitle {
   font-weight: 300;
   font-stretch: 100%;
   font-size: 12px;
+  margin-bottom: 1vh;
 }
 
 div.h2Box {
@@ -187,12 +188,13 @@ h2.blogPost {
 h2.blogPostQuery {
   font-size: 20px;
   font-weight: 300;
-  margin: 2vh 0;
+  margin: 2vh;
 }
 
 h3.blogPost {
   font-size: 16px;
   font-weight: 300;
+  margin: 2vh;
 }
 
 .intro {
@@ -204,8 +206,9 @@ h3.blogPost {
   font-size: 16px;
   font-weight: 300;
   font-stretch: 100%;
-  margin-left: 2vh;
-  margin-bottom: 2vh;
+  margin: 0 2vh 2vh 2vh;
+  /* margin-left: 2vh;
+  margin-bottom: 2vh; */
   text-align: justify;
   line-height: 175%;
   width: 100%;
@@ -232,6 +235,10 @@ h3.blogPost {
 .blogSubLi {
   list-style: circle;
   margin: 4vh;
+}
+
+.blogPostSyntax {
+  margin: 2vh;
 }
 
 /* navbar */

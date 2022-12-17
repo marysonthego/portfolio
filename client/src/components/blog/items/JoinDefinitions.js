@@ -5,20 +5,22 @@ export const DefsB221121 = () => {
         <code className="codeLocal">JOIN </code>the act of combining two (or
         more) tables that have one (or more) common domains into a single table
         or view of results.
-      </li>
+        <ul>
+          <li className="blogLi, blogSubLi">
+            <code className="codeLocal">Join Condition </code>WHERE, ON, and
+            USING clauses are called Join Conditions. They limit the results
+            returned from a Join.
+          </li>
 
-      <li className="blogLi, blogSubLi">
-        <code className="codeLocal">Join Condition </code>WHERE, ON, and USING
-        clauses are called Join Conditions. They limit the results returned from
-        a Join.
-      </li>
-
-      <li className="blogLi, blogSubLi">
-        <code className="codeLocal">Basic Join Condition</code> a simple{" "}
-        <code className="codeLocal">ON t1.colA = t2.colB</code> type match.
-        Later, we'll look at more complex join conditions and how they affect
-        the results. For now, all the join conditions will be as basic as
-        possible so that we can focus on how each type of JOIN works.
+          <li className="blogLi, blogSubLi">
+            <code className="codeLocal">Basic Join Condition</code> a simple{" "}
+            <code className="codeLocal">ON t1.colA = t2.colB</code> type match.
+            Later, we'll look at more complex join conditions and how they
+            affect the results. For now, all the join conditions will be as
+            basic as possible so that we can focus on how each type of JOIN
+            works.
+          </li>
+        </ul>
       </li>
 
       <li className="blogLi">
