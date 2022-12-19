@@ -1,0 +1,538 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('./Mona-Sans.woff2') format('woff2 supports variations'),
+    url('./Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+/* Reset CSS */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, #root {
+  font-family: 'Mona Sans';
+	padding: 0px;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* MainPage */
+
+main.mainContainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+div.mainImgDiv {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10vh 0 5vh 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainImage {
+  border-radius: 50%;
+}
+
+h1.mainTitle {
+  font-weight: 200;
+  font-stretch: 120%;
+  margin-bottom: 2vh;
+}
+
+h2.mainSubtitle {
+  font-weight: 200;
+  font-stretch: 110%;
+  margin-bottom: 1vh;
+}
+
+.mainSquiggle {
+  width: 50%;
+  height: 60px;
+  margin-top: 50px;
+  padding-top: 10px;
+  --mask:
+    radial-gradient(31.87px at 50% calc(100% + 26.40px),#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 32px) calc(50% - 9px + .5px)/64px 18px ,
+    radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
+}
+
+/* Projects List Page */
+
+a.projectListItem {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 20px;
+  display: inline;
+  text-decoration: none;
+  margin-bottom: 2vh;
+
+}
+
+/* BlogList Page */
+
+.blogListContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+  margin: 0 10%;
+  height: 100%;
+  padding-bottom: 10%;
+}
+
+h1.blogList {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 28px;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  width: 100%;
+  text-decoration: none;
+}
+
+.blogListUl {
+  list-style: none;
+  width: 80%;
+}
+
+img.blogListImg {
+  width: 250;
+  height: 200;
+  margin-right: 2%;
+  object-fit: cover;
+}
+
+a.blogListItem {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 20px;
+  display: inline;
+  text-decoration: none;
+
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.blogListIemDate, .listDate {
+  font-size: 12px;
+  margin-bottom: 2%;
+}
+
+.listDate:hover {
+  text-decoration: none;
+}
+
+/* BlogPost Pages*/
+
+.blogPostContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  align-items: center;
+  justify-content: left;
+  margin: 0 10%;
+  height: 100%;
+  padding-bottom: 10%;
+}
+
+.blogPostPage {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.blogPostTopImg {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: normal;
+  object-fit: scale-down;
+  margin-bottom: 2vh;
+}
+
+h1.blogPostTitle {
+  font-weight: 300;
+  font-stretch: 120%;
+  font-size: 28px;
+  margin: 5vh 0 3vh 0vh;
+  width: 100%;
+  text-decoration: none;
+}
+
+.blogPostDate {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 12px;
+  margin: 0 0 1vh 0vh;
+}
+
+div.h2Box {
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 1px;
+  padding: 1vh ;
+  margin: 2vh 1vh 0 0;
+}
+
+div.h3Box {
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 1px;
+  padding: 1vh ;
+  margin: 2vh 1vh 0 0;
+}
+
+.blogPostText {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: 100%;
+  margin: 0 0 2vh 0;
+  text-align: justify;
+  line-height: 175%;
+  width: 100%;
+}
+
+h2.blogPostText {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 2vh 0vh 2vh 0;
+  width: 100%;
+}
+
+h3.blogPostText {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 2vh 0vh 2vh 0;
+}
+
+h2.blogPostQuery {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 2vh 0 1vh 0;
+}
+
+.intro {
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.blogPostQuote {
+  margin: 2vh;
+  padding: 0 15%;
+  line-height: 175%;
+  text-align: justify;
+}
+
+.blogPostNote {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 2vh 0vh 2vh 0;
+}
+
+.blogLi, .blogLiDot {
+  display: list-item;
+  margin: 2vh;
+  list-style: none;
+  font-size: 16px;
+  text-align: justify;
+  font-weight: 300;
+  line-height: 175%;
+}
+
+.blogLiDot {
+  list-style: disc;
+}
+
+.blogSubLi {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 175%;
+  width: 90%;
+  list-style: circle;
+  margin: 4vh;
+}
+
+.blogPostSyntax {
+  margin: 2vh 1vh 2vh 0;
+  border-radius: 7px;
+}
+
+div.iframeBox {
+  width: 100%;
+  height: 75vh;
+  margin: 2vh 1vh 1vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+iframe.codesandbox {
+  border-radius: 7px;
+}
+
+/* About Page */
+
+.aboutContainer {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.aboutSection1 {
+  width: 70%;
+  height: 100%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutBox {
+  width: 100%;
+  height: 60px;
+  --mask:
+    radial-gradient(31.87px at 50% calc(100% + 26.40px),#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 32px) calc(50% - 9px + .5px)/64px 18px ,
+    radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 2px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
+}
+
+.aboutSection2 {
+  width: 70%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutSection3 {
+  width: 40%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutSection4 {
+  width: 40%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutTitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 175%;
+  padding-top: 5px;
+  justify-content: center;
+
+}
+
+.aboutSubtitle {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 175%;
+  justify-content: center;
+}
+
+ul.ulTopCircle {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0 4%;
+}
+
+ul.ulReact {
+  list-style-image: url('https: //marysonthego.tech/media/react20.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulCA {
+  list-style-image: url('https://marysonthego.tech/media/ca.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulNortel {
+  list-style-image: url('https://marysonthego.tech/media/nortel.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulTI {
+  list-style-image: url('https://marysonthego.tech/media/ti.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulSubCircle {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0 2% 2% 5%;
+}
+
+li.aboutText {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 175%;
+  margin: 0 2% 2% 2%;
+}
+
+li.aboutSubText {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 175%;
+  margin: 0 2% 2% 5%;
+}
+
+/* Modals */
+
+.modal-content {
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000;
+}
+
+.NucatModal {
+  position: absolute;
+  background:rgba(211, 211, 211, 0.39)
+}
+
+/* navbar */
+
+div.navbar {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  justify-content: space-around !important;
+}
+
+a.navIcon {
+  margin-top: 10px;
+}
+
+a.navLink {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.navLink:hover,
+a.navLink:focus{
+  font-stretch: 120%;
+  text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+  margin-top: 5px;
+}
+
+div.footer {
+  display: flex;
+  font-size: small;
+  color: #252735;
+  position: fixed;
+  padding-top: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between !important;
+  height: 50px;
+  padding: 20px;
+  z-index: 1020;
+  background-color: #c0bdbd;
+}
+
+a.footer {
+  color: #252735;
+}
+
+/* ScrollToTop */
+
+.ScrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.7;
+  height: 48px;
+  width: 48px;
+  margin: 20px;
+}
+
+.ScrollToTop:hover{
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  div.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ScrollToTop {
+    animation-name: ScrollToTop-spin;
+    animation-iteration-count: 1;
+    animation-duration: 2s, 4s;
+    animation-timing-function: ease;
+    transition: transform 1s;
+  }
+}
+
+@keyframes ScrollToTop-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ScrollToTop-slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes ScrollToTop-fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+

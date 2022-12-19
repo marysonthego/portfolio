@@ -1,24 +1,33 @@
-@import "~perfect-scrollbar/css/perfect-scrollbar.css";
-@import './components/css/_variables.demo.scss';
-@import "bootstrap/dist/css/bootstrap.min.css";
+// @import "~perfect-scrollbar/css/perfect-scrollbar.css";
+// @import './components/css/_variables.demo.scss';
+// @import "bootstrap/dist/css/bootstrap.min.css";
 
 
-@import './components/sass/styles.scss';
-@import './components/css/rbc_variables.scss';
+// @import './components/sass/styles.scss';
+// @import './components/css/rbc_variables.scss';
 
-@import "react-datepicker/dist/react-datepicker.css";
-@import './components/css/about.css';
-@import './components/css/blog.css';
-@import './components/css/main.css';
-@import './components/css/listtools.css';
-@import './components/css/formstyles.css';
-@import './components/css/styles.css';
-@import './components/css/tablestyles.css';
-@import './components/css/weatherstyles.css';
-@import './components/css/modal.css';
-@import './components/css/posts.scss';
-@import './components/css/navigation.css';
-@import './App.scss';
+// @import "react-datepicker/dist/react-datepicker.css";
+// @import './components/css/about.css';
+// @import './components/css/blog.css';
+// @import './components/css/main.css';
+// @import './components/css/listtools.css';
+// @import './components/css/formstyles.css';
+// @import './components/css/styles.css';
+// @import './components/css/tablestyles.css';
+// @import './components/css/weatherstyles.css';
+// @import './components/css/modal.css';
+// @import './components/css/posts.scss';
+// @import './components/css/navigation.css';
+// @import './App.scss';
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('fonts/Mona.Sans.1.0/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('fonts/Mona.Sans.1.0/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
 
 
 /* Reset CSS */

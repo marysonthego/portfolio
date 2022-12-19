@@ -6,16 +6,24 @@
       "colors": {
         "body": "#FFFFFF",
         "text": "#000000",
+        "code": "#4b4b4c",
         "button": {
-          "text": "#FFFFFF",
-          "background": "#008080"
+          "text": "#000000",
+          "background": "#00cccc"
         },
         "link": {
-          "text": "#00c0c0",
+          "text": "#252735",
           "opacity": 1
+        },
+        "codeLocal": {
+          "background": "#d8d8d8"
+        },
+        "navbar": {
+          "text":"#252735",
+          "background": "#ffffff"
         }
       },
-      "font": "Finlandica"
+      "font": "Mona Sans"
     },
     "dark" : {
       "id": "T_007",
@@ -23,16 +31,25 @@
       "colors": {
         "body": "#252735",
         "text": "#ededed",
+        "code": "#06d5f6",
         "button": {
-          "text": "#6E7065",
-          "background": "#008080"
+          "text": "#000000",
+          "background": "#00cccc"
         },
         "link": {
           "text": "#FFCC66",
+          "background": "#008080",
           "opacity": 1
+        },
+        "codeLocal": {
+          "background": "#000000"
+        },
+        "navbar": {
+          "text":"#FFCC66",
+          "background": "#252735"
         }
       },
-      "font": "Finlandica"
+      "font": "Mona Sans"
     }
   }
 }

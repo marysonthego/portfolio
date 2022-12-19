@@ -132,7 +132,7 @@ export const WeatherApi = () => {
   };
 
   const Title = "OpenWeather API";
-  const Created = "March 16, 2022";
+  const Created = "March, 2022";
 
   if(location.pathname.toString() === "/projects") {
     return (

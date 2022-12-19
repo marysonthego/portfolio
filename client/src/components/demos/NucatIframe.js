@@ -13,7 +13,7 @@ export function NucatIframe() {
   const [show, setShow] = useState(true);
 
   const Title = "Nucat Feline Daycamp";
-  const Created = "May 25, 2021";
+  const Created = "2020";
 
   if(location.pathname.toString() === "/projects") {
     return (

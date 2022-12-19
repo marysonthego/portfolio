@@ -1,7 +1,5 @@
-import React, {useEffect, useLayoutEffect, useState} from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import {useLocation} from 'react-router-dom';
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 
 export const Navigation = () => {
  const location = useLocation();
@@ -17,15 +15,13 @@ export const Navigation = () => {
   }, [location]);
 
   return (
-    <Navbar expand='lg' sticky='top' >
-      <Nav>
-      <Navbar.Brand href="/">
-        <img src="media/mteal.png" alt="marysonthego.tech" className="nav"/>
-      </Navbar.Brand>
-      <Nav.Link href="/bloglist">Blog</Nav.Link>
-      <Nav.Link href="/projects">Projects</Nav.Link>
-      <Nav.Link href="/about">About</Nav.Link>
-      </Nav>
-    </Navbar>
+    <div className="navbar" >
+      <a href="/" className="navIcon">
+        <img src="media/mteal.png" alt="marysonthego.tech" />
+      </a>
+      <a href="/bloglist" className="navLink">Blog</a>
+      <a href="/projects" className="navLink">Projects</a>
+      <a href="/about" className="navLink">About</a>
+    </div>
   )
 }

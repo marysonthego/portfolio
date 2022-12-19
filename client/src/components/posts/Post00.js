@@ -11,7 +11,7 @@ export const Post00 = () => {
       return (
         <span>
           <span className="blog">{Title}</span>
-          <h2 className="itemDate">{Created}</h2>
+          <div className="blogListIemDate">{Created}</div>
         </span>
       );
     }

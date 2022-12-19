@@ -18,7 +18,7 @@ export const About = () => {
               State University
             </li>
           </ul>
-          <div className = "box"></div>
+          <div className = "aboutBox"></div>
         </section>
         <section className="aboutSection2">
           <h1 className="aboutTitle">"There's Something about Mary!"</h1>
@@ -75,7 +75,7 @@ export const About = () => {
               C programming Optical Character Recognition (OCR) software
             </li>
           </ul>
-          <div className = "box"></div>
+          <div className = "aboutBox"></div>
         </section>
         <section className="aboutSection3">
           <h1 className="aboutTitle">Why should I be on your project?</h1>

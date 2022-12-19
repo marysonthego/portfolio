@@ -11,7 +11,7 @@ export const BlogPost2 = () => {
     return (
       <span>
         <span className="itemText">{Title} </span>
-        <span className="itemDate">{Created}</span>
+        <span className="blogListIemDate">{Created}</span>
       </span>
     );
   }
@@ -34,7 +34,7 @@ export const BlogPost2 = () => {
         <Sect1 />
       </article>
       <section className="blogList">
-        <a className="itemDate" href="/bloglist">
+        <a className="blogListIemDate" href="/bloglist">
           <i>Return to the blog list!</i>
         </a>
         <div>The current location is {location.pathname.toString()}</div>
