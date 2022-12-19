@@ -13,6 +13,11 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
+  a:hover {
+  text-decoration: underline;
+  color: #06d5f6;
+}
+
   h1, h2, h3, .intro {
     color: ${({ theme }) => theme.colors.navbar.text};
   }

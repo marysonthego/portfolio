@@ -70,7 +70,7 @@ h2.mainSubtitle {
   background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
 }
 
-/* Projects List Pae */
+/* Projects List Page */
 
 a.projectListItem {
   font-weight: 300;
@@ -80,9 +80,6 @@ a.projectListItem {
   text-decoration: none;
   margin-bottom: 2vh;
 
-}
-a:hover {
-  text-decoration: underline;
 }
 
 /* BlogList Page */
@@ -242,7 +239,13 @@ h2.blogPostQuery {
   text-align: justify;
 }
 
-.blogLi {
+.blogPostNote {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 2vh 0vh 2vh 0;
+}
+
+.blogLi, .blogLiDot {
   display: list-item;
   margin: 2vh;
   list-style: none;
@@ -250,6 +253,10 @@ h2.blogPostQuery {
   text-align: justify;
   font-weight: 300;
   line-height: 175%;
+}
+
+.blogLiDot {
+  list-style: disc;
 }
 
 .blogSubLi {
@@ -393,6 +400,18 @@ li.aboutSubText {
   margin: 0 2% 2% 5%;
 }
 
+/* Modals */
+
+.modal-content {
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000;
+}
+
+.NucatModal {
+  position: absolute;
+  background:rgba(211, 211, 211, 0.39)
+}
 
 /* navbar */
 

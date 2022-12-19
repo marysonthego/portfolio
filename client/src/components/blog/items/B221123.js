@@ -7,7 +7,7 @@ import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 export const B221123 = () => {
   const location = useLocation();
 
-  const Title = "Joins Part 2 - Basic Inner Joins";
+  const Title = "SQL Joins Part 2 - Basic Inner Joins";
   const Created = "November 23, 2022";
   const TopImage = "media/joinpeople.png";
   const ModelImage = "media/model01.png";

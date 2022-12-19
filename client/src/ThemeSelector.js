@@ -16,23 +16,23 @@ const ThemedButton = styled.button`
   cursor: pointer;
 `;
 
-const Wrapper = styled.li`
-  padding: 2px;
-  text-align: center;
-  border-radius: 4px;
-  border: 1px solid #000;
-  list-style: none;
-`;
+// const Wrapper = styled.li`
+//   padding: 2px;
+//   text-align: center;
+//   border-radius: 4px;
+//   border: 1px solid #000;
+//   list-style: none;
+// `;
 
 const Container = styled.ul`
   display: flex;
   width: 100%;
 `;
 
-const Header = styled.h2`
-  display: flex;
-  justify-content: space-around;
-`;
+// const Header = styled.h2`
+//   display: flex;
+//   justify-content: space-around;
+// `;
 
 export const ThemeSelector = (props) => {
   const themesFromStore = getStorage("all-themes");

@@ -1,12 +1,12 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useWindowDimensions from "components/helpers/UseWindowDimensions";
+//import useWindowDimensions from "components/helpers/UseWindowDimensions";
 
 export const B221003 = () => {
   const location = useLocation();
-  const { width, height } = useWindowDimensions();
-  let iwidth = width * 0.8 * 0.8;
-  let iheight = height;
+  // const { width, height } = useWindowDimensions();
+  // let iwidth = width * 0.8 * 0.8;
+  // let iheight = height;
 
   const Title = "Secrets of Array.reduce";
   const Created = "October 03, 2022";
@@ -61,26 +61,26 @@ export const B221003 = () => {
         <h2 className="blogPostText">The rules:</h2>
         <div className="h2Box">
         <ul>
-          <li className="blogLi">
+          <li className="blogLiDot">
             reduce() executes your callbackFn for each element of an array, one
             at a time, in order.
           </li>
-          <li className="blogLi">
+          <li className="blogLiDot">
             reduce() is a <em>recursive function</em>. That means it passes the
             result of the callbackFn as the new previousValue to the next call
             to the callbackFn - and it keeps doing it over and over until it
             hits the end of the array.
           </li>
-          <li className="blogLi">
+          <li className="blogLiDot">
             {" "}
             The final result is a single value - that is, it's the result of the
             final callbackFn.
           </li>
-          <li className="blogLi">
+          <li className="blogLiDot">
             If you don't specify an initial value, the element at array[0] is
             used as the initial value and the current value starts at array[1].
           </li>
-          <li className="blogLi">
+          <li className="blogLiDot">
             If you do specify an initial value, it is used as the previous value
             and the current value starts with array[0].
           </li>
@@ -99,7 +99,8 @@ export const B221003 = () => {
           'Accumulate' since every recursion passes the result of the previous
           callbackFn as the previousValue of the next callbackFn. Like this:
         </p>
-        <p className="blogPostText">
+        <div className="h2Box">
+        <p className="blogPostNote">
           <b>Note:</b> The code below is interactive. You can change anything
           you want and run it by typing 'node filename' in the terminal prompt!
            Hit enter to run it. Unfortunately, your
@@ -107,6 +108,7 @@ export const B221003 = () => {
           back your changes will be lost. Sad! But you can use Notepad++, VS
           Code, or any other text editor to save your changes for posterity.
         </p>
+        </div>
         <div className="iframeBox">
           <iframe className = "codesandbox"
             title="StackBlitz"
@@ -191,6 +193,9 @@ export const B221003 = () => {
         <Sect3 />
         <Sect4 />
         <Sect5 />
+        <h2 className="blogPostText">
+          See the full details on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" target="_blank" rel="noreferrer">MDN</a>
+        </h2>
       </article>
     </main>
   );

@@ -24,7 +24,7 @@ export function MainPage() {
         <h2 className="mainSubtitle">SQL, NoSQL every day</h2>
         <h2 className="mainSubtitle">Feel free to &nbsp;
         <span>
-        <a href="https://www.animatedimages.org/cat-eyes-35.htm"><img src="https://www.animatedimages.org/data/media/35/animated-eye-image-0282.gif" border="0" alt="animated-eye-image-0282" /></a>
+        <a href="https://www.animatedimages.org/cat-eyes-35.htm"><img src="https://www.animatedimages.org/data/media/35/animated-eye-image-0282.gif" border="0" alt="animated-eye" /></a>
         </span>
         </h2>
         <div className="mainSquiggle"></div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useWindowDimensions from "components/helpers/UseWindowDimensions";
+//import useWindowDimensions from "components/helpers/UseWindowDimensions";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { DefsB221121, DefsB221123, DefsB221201 } from "./JoinDefinitions";
@@ -9,9 +9,9 @@ import { DefsB221121, DefsB221123, DefsB221201 } from "./JoinDefinitions";
 export const Btemplate = () => {
 
   const location = useLocation();
-  const { width, height } = useWindowDimensions();
-  let iwidth = width * 0.8 * 0.8;
-  let iheight = height;
+  //const { width, height } = useWindowDimensions();
+  // let iwidth = width * 0.8 * 0.8;
+  // let iheight = height;
 
   const Title = "Blog Template Title";
   const Created = "Some-month 01, 2022";

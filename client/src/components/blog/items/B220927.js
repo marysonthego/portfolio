@@ -1,14 +1,14 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useWindowDimensions from "components/helpers/UseWindowDimensions";
+//import useWindowDimensions from "components/helpers/UseWindowDimensions";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const B220927 = () => {
   const location = useLocation();
-  const { width, height } = useWindowDimensions();
-  let iwidth = width * 0.8 * 0.8;
-  let iheight = height;
+  // const { width, height } = useWindowDimensions();
+  // let iwidth = width * 0.8 * 0.8;
+  // let iheight = height;
 
   const Title = "Conditional Routing with React Router v6 useLocation";
   const Created = "October 23, 2022";
@@ -239,11 +239,11 @@ return (
         When the BlogList page is created, part of its return statement says to
         display <code className="codeLocal">&lt;BlogPost1 /&gt;</code>.
       </p>
-      <p className="blogPostText">
+      <h2 className="blogPostText">
         The important thing to realize is that we are in the BlogList return
         statement - And what is a return statement? Nothing more than a{" "}
         <code className="codeLocal">Render</code>.
-      </p>
+      </h2>
       <p className="blogPostText">
         So, while we're rendering BlogList, the location does not change. It is{" "}
         <code className="codeLocal">/bloglist</code> and, in fact, <i>cannot</i>{" "}

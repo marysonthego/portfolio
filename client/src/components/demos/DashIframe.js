@@ -45,9 +45,9 @@ export default function DashIframe() {
 
   const DashModal = (show) => {
     return (
-      <Container>
-      <Modal centered show={show} onHide={handleClose} >
-        <Modal.Header closeButton className="iframe">Customer and Administrator Dashboard</Modal.Header>
+      <Container className="modalContainer">
+      <Modal centered show={show} onHide={handleClose} className="modalContent" >
+        <Modal.Header closeButton className="modalContent">Customer and Administrator Dashboard</Modal.Header>
           <Row>
 
           </Row>

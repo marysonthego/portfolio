@@ -1,4 +1,4 @@
-import {TodosForMe} from "components/todosforme/TodosForMe";
+//import {TodosForMe} from "components/todosforme/TodosForMe";
 import {WeatherApi} from "components/demos/WeatherApi";
 import {NucatIframe} from "components/demos/NucatIframe";
 import DashIframe from "components/demos/DashIframe";
@@ -7,7 +7,7 @@ import {Post10} from "components/posts/Post10";
 import {Post11} from "components/posts/Post11";
 
 export const Projects = () => {
-  let PageTitle = "Projects";
+  let PageTitle = "Example Projects";
 
   return (
     <main className = 'blogListContainer'>
@@ -24,9 +24,6 @@ export const Projects = () => {
           </li>
           <li>
             <a className = 'projectListItem' href="/stepper">{StepperIframe()}</a>
-          </li>
-          <li >
-            <a className = 'projectListItem' href="/todos">{TodosForMe()}</a>
           </li>
           <li >
             <a className = 'projectListItem' href="/post11">{Post11()}</a>

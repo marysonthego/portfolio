@@ -42,7 +42,7 @@ const Container = styled.div`
 export default function App() {
   console.log(`NODE_ENV`, process.env.NODE_ENV);
   setStorage("all-themes", themes.default);
-  const { theme, themeLoaded, getFonts } = useTheme();
+  const { theme, themeLoaded} = useTheme();
   const [selectedTheme, setSelectedTheme] = useState(theme);
   let location = useLocation();
 

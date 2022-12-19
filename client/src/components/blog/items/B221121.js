@@ -5,7 +5,7 @@ import {DefsB221121} from "./JoinDefinitions";
 export const B221121 = () => {
   const location = useLocation();
 
-  const Title = "Join Conditions Part 1 - WHERE, ON, USING";
+  const Title = "SQL Joins Part 1 - WHERE, ON, USING";
   const Created = "November 21, 2022";
   const TopImage = "media/joinhands.png";
 
@@ -214,7 +214,7 @@ export const B221121 = () => {
           />
           </div>
         <br />
-        <h3 className="blogPostText">In part 2 we will look at inner joins.</h3>
+        <h2 className="blogPostText">In part 2 we will look at inner joins.</h2>
       </>
     );
   };

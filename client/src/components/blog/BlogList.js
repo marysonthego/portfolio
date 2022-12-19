@@ -94,28 +94,7 @@ export const BlogList = () => {
             {posts.Post05()}
           </a>
         </li>
-        <li>
-          <a className="blogListItem" href="/post09">
-            <img className="blogListImg" src="media/pythonw200.png" alt="" />{" "}
-            {posts.Post09()}
-          </a>
-        </li>
-        <li>
-          <a className="blogListItem" href="/bnpm">
-            <img
-              className="blogListImg"
-              src="media/npmpackagesw200.jpg"
-              alt=""
-            />{" "}
-            {items.Bnpm()}
-          </a>
-        </li>
-        <li>
-          <a className="blogListItem" href="/post07">
-            <img className="blogListImg" src="media/nodew200.png" alt="" />{" "}
-            {posts.Post07()}
-          </a>
-        </li>
+  
       </ul>
     </div>
   );
