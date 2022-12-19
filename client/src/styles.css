@@ -52,7 +52,7 @@ h1.mainTitle {
 
 h2.mainSubtitle {
   font-weight: 200;
-  font-stretch: 90%;
+  font-stretch: 100%;
   margin-bottom: 1vh;
 }
 
@@ -157,8 +157,7 @@ h1.blogPostTitle {
   font-weight: 300;
   font-stretch: 120%;
   font-size: 28px;
-  margin-top: 5vh;
-  margin-bottom: 3vh;
+  margin: 5vh 0 3vh 0vh;
   width: 100%;
   text-decoration: none;
 }
@@ -167,22 +166,46 @@ h1.blogPostTitle {
   font-weight: 300;
   font-stretch: 100%;
   font-size: 12px;
-  margin-bottom: 1vh;
+  margin: 0 0 1vh 0vh;
 }
 
 div.h2Box {
   border-style: solid;
   border-radius: 7px;
   border-width: 1px;
-  padding: 10px ;
-  margin-top: 2vh;
+  padding: 1vh ;
+  margin: 2vh 1vh 0 0;
 }
 
-h2.blogPost {
+div.h3Box {
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 1px;
+  padding: 10px ;
+  margin: 2vh;
+}
+
+.blogPostText {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: 100%;
+  margin: 0 0 2vh 0;
+  text-align: justify;
+  line-height: 175%;
+  width: 100%;
+}
+
+h2.blogPostText {
   font-size: 20px;
   font-weight: 300;
-  margin: 2vh;
+  margin: 2vh 0vh 2vh 0;
   width: 100%;
+}
+
+h3.blogPostText {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 2vh;
 }
 
 h2.blogPostQuery {
@@ -191,27 +214,9 @@ h2.blogPostQuery {
   margin: 2vh;
 }
 
-h3.blogPost {
-  font-size: 16px;
-  font-weight: 300;
-  margin: 2vh;
-}
-
 .intro {
   font-size: 35px;
   font-weight: 200;
-}
-
-.blogPostText {
-  font-size: 16px;
-  font-weight: 300;
-  font-stretch: 100%;
-  margin: 0 2vh 2vh 2vh;
-  /* margin-left: 2vh;
-  margin-bottom: 2vh; */
-  text-align: justify;
-  line-height: 175%;
-  width: 100%;
 }
 
 .blogPostQuote {
@@ -229,16 +234,33 @@ h3.blogPost {
   text-align: justify;
   font-weight: 300;
   line-height: 175%;
-  width: 90%;
+  /* width: 90%; */
 }
 
 .blogSubLi {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 175%;
+  width: 90%;
   list-style: circle;
   margin: 4vh;
 }
 
 .blogPostSyntax {
-  margin: 2vh;
+  margin: 2vh 1vh 2vh 0;
+  border-radius: 7px;
+}
+
+div.iframeBox {
+  width: 100%;
+  height: 75vh;
+  margin: 2vh 1vh 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+iframe.codesandbox {
+  border-radius: 7px;
 }
 
 /* navbar */

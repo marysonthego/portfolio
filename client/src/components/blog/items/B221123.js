@@ -152,7 +152,7 @@ ORDER BY cu.customerId;`;
         <Schema />
         <Queries />
         <div className="blogPostPage">
-          <h2 className="blogPost">
+          <h2 className="blogPostcd">
             We'll look at basic Outer Joins next.
           </h2>
         </div>

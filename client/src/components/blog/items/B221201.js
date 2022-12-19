@@ -69,7 +69,7 @@ ORDER BY cu.customerId;`;
     return (
       <>
         <div className="h2Box">
-          <h2 className="blogPost">Schema</h2>
+          <h2 className="blogPostText">Schema</h2>
           <div className="blogPostTopImg">
             <img src={ModelImage} title="Schema" alt="Schema" />
           </div>
