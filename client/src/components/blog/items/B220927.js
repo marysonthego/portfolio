@@ -296,12 +296,12 @@ return (
   const text7 = (
     <>
       <br />
-      <div className="divBox">
-        <h2 className="blogPost">Further Reading</h2>
+      <div className="h2Box">
+        <h2 className="blogPostText">Further Reading</h2>
         <ul>
           <li className="blogLi">
             <a
-              className="listItem"
+              className="blogListItem"
               href="https://beta.reactjs.org/learn/render-and-commit"
             >
               React Beta Docs - Render and Commit
@@ -309,7 +309,7 @@ return (
           </li>
           <li className="blogLi">
             <a
-              className="listItem"
+              className="blogListItem"
               href="https://beta.reactjs.org/learn/conditional-rendering"
             >
               React Beta Docs - Conditional Rendering
@@ -317,7 +317,7 @@ return (
           </li>
           <li className="blogLi">
             <a
-              className="listItem"
+              className="blogListItem"
               href="https://reactrouter.com/en/main/utils/location"
             >
               React Router v6 - Location
@@ -325,7 +325,7 @@ return (
           </li>
           <li className="blogLi">
             <a
-              className="listItem"
+              className="blogListItem"
               href="https://github.com/remix-run/history/blob/main/docs/api-reference.md#location"
             >
               History API Reference
@@ -336,14 +336,13 @@ return (
     </>
   );
 
-  const Sect6 = () => {
+  const Iframe = () => {
     return (
       <>
-        <div className="stackBlitz">
-          <iframe
+        <div className="iframeBox">
+          <iframe className="codesandbox"
             title="React Router v6 Playground"
-            width={iwidth}
-            height={iheight}
+            width="100%"
             src="https://codesandbox.io/embed/v6routertests-rzq9me?autoresize=1&fontsize=14&hidenavigation=1&initialpath=%2F&module=%2Fsrc%2FList.js&theme=dark"
           ></iframe>
         </div>
@@ -351,7 +350,6 @@ return (
     );
   };
 
-  console.log("location= ", location);
   return (
     <main className="blogPostContainer">
       <article className="blogPostPage">
@@ -362,7 +360,7 @@ return (
         {text4}
         {text5}
         {text6}
-        <Sect6 />
+        <Iframe />
         {text7}
       </article>
     </main>

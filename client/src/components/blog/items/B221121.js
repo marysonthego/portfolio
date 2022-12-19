@@ -22,7 +22,7 @@ export const B221121 = () => {
     return (
       <>
         <div className="h2Box">
-          <h2 className="blogPost">&nbsp;A few definitions</h2>
+          <h2 className="blogPostText">&nbsp;A few definitions</h2>
           <ul>
             <DefsB221121/>
           </ul>
@@ -40,7 +40,7 @@ export const B221121 = () => {
           table. The tables look like this:
         </p>
         <div>
-          <h3 className="blogPost">customer table</h3>
+          <h3 className="blogPostText">customer table</h3>
           <div className="blogImg">
           <img
             src="media/customer_t-list.png"
@@ -51,7 +51,7 @@ export const B221121 = () => {
         </div>
           <br />
           <div>
-            <h3 className="blogPost">orderc table</h3>
+            <h3 className="blogPostText">orderc table</h3>
           </div>
           <div className="blogImg">
           <img
@@ -71,7 +71,7 @@ export const B221121 = () => {
       <>
         <br />
         <h2 className="blogPostQuery">WHERE, ON, USING</h2>
-          <h3 className="blogPost">WHERE</h3>
+          <h3 className="blogPostText">WHERE</h3>
           <p className="blogPostText">
             We can join the customer and orderc tables with a simple WHERE
             clause. When you use a WHERE clause on multiple tables, you are
@@ -140,7 +140,7 @@ export const B221121 = () => {
   const Sect4 = () => {
     return (
       <>
-          <h3 className="blogPost">ON</h3>
+          <h3 className="blogPostText">ON</h3>
           <p className="blogPostText">
             Joins increase the flexibility of simple FROM - WHERE statements.
             You will see many types of joins in part 2. For now, just notice the ON
@@ -181,7 +181,7 @@ export const B221121 = () => {
   const Sect5 = () => {
     return (
       <>
-          <h3 className="blogPost">USING</h3>
+          <h3 className="blogPostText">USING</h3>
           <p className="blogPostText">
             USING is a variation of the ON clause. You provide a comma separated
             list of columns to compare between two tables. The column
@@ -214,7 +214,7 @@ export const B221121 = () => {
           />
           </div>
         <br />
-        <h3 className="blogPost">In part 2 we will look at inner joins.</h3>
+        <h3 className="blogPostText">In part 2 we will look at inner joins.</h3>
       </>
     );
   };

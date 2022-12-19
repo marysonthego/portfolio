@@ -19,7 +19,7 @@ export function MainPage() {
         </div>
         <h1 className="mainTitle">Hi! I'm Mary Clark</h1>
         <h2 className="mainSubtitle">
-          Creating delightful full-stack React, NodeJS, Express,{" "}
+          Creating <i>delightful</i> full-stack React, NodeJS, Express,{" "}
         </h2>
         <h2 className="mainSubtitle">SQL, NoSQL every day</h2>
         <h2 className="mainSubtitle">Feel free to &nbsp;

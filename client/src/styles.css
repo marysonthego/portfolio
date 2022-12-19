@@ -1,3 +1,4 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
 @font-face {
   font-family: 'Mona Sans';
   src:
@@ -46,13 +47,13 @@ div.mainImgDiv {
 
 h1.mainTitle {
   font-weight: 200;
-  font-stretch: 110%;
+  font-stretch: 120%;
   margin-bottom: 2vh;
 }
 
 h2.mainSubtitle {
   font-weight: 200;
-  font-stretch: 100%;
+  font-stretch: 110%;
   margin-bottom: 1vh;
 }
 
@@ -67,6 +68,21 @@ h2.mainSubtitle {
   -webkit-mask: var(--mask);
           mask: var(--mask);
   background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
+}
+
+/* Projects List Pae */
+
+a.projectListItem {
+  font-weight: 300;
+  font-stretch: 100%;
+  font-size: 20px;
+  display: inline;
+  text-decoration: none;
+  margin-bottom: 2vh;
+
+}
+a:hover {
+  text-decoration: underline;
 }
 
 /* BlogList Page */
@@ -116,7 +132,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.blogListIemDate {
+.blogListIemDate, .listDate {
   font-size: 12px;
   margin-bottom: 2%;
 }
@@ -181,8 +197,8 @@ div.h3Box {
   border-style: solid;
   border-radius: 7px;
   border-width: 1px;
-  padding: 10px ;
-  margin: 2vh;
+  padding: 1vh ;
+  margin: 2vh 1vh 0 0;
 }
 
 .blogPostText {
@@ -205,13 +221,13 @@ h2.blogPostText {
 h3.blogPostText {
   font-size: 16px;
   font-weight: 300;
-  margin: 2vh;
+  margin: 2vh 0vh 2vh 0;
 }
 
 h2.blogPostQuery {
   font-size: 20px;
   font-weight: 300;
-  margin: 2vh;
+  margin: 2vh 0 1vh 0;
 }
 
 .intro {
@@ -234,7 +250,6 @@ h2.blogPostQuery {
   text-align: justify;
   font-weight: 300;
   line-height: 175%;
-  /* width: 90%; */
 }
 
 .blogSubLi {
@@ -254,7 +269,7 @@ h2.blogPostQuery {
 div.iframeBox {
   width: 100%;
   height: 75vh;
-  margin: 2vh 1vh 0 0;
+  margin: 2vh 1vh 1vh 0;
   display: flex;
   justify-content: center;
 }
@@ -262,6 +277,122 @@ div.iframeBox {
 iframe.codesandbox {
   border-radius: 7px;
 }
+
+/* About Page */
+
+.aboutContainer {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.aboutSection1 {
+  width: 70%;
+  height: 100%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutBox {
+  width: 100%;
+  height: 60px;
+  --mask:
+    radial-gradient(31.87px at 50% calc(100% + 26.40px),#0000 calc(99% - 3px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 32px) calc(50% - 9px + .5px)/64px 18px ,
+    radial-gradient(31.87px at 50% -26.4px,#0000 calc(99% - 2px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 9px)/64px 18px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  background: linear-gradient(135deg, #ff8903,#ff8903, #00b1c9, #00b1c9) fixed;
+}
+
+.aboutSection2 {
+  width: 70%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutSection3 {
+  width: 40%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutSection4 {
+  width: 40%;
+  padding: 2% 5% 1% ;
+  margin: 0%;
+}
+
+.aboutTitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 175%;
+  padding-top: 5px;
+  justify-content: center;
+
+}
+
+.aboutSubtitle {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 175%;
+  justify-content: center;
+}
+
+ul.ulTopCircle {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0 4%;
+}
+
+ul.ulReact {
+  list-style-image: url('https: //marysonthego.tech/media/react20.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulCA {
+  list-style-image: url('https://marysonthego.tech/media/ca.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulNortel {
+  list-style-image: url('https://marysonthego.tech/media/nortel.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulTI {
+  list-style-image: url('https://marysonthego.tech/media/ti.png');
+  padding: 0;
+  margin: 0 0 2% 2%;
+}
+
+ul.ulSubCircle {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0 2% 2% 5%;
+}
+
+li.aboutText {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 175%;
+  margin: 0 2% 2% 2%;
+}
+
+li.aboutSubText {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 175%;
+  margin: 0 2% 2% 5%;
+}
+
 
 /* navbar */
 

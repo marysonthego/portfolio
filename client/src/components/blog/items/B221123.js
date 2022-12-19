@@ -62,7 +62,7 @@ ORDER BY cu.customerId;`;
     return (
       <>
         <div className="h2Box">
-          <h2 className="blog">&nbsp;Definitions</h2>
+          <h2 className="blogPostText">&nbsp;Definitions</h2>
           <ul>
             <DefsB221123 />
             <DefsB221121 />
@@ -77,7 +77,7 @@ ORDER BY cu.customerId;`;
     return (
       <>
         <div className="h2Box">
-          <h2 className="blogPost">&nbsp;Schema</h2>
+          <h2 className="blogPostText">&nbsp;Schema</h2>
           <div className="blogPostTopImg">
             <img src={ModelImage} title="Schema" alt="Schema" />
           </div>
@@ -152,7 +152,7 @@ ORDER BY cu.customerId;`;
         <Schema />
         <Queries />
         <div className="blogPostPage">
-          <h2 className="blogPostcd">
+          <h2 className="blogPostText">
             We'll look at basic Outer Joins next.
           </h2>
         </div>

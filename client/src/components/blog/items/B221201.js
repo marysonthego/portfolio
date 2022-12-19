@@ -53,7 +53,7 @@ ORDER BY cu.customerId;`;
     return (
       <>
         <div className="h2Box">
-          <h2 className="blogPost">Definitions</h2>
+          <h2 className="blogPostText">Definitions</h2>
 
           <ul>
             <DefsB221201 />

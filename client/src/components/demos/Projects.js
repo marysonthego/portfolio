@@ -10,33 +10,31 @@ export const Projects = () => {
   let PageTitle = "Projects";
 
   return (
-    <main className = 'container'>
-      <h1 className = "blog">{PageTitle}</h1>
-      <section className = 'blogList'>
-        <ul>
-        <li className = 'listItem'>
-            <a className = 'item' href="/nucat">{NucatIframe()}</a>
+    <main className = 'blogListContainer'>
+      <h1 className = "blogList">{PageTitle}</h1>
+        <ul className="blogListUl">
+          <li>
+            <a className = 'projectListItem' href="/nucat">{NucatIframe()}</a>
           </li>
-          <li className = 'listItem'>
-            <a className = 'item' href="/weather">{WeatherApi()}</a>
+          <li >
+            <a className = 'projectListItem' href="/weather">{WeatherApi()}</a>
           </li>
-          <li className = 'listItem'>
-            <a className = 'item' href="/dashboard">{DashIframe()}</a>
+          <li >
+            <a className = 'projectListItem' href="/dashboard">{DashIframe()}</a>
           </li>
-          <li className = 'listItem'>
-            <a className = 'item' href="/stepper">{StepperIframe()}</a>
+          <li>
+            <a className = 'projectListItem' href="/stepper">{StepperIframe()}</a>
           </li>
-          <li className = 'listItem'>
-            <a className = 'item' href="/todos">{TodosForMe()}</a>
+          <li >
+            <a className = 'projectListItem' href="/todos">{TodosForMe()}</a>
           </li>
-          <li className = 'listItem'>
-            <a className = 'item' href="/post11">{Post11()}</a>
+          <li >
+            <a className = 'projectListItem' href="/post11">{Post11()}</a>
           </li>
-          <li className = 'listItem'>
-            <a className = 'item' href="/post10">{Post10()}</a>
+          <li >
+            <a className = 'projectListItem' href="/post10">{Post10()}</a>
           </li>
         </ul>
-      </section>
     </main>
   );
 };
