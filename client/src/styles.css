@@ -1,4 +1,6 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import "./posts.css";
+
 @font-face {
   font-family: 'Mona Sans';
   src:
@@ -87,7 +89,6 @@ a.projectListItem {
 .blogListContainer {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
   align-items: center;
   justify-content: left;
   margin: 0 10%;
@@ -305,7 +306,7 @@ iframe.codesandbox {
   margin: 0%;
 }
 
-.aboutBox {
+.aboutSquiggle {
   width: 100%;
   height: 60px;
   --mask:
@@ -411,6 +412,105 @@ li.aboutSubText {
 .NucatModal {
   position: absolute;
   background:rgba(211, 211, 211, 0.39)
+}
+
+/* Weather Page */
+
+.main{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #c4820e;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 15%;
+}
+
+div.post-body {
+background: #003262;
+margin-left: 20%;
+margin-right: 20%;
+margin-top: 5%;
+margin-bottom: 5%;
+padding: 2%;
+max-width: 90%;
+}
+
+.weatherTop{
+margin: 0;
+height: 60px;
+background-color: #00336269;
+color: whitesmoke;
+padding: 10px;
+font-family: 'Finlandica', sans-serif;
+display: flex;
+justify-content: space-between;
+}
+
+.weatherHeader{
+  background-color: #c4820e;
+  color: #003262;
+  padding: 10px;
+  font-size: 28px;
+  border-radius: 15px;
+  font-family: 'Finlandica', sans-serif;
+}
+
+.weatherDay{
+  padding: 15px;
+  color: whitesmoke;
+  font-family: 'Finlandica', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.weatherDayTemp {
+color: whitesmoke;
+font-family: 'Finlandica', sans-serif;
+font-weight: 600;
+font-size: 48px;
+}
+
+.weatherTemp{
+  padding: 15px;
+  color: whitesmoke;
+  font-family: 'Finlandica', sans-serif;
+  font-size: 18px;
+}
+
+.flex{
+display: flex;
+justify-content: space-between;
+}
+
+.sunrise-sunset{
+padding: 15px;
+color: whitesmoke;
+font-family: 'Finlandica', sans-serif;
+font-size: 16px;
+}
+
+.weatherDescription{
+padding: 15px;
+color: whitesmoke;
+font-family: 'Finlandica', sans-serif;
+font-weight: 400;
+}
+
+.button.weatherButton{
+width: 35px;
+height: 35px;
+background-color: #003262;
+border-color:black;
+}
+
+.button.weatherToggle {
+margin-left: 1em;
+width: 50px;
+height: 30px;
+color: #000000;
+background-color: lightgray;
+border-color:black;
 }
 
 /* navbar */

@@ -18,14 +18,14 @@ export const About = () => {
               State University
             </li>
           </ul>
-          <div className = "aboutBox"></div>
+          <div className = "aboutSquiggle"></div>
         </section>
         <section className="aboutSection2">
           <h1 className="aboutTitle">"There's Something about Mary!"</h1>
           <h2 className="aboutSubtitle">
-            Hint: (Long time developer - also an old{" "}
+            Hint: (Experienced developer - also a{" "}
             <a href="https://www.imdb.com/title/tt0129387/" target="_blank" rel="noreferrer">
-              movie
+              comedy!
             </a>
             )
           </h2>
@@ -75,24 +75,24 @@ export const About = () => {
               C programming Optical Character Recognition (OCR) software
             </li>
           </ul>
-          <div className = "aboutBox"></div>
+          <div className = "aboutSquiggle"></div>
         </section>
-        <section className="aboutSection3">
+        <section className="aboutSection1">
           <h1 className="aboutTitle">Why should I be on your project?</h1>
           <h2 className="aboutSubtitle">
-            Because I'm confident I can come up with a delightful solution!
+            Because I'm confident I can come up with a <i>delightful</i> solution!
           </h2>
 
         </section>
-        <section className="aboutSection4">
+        <section className="aboutSection2">
           <h1 className="aboutTitle">Ready for details? </h1>
           <h2 className="aboutSubtitle">
             Shoot me an{" "}
             <a href="mailto:mary@marysonthego.tech?subject=Contact">email!</a>
           </h2>
           <h2 className="aboutSubtitle">{" "}</h2>
-
         </section>
+        <div className = "aboutSquiggle"></div>
       </main>
     </>
   );

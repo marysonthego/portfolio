@@ -197,7 +197,7 @@ const Code = ({ Syntax }) => {
           </p>
 
           <Code Syntax={Syntax1} />
-          <br/><br/>
+          <br/>
 
           <h3 className="blogPostText">Step 4 - Create tables and data in Postgres (optional) </h3>
           <p className="blogPostText">

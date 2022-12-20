@@ -7,7 +7,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import moment from "moment";
 import Image from "react-bootstrap/Image";
-import "components/css/weatherstyles.css";
 
 const refresh = () => {
   window.location.reload();
@@ -153,15 +152,13 @@ export const WeatherApi = () => {
     >
       {show ? <WeatherModal /> : (
           <div>
-            <h2 className="top">OpenWeather API
-            <Button className="button toggle p-0" onClick={toggleModal}>
+            <h2 className="weatherTop">OpenWeather API
+            <Button className="button weatherToggle p-0" onClick={toggleModal}>
               Details
             </Button>
             </h2>
           </div>
         )}
-
-
 
       <div className="post mb-3" style={{ maxWidth: "100%" }}>
         <div className="row g-0">
@@ -169,10 +166,10 @@ export const WeatherApi = () => {
             {typeof weatherData.current !== "undefined" ? (
               <>
                 <div className="main mt-5">
-                  <div className="top header flex">
+                  <div className="weatherTop weatherHeader flex">
                     {weatherData.timezone}
                     <Button
-                      className="button weather m-0 p-0"
+                      className="button weatherButton m-0 p-0"
                       onClick={refresh}
                     >
                       <img
@@ -184,32 +181,32 @@ export const WeatherApi = () => {
                     </Button>
                   </div>
                   <div className="flex">
-                    <p className="day">
+                    <p className="weatherDay">
                       {moment().format("dddd")}, {moment().format("LL")}
                     </p>
                   </div>
                   <div >
-                    <p className="dayTemp text-center">
+                    <p className="weatherDayTemp text-center">
                       {weatherData.current.temp} &deg;F
                     </p>
 
 
                   </div>
                   <div className="flex">
-                  <p className="temp">
+                  <p className="weatherTemp">
                       Humidity: {weatherData.current.humidity}%
                     </p>
-                    <p className="temp">
+                    <p className="weatherTemp">
                       Pressure:{" "}
                       {(weatherData.current.pressure * 0.0295301).toFixed(2)}
                       &nbsp;inHg
                     </p>
                   </div>
                   <div className="flex">
-                    <p className="temp">
+                    <p className="weatherTemp">
                       Wind: {weatherData.current.wind_speed}&nbsp;mph
                     </p>
-                    <p className="temp">
+                    <p className="weatherTemp">
                       Gusts: {weatherData.current.wind_gust}&nbsp;mph
                     </p>
                   </div>
@@ -227,7 +224,7 @@ export const WeatherApi = () => {
                       ).toLocaleTimeString("en-US")}
                     </p>
                   </div>
-                  <p className="description">
+                  <p className="weatherDescription">
                     Current Conditions:{" "}
                     {weatherData.current.weather[0].description}
                   </p>
