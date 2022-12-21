@@ -49,13 +49,13 @@ div.mainImgDiv {
 
 h1.mainTitle {
   font-weight: 200;
-  font-stretch: 120%;
+  font-stretch: 125%;
   margin-bottom: 2vh;
 }
 
 h2.mainSubtitle {
   font-weight: 200;
-  font-stretch: 110%;
+  font-stretch: 115%;
   margin-bottom: 1vh;
 }
 
@@ -527,6 +527,13 @@ div.navbar {
 
 a.navIcon {
   margin-top: 10px;
+  transition: transform 1.5s;
+
+}
+
+a.navIcon:hover {
+  transform-style: preserve-3d;
+  transform: scaleY(1.2) skewY(17deg);
 }
 
 a.navLink {
@@ -537,10 +544,12 @@ a.navLink {
   font-stretch: 100%;
   font-size: 20px;
   text-decoration: none;
+  transition: transform 1.5s;
 }
 
 a.navLink:hover,
 a.navLink:focus{
+  transform: scaleY(1.2) skewY(17deg);
   font-stretch: 120%;
   text-decoration: underline;
 }

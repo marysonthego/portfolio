@@ -11,6 +11,7 @@ import {CookiesProvider} from "react-cookie";
 import {SnackbarProvider} from "notistack";
 
 import * as posts from "components/posts";
+import * as p10 from "components/posts/P10";
 import * as items from "components/blog/items";
 import * as top from "components/top";
 import {About} from "components/about/About";
@@ -118,6 +119,14 @@ export default function App() {
                     <Route path="/post02" element={<posts.Post02 />} />
                     <Route path="/post05" element={<posts.Post05 />} />
                     <Route path="/post10" element={<posts.Post10 />} />
+                    <Route path="/post1001" element={<p10.Post1001 />} />
+                    <Route path="/post1002" element={<p10.Post1002 />} />
+                    <Route path="/post1003" element={<p10.Post1003 />} />
+                    <Route path="/post1004" element={<p10.Post1004 />} />
+                    <Route path="/post1005" element={<p10.Post1005 />} />
+                    <Route path="/post1006" element={<p10.Post1006 />} />
+                    <Route path="/post1007" element={<p10.Post1007 />} />
+                    <Route path="/post1008" element={<p10.Post1008 />} />
                     <Route path="/post11" element={<posts.Post11 />} />
                     <Route path="/*" element={<Navigate replace to="/" />} />
                   </Routes>

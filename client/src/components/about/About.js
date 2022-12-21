@@ -1,4 +1,5 @@
 export const About = () => {
+  const TopImage = "media/ozziewfh.png"
   return (
     <>
       <main className="aboutContainer">
@@ -93,6 +94,9 @@ export const About = () => {
           <h2 className="aboutSubtitle">{" "}</h2>
         </section>
         <div className = "aboutSquiggle"></div>
+        <div className="blogPostTopImg" >
+          <img src={TopImage} title="Ozzie working from home" alt="Ideas" />
+        </div>
       </main>
     </>
   );
