@@ -7,9 +7,6 @@ import * as themes from "./theme/schema.json";
 import {useTheme} from "./theme/useTheme";
 import {ThemeSelector} from "./ThemeSelector";
 
-import {CookiesProvider} from "react-cookie";
-import {SnackbarProvider} from "notistack";
-
 import * as posts from "components/posts";
 import * as p10 from "components/posts/P10";
 import * as items from "components/blog/items";
@@ -21,9 +18,6 @@ import {WeatherApi} from "components/demos/WeatherApi";
 import {NucatIframe} from "components/demos/NucatIframe";
 import DashIframe from "components/demos/DashIframe";
 import StepperIframe from "components/demos/StepperIframe";
-import {Collapse} from "@material-ui/core";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "react-datepicker/dist/react-datepicker.css";
 
 const Container = styled.div`
   margin: auto;
@@ -50,13 +44,6 @@ export default function App() {
       {themeLoaded && (
         <ThemeProvider theme={selectedTheme}>
           <GlobalStyles />
-          <CookiesProvider>
-            <SnackbarProvider
-              dense
-              maxSnack={3}
-              TransitionComponent={Collapse}
-              preventDuplicate
-            >
               <Container style={{ fontFamily: selectedTheme.font }}>
                   <top.Navigation />
                   <top.ScrollToTop className="ScrollToTop" />
@@ -131,8 +118,6 @@ export default function App() {
                     <Route path="/*" element={<Navigate replace to="/" />} />
                   </Routes>
               </Container>
-            </SnackbarProvider>
-          </CookiesProvider>
         </ThemeProvider>
       )}
     </>

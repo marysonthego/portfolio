@@ -158,13 +158,17 @@ a:hover {
   justify-content: center;
 }
 
-.blogPostTopImg {
+.blogPostTopImg .pageBottomImg{
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   align-items: normal;
   object-fit: scale-down;
   margin-bottom: 2vh;
+}
+
+.pageBottomImg {
+  margin: 2vh;
 }
 
 h1.blogPostTitle {

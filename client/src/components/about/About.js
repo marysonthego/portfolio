@@ -94,7 +94,7 @@ export const About = () => {
           <h2 className="aboutSubtitle">{" "}</h2>
         </section>
         <div className = "aboutSquiggle"></div>
-        <div className="blogPostTopImg" >
+        <div className="pageBottomImg" >
           <img src={TopImage} title="Ozzie working from home" alt="Ideas" />
         </div>
       </main>
