@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-//import useWindowDimensions from "components/helpers/UseWindowDimensions";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 

@@ -1,0 +1,5 @@
+avif
+gif
+jpg
+png
+svg
