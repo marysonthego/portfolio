@@ -9,11 +9,11 @@ export const B220927 = () => {
   // let iwidth = width * 0.8 * 0.8;
   // let iheight = height;
 
-  const Title = "Conditional Routing with React Router v6 useLocation";
+  const Title = "Conditional Routing with React Router v6";
   const Created = "October 23, 2022";
   const TopImage = "media/route.png";
 
-  if (location.pathname.toString() === "/bloglist") {
+  if (location.pathname.toString() === "/bloglist" || location.pathname.toString() === "/") {
     return (
       <span>
         <span className="blog">{Title}</span>

@@ -58,7 +58,6 @@ export const ThemeSelector = (props) => {
           color: `${data[_.camelCase(props.theme.name)].colors.button.text}`,
           fontFamily: `${data[_.camelCase(props.theme.name)].font}`,
           display: `inline-block`,
-          padding: `4px`,
           cursor: `pointer`
         }}
       >

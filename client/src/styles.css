@@ -111,6 +111,10 @@ h1.blogList {
   width: 80%;
 }
 
+.blogFeaturedUl {
+  width: 100%;
+}
+
 img.blogListImg {
   width: 250;
   height: 200;

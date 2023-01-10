@@ -48,7 +48,7 @@ export default function App() {
                   <top.Navigation />
                   <top.ScrollToTop className="ScrollToTop" />
                   <div className="footer">
-                    &copy;2022&nbsp;marysonthego.tech
+                    &copy;2023&nbsp;marysonthego.tech
 
                     <a
                       href="https://www.linkedin.com/in/mary-clark-33511214"

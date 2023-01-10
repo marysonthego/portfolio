@@ -9,7 +9,7 @@ export const B221121 = () => {
   const Created = "November 21, 2022";
   const TopImage = "media/joinhands.png";
 
-  if (location.pathname.toString() === "/bloglist") {
+  if (location.pathname.toString() === "/bloglist" || location.pathname.toString() === "/") {
     return (
       <span>
         <span className="blog">{Title}</span>

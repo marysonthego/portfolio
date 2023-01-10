@@ -33,7 +33,7 @@ dashdashboardprofilewidget.png
 dashindex.png
 dashlistlocations.png
 dashlocationstep.png
-filesystem.js
+filesystem.json
 github.png
 ideasw200.png
 ideasw800.png
@@ -49,6 +49,7 @@ ListLocations.js
 LocationsStep.js
 mary.png
 millslakermnp.avif
+min.css
 model01.png
 mteal.png
 nortel.png
@@ -72,6 +73,9 @@ post0207.png
 post0208.png
 post02top03.png
 post02top03w200.png
+posts.css
+prism-line-numbers.css
+prism-okaidia.css
 q01-where.png
 q02-no-WHERE.png
 q03-ON.png
@@ -83,12 +87,12 @@ reduce.js
 reduce-flatten-array.js
 reduce-return-an-object.js
 reduce-sum-no-initial-value.js
-response.js
+response.json
 route.png
 routew200.png
 rowinwavesw200.png
 rowinwavesw700.png
-schema.js
+schema.json
 secretsw200.jpg
 secretsw640.jpg
 stepper.png
@@ -98,8 +102,11 @@ stepper3.png
 stepper4.png
 stepper5.png
 stepper6.png
+style.css
+styles.css
 ti.png
 top-arrow.png
 weatheruseeffect.png
+xterm.css
 xterm.js
 xterm-addon-fit.js

@@ -7,10 +7,10 @@ done | sort -u >./mediaTypes.txt
 
 # list only file names found in files
 cd ..
-egrep -riho --exclude=*.txt "[[:alnum:]_-]+\.js|[[:alnum:]_-]+\.png|[[:alnum:]_-]+\.jpg|[[:alnum:]_-]+\.gif|[[:alnum:]_-]+\.avif" * | sort -u >./scripts/usedFiles.txt
+egrep -riho --exclude=*.txt "[[:alnum:]_-]+\.css|[[:alnum:]_-]+\.json|[[:alnum:]_-]+\.js|[[:alnum:]_-]+\.png|[[:alnum:]_-]+\.jpg|[[:alnum:]_-]+\.gif|[[:alnum:]_-]+\.avif" * | sort -u >./scripts/usedFiles.txt
 
 # lists <file-found-in><line-number><filename>
-egrep -rino --exclude=*.txt "[[:alnum:]_-]+\.js|[[:alnum:]_-]+\.png|[[:alnum:]_-]+\.jpg|[[:alnum:]_-]+\.gif|[[:alnum:]_-]+\.avif" * >./scripts/usedList.txt
+egrep -rino --exclude=*.txt "[[:alnum:]_-]+\.css|[[:alnum:]_-]+\.json|[[:alnum:]_-]+\.js|[[:alnum:]_-]+\.png|[[:alnum:]_-]+\.jpg|[[:alnum:]_-]+\.gif|[[:alnum:]_-]+\.avif" * >./scripts/usedList.txt
 
 # list imports
 egrep -rih --exclude=*.txt "^import" | sort -u >./scripts/usedImports.txt

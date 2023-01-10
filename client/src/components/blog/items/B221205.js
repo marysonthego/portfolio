@@ -7,11 +7,11 @@ import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 export const B221205 = () => {
   const location = useLocation();
 
-  const Title = "Ideas Series - Embed a Live Database in a Web Page";
+  const Title = "Use WASM to Embed a Live Database in a Page";
   const Created = "December 5, 2022";
   const TopImage = "media/ideasw800.png"
 
-  if (location.pathname.toString() === "/bloglist") {
+  if (location.pathname.toString() === "/bloglist" || location.pathname.toString() === "/") {
     return (
       <span>
         <span className="blogListItem">{Title}</span>

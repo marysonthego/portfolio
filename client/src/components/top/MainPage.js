@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BlogFeatured } from "../blog/BlogFeatured";
 
 export function MainPage() {
   useEffect(() => {
@@ -21,13 +22,14 @@ export function MainPage() {
         <h2 className="mainSubtitle">
           I create <i>delightful</i> full-stack React, NodeJS, Express,{" "}
         </h2>
-        <h2 className="mainSubtitle">SQL, NoSQL, and derivatives thereof every day</h2>
+        <h2 className="mainSubtitle">SQL, and NoSQL apps and derivatives thereof every day!</h2>
         <h2 className="mainSubtitle">Feel free to &nbsp;
         <span>
         <a href="https://www.animatedimages.org/cat-eyes-35.htm"><img src="https://www.animatedimages.org/data/media/35/animated-eye-image-0282.gif" border="0" alt="animated-eye" /></a>
         </span>
         </h2>
         <div className="mainSquiggle"></div>
+        <div>{<BlogFeatured />}</div>
     </main>
   );
 }

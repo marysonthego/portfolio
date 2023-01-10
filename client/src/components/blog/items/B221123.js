@@ -12,7 +12,7 @@ export const B221123 = () => {
   const TopImage = "media/joinpeople.png";
   const ModelImage = "media/model01.png";
 
-  if (location.pathname.toString() === "/bloglist") {
+  if (location.pathname.toString() === "/bloglist"  || location.pathname.toString() === "/"){
     return (
       <span>
         <span className="blog">{Title}</span>
