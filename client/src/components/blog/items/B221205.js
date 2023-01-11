@@ -7,7 +7,7 @@ import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 export const B221205 = () => {
   const location = useLocation();
 
-  const Title = "Use WASM to Embed a Live Database in a Page";
+  const Title = "Use WASM to Embed a Live Database";
   const Created = "December 5, 2022";
   const TopImage = "media/ideasw800.png"
 
@@ -135,7 +135,7 @@ const Code = ({ Syntax }) => {
           </p>
           <h2 className="blogPostText">What is the current state of the art?</h2>
           <p className="blogPostText">
-            This subject feels like a black hole. I needed to do some research. So I looked around to see what the current state of the art is at tutorial sites, online classes, and blogs where people go to learn SQL. A few big, pay-walled sites have what I'm looking for - you can practice right alongside the course materials; but most sites either teach SQL through YouTube or use screen-shots to show the results you should get. In either case, you're on your own to find a way to practice - and in my opinion, <i>practice is everything</i>.
+            This subject felt like a black hole. I needed to do some research. So I looked around to see what the current state of the art is at tutorial sites, online classes, and blogs where people go to learn SQL. A few big, pay-walled sites have what I'm looking for - you can practice right alongside the course materials; but most sites either teach SQL through YouTube or use screen-shots to show the results you should get. In either case, you're on your own to find a way to practice - and in my opinion, <i>practice is everything</i>.
           </p>
           <p className="blogPostText">
             One place that is both free <i>and</i> interactive is <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc" target="_blank" rel="noreferrer">w3schools</a>.  <i>How do they do it?</i> At the bottom of the page is a tiny link about their <i>Try-SQL Editor</i>. I clicked. Maybe this is the answer I'm looking for?
