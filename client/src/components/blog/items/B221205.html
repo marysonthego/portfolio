@@ -1,0 +1,464 @@
+<!DOCTYPE html><html><head>
+      <title>B221205</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\marys\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.7\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="use-wasm-to-embed-a-live-database-">Use WASM to Embed a Live Database</h1>
+
+<h2 class="mume-header" id="december-5-2022-">December 5, 2022</h2>
+
+<p classname="blogPostText"> <br>
+          <span classname="intro"><em>This is the first </em></span>in a series of posts I plan to do once in a while about ideas I want to pursue. It&apos;s only fair to warn you at the start, though, that most of my ideas tend to involve things I don&apos;t know how to do! So, of necessity, <i>ideas</i> posts will usually begin with an <i>odessey</i>; and I can&apos;t guarantee they will always end well! The good news is, this one does...
+        </p>
+        <p classname="blogPostText">
+          In this post, I&apos;ll explain how I did research, what I learned, the dead-ends I went down, and how I was ultimately able to get a live database running in a browser. Best of all, it turns out to be pretty easy! Really.
+        </p>
+<p classname="blogPostText">
+            Your first question might be, <i>&quot;why do you want to embed a live database in a web page in the first place&quot;?</i> Well, when I started working on the <a href="..\..\..\..\..\b221121">SQL Joins</a> series, it quickly became clear to me that I needed an interactive database connection<i> right on the page</i>. I wanted a place where users could try out queries and get live results. Screen-shots weren&apos;t gonna cut it! I wanted a place where people could experiment, experiment again, and then repeat.
+          </p>
+          <h2 classname="blogPostText">What is the current state of the art?</h2>
+          <p classname="blogPostText">
+            This subject felt like a black hole. I needed to do some research. So I looked around to see what the current state of the art is at tutorial sites, online classes, and blogs where people go to learn SQL. A few big, pay-walled sites have what I&apos;m looking for - you can practice right alongside the course materials; but most sites either teach SQL through YouTube or use screen-shots to show the results you should get. In either case, you&apos;re on your own to find a way to practice - and in my opinion, <i>practice is everything</i>.
+          </p>
+          <p classname="blogPostText">
+            One place that is both free <i>and</i> interactive is <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc" target="_blank" rel="noreferrer">w3schools</a>.  <i>How do they do it?</i> At the bottom of the page is a tiny link about their <i>Try-SQL Editor</i>. I clicked. Maybe this is the answer I&apos;m looking for?
+            </p>
+            <p classname="blogPostQuote">
+            <i>Our Try-SQL Editor uses WebSQL to demonstrate SQL. A Database-object is created in your browser, for testing purposes. You can try any SQL statement, and play with the Database as much as you like. The Database can be restored at any time, simply by clicking the &quot;Restore Database&quot; button. WebSQL stores a Database locally, on the user&apos;s computer. Each user gets their own Database object. WebSQL is supported in Chrome, Safari, Opera, and Edge(79). If you use another browser you will still be able to use our Try SQL Editor, but a different version, using a server-based ASP application, with a read-only Access Database, where users are not allowed to make any changes to the data.</i>
+          </p>
+<h1 class="mume-header" id="test-">Test</h1>
+
+<h2 class="mume-header" id="clues-">Clues!</h2>
+
+<p classname="blogPostText">
+            Now my questions are, &quot;What is <i>WebSQL</i>, and how do you <i>create a database in the user&apos;s browser</i>&quot;? Time for more research.
+          </p>
+          <p classname="blogPostText">
+            The bad news. It didn&apos;t take long to find out that WebSQL is <a href="https://developer.chrome.com/blog/deprecating-web-sql/" target="_blank" rel="noreferrer">deprecated</a>. Worse, the alternative Chrome suggests (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noreferrer">Web Storage API</a>) uses codeLocal/session storage, or indexedDB to persist data in the browser. Sort of like cookies. That&apos;s fine for some things, but no substitute for running live queries in a database!
+          </p>
+          <p classname="blogPostText">
+            Chrome Developers know this though, and say, <i>&quot;[we&apos;re] working with the SQLite community on a replacement for Web SQL based on SQLite implemented in WebAssembly (Wasm).&quot;</i> More research reveals that SQLite3 in Wasm is <a href="https://sqlite.org/wasm/doc/trunk/demo-123.md" target="_blank" rel="noreferrer">available now</a>. The problem is, I don&apos;t want to use it. I&apos;ll explain why in a minute, but first...
+          </p>
+          <h2 classname="blogPostText">Detour into Wasm</h2>
+          <p classname="blogPostText">
+            Wasm is short for <a href="https://developer.mozilla.org/en-US/docs/WebAssembly" target="_blank" rel="noreferrer">WebAssembly</a> - a low-level binary instruction set. You can write in human-readable languages such as C, C++, Rust, .NET, or AssemblyScript and compile to binary. The original goal was to encapsulate a very fast executable <a href="https://andreabergia.com/blog/2015/03/stack-based-virtual-machines-1/" target="_blank" rel="noreferrer">virtual stack machine</a> in Javascript so it could run in the browser. (Nowdays, it can run stand-alone too.) Wasm is exciting precisely because it can embed big applications, unimaginable before, running at near-native speed right in the browser! All you need is a fairly <a href="https://webassembly.org/" target="_blank" rel="noreferrer">modern one</a> .
+          </p>
+<p classname="blogPostText">
+            I said I&apos;d explain why I don&apos;t like SQLite for learning. In my opinion, it drifts uncomfortably far from the standard SQL syntax used by most databases you&apos;re likely to use for full-stack development. When you invest time in learning something, what you learn should be as widely applicable as possible. I think MySQL, MSSql, MariaDB, or Postgres are better, more mainstream choices. They do have their quirks, but these are mostly differences in database administration - not SQL query language. Given that, you can imagine my excitement when a recent <a href="https://news.ycombinator.com/item?id=32498435" target="_blank" rel="noreferrer">Hacker News thread</a> pointed to a Postgres implementation in Wasm! </p>
+<h2 classname="blogPostText">Implementation Decisions</h2>
+          <p classname="blogPostText">
+            I&apos;d estimate the reading, research, and Googling took about half the day. The rest was spent  doing an implementation. As you might expect, there are already competitors for Postgres Wasm, and I spent some time playing with each one. Most of them have a PSQL interpreter embedded in a bunch of stuff I don&apos;t need or want. My goal was to find one where it looked straight-forward to tease out the xTerm running PSQL from all the bells and whistles.
+            </p>
+            <p classname="blogPostText">
+              <br>
+              <span classname="intro"><em>I really like </em></span>the open-source <i>collabenation</i>  (<i>collaborative implementation</i>, get it?) between <a href="https://supabase.com/blog/postgres-wasm" target="_blank" rel="noreferrer">Supabase and Snaplet</a>. The way they&apos;ve done it, Wasm embeds a stripped-down Linux OS running a Postgres server at near-native speed. Here&apos;s what a demo of their no-frills interface <a href="https://postgres-wasm.netlify.app/" target="_blank" rel="noreferrer">looks like</a>.
+          </p>  <br>
+          <h2 classname="blogPostText">A Quick and Dirty Implementation</h2>
+            <p classname="blogPostText">
+            So, here we go! The rest of this post explains how <i>YOU TOO</i> can spin up Postgres running in your browser in an hour or less!
+          </p>
+          <p classname="blogPostText">
+            My interface isn&apos;t beautiful (it&apos;s just a black and white xTerm running PSQL in a web page); but thanks to <a href="https://supabase.com/blog/postgres-wasm" target="_blank" rel="noreferrer">Supabase and Snaplet</a>, it&apos;s reliable and instant-on. Since it&apos;s pre-compiled, there&apos;s no waiting for initialization at runtime, and no special build step. Just drop in the runtime directory, update index.html to include it, and go. You can type in SQL queries, see the results, even delete tables if you want to; but as soon as you refresh the browser, everything is instantly restored to its initial state. It&apos;s a great simple-to-implement learning tool or even (wait for it) a <i>collabenation</i> tool!
+          </p>
+  <h3 classname="blogPostText">Step 1 - clone the repo</h3>
+          <p classname="blogPostText">
+            While you&apos;re <a href="https://github.com/snaplet/postgres-wasm" target="_blank" rel="noreferrer">there</a>, give them a <code classname="codeLocal">&#x1F31F;</code>. They have an awesome implementation, and an innovation that allows you to transfer files to and from the Wasm instance and your codeLocal machine!
+          </p>
+  <h3 classname="blogPostText">Step 2 - grab the runtime </h3>
+          <p classname="blogPostText">
+            The cloned repo contains a /packages directory with buildroot, runtime, and websockproxy directories inside. You can use <code classname="codeLocal">buildroot </code> to generate a new runtime. <code classname="codeLocal">websockproxy</code> contains their innovations supporting file sharing and networking. You&apos;ll only need this if you want to implement your own web socket proxy server in a Docker container. For this project, all we need is the pre-built Wasm runtime directory. So, simply copy the <code classname="codeLocal">/packages/runtime</code> directory into your own repo so that it ends up at <code classname="codeLocal">/public/packages/runtime</code>.
+          </p>
+  <h3 classname="blogPostText">Step 3 - grab the scripts</h3>
+          <p classname="blogPostText">
+            Next, copy the important bits from their <code classname="codeLocal">/public/packages/index.html</code> into your <code classname="codeLocal">/public/index.html</code>. This loads the important stuff from packages/runtime into your app.
+          </p>
+          <p classname="blogPostText">
+            To do this, add the entries below into the <code classname="codeLocal">head</code> section of your <code classname="codeLocal">/public/index.html</code>. It&apos;s nowhere near as complicated as it looks, but you will need to make changes to use the path <code classname="codeLocal">%PUBLIC_URL%</code> as shown.
+            </p>
+            <p classname="blogPostText">
+            If you put the runtime directory in <code classname="codeLocal">/public/packages/runtime</code>, you can simply copy the code below right into the <code classname="codeLocal">head</code> section of your own <code classname="codeLocal">/public/index.html</code>.
+          </p>
+```javascript {.line-numbers}
+  // public/index.html
+  <link rel="stylesheet" href="https://unpkg.com/xterm@4.19.0/css/xterm.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/packages/runtime//styles.css">
+  <script src="https://unpkg.com/xterm-addon-fit@0.5.0/lib/xterm-addon-fit.js"></script>
+  <script src="https://unpkg.com/xterm@4.19.0/lib/xterm.js"></script>
+  <script src="%PUBLIC_URL%/packages/runtime/lib/libv86.js"></script>
+<script>
+  window.onload = () => {
+    const baseOptions = {
+      wasm_path: "%PUBLIC_URL%/packages/runtime/lib/v86.wasm",
+      memory_size: 128 * 1024 * 1024,
+      filesystem: {
+        basefs: "%PUBLIC_URL%/packages/runtime/filesystem/filesystem.json",
+        baseurl: "filesystem/",
+      },
+      screen_container: document.getElementById("screen_container"),
+      serial_container_xtermjs: document.getElementById("terminal"),
+      network_relay_url: "wss://relay.widgetry.org/",
+      autostart: true,
+      disable_keyboard: true,
+      disable_mouse: true,
+      disable_speaker: true,
+      acpi: true,
+    };
+
+    const params = new URL(document.location).searchParams;
+    const boot = params.get("boot") === "true";
+
+    if (boot) {
+      document.getElementById("screen_container").style = "display:block";
+      document.getElementById("terminal").style = "";
+    }
+
+    const bzimageUrl = "%PUBLIC_URL%/packages/runtime/filesystem/27d6e559.bin";
+    const options = {
+      ...baseOptions,
+      ...(boot
+        ? {
+            bzimage: {
+              url: bzimageUrl,
+            },
+            cmdline: [
+              "rw",
+              "root=host9p rootfstype=9p rootflags=version=9p2000.L,trans=virtio,cache=loose quiet acpi=off console=ttyS0 tsc=reliable mitigations=off random.trust_cpu=on nowatchdog page_poison=on",
+            ].join(" "),
+            bios: {
+              url: "%PUBLIC_URL%/packages/runtime/bios/seabios.bin",
+            },
+            vga_bios: {
+              url: "%PUBLIC_URL%/packages/runtime/bios/vgabios.bin",
+            },
+          }
+        : { initial_state: { url: "%PUBLIC_URL%/packages/runtime/state/state.zst" } }),
+    };
+
+    var emulator = new V86Starter(options);
+
+    function initTerm() {
+      const fitAddon = new FitAddon.FitAddon();
+      emulator.serial_adapter.term.loadAddon(fitAddon);
+      fitAddon.fit();
+      window.addEventListener("resize", () => fitAddon.fit());
+    }
+
+    function sendBackgroundCommands(commands) {
+      const filename = \`\${(Math.random() + 1).toString(36).substring(7)}.sh\`;
+      emulator.create_file(
+        \`/inbox/\${filename}\`,
+        new TextEncoder("UTF-8").encode(commands.join("\n"))
+      );
+    }
+
+    if (!boot) {
+      emulator.add_listener("emulator-ready", function () {
+        initTerm();
+        setTimeout(() => {
+          sendBackgroundCommands(["/etc/init.d/S40network restart"]);
+          emulator.serial0_send(
+            \`\\! stty rows \${emulator.serial_adapter.term.rows} cols \${emulator.serial_adapter.term.cols} && reset\n\`
+          );
+          emulator.serial_adapter.term.focus();
+        }, 0);
+      });
+    }
+
+    var state;
+  };
+</script>
+<pre data-role="codeBlock" data-info class="language-"><code>  &lt;h3 className=&quot;blogPostText&quot;&gt;Step 4 - Create tables and data in Postgres (optional) &lt;/h3&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+          You can save an initial state so that your tables and data load at startup and reload whenever the browser is refreshed. If you choose not to pre-configure the database with your own tables and data, it will startup with an empty default database named &quot;postgres&quot;.
+          &lt;/p&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+            The easiest way to save state is to go to the Postgres Wasm &lt;a href=&quot;https://postgres-wasm.netlify.app/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;demo&lt;/a&gt;. There you can create tables, relationships, load data, etc. I&apos;d suggest creating your schema in the default postgres database. That way, users will always start out in the right place.
+          &lt;/p&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+            When you are happy with the database, click the &lt;i&gt;Save state to file&lt;/i&gt; button, which saves a &lt;code className=&quot;codeLocal&quot;&gt;v86state.bin&lt;/code&gt; file to your downloads directory.
+          &lt;/p&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+            Next, compress the v86state.bin file using &lt;a href=&quot;https://github.com/facebook/zstd/releases/latest&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;zstd&lt;/a&gt; from Facebook. Zstd is required. It&apos;s not the same as a .zip, and it&apos;s the only compression algorithm supported by the Wasm Postgres package. Download the appropriate zstd asset for your OS and extract the files.
+          &lt;/p&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+            If you&apos;re in Windows, you can copy the v86state.bin file to the directory where you extracted zstd, then run the following command to create a v86state.bin.zst file: &lt;code className=&quot;codeLocal&quot;&gt; ./zstd v86state.bin&lt;/code&gt;. For other platforms, check the zstd README. The instructions might be slightly different.
+          &lt;/p&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+            Copy &lt;code className=&quot;codeLocal&quot;&gt;v86state.bin.zst&lt;/code&gt; to your &lt;code className=&quot;codeLocal&quot;&gt;/public/packages/runtime/state&lt;/code&gt; directory. When you refresh the browser, the customized state should load.
+          &lt;/p&gt;
+          &lt;p className=&quot;blogPostText&quot;&gt;
+            One quirky thing: If your tables and data don&apos;t load, try copying &lt;code className=&quot;codeLocal&quot;&gt;v86state.bin.zst&lt;/code&gt; to &lt;code className=&quot;codeLocal&quot;&gt;state.zst&lt;/code&gt; (in the state directory) and try again.
+          &lt;/p&gt;
+          &lt;span className=&quot;intro&quot;&gt;&lt;em&gt;That&apos;s it! We&apos;re done!&lt;/em&gt;&lt;/span&gt;
+</code></pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
