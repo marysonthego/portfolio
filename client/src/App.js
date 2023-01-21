@@ -18,7 +18,7 @@ import {WeatherApi} from "components/demos/WeatherApi";
 import {NucatIframe} from "components/demos/NucatIframe";
 import DashIframe from "components/demos/DashIframe";
 import StepperIframe from "components/demos/StepperIframe";
-import CapxApp from "components/capx/App";
+import CapxApp from "components/capx/CapxApp";
 
 const Container = styled.div`
   margin: auto;

@@ -7,10 +7,10 @@ import { MyCanvas } from "./MyCanvas";
 - assigns a random velocity field (dx, dy as a float in the range of -5px to 5px per second) to each object and a forward and backward button below the bordered region. Animate the representation (backward or forward) in 1 second increments when the button is clicked, and stop it when the button is unclicked, or the other button is clicked.
 See if Canvas Transforms can do this - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
 Or, just use regular CSS Animations?
-- Ask what forward/backward mean? Zoom entire canvas in/out?
+- What do forward/backward mean? Zoom canvas in/out?
 */
 
-function CapxApp() {
+function App() {
   const [total, setTotal] = useState(0); // number of shapes selected
   const [shapes, setShapes] = useState([]); // the array of shapes
 
@@ -27,6 +27,7 @@ function CapxApp() {
   // submit button handler
   const handleInput = (e) => {
     e.preventDefault();
+    e.target.disabled = true;
     if (total > 0 && total < 501) {
       createShapes();
     }
@@ -53,7 +54,7 @@ function CapxApp() {
       if (type === 1) typeName = "Circle";
       if (type === 2) typeName = "Triangle";
 
-      // build random hex colors #RRGGBBAA
+      // build random hex colors #RRGGBB
       let r = getRandomIntInclusive(0, 255).toString(16).toUpperCase();
       if (r.length === 1) {
         r = "0".concat(r);
@@ -69,12 +70,7 @@ function CapxApp() {
         b = "0".concat(b);
       }
 
-      let myColor;
-      if (transparency[typeName] === true) {
-        myColor = "#".concat(r, g, b, "80"); //50% transparency
-      } else {
-        myColor = "#".concat(r, g, b, "FF"); //Opaque
-      }
+      let myColor = "#".concat(r, g, b);
 
       // Add shape to state
       const shapeObj = { shapeName, id, x, y, size, type, typeName, myColor };
@@ -93,6 +89,22 @@ function CapxApp() {
     }
   };
 
+  const toggleTransparency = (e) => {
+    e.preventDefault();
+    const buttonName=e.target.name;
+    if (transparency[buttonName] === true) {
+      setTransparency({
+        ...transparency,
+        [buttonName]: false,
+      });
+    } else {
+      setTransparency({
+        ...transparency,
+        [buttonName]: true,
+      });
+    };
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -107,7 +119,7 @@ function CapxApp() {
             onChange={(e) => setTotal(e.target.value)}
           />
           <span className="validity"></span>
-          <button
+          <button name="Submit"
             onClick={(e) => {
               handleInput(e);
             }}
@@ -120,62 +132,28 @@ function CapxApp() {
       </header>
       <div></div>
       <div>
-        <MyCanvas width="600" height="600" shapes={shapes} ref={ref} />
+        <MyCanvas width="800" height="800" shapes={shapes} transparency={transparency} ref={ref} />
       </div>
-      {/* TODO replace with proper toggle handler. This is not DRY */}
       <span>
         Toggle Transparency of shapes! {"  "}
-        <button
-          onClick={() => {
-            if (transparency.Square === true) {
-              setTransparency({
-                ...transparency,
-                Square: false,
-              });
-            } else {
-              setTransparency({
-                ...transparency,
-                Square: true,
-              });
-            }
+        <button name="Square"
+          onClick={(e) => {toggleTransparency(e);
           }}
         >
           {" "}
           Squares{" "}
         </button>
         {"  "}
-        <button
-          onClick={(e) => {
-            if (transparency.Circle === true) {
-              setTransparency({
-                ...transparency,
-                Circle: false,
-              });
-            } else {
-              setTransparency({
-                ...transparency,
-                Circle: true,
-              });
-            }
+        <button name="Circle"
+          onClick={(e) => {toggleTransparency(e);
           }}
         >
           {" "}
           Circles{" "}
         </button>
         {"  "}
-        <button
-          onClick={(e) => {
-            if (transparency.Triangle === true) {
-              setTransparency({
-                ...transparency,
-                Triangle: false,
-              });
-            } else {
-              setTransparency({
-                ...transparency,
-                Triangle: true,
-              });
-            }
+        <button name="Triangle"
+          onClick={(e) => {toggleTransparency(e);
           }}
         >
           {" "}
