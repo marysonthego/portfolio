@@ -10,7 +10,7 @@ Or, just use regular CSS Animations?
 - What do forward/backward mean? Zoom canvas in/out?
 */
 
-function App() {
+function CapxApp() {
   const [total, setTotal] = useState(0); // number of shapes selected
   const [shapes, setShapes] = useState([]); // the array of shapes
 
