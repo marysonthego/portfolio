@@ -116,7 +116,7 @@ export default function App() {
                     <Route path="/post1007" element={<p10.Post1007 />} />
                     <Route path="/post1008" element={<p10.Post1008 />} />
                     <Route path="/post11" element={<posts.Post11 />} />
-                    <Route path="/CapxApp" element={<CapxApp />} />
+                    <Route path="/capx" element={<CapxApp />} />
                     <Route path="/*" element={<Navigate replace to="/" />} />
                   </Routes>
               </Container>

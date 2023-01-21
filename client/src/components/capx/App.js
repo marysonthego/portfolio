@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import "./App.css";
+import "./capxApp.css";
 import { MyCanvas } from "./MyCanvas";
 
 /* TODO
