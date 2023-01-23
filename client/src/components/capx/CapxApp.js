@@ -2,23 +2,23 @@ import { useRef, useState } from "react";
 import "./capxApp.css";
 import { MyCanvas } from "./MyCanvas";
 
-/* TODO
-- Representation in a 600px by 600px bordered region containing the objects (scaled to fit from the 800px by 800px) See MyCanvas.js - possibly build on offScreenCanvas then display on smaller canvas?
-- assigns a random velocity field (dx, dy as a float in the range of -5px to 5px per second) to each object and a forward and backward button below the bordered region. Animate the representation (backward or forward) in 1 second increments when the button is clicked, and stop it when the button is unclicked, or the other button is clicked.
-See if Canvas Transforms can do this - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
-Or, just use regular CSS Animations?
-- What do forward/backward mean? Zoom canvas in/out?
-*/
-
 function CapxApp() {
   const [total, setTotal] = useState(0); // number of shapes selected
   const [shapes, setShapes] = useState([]); // the array of shapes
+  let x, y;
+  let forward = false;
+  let backward = false;
 
   // all shapes start out transparent
   const [transparency, setTransparency] = useState({
     Square: true,
     Circle: true,
     Triangle: true,
+  });
+
+  const [motion, setMotion] = useState({
+    Forward: false,
+    Backward: false,
   });
 
   const ref = useRef(null);
@@ -37,10 +37,10 @@ function CapxApp() {
     for (let i = 0; i < total; i++) {
       let id = i;
       let shapeName = "Mary" + i;
-
       // randomize initial x,y coordinates
-      let x = getRandomIntInclusive(0, 800);
-      let y = getRandomIntInclusive(0, 800);
+      x = getRandomIntInclusive(0, 800);
+      y = getRandomIntInclusive(0, 800);
+      console.log(`initial x=`, x, `initial y=`, y);
 
       // randomize radius (size) bounded 5-15
       let size = getRandomFloat(5.0, 15.0);
@@ -77,17 +77,18 @@ function CapxApp() {
       setShapes((shapes) => [...shapes, shapeObj]);
     }
 
-    function getRandomIntInclusive(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1) + min);
-      // The maximum is inclusive and the minimum is inclusive
-    }
-
-    function getRandomFloat(min, max) {
-      return Math.random() * (max - min) + min;
-    }
   };
+
+  const getRandomIntInclusive = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    // The maximum is inclusive and the minimum is inclusive
+  }
+
+  const getRandomFloat = (min, max) => {
+    return Math.random() * (max - min) + min;
+  }
 
   const toggleTransparency = (e) => {
     e.preventDefault();
@@ -103,6 +104,62 @@ function CapxApp() {
         [buttonName]: true,
       });
     };
+  }
+
+  const toggleMotion = (e) => {
+    e.preventDefault();
+    const buttonName=e.target.name;
+    switch (buttonName) {
+      case "Forward":
+        if (motion[buttonName] === true) {
+          setMotion({
+            ...motion, [buttonName]: false,
+          })
+          forward = false;
+        } else if (motion[buttonName] === false) {
+          setMotion({
+            ...motion, [buttonName]: true,
+            ...motion, Backward: false,
+          })
+          forward = true;
+          backward = false;
+        };
+      break;
+      case "Backward":
+          if (motion[buttonName] === true) {
+            setMotion({
+              ...motion, [buttonName]: false,
+            })
+            backward = false;
+          } else if (motion[buttonName] === false) {
+            setMotion({
+              ...motion, [buttonName]: true,
+              ...motion, Forward: false,
+            })
+            backward = true;
+            forward = false;
+          };
+      break;
+      default:
+      break;
+    }console.log(`forward=`,forward, `backward=`,backward);
+    let dx = 0;
+    let dy = 0;
+    if (forward === true){
+      dx = Math.abs(getRandomFloat(-5, 5));
+      dy = Math.abs(getRandomFloat(-5, 5));
+    } else if (backward === true) {
+      dx = (-1 * Math.abs(getRandomFloat(-5, 5)));
+      dy = (-1 * Math.abs(getRandomFloat(-5, 5)));
+    }
+    console.log(`dx=`, dx, `dy=`, dy);
+    const newShapes = shapes.map((s, i) => {
+        let tempShape = {...s};
+        tempShape.x = s.x + dx;
+        tempShape.y = s.y + dy;
+        return tempShape;
+    });
+    setShapes(newShapes);
   }
 
   return (
@@ -131,11 +188,12 @@ function CapxApp() {
         </span>
       </header>
       <div></div>
-      <div>
+      <div >
         <MyCanvas width="800" height="800" shapes={shapes} transparency={transparency} ref={ref} />
       </div>
+      <div>
       <span>
-        Toggle Transparency of shapes! {"  "}
+        Toggle Transparency! {"  "}
         <button name="Square"
           onClick={(e) => {toggleTransparency(e);
           }}
@@ -159,7 +217,24 @@ function CapxApp() {
           {" "}
           Triangles{" "}
         </button>
-      </span>
+        {"    "}Toggle Motion! {"  "}
+          <button name="Forward"
+            onClick={(e) => {toggleMotion(e);
+            }}
+          >
+            {" "}
+            Forward{" "}
+          </button>
+          {"  "}
+          <button name="Backward"
+            onClick={(e) => {toggleMotion(e);
+            }}
+          >
+            {" "}
+            Backward{" "}
+          </button>
+        </span>
+      </div>
     </div>
   );
 }

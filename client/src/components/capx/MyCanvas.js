@@ -8,6 +8,7 @@ const MyCanvas = forwardRef(function MyCanvas({width, height, shapes, transparen
     const ctx = ref.current.getContext("2d");
     //Clear to prevent cumulative transparency
     ctx.clearRect(0,0,width,height);
+
     let side = 0;
     shapes.forEach(el => {
       ctx.fillStyle = el.myColor;
@@ -70,23 +71,15 @@ const MyCanvas = forwardRef(function MyCanvas({width, height, shapes, transparen
 },[ref, shapes, transparency]);
 
   return (
-    <>
+    <div>
     <canvas
       ref={ref}
-      width="800"
-      height="800"
-      style={{ border: "2px solid black" }}
+      width={width}
+      height={height}
+      style={{ border: "2px solid black", scale: "75%" }}
     />
-    </>
+    </div>
   );
 });
 
-const MyOffscreenCanvas = forwardRef(function MyOffscreenCanvas({width, height, shapes}, ref) {
-  /* TODO
-  Investigate using offScreenCanvas to build 800x800 canvas, then display it in a visible 600x600 canvas.
-  Also good for optimizing redraws - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
-  */
-
-});
-
-export {MyCanvas, MyOffscreenCanvas}
+export {MyCanvas}
